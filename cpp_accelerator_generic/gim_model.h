@@ -8,7 +8,8 @@
 #include <iostream>
 #include <random>
 
-#define ARRAY_SIZE 2
+#define ARRAY_SIZE1 2
+#define ARRAY_SIZE2 2
 #define DATA_SIZE 4 // change this number to match the number of data points
 #define NUM_ITERATIONS 10000
 
@@ -37,10 +38,10 @@ struct Bias {
 
 struct Array {
 	// members
-    fixed_16 output_k[ARRAY_SIZE];
-    fixed_16 delta_kmin1[ARRAY_SIZE];
-    fixed_16 weight_changes[ARRAY_SIZE][ARRAY_SIZE];
-    fixed_16 bias_change[ARRAY_SIZE];
+    fixed_16 output_k[ARRAY_SIZE2];
+    fixed_16 delta_kmin1[ARRAY_SIZE2];
+    fixed_16 weight_changes[ARRAY_SIZE2][ARRAY_SIZE1];
+    fixed_16 bias_change[ARRAY_SIZE2];
 	// constructor
 	Array(){}
 };
@@ -48,17 +49,17 @@ struct Array {
 struct Inference {
 	// members
 	fixed_16 *inference;
-	fixed_16 new_w1[ARRAY_SIZE][ARRAY_SIZE];
-	fixed_16 new_w2[ARRAY_SIZE][ARRAY_SIZE];
-	fixed_16 new_b1[ARRAY_SIZE];
-	fixed_16 new_b2[ARRAY_SIZE];
+	fixed_16 new_w1[ARRAY_SIZE2][ARRAY_SIZE1];
+	fixed_16 new_w2[ARRAY_SIZE2][ARRAY_SIZE1];
+	fixed_16 new_b1[ARRAY_SIZE2];
+	fixed_16 new_b2[ARRAY_SIZE2];
 	// constructor
 	Inference(){}
 };
 
 struct SoftMax {
 	//members
-	fixed_16 out_vector[ARRAY_SIZE];
+	fixed_16 out_vector[ARRAY_SIZE2];
 	// constructor
 	SoftMax(){}
 };
@@ -76,19 +77,19 @@ Bias bias_pe(fixed_16 delta_k,
 
 fixed_16 act_pe(fixed_16 net_in, char model, fixed_16 alpha);
 
-SoftMax softmax(SoftMax output_array); 
+SoftMax softmax(fixed_16 output_array[ARRAY_SIZE2]); 
 
 fixed_16 error_pe(fixed_16 output_kmin1, fixed_16 partial_sum_delta_k,
 				char model, fixed_16 alpha);
 
-Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
-			fixed_16 biases[ARRAY_SIZE],
-			fixed_16 output_kmin1[ARRAY_SIZE],
-			fixed_16 delta_k[ARRAY_SIZE], fixed_16 eta,
+Array model_array(fixed_16 weights[ARRAY_SIZE2][ARRAY_SIZE1],
+			fixed_16 biases[ARRAY_SIZE2],
+			fixed_16 output_kmin1[ARRAY_SIZE2],
+			fixed_16 delta_k[ARRAY_SIZE2], fixed_16 eta,
 			char model, fixed_16 alpha, fixed_16 training);
 
-Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-				 fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE], fixed_16 output_inference[DATA_SIZE],
+Inference accelerator(fixed_16 w1[ARRAY_SIZE2][ARRAY_SIZE1], fixed_16 w2[ARRAY_SIZE2][ARRAY_SIZE1],
+				 fixed_16  bias_1[ARRAY_SIZE2], fixed_16 bias_2[ARRAY_SIZE2], fixed_16 output_inference[DATA_SIZE],
                  fixed_16 training);
 
 #endif // GIM_MODEL_

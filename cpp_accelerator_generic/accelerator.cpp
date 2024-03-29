@@ -4,8 +4,8 @@
 using namespace std;
 
 // now, we actually run the full model
-Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-				fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE], fixed_16 output_inference[DATA_SIZE],
+Inference accelerator(fixed_16 w1[ARRAY_SIZE2][ARRAY_SIZE1], fixed_16 w2[ARRAY_SIZE2][ARRAY_SIZE1],
+				fixed_16  bias_1[ARRAY_SIZE2], fixed_16 bias_2[ARRAY_SIZE2], fixed_16 output_inference[DATA_SIZE],
                 fixed_16 training) {
 
     // array for the final output
@@ -17,42 +17,39 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
                         {0, 1, 0, 1}};
     fixed_16 y[4] = {0, 1, 1, 0};
 
-    // this is used for softmax
-    fixed_16 train_labels_one_hot[];
-
     // setting up initial values for signals between layers
-    fixed_16 output_kmin1[ARRAY_SIZE] = {};
+    fixed_16 output_kmin1[ARRAY_SIZE2] = {};
 
     // initializing internal arrays with zeros
-    fixed_16 delta_2[ARRAY_SIZE] = {};
-    fixed_16 output_back1[ARRAY_SIZE] = {};
-    fixed_16 delta_1[ARRAY_SIZE] = {};
-    fixed_16 weight_changes_2[ARRAY_SIZE][ARRAY_SIZE] = {};
-    fixed_16 bias_2_update[ARRAY_SIZE] = {};
+    fixed_16 delta_2[ARRAY_SIZE2] = {};
+    fixed_16 output_back1[ARRAY_SIZE2] = {};
+    fixed_16 delta_1[ARRAY_SIZE2] = {};
+    fixed_16 weight_changes_2[ARRAY_SIZE2][ARRAY_SIZE1] = {};
+    fixed_16 bias_2_update[ARRAY_SIZE2] = {};
 
-    fixed_16 output_back2[ARRAY_SIZE] = {};
-    fixed_16 delta_0[ARRAY_SIZE] = {};
-    fixed_16 weight_changes_1[ARRAY_SIZE][ARRAY_SIZE] = {};
-    fixed_16 bias_1_update[ARRAY_SIZE] = {};
+    fixed_16 output_back2[ARRAY_SIZE2] = {};
+    fixed_16 delta_0[ARRAY_SIZE2] = {};
+    fixed_16 weight_changes_1[ARRAY_SIZE2][ARRAY_SIZE1] = {};
+    fixed_16 bias_1_update[ARRAY_SIZE2] = {};
 
-    fixed_16 output_0[ARRAY_SIZE] = {};
-    fixed_16 output_1[ARRAY_SIZE] = {};
-    fixed_16 output_2[ARRAY_SIZE] = {};
+    fixed_16 output_0[ARRAY_SIZE2] = {};
+    fixed_16 output_1[ARRAY_SIZE2] = {};
+    fixed_16 output_2[ARRAY_SIZE2] = {};
 
     // dummy arrays used to capture unused outputs
-    fixed_16 dummy1[ARRAY_SIZE];
-    fixed_16 dummy2[ARRAY_SIZE][ARRAY_SIZE];
-    fixed_16 dummy3[ARRAY_SIZE];
+    fixed_16 dummy1[ARRAY_SIZE2];
+    fixed_16 dummy2[ARRAY_SIZE2][ARRAY_SIZE1];
+    fixed_16 dummy3[ARRAY_SIZE2];
 
     // make local versions of the weights/biases
-    fixed_16 w1_local[ARRAY_SIZE][ARRAY_SIZE] = {};
-    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {};
-    fixed_16 bias_1_local[ARRAY_SIZE] = {};
-    fixed_16 bias_2_local[ARRAY_SIZE] = {};
-    for (int n = 0; n < ARRAY_SIZE; n++) {
+    fixed_16 w1_local[ARRAY_SIZE2][ARRAY_SIZE1] = {};
+    fixed_16 w2_local[ARRAY_SIZE2][ARRAY_SIZE1] = {};
+    fixed_16 bias_1_local[ARRAY_SIZE2] = {};
+    fixed_16 bias_2_local[ARRAY_SIZE2] = {};
+    for (int n = 0; n < ARRAY_SIZE2; n++) {
         bias_1_local[n] = bias_1[n];
         bias_2_local[n] = bias_2[n];
-        for (int m = 0; m < ARRAY_SIZE; m++) {
+        for (int m = 0; m < ARRAY_SIZE1; m++) {
             w1_local[n][m] = w1[n][m];
             w2_local[n][m] = w2[n][m];
         }
@@ -75,7 +72,7 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
         for (j = 0; j < DATA_SIZE; j++) {
 
             int p;
-            for (p = 0; p < ARRAY_SIZE; p++) {
+            for (p = 0; p < ARRAY_SIZE2; p++) {
                 // setup the initial data input
                 output_0[p] = data[p][j];
                 // initialize the error backpropagation
@@ -87,13 +84,13 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
             // start with layer 1
             Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model1, alpha, training);
             int o;
-            for (o = 0; o < ARRAY_SIZE; o++){
+            for (o = 0; o < ARRAY_SIZE2; o++){
                 output_1[o] = array_out1.output_k[o];
             }
 
             // then layer two
             Array array_out2 = model_array(w2_local, bias_2_local, output_1, delta_2, lr, model2, alpha, training);
-            for (o = 0; o < ARRAY_SIZE; o++){
+            for (o = 0; o < ARRAY_SIZE2; o++){
                 output_2[o] = array_out2.output_k[o];
             }
 
@@ -106,17 +103,31 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
                 output_inference[j] = 0;
             }
 
+            // *** SOFTMAX FINAL LAYER OUTPUT ALGORITHM *** //
             // uncomment the following for softmax
             // complete the inference (please check this comes from ChatGPT)
-            // fixed_16 max_element = std::max_element(array_out2.output_k[0], array_out1.output_k[ARRAY_SIZE]);
-            // output_inference[j] = std::distance(array_out2.output_k, max_element);
+            // fixed_16 max = 0;
+            // for (int i; i < ARRAY_SIZE2; i++) {
+            //     if (output_2[i] > output_2[max]) {
+            //         max = i;
+            //     }
+            // }
+            // output_inference[j] = max;
+
+            // // zero out all elements and create a 1-hot vector
+            // for (int j; j < ARRAY_SIZE2; j++) {
+            //     output_2[j] = 0;
+            // }
+
+            // output_2[max] = 1;
+
             
             // lastly calculate the final error with the derivative of mse after the last output
             // if (model == 's') {
             //     delta_2[0] = -(y[j] - output_2[0]) * output_2[0] * (1 - output_2[0]);
             // }
             int e;
-            for (e = 0; e < ARRAY_SIZE; e++) {
+            for (e = 0; e < ARRAY_SIZE2; e++) {
                 if (model2 == 'r') {
                     if (output_2[e] > 0)
                         delta_2[e] = -(y[j] - output_2[e]);
@@ -142,22 +153,22 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
             // run the backpropagation and update the array
             // start with layer 2
             Array array_back2 = model_array(w2_local, bias_2_local, output_1, delta_2, lr, model2, alpha, training);
-            for (e = 0; e < ARRAY_SIZE; e++) {
+            for (e = 0; e < ARRAY_SIZE2; e++) {
                 delta_1[e] = array_back2.delta_kmin1[e];
             }
             // update the weights and biases
-            for (int n = 0; n < ARRAY_SIZE; n++) {
+            for (int n = 0; n < ARRAY_SIZE2; n++) {
                 bias_2_local[n] = array_back2.bias_change[n];
-                for (int m = 0; m < ARRAY_SIZE; m++) {
+                for (int m = 0; m < ARRAY_SIZE1; m++) {
                     w2_local[n][m] = array_back2.weight_changes[n][m];
                 }
             }
             // end with layer 1
             Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model1, alpha, training);
             // update the weights and biases
-            for (int n = 0; n < ARRAY_SIZE; n++) {
+            for (int n = 0; n < ARRAY_SIZE2; n++) {
                 bias_1_local[n] = array_back1.bias_change[n];
-                for (int m = 0; m < ARRAY_SIZE; m++) {
+                for (int m = 0; m < ARRAY_SIZE1; m++) {
                     w1_local[n][m] = array_back1.weight_changes[n][m];
                 }
             }
@@ -175,10 +186,10 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
     }
 
     // produce the final weights to be used in inference
-    for (int n = 0; n<ARRAY_SIZE; n++) {
+    for (int n = 0; n<ARRAY_SIZE2; n++) {
         output_array.new_b1[n] = bias_1_local[n];
         output_array.new_b2[n] = bias_2_local[n];
-        for (int m = 0; m < ARRAY_SIZE; m++) {
+        for (int m = 0; m < ARRAY_SIZE1; m++) {
             output_array.new_w1[n][m] = w1_local[n][m];
             output_array.new_w2[n][m] = w2_local[n][m];
         }

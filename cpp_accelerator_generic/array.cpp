@@ -1,28 +1,28 @@
 #include "gim_model.h"
 using namespace std;
 
-Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
-			fixed_16 biases[ARRAY_SIZE],
-			fixed_16 output_kmin1[ARRAY_SIZE],
-			fixed_16 delta_k[ARRAY_SIZE], fixed_16 eta,
+Array model_array(fixed_16 weights[ARRAY_SIZE2][ARRAY_SIZE1],
+			fixed_16 biases[ARRAY_SIZE2],
+			fixed_16 output_kmin1[ARRAY_SIZE2],
+			fixed_16 delta_k[ARRAY_SIZE2], fixed_16 eta,
 			char model, fixed_16 alpha, fixed_16 training) {
 
     Array return_array;
     
     // initialize internal array with zeros
-    fixed_16 partial_delta_sum[ARRAY_SIZE] = {};
+    fixed_16 partial_delta_sum[ARRAY_SIZE2] = {};
 
     // setting up an additional net array for softmax
     SoftMax net;
 
     // iterate through the neurons in the layer
     int n = 0;
-    for (n = 0; n < ARRAY_SIZE; n++) {
+    for (n = 0; n < ARRAY_SIZE2; n++) {
         // initialize the running output sum
         fixed_16 partial_output_sum = 0;
         int c = 0;
         // iterate through the columns of the current layer
-        for (c = 0; c < ARRAY_SIZE; c++) {
+        for (c = 0; c < ARRAY_SIZE1; c++) {
             // get the running sums for the output and the delta from the current weight pe
             Weight weight_out = weights_pe(delta_k[n], output_kmin1[c], partial_output_sum,
             		partial_delta_sum[c], weights[n][c], eta, training);
@@ -40,13 +40,13 @@ Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
     }
     if (model == 'm')
         SoftMax prediction_vector = softmax(net);
-
-    for (int m; m < ARRAY_SIZE; m++) {
-        return_array.output_k[m] = prediction_vector.out_vector[n];
-    }
+        for (int m; m < ARRAY_SIZE2; m++) {
+            return_array.output_k[m] = prediction_vector.out_vector[m];
+        }
+        
     // get the delta signal for the previous layer using the error pe
     int j = 0;
-    for (j = 0; j < ARRAY_SIZE; j++) {
+    for (j = 0; j < ARRAY_SIZE2; j++) {
         if (training == 0) 
             return_array.delta_kmin1[j] = 0;
         else

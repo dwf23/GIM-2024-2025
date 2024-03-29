@@ -5,10 +5,10 @@ using namespace std;
 int main() {
 
     // matrices initialized with random values from Python, known to converge
-    fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE] = {{0.13457995, 0.51357812}, {0.18443987, 0.78533515}};
-    fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE] = {{0.85397529, 0.49423684}, {0, 0}};
-    fixed_16 bias_1[ARRAY_SIZE] = {0.50524609, 0.0652865};
-    fixed_16 bias_2[ARRAY_SIZE] = {0.42812233, 0};
+    fixed_16 w1[ARRAY_SIZE2][ARRAY_SIZE1] = {{0.13457995, 0.51357812}, {0.18443987, 0.78533515}};
+    fixed_16 w2[ARRAY_SIZE2][ARRAY_SIZE1] = {{0.85397529, 0.49423684}, {0, 0}};
+    fixed_16 bias_1[ARRAY_SIZE2] = {0.50524609, 0.0652865};
+    fixed_16 bias_2[ARRAY_SIZE2] = {0.42812233, 0};
 
     // the following code produces random values for all weights/biases,
     // and this intialization is generalized to any square array.

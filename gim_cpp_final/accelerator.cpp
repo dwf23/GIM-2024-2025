@@ -63,6 +63,7 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
     // iterate through the alloted epochs
     int i;
     for (i = 0; i < NUM_ITERATIONS; i++) {
+        #pragma HLS PIPELINE II=85
 
         // iterate through all the data points
         int j;

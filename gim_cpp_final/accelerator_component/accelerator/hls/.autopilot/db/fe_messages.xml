@@ -1,0 +1,213 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../weight_pe.cpp:7:28" msg_body="unused parameter 'training'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../bias_pe.cpp:9:14" msg_body="unused parameter 'training'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=accelerator" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../accelerator.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=85" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:70:26" msg_body="Loop 'VITIS_LOOP_70_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_70_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:128:31" msg_body="Loop 'VITIS_LOOP_128_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_128_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:130:35" msg_body="Loop 'VITIS_LOOP_130_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_130_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:137:31" msg_body="Loop 'VITIS_LOOP_137_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_137_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:139:35" msg_body="Loop 'VITIS_LOOP_139_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_139_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../array.cpp:38:22" msg_body="Loop 'VITIS_LOOP_38_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_38_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../array.cpp:17:22" msg_body="Loop 'VITIS_LOOP_17_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_17_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../array.cpp:22:26" msg_body="Loop 'VITIS_LOOP_22_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_22_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_70_4' (../accelerator.cpp:70:26) in function 'accelerator' completely with a factor of 4">
+        <args Factor="4" LoopLoc="../accelerator.cpp:70:26" LoopName="VITIS_LOOP_70_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_137_7' (../accelerator.cpp:137:31) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:137:31" LoopName="VITIS_LOOP_137_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_139_8' (../accelerator.cpp:139:35) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:139:35" LoopName="VITIS_LOOP_139_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_128_5' (../accelerator.cpp:128:31) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:128:31" LoopName="VITIS_LOOP_128_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_130_6' (../accelerator.cpp:130:35) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:130:35" LoopName="VITIS_LOOP_130_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_38_3' (../array.cpp:38:22) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../array.cpp:38:22" LoopName="VITIS_LOOP_38_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_17_1' (../array.cpp:17:22) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../array.cpp:17:22" LoopName="VITIS_LOOP_17_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_22_2' (../array.cpp:22:26) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../array.cpp:22:26" LoopName="VITIS_LOOP_22_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Inlining function 'weights_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="weights_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../weight_pe.cpp Line 7 Column 0" Caller="model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File ../array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Inlining function 'bias_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="bias_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../bias_pe.cpp Line 9 Column 0" Caller="model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File ../array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Inlining function 'act_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="act_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../act_pe.cpp Line 4 Column 0" Caller="model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File ../array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../array.cpp:8:0" msg_body="Inlining function 'error_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="error_pe(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../error_pe.cpp Line 5 Column 0" Caller="model_array(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File ../array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Aggregating bram variable 'w2' with compact=bit mode in 16-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="bram" Name="w2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Aggregating bram variable 'w1' with compact=bit mode in 16-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="bram" Name="w1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:160:28" msg_body="Loop 'VITIS_LOOP_160_10' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_160_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../accelerator.cpp:50:26" msg_body="Loop 'VITIS_LOOP_50_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_50_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_160_10' (../accelerator.cpp:160:28) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:160:28" LoopName="VITIS_LOOP_160_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_50_2' (../accelerator.cpp:50:26) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../accelerator.cpp:50:26" LoopName="VITIS_LOOP_50_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Automatically partitioning small array 'output_array.new_w1' completely based on array size.">
+        <args Value="output_array.new_w1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Automatically partitioning small array 'output_array.new_w2' completely based on array size.">
+        <args Value="output_array.new_w2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Automatically partitioning small array 'output_array.new_b1' completely based on array size.">
+        <args Value="output_array.new_b1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Automatically partitioning small array 'output_array.new_b2' completely based on array size.">
+        <args Value="output_array.new_b2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="Automatically partitioning small array 'w1_local' completely based on array size.">
+        <args Value="w1_local"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="Automatically partitioning small array 'w2_local' completely based on array size.">
+        <args Value="w2_local"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:45:14" msg_body="Automatically partitioning small array 'bias_1_local' completely based on array size.">
+        <args Value="bias_1_local"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../accelerator.cpp:46:14" msg_body="Automatically partitioning small array 'bias_2_local' completely based on array size.">
+        <args Value="bias_2_local"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=1 type=complete  variable=retval.new_b1 1 accelerator ../accelerator.cpp:12:15 retval.new_b1">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=retval.new_b1" PragmaType="array_partition" VarName="retval.new_b1" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'retval.new_b1' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="retval.new_b1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=1 type=complete  variable=retval.new_b2 1 accelerator ../accelerator.cpp:12:15 retval.new_b2">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=retval.new_b2" PragmaType="array_partition" VarName="retval.new_b2" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'retval.new_b2' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="retval.new_b2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=1 type=complete  variable=retval.new_w1 1 accelerator ../accelerator.cpp:12:15 retval.new_w1">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=retval.new_w1" PragmaType="array_partition" VarName="retval.new_w1" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'retval.new_w1' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="retval.new_w1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=2 type=complete  variable=retval.new_w1 1 accelerator ../accelerator.cpp:12:15 retval.new_w1">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=retval.new_w1" PragmaType="array_partition" VarName="retval.new_w1" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'retval.new_w1' due to pipeline pragma">
+        <args Dim="2" Mode="complete" Name="retval.new_w1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=1 type=complete  variable=retval.new_w2 1 accelerator ../accelerator.cpp:12:15 retval.new_w2">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=retval.new_w2" PragmaType="array_partition" VarName="retval.new_w2" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'retval.new_w2' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="retval.new_w2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="array_partition dim=2 type=complete  variable=retval.new_w2 1 accelerator ../accelerator.cpp:12:15 retval.new_w2">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=retval.new_w2" PragmaType="array_partition" VarName="retval.new_w2" varLoc="../accelerator.cpp:12:15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'retval.new_w2' due to pipeline pragma">
+        <args Dim="2" Mode="complete" Name="retval.new_w2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="array_partition dim=1 type=complete  variable=w1_local 1 accelerator ../accelerator.cpp:43:14 w1_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=w1_local" PragmaType="array_partition" VarName="w1_local" varLoc="../accelerator.cpp:43:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'w1_local' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="w1_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="array_partition dim=2 type=complete  variable=w1_local 1 accelerator ../accelerator.cpp:43:14 w1_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=w1_local" PragmaType="array_partition" VarName="w1_local" varLoc="../accelerator.cpp:43:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'w1_local' due to pipeline pragma">
+        <args Dim="2" Mode="complete" Name="w1_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="array_partition dim=1 type=complete  variable=w2_local 1 accelerator ../accelerator.cpp:44:14 w2_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=w2_local" PragmaType="array_partition" VarName="w2_local" varLoc="../accelerator.cpp:44:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'w2_local' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="w2_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="array_partition dim=2 type=complete  variable=w2_local 1 accelerator ../accelerator.cpp:44:14 w2_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=w2_local" PragmaType="array_partition" VarName="w2_local" varLoc="../accelerator.cpp:44:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'w2_local' due to pipeline pragma">
+        <args Dim="2" Mode="complete" Name="w2_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:45:14" msg_body="array_partition dim=1 type=complete  variable=bias_1_local 1 accelerator ../accelerator.cpp:45:14 bias_1_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=bias_1_local" PragmaType="array_partition" VarName="bias_1_local" varLoc="../accelerator.cpp:45:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:45:14" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'bias_1_local' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="bias_1_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../accelerator.cpp:46:14" msg_body="array_partition dim=1 type=complete  variable=bias_2_local 1 accelerator ../accelerator.cpp:46:14 bias_2_local">
+        <args PragmaFunction="accelerator" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=bias_2_local" PragmaType="array_partition" VarName="bias_2_local" varLoc="../accelerator.cpp:46:14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../accelerator.cpp:46:14" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'bias_2_local' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="bias_2_local" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Applying array_partition to 'retval.new_w1': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="retval.new_w1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Applying array_partition to 'retval.new_w2': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="retval.new_w2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Applying array_partition to 'retval.new_b1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="retval.new_b1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:12:15" msg_body="Applying array_partition to 'retval.new_b2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="retval.new_b2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:43:14" msg_body="Applying array_partition to 'w1_local': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="w1_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:44:14" msg_body="Applying array_partition to 'w2_local': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="w2_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:45:14" msg_body="Applying array_partition to 'bias_1_local': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="bias_1_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../accelerator.cpp:46:14" msg_body="Applying array_partition to 'bias_2_local': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="bias_2_local"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

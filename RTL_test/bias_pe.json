@@ -1,13 +1,13 @@
 {
     "c_function_name" : "bias_pe",
-    "rtl_top_module_name" : "bias_pe", 
+    "rtl_top_module_name" : "rtl_bias_pe", 
     "c_files" : [{
                 "c_file": "bias_pe.cpp",
                 "c_flag": ""
                 }],
 
     "rtl_files" : [
-                "bias_pe.v" 
+                "rtl_bias_pe.v" 
                 ], 
 
     "c_parameters": [
@@ -44,13 +44,10 @@
             {"c_name": "return_array",
             "c_port_direction": "out",
             "rtl_ports": {
-                        "RAM_address": "return_array",
-                        "RAM_clock_enable":,
-                        "RAM_write_enable":,
-                        "RAM_data_write_out": 
+                        "data_read_in":  "return_array"
                         } 
             }
-        ], 
+    ], 
 
     "rtl_common_signal": 
         {
@@ -72,6 +69,6 @@
                         "LUT"  :   "0",
                         "BRAM" :   "0",
                         "URAM" :   "0",
-                        "DSP"  :   "15"
+                        "DSP"  :   "1"
                        }
 }

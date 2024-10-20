@@ -1,16 +1,16 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator\accelerator.hlsrun_csim_summary, at 10/20/24 18:29:53
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator\accelerator.hlsrun_csim_summary, at 10/20/24 18:13:46
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator -config C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg -cmdlineconfig C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
   **** SW Build 5069499 on May 21 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Oct 20 18:29:55 2024
+  **** Start of session at: Sun Oct 20 18:13:48 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
-INFO: [HLS 200-10] For user 'dy32' on host 'ryn-b10-pc-12.ad.rice.edu' (Windows NT_amd64 version 10.0) on Sun Oct 20 18:29:56 -0500 2024
+INFO: [HLS 200-10] For user 'dy32' on host 'ryn-b10-pc-12.ad.rice.edu' (Windows NT_amd64 version 10.0) on Sun Oct 20 18:13:48 -0500 2024
 INFO: [HLS 200-10] In directory 'C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test'
 INFO: [HLS 200-2005] Using work_dir C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
@@ -31,7 +31,7 @@ INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM-2024-2025/RTL_test/main.cpp' f
 INFO: [HLS 200-10] Adding test bench file 'C:/GIM-2024-2025/RTL_test/main.cpp' to the project
 INFO: [HLS 200-1465] Applying ini 'syn.blackbox.file=C:\GIM-2024-2025\RTL_test\bias_pe.json' from C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg(17)
 INFO: [HLS 200-10] Adding black box file 'C:/GIM-2024-2025/RTL_test/bias_pe.json' to the project
-ERROR: [HLS 200-654] Cannot find blackbox RTL port '*' in the json file 'C:/GIM-2024-2025/RTL_test/bias_pe.json'
-ERROR: [HLS 200-1912] Problem with ini entry 'syn.blackbox.file=C:\GIM-2024-2025\RTL_test\bias_pe.json' from C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg(17): Blackbox RTL port '*' not found JSON
-ERROR: problem with 'syn.blackbox.file=C:\GIM-2024-2025\RTL_test\bias_pe.json' from C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg(17): Blackbox RTL port '*' not found JSON
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.842 seconds; peak allocated memory: 8.281 MB.
+ERROR: [HLS 200-654] Cannot find blackbox RTL port 'posedge' in the json file 'C:/GIM-2024-2025/RTL_test/bias_pe.json'
+ERROR: [HLS 200-1912] Problem with ini entry 'syn.blackbox.file=C:\GIM-2024-2025\RTL_test\bias_pe.json' from C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg(17): Blackbox RTL port 'posedge' not found JSON
+ERROR: problem with 'syn.blackbox.file=C:\GIM-2024-2025\RTL_test\bias_pe.json' from C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/hls_config.cfg(17): Blackbox RTL port 'posedge' not found JSON
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.85 seconds; peak allocated memory: 7.758 MB.

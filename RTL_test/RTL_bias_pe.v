@@ -1,28 +1,23 @@
-`timescale 100ps/100ps
+`timescale 1ns / 1ps
 
-module bias_pe (
-    input ap_clk, ap_rst, ap_ce,
+module rtl_bias_pe (
+    input wire ap_clk, ap_rst, ap_ce,
     input wire [15:0] delta_k, sum_in, init_bias, eta, training, //since fixed_16 data type
-    output [1:0][15:0] return_array //inspired by bias_struct
+    output reg [1:0][15:0] return_array //inspired by bias_struct
 
 )
 //perform the operations of the bias pe as presented by Ray Simar
 
-reg [1:0][15:0] updated_array;
-
-always @(posedge ap_clk)
-    if (ap_rst) 
-    begin
-        updated_array[1] <= '0;
-        updated_array[0] <= '0;
+(* dont_touch = "1" *)
+always @(posedge ap_clk) begin
+    if (ap_rst) begin
+        return_array[1] <= 16'b0;
+        return_array[0] <= 16'b0;
+    end else if (ap_ce) begin
+        return_array[1] <= init_bias + sum_in;// net_sum
+        return_array[0] <= init_bias - (delta_k * eta); ///bias_change
     end
-    else if (ap_ce) 
-    begin
-        updated_array[1] <= init_bias + sum_in;// net_sum
-        updated_array[0] <= init_bias - (delta_k * eta); ///bias_change
-    end
-
-assign return_array = updated_array;
+end
 
 endmodule //RTL_bias_pe
 

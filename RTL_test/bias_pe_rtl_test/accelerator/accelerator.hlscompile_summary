@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "10/20/24 17:37:08",
- "timestampMillis": "2886975684",
+ "dateTimestamp": "10/20/24 18:01:16",
+ "timestampMillis": "2888423833",
  "buildStep": {
-  "cmdId": "87533831-97a7-4a8c-bd36-85acdb329d47",
+  "cmdId": "fa6bd8db-4086-4695-a61f-164e9addf798",
   "name": "v++",
   "logFile": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\logs\\accelerator.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\hls_config.cfg --work_dir accelerator ",
@@ -28,7 +28,7 @@
   "iniFiles": [
    {
     "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\hls_config.cfg",
-    "content": "part=xczu3eg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=accelerator\nsyn.file=C:/GIM-2024-2025/RTL_test/accelerator.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/act_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/array.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/bias_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/error_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/weight_pe.cpp\ntb.file=C:/GIM-2024-2025/RTL_test/main.cpp\nclock=33MHz\nclock_uncertainty=2ns"
+    "content": "part=xczu3eg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=accelerator\nsyn.file=C:/GIM-2024-2025/RTL_test/accelerator.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/act_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/array.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/bias_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/error_pe.cpp\nsyn.file=C:/GIM-2024-2025/RTL_test/weight_pe.cpp\ntb.file=C:/GIM-2024-2025/RTL_test/main.cpp\nclock=33MHz\nclock_uncertainty=2ns\nsyn.blackbox.file=C:\\GIM-2024-2025\\RTL_test\\bias_pe.json"
    }
   ],
   "cwd": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test"
@@ -38,193 +38,30 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/20/24 17:37:08",
- "timestampMillis": "2886975685",
+ "dateTimestamp": "10/20/24 18:01:16",
+ "timestampMillis": "2888423834",
  "status": {
-  "cmdId": "87533831-97a7-4a8c-bd36-85acdb329d47",
+  "cmdId": "fa6bd8db-4086-4695-a61f-164e9addf798",
   "state": "CS_RUNNING"
  }
 }
 </ENTRY>
 <ENTRY>
 {
- "type": "ET_FlowMetaData",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979249",
- "buildSummary": {
-  "hardwarePlatform": "",
-  "hardwareDsa": "",
-  "platformDirectory": "",
-  "runtime": "",
-  "systemConfig": "",
-  "flow": "BF_COMPILE",
-  "target": "TT_HW",
-  "kernels": [
-   {
-    "base": {
-     "type": "KERNEL",
-     "name": "accelerator",
-     "file": "",
-     "reports": [],
-     "uuid": ""
-    },
-    "sources": [
-     "C:/GIM-2024-2025\\RTL_test\\accelerator.cpp",
-     "C:/GIM-2024-2025\\RTL_test\\act_pe.cpp",
-     "C:/GIM-2024-2025\\RTL_test\\array.cpp",
-     "C:/GIM-2024-2025\\RTL_test\\bias_pe.cpp",
-     "C:/GIM-2024-2025\\RTL_test\\error_pe.cpp",
-     "C:/GIM-2024-2025\\RTL_test\\weight_pe.cpp"
-    ],
-    "psSources": [],
-    "cuNames": [],
-    "type": "HLS",
-    "frequency": 0,
-    "freqUnits": ""
-   }
-  ],
-  "toolVersion": "2024.1"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_SubCmdStep",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979250",
- "buildStep": {
-  "cmdId": "76f7186f-d994-42d8-9737-bb24de97e806",
-  "name": "csynth_design",
-  "logFile": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls\\hls.log",
-  "commandLine": "csynth_design",
-  "args": [],
-  "iniFiles": [],
-  "cwd": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test"
- }
-}
-</ENTRY>
-<ENTRY>
-{
  "type": "ET_Status",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979251",
+ "dateTimestamp": "10/20/24 18:01:19",
+ "timestampMillis": "2888426843",
  "status": {
-  "cmdId": "76f7186f-d994-42d8-9737-bb24de97e806",
-  "state": "CS_RUNNING"
+  "cmdId": "fa6bd8db-4086-4695-a61f-164e9addf798",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979252",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls\\hls_data.json",
-  "name": "",
-  "fileType": "JSON",
-  "reportType": "HLS_SYNTHESIS",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979252",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls\\syn\\report\\csynth.rpt",
-  "name": "",
-  "fileType": "TEXT",
-  "reportType": "HLS_SYNTHESIS",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:37:12",
- "timestampMillis": "2886979253",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls\\syn\\report\\csynth.xml",
-  "name": "",
-  "fileType": "XML",
-  "reportType": "HLS_SYNTHESIS",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037222",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls",
-  "name": "",
-  "fileType": "DIR",
-  "reportType": "HLS_DATAFLOW",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037222",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls",
-  "name": "",
-  "fileType": "DIR",
-  "reportType": "HLS_FUNCTION_CALL_GRAPH",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037223",
- "report": {
-  "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls",
-  "name": "",
-  "fileType": "DIR",
-  "reportType": "HLS_SCHEDULE",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037224",
- "status": {
-  "cmdId": "76f7186f-d994-42d8-9737-bb24de97e806",
-  "state": "CS_PASSED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037321",
- "status": {
-  "cmdId": "87533831-97a7-4a8c-bd36-85acdb329d47",
-  "state": "CS_PASSED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037356",
+ "dateTimestamp": "10/20/24 18:01:19",
+ "timestampMillis": "2888426875",
  "report": {
   "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\reports\\v++_compile_accelerator_guidance.html",
   "name": "",
@@ -237,8 +74,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/20/24 17:38:10",
- "timestampMillis": "2887037358",
+ "dateTimestamp": "10/20/24 18:01:19",
+ "timestampMillis": "2888426876",
  "report": {
   "path": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\reports\\.db\\v++_compile_accelerator_guidance.pb3",
   "name": "",

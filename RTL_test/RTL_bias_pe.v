@@ -1,6 +1,6 @@
 `timescale 100ps/100ps
 
-module RTL_bias_pe (
+module bias_pe (
     input ap_clk, ap_rst, ap_ce,
     input wire [15:0] delta_k, sum_in, init_bias, eta, training, //since fixed_16 data type
     output [1:0][15:0] return_array //inspired by bias_struct

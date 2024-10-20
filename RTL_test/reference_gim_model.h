@@ -59,20 +59,11 @@ Weight weights_pe(fixed_16 delta_k, fixed_16 output_kmin1, fixed_16 partial_sum_
 				fixed_16 partial_sum_delta_k, fixed_16 init_weight,
 				fixed_16 eta, fixed_16 training);
 
-// Bias bias_pe(fixed_16 delta_k,
-// 				fixed_16 sum_in,
-// 				fixed_16 init_bias,
-// 				fixed_16 eta,
-// 				fixed_16 training);
-
-//since output is now an array not a struct
-void bias_pe(fixed_16 delta_k,
+Bias bias_pe(fixed_16 delta_k,
 				fixed_16 sum_in,
 				fixed_16 init_bias,
 				fixed_16 eta,
-				fixed_16 training,
-				fixed_16 return_array[2])
-
+				fixed_16 training);
 
 fixed_16 act_pe(fixed_16 net_in, char model, fixed_16 alpha);
 

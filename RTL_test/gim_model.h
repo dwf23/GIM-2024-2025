@@ -71,7 +71,7 @@ void bias_pe(fixed_16 delta_k,
 				fixed_16 init_bias,
 				fixed_16 eta,
 				fixed_16 training,
-				fixed_16 return_array[2])
+				fixed_16 return_array[2]);
 
 
 fixed_16 act_pe(fixed_16 net_in, char model, fixed_16 alpha);

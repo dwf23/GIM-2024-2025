@@ -1,0 +1,76 @@
+{
+    "c_function_name" : "bias_pe",
+    "rtl_top_module_name" : "bias_pe", 
+    "c_files" : [{
+                "c_file": "bias_pe.cpp",
+                "c_flag": ""
+                }],
+
+    "rtl_files" : [
+                "bias_pe.v" 
+                ], 
+
+    "c_parameters": [
+            {"c_name": "delta_k",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "delta_k"
+                        } 
+            },
+            {"c_name": "sum_in",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "sum_in" 
+                        } 
+            },          
+            {"c_name": "init_bias",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "init_bias" 
+                        } 
+            },
+            {"c_name": "eta",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "eta"
+                        } 
+            },
+            {"c_name": "training",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "training"
+                        } 
+            },
+            {"c_name": "return_array",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "return_array", 
+                        } 
+            }
+        ], 
+
+    "rtl_common_signal": 
+        {
+        "module_clock": ,
+        "module_reset": ,
+        "module_clock_enable":,
+        "ap_ctrl_chain_protocol_idle":,
+        "ap_ctrl_chain_protocol_start":,
+        "ap_ctrl_chain_protocol_ready":,
+        "ap_ctrl_chain_protocol_done":,
+        "ap_ctrl_chain_protocol_continue":
+        },
+    "rtl_performance":
+        {
+            "latency":,
+            "II":
+        },
+    "rtl_resource_usage":
+    {
+        "FF":,
+        "LUT":,
+        "BRAM":,
+        "URAM":,
+        "DSP":
+    }
+}

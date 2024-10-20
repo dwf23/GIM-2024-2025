@@ -1,0 +1,81 @@
+{
+  "0": {
+    "basicblocks": 104,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "accelerator.cpp",
+    "fileloc": 7,
+    "instructions": 1036,
+    "loads": {
+      "L": 84,
+      "T": 4
+    },
+    "name": "accelerator",
+    "stores": {
+      "L": 124
+    },
+    "total_instructions": 6268
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "act_pe.cpp",
+    "fileloc": 4,
+    "instructions": 8,
+    "name": "act_pe",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "error_pe.cpp",
+    "fileloc": 5,
+    "instructions": 8,
+    "name": "error_pe",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "5 5 4 1 5 5 4 1 2 2",
+    "file": "array.cpp",
+    "fileloc": 4,
+    "instructions": 135,
+    "loads": {
+      "L": 32
+    },
+    "name": "model_array",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 327
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "bias_pe.cpp",
+    "fileloc": 5,
+    "instructions": 18,
+    "name": "bias_pe",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 18
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weight_pe.cpp",
+    "fileloc": 5,
+    "instructions": 31,
+    "name": "weights_pe",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 31
+  }
+}

@@ -29,9 +29,13 @@ Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
         }
     
         // get the output for the current neuron in the layer
-        Bias bias_out = bias_pe(delta_k[n], partial_output_sum, biases[n], eta, training);
-        return_array.bias_change[n] = bias_out.bias_change;
-        return_array.output_k[n] = act_pe(bias_out.net_sum, model, alpha);
+        fixed_16 bias_out[ARRAY_SIZE];
+
+        bias_pe(delta_k[n], partial_output_sum, biases[n], eta, training, bias_out);
+
+
+        return_array.bias_change[n] = bias_out[1];
+        return_array.output_k[n] = act_pe(bias_out[0], model, alpha);
     }
     // get the delta signal for the previous layer using the error pe
     int j = 0;

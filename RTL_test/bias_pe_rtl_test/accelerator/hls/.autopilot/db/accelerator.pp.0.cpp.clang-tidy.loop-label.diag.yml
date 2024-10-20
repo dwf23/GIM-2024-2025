@@ -1,0 +1,139 @@
+---
+MainSourceFile:  'C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test/accelerator/hls/.autopilot/db/accelerator.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1223_1:  '
+    FileOffset:      1223
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          55417
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          282783
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          283247
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          283712
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          566636
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_47_1:  '
+    FileOffset:      47
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112381
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_47_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_2:  '
+    FileOffset:      50
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112491
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_65_3:  '
+    FileOffset:      65
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112704
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_65_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_4:  '
+    FileOffset:      69
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112757
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_5:  '
+    FileOffset:      127
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114463
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_6:  '
+    FileOffset:      129
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114569
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_136_7:  '
+    FileOffset:      136
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114829
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_136_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_8:  '
+    FileOffset:      138
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114935
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_156_9:  '
+    FileOffset:      156
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2115234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_156_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_159_10:  '
+    FileOffset:      159
+    FilePath:        'C:\GIM-2024-2025\RTL_test\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2115370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_159_10: '
+...

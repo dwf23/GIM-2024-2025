@@ -1,0 +1,12 @@
+{
+  "workspaceRoot": "C:\\GIM-2024-2025\\RTL_test",
+  "mapping": {
+    "weight_pe.cpp": "bias_pe_rtl_test",
+    "act_pe.cpp": "bias_pe_rtl_test",
+    "main.cpp": "bias_pe_rtl_test",
+    "accelerator.cpp": "bias_pe_rtl_test",
+    "bias_pe.cpp": "bias_pe_rtl_test",
+    "error_pe.cpp": "bias_pe_rtl_test",
+    "array.cpp": "bias_pe_rtl_test"
+  }
+}

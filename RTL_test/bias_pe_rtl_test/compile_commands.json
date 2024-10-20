@@ -1,0 +1,86 @@
+[
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/bias_pe.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/bias_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/weight_pe.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/weight_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/act_pe.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/act_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/accelerator.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/accelerator.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/array.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/array.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/error_pe.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/error_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-c",
+      "C:/GIM-2024-2025/RTL_test/main.cpp"
+    ],
+    "file": "C:/GIM-2024-2025/RTL_test/main.cpp"
+  }
+]

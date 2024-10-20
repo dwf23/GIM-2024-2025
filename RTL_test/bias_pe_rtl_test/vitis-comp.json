@@ -1,0 +1,11 @@
+{
+  "name": "bias_pe_rtl_test",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "accelerator"
+  }
+}

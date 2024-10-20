@@ -1,0 +1,161 @@
+<ENTRY>
+{
+ "thisFile": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\accelerator.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "10/20/24 17:36:44",
+ "timestampMillis": "2886951543",
+ "buildStep": {
+  "cmdId": "bc48af49-5a40-4c3e-8a90-0113987a1d91",
+  "name": "vitis-run",
+  "logFile": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\logs\\accelerator.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\hls_config.cfg --work_dir accelerator ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\hls_config.cfg",
+   "--work_dir",
+   "accelerator"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/20/24 17:36:44",
+ "timestampMillis": "2886951543",
+ "status": {
+  "cmdId": "bc48af49-5a40-4c3e-8a90-0113987a1d91",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "10/20/24 17:36:48",
+ "timestampMillis": "2886955043",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/GIM-2024-2025\\RTL_test\\accelerator.cpp",
+     "C:/GIM-2024-2025\\RTL_test\\act_pe.cpp",
+     "C:/GIM-2024-2025\\RTL_test\\array.cpp",
+     "C:/GIM-2024-2025\\RTL_test\\bias_pe.cpp",
+     "C:/GIM-2024-2025\\RTL_test\\error_pe.cpp",
+     "C:/GIM-2024-2025\\RTL_test\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "10/20/24 17:36:48",
+ "timestampMillis": "2886955045",
+ "buildStep": {
+  "cmdId": "a57cbcc0-4a04-424a-a23d-ea8214c021f8",
+  "name": "csim_design",
+  "logFile": "C:/GIM-2024-2025\\RTL_test\\bias_pe_rtl_test\\accelerator\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\GIM-2024-2025\\RTL_test\\bias_pe_rtl_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/20/24 17:36:48",
+ "timestampMillis": "2886955045",
+ "status": {
+  "cmdId": "a57cbcc0-4a04-424a-a23d-ea8214c021f8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/20/24 17:36:54",
+ "timestampMillis": "2886961500",
+ "status": {
+  "cmdId": "a57cbcc0-4a04-424a-a23d-ea8214c021f8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/20/24 17:36:54",
+ "timestampMillis": "2886961576",
+ "status": {
+  "cmdId": "bc48af49-5a40-4c3e-8a90-0113987a1d91",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "10/20/24 17:36:54",
+ "timestampMillis": "2886961576",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "10/20/24 17:36:54",
+ "timestampMillis": "2886961576",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

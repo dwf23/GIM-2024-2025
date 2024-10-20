@@ -1,0 +1,3 @@
+relativeroot=C:/GIM-2024-2025/RTL_test/bias_pe_rtl_test
+original_argv=-c --mode hls --config C:\GIM-2024-2025\RTL_test\bias_pe_rtl_test\hls_config.cfg --work_dir accelerator 
+

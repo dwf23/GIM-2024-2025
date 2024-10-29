@@ -1,6 +1,6 @@
 
 set TopModule "accelerator"
-set ClockPeriod 30.303
+set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -14,7 +14,7 @@ set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 1
-set ResetLevelFlag 1
+set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0

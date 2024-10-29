@@ -47,93 +47,93 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_47_1:  '
-    FileOffset:      47
+    Message:         'Added loop label VITIS_LOOP_55_1:  '
+    FileOffset:      55
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2112329
+        Offset:          2112694
         Length:          0
-        ReplacementText: 'VITIS_LOOP_47_1: '
+        ReplacementText: 'VITIS_LOOP_55_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_50_2:  '
-    FileOffset:      50
+    Message:         'Added loop label VITIS_LOOP_58_2:  '
+    FileOffset:      58
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2112439
+        Offset:          2112804
         Length:          0
-        ReplacementText: 'VITIS_LOOP_50_2: '
+        ReplacementText: 'VITIS_LOOP_58_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_65_3:  '
-    FileOffset:      65
+    Message:         'Added loop label VITIS_LOOP_73_3:  '
+    FileOffset:      73
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2112652
+        Offset:          2113017
         Length:          0
-        ReplacementText: 'VITIS_LOOP_65_3: '
+        ReplacementText: 'VITIS_LOOP_73_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_70_4:  '
-    FileOffset:      70
+    Message:         'Added loop label VITIS_LOOP_78_4:  '
+    FileOffset:      78
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2112725
+        Offset:          2113091
         Length:          0
-        ReplacementText: 'VITIS_LOOP_70_4: '
+        ReplacementText: 'VITIS_LOOP_78_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_128_5:  '
-    FileOffset:      128
-    FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
-    Replacements:    
-      - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2114431
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_128_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_130_6:  '
-    FileOffset:      130
-    FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
-    Replacements:    
-      - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2114537
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_130_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_137_7:  '
-    FileOffset:      137
+    Message:         'Added loop label VITIS_LOOP_136_5:  '
+    FileOffset:      136
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
         Offset:          2114797
         Length:          0
-        ReplacementText: 'VITIS_LOOP_137_7: '
+        ReplacementText: 'VITIS_LOOP_136_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_139_8:  '
-    FileOffset:      139
+    Message:         'Added loop label VITIS_LOOP_138_6:  '
+    FileOffset:      138
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
         Offset:          2114903
         Length:          0
-        ReplacementText: 'VITIS_LOOP_139_8: '
+        ReplacementText: 'VITIS_LOOP_138_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_157_9:  '
-    FileOffset:      157
+    Message:         'Added loop label VITIS_LOOP_145_7:  '
+    FileOffset:      145
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2115202
+        Offset:          2115163
         Length:          0
-        ReplacementText: 'VITIS_LOOP_157_9: '
+        ReplacementText: 'VITIS_LOOP_145_7: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_160_10:  '
-    FileOffset:      160
+    Message:         'Added loop label VITIS_LOOP_147_8:  '
+    FileOffset:      147
     FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
     Replacements:    
       - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
-        Offset:          2115338
+        Offset:          2115269
         Length:          0
-        ReplacementText: 'VITIS_LOOP_160_10: '
+        ReplacementText: 'VITIS_LOOP_147_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_165_9:  '
+    FileOffset:      165
+    FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2115568
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_165_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_168_10:  '
+    FileOffset:      168
+    FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator.cpp'
+    Replacements:    
+      - FilePath:        'C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2115704
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_168_10: '
 ...

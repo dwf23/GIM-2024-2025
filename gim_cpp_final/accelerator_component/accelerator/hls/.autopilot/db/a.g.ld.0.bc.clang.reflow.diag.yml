@@ -1,51 +1,51 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 70, Column: 26 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 78, Column: 26 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_70_4
+  - LoopName:        VITIS_LOOP_78_4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 128, Column: 31 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 136, Column: 31 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_128_5
+  - LoopName:        VITIS_LOOP_136_5
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 130, Column: 35 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 138, Column: 35 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 137, Column: 31 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 145, Column: 31 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_137_7
+  - LoopName:        VITIS_LOOP_145_7
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 139, Column: 35 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 147, Column: 35 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -85,9 +85,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_70_4
+  - LoopName:        VITIS_LOOP_78_4
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:70:26'
+  - LoopLoc:         '../accelerator.cpp:78:26'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -101,9 +101,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_137_7
+  - LoopName:        VITIS_LOOP_145_7
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:137:31'
+  - LoopLoc:         '../accelerator.cpp:145:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -117,9 +117,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -133,9 +133,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -149,9 +149,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_128_5
+  - LoopName:        VITIS_LOOP_136_5
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:128:31'
+  - LoopLoc:         '../accelerator.cpp:136:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -165,9 +165,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -181,9 +181,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -197,9 +197,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_137_7
+  - LoopName:        VITIS_LOOP_145_7
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:137:31'
+  - LoopLoc:         '../accelerator.cpp:145:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -213,9 +213,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -229,9 +229,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -245,9 +245,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_128_5
+  - LoopName:        VITIS_LOOP_136_5
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:128:31'
+  - LoopLoc:         '../accelerator.cpp:136:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -261,9 +261,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -277,9 +277,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -293,9 +293,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_137_7
+  - LoopName:        VITIS_LOOP_145_7
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:137:31'
+  - LoopLoc:         '../accelerator.cpp:145:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -309,9 +309,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -325,9 +325,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -341,9 +341,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_128_5
+  - LoopName:        VITIS_LOOP_136_5
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:128:31'
+  - LoopLoc:         '../accelerator.cpp:136:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -357,9 +357,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -373,9 +373,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -389,9 +389,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_137_7
+  - LoopName:        VITIS_LOOP_145_7
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:137:31'
+  - LoopLoc:         '../accelerator.cpp:145:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -405,9 +405,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -421,9 +421,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_139_8
+  - LoopName:        VITIS_LOOP_147_8
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:139:35'
+  - LoopLoc:         '../accelerator.cpp:147:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -437,9 +437,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_128_5
+  - LoopName:        VITIS_LOOP_136_5
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:128:31'
+  - LoopLoc:         '../accelerator.cpp:136:31'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -453,9 +453,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -469,9 +469,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_130_6
+  - LoopName:        VITIS_LOOP_138_6
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:130:35'
+  - LoopLoc:         '../accelerator.cpp:138:35'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -599,48 +599,52 @@ Args:
   - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-aggr
-Name:            AggrSucc
+Pass:            reflow-array-partition
+Name:            ArrayXform
 DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
-  - String:          'Aggregating '
-  - HwTyName:        bram
-  - String:          ' variable '''
-  - Name:            w2
-  - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
-  - String:          ' mode in '
-  - Bitwidth:        '16'
-  - String:          '-bits'
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
 ...
 --- !Passed
-Pass:            reflow-aggr
-Name:            AggrSucc
+Pass:            reflow-array-partition
+Name:            ArrayXform
 DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
-  - String:          'Aggregating '
-  - HwTyName:        bram
-  - String:          ' variable '''
-  - Name:            w1
-  - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
-  - String:          ' mode in '
-  - Bitwidth:        '16'
-  - String:          '-bits'
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: ../accelerator.cpp, Line: 65, Column: 22 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 73, Column: 22 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_65_3
+  - LoopName:        VITIS_LOOP_73_3
   - String:          ' '
-  - LoopLoc:         '../accelerator.cpp:65:22'
+  - LoopLoc:         '../accelerator.cpp:73:22'
   - String:          ' '
   - Function:        'accelerator(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
@@ -651,9 +655,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_47_1
+  - LoopName:        VITIS_LOOP_55_1
   - String:          '> at '
-  - LoopLoc:         '../accelerator.cpp:47:22'
+  - LoopLoc:         '../accelerator.cpp:55:22'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -661,29 +665,29 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_157_9
+  - LoopName:        VITIS_LOOP_165_9
   - String:          '> at '
-  - LoopLoc:         '../accelerator.cpp:157:23'
+  - LoopLoc:         '../accelerator.cpp:165:23'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 160, Column: 28 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 168, Column: 28 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_160_10
+  - LoopName:        VITIS_LOOP_168_10
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../accelerator.cpp, Line: 50, Column: 26 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 58, Column: 26 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_50_2
+  - LoopName:        VITIS_LOOP_58_2
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -693,9 +697,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_160_10
+  - LoopName:        VITIS_LOOP_168_10
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:160:28'
+  - LoopLoc:         '../accelerator.cpp:168:28'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -709,9 +713,9 @@ DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_50_2
+  - LoopName:        VITIS_LOOP_58_2
   - String:          ''' ('
-  - LoopLoc:         '../accelerator.cpp:50:26'
+  - LoopLoc:         '../accelerator.cpp:58:26'
   - String:          ') '
   - String:          'in function '''
   - String:          accelerator
@@ -761,7 +765,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Automatically partitioning small array '''
@@ -771,7 +775,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Automatically partitioning small array '''
@@ -781,7 +785,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 53, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Automatically partitioning small array '''
@@ -791,7 +795,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 54, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Automatically partitioning small array '''
@@ -1173,7 +1177,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1184,7 +1188,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:43:14'
+  - varLoc:          '../accelerator.cpp:51:14'
   - String:          ' '
   - VarName:         w1_local
   - String:          ' '
@@ -1192,7 +1196,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -1211,7 +1215,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1222,7 +1226,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:43:14'
+  - varLoc:          '../accelerator.cpp:51:14'
   - String:          ' '
   - VarName:         w1_local
   - String:          ' '
@@ -1230,7 +1234,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -1249,7 +1253,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1260,7 +1264,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:44:14'
+  - varLoc:          '../accelerator.cpp:52:14'
   - String:          ' '
   - VarName:         w2_local
   - String:          ' '
@@ -1268,7 +1272,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -1287,7 +1291,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1298,7 +1302,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:44:14'
+  - varLoc:          '../accelerator.cpp:52:14'
   - String:          ' '
   - VarName:         w2_local
   - String:          ' '
@@ -1306,7 +1310,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -1325,7 +1329,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 53, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1336,7 +1340,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:45:14'
+  - varLoc:          '../accelerator.cpp:53:14'
   - String:          ' '
   - VarName:         bias_1_local
   - String:          ' '
@@ -1344,7 +1348,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 53, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -1363,7 +1367,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 54, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - PragmaType:      array_partition
@@ -1374,7 +1378,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  accelerator
   - String:          ' '
-  - varLoc:          '../accelerator.cpp:46:14'
+  - varLoc:          '../accelerator.cpp:54:14'
   - String:          ' '
   - VarName:         bias_2_local
   - String:          ' '
@@ -1382,7 +1386,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 54, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Inferring pragma '''
@@ -2165,7 +2169,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 51, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Applying '
@@ -2189,7 +2193,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 52, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Applying '
@@ -2213,7 +2217,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 53, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Applying '
@@ -2231,7 +2235,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+DebugLoc:        { File: ../accelerator.cpp, Line: 54, Column: 14 }
 Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
 Args:            
   - String:          'Applying '

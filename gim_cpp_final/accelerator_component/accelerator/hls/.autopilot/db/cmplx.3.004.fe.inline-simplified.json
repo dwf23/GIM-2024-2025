@@ -4,7 +4,7 @@
     "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
     "file": "accelerator.cpp",
     "fileloc": 7,
-    "instructions": 1002,
+    "instructions": 1008,
     "loads": {
       "L": 84,
       "T": 4
@@ -13,7 +13,7 @@
     "stores": {
       "L": 124
     },
-    "total_instructions": 3562
+    "total_instructions": 3568
   },
   "1": {
     "basicblocks": 7,

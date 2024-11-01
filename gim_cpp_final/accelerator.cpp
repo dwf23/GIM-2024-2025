@@ -10,7 +10,15 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
 
     // array for the final output
     Inference output_array;
+    #pragma HLS INTERFACE mode=s_axilite port=w1
+    #pragma HLS INTERFACE mode=s_axilite port=w2
+    #pragma HLS INTERFACE mode=s_axilite port=bias_1
+    #pragma HLS INTERFACE mode=s_axilite port=bias_2
+    #pragma HLS INTERFACE mode=s_axilite port=training
+    #pragma HLS INTERFACE mode=s_axilite port=return
 
+    #pragma HLS array_partition variable=w1
+    #pragma HLS array_partition variable=w2
     // initializing the data for the XOR problem
     fixed_16 x1[4] = {0, 0, 1, 1};
     fixed_16 x2[4] = {0, 1, 0, 1};
@@ -63,7 +71,7 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
     // iterate through the alloted epochs
     int i;
     for (i = 0; i < NUM_ITERATIONS; i++) {
-        #pragma HLS PIPELINE II=85
+        #pragma HLS PIPELINE II=200
 
         // iterate through all the data points
         int j;

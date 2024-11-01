@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'model_array'" level="0">
-<item name = "Date">Sat Oct 19 10:54:29 2024
+<item name = "Date">Tue Oct 29 09:34:17 2024
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">accelerator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">30.30 ns, 8.001 ns, 6.00 ns</column>
+<column name="ap_clk">10.00 ns, 5.091 ns, 2.00 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, 5, 0.152 us, 0.152 us, 5, 5, yes</column>
+<column name="">8, 8, 80.000 ns, 80.000 ns, 9, 9, yes</column>
 </table>
 </item>
 <item name = "Detail">
@@ -47,12 +47,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, 6, -, -, -</column>
-<column name="Expression">-, -, 0, 421, -</column>
+<column name="Expression">-, -, 0, 419, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, 12, 0, 80, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 69, -</column>
-<column name="Register">-, -, 676, -, -</column>
+<column name="Multiplexer">-, -, 0, 82, -</column>
+<column name="Register">-, -, 873, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 5, ~0, ~0, 0</specialColumn>
 </table>
@@ -61,26 +61,26 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_16s_25_1_1_U19">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_25_1_1_U20">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_25_1_1_U21">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_25_1_1_U23">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_32_1_1_U22">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_32_1_1_U24">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_32_1_1_U25">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_32_1_1_U26">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_32s_7s_34_1_1_U17">mul_32s_7s_34_1_1, 0, 2, 0, 20, 0</column>
-<column name="mul_32s_7s_34_1_1_U18">mul_32s_7s_34_1_1, 0, 2, 0, 20, 0</column>
+<column name="mul_16s_16s_25_1_1_U25">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_25_1_1_U26">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_25_1_1_U30">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_25_1_1_U31">mul_16s_16s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_32_1_1_U27">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_32_1_1_U28">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_32_1_1_U29">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_32_1_1_U32">mul_16s_16s_32_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_32s_7s_34_1_1_U23">mul_32s_7s_34_1_1, 0, 2, 0, 20, 0</column>
+<column name="mul_32s_7s_34_1_1_U24">mul_32s_7s_34_1_1, 0, 2, 0, 20, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mac_muladd_16s_16s_25ns_25_4_1_U28">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
-<column name="mac_muladd_16s_16s_25ns_25_4_1_U29">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
-<column name="mac_muladd_16s_16s_25ns_25_4_1_U30">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
-<column name="mac_muladd_16s_16s_25ns_25_4_1_U31">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
-<column name="mac_mulsub_16s_6ns_25s_25_4_1_U27">mac_mulsub_16s_6ns_25s_25_4_1, i0 - i1 * i2</column>
-<column name="mac_mulsub_16s_6ns_25s_25_4_1_U32">mac_mulsub_16s_6ns_25s_25_4_1, i0 - i1 * i2</column>
+<column name="mac_muladd_16s_16s_25ns_25_4_1_U34">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_16s_16s_25ns_25_4_1_U35">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_16s_16s_25ns_25_4_1_U36">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_16s_16s_25ns_25_4_1_U37">mac_muladd_16s_16s_25ns_25_4_1, i0 + i1 * i2</column>
+<column name="mac_mulsub_16s_6ns_25s_25_4_1_U33">mac_mulsub_16s_6ns_25s_25_4_1, i0 - i1 * i2</column>
+<column name="mac_mulsub_16s_6ns_25s_25_4_1_U38">mac_mulsub_16s_6ns_25s_25_4_1, i0 - i1 * i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -93,77 +93,81 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln14_1_fu_333_p2">+, 0, 0, 41, 34, 34</column>
-<column name="add_ln14_3_fu_408_p2">+, 0, 0, 41, 34, 34</column>
-<column name="add_ln14_4_fu_447_p2">+, 0, 0, 41, 34, 34</column>
-<column name="add_ln14_fu_244_p2">+, 0, 0, 41, 34, 34</column>
-<column name="bias_out_net_sum_1_fu_536_p2">+, 0, 0, 23, 16, 16</column>
-<column name="bias_out_net_sum_fu_378_p2">+, 0, 0, 23, 16, 16</column>
-<column name="cmp_i_i_fu_202_p2">icmp, 0, 0, 23, 16, 1</column>
-<column name="icmp_ln11_1_fu_214_p2">icmp, 0, 0, 23, 16, 1</column>
-<column name="icmp_ln11_fu_208_p2">icmp, 0, 0, 23, 16, 1</column>
-<column name="icmp_ln12_1_fu_554_p2">icmp, 0, 0, 23, 16, 1</column>
-<column name="icmp_ln12_fu_387_p2">icmp, 0, 0, 23, 16, 1</column>
-<column name="agg_result_delta_kmin1_0_0_fu_510_p3">select, 0, 0, 16, 1, 1</column>
-<column name="agg_result_delta_kmin1_1_0_fu_517_p3">select, 0, 0, 16, 1, 1</column>
-<column name="error_1_fu_496_p3">select, 0, 0, 16, 1, 16</column>
-<column name="error_3_fu_503_p3">select, 0, 0, 16, 1, 16</column>
-<column name="output_2_fu_560_p3">select, 0, 0, 15, 1, 15</column>
-<column name="output_3_fu_393_p3">select, 0, 0, 15, 1, 15</column>
-<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="add_ln14_1_fu_356_p2">+, 0, 0, 41, 34, 34</column>
+<column name="add_ln14_3_fu_418_p2">+, 0, 0, 41, 34, 34</column>
+<column name="add_ln14_4_fu_452_p2">+, 0, 0, 41, 34, 34</column>
+<column name="add_ln14_fu_313_p2">+, 0, 0, 41, 34, 34</column>
+<column name="bias_out_net_sum_1_fu_521_p2">+, 0, 0, 23, 16, 16</column>
+<column name="bias_out_net_sum_fu_372_p2">+, 0, 0, 23, 16, 16</column>
+<column name="cmp_i_i_fu_208_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln11_1_fu_219_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln11_fu_214_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln12_1_fu_539_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln12_fu_381_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="agg_result_delta_kmin1_0_0_fu_475_p3">select, 0, 0, 16, 1, 1</column>
+<column name="agg_result_delta_kmin1_1_0_fu_505_p3">select, 0, 0, 16, 1, 1</column>
+<column name="error_1_fu_468_p3">select, 0, 0, 16, 1, 16</column>
+<column name="error_3_fu_498_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_2_fu_545_p3">select, 0, 0, 15, 1, 15</column>
+<column name="output_3_fu_387_p3">select, 0, 0, 15, 1, 15</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">31, 6, 1, 6</column>
-<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="grp_fu_120_p0">20, 4, 32, 128</column>
+<column name="ap_NS_fsm">54, 10, 1, 10</column>
+<column name="grp_fu_120_p0">14, 3, 32, 96</column>
+<column name="grp_fu_125_p0">14, 3, 32, 96</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="agg_result_delta_kmin1_0_0_reg_892">16, 0, 16, 0</column>
-<column name="agg_result_delta_kmin1_1_0_reg_897">16, 0, 16, 0</column>
-<column name="ap_CS_fsm">5, 0, 5, 0</column>
-<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="agg_result_delta_kmin1_0_0_reg_884">16, 0, 16, 0</column>
+<column name="agg_result_delta_kmin1_1_0_reg_894">16, 0, 16, 0</column>
+<column name="ap_CS_fsm">9, 0, 9, 0</column>
 <column name="ap_port_reg_biases_0_0_val">16, 0, 16, 0</column>
 <column name="ap_port_reg_biases_0_1_val">16, 0, 16, 0</column>
 <column name="ap_port_reg_delta_k_0_1_val">16, 0, 16, 0</column>
+<column name="ap_port_reg_output_kmin1_0_1_val">16, 0, 16, 0</column>
+<column name="ap_port_reg_p_read29">16, 0, 16, 0</column>
 <column name="ap_port_reg_p_read30">16, 0, 16, 0</column>
 <column name="ap_port_reg_p_read31">16, 0, 16, 0</column>
-<column name="bias_out_bias_change_reg_847">16, 0, 16, 0</column>
-<column name="biases_0_0_val_read_reg_807">16, 0, 16, 0</column>
-<column name="biases_0_1_val_read_reg_877">16, 0, 16, 0</column>
-<column name="cmp_i_i_reg_738">1, 0, 1, 0</column>
-<column name="delta_k_0_0_val_read_reg_677">16, 0, 16, 0</column>
-<column name="delta_k_0_1_val_read_reg_754">16, 0, 16, 0</column>
-<column name="icmp_ln11_1_reg_749">1, 0, 1, 0</column>
-<column name="icmp_ln11_reg_744">1, 0, 1, 0</column>
-<column name="mul_ln14_3_reg_837">32, 0, 32, 0</column>
-<column name="output_3_reg_857">15, 0, 15, 0</column>
-<column name="output_kmin1_0_0_val_read_reg_687">16, 0, 16, 0</column>
-<column name="output_kmin1_0_1_val_read_reg_682">16, 0, 16, 0</column>
-<column name="p_read_1_reg_765">16, 0, 16, 0</column>
-<column name="p_read_2_reg_692">16, 0, 16, 0</column>
-<column name="p_read_3_reg_697">16, 0, 16, 0</column>
-<column name="p_read_reg_760">16, 0, 16, 0</column>
-<column name="sext_ln12_2_reg_827">32, 0, 32, 0</column>
-<column name="sext_ln12_9_reg_796">25, 0, 25, 0</column>
-<column name="sext_ln12_reg_770">32, 0, 32, 0</column>
-<column name="sext_ln13_1_reg_812">32, 0, 32, 0</column>
-<column name="sext_ln13_2_reg_707">25, 0, 25, 0</column>
-<column name="sext_ln13_3_reg_727">25, 0, 25, 0</column>
-<column name="sext_ln13_reg_775">32, 0, 32, 0</column>
-<column name="tmp_1_reg_717">16, 0, 16, 0</column>
-<column name="tmp_2_reg_733">16, 0, 16, 0</column>
-<column name="tmp_3_reg_802">16, 0, 16, 0</column>
-<column name="tmp_reg_712">16, 0, 16, 0</column>
-<column name="weight_out_weight_change_1_reg_842">16, 0, 16, 0</column>
-<column name="weight_out_weight_change_2_reg_862">16, 0, 16, 0</column>
-<column name="weight_out_weight_change_3_reg_872">16, 0, 16, 0</column>
-<column name="weight_out_weight_change_reg_780">16, 0, 16, 0</column>
+<column name="ap_port_reg_training">16, 0, 16, 0</column>
+<column name="bias_out_bias_change_reg_823">16, 0, 16, 0</column>
+<column name="biases_0_0_val_read_reg_771">16, 0, 16, 0</column>
+<column name="cmp_i_i_reg_750">1, 0, 1, 0</column>
+<column name="delta_k_0_0_val_read_reg_672">16, 0, 16, 0</column>
+<column name="delta_k_0_1_val_read_reg_766">16, 0, 16, 0</column>
+<column name="icmp_ln11_1_reg_761">1, 0, 1, 0</column>
+<column name="icmp_ln11_reg_756">1, 0, 1, 0</column>
+<column name="mul_ln14_2_reg_733">32, 0, 32, 0</column>
+<column name="mul_ln14_3_reg_791">32, 0, 32, 0</column>
+<column name="mul_ln14_6_reg_839">32, 0, 32, 0</column>
+<column name="mul_ln14_reg_723">32, 0, 32, 0</column>
+<column name="output_2_reg_904">15, 0, 15, 0</column>
+<column name="output_3_reg_859">15, 0, 15, 0</column>
+<column name="output_kmin1_0_0_val_read_reg_677">16, 0, 16, 0</column>
+<column name="p_read_1_reg_776">16, 0, 16, 0</column>
+<column name="p_read_2_reg_713">16, 0, 16, 0</column>
+<column name="p_read_3_reg_683">16, 0, 16, 0</column>
+<column name="p_read_reg_813">16, 0, 16, 0</column>
+<column name="sext_ln12_2_reg_786">32, 0, 32, 0</column>
+<column name="sext_ln12_4_reg_693">25, 0, 25, 0</column>
+<column name="sext_ln12_6_reg_738">25, 0, 25, 0</column>
+<column name="sext_ln12_7_reg_796">25, 0, 25, 0</column>
+<column name="sext_ln12_8_reg_802">25, 0, 25, 0</column>
+<column name="sext_ln12_9_reg_828">25, 0, 25, 0</column>
+<column name="sext_ln13_1_reg_728">32, 0, 32, 0</column>
+<column name="sext_ln13_2_reg_698">25, 0, 25, 0</column>
+<column name="sext_ln13_3_reg_744">25, 0, 25, 0</column>
+<column name="sext_ln13_reg_718">32, 0, 32, 0</column>
+<column name="tmp_1_reg_708">16, 0, 16, 0</column>
+<column name="tmp_2_reg_808">16, 0, 16, 0</column>
+<column name="tmp_3_reg_834">16, 0, 16, 0</column>
+<column name="tmp_reg_703">16, 0, 16, 0</column>
+<column name="weight_out_weight_change_1_reg_854">16, 0, 16, 0</column>
+<column name="weight_out_weight_change_2_reg_869">16, 0, 16, 0</column>
+<column name="weight_out_weight_change_3_reg_879">16, 0, 16, 0</column>
+<column name="weight_out_weight_change_reg_844">16, 0, 16, 0</column>
 </table>
 </item>
 </section>
@@ -179,7 +183,6 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, model_array, return value</column>
-<column name="ap_ce">in, 1, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_return_0">out, 16, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_return_1">out, 16, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_return_2">out, 16, ap_ctrl_hs, model_array, return value</column>
@@ -190,6 +193,7 @@
 <column name="ap_return_7">out, 16, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_return_8">out, 16, ap_ctrl_hs, model_array, return value</column>
 <column name="ap_return_9">out, 16, ap_ctrl_hs, model_array, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, model_array, return value</column>
 <column name="p_read10">in, 16, ap_none, p_read10, scalar</column>
 <column name="p_read29">in, 16, ap_none, p_read29, scalar</column>
 <column name="p_read30">in, 16, ap_none, p_read30, scalar</column>

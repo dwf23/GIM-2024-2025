@@ -2,33 +2,39 @@
   <kernel src_name="accelerator" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
       <arg id="0" access_type="r" src_name="w1" src_type="ap_fixed&lt;16, 7, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="4">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="w1" hw_bitwidth="16" hw_size_or_depth="4" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
         </hw>
       </arg>
       <arg id="1" access_type="r" src_name="w2" src_type="ap_fixed&lt;16, 7, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="4">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="w2" hw_bitwidth="16" hw_size_or_depth="4" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="80"/>
         </hw>
       </arg>
       <arg id="2" access_type="r" src_name="bias_1" src_type="ap_fixed&lt;16, 7, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="2">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="bias_1" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88"/>
         </hw>
       </arg>
       <arg id="3" access_type="r" src_name="bias_2" src_type="ap_fixed&lt;16, 7, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="2">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="bias_2" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="2" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="96"/>
         </hw>
       </arg>
       <arg id="4" access_type="r" src_name="training" src_type="ap_fixed&lt;16, 7, AP_TRN, AP_WRAP, 0&gt;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="training" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
         </hw>
       </arg>
     </args>
     <return src_type="Inference" src_bitwidth="256" offset="0x0">
-      <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="256" hw_kernel_support="false"/>
+      <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="256" hw_kernel_support="true"/>
     </return>
   </kernel>
 </root>

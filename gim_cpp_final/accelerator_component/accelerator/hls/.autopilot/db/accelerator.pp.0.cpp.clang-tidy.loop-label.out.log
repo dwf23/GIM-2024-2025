@@ -23,53 +23,53 @@ C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls
       ^~~
       VITIS_LOOP_1247_1: 
 C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:3945:7: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46976:5: warning: Added loop label VITIS_LOOP_47_1:   [xilinx-label-all-loops]
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46984:5: warning: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
     for (int n = 0; n<2; n++) {
     ^~~
-    VITIS_LOOP_47_1: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46976:5: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46979:9: warning: Added loop label VITIS_LOOP_50_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_55_1: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46984:5: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46987:9: warning: Added loop label VITIS_LOOP_58_2:   [xilinx-label-all-loops]
         for (int m = 0;m<2; m++) {
         ^~~
-        VITIS_LOOP_50_2: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46979:9: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46994:5: warning: Added loop label VITIS_LOOP_65_3:   [xilinx-label-all-loops]
+        VITIS_LOOP_58_2: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46987:9: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47002:5: warning: Added loop label VITIS_LOOP_73_3:   [xilinx-label-all-loops]
     for (i = 0; i < 500; i++) {
     ^~~
-    VITIS_LOOP_65_3: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46994:5: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46999:9: warning: Added loop label VITIS_LOOP_70_4:   [xilinx-label-all-loops]
+    VITIS_LOOP_73_3: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47002:5: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47007:9: warning: Added loop label VITIS_LOOP_78_4:   [xilinx-label-all-loops]
         for (j = 0; j < 4; j++) {
         ^~~
-        VITIS_LOOP_70_4: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:46999:9: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47057:13: warning: Added loop label VITIS_LOOP_128_5:   [xilinx-label-all-loops]
+        VITIS_LOOP_78_4: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47007:9: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47065:13: warning: Added loop label VITIS_LOOP_136_5:   [xilinx-label-all-loops]
             for (int n = 0; n<2; n++) {
             ^~~
-            VITIS_LOOP_128_5: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47057:13: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47059:17: warning: Added loop label VITIS_LOOP_130_6:   [xilinx-label-all-loops]
+            VITIS_LOOP_136_5: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47065:13: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47067:17: warning: Added loop label VITIS_LOOP_138_6:   [xilinx-label-all-loops]
                 for (int m = 0;m<2; m++) {
                 ^~~
-                VITIS_LOOP_130_6: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47059:17: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47066:13: warning: Added loop label VITIS_LOOP_137_7:   [xilinx-label-all-loops]
+                VITIS_LOOP_138_6: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47067:17: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47074:13: warning: Added loop label VITIS_LOOP_145_7:   [xilinx-label-all-loops]
             for (int n = 0; n<2; n++) {
             ^~~
-            VITIS_LOOP_137_7: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47066:13: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47068:17: warning: Added loop label VITIS_LOOP_139_8:   [xilinx-label-all-loops]
+            VITIS_LOOP_145_7: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47074:13: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47076:17: warning: Added loop label VITIS_LOOP_147_8:   [xilinx-label-all-loops]
                 for (int m = 0; m<2; m++) {
                 ^~~
-                VITIS_LOOP_139_8: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47068:17: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47086:5: warning: Added loop label VITIS_LOOP_157_9:   [xilinx-label-all-loops]
+                VITIS_LOOP_147_8: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47076:17: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47094:5: warning: Added loop label VITIS_LOOP_165_9:   [xilinx-label-all-loops]
     for (int n = 0; n<2; n++) {
     ^~~
-    VITIS_LOOP_157_9: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47086:5: note: FIX-IT applied suggested code changes
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47089:9: warning: Added loop label VITIS_LOOP_160_10:   [xilinx-label-all-loops]
+    VITIS_LOOP_165_9: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47094:5: note: FIX-IT applied suggested code changes
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47097:9: warning: Added loop label VITIS_LOOP_168_10:   [xilinx-label-all-loops]
         for (int m = 0;m<2; m++) {
         ^~~
-        VITIS_LOOP_160_10: 
-C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47089:9: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_168_10: 
+C:\ELEC522\GIM\GIM-2024-2025\gim_cpp_final\accelerator_component\accelerator\hls\.autopilot\db\accelerator.pp.0.cpp:47097:9: note: FIX-IT applied suggested code changes

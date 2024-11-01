@@ -29,10 +29,8 @@ class xor:
     
     def forward_prop(self, w1,w2,b1, b2,x):
         z1 = np.dot(w1,x) + b1
-        #print(z1)
         a1 = self.sigmoid(z1)
         z2 = np.dot(w2,a1) + b2
-        print(z2)
         a2 = self.sigmoid(z2)
         return z1,a1,z2,a2
     

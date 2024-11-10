@@ -46946,8 +46946,8 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
 #pragma HLS INTERFACE mode=s_axilite port=training
 #pragma HLS INTERFACE mode=s_axilite port=return
 
-#pragma HLS array_partition variable=w1
-#pragma HLS array_partition variable=w2
+
+
 
  fixed_16 x1[4] = {0, 0, 1, 1};
     fixed_16 x2[4] = {0, 1, 0, 1};
@@ -47000,7 +47000,7 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
 
     int i;
     VITIS_LOOP_73_3: for (i = 0; i < 500; i++) {
-#pragma HLS PIPELINE II=200
+#pragma HLS UNROLL
 
 
  int j;

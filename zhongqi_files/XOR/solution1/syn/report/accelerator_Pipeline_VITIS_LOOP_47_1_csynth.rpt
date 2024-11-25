@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'accelerator_Pipeline_VITIS_LOOP_47_1'
+================================================================
+* Date:           Wed Feb 28 12:04:57 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        XOR
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: kintex7
+* Target device:  xc7k70t-fbv676-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.003 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|        4|  40.000 ns|  40.000 ns|    4|    4|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_47_1  |        2|        2|         2|          1|          1|     2|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF  |  LUT  | URAM|
++-----------------+---------+-----+-------+-------+-----+
+|DSP              |        -|    -|      -|      -|    -|
+|Expression       |        -|    -|      0|    225|    -|
+|FIFO             |        -|    -|      -|      -|    -|
+|Instance         |        -|    -|      -|      -|    -|
+|Memory           |        -|    -|      -|      -|    -|
+|Multiplexer      |        -|    -|      -|    192|    -|
+|Register         |        -|    -|      6|      -|    -|
++-----------------+---------+-----+-------+-------+-----+
+|Total            |        0|    0|      6|    417|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Available        |      270|  240|  82000|  41000|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Utilization (%)  |        0|    0|     ~0|      1|    0|
++-----------------+---------+-----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+----+---+----+------------+------------+
+    |add_ln47_fu_236_p2          |         +|   0|  0|  10|           2|           1|
+    |icmp_ln47_fu_230_p2         |      icmp|   0|  0|  11|           2|           3|
+    |or_ln51_fu_260_p2           |        or|   0|  0|   6|           2|           1|
+    |bias_1_local_1_3_fu_325_p3  |    select|   0|  0|  16|           1|          16|
+    |bias_1_local_1_4_fu_332_p3  |    select|   0|  0|  16|           1|          16|
+    |bias_2_local_1_3_fu_339_p3  |    select|   0|  0|  16|           1|          16|
+    |bias_2_local_1_4_fu_346_p3  |    select|   0|  0|  16|           1|          16|
+    |w1_local_0_1_3_fu_353_p3    |    select|   0|  0|  16|           1|          16|
+    |w1_local_0_1_4_fu_360_p3    |    select|   0|  0|  16|           1|          16|
+    |w1_local_1_1_3_fu_381_p3    |    select|   0|  0|  16|           1|          16|
+    |w1_local_1_1_4_fu_388_p3    |    select|   0|  0|  16|           1|          16|
+    |w2_local_0_1_3_fu_367_p3    |    select|   0|  0|  16|           1|          16|
+    |w2_local_0_1_4_fu_374_p3    |    select|   0|  0|  16|           1|          16|
+    |w2_local_1_1_3_fu_395_p3    |    select|   0|  0|  16|           1|          16|
+    |w2_local_1_1_4_fu_402_p3    |    select|   0|  0|  16|           1|          16|
+    |ap_enable_pp0               |       xor|   0|  0|   6|           1|           2|
+    +----------------------------+----------+----+---+----+------------+------------+
+    |Total                       |          |   0|  0| 225|          19|         199|
+    +----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_n_1     |   9|          2|    2|          4|
+    |bias_1_local_0_0_out_o   |  13|          3|   16|         48|
+    |bias_1_local_1_0_out_o   |  13|          3|   16|         48|
+    |bias_2_local_0_0_out_o   |  13|          3|   16|         48|
+    |bias_2_local_1_0_out_o   |  13|          3|   16|         48|
+    |n_fu_66                  |   9|          2|    2|          4|
+    |w1_local_0_0_0_out_o     |  13|          3|   16|         48|
+    |w1_local_0_1_0_out_o     |  13|          3|   16|         48|
+    |w1_local_1_0_0_out_o     |  13|          3|   16|         48|
+    |w1_local_1_1_0_out_o     |  13|          3|   16|         48|
+    |w2_local_0_0_0_out_o     |  13|          3|   16|         48|
+    |w2_local_0_1_0_out_o     |  13|          3|   16|         48|
+    |w2_local_1_0_0_out_o     |  13|          3|   16|         48|
+    |w2_local_1_1_0_out_o     |  13|          3|   16|         48|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 192|         44|  198|        588|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |empty_reg_488            |  1|   0|    1|          0|
+    |n_fu_66                  |  2|   0|    2|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  6|   0|    6|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++-------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  accelerator_Pipeline_VITIS_LOOP_47_1|  return value|
+|w1_address0                    |  out|    2|   ap_memory|                                    w1|         array|
+|w1_ce0                         |  out|    1|   ap_memory|                                    w1|         array|
+|w1_q0                          |   in|   16|   ap_memory|                                    w1|         array|
+|w1_address1                    |  out|    2|   ap_memory|                                    w1|         array|
+|w1_ce1                         |  out|    1|   ap_memory|                                    w1|         array|
+|w1_q1                          |   in|   16|   ap_memory|                                    w1|         array|
+|w2_address0                    |  out|    2|   ap_memory|                                    w2|         array|
+|w2_ce0                         |  out|    1|   ap_memory|                                    w2|         array|
+|w2_q0                          |   in|   16|   ap_memory|                                    w2|         array|
+|w2_address1                    |  out|    2|   ap_memory|                                    w2|         array|
+|w2_ce1                         |  out|    1|   ap_memory|                                    w2|         array|
+|w2_q1                          |   in|   16|   ap_memory|                                    w2|         array|
+|bias_1_address0                |  out|    1|   ap_memory|                                bias_1|         array|
+|bias_1_ce0                     |  out|    1|   ap_memory|                                bias_1|         array|
+|bias_1_q0                      |   in|   16|   ap_memory|                                bias_1|         array|
+|bias_2_address0                |  out|    1|   ap_memory|                                bias_2|         array|
+|bias_2_ce0                     |  out|    1|   ap_memory|                                bias_2|         array|
+|bias_2_q0                      |   in|   16|   ap_memory|                                bias_2|         array|
+|bias_2_local_1_0_out_i         |   in|   16|     ap_ovld|                  bias_2_local_1_0_out|       pointer|
+|bias_2_local_1_0_out_o         |  out|   16|     ap_ovld|                  bias_2_local_1_0_out|       pointer|
+|bias_2_local_1_0_out_o_ap_vld  |  out|    1|     ap_ovld|                  bias_2_local_1_0_out|       pointer|
+|bias_2_local_0_0_out_i         |   in|   16|     ap_ovld|                  bias_2_local_0_0_out|       pointer|
+|bias_2_local_0_0_out_o         |  out|   16|     ap_ovld|                  bias_2_local_0_0_out|       pointer|
+|bias_2_local_0_0_out_o_ap_vld  |  out|    1|     ap_ovld|                  bias_2_local_0_0_out|       pointer|
+|bias_1_local_1_0_out_i         |   in|   16|     ap_ovld|                  bias_1_local_1_0_out|       pointer|
+|bias_1_local_1_0_out_o         |  out|   16|     ap_ovld|                  bias_1_local_1_0_out|       pointer|
+|bias_1_local_1_0_out_o_ap_vld  |  out|    1|     ap_ovld|                  bias_1_local_1_0_out|       pointer|
+|bias_1_local_0_0_out_i         |   in|   16|     ap_ovld|                  bias_1_local_0_0_out|       pointer|
+|bias_1_local_0_0_out_o         |  out|   16|     ap_ovld|                  bias_1_local_0_0_out|       pointer|
+|bias_1_local_0_0_out_o_ap_vld  |  out|    1|     ap_ovld|                  bias_1_local_0_0_out|       pointer|
+|w2_local_1_1_0_out_i           |   in|   16|     ap_ovld|                    w2_local_1_1_0_out|       pointer|
+|w2_local_1_1_0_out_o           |  out|   16|     ap_ovld|                    w2_local_1_1_0_out|       pointer|
+|w2_local_1_1_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w2_local_1_1_0_out|       pointer|
+|w2_local_1_0_0_out_i           |   in|   16|     ap_ovld|                    w2_local_1_0_0_out|       pointer|
+|w2_local_1_0_0_out_o           |  out|   16|     ap_ovld|                    w2_local_1_0_0_out|       pointer|
+|w2_local_1_0_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w2_local_1_0_0_out|       pointer|
+|w2_local_0_1_0_out_i           |   in|   16|     ap_ovld|                    w2_local_0_1_0_out|       pointer|
+|w2_local_0_1_0_out_o           |  out|   16|     ap_ovld|                    w2_local_0_1_0_out|       pointer|
+|w2_local_0_1_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w2_local_0_1_0_out|       pointer|
+|w2_local_0_0_0_out_i           |   in|   16|     ap_ovld|                    w2_local_0_0_0_out|       pointer|
+|w2_local_0_0_0_out_o           |  out|   16|     ap_ovld|                    w2_local_0_0_0_out|       pointer|
+|w2_local_0_0_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w2_local_0_0_0_out|       pointer|
+|w1_local_1_1_0_out_i           |   in|   16|     ap_ovld|                    w1_local_1_1_0_out|       pointer|
+|w1_local_1_1_0_out_o           |  out|   16|     ap_ovld|                    w1_local_1_1_0_out|       pointer|
+|w1_local_1_1_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w1_local_1_1_0_out|       pointer|
+|w1_local_1_0_0_out_i           |   in|   16|     ap_ovld|                    w1_local_1_0_0_out|       pointer|
+|w1_local_1_0_0_out_o           |  out|   16|     ap_ovld|                    w1_local_1_0_0_out|       pointer|
+|w1_local_1_0_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w1_local_1_0_0_out|       pointer|
+|w1_local_0_1_0_out_i           |   in|   16|     ap_ovld|                    w1_local_0_1_0_out|       pointer|
+|w1_local_0_1_0_out_o           |  out|   16|     ap_ovld|                    w1_local_0_1_0_out|       pointer|
+|w1_local_0_1_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w1_local_0_1_0_out|       pointer|
+|w1_local_0_0_0_out_i           |   in|   16|     ap_ovld|                    w1_local_0_0_0_out|       pointer|
+|w1_local_0_0_0_out_o           |  out|   16|     ap_ovld|                    w1_local_0_0_0_out|       pointer|
+|w1_local_0_0_0_out_o_ap_vld    |  out|    1|     ap_ovld|                    w1_local_0_0_0_out|       pointer|
++-------------------------------+-----+-----+------------+--------------------------------------+--------------+
+

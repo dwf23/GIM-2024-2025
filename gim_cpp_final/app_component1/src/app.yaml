@@ -1,0 +1,3 @@
+domain_path: C:\GIM_XOR\GIM-2024-2025\gim_cpp_final\platform1\export\platform1\sw\standalone_ps7_cortexa9_0
+app_src_dir: C:\Xilinx\Vitis\2024.1\data\embeddedsw\lib\sw_apps\empty_application
+template: empty_application

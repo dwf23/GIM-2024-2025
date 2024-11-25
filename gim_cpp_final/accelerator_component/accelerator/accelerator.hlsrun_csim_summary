@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\accelerator.hlsrun_csim_summary",
+ "thisFile": "C:/GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\accelerator.hlsrun_csim_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "10/29/24 09:30:30",
- "timestampMillis": "3635377099",
+ "dateTimestamp": "11/17/24 13:32:05",
+ "timestampMillis": "1000104856",
  "buildStep": {
-  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
+  "cmdId": "755a8b9b-d190-4aff-9e4c-e77756147167",
   "name": "vitis-run",
-  "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\logs\\accelerator.steps.log",
-  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg --work_dir accelerator ",
+  "logFile": "C:/GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\logs\\accelerator.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg --work_dir accelerator ",
   "args": [
    "--mode",
    "hls",
    "--csim",
    "--config",
-   "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg",
+   "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg",
    "--work_dir",
    "accelerator"
   ],
   "iniFiles": [],
-  "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+  "cwd": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/29/24 09:30:30",
- "timestampMillis": "3635377099",
+ "dateTimestamp": "11/17/24 13:32:05",
+ "timestampMillis": "1000104856",
  "status": {
-  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
+  "cmdId": "755a8b9b-d190-4aff-9e4c-e77756147167",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "10/29/24 09:30:35",
- "timestampMillis": "3635382273",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000123800",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -85,26 +85,26 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "10/29/24 09:30:35",
- "timestampMillis": "3635382274",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000123804",
  "buildStep": {
-  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
+  "cmdId": "9058a5eb-0be9-4358-8c18-b68eedfa7218",
   "name": "csim_design",
-  "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\hls.log",
+  "logFile": "C:/GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\hls.log",
   "commandLine": "csim_design",
   "args": [],
   "iniFiles": [],
-  "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+  "cwd": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/29/24 09:30:35",
- "timestampMillis": "3635382275",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000123805",
  "status": {
-  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
+  "cmdId": "9058a5eb-0be9-4358-8c18-b68eedfa7218",
   "state": "CS_RUNNING"
  }
 }
@@ -112,30 +112,30 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/29/24 09:30:40",
- "timestampMillis": "3635387751",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000124169",
  "status": {
-  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
-  "state": "CS_PASSED"
+  "cmdId": "9058a5eb-0be9-4358-8c18-b68eedfa7218",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/29/24 09:30:40",
- "timestampMillis": "3635387837",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000124525",
  "status": {
-  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
-  "state": "CS_PASSED"
+  "cmdId": "755a8b9b-d190-4aff-9e4c-e77756147167",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/29/24 09:30:40",
- "timestampMillis": "3635387838",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000124526",
  "report": {
   "path": "",
   "name": "",
@@ -148,8 +148,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/29/24 09:30:40",
- "timestampMillis": "3635387839",
+ "dateTimestamp": "11/17/24 13:32:24",
+ "timestampMillis": "1000124526",
  "report": {
   "path": "",
   "name": "",

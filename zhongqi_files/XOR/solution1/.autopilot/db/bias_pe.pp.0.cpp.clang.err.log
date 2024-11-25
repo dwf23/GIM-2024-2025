@@ -1,0 +1,4 @@
+bias_pe.cpp:9:14: warning: unused parameter 'training' [-Wunused-parameter]
+    fixed_16 training) {
+             ^
+1 warning generated.

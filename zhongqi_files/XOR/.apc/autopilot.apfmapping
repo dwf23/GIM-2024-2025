@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="accelerator.cpp" path="C:\GIM_HLS\XOR_HLS\accelerator.cpp"/>
+    <originFiles name="act_pe.cpp" path="C:\GIM_HLS\XOR_HLS\act_pe.cpp"/>
+    <originFiles name="array.cpp" path="C:\GIM_HLS\XOR_HLS\array.cpp"/>
+    <originFiles name="bias_pe.cpp" path="C:\GIM_HLS\XOR_HLS\bias_pe.cpp"/>
+    <originFiles name="error_pe.cpp" path="C:\GIM_HLS\XOR_HLS\error_pe.cpp"/>
+    <originFiles name="weight_pe.cpp" path="C:\GIM_HLS\XOR_HLS\weight_pe.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="C:\GIM_HLS\XOR_HLS\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

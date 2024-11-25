@@ -1,0 +1,199 @@
+
+
+================================================================
+== Synthesis Summary Report of 'accelerator'
+================================================================
++ General Information: 
+    * Date:           Wed Feb 28 12:04:59 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        XOR
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: kintex7
+    * Target device:  xc7k70t-fbv676-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |          |           |            |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |     LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |+ accelerator                             |     -|  0.48|    65015|  6.502e+05|         -|    65016|     -|        no|     -|  27 (11%)|  3983 (4%)|  4539 (11%)|    -|
+    | + accelerator_Pipeline_VITIS_LOOP_47_1   |     -|  4.30|        4|     40.000|         -|        4|     -|        no|     -|         -|    6 (~0%)|    417 (1%)|    -|
+    |  o VITIS_LOOP_47_1                       |     -|  7.30|        2|     20.000|         2|        1|     2|       yes|     -|         -|          -|           -|    -|
+    | + accelerator_Pipeline_VITIS_LOOP_160_9  |     -|  5.27|        4|     40.000|         -|        4|     -|        no|     -|         -|  196 (~0%)|   240 (~0%)|    -|
+    |  o VITIS_LOOP_160_9                      |     -|  7.30|        2|     20.000|         1|        1|     2|       yes|     -|         -|          -|           -|    -|
+    | o VITIS_LOOP_65_3                        |     -|  7.30|    65002|  6.500e+05|       130|        -|   500|        no|     -|         -|          -|           -|    -|
+    |  + accelerator_Pipeline_VITIS_LOOP_69_4  |     -|  0.48|      127|  1.270e+03|         -|      127|     -|        no|     -|  27 (11%)|  2726 (3%)|   3277 (7%)|    -|
+    |   o VITIS_LOOP_69_4                      |    II|  7.30|      124|  1.240e+03|        26|       25|     4|       yes|     -|         -|          -|           -|    -|
+    |    + model_array                         |    II|  0.52|        4|     40.000|         -|        1|     -|       yes|     -|  26 (10%)|  1470 (1%)|    845 (2%)|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-----------------+-----------+----------+
+| Port            | Direction | Bitwidth |
++-----------------+-----------+----------+
+| bias_1_address0 | out       | 1        |
+| bias_1_q0       | in        | 16       |
+| bias_2_address0 | out       | 1        |
+| bias_2_q0       | in        | 16       |
+| w1_address0     | out       | 2        |
+| w1_address1     | out       | 2        |
+| w1_q0           | in        | 16       |
+| w1_q1           | in        | 16       |
+| w2_address0     | out       | 2        |
+| w2_address1     | out       | 2        |
+| w2_q0           | in        | 16       |
+| w2_q1           | in        | 16       |
++-----------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_return |         | out       | 256      |
+| training  | ap_none | in        | 16       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------+
+| Argument | Direction | Datatype                             |
++----------+-----------+--------------------------------------+
+| w1       | in        | ap_fixed<16, 4, AP_TRN, AP_WRAP, 0>* |
+| w2       | in        | ap_fixed<16, 4, AP_TRN, AP_WRAP, 0>* |
+| bias_1   | in        | ap_fixed<16, 4, AP_TRN, AP_WRAP, 0>* |
+| bias_2   | in        | ap_fixed<16, 4, AP_TRN, AP_WRAP, 0>* |
+| training | in        | ap_fixed<16, 4, AP_TRN, AP_WRAP, 0>  |
+| return   | out       | Inference                            |
++----------+-----------+--------------------------------------+
+
+* SW-to-HW Mapping
++----------+-----------------+---------+----------+
+| Argument | HW Interface    | HW Type | HW Usage |
++----------+-----------------+---------+----------+
+| w1       | w1_address0     | port    | offset   |
+| w1       | w1_ce0          | port    |          |
+| w1       | w1_q0           | port    |          |
+| w1       | w1_address1     | port    | offset   |
+| w1       | w1_ce1          | port    |          |
+| w1       | w1_q1           | port    |          |
+| w2       | w2_address0     | port    | offset   |
+| w2       | w2_ce0          | port    |          |
+| w2       | w2_q0           | port    |          |
+| w2       | w2_address1     | port    | offset   |
+| w2       | w2_ce1          | port    |          |
+| w2       | w2_q1           | port    |          |
+| bias_1   | bias_1_address0 | port    | offset   |
+| bias_1   | bias_1_ce0      | port    |          |
+| bias_1   | bias_1_q0       | port    |          |
+| bias_2   | bias_2_address0 | port    | offset   |
+| bias_2   | bias_2_ce0      | port    |          |
+| bias_2   | bias_2_q0       | port    |          |
+| training | training        | port    |          |
+| return   | ap_return       | port    |          |
++----------+-----------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable           | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| + accelerator                            | 27  |        |                    |     |        |         |
+|   i_2_fu_676_p2                          | -   |        | i_2                | add | fabric | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_47_1  | 0   |        |                    |     |        |         |
+|    add_ln47_fu_236_p2                    | -   |        | add_ln47           | add | fabric | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_69_4  | 27  |        |                    |     |        |         |
+|    add_ln69_fu_860_p2                    | -   |        | add_ln69           | add | fabric | 0       |
+|    sub_ln93_fu_936_p2                    | -   |        | sub_ln93           | sub | fabric | 0       |
+|    sub_ln93_1_fu_977_p2                  | -   |        | sub_ln93_1         | sub | fabric | 0       |
+|    add_ln93_fu_1092_p2                   | -   |        | add_ln93           | add | fabric | 0       |
+|    sub_ln93_4_fu_991_p2                  | -   |        | sub_ln93_4         | sub | fabric | 0       |
+|    add_ln93_1_fu_1007_p2                 | -   |        | add_ln93_1         | add | fabric | 0       |
+|    add_ln93_2_fu_1171_p2                 | -   |        | add_ln93_2         | add | fabric | 0       |
+|    sub_ln93_2_fu_1186_p2                 | -   |        | sub_ln93_2         | sub | fabric | 0       |
+|    add_ln93_3_fu_1208_p2                 | -   |        | add_ln93_3         | add | fabric | 0       |
+|    sub_ln112_fu_1050_p2                  | -   |        | sub_ln112          | sub | fabric | 0       |
+|    mul_17s_10ns_27_1_1_U60               | 1   |        | mul_ln114          | mul | auto   | 0       |
+|   + model_array                          | 26  |        |                    |     |        |         |
+|     mul_16s_16s_28_1_0_U25               | 1   |        | mul_ln12           | mul | auto   | 0       |
+|     mul_16s_16s_28_1_0_U26               | 1   |        | mul_ln13           | mul | auto   | 0       |
+|     mul_16s_16s_32_1_0_U21               | 1   |        | mul_ln14           | mul | auto   | 0       |
+|     mul_32s_10s_40_1_0_U17               | 2   |        | mul_ln14_1         | mul | auto   | 0       |
+|     add_ln14_fu_322_p2                   | -   |        | add_ln14           | add | fabric | 0       |
+|     mul_16s_16s_28_1_0_U27               | 1   |        | mul_ln12_1         | mul | auto   | 0       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U33   | 1   |        | mul_ln13_1         | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U33   | 1   |        | add_ln13           | add | dsp48  | 3       |
+|     mul_16s_16s_32_1_0_U22               | 1   |        | mul_ln14_2         | mul | auto   | 0       |
+|     mul_32s_10s_40_1_0_U18               | 2   |        | mul_ln14_3         | mul | auto   | 0       |
+|     add_ln14_1_fu_351_p2                 | -   |        | add_ln14_1         | add | fabric | 0       |
+|     bias_out_net_sum_fu_426_p2           | -   |        | bias_out_net_sum   | add | fabric | 0       |
+|     mac_mulsub_16s_9ns_28s_28_4_0_U35    | 1   |        | mul_ln15           | mul | dsp48  | 3       |
+|     mac_mulsub_16s_9ns_28s_28_4_0_U35    | 1   |        | sub_ln15           | sub | dsp48  | 3       |
+|     mul_16s_10ns_26_1_0_U29              | 1   |        | mul_ln22           | mul | auto   | 0       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U36   | 1   |        | mul_ln12_2         | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U36   | 1   |        | add_ln12           | add | dsp48  | 3       |
+|     mul_16s_16s_28_1_0_U28               | 1   |        | mul_ln13_2         | mul | auto   | 0       |
+|     mul_16s_16s_32_1_0_U23               | 1   |        | mul_ln14_4         | mul | auto   | 0       |
+|     mul_32s_10s_40_1_0_U19               | 2   |        | mul_ln14_5         | mul | auto   | 0       |
+|     add_ln14_3_fu_373_p2                 | -   |        | add_ln14_3         | add | fabric | 0       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U37   | 1   |        | mul_ln12_3         | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U37   | 1   |        | add_ln12_1         | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U34   | 1   |        | mul_ln13_3         | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_28ns_28_4_0_U34   | 1   |        | add_ln13_1         | add | dsp48  | 3       |
+|     mul_16s_16s_32_1_0_U24               | 1   |        | mul_ln14_6         | mul | auto   | 0       |
+|     mul_32s_10s_40_1_0_U20               | 2   |        | mul_ln14_7         | mul | auto   | 0       |
+|     add_ln14_4_fu_402_p2                 | -   |        | add_ln14_4         | add | fabric | 0       |
+|     bias_out_net_sum_1_fu_469_p2         | -   |        | bias_out_net_sum_1 | add | fabric | 0       |
+|     mac_mulsub_16s_9ns_28s_28_4_0_U38    | 1   |        | mul_ln15_1         | mul | dsp48  | 3       |
+|     mac_mulsub_16s_9ns_28s_28_4_0_U38    | 1   |        | sub_ln15_1         | sub | dsp48  | 3       |
+|     mul_16s_10ns_26_1_0_U30              | 1   |        | mul_ln22_1         | mul | auto   | 0       |
+|     mul_16s_10ns_26_1_0_U31              | 1   |        | mul_ln23           | mul | auto   | 0       |
+|     mul_16s_10ns_26_1_0_U32              | 1   |        | mul_ln23_1         | mul | auto   | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_160_9 | 0   |        |                    |     |        |         |
+|    add_ln160_fu_298_p2                   | -   |        | add_ln160          | add | fabric | 0       |
++------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+-----------------------------------+
+| Type     | Options | Location                          |
++----------+---------+-----------------------------------+
+| pipeline |         | accelerator.cpp:70 in accelerator |
+| unroll   |         | array.cpp:21 in model_array       |
++----------+---------+-----------------------------------+
+
+

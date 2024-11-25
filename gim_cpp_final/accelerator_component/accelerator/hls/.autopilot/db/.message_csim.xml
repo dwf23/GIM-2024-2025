@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="WARNING" prefix="[HLS 200-1998]" key="HLS 200-1998" tag="" content="cannot find relative file path &apos;../../../../../../ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp&apos; in directory(s): C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/solution C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component" resolution=""/>
+	<Message severity="INFO" prefix="[SIM 211-2]" key="SIM_2_1569" tag="" content="*************** CSIM start ***************" resolution=""/>
+	<Message severity="INFO" prefix="[SIM 211-4]" key="SIM_4_1574" tag="" content="CSIM will launch CLANG as the compiler." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 200-627]" key="HLS 200-627" tag="" content="Cannot find C test bench. Please specify test bench files using &apos;add_files -tb&apos;." resolution=""/>
+	<Message severity="ERROR" prefix="[SIM 211-100]" key="SIM_100_1591" tag="" content="CSim failed with errors." resolution=""/>
+	<Message severity="INFO" prefix="[SIM 211-3]" key="SIM_3_1588" tag="" content="*************** CSIM finish ***************" resolution=""/>
+</Messages>

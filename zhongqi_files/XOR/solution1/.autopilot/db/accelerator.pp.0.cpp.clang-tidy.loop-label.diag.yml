@@ -1,0 +1,139 @@
+---
+MainSourceFile:  'C:/GIM_HLS/XOR_HLS/XOR/solution1/.autopilot/db/accelerator.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          55531
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          282855
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          283319
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          283784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          566065
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_47_1:  '
+    FileOffset:      47
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2111912
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_47_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_2:  '
+    FileOffset:      50
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112022
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_65_3:  '
+    FileOffset:      65
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112235
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_65_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_4:  '
+    FileOffset:      69
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2112288
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_5:  '
+    FileOffset:      127
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114003
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_6:  '
+    FileOffset:      129
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114109
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_137_7:  '
+    FileOffset:      137
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_137_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_8:  '
+    FileOffset:      139
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114476
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_160_9:  '
+    FileOffset:      160
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114843
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_160_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_163_10:  '
+    FileOffset:      163
+    FilePath:        accelerator.cpp
+    Replacements:    
+      - FilePath:        'C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp'
+        Offset:          2114979
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_163_10: '
+...

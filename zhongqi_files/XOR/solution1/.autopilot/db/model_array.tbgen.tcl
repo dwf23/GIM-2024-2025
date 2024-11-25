@@ -1,0 +1,185 @@
+set moduleName model_array
+set isTopModule 0
+set isCombinational 0
+set isDatapathOnly 1
+set isPipelined 1
+set pipeline_type function
+set FunctionProtocol ap_ctrl_hs
+set isOneStateSeq 0
+set ProfileFlag 0
+set StallSigGenFlag 0
+set isEnableWaveformDebug 1
+set hasInterrupt 0
+set DLRegFirstOffset 0
+set DLRegItemOffset 0
+set C_modelName {model_array}
+set C_modelType { int 160 }
+set C_modelArgList {
+	{ p_read10 int 16 regular  }
+	{ p_read11 int 16 regular  }
+	{ p_read12 int 16 regular  }
+	{ p_read13 int 16 regular  }
+	{ biases_0_0_val int 16 regular  }
+	{ biases_0_1_val int 16 regular  }
+	{ output_kmin1_0_0_val int 16 regular  }
+	{ output_kmin1_0_1_val int 16 regular  }
+	{ delta_k_0_0_val int 16 regular  }
+	{ delta_k_0_1_val int 16 regular  }
+	{ training_val int 16 regular  }
+}
+set hasAXIMCache 0
+set C_modelArgMapList {[ 
+	{ "Name" : "p_read10", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "p_read11", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "p_read12", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "p_read13", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "biases_0_0_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "biases_0_1_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "output_kmin1_0_0_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "output_kmin1_0_1_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "delta_k_0_0_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "delta_k_0_1_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "training_val", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 160} ]}
+# RTL Port declarations: 
+set portNum 24
+set portList { 
+	{ ap_clk sc_in sc_logic 1 clock -1 } 
+	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
+	{ p_read10 sc_in sc_lv 16 signal 0 } 
+	{ p_read11 sc_in sc_lv 16 signal 1 } 
+	{ p_read12 sc_in sc_lv 16 signal 2 } 
+	{ p_read13 sc_in sc_lv 16 signal 3 } 
+	{ biases_0_0_val sc_in sc_lv 16 signal 4 } 
+	{ biases_0_1_val sc_in sc_lv 16 signal 5 } 
+	{ output_kmin1_0_0_val sc_in sc_lv 16 signal 6 } 
+	{ output_kmin1_0_1_val sc_in sc_lv 16 signal 7 } 
+	{ delta_k_0_0_val sc_in sc_lv 16 signal 8 } 
+	{ delta_k_0_1_val sc_in sc_lv 16 signal 9 } 
+	{ training_val sc_in sc_lv 16 signal 10 } 
+	{ ap_return_0 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_1 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_2 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_3 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_4 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_5 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_6 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_7 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_8 sc_out sc_lv 16 signal -1 } 
+	{ ap_return_9 sc_out sc_lv 16 signal -1 } 
+	{ ap_ce sc_in sc_logic 1 ce -1 } 
+}
+set NewPortList {[ 
+	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
+ 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
+ 	{ "name": "p_read10", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "p_read10", "role": "default" }} , 
+ 	{ "name": "p_read11", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "p_read11", "role": "default" }} , 
+ 	{ "name": "p_read12", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "p_read12", "role": "default" }} , 
+ 	{ "name": "p_read13", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "p_read13", "role": "default" }} , 
+ 	{ "name": "biases_0_0_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "biases_0_0_val", "role": "default" }} , 
+ 	{ "name": "biases_0_1_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "biases_0_1_val", "role": "default" }} , 
+ 	{ "name": "output_kmin1_0_0_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "output_kmin1_0_0_val", "role": "default" }} , 
+ 	{ "name": "output_kmin1_0_1_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "output_kmin1_0_1_val", "role": "default" }} , 
+ 	{ "name": "delta_k_0_0_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "delta_k_0_0_val", "role": "default" }} , 
+ 	{ "name": "delta_k_0_1_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "delta_k_0_1_val", "role": "default" }} , 
+ 	{ "name": "training_val", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "training_val", "role": "default" }} , 
+ 	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
+ 	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }} , 
+ 	{ "name": "ap_return_2", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_2", "role": "default" }} , 
+ 	{ "name": "ap_return_3", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_3", "role": "default" }} , 
+ 	{ "name": "ap_return_4", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_4", "role": "default" }} , 
+ 	{ "name": "ap_return_5", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_5", "role": "default" }} , 
+ 	{ "name": "ap_return_6", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_6", "role": "default" }} , 
+ 	{ "name": "ap_return_7", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_7", "role": "default" }} , 
+ 	{ "name": "ap_return_8", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_8", "role": "default" }} , 
+ 	{ "name": "ap_return_9", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return_9", "role": "default" }} , 
+ 	{ "name": "ap_ce", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "ce", "bundle":{"name": "ap_ce", "role": "default" }}  ]}
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
+		"CDFG" : "model_array",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
+		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "4", "EstimateLatencyMin" : "4", "EstimateLatencyMax" : "4",
+		"Combinational" : "0",
+		"Datapath" : "1",
+		"ClockEnable" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "p_read10", "Type" : "None", "Direction" : "I"},
+			{"Name" : "p_read11", "Type" : "None", "Direction" : "I"},
+			{"Name" : "p_read12", "Type" : "None", "Direction" : "I"},
+			{"Name" : "p_read13", "Type" : "None", "Direction" : "I"},
+			{"Name" : "biases_0_0_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "biases_0_1_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "output_kmin1_0_0_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "output_kmin1_0_1_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "delta_k_0_0_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "delta_k_0_1_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "training_val", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_10s_40_1_0_U17", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_10s_40_1_0_U18", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_10s_40_1_0_U19", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_10s_40_1_0_U20", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_32_1_0_U21", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_32_1_0_U22", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_32_1_0_U23", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_32_1_0_U24", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_28_1_0_U25", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_28_1_0_U26", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_28_1_0_U27", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_28_1_0_U28", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_10ns_26_1_0_U29", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_10ns_26_1_0_U30", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_10ns_26_1_0_U31", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_10ns_26_1_0_U32", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_28ns_28_4_0_U33", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_28ns_28_4_0_U34", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_9ns_28s_28_4_0_U35", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_28ns_28_4_0_U36", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_28ns_28_4_0_U37", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_9ns_28s_28_4_0_U38", "Parent" : "0"}]}
+
+
+set ArgLastReadFirstWriteLatency {
+	model_array {
+		p_read10 {Type I LastRead 0 FirstWrite -1}
+		p_read11 {Type I LastRead 0 FirstWrite -1}
+		p_read12 {Type I LastRead 0 FirstWrite -1}
+		p_read13 {Type I LastRead 0 FirstWrite -1}
+		biases_0_0_val {Type I LastRead 0 FirstWrite -1}
+		biases_0_1_val {Type I LastRead 0 FirstWrite -1}
+		output_kmin1_0_0_val {Type I LastRead 0 FirstWrite -1}
+		output_kmin1_0_1_val {Type I LastRead 0 FirstWrite -1}
+		delta_k_0_0_val {Type I LastRead 0 FirstWrite -1}
+		delta_k_0_1_val {Type I LastRead 0 FirstWrite -1}
+		training_val {Type I LastRead 0 FirstWrite -1}}}
+
+set hasDtUnsupportedChannel 0
+
+set PerformanceInfo {[
+	{"Name" : "Latency", "Min" : "4", "Max" : "4"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
+]}
+
+set PipelineEnableSignalInfo {[
+]}
+
+set Spec2ImplPortList { 
+	p_read10 { ap_none {  { p_read10 in_data 0 16 } } }
+	p_read11 { ap_none {  { p_read11 in_data 0 16 } } }
+	p_read12 { ap_none {  { p_read12 in_data 0 16 } } }
+	p_read13 { ap_none {  { p_read13 in_data 0 16 } } }
+	biases_0_0_val { ap_none {  { biases_0_0_val in_data 0 16 } } }
+	biases_0_1_val { ap_none {  { biases_0_1_val in_data 0 16 } } }
+	output_kmin1_0_0_val { ap_none {  { output_kmin1_0_0_val in_data 0 16 } } }
+	output_kmin1_0_1_val { ap_none {  { output_kmin1_0_1_val in_data 0 16 } } }
+	delta_k_0_0_val { ap_none {  { delta_k_0_0_val in_data 0 16 } } }
+	delta_k_0_1_val { ap_none {  { delta_k_0_1_val in_data 0 16 } } }
+	training_val { ap_none {  { training_val in_data 0 16 } } }
+}

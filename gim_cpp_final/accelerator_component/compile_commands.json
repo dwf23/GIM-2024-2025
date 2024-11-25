@@ -1,6 +1,6 @@
 [
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -12,7 +12,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -24,7 +24,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -36,7 +36,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -48,7 +48,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -60,7 +60,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls",
@@ -72,7 +72,7 @@
     "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp"
   },
   {
-    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
     "arguments": [
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls-tb",

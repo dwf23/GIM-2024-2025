@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="XOR" solutionName="solution1" date="2024-11-17T14:21:22.708-0800"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.189-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.145-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.109-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.086-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.050-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.033-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'accelerator_Pipeline_VITIS_LOOP_69_4' (loop 'VITIS_LOOP_69_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'call' operation ('call_ret3', accelerator.cpp:134) to 'model_array' and 'call' operation ('call_ret1', accelerator.cpp:83) to 'model_array'.&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:56.020-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_65_3' (accelerator.cpp:65:22) in function 'accelerator' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:54.614-0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] accelerator.cpp:93: variable-indexed range selection may cause suboptimal QoR." projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:53.440-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'training' (weight_pe.cpp:7:28)" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:48.206-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'training' (bias_pe.cpp:9:14)" projectName="XOR" solutionName="solution1" date="2024-02-28T10:04:37.838-0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

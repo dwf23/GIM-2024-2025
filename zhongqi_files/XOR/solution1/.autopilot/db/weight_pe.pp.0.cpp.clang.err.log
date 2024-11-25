@@ -1,0 +1,4 @@
+weight_pe.cpp:7:28: warning: unused parameter 'training' [-Wunused-parameter]
+    fixed_16 eta, fixed_16 training) {
+                           ^
+1 warning generated.

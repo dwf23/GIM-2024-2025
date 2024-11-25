@@ -1,0 +1,350 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 127, Column: 31 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 129, Column: 35 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_129_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 137, Column: 31 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 139, Column: 35 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: array.cpp, Line: 43, Column: 22 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_43_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: array.cpp, Line: 20, Column: 22 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: array.cpp, Line: 26, Column: 26 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_5
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:127:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_129_6
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:129:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_129_6
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:129:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:137:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         'accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_43_3
+  - String:          ''' ('
+  - LoopLoc:         'array.cpp:43:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ''' ('
+  - LoopLoc:         'array.cpp:20:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ''' ('
+  - LoopLoc:         'array.cpp:26:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ''' ('
+  - LoopLoc:         'array.cpp:26:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'weights_pe(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: weight_pe.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bias_pe(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: bias_pe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'act_pe(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: act_pe.cpp, Line: 4, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'error_pe(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: error_pe.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            w2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            w1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: accelerator.cpp, Line: 69, Column: 26 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_69_4
+  - String:          ' '
+  - LoopLoc:         'accelerator.cpp:69:26'
+  - String:          ' '
+  - Function:        'accelerator(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: accelerator.cpp, Line: 65, Column: 22 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_65_3
+  - String:          ' '
+  - LoopLoc:         'accelerator.cpp:65:22'
+  - String:          ' '
+  - Function:        'accelerator(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: accelerator.cpp, Line: 9, Column: 0 }
+  - String:          ' '
+...

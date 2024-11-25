@@ -1,0 +1,255 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'accelerator'" level="0">
+<item name = "Date">Wed Feb 28 12:04:59 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">XOR</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k70t-fbv676-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.817 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">12, 65015, 0.120 us, 0.650 ms, 13, 65016, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_474">accelerator_Pipeline_VITIS_LOOP_47_1, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_69_4_fu_498">accelerator_Pipeline_VITIS_LOOP_69_4, 26, 127, 0.260 us, 1.270 us, 26, 127, no</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_160_9_fu_552">accelerator_Pipeline_VITIS_LOOP_160_9, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_65_3">0, 65002, 29 ~ 130, -, -, 0 ~ 500, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 311, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 27, 2928, 3934, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 294, -</column>
+<column name="Register">-, -, 1055, -, -</column>
+<specialColumn name="Available">270, 240, 82000, 41000, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 11, 4, 11, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_160_9_fu_552">accelerator_Pipeline_VITIS_LOOP_160_9, 0, 0, 196, 240, 0</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_474">accelerator_Pipeline_VITIS_LOOP_47_1, 0, 0, 6, 417, 0</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_69_4_fu_498">accelerator_Pipeline_VITIS_LOOP_69_4, 0, 27, 2726, 3277, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_676_p2">+, 0, 0, 16, 9, 1</column>
+<column name="cmp_i_i116_fu_597_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln65_fu_670_p2">icmp, 0, 0, 16, 9, 5</column>
+<column name="select_ln69_10_fu_858_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_11_fu_866_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_12_fu_874_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_13_fu_881_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_14_fu_888_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_15_fu_895_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_1_fu_786_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_2_fu_794_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_3_fu_802_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_4_fu_810_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_5_fu_818_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_6_fu_826_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_7_fu_834_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_8_fu_842_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_9_fu_850_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln69_fu_778_p3">select, 0, 0, 16, 1, 16</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">33, 8, 1, 8</column>
+<column name="bias_1_local_0_2_fu_116">9, 2, 16, 32</column>
+<column name="bias_1_local_0_5_reg_344">9, 2, 16, 32</column>
+<column name="bias_1_local_1_2_fu_120">9, 2, 16, 32</column>
+<column name="bias_1_local_1_5_reg_334">9, 2, 16, 32</column>
+<column name="bias_2_local_0_2_fu_124">9, 2, 16, 32</column>
+<column name="bias_2_local_0_5_reg_324">9, 2, 16, 32</column>
+<column name="bias_2_local_1_2_fu_128">9, 2, 16, 32</column>
+<column name="bias_2_local_1_5_reg_314">9, 2, 16, 32</column>
+<column name="i_fu_64">9, 2, 9, 18</column>
+<column name="output_array_inference_0_7_reg_464">9, 2, 16, 32</column>
+<column name="output_array_inference_1_7_reg_454">9, 2, 16, 32</column>
+<column name="output_array_inference_2_7_reg_444">9, 2, 16, 32</column>
+<column name="output_array_inference_3_7_reg_434">9, 2, 16, 32</column>
+<column name="w1_local_0_0_2_fu_84">9, 2, 16, 32</column>
+<column name="w1_local_0_0_5_reg_424">9, 2, 16, 32</column>
+<column name="w1_local_0_1_2_fu_88">9, 2, 16, 32</column>
+<column name="w1_local_0_1_5_reg_414">9, 2, 16, 32</column>
+<column name="w1_local_1_0_2_fu_92">9, 2, 16, 32</column>
+<column name="w1_local_1_0_5_reg_404">9, 2, 16, 32</column>
+<column name="w1_local_1_1_2_fu_96">9, 2, 16, 32</column>
+<column name="w1_local_1_1_5_reg_394">9, 2, 16, 32</column>
+<column name="w2_local_0_0_2_fu_100">9, 2, 16, 32</column>
+<column name="w2_local_0_0_5_reg_384">9, 2, 16, 32</column>
+<column name="w2_local_0_1_2_fu_104">9, 2, 16, 32</column>
+<column name="w2_local_0_1_5_reg_374">9, 2, 16, 32</column>
+<column name="w2_local_1_0_2_fu_108">9, 2, 16, 32</column>
+<column name="w2_local_1_0_5_reg_364">9, 2, 16, 32</column>
+<column name="w2_local_1_1_2_fu_112">9, 2, 16, 32</column>
+<column name="w2_local_1_1_5_reg_354">9, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="array_back1_bias_change_0_loc_fu_184">16, 0, 16, 0</column>
+<column name="array_back1_bias_change_1_loc_fu_180">16, 0, 16, 0</column>
+<column name="array_back1_weight_changes_0_0_loc_fu_200">16, 0, 16, 0</column>
+<column name="array_back1_weight_changes_0_1_loc_fu_196">16, 0, 16, 0</column>
+<column name="array_back1_weight_changes_1_0_loc_fu_192">16, 0, 16, 0</column>
+<column name="array_back1_weight_changes_1_1_loc_fu_188">16, 0, 16, 0</column>
+<column name="array_back2_bias_change_0_loc_fu_208">16, 0, 16, 0</column>
+<column name="array_back2_bias_change_1_loc_fu_204">16, 0, 16, 0</column>
+<column name="array_back2_weight_changes_0_0_loc_fu_224">16, 0, 16, 0</column>
+<column name="array_back2_weight_changes_0_1_loc_fu_220">16, 0, 16, 0</column>
+<column name="array_back2_weight_changes_1_0_loc_fu_216">16, 0, 16, 0</column>
+<column name="array_back2_weight_changes_1_1_loc_fu_212">16, 0, 16, 0</column>
+<column name="bias_1_local_0_2_fu_116">16, 0, 16, 0</column>
+<column name="bias_1_local_0_3_loc_fu_292">16, 0, 16, 0</column>
+<column name="bias_1_local_0_5_reg_344">16, 0, 16, 0</column>
+<column name="bias_1_local_1_2_fu_120">16, 0, 16, 0</column>
+<column name="bias_1_local_1_3_loc_fu_296">16, 0, 16, 0</column>
+<column name="bias_1_local_1_5_reg_334">16, 0, 16, 0</column>
+<column name="bias_2_local_0_2_fu_124">16, 0, 16, 0</column>
+<column name="bias_2_local_0_3_loc_fu_300">16, 0, 16, 0</column>
+<column name="bias_2_local_0_5_reg_324">16, 0, 16, 0</column>
+<column name="bias_2_local_1_2_fu_128">16, 0, 16, 0</column>
+<column name="bias_2_local_1_3_loc_fu_304">16, 0, 16, 0</column>
+<column name="bias_2_local_1_5_reg_314">16, 0, 16, 0</column>
+<column name="cmp_i_i116_reg_1442">1, 0, 1, 0</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_160_9_fu_552_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_474_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_accelerator_Pipeline_VITIS_LOOP_69_4_fu_498_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_reg_1507">9, 0, 9, 0</column>
+<column name="i_fu_64">9, 0, 9, 0</column>
+<column name="icmp_ln65_reg_1503">1, 0, 1, 0</column>
+<column name="output_array_inference_0_0_fu_68">16, 0, 16, 0</column>
+<column name="output_array_inference_0_1_loc_fu_244">16, 0, 16, 0</column>
+<column name="output_array_inference_0_7_reg_464">16, 0, 16, 0</column>
+<column name="output_array_inference_1_0_fu_72">16, 0, 16, 0</column>
+<column name="output_array_inference_1_1_loc_fu_248">16, 0, 16, 0</column>
+<column name="output_array_inference_1_7_reg_454">16, 0, 16, 0</column>
+<column name="output_array_inference_2_0_fu_76">16, 0, 16, 0</column>
+<column name="output_array_inference_2_1_loc_fu_252">16, 0, 16, 0</column>
+<column name="output_array_inference_2_7_reg_444">16, 0, 16, 0</column>
+<column name="output_array_inference_3_0_fu_80">16, 0, 16, 0</column>
+<column name="output_array_inference_3_1_loc_fu_256">16, 0, 16, 0</column>
+<column name="output_array_inference_3_7_reg_434">16, 0, 16, 0</column>
+<column name="select_ln96_1_loc_fu_240">16, 0, 16, 0</column>
+<column name="select_ln96_3_loc_fu_236">16, 0, 16, 0</column>
+<column name="select_ln96_5_loc_fu_232">16, 0, 16, 0</column>
+<column name="select_ln96_7_loc_fu_228">16, 0, 16, 0</column>
+<column name="targetBlock_reg_1512">1, 0, 1, 0</column>
+<column name="w1_local_0_0_2_fu_84">16, 0, 16, 0</column>
+<column name="w1_local_0_0_3_loc_fu_260">16, 0, 16, 0</column>
+<column name="w1_local_0_0_5_reg_424">16, 0, 16, 0</column>
+<column name="w1_local_0_1_2_fu_88">16, 0, 16, 0</column>
+<column name="w1_local_0_1_3_loc_fu_264">16, 0, 16, 0</column>
+<column name="w1_local_0_1_5_reg_414">16, 0, 16, 0</column>
+<column name="w1_local_1_0_2_fu_92">16, 0, 16, 0</column>
+<column name="w1_local_1_0_3_loc_fu_268">16, 0, 16, 0</column>
+<column name="w1_local_1_0_5_reg_404">16, 0, 16, 0</column>
+<column name="w1_local_1_1_2_fu_96">16, 0, 16, 0</column>
+<column name="w1_local_1_1_3_loc_fu_272">16, 0, 16, 0</column>
+<column name="w1_local_1_1_5_reg_394">16, 0, 16, 0</column>
+<column name="w2_local_0_0_2_fu_100">16, 0, 16, 0</column>
+<column name="w2_local_0_0_3_loc_fu_276">16, 0, 16, 0</column>
+<column name="w2_local_0_0_5_reg_384">16, 0, 16, 0</column>
+<column name="w2_local_0_1_2_fu_104">16, 0, 16, 0</column>
+<column name="w2_local_0_1_3_loc_fu_280">16, 0, 16, 0</column>
+<column name="w2_local_0_1_5_reg_374">16, 0, 16, 0</column>
+<column name="w2_local_1_0_2_fu_108">16, 0, 16, 0</column>
+<column name="w2_local_1_0_3_loc_fu_284">16, 0, 16, 0</column>
+<column name="w2_local_1_0_5_reg_364">16, 0, 16, 0</column>
+<column name="w2_local_1_1_2_fu_112">16, 0, 16, 0</column>
+<column name="w2_local_1_1_3_loc_fu_288">16, 0, 16, 0</column>
+<column name="w2_local_1_1_5_reg_354">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, accelerator, return value</column>
+<column name="ap_return">out, 256, ap_ctrl_hs, accelerator, return value</column>
+<column name="w1_address0">out, 2, ap_memory, w1, array</column>
+<column name="w1_ce0">out, 1, ap_memory, w1, array</column>
+<column name="w1_q0">in, 16, ap_memory, w1, array</column>
+<column name="w1_address1">out, 2, ap_memory, w1, array</column>
+<column name="w1_ce1">out, 1, ap_memory, w1, array</column>
+<column name="w1_q1">in, 16, ap_memory, w1, array</column>
+<column name="w2_address0">out, 2, ap_memory, w2, array</column>
+<column name="w2_ce0">out, 1, ap_memory, w2, array</column>
+<column name="w2_q0">in, 16, ap_memory, w2, array</column>
+<column name="w2_address1">out, 2, ap_memory, w2, array</column>
+<column name="w2_ce1">out, 1, ap_memory, w2, array</column>
+<column name="w2_q1">in, 16, ap_memory, w2, array</column>
+<column name="bias_1_address0">out, 1, ap_memory, bias_1, array</column>
+<column name="bias_1_ce0">out, 1, ap_memory, bias_1, array</column>
+<column name="bias_1_q0">in, 16, ap_memory, bias_1, array</column>
+<column name="bias_2_address0">out, 1, ap_memory, bias_2, array</column>
+<column name="bias_2_ce0">out, 1, ap_memory, bias_2, array</column>
+<column name="bias_2_q0">in, 16, ap_memory, bias_2, array</column>
+<column name="training">in, 16, ap_none, training, scalar</column>
+</table>
+</item>
+</section>
+</profile>

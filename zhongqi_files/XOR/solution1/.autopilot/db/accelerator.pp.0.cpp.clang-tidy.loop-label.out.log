@@ -1,0 +1,75 @@
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:1335:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:1335:7: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2309:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2309:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2323:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2323:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2337:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:2337:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:3936:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:3936:7: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46971:5: warning: Added loop label VITIS_LOOP_47_1:   [xilinx-label-all-loops]
+    for (int n = 0; n<2; n++) {
+    ^~~
+    VITIS_LOOP_47_1: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46971:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46974:9: warning: Added loop label VITIS_LOOP_50_2:   [xilinx-label-all-loops]
+        for (int m = 0;m<2; m++) {
+        ^~~
+        VITIS_LOOP_50_2: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46974:9: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46989:5: warning: Added loop label VITIS_LOOP_65_3:   [xilinx-label-all-loops]
+    for (i = 0; i < 500; i++) {
+    ^~~
+    VITIS_LOOP_65_3: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46989:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46993:9: warning: Added loop label VITIS_LOOP_69_4:   [xilinx-label-all-loops]
+        for (j = 0; j < 4; j++) {
+        ^~~
+        VITIS_LOOP_69_4: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:46993:9: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47051:13: warning: Added loop label VITIS_LOOP_127_5:   [xilinx-label-all-loops]
+            for (int n = 0; n<2; n++) {
+            ^~~
+            VITIS_LOOP_127_5: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47051:13: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47053:17: warning: Added loop label VITIS_LOOP_129_6:   [xilinx-label-all-loops]
+                for (int m = 0;m<2; m++) {
+                ^~~
+                VITIS_LOOP_129_6: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47053:17: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47061:13: warning: Added loop label VITIS_LOOP_137_7:   [xilinx-label-all-loops]
+            for (int n = 0; n<2; n++) {
+            ^~~
+            VITIS_LOOP_137_7: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47061:13: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47063:17: warning: Added loop label VITIS_LOOP_139_8:   [xilinx-label-all-loops]
+                for (int m = 0; m<2; m++) {
+                ^~~
+                VITIS_LOOP_139_8: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47063:17: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47084:5: warning: Added loop label VITIS_LOOP_160_9:   [xilinx-label-all-loops]
+    for (int n = 0; n<2; n++) {
+    ^~~
+    VITIS_LOOP_160_9: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47084:5: note: FIX-IT applied suggested code changes
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47087:9: warning: Added loop label VITIS_LOOP_163_10:   [xilinx-label-all-loops]
+        for (int m = 0;m<2; m++) {
+        ^~~
+        VITIS_LOOP_163_10: 
+C:\GIM_HLS\XOR_HLS\XOR\solution1\.autopilot\db\accelerator.pp.0.cpp:47087:9: note: FIX-IT applied suggested code changes

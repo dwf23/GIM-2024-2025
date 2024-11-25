@@ -1248,3 +1248,137 @@ Execute   close_project
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
+INFO-FLOW: Workspace C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls opened at Sun Nov 17 13:32:14 -0600 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(8) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(8)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(9) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(9)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(10) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(10)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(11) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(11)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(12) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(12)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(13) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(13)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(14) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(14)
+Execute     send_msg_by_id WARNING @200-2001@%s%s C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(15) 
+WARNING: [HLS 200-2001] file not found 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(15)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(8)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(9)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(10)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(11)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(12)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(13)
+Execute     add_files C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(14)
+Execute     add_files -tb C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp,-D HW_COSIM' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp,-D HW_COSIM' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(15)
+Execute     add_files -tb C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=accelerator' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=accelerator' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(7)
+Command     send_msg_by_id done; 1.404 sec.
+Execute     set_top accelerator 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 7.127 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.132 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.299 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 7.53 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(16)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(17)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(18)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 9.094 sec.
+Execute   apply_ini C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../../../../../ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/solution C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component 
+WARNING: [HLS 200-1998] cannot find relative file path '../../../../../../ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp' in directory(s): C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/solution C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component
+Execute     source C:/GIM_XOR/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id ERROR @200-627@ 
+ERROR: [HLS 200-627] Cannot find C test bench. Please specify test bench files using 'add_files -tb'.
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+NONE
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 0.364 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

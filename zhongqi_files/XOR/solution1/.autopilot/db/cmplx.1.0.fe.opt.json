@@ -1,0 +1,129 @@
+{
+  "0": {
+    "basicblocks": 102,
+    "calls": "2 9 9 9 9",
+    "file": "accelerator.cpp",
+    "fileloc": 7,
+    "instructions": 841,
+    "loads": {
+      "L": 40,
+      "T": 4
+    },
+    "name": "accelerator",
+    "stores": {
+      "L": 44
+    },
+    "total_instructions": 24462
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "bias_pe.cpp",
+    "fileloc": 5,
+    "instructions": 46,
+    "loads": {
+      "L": 2
+    },
+    "name": "bias_pe",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 673
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 54,
+    "instructions": 65,
+    "name": "Inference",
+    "total_instructions": 100
+  },
+  "3": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "act_pe.cpp",
+    "fileloc": 4,
+    "instructions": 66,
+    "loads": {
+      "L": 6
+    },
+    "name": "act_pe",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 631
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 33,
+    "instructions": 5,
+    "name": "Bias",
+    "total_instructions": 19
+  },
+  "5": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "error_pe.cpp",
+    "fileloc": 5,
+    "instructions": 59,
+    "loads": {
+      "L": 5
+    },
+    "name": "error_pe",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 624
+  },
+  "6": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 43,
+    "instructions": 48,
+    "name": "Array",
+    "total_instructions": 76
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 25,
+    "instructions": 7,
+    "name": "Weight",
+    "total_instructions": 28
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "weight_pe.cpp",
+    "fileloc": 5,
+    "instructions": 84,
+    "loads": {
+      "L": 3
+    },
+    "name": "weights_pe",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 1444
+  },
+  "9": {
+    "basicblocks": 19,
+    "calls": "6 8 1 3 5",
+    "file": "array.cpp",
+    "fileloc": 4,
+    "instructions": 183,
+    "loads": {
+      "L": 24
+    },
+    "name": "model_array",
+    "stores": {
+      "L": 24
+    },
+    "total_instructions": 3955
+  }
+}

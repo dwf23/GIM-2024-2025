@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "accelerator",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "accelerator"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/GIM_HLS/XOR_HLS/XOR/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "accelerator",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "accelerator"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/GIM_HLS/XOR_HLS/XOR/solution1/csynth.tcl",
+    "sourceLine": 21,
+    "success": true
+  }
+]

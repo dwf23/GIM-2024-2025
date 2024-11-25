@@ -1,0 +1,81 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/GIM_HLS/XOR_HLS/XOR/solution1/csynth.tcl:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=accelerator" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/GIM_HLS/XOR_HLS/XOR/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=accelerator" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator.cpp:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="model_array" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="bias_pe.cpp:9:14" msg_body="unused parameter 'training'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="weight_pe.cpp:7:28" msg_body="unused parameter 'training'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator.cpp:127:31" msg_body="Loop 'VITIS_LOOP_127_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_127_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator.cpp:129:35" msg_body="Loop 'VITIS_LOOP_129_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_129_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator.cpp:137:31" msg_body="Loop 'VITIS_LOOP_137_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_137_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator.cpp:139:35" msg_body="Loop 'VITIS_LOOP_139_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_139_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array.cpp:43:22" msg_body="Loop 'VITIS_LOOP_43_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_43_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array.cpp:20:22" msg_body="Loop 'VITIS_LOOP_20_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_20_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="array.cpp:26:26" msg_body="Loop 'VITIS_LOOP_26_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_26_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_127_5' (accelerator.cpp:127:31) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="accelerator.cpp:127:31" LoopName="VITIS_LOOP_127_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_129_6' (accelerator.cpp:129:35) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="accelerator.cpp:129:35" LoopName="VITIS_LOOP_129_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_137_7' (accelerator.cpp:137:31) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="accelerator.cpp:137:31" LoopName="VITIS_LOOP_137_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_139_8' (accelerator.cpp:139:35) in function 'accelerator' completely with a factor of 2">
+        <args Factor="2" LoopLoc="accelerator.cpp:139:35" LoopName="VITIS_LOOP_139_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_43_3' (array.cpp:43:22) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="array.cpp:43:22" LoopName="VITIS_LOOP_43_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_20_1' (array.cpp:20:22) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="array.cpp:20:22" LoopName="VITIS_LOOP_20_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Unrolling loop 'VITIS_LOOP_26_2' (array.cpp:26:26) in function 'model_array' completely with a factor of 2">
+        <args Factor="2" LoopLoc="array.cpp:26:26" LoopName="VITIS_LOOP_26_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Inlining function 'weights_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="weights_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File weight_pe.cpp Line 7 Column 0" Caller="model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Inlining function 'bias_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="bias_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File bias_pe.cpp Line 9 Column 0" Caller="model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Inlining function 'act_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="act_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File act_pe.cpp Line 4 Column 0" Caller="model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="array.cpp:8:0" msg_body="Inlining function 'error_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)'">
+        <args Callee="error_pe(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File error_pe.cpp Line 5 Column 0" Caller="model_array(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [2], ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, char, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Caller-DebugLoc="File array.cpp Line 8 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Aggregating bram variable 'w2' with compact=bit mode in 16-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="bram" Name="w2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="accelerator.cpp:9:0" msg_body="Aggregating bram variable 'w1' with compact=bit mode in 16-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="bram" Name="w1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

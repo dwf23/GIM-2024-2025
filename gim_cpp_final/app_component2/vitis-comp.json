@@ -1,0 +1,15 @@
+{
+  "name": "app_component2",
+  "type": "HOST",
+  "platform": "C:\\GIM_XOR\\GIM-2024-2025\\gim_cpp_final\\platform2\\export\\platform2\\platform2.xpfm",
+  "domain": "standalone_psu_cortexa53_0",
+  "cpuInstance": "psu_cortexa53_0",
+  "cpuType": "cortex-a53",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_psu_cortexa53_0",
+  "applicationFlow": "EMBEDDED"
+}

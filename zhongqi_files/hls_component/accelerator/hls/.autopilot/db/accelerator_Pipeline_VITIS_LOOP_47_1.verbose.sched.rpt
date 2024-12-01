@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'accelerator_Pipeline_VITIS_LOOP_47_1'
+================================================================
+* Date:           Sat Nov 30 21:29:42 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        accelerator
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.699 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                     |
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+    |        4|        4|  40.000 ns|  40.000 ns|    3|    3|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_47_1  |        2|        2|         2|          1|          1|     2|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.60>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%n = alloca i32 1" [../accelerator.cpp:47]   --->   Operation 5 'alloca' 'n' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%w1_local = alloca i32 1"   --->   Operation 6 'alloca' 'w1_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%w1_local_1 = alloca i32 1"   --->   Operation 7 'alloca' 'w1_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%w2_local = alloca i32 1"   --->   Operation 8 'alloca' 'w2_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w2_local_1 = alloca i32 1"   --->   Operation 9 'alloca' 'w2_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%w1_local_2 = alloca i32 1"   --->   Operation 10 'alloca' 'w1_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%w1_local_3 = alloca i32 1"   --->   Operation 11 'alloca' 'w1_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%w2_local_2 = alloca i32 1"   --->   Operation 12 'alloca' 'w2_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%w2_local_3 = alloca i32 1"   --->   Operation 13 'alloca' 'w2_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bias_2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bias_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %w2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %w1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w2_local_3"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 19 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w2_local_2"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 20 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w1_local_3"   --->   Operation 20 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 21 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w1_local_2"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 22 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w2_local_1"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 23 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w2_local"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 24 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w1_local_1"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 25 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %w1_local"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 26 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %bias_2_local_idx4_promoted3086_out"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 27 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %bias_2_local_idx_promoted2884_out"   --->   Operation 27 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 28 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %bias_1_local_idx1_promoted2682_out"   --->   Operation 28 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 29 [1/1] (0.48ns)   --->   "%store_ln0 = store i16 0, i16 %bias_1_local_idx_promoted2480_out"   --->   Operation 29 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 30 [1/1] (0.48ns)   --->   "%store_ln47 = store i2 0, i2 %n" [../accelerator.cpp:47]   --->   Operation 30 'store' 'store_ln47' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_50_2"   --->   Operation 31 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%n_1 = load i2 %n" [../accelerator.cpp:51]   --->   Operation 32 'load' 'n_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.62ns)   --->   "%icmp_ln47 = icmp_eq  i2 %n_1, i2 2" [../accelerator.cpp:47]   --->   Operation 33 'icmp' 'icmp_ln47' <Predicate = true> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.62ns)   --->   "%add_ln47 = add i2 %n_1, i2 1" [../accelerator.cpp:47]   --->   Operation 34 'add' 'add_ln47' <Predicate = true> <Delay = 0.62> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln47 = br i1 %icmp_ln47, void %VITIS_LOOP_50_2.split, void %VITIS_LOOP_65_3.exitStub" [../accelerator.cpp:47]   --->   Operation 35 'br' 'br_ln47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln47 = trunc i2 %n_1" [../accelerator.cpp:47]   --->   Operation 36 'trunc' 'trunc_ln47' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i2 %n_1" [../accelerator.cpp:47]   --->   Operation 37 'zext' 'zext_ln47' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%shl_ln51 = shl i2 %n_1, i2 1" [../accelerator.cpp:51]   --->   Operation 38 'shl' 'shl_ln51' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i2 %shl_ln51" [../accelerator.cpp:51]   --->   Operation 39 'zext' 'zext_ln51' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%w1_addr = getelementptr i16 %w1, i64 0, i64 %zext_ln51" [../accelerator.cpp:51]   --->   Operation 40 'getelementptr' 'w1_addr' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i2 @_ssdm_op_BitConcatenate.i2.i1.i1, i1 %trunc_ln47, i1 1" [../accelerator.cpp:51]   --->   Operation 41 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln51_1 = zext i2 %tmp_s" [../accelerator.cpp:51]   --->   Operation 42 'zext' 'zext_ln51_1' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%w1_addr_1 = getelementptr i16 %w1, i64 0, i64 %zext_ln51_1" [../accelerator.cpp:51]   --->   Operation 43 'getelementptr' 'w1_addr_1' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%w2_addr = getelementptr i16 %w2, i64 0, i64 %zext_ln51" [../accelerator.cpp:52]   --->   Operation 44 'getelementptr' 'w2_addr' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%w2_addr_1 = getelementptr i16 %w2, i64 0, i64 %zext_ln51_1" [../accelerator.cpp:52]   --->   Operation 45 'getelementptr' 'w2_addr_1' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%bias_1_addr = getelementptr i16 %bias_1, i64 0, i64 %zext_ln47" [../accelerator.cpp:48]   --->   Operation 46 'getelementptr' 'bias_1_addr' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 47 [2/2] (0.79ns)   --->   "%bias_1_local = load i1 %bias_1_addr" [../accelerator.cpp:48]   --->   Operation 47 'load' 'bias_1_local' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2> <RAM>
+ST_1 : Operation 48 [1/1] (0.62ns)   --->   "%icmp_ln48 = icmp_eq  i2 %n_1, i2 0" [../accelerator.cpp:48]   --->   Operation 48 'icmp' 'icmp_ln48' <Predicate = (!icmp_ln47)> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%bias_2_addr = getelementptr i16 %bias_2, i64 0, i64 %zext_ln47" [../accelerator.cpp:49]   --->   Operation 49 'getelementptr' 'bias_2_addr' <Predicate = (!icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 50 [2/2] (0.79ns)   --->   "%bias_2_local = load i1 %bias_2_addr" [../accelerator.cpp:49]   --->   Operation 50 'load' 'bias_2_local' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2> <RAM>
+ST_1 : Operation 51 [2/2] (0.79ns)   --->   "%w1_load = load i2 %w1_addr" [../accelerator.cpp:51]   --->   Operation 51 'load' 'w1_load' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_1 : Operation 52 [2/2] (0.79ns)   --->   "%w2_load = load i2 %w2_addr" [../accelerator.cpp:52]   --->   Operation 52 'load' 'w2_load' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_1 : Operation 53 [2/2] (0.79ns)   --->   "%w1_load_1 = load i2 %w1_addr_1" [../accelerator.cpp:51]   --->   Operation 53 'load' 'w1_load_1' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_1 : Operation 54 [2/2] (0.79ns)   --->   "%w2_load_1 = load i2 %w2_addr_1" [../accelerator.cpp:52]   --->   Operation 54 'load' 'w2_load_1' <Predicate = (!icmp_ln47)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_1 : Operation 55 [1/1] (0.48ns)   --->   "%store_ln47 = store i2 %add_ln47, i2 %n" [../accelerator.cpp:47]   --->   Operation 55 'store' 'store_ln47' <Predicate = (!icmp_ln47)> <Delay = 0.48>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%w1_local_load = load i16 %w1_local"   --->   Operation 102 'load' 'w1_local_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%w1_local_1_load = load i16 %w1_local_1"   --->   Operation 103 'load' 'w1_local_1_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%w2_local_load = load i16 %w2_local"   --->   Operation 104 'load' 'w2_local_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%w2_local_1_load = load i16 %w2_local_1"   --->   Operation 105 'load' 'w2_local_1_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%w1_local_2_load = load i16 %w1_local_2"   --->   Operation 106 'load' 'w1_local_2_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%w1_local_3_load = load i16 %w1_local_3"   --->   Operation 107 'load' 'w1_local_3_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%w2_local_2_load = load i16 %w2_local_2"   --->   Operation 108 'load' 'w2_local_2_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%w2_local_3_load = load i16 %w2_local_3"   --->   Operation 109 'load' 'w2_local_3_load' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w2_local_3_out, i16 %w2_local_3_load"   --->   Operation 110 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w2_local_2_out, i16 %w2_local_2_load"   --->   Operation 111 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w1_local_3_out, i16 %w1_local_3_load"   --->   Operation 112 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w1_local_2_out, i16 %w1_local_2_load"   --->   Operation 113 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w2_local_1_out, i16 %w2_local_1_load"   --->   Operation 114 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w2_local_out, i16 %w2_local_load"   --->   Operation 115 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w1_local_1_out, i16 %w1_local_1_load"   --->   Operation 116 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %w1_local_out, i16 %w1_local_load"   --->   Operation 117 'write' 'write_ln0' <Predicate = (icmp_ln47)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 118 'ret' 'ret_ln0' <Predicate = (icmp_ln47)> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 1.69>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%bias_1_local_idx_promoted2480_out_load = load i16 %bias_1_local_idx_promoted2480_out" [../accelerator.cpp:48]   --->   Operation 56 'load' 'bias_1_local_idx_promoted2480_out_load' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%bias_1_local_idx1_promoted2682_out_load = load i16 %bias_1_local_idx1_promoted2682_out" [../accelerator.cpp:48]   --->   Operation 57 'load' 'bias_1_local_idx1_promoted2682_out_load' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%bias_2_local_idx_promoted2884_out_load = load i16 %bias_2_local_idx_promoted2884_out" [../accelerator.cpp:48]   --->   Operation 58 'load' 'bias_2_local_idx_promoted2884_out_load' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%bias_2_local_idx4_promoted3086_out_load = load i16 %bias_2_local_idx4_promoted3086_out" [../accelerator.cpp:48]   --->   Operation 59 'load' 'bias_2_local_idx4_promoted3086_out_load' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%w1_local_load_1 = load i16 %w1_local" [../accelerator.cpp:48]   --->   Operation 60 'load' 'w1_local_load_1' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%w1_local_1_load_1 = load i16 %w1_local_1" [../accelerator.cpp:48]   --->   Operation 61 'load' 'w1_local_1_load_1' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%w2_local_load_1 = load i16 %w2_local" [../accelerator.cpp:48]   --->   Operation 62 'load' 'w2_local_load_1' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%w2_local_1_load_1 = load i16 %w2_local_1" [../accelerator.cpp:48]   --->   Operation 63 'load' 'w2_local_1_load_1' <Predicate = (icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%w1_local_2_load_1 = load i16 %w1_local_2" [../accelerator.cpp:48]   --->   Operation 64 'load' 'w1_local_2_load_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%w1_local_3_load_1 = load i16 %w1_local_3" [../accelerator.cpp:48]   --->   Operation 65 'load' 'w1_local_3_load_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%w2_local_2_load_1 = load i16 %w2_local_2" [../accelerator.cpp:48]   --->   Operation 66 'load' 'w2_local_2_load_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%w2_local_3_load_1 = load i16 %w2_local_3" [../accelerator.cpp:48]   --->   Operation 67 'load' 'w2_local_3_load_1' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../accelerator.cpp:47]   --->   Operation 68 'specpipeline' 'specpipeline_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%speclooptripcount_ln47 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2, i64 2, i64 2" [../accelerator.cpp:47]   --->   Operation 69 'speclooptripcount' 'speclooptripcount_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%specloopname_ln47 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [../accelerator.cpp:47]   --->   Operation 70 'specloopname' 'specloopname_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/2] (0.79ns)   --->   "%bias_1_local = load i1 %bias_1_addr" [../accelerator.cpp:48]   --->   Operation 71 'load' 'bias_1_local' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2> <RAM>
+ST_2 : Operation 72 [1/2] (0.79ns)   --->   "%bias_2_local = load i1 %bias_2_addr" [../accelerator.cpp:49]   --->   Operation 72 'load' 'bias_2_local' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2> <RAM>
+ST_2 : Operation 73 [1/2] (0.79ns)   --->   "%w1_load = load i2 %w1_addr" [../accelerator.cpp:51]   --->   Operation 73 'load' 'w1_load' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_2 : Operation 74 [1/2] (0.79ns)   --->   "%w2_load = load i2 %w2_addr" [../accelerator.cpp:52]   --->   Operation 74 'load' 'w2_load' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_2 : Operation 75 [1/2] (0.79ns)   --->   "%w1_load_1 = load i2 %w1_addr_1" [../accelerator.cpp:51]   --->   Operation 75 'load' 'w1_load_1' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_2 : Operation 76 [1/2] (0.79ns)   --->   "%w2_load_1 = load i2 %w2_addr_1" [../accelerator.cpp:52]   --->   Operation 76 'load' 'w2_load_1' <Predicate = true> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4> <RAM>
+ST_2 : Operation 77 [1/1] (0.42ns)   --->   "%select_ln48 = select i1 %icmp_ln48, i16 %w2_load_1, i16 %w2_local_3_load_1" [../accelerator.cpp:48]   --->   Operation 77 'select' 'select_ln48' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.42ns)   --->   "%select_ln48_1 = select i1 %icmp_ln48, i16 %w2_load, i16 %w2_local_2_load_1" [../accelerator.cpp:48]   --->   Operation 78 'select' 'select_ln48_1' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.42ns)   --->   "%select_ln48_2 = select i1 %icmp_ln48, i16 %w1_load_1, i16 %w1_local_3_load_1" [../accelerator.cpp:48]   --->   Operation 79 'select' 'select_ln48_2' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.42ns)   --->   "%select_ln48_3 = select i1 %icmp_ln48, i16 %w1_load, i16 %w1_local_2_load_1" [../accelerator.cpp:48]   --->   Operation 80 'select' 'select_ln48_3' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 81 [1/1] (0.42ns)   --->   "%select_ln48_4 = select i1 %icmp_ln48, i16 %w2_local_1_load_1, i16 %w2_load_1" [../accelerator.cpp:48]   --->   Operation 81 'select' 'select_ln48_4' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 82 [1/1] (0.42ns)   --->   "%select_ln48_5 = select i1 %icmp_ln48, i16 %w2_local_load_1, i16 %w2_load" [../accelerator.cpp:48]   --->   Operation 82 'select' 'select_ln48_5' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 83 [1/1] (0.42ns)   --->   "%select_ln48_6 = select i1 %icmp_ln48, i16 %w1_local_1_load_1, i16 %w1_load_1" [../accelerator.cpp:48]   --->   Operation 83 'select' 'select_ln48_6' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.42ns)   --->   "%select_ln48_7 = select i1 %icmp_ln48, i16 %w1_local_load_1, i16 %w1_load" [../accelerator.cpp:48]   --->   Operation 84 'select' 'select_ln48_7' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 85 [1/1] (0.42ns)   --->   "%select_ln48_8 = select i1 %icmp_ln48, i16 %bias_1_local, i16 %bias_1_local_idx_promoted2480_out_load" [../accelerator.cpp:48]   --->   Operation 85 'select' 'select_ln48_8' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 86 [1/1] (0.42ns)   --->   "%select_ln48_9 = select i1 %icmp_ln48, i16 %bias_1_local_idx1_promoted2682_out_load, i16 %bias_1_local" [../accelerator.cpp:48]   --->   Operation 86 'select' 'select_ln48_9' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 87 [1/1] (0.42ns)   --->   "%select_ln48_10 = select i1 %icmp_ln48, i16 %bias_2_local_idx4_promoted3086_out_load, i16 %bias_2_local" [../accelerator.cpp:48]   --->   Operation 87 'select' 'select_ln48_10' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.42ns)   --->   "%select_ln48_11 = select i1 %icmp_ln48, i16 %bias_2_local, i16 %bias_2_local_idx_promoted2884_out_load" [../accelerator.cpp:48]   --->   Operation 88 'select' 'select_ln48_11' <Predicate = true> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48, i16 %w2_local_3" [../accelerator.cpp:48]   --->   Operation 89 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 90 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_1, i16 %w2_local_2" [../accelerator.cpp:48]   --->   Operation 90 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 91 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_2, i16 %w1_local_3" [../accelerator.cpp:48]   --->   Operation 91 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 92 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_3, i16 %w1_local_2" [../accelerator.cpp:48]   --->   Operation 92 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 93 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_4, i16 %w2_local_1" [../accelerator.cpp:48]   --->   Operation 93 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 94 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_5, i16 %w2_local" [../accelerator.cpp:48]   --->   Operation 94 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 95 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_6, i16 %w1_local_1" [../accelerator.cpp:48]   --->   Operation 95 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 96 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_7, i16 %w1_local" [../accelerator.cpp:48]   --->   Operation 96 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 97 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_10, i16 %bias_2_local_idx4_promoted3086_out" [../accelerator.cpp:48]   --->   Operation 97 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 98 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_11, i16 %bias_2_local_idx_promoted2884_out" [../accelerator.cpp:48]   --->   Operation 98 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 99 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_9, i16 %bias_1_local_idx1_promoted2682_out" [../accelerator.cpp:48]   --->   Operation 99 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 100 [1/1] (0.48ns)   --->   "%store_ln48 = store i16 %select_ln48_8, i16 %bias_1_local_idx_promoted2480_out" [../accelerator.cpp:48]   --->   Operation 100 'store' 'store_ln48' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln47 = br void %VITIS_LOOP_50_2" [../accelerator.cpp:47]   --->   Operation 101 'br' 'br_ln47' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 1.603ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln47', ../accelerator.cpp:47) of constant 0 on local variable 'n', ../accelerator.cpp:47 [42]  (0.489 ns)
+	'load' operation 2 bit ('n', ../accelerator.cpp:51) on local variable 'n', ../accelerator.cpp:47 [45]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln47', ../accelerator.cpp:47) [46]  (0.625 ns)
+	'store' operation 0 bit ('store_ln47', ../accelerator.cpp:47) of variable 'add_ln47', ../accelerator.cpp:47 on local variable 'n', ../accelerator.cpp:47 [108]  (0.489 ns)
+
+ <State 2>: 1.699ns
+The critical path consists of the following:
+	'load' operation 16 bit ('w2_load_1', ../accelerator.cpp:52) on array 'w2' [83]  (0.790 ns)
+	'select' operation 16 bit ('select_ln48', ../accelerator.cpp:48) [84]  (0.420 ns)
+	'store' operation 0 bit ('store_ln48', ../accelerator.cpp:48) of variable 'select_ln48', ../accelerator.cpp:48 on local variable 'w2_local_3' [96]  (0.489 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

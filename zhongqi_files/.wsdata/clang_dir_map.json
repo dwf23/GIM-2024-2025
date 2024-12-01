@@ -6,6 +6,8 @@
     "main.cpp": "hls_component",
     "accelerator.cpp": "hls_component",
     "bias_pe.cpp": "hls_component",
+    "rtl_bias_pe.cpp": "hls_component",
+    "hls_component\\rtl_bias_pe.cpp": "hls_component",
     "error_pe.cpp": "hls_component",
     "array.cpp": "hls_component",
     "csv_import.cpp": "hls_component"

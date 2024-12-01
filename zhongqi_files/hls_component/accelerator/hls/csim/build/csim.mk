@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../main.cpp ../../../../../weight_pe.cpp ../../../../../accelerator.cpp ../../../../../error_pe.cpp ../../../../../bias_pe.cpp ../../../../../array.cpp ../../../../../act_pe.cpp
+HLS_SOURCES = ../../../../../main.cpp ../../../../../rtl_bias_pe.cpp ../../../../../weight_pe.cpp ../../../../../accelerator.cpp ../../../../../error_pe.cpp ../../../../../bias_pe.cpp ../../../../../array.cpp ../../../../../act_pe.cpp
 
 override TARGET := csim.exe
 
@@ -89,6 +89,12 @@ $(ObjDir)/main.o: ../../../../../main.cpp $(ObjDir)/.dir
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/main.d
+
+$(ObjDir)/rtl_bias_pe.o: ../../../../../rtl_bias_pe.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../rtl_bias_pe.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/rtl_bias_pe.d
 
 $(ObjDir)/weight_pe.o: ../../../../../weight_pe.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../weight_pe.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

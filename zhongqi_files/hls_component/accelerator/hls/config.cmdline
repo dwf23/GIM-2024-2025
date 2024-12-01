@@ -1,3 +1,3 @@
 relativeroot=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component
-original_argv=-c --mode hls --config C:\GIM_XOR\GIM-2024-2025\zhongqi_files\hls_component\hls_config.cfg --work_dir accelerator 
+original_argv=--mode hls --csim --config C:\GIM_XOR\GIM-2024-2025\zhongqi_files\hls_component\hls_config.cfg --work_dir accelerator 
 

@@ -1,0 +1,85 @@
+{
+  "c_files": [
+    {
+      "c_file": "../rtl_bias_pe.cpp",
+      "cflag": ""
+    }
+  ],
+  "c_function_name": "rtl_bias_pe",
+  "rtl_files": [
+    "../rtl_bias_pe.v"
+  ],
+  "c_parameters": [
+    {
+      "c_name": "delta_k",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "delta_k"
+      }
+    },
+    {
+      "c_name": "sum_in",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "sum_in"
+      }
+    },
+    {
+      "c_name": "init_bias",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "init_bias"
+      }
+    },
+    {
+      "c_name": "eta",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "eta"
+      }
+    },
+    {
+      "c_name": "training",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "training"
+      }
+    },
+    {
+      "c_name": "return_array_0",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "return_array_0"
+      }
+    },
+    {
+      "c_name": "return_array_1",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "return_array_1"
+      }
+    }
+  ],
+  "rtl_top_module_name": "rtl_bias_pe",
+  "rtl_performance": {
+    "II": "1",
+    "latency": "2"
+  },
+  "rtl_resource_usage": {
+    "BRAM": "0",
+    "DSP": "1",
+    "FF": "0",
+    "LUT": "0",
+    "URAM": "0"
+  },
+  "rtl_common_signal": {
+    "module_clock": "ap_clk",
+    "module_reset": "ap_rst",
+    "module_clock_enable": "ap_ce",
+    "ap_ctrl_chain_protocol_idle": "",
+    "ap_ctrl_chain_protocol_start": "",
+    "ap_ctrl_chain_protocol_ready": "",
+    "ap_ctrl_chain_protocol_done": "",
+    "ap_ctrl_chain_protocol_continue": ""
+  }
+}

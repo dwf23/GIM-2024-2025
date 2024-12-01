@@ -1,0 +1,75 @@
+{
+    "c_function_name"     : "rtl_bias_pe",
+    "rtl_top_module_name" : "rtl_bias_pe",
+    "c_files" : [{ 
+                  "c_file" : "rtl_bias_pe.cpp",
+                  "cflag" : ""
+                }],
+    "rtl_files" : [
+                    "rtl_bias_pe.v"
+                  ],
+    "c_parameters" : [{
+                       "c_name" : "delta_k",
+                       "c_port_direction" : "in",
+                       "rtl_ports" : {
+                                      "data_read_in" : "delta_k"
+                                     }
+                      },
+                      {
+                       "c_name" : "sum_in",
+                       "c_port_direction" : "in",
+                       "rtl_ports" : {
+                                      "data_read_in" : "sum_in"
+                                     }
+                      },
+                      {
+                       "c_name" : "init_bias",
+                       "c_port_direction" : "in",
+                       "rtl_ports" : {
+                                      "data_read_in" : "init_bias"
+                                     }
+                      },
+                      {
+                       "c_name" : "eta",
+                       "c_port_direction" : "in",
+                       "rtl_ports" : {
+                                      "data_read_in" : "eta"
+                                     }
+                      },{
+                       "c_name" : "training",
+                       "c_port_direction" : "in",
+                       "rtl_ports" : {
+                                      "data_read_in" : "training"
+                                     }
+                      },
+                      {
+                       "c_name" : "return_array_0",
+                       "c_port_direction" : "out",
+                       "rtl_ports" : {
+                                      "data_write_out" : "return_array_0"
+                                     }
+                      },
+                      {
+                        "c_name" : "return_array_1",
+                        "c_port_direction" : "out",
+                        "rtl_ports" : {
+                                       "data_write_out" : "return_array_1"
+                                      }
+                       }],
+    "rtl_common_signal" : {
+                            "module_clock"                    : "ap_clk",
+                            "module_reset"                    : "ap_rst",
+                            "module_clock_enable"             : "ap_ce"
+                          },
+    "rtl_performance" : {
+                         "latency" : "2",
+                         "II"      : "1"
+                        },
+    "rtl_resource_usage" : {
+                            "FF"   :   "0",
+                            "LUT"  :   "0",
+                            "BRAM" :   "0",
+                            "URAM" :   "0",
+                            "DSP"  :   "1"
+                           }
+    }

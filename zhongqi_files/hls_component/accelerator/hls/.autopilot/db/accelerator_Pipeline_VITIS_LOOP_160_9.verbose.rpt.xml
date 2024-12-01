@@ -1,0 +1,183 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'accelerator_Pipeline_VITIS_LOOP_160_9'" level="0">
+<item name = "Date">Sat Nov 30 21:29:50 2024
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">accelerator</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sfvc784-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.954 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, 4, 40.000 ns, 40.000 ns, 3, 3, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_160_9">2, 2, 1, 1, 1, 2, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 325, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 27, -</column>
+<column name="Register">-, -, 196, -, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln160_fu_298_p2">+, 0, 0, 9, 2, 1</column>
+<column name="icmp_ln160_fu_292_p2">icmp, 0, 0, 10, 2, 3</column>
+<column name="icmp_ln161_1_fu_340_p2">icmp, 0, 0, 9, 2, 1</column>
+<column name="icmp_ln161_fu_354_p2">icmp, 0, 0, 9, 2, 1</column>
+<column name="output_array_new_b1_fu_346_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_array_new_b2_fu_360_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_array_new_w1_1_fu_376_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_array_new_w1_fu_368_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_array_new_w2_1_fu_392_p3">select, 0, 0, 16, 1, 16</column>
+<column name="output_array_new_w2_fu_384_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_10_fu_480_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_11_fu_488_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_1_fu_408_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_2_fu_416_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_3_fu_424_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_4_fu_432_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_5_fu_440_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_6_fu_448_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_7_fu_456_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_8_fu_464_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_9_fu_472_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln161_fu_400_p3">select, 0, 0, 16, 1, 16</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_n">9, 2, 2, 4</column>
+<column name="n_1_fu_76">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="n_1_fu_76">2, 0, 2, 0</column>
+<column name="retval_1_0_0_0_0_0_load112_fu_80">16, 0, 16, 0</column>
+<column name="retval_1_0_1_0_0_0_load114_fu_84">16, 0, 16, 0</column>
+<column name="retval_1_1_0_0_0_0_load116_fu_88">16, 0, 16, 0</column>
+<column name="retval_1_1_1_0_0_0_load118_fu_92">16, 0, 16, 0</column>
+<column name="retval_2_0_0_0_0_0_load120_fu_96">16, 0, 16, 0</column>
+<column name="retval_2_0_1_0_0_0_load122_fu_100">16, 0, 16, 0</column>
+<column name="retval_2_1_0_0_0_0_load124_fu_104">16, 0, 16, 0</column>
+<column name="retval_2_1_1_0_0_0_load126_fu_108">16, 0, 16, 0</column>
+<column name="retval_3_0_0_0_0_load128_fu_112">16, 0, 16, 0</column>
+<column name="retval_3_1_0_0_0_load130_fu_116">16, 0, 16, 0</column>
+<column name="retval_4_0_0_0_0_load132_fu_120">16, 0, 16, 0</column>
+<column name="retval_4_1_0_0_0_load134_fu_124">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, accelerator_Pipeline_VITIS_LOOP_160_9, return value</column>
+<column name="p_0_0_01382_1_lcssa_lcssa">in, 16, ap_none, p_0_0_01382_1_lcssa_lcssa, scalar</column>
+<column name="p_0_0_01382_lcssa_lcssa">in, 16, ap_none, p_0_0_01382_lcssa_lcssa, scalar</column>
+<column name="p_0_0_01385_1_lcssa_lcssa">in, 16, ap_none, p_0_0_01385_1_lcssa_lcssa, scalar</column>
+<column name="p_0_0_01385_lcssa_lcssa">in, 16, ap_none, p_0_0_01385_lcssa_lcssa, scalar</column>
+<column name="mux_case_173">in, 16, ap_none, mux_case_173, scalar</column>
+<column name="mux_case_072">in, 16, ap_none, mux_case_072, scalar</column>
+<column name="mux_case_175">in, 16, ap_none, mux_case_175, scalar</column>
+<column name="mux_case_074">in, 16, ap_none, mux_case_074, scalar</column>
+<column name="mux_case_177">in, 16, ap_none, mux_case_177, scalar</column>
+<column name="mux_case_076">in, 16, ap_none, mux_case_076, scalar</column>
+<column name="mux_case_179">in, 16, ap_none, mux_case_179, scalar</column>
+<column name="mux_case_078">in, 16, ap_none, mux_case_078, scalar</column>
+<column name="retval_4_1_0_0_0_load134_out">out, 16, ap_vld, retval_4_1_0_0_0_load134_out, pointer</column>
+<column name="retval_4_1_0_0_0_load134_out_ap_vld">out, 1, ap_vld, retval_4_1_0_0_0_load134_out, pointer</column>
+<column name="retval_4_0_0_0_0_load132_out">out, 16, ap_vld, retval_4_0_0_0_0_load132_out, pointer</column>
+<column name="retval_4_0_0_0_0_load132_out_ap_vld">out, 1, ap_vld, retval_4_0_0_0_0_load132_out, pointer</column>
+<column name="retval_3_1_0_0_0_load130_out">out, 16, ap_vld, retval_3_1_0_0_0_load130_out, pointer</column>
+<column name="retval_3_1_0_0_0_load130_out_ap_vld">out, 1, ap_vld, retval_3_1_0_0_0_load130_out, pointer</column>
+<column name="retval_3_0_0_0_0_load128_out">out, 16, ap_vld, retval_3_0_0_0_0_load128_out, pointer</column>
+<column name="retval_3_0_0_0_0_load128_out_ap_vld">out, 1, ap_vld, retval_3_0_0_0_0_load128_out, pointer</column>
+<column name="retval_2_1_1_0_0_0_load126_out">out, 16, ap_vld, retval_2_1_1_0_0_0_load126_out, pointer</column>
+<column name="retval_2_1_1_0_0_0_load126_out_ap_vld">out, 1, ap_vld, retval_2_1_1_0_0_0_load126_out, pointer</column>
+<column name="retval_2_1_0_0_0_0_load124_out">out, 16, ap_vld, retval_2_1_0_0_0_0_load124_out, pointer</column>
+<column name="retval_2_1_0_0_0_0_load124_out_ap_vld">out, 1, ap_vld, retval_2_1_0_0_0_0_load124_out, pointer</column>
+<column name="retval_2_0_1_0_0_0_load122_out">out, 16, ap_vld, retval_2_0_1_0_0_0_load122_out, pointer</column>
+<column name="retval_2_0_1_0_0_0_load122_out_ap_vld">out, 1, ap_vld, retval_2_0_1_0_0_0_load122_out, pointer</column>
+<column name="retval_2_0_0_0_0_0_load120_out">out, 16, ap_vld, retval_2_0_0_0_0_0_load120_out, pointer</column>
+<column name="retval_2_0_0_0_0_0_load120_out_ap_vld">out, 1, ap_vld, retval_2_0_0_0_0_0_load120_out, pointer</column>
+<column name="retval_1_1_1_0_0_0_load118_out">out, 16, ap_vld, retval_1_1_1_0_0_0_load118_out, pointer</column>
+<column name="retval_1_1_1_0_0_0_load118_out_ap_vld">out, 1, ap_vld, retval_1_1_1_0_0_0_load118_out, pointer</column>
+<column name="retval_1_1_0_0_0_0_load116_out">out, 16, ap_vld, retval_1_1_0_0_0_0_load116_out, pointer</column>
+<column name="retval_1_1_0_0_0_0_load116_out_ap_vld">out, 1, ap_vld, retval_1_1_0_0_0_0_load116_out, pointer</column>
+<column name="retval_1_0_1_0_0_0_load114_out">out, 16, ap_vld, retval_1_0_1_0_0_0_load114_out, pointer</column>
+<column name="retval_1_0_1_0_0_0_load114_out_ap_vld">out, 1, ap_vld, retval_1_0_1_0_0_0_load114_out, pointer</column>
+<column name="retval_1_0_0_0_0_0_load112_out">out, 16, ap_vld, retval_1_0_0_0_0_0_load112_out, pointer</column>
+<column name="retval_1_0_0_0_0_0_load112_out_ap_vld">out, 1, ap_vld, retval_1_0_0_0_0_0_load112_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,250 @@
+<ENTRY>
+{
+ "thisFile": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\accelerator.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/30/24 21:27:28",
+ "timestampMillis": "2151827861",
+ "buildStep": {
+  "cmdId": "665e680e-8161-45a4-8913-1414840a3318",
+  "name": "v++",
+  "logFile": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\logs\\accelerator.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\hls_config.cfg --work_dir accelerator ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "accelerator"
+  ],
+  "iniFiles": [
+   {
+    "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\hls_config.cfg",
+    "content": "part=xczu3eg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=accelerator\ntb.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp\nclock=10ns\nclock_uncertainty=2ns\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp\nsyn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp"
+   }
+  ],
+  "cwd": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/30/24 21:27:28",
+ "timestampMillis": "2151827862",
+ "status": {
+  "cmdId": "665e680e-8161-45a4-8913-1414840a3318",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841142",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\act_pe.cpp",
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\array.cpp",
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\bias_pe.cpp",
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\error_pe.cpp",
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\accelerator.cpp",
+     "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841145",
+ "buildStep": {
+  "cmdId": "7465845a-5046-4dc2-bcad-ff3a40ebca6b",
+  "name": "csynth_design",
+  "logFile": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls\\hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841146",
+ "status": {
+  "cmdId": "7465845a-5046-4dc2-bcad-ff3a40ebca6b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841147",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841147",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:27:41",
+ "timestampMillis": "2151841148",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:29:55",
+ "timestampMillis": "2151975419",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:29:55",
+ "timestampMillis": "2151975420",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:29:55",
+ "timestampMillis": "2151975422",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/30/24 21:29:55",
+ "timestampMillis": "2151975423",
+ "status": {
+  "cmdId": "7465845a-5046-4dc2-bcad-ff3a40ebca6b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/30/24 21:29:56",
+ "timestampMillis": "2151975811",
+ "status": {
+  "cmdId": "665e680e-8161-45a4-8913-1414840a3318",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:29:56",
+ "timestampMillis": "2151975866",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\reports\\v++_compile_accelerator_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/30/24 21:29:56",
+ "timestampMillis": "2151975867",
+ "report": {
+  "path": "C:/GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component\\accelerator\\reports\\.db\\v++_compile_accelerator_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

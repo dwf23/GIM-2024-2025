@@ -59,11 +59,18 @@ Weight weights_pe(fixed_16 delta_k, fixed_16 output_kmin1, fixed_16 partial_sum_
 				fixed_16 partial_sum_delta_k, fixed_16 init_weight,
 				fixed_16 eta, fixed_16 training);
 
-Bias bias_pe(fixed_16 delta_k,
+// Bias bias_pe(fixed_16 delta_k,
+// 				fixed_16 sum_in,
+// 				fixed_16 init_bias,
+// 				fixed_16 eta,
+// 				fixed_16 training);
+
+void rtl_bias_pe(fixed_16 delta_k,
 				fixed_16 sum_in,
 				fixed_16 init_bias,
 				fixed_16 eta,
-				fixed_16 training);
+				fixed_16 training,
+                fixed_16 return_array_0, fixed_16 return_array_1);
 
 fixed_16 act_pe(fixed_16 net_in, char model, fixed_16 alpha);
 

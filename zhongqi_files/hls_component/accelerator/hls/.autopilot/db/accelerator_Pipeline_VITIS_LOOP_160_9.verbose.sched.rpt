@@ -1,0 +1,222 @@
+
+
+================================================================
+== Vitis HLS Report for 'accelerator_Pipeline_VITIS_LOOP_160_9'
+================================================================
+* Date:           Sat Nov 30 21:29:46 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        accelerator
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.954 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                     |
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+    |        4|        4|  40.000 ns|  40.000 ns|    3|    3|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_160_9  |        2|        2|         1|          1|          1|     2|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.95>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%n_1 = alloca i32 1" [../accelerator.cpp:160]   --->   Operation 4 'alloca' 'n_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%retval_1_0_0_0_0_0_load112 = alloca i32 1"   --->   Operation 5 'alloca' 'retval_1_0_0_0_0_0_load112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%retval_1_0_1_0_0_0_load114 = alloca i32 1"   --->   Operation 6 'alloca' 'retval_1_0_1_0_0_0_load114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%retval_1_1_0_0_0_0_load116 = alloca i32 1"   --->   Operation 7 'alloca' 'retval_1_1_0_0_0_0_load116' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%retval_1_1_1_0_0_0_load118 = alloca i32 1"   --->   Operation 8 'alloca' 'retval_1_1_1_0_0_0_load118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%retval_2_0_0_0_0_0_load120 = alloca i32 1"   --->   Operation 9 'alloca' 'retval_2_0_0_0_0_0_load120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%retval_2_0_1_0_0_0_load122 = alloca i32 1"   --->   Operation 10 'alloca' 'retval_2_0_1_0_0_0_load122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%retval_2_1_0_0_0_0_load124 = alloca i32 1"   --->   Operation 11 'alloca' 'retval_2_1_0_0_0_0_load124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%retval_2_1_1_0_0_0_load126 = alloca i32 1"   --->   Operation 12 'alloca' 'retval_2_1_1_0_0_0_load126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%retval_3_0_0_0_0_load128 = alloca i32 1"   --->   Operation 13 'alloca' 'retval_3_0_0_0_0_load128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%retval_3_1_0_0_0_load130 = alloca i32 1"   --->   Operation 14 'alloca' 'retval_3_1_0_0_0_load130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%retval_4_0_0_0_0_load132 = alloca i32 1"   --->   Operation 15 'alloca' 'retval_4_0_0_0_0_load132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%retval_4_1_0_0_0_load134 = alloca i32 1"   --->   Operation 16 'alloca' 'retval_4_1_0_0_0_load134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%mux_case_078_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_078"   --->   Operation 17 'read' 'mux_case_078_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%mux_case_179_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_179"   --->   Operation 18 'read' 'mux_case_179_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%mux_case_076_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_076"   --->   Operation 19 'read' 'mux_case_076_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%mux_case_177_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_177"   --->   Operation 20 'read' 'mux_case_177_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%mux_case_074_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_074"   --->   Operation 21 'read' 'mux_case_074_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%mux_case_175_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_175"   --->   Operation 22 'read' 'mux_case_175_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%mux_case_072_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_072"   --->   Operation 23 'read' 'mux_case_072_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%mux_case_173_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mux_case_173"   --->   Operation 24 'read' 'mux_case_173_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_0_0_01385_lcssa_lcssa_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_0_0_01385_lcssa_lcssa"   --->   Operation 25 'read' 'p_0_0_01385_lcssa_lcssa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_0_0_01385_1_lcssa_lcssa_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_0_0_01385_1_lcssa_lcssa"   --->   Operation 26 'read' 'p_0_0_01385_1_lcssa_lcssa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_0_0_01382_lcssa_lcssa_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_0_0_01382_lcssa_lcssa"   --->   Operation 27 'read' 'p_0_0_01382_lcssa_lcssa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_0_0_01382_1_lcssa_lcssa_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_0_0_01382_1_lcssa_lcssa"   --->   Operation 28 'read' 'p_0_0_01382_1_lcssa_lcssa_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.48ns)   --->   "%store_ln160 = store i2 0, i2 %n_1" [../accelerator.cpp:160]   --->   Operation 29 'store' 'store_ln160' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_163_10"   --->   Operation 30 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%n = load i2 %n_1" [../accelerator.cpp:160]   --->   Operation 31 'load' 'n' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.62ns)   --->   "%icmp_ln160 = icmp_eq  i2 %n, i2 2" [../accelerator.cpp:160]   --->   Operation 32 'icmp' 'icmp_ln160' <Predicate = true> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.62ns)   --->   "%add_ln160 = add i2 %n, i2 1" [../accelerator.cpp:160]   --->   Operation 33 'add' 'add_ln160' <Predicate = true> <Delay = 0.62> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln160 = br i1 %icmp_ln160, void %VITIS_LOOP_163_10.split, void %for.end347.exitStub" [../accelerator.cpp:160]   --->   Operation 34 'br' 'br_ln160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%retval_1_0_0_0_0_0_load_1 = load i16 %retval_1_0_0_0_0_0_load112" [../accelerator.cpp:161]   --->   Operation 35 'load' 'retval_1_0_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%retval_1_0_1_0_0_0_load_1 = load i16 %retval_1_0_1_0_0_0_load114" [../accelerator.cpp:161]   --->   Operation 36 'load' 'retval_1_0_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%retval_1_1_0_0_0_0_load_1 = load i16 %retval_1_1_0_0_0_0_load116" [../accelerator.cpp:161]   --->   Operation 37 'load' 'retval_1_1_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%retval_1_1_1_0_0_0_load_1 = load i16 %retval_1_1_1_0_0_0_load118" [../accelerator.cpp:161]   --->   Operation 38 'load' 'retval_1_1_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%retval_2_0_0_0_0_0_load_1 = load i16 %retval_2_0_0_0_0_0_load120" [../accelerator.cpp:161]   --->   Operation 39 'load' 'retval_2_0_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%retval_2_0_1_0_0_0_load_1 = load i16 %retval_2_0_1_0_0_0_load122" [../accelerator.cpp:161]   --->   Operation 40 'load' 'retval_2_0_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%retval_2_1_0_0_0_0_load_1 = load i16 %retval_2_1_0_0_0_0_load124" [../accelerator.cpp:161]   --->   Operation 41 'load' 'retval_2_1_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%retval_2_1_1_0_0_0_load_1 = load i16 %retval_2_1_1_0_0_0_load126" [../accelerator.cpp:161]   --->   Operation 42 'load' 'retval_2_1_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%retval_3_0_0_0_0_load_1 = load i16 %retval_3_0_0_0_0_load128" [../accelerator.cpp:161]   --->   Operation 43 'load' 'retval_3_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%retval_3_1_0_0_0_load_1 = load i16 %retval_3_1_0_0_0_load130" [../accelerator.cpp:161]   --->   Operation 44 'load' 'retval_3_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%retval_4_0_0_0_0_load_1 = load i16 %retval_4_0_0_0_0_load132" [../accelerator.cpp:161]   --->   Operation 45 'load' 'retval_4_0_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%retval_4_1_0_0_0_load_1 = load i16 %retval_4_1_0_0_0_load134" [../accelerator.cpp:161]   --->   Operation 46 'load' 'retval_4_1_0_0_0_load_1' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%specpipeline_ln160 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../accelerator.cpp:160]   --->   Operation 47 'specpipeline' 'specpipeline_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%speclooptripcount_ln160 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2, i64 2, i64 2" [../accelerator.cpp:160]   --->   Operation 48 'speclooptripcount' 'speclooptripcount_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%specloopname_ln160 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [../accelerator.cpp:160]   --->   Operation 49 'specloopname' 'specloopname_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.62ns)   --->   "%icmp_ln161_1 = icmp_eq  i2 %n, i2 1" [../accelerator.cpp:161]   --->   Operation 50 'icmp' 'icmp_ln161_1' <Predicate = (!icmp_ln160)> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%output_array_new_b1 = select i1 %icmp_ln161_1, i16 %p_0_0_01382_1_lcssa_lcssa_read, i16 %p_0_0_01382_lcssa_lcssa_read" [../accelerator.cpp:161]   --->   Operation 51 'select' 'output_array_new_b1' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.62ns)   --->   "%icmp_ln161 = icmp_eq  i2 %n, i2 0" [../accelerator.cpp:161]   --->   Operation 52 'icmp' 'icmp_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%output_array_new_b2 = select i1 %icmp_ln161_1, i16 %p_0_0_01385_1_lcssa_lcssa_read, i16 %p_0_0_01385_lcssa_lcssa_read" [../accelerator.cpp:162]   --->   Operation 53 'select' 'output_array_new_b2' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.42ns)   --->   "%output_array_new_w1 = select i1 %icmp_ln161_1, i16 %mux_case_173_read, i16 %mux_case_072_read" [../accelerator.cpp:164]   --->   Operation 54 'select' 'output_array_new_w1' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.42ns)   --->   "%output_array_new_w1_1 = select i1 %icmp_ln161_1, i16 %mux_case_175_read, i16 %mux_case_074_read" [../accelerator.cpp:164]   --->   Operation 55 'select' 'output_array_new_w1_1' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.42ns)   --->   "%output_array_new_w2 = select i1 %icmp_ln161_1, i16 %mux_case_177_read, i16 %mux_case_076_read" [../accelerator.cpp:165]   --->   Operation 56 'select' 'output_array_new_w2' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.42ns)   --->   "%output_array_new_w2_1 = select i1 %icmp_ln161_1, i16 %mux_case_179_read, i16 %mux_case_078_read" [../accelerator.cpp:165]   --->   Operation 57 'select' 'output_array_new_w2_1' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.42ns)   --->   "%select_ln161 = select i1 %icmp_ln161, i16 %output_array_new_w2, i16 %retval_2_0_0_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 58 'select' 'select_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.42ns)   --->   "%select_ln161_1 = select i1 %icmp_ln161, i16 %retval_2_1_0_0_0_0_load_1, i16 %output_array_new_w2" [../accelerator.cpp:161]   --->   Operation 59 'select' 'select_ln161_1' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (0.42ns)   --->   "%select_ln161_2 = select i1 %icmp_ln161, i16 %output_array_new_w1, i16 %retval_1_0_0_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 60 'select' 'select_ln161_2' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.42ns)   --->   "%select_ln161_3 = select i1 %icmp_ln161, i16 %retval_1_1_0_0_0_0_load_1, i16 %output_array_new_w1" [../accelerator.cpp:161]   --->   Operation 61 'select' 'select_ln161_3' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (0.42ns)   --->   "%select_ln161_4 = select i1 %icmp_ln161, i16 %output_array_new_b1, i16 %retval_3_0_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 62 'select' 'select_ln161_4' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.42ns)   --->   "%select_ln161_5 = select i1 %icmp_ln161, i16 %retval_3_1_0_0_0_load_1, i16 %output_array_new_b1" [../accelerator.cpp:161]   --->   Operation 63 'select' 'select_ln161_5' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.42ns)   --->   "%select_ln161_6 = select i1 %icmp_ln161, i16 %retval_4_1_0_0_0_load_1, i16 %output_array_new_b2" [../accelerator.cpp:161]   --->   Operation 64 'select' 'select_ln161_6' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.42ns)   --->   "%select_ln161_7 = select i1 %icmp_ln161, i16 %output_array_new_b2, i16 %retval_4_0_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 65 'select' 'select_ln161_7' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 66 [1/1] (0.42ns)   --->   "%select_ln161_8 = select i1 %icmp_ln161, i16 %retval_1_1_1_0_0_0_load_1, i16 %output_array_new_w1_1" [../accelerator.cpp:161]   --->   Operation 66 'select' 'select_ln161_8' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 67 [1/1] (0.42ns)   --->   "%select_ln161_9 = select i1 %icmp_ln161, i16 %output_array_new_w1_1, i16 %retval_1_0_1_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 67 'select' 'select_ln161_9' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (0.42ns)   --->   "%select_ln161_10 = select i1 %icmp_ln161, i16 %retval_2_1_1_0_0_0_load_1, i16 %output_array_new_w2_1" [../accelerator.cpp:161]   --->   Operation 68 'select' 'select_ln161_10' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 69 [1/1] (0.42ns)   --->   "%select_ln161_11 = select i1 %icmp_ln161, i16 %output_array_new_w2_1, i16 %retval_2_0_1_0_0_0_load_1" [../accelerator.cpp:161]   --->   Operation 69 'select' 'select_ln161_11' <Predicate = (!icmp_ln160)> <Delay = 0.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_6, i16 %retval_4_1_0_0_0_load134" [../accelerator.cpp:161]   --->   Operation 70 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_7, i16 %retval_4_0_0_0_0_load132" [../accelerator.cpp:161]   --->   Operation 71 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_5, i16 %retval_3_1_0_0_0_load130" [../accelerator.cpp:161]   --->   Operation 72 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_4, i16 %retval_3_0_0_0_0_load128" [../accelerator.cpp:161]   --->   Operation 73 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_10, i16 %retval_2_1_1_0_0_0_load126" [../accelerator.cpp:161]   --->   Operation 74 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_1, i16 %retval_2_1_0_0_0_0_load124" [../accelerator.cpp:161]   --->   Operation 75 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_11, i16 %retval_2_0_1_0_0_0_load122" [../accelerator.cpp:161]   --->   Operation 76 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161, i16 %retval_2_0_0_0_0_0_load120" [../accelerator.cpp:161]   --->   Operation 77 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_8, i16 %retval_1_1_1_0_0_0_load118" [../accelerator.cpp:161]   --->   Operation 78 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_3, i16 %retval_1_1_0_0_0_0_load116" [../accelerator.cpp:161]   --->   Operation 79 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_9, i16 %retval_1_0_1_0_0_0_load114" [../accelerator.cpp:161]   --->   Operation 80 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%store_ln161 = store i16 %select_ln161_2, i16 %retval_1_0_0_0_0_0_load112" [../accelerator.cpp:161]   --->   Operation 81 'store' 'store_ln161' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.48ns)   --->   "%store_ln160 = store i2 %add_ln160, i2 %n_1" [../accelerator.cpp:160]   --->   Operation 82 'store' 'store_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.48>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln160 = br void %VITIS_LOOP_163_10" [../accelerator.cpp:160]   --->   Operation 83 'br' 'br_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%retval_1_0_0_0_0_0_load = load i16 %retval_1_0_0_0_0_0_load112"   --->   Operation 84 'load' 'retval_1_0_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%retval_1_0_1_0_0_0_load = load i16 %retval_1_0_1_0_0_0_load114"   --->   Operation 85 'load' 'retval_1_0_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%retval_1_1_0_0_0_0_load = load i16 %retval_1_1_0_0_0_0_load116"   --->   Operation 86 'load' 'retval_1_1_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%retval_1_1_1_0_0_0_load = load i16 %retval_1_1_1_0_0_0_load118"   --->   Operation 87 'load' 'retval_1_1_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%retval_2_0_0_0_0_0_load = load i16 %retval_2_0_0_0_0_0_load120"   --->   Operation 88 'load' 'retval_2_0_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%retval_2_0_1_0_0_0_load = load i16 %retval_2_0_1_0_0_0_load122"   --->   Operation 89 'load' 'retval_2_0_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%retval_2_1_0_0_0_0_load = load i16 %retval_2_1_0_0_0_0_load124"   --->   Operation 90 'load' 'retval_2_1_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%retval_2_1_1_0_0_0_load = load i16 %retval_2_1_1_0_0_0_load126"   --->   Operation 91 'load' 'retval_2_1_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%retval_3_0_0_0_0_load = load i16 %retval_3_0_0_0_0_load128"   --->   Operation 92 'load' 'retval_3_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%retval_3_1_0_0_0_load = load i16 %retval_3_1_0_0_0_load130"   --->   Operation 93 'load' 'retval_3_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%retval_4_0_0_0_0_load = load i16 %retval_4_0_0_0_0_load132"   --->   Operation 94 'load' 'retval_4_0_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%retval_4_1_0_0_0_load = load i16 %retval_4_1_0_0_0_load134"   --->   Operation 95 'load' 'retval_4_1_0_0_0_load' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_4_1_0_0_0_load134_out, i16 %retval_4_1_0_0_0_load"   --->   Operation 96 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_4_0_0_0_0_load132_out, i16 %retval_4_0_0_0_0_load"   --->   Operation 97 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_3_1_0_0_0_load130_out, i16 %retval_3_1_0_0_0_load"   --->   Operation 98 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_3_0_0_0_0_load128_out, i16 %retval_3_0_0_0_0_load"   --->   Operation 99 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_2_1_1_0_0_0_load126_out, i16 %retval_2_1_1_0_0_0_load"   --->   Operation 100 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_2_1_0_0_0_0_load124_out, i16 %retval_2_1_0_0_0_0_load"   --->   Operation 101 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_2_0_1_0_0_0_load122_out, i16 %retval_2_0_1_0_0_0_load"   --->   Operation 102 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_2_0_0_0_0_0_load120_out, i16 %retval_2_0_0_0_0_0_load"   --->   Operation 103 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_1_1_1_0_0_0_load118_out, i16 %retval_1_1_1_0_0_0_load"   --->   Operation 104 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_1_1_0_0_0_0_load116_out, i16 %retval_1_1_0_0_0_0_load"   --->   Operation 105 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_1_0_1_0_0_0_load114_out, i16 %retval_1_0_1_0_0_0_load"   --->   Operation 106 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %retval_1_0_0_0_0_0_load112_out, i16 %retval_1_0_0_0_0_0_load"   --->   Operation 107 'write' 'write_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 108 'ret' 'ret_ln0' <Predicate = (icmp_ln160)> <Delay = 0.48>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 1.954ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln160', ../accelerator.cpp:160) of constant 0 on local variable 'n', ../accelerator.cpp:160 [50]  (0.489 ns)
+	'load' operation 2 bit ('n', ../accelerator.cpp:160) on local variable 'n', ../accelerator.cpp:160 [53]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln161_1', ../accelerator.cpp:161) [73]  (0.625 ns)
+	'select' operation 16 bit ('output_array.new_w2', ../accelerator.cpp:165) [79]  (0.420 ns)
+	'select' operation 16 bit ('select_ln161', ../accelerator.cpp:161) [81]  (0.420 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

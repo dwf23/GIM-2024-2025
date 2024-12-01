@@ -1,0 +1,46 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator\accelerator.hlsrun_csim_summary, at 11/30/24 22:41:52
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator -config C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg -cmdlineconfig C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Nov 30 22:41:55 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'GIM' on host 'gim_laptop_1' (Windows NT_amd64 version 10.0) on Sat Nov 30 22:41:57 -0600 2024
+INFO: [HLS 200-10] In directory 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component'
+INFO: [HLS 200-2005] Using work_dir C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found 'rtl_bias_pe.cpp' see [hls] from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.v' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/rtl_bias_pe.v' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=rtl_bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(18)
+WARNING: [HLS 200-40] Cannot find design file 'rtl_bias_pe.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/rtl_bias_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.json' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/rtl_bias_pe.json' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.blackbox.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.json' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding black box file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/rtl_bias_pe.json' to the project
+ERROR: [HLS 200-654] Cannot find blackbox RTL port '*' in the json file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/rtl_bias_pe.json'
+ERROR: [HLS 200-1912] Problem with ini entry 'syn.blackbox.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.json' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(21): Blackbox RTL port '*' not found JSON
+ERROR: problem with 'syn.blackbox.file=C:\GIM_XOR\GIM-2024-2025\zhongqi_files\rtl_bias_pe.json' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(21): Blackbox RTL port '*' not found JSON
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.019 seconds; peak allocated memory: 7.230 MB.

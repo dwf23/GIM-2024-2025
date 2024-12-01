@@ -1,0 +1,13 @@
+{
+  "workspaceRoot": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files",
+  "mapping": {
+    "act_pe.cpp": "hls_component",
+    "weight_pe.cpp": "hls_component",
+    "main.cpp": "hls_component",
+    "accelerator.cpp": "hls_component",
+    "bias_pe.cpp": "hls_component",
+    "error_pe.cpp": "hls_component",
+    "array.cpp": "hls_component",
+    "csv_import.cpp": "hls_component"
+  }
+}

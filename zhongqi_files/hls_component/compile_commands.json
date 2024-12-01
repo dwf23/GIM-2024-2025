@@ -1,0 +1,86 @@
+[
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp"
+  },
+  {
+    "directory": "C:\\GIM_XOR\\GIM-2024-2025\\zhongqi_files\\hls_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-c",
+      "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp"
+    ],
+    "file": "C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp"
+  }
+]

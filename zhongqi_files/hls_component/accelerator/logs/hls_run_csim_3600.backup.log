@@ -1,0 +1,144 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator\accelerator.hlsrun_csim_summary, at 11/30/24 21:15:52
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator -config C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg -cmdlineconfig C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Nov 30 21:15:57 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'GIM' on host 'gim_laptop_1' (Windows NT_amd64 version 10.0) on Sat Nov 30 21:16:00 -0600 2024
+INFO: [HLS 200-10] In directory 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component'
+INFO: [HLS 200-2005] Using work_dir C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/accelerator 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/act_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/array.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/bias_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/csv_import.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/csv_import.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/error_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/accelerator.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/weight_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding test bench file 'C:/GIM_XOR/GIM-2024-2025/zhongqi_files/main.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=accelerator' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(16)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(17)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/GIM_XOR/GIM-2024-2025/zhongqi_files/hls_component/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../main.cpp in debug mode
+   Compiling ../../../../../weight_pe.cpp in debug mode
+   Compiling ../../../../../accelerator.cpp in debug mode
+   Compiling ../../../../../error_pe.cpp in debug mode
+   Compiling ../../../../../csv_import.cpp in debug mode
+csim.mk:112: recipe for target 'obj/csv_import.o' failed
+In file included from ../../../../../main.cpp:2:
+In file included from ../../../../../gim_model.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../weight_pe.cpp:1:
+In file included from ../../../../../gim_model.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../accelerator.cpp:1:
+In file included from ../../../../../gim_model.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../error_pe.cpp:1:
+In file included from ../../../../../gim_model.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../csv_import.cpp:1:
+In file included from ../../../../../gim_model.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../../../csv_import.cpp:5:19: error: implicit instantiation of undefined template 'std::basic_ifstream<char>'
+    std::ifstream file(filepath);
+                  ^
+C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/iosfwd:116:11: note: template is declared here
+    class basic_ifstream;
+          ^
+1 warning and 1 error generated.
+make: *** [obj/csv_import.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 3 seconds. Total elapsed time: 48.245 seconds; peak allocated memory: 231.031 MB.

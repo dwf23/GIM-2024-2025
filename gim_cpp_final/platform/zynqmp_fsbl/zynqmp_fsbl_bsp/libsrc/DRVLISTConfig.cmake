@@ -1,1 +1,0 @@
-set(DRIVER_LIST accelerator;avbuf;axipmon;clockps;common;coresightps_dcc;csudma;ddrcpsu;dpdma;dppsu;emacps;gpiops;iicps;ipipsu;qspipsu;resetps;rtcpsu;scugic;sdps;spips;sysmonpsu;ttcps;uartps;usbpsu;video_common;wdtps;zdma)

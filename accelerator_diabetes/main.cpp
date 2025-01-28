@@ -2,9 +2,9 @@
 #include "gim_model.h"
 using namespace std;
 
-int main() {
+int main() { // BASICALLY JUST REWRITE THIS 
 
-    // matrices initialized with random values from Python, known to converge
+    // matrices initialized with random values from Python, known to converge, MIGHT HAVE TO FIND CONVERGING VALUES? SHOULD BE FINE THO
     fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE] = {{0.13457995, 0.51357812}, {0.18443987, 0.78533515}};
     fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE] = {{0.85397529, 0.49423684}, {0, 0}};
     fixed_16 bias_1[ARRAY_SIZE] = {0.50524609, 0.0652865};

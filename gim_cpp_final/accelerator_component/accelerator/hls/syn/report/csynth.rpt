@@ -1,0 +1,414 @@
+
+
+================================================================
+== Synthesis Summary Report of 'accelerator'
+================================================================
++ General Information: 
+    * Date:           Tue Oct 29 09:34:18 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        accelerator
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu3eg-sfvc784-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |            |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |     LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |+ accelerator                             |     -|  0.82|    72663|  7.266e+05|         -|    72664|     -|        no|     -|  18 (5%)|  5020 (3%)|  8610 (12%)|    -|
+    | + accelerator_Pipeline_VITIS_LOOP_55_1   |     -|  6.05|        4|     40.000|         -|        4|     -|        no|     -|        -|  199 (~0%)|   439 (~0%)|    -|
+    |  o VITIS_LOOP_55_1                       |     -|  8.00|        2|     20.000|         2|        1|     2|       yes|     -|        -|          -|           -|    -|
+    | + accelerator_Pipeline_VITIS_LOOP_73_3   |     -|  0.82|    72647|  7.265e+05|         -|    72647|     -|        no|     -|  18 (5%)|  2969 (2%)|   6420 (9%)|    -|
+    |  o VITIS_LOOP_73_3                       |     -|  8.00|    72644|  7.264e+05|       145|      145|   500|       yes|     -|        -|          -|           -|    -|
+    |   + model_array                          |     -|  2.91|        8|     80.000|         -|        9|     -|       yes|     -|  18 (5%)|  873 (~0%)|   581 (~0%)|    -|
+    | + accelerator_Pipeline_VITIS_LOOP_165_9  |     -|  6.05|        4|     40.000|         -|        4|     -|        no|     -|        -|  196 (~0%)|   352 (~0%)|    -|
+    |  o VITIS_LOOP_165_9                      |     -|  8.00|        2|     20.000|         1|        1|     2|       yes|     -|        -|          -|           -|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 56     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register    | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | ap_return_1 | 0x10   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_2 | 0x14   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_3 | 0x18   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_4 | 0x1c   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_5 | 0x20   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_6 | 0x24   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_7 | 0x28   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | ap_return_8 | 0x2c   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | training    | 0x68   | 32    | W      | Data signal of training          |                                                                      |
++---------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------+
+| Argument | Direction | Datatype                             |
++----------+-----------+--------------------------------------+
+| w1       | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0>* |
+| w2       | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0>* |
+| bias_1   | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0>* |
+| bias_2   | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0>* |
+| training | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0>  |
+| return   | out       | Inference                            |
++----------+-----------+--------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+---------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                               |
++----------+---------------+-----------+---------------------------------------+
+| w1       | s_axi_control | interface |                                       |
+| w1       | s_axi_control | interface |                                       |
+| w2       | s_axi_control | interface |                                       |
+| w2       | s_axi_control | interface |                                       |
+| bias_1   | s_axi_control | memory    | name=bias_1 offset=88 range=8         |
+| bias_2   | s_axi_control | memory    | name=bias_2 offset=96 range=8         |
+| training | s_axi_control | register  | name=training offset=0x68 range=32    |
+| return   | s_axi_control | register  | name=ap_return_1 offset=0x10 range=32 |
+| return   | s_axi_control | register  | name=ap_return_2 offset=0x14 range=32 |
+| return   | s_axi_control | register  | name=ap_return_3 offset=0x18 range=32 |
+| return   | s_axi_control | register  | name=ap_return_4 offset=0x1c range=32 |
+| return   | s_axi_control | register  | name=ap_return_5 offset=0x20 range=32 |
+| return   | s_axi_control | register  | name=ap_return_6 offset=0x24 range=32 |
+| return   | s_axi_control | register  | name=ap_return_7 offset=0x28 range=32 |
+| return   | s_axi_control | register  | name=ap_return_8 offset=0x2c range=32 |
++----------+---------------+-----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+----------------------------+-----------+-----------+---------+
+| Name                                     | DSP | Pragma | Variable                   | Op        | Impl      | Latency |
++------------------------------------------+-----+--------+----------------------------+-----------+-----------+---------+
+| + accelerator                            | 18  |        |                            |           |           |         |
+|   cmp_i_i_fu_561_p2                      |     |        | cmp_i_i                    | seteq     | auto      | 0       |
+|   select_ln73_fu_640_p3                  |     |        | select_ln73                | select    | auto_sel  | 0       |
+|   select_ln73_1_fu_648_p3                |     |        | select_ln73_1              | select    | auto_sel  | 0       |
+|   select_ln73_2_fu_656_p3                |     |        | select_ln73_2              | select    | auto_sel  | 0       |
+|   select_ln73_3_fu_664_p3                |     |        | select_ln73_3              | select    | auto_sel  | 0       |
+|   select_ln73_4_fu_672_p3                |     |        | select_ln73_4              | select    | auto_sel  | 0       |
+|   select_ln73_5_fu_680_p3                |     |        | select_ln73_5              | select    | auto_sel  | 0       |
+|   select_ln73_6_fu_688_p3                |     |        | select_ln73_6              | select    | auto_sel  | 0       |
+|   select_ln73_7_fu_696_p3                |     |        | select_ln73_7              | select    | auto_sel  | 0       |
+|   select_ln73_8_fu_760_p3                |     |        | select_ln73_8              | select    | auto_sel  | 0       |
+|   select_ln73_9_fu_704_p3                |     |        | select_ln73_9              | select    | auto_sel  | 0       |
+|   select_ln73_10_fu_712_p3               |     |        | select_ln73_10             | select    | auto_sel  | 0       |
+|   select_ln73_11_fu_720_p3               |     |        | select_ln73_11             | select    | auto_sel  | 0       |
+|   select_ln73_12_fu_728_p3               |     |        | select_ln73_12             | select    | auto_sel  | 0       |
+|   select_ln73_13_fu_767_p3               |     |        | select_ln73_13             | select    | auto_sel  | 0       |
+|   select_ln73_14_fu_774_p3               |     |        | select_ln73_14             | select    | auto_sel  | 0       |
+|   select_ln73_15_fu_781_p3               |     |        | select_ln73_15             | select    | auto_sel  | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_55_1  | 0   |        |                            |           |           |         |
+|    icmp_ln55_fu_366_p2                   |     |        | icmp_ln55                  | seteq     | auto      | 0       |
+|    add_ln55_fu_372_p2                    |     |        | add_ln55                   | add       | fabric    | 0       |
+|    icmp_ln56_fu_408_p2                   |     |        | icmp_ln56                  | seteq     | auto      | 0       |
+|    icmp_ln59_fu_414_p2                   |     |        | icmp_ln59                  | seteq     | auto      | 0       |
+|    select_ln59_fu_420_p3                 |     |        | select_ln59                | select    | auto_sel  | 0       |
+|    select_ln59_1_fu_426_p3               |     |        | select_ln59_1              | select    | auto_sel  | 0       |
+|    select_ln60_fu_432_p3                 |     |        | select_ln60                | select    | auto_sel  | 0       |
+|    select_ln60_1_fu_438_p3               |     |        | select_ln60_1              | select    | auto_sel  | 0       |
+|    select_ln56_fu_444_p3                 |     |        | select_ln56                | select    | auto_sel  | 0       |
+|    select_ln56_1_fu_452_p3               |     |        | select_ln56_1              | select    | auto_sel  | 0       |
+|    select_ln56_2_fu_460_p3               |     |        | select_ln56_2              | select    | auto_sel  | 0       |
+|    select_ln56_3_fu_468_p3               |     |        | select_ln56_3              | select    | auto_sel  | 0       |
+|    select_ln56_4_fu_476_p3               |     |        | select_ln56_4              | select    | auto_sel  | 0       |
+|    select_ln56_5_fu_484_p3               |     |        | select_ln56_5              | select    | auto_sel  | 0       |
+|    select_ln56_6_fu_492_p3               |     |        | select_ln56_6              | select    | auto_sel  | 0       |
+|    select_ln56_7_fu_500_p3               |     |        | select_ln56_7              | select    | auto_sel  | 0       |
+|    select_ln56_8_fu_565_p3               |     |        | select_ln56_8              | select    | auto_sel  | 0       |
+|    select_ln56_9_fu_572_p3               |     |        | select_ln56_9              | select    | auto_sel  | 0       |
+|    select_ln56_10_fu_579_p3              |     |        | select_ln56_10             | select    | auto_sel  | 0       |
+|    select_ln56_11_fu_586_p3              |     |        | select_ln56_11             | select    | auto_sel  | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_73_3  | 18  |        |                            |           |           |         |
+|    icmp_ln73_fu_901_p2                   |     |        | icmp_ln73                  | seteq     | auto      | 0       |
+|    i_2_fu_907_p2                         |     |        | i_2                        | add       | fabric    | 0       |
+|    grp_fu_630_p2                         |     |        | icmp_ln102                 | seteq     | auto      | 0       |
+|    grp_fu_644_p2                         |     |        | sub_ln102                  | sub       | fabric    | 0       |
+|    grp_fu_650_p3                         |     |        | select_ln102               | select    | auto_sel  | 0       |
+|    tmp_7_fu_977_p3                       |     |        | tmp_7                      | cttz      | auto      | 0       |
+|    sub_ln102_1_fu_989_p2                 |     |        | sub_ln102_1                | sub       | fabric    | 0       |
+|    add_ln102_fu_995_p2                   |     |        | add_ln102                  | add       | fabric    | 0       |
+|    icmp_ln102_1_fu_1011_p2               |     |        | icmp_ln102_1               | setgt     | auto      | 0       |
+|    sub_ln102_16_fu_1021_p2               |     |        | sub_ln102_16               | sub       | fabric    | 0       |
+|    lshr_ln102_8_fu_1031_p2               |     |        | lshr_ln102_8               | lshr      | auto_pipe | 0       |
+|    and_ln102_12_fu_1037_p2               |     |        | and_ln102_12               | and       | auto      | 0       |
+|    icmp_ln102_2_fu_1043_p2               |     |        | icmp_ln102_2               | setne     | auto      | 0       |
+|    phi_ln102_fu_1049_p2                  |     |        | phi_ln102                  | and       | auto      | 0       |
+|    xor_ln102_4_fu_1063_p2                |     |        | xor_ln102_4                | xor       | auto      | 0       |
+|    and_ln102_fu_1077_p2                  |     |        | and_ln102                  | and       | auto      | 0       |
+|    or_ln102_4_fu_1083_p2                 |     |        | or_ln102_4                 | or        | auto      | 0       |
+|    icmp_ln102_3_fu_1097_p2               |     |        | icmp_ln102_3               | setgt     | auto      | 0       |
+|    add_ln102_1_fu_1115_p2                |     |        | add_ln102_1                | add       | fabric    | 0       |
+|    lshr_ln102_fu_1124_p2                 |     |        | lshr_ln102                 | lshr      | auto_pipe | 0       |
+|    sub_ln102_2_fu_1134_p2                |     |        | sub_ln102_2                | sub       | fabric    | 0       |
+|    shl_ln102_fu_1143_p2                  |     |        | shl_ln102                  | shl       | auto_pipe | 0       |
+|    cond50_i_i315_fu_1148_p3              |     |        | cond50_i_i315              | select    | auto_sel  | 0       |
+|    add_ln102_2_fu_1157_p2                |     |        | add_ln102_2                | add       | fabric    | 0       |
+|    select_ln102_1_fu_1185_p3             |     |        | select_ln102_1             | select    | auto_sel  | 0       |
+|    icmp_ln102_4_fu_1233_p2               |     |        | icmp_ln102_4               | setne     | auto      | 0       |
+|    icmp_ln102_6_fu_1239_p2               |     |        | icmp_ln102_6               | seteq     | auto      | 0       |
+|    or_ln102_7_fu_1245_p2                 |     |        | or_ln102_7                 | or        | auto      | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp                        | dcmp      | auto      | 1       |
+|    and_ln102_1_fu_2117_p2                |     |        | and_ln102_1                | and       | auto      | 0       |
+|    output_array_inference_4_fu_2159_p4   |     |        | select_ln105_4             | select    | auto_sel  | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_2                      | dcmp      | auto      | 1       |
+|    and_ln105_fu_2129_p2                  |     |        | and_ln105                  | and       | auto      | 0       |
+|    output_array_inference_4_fu_2159_p6   |     |        | select_ln105               | select    | auto_sel  | 0       |
+|    xor_ln102_fu_2141_p2                  |     |        | xor_ln102                  | xor       | auto      | 0       |
+|    and_ln102_2_fu_2146_p2                |     |        | and_ln102_2                | and       | auto      | 0       |
+|    sparsemux_7_2_16_1_1_U56              |     |        | output_array_inference_4   | sparsemux | auto      | 0       |
+|    grp_fu_668_p2                         |     |        | icmp_ln114                 | setgt     | auto      | 0       |
+|    select_ln114_fu_1103_p3               |     |        | select_ln114               | select    | auto_sel  | 0       |
+|    grp_fu_806_p2                         |     |        | icmp_ln102_5               | seteq     | auto      | 0       |
+|    grp_fu_644_p2                         |     |        | sub_ln102_4                | sub       | fabric    | 0       |
+|    grp_fu_650_p3                         |     |        | select_ln102_2             | select    | auto_sel  | 0       |
+|    tmp_11_fu_1267_p3                     |     |        | tmp_11                     | cttz      | auto      | 0       |
+|    sub_ln102_5_fu_1279_p2                |     |        | sub_ln102_5                | sub       | fabric    | 0       |
+|    add_ln102_4_fu_1285_p2                |     |        | add_ln102_4                | add       | fabric    | 0       |
+|    icmp_ln102_8_fu_1301_p2               |     |        | icmp_ln102_8               | setgt     | auto      | 0       |
+|    sub_ln102_17_fu_1311_p2               |     |        | sub_ln102_17               | sub       | fabric    | 0       |
+|    lshr_ln102_9_fu_1321_p2               |     |        | lshr_ln102_9               | lshr      | auto_pipe | 0       |
+|    and_ln102_13_fu_1327_p2               |     |        | and_ln102_13               | and       | auto      | 0       |
+|    icmp_ln102_7_fu_1333_p2               |     |        | icmp_ln102_7               | setne     | auto      | 0       |
+|    phi_ln102_1_fu_1339_p2                |     |        | phi_ln102_1                | and       | auto      | 0       |
+|    xor_ln102_5_fu_1353_p2                |     |        | xor_ln102_5                | xor       | auto      | 0       |
+|    and_ln102_3_fu_1367_p2                |     |        | and_ln102_3                | and       | auto      | 0       |
+|    or_ln102_fu_1373_p2                   |     |        | or_ln102                   | or        | auto      | 0       |
+|    icmp_ln102_9_fu_1387_p2               |     |        | icmp_ln102_9               | setgt     | auto      | 0       |
+|    add_ln102_5_fu_1397_p2                |     |        | add_ln102_5                | add       | fabric    | 0       |
+|    lshr_ln102_2_fu_1406_p2               |     |        | lshr_ln102_2               | lshr      | auto_pipe | 0       |
+|    sub_ln102_6_fu_1412_p2                |     |        | sub_ln102_6                | sub       | fabric    | 0       |
+|    shl_ln102_1_fu_1421_p2                |     |        | shl_ln102_1                | shl       | auto_pipe | 0       |
+|    cond50_i_i315_1_fu_1426_p3            |     |        | cond50_i_i315_1            | select    | auto_sel  | 0       |
+|    add_ln102_6_fu_1435_p2                |     |        | add_ln102_6                | add       | fabric    | 0       |
+|    select_ln102_3_fu_1463_p3             |     |        | select_ln102_3             | select    | auto_sel  | 0       |
+|    icmp_ln102_11_fu_1511_p2              |     |        | icmp_ln102_11              | setne     | auto      | 0       |
+|    icmp_ln102_13_fu_1517_p2              |     |        | icmp_ln102_13              | seteq     | auto      | 0       |
+|    or_ln102_8_fu_1523_p2                 |     |        | or_ln102_8                 | or        | auto      | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_16                     | dcmp      | auto      | 1       |
+|    and_ln102_4_fu_2179_p2                |     |        | and_ln102_4                | and       | auto      | 0       |
+|    output_array_inference_5_fu_2221_p4   |     |        | select_ln105_5             | select    | auto_sel  | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_17                     | dcmp      | auto      | 1       |
+|    and_ln105_1_fu_2191_p2                |     |        | and_ln105_1                | and       | auto      | 0       |
+|    output_array_inference_5_fu_2221_p6   |     |        | select_ln105_1             | select    | auto_sel  | 0       |
+|    xor_ln102_1_fu_2203_p2                |     |        | xor_ln102_1                | xor       | auto      | 0       |
+|    and_ln102_5_fu_2208_p2                |     |        | and_ln102_5                | and       | auto      | 0       |
+|    sparsemux_7_2_16_1_1_U57              |     |        | output_array_inference_5   | sparsemux | auto      | 0       |
+|    grp_fu_812_p2                         |     |        | icmp_ln114_1               | setgt     | auto      | 0       |
+|    grp_fu_818_p2                         |     |        | add_ln115                  | add       | fabric    | 0       |
+|    grp_fu_824_p3                         |     |        | select_ln114_1             | select    | auto_sel  | 0       |
+|    grp_fu_806_p2                         |     |        | icmp_ln102_10              | seteq     | auto      | 0       |
+|    grp_fu_644_p2                         |     |        | sub_ln102_8                | sub       | fabric    | 0       |
+|    grp_fu_650_p3                         |     |        | select_ln102_4             | select    | auto_sel  | 0       |
+|    tmp_21_fu_1545_p3                     |     |        | tmp_21                     | cttz      | auto      | 0       |
+|    sub_ln102_9_fu_1557_p2                |     |        | sub_ln102_9                | sub       | fabric    | 0       |
+|    add_ln102_8_fu_1563_p2                |     |        | add_ln102_8                | add       | fabric    | 0       |
+|    icmp_ln102_16_fu_1579_p2              |     |        | icmp_ln102_16              | setgt     | auto      | 0       |
+|    sub_ln102_18_fu_1589_p2               |     |        | sub_ln102_18               | sub       | fabric    | 0       |
+|    lshr_ln102_10_fu_1599_p2              |     |        | lshr_ln102_10              | lshr      | auto_pipe | 0       |
+|    and_ln102_14_fu_1605_p2               |     |        | and_ln102_14               | and       | auto      | 0       |
+|    icmp_ln102_12_fu_1611_p2              |     |        | icmp_ln102_12              | setne     | auto      | 0       |
+|    phi_ln102_2_fu_1617_p2                |     |        | phi_ln102_2                | and       | auto      | 0       |
+|    xor_ln102_6_fu_1631_p2                |     |        | xor_ln102_6                | xor       | auto      | 0       |
+|    and_ln102_6_fu_1645_p2                |     |        | and_ln102_6                | and       | auto      | 0       |
+|    or_ln102_5_fu_1651_p2                 |     |        | or_ln102_5                 | or        | auto      | 0       |
+|    icmp_ln102_14_fu_1665_p2              |     |        | icmp_ln102_14              | setgt     | auto      | 0       |
+|    add_ln102_9_fu_1675_p2                |     |        | add_ln102_9                | add       | fabric    | 0       |
+|    lshr_ln102_4_fu_1684_p2               |     |        | lshr_ln102_4               | lshr      | auto_pipe | 0       |
+|    sub_ln102_10_fu_1690_p2               |     |        | sub_ln102_10               | sub       | fabric    | 0       |
+|    shl_ln102_2_fu_1699_p2                |     |        | shl_ln102_2                | shl       | auto_pipe | 0       |
+|    cond50_i_i315_2_fu_1704_p3            |     |        | cond50_i_i315_2            | select    | auto_sel  | 0       |
+|    add_ln102_10_fu_1713_p2               |     |        | add_ln102_10               | add       | fabric    | 0       |
+|    select_ln102_5_fu_1741_p3             |     |        | select_ln102_5             | select    | auto_sel  | 0       |
+|    icmp_ln102_18_fu_1789_p2              |     |        | icmp_ln102_18              | setne     | auto      | 0       |
+|    icmp_ln102_20_fu_1795_p2              |     |        | icmp_ln102_20              | seteq     | auto      | 0       |
+|    or_ln102_9_fu_1801_p2                 |     |        | or_ln102_9                 | or        | auto      | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_26                     | dcmp      | auto      | 1       |
+|    and_ln102_7_fu_2241_p2                |     |        | and_ln102_7                | and       | auto      | 0       |
+|    output_array_inference_6_fu_2283_p4   |     |        | select_ln105_6             | select    | auto_sel  | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_27                     | dcmp      | auto      | 1       |
+|    and_ln105_2_fu_2253_p2                |     |        | and_ln105_2                | and       | auto      | 0       |
+|    output_array_inference_6_fu_2283_p6   |     |        | select_ln105_2             | select    | auto_sel  | 0       |
+|    xor_ln102_2_fu_2265_p2                |     |        | xor_ln102_2                | xor       | auto      | 0       |
+|    and_ln102_8_fu_2270_p2                |     |        | and_ln102_8                | and       | auto      | 0       |
+|    sparsemux_7_2_16_1_1_U58              |     |        | output_array_inference_6   | sparsemux | auto      | 0       |
+|    grp_fu_812_p2                         |     |        | icmp_ln114_2               | setgt     | auto      | 0       |
+|    grp_fu_818_p2                         |     |        | add_ln115_1                | add       | fabric    | 0       |
+|    grp_fu_824_p3                         |     |        | select_ln114_2             | select    | auto_sel  | 0       |
+|    grp_fu_630_p2                         |     |        | icmp_ln102_15              | seteq     | auto      | 0       |
+|    grp_fu_644_p2                         |     |        | sub_ln102_12               | sub       | fabric    | 0       |
+|    grp_fu_650_p3                         |     |        | select_ln102_6             | select    | auto_sel  | 0       |
+|    tmp_31_fu_1827_p3                     |     |        | tmp_31                     | cttz      | auto      | 0       |
+|    sub_ln102_13_fu_1839_p2               |     |        | sub_ln102_13               | sub       | fabric    | 0       |
+|    add_ln102_12_fu_1845_p2               |     |        | add_ln102_12               | add       | fabric    | 0       |
+|    icmp_ln102_21_fu_1861_p2              |     |        | icmp_ln102_21              | setgt     | auto      | 0       |
+|    sub_ln102_19_fu_1871_p2               |     |        | sub_ln102_19               | sub       | fabric    | 0       |
+|    lshr_ln102_11_fu_1881_p2              |     |        | lshr_ln102_11              | lshr      | auto_pipe | 0       |
+|    and_ln102_15_fu_1887_p2               |     |        | and_ln102_15               | and       | auto      | 0       |
+|    icmp_ln102_17_fu_1893_p2              |     |        | icmp_ln102_17              | setne     | auto      | 0       |
+|    phi_ln102_3_fu_1899_p2                |     |        | phi_ln102_3                | and       | auto      | 0       |
+|    xor_ln102_7_fu_1913_p2                |     |        | xor_ln102_7                | xor       | auto      | 0       |
+|    and_ln102_9_fu_1927_p2                |     |        | and_ln102_9                | and       | auto      | 0       |
+|    or_ln102_6_fu_1933_p2                 |     |        | or_ln102_6                 | or        | auto      | 0       |
+|    icmp_ln102_19_fu_1947_p2              |     |        | icmp_ln102_19              | setgt     | auto      | 0       |
+|    add_ln102_13_fu_1965_p2               |     |        | add_ln102_13               | add       | fabric    | 0       |
+|    lshr_ln102_6_fu_1974_p2               |     |        | lshr_ln102_6               | lshr      | auto_pipe | 0       |
+|    sub_ln102_14_fu_1984_p2               |     |        | sub_ln102_14               | sub       | fabric    | 0       |
+|    shl_ln102_3_fu_1993_p2                |     |        | shl_ln102_3                | shl       | auto_pipe | 0       |
+|    cond50_i_i315_3_fu_1998_p3            |     |        | cond50_i_i315_3            | select    | auto_sel  | 0       |
+|    add_ln102_14_fu_2007_p2               |     |        | add_ln102_14               | add       | fabric    | 0       |
+|    select_ln102_7_fu_2035_p3             |     |        | select_ln102_7             | select    | auto_sel  | 0       |
+|    icmp_ln102_22_fu_2083_p2              |     |        | icmp_ln102_22              | setne     | auto      | 0       |
+|    icmp_ln102_23_fu_2089_p2              |     |        | icmp_ln102_23              | seteq     | auto      | 0       |
+|    or_ln102_10_fu_2095_p2                |     |        | or_ln102_10                | or        | auto      | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_36                     | dcmp      | auto      | 1       |
+|    and_ln102_10_fu_2303_p2               |     |        | and_ln102_10               | and       | auto      | 0       |
+|    output_array_inference_7_fu_2345_p4   |     |        | select_ln105_7             | select    | auto_sel  | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U55       |     |        | tmp_37                     | dcmp      | auto      | 1       |
+|    and_ln105_3_fu_2315_p2                |     |        | and_ln105_3                | and       | auto      | 0       |
+|    output_array_inference_7_fu_2345_p6   |     |        | select_ln105_3             | select    | auto_sel  | 0       |
+|    xor_ln102_3_fu_2327_p2                |     |        | xor_ln102_3                | xor       | auto      | 0       |
+|    and_ln102_11_fu_2332_p2               |     |        | and_ln102_11               | and       | auto      | 0       |
+|    sparsemux_7_2_16_1_1_U59              |     |        | output_array_inference_7   | sparsemux | auto      | 0       |
+|    grp_fu_668_p2                         |     |        | icmp_ln114_3               | setgt     | auto      | 0       |
+|    select_ln114_3_fu_1953_p3             |     |        | select_ln114_3             | select    | auto_sel  | 0       |
+|   + model_array                          | 18  |        |                            |           |           |         |
+|     mul_16s_16s_25_1_1_U25               | 1   |        | mul_ln12                   | mul       | auto      | 0       |
+|     mul_16s_16s_25_1_1_U26               | 1   |        | mul_ln13                   | mul       | auto      | 0       |
+|     mul_16s_16s_32_1_1_U27               | 1   |        | mul_ln14                   | mul       | auto      | 0       |
+|     mul_32s_7s_34_1_1_U23                | 2   |        | mul_ln14_1                 | mul       | auto      | 0       |
+|     add_ln14_fu_313_p2                   |     |        | add_ln14                   | add       | fabric    | 0       |
+|     mul_16s_16s_32_1_1_U28               | 1   |        | mul_ln14_2                 | mul       | auto      | 0       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U33    | 1   |        | mul_ln15                   | mul       | dsp_slice | 3       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U33    | 1   |        | sext_ln15                  | sext      | dsp_slice | 3       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U33    | 1   |        | sub_ln15                   | sub       | dsp_slice | 3       |
+|     mul_16s_16s_32_1_1_U29               | 1   |        | mul_ln14_3                 | mul       | auto      | 0       |
+|     mul_16s_16s_25_1_1_U30               | 1   |        | mul_ln12_1                 | mul       | auto      | 0       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U34   | 1   |        | mul_ln13_1                 | mul       | dsp_slice | 3       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U34   | 1   |        | add_ln13                   | add       | dsp_slice | 3       |
+|     mul_32s_7s_34_1_1_U24                | 2   |        | mul_ln14_4                 | mul       | auto      | 0       |
+|     add_ln14_1_fu_356_p2                 |     |        | add_ln14_1                 | add       | fabric    | 0       |
+|     bias_out_net_sum_fu_372_p2           |     |        | bias_out_net_sum           | add       | fabric    | 0       |
+|     icmp_ln12_fu_381_p2                  |     |        | icmp_ln12                  | setgt     | auto      | 0       |
+|     output_3_fu_387_p3                   |     |        | output_3                   | select    | auto_sel  | 0       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U35   | 1   |        | mul_ln12_2                 | mul       | dsp_slice | 3       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U35   | 1   |        | add_ln12                   | add       | dsp_slice | 3       |
+|     mul_16s_16s_25_1_1_U31               | 1   |        | mul_ln13_2                 | mul       | auto      | 0       |
+|     mul_32s_7s_34_1_1_U23                | 2   |        | mul_ln14_5                 | mul       | auto      | 0       |
+|     add_ln14_3_fu_418_p2                 |     |        | add_ln14_3                 | add       | fabric    | 0       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U36   | 1   |        | mul_ln12_3                 | mul       | dsp_slice | 3       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U36   | 1   |        | add_ln12_1                 | add       | dsp_slice | 3       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U37   | 1   |        | mul_ln13_3                 | mul       | dsp_slice | 3       |
+|     mac_muladd_16s_16s_25ns_25_4_1_U37   | 1   |        | add_ln13_1                 | add       | dsp_slice | 3       |
+|     mul_16s_16s_32_1_1_U32               | 1   |        | mul_ln14_6                 | mul       | auto      | 0       |
+|     mul_32s_7s_34_1_1_U24                | 2   |        | mul_ln14_7                 | mul       | auto      | 0       |
+|     add_ln14_4_fu_452_p2                 |     |        | add_ln14_4                 | add       | fabric    | 0       |
+|     bias_out_net_sum_1_fu_521_p2         |     |        | bias_out_net_sum_1         | add       | fabric    | 0       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U38    | 1   |        | mul_ln15_1                 | mul       | dsp_slice | 3       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U38    | 1   |        | sext_ln15_1                | sext      | dsp_slice | 3       |
+|     mac_mulsub_16s_6ns_25s_25_4_1_U38    | 1   |        | sub_ln15_1                 | sub       | dsp_slice | 3       |
+|     icmp_ln12_1_fu_539_p2                |     |        | icmp_ln12_1                | setgt     | auto      | 0       |
+|     output_2_fu_545_p3                   |     |        | output_2                   | select    | auto_sel  | 0       |
+|     cmp_i_i_fu_208_p2                    |     |        | cmp_i_i                    | seteq     | auto      | 0       |
+|     icmp_ln11_fu_214_p2                  |     |        | icmp_ln11                  | setgt     | auto      | 0       |
+|     error_1_fu_468_p3                    |     |        | error_1                    | select    | auto_sel  | 0       |
+|     icmp_ln11_1_fu_219_p2                |     |        | icmp_ln11_1                | setgt     | auto      | 0       |
+|     error_3_fu_498_p3                    |     |        | error_3                    | select    | auto_sel  | 0       |
+|     agg_result_delta_kmin1_0_0_fu_475_p3 |     |        | agg_result_delta_kmin1_0_0 | select    | auto_sel  | 0       |
+|     agg_result_delta_kmin1_1_0_fu_505_p3 |     |        | agg_result_delta_kmin1_1_0 | select    | auto_sel  | 0       |
+|  + accelerator_Pipeline_VITIS_LOOP_165_9 | 0   |        |                            |           |           |         |
+|    icmp_ln165_fu_292_p2                  |     |        | icmp_ln165                 | seteq     | auto      | 0       |
+|    add_ln165_fu_298_p2                   |     |        | add_ln165                  | add       | fabric    | 0       |
+|    icmp_ln166_1_fu_340_p2                |     |        | icmp_ln166_1               | seteq     | auto      | 0       |
+|    output_array_new_b1_fu_346_p3         |     |        | output_array_new_b1        | select    | auto_sel  | 0       |
+|    icmp_ln166_fu_354_p2                  |     |        | icmp_ln166                 | seteq     | auto      | 0       |
+|    output_array_new_b2_fu_360_p3         |     |        | output_array_new_b2        | select    | auto_sel  | 0       |
+|    output_array_new_w1_fu_368_p3         |     |        | output_array_new_w1        | select    | auto_sel  | 0       |
+|    output_array_new_w1_1_fu_376_p3       |     |        | output_array_new_w1_1      | select    | auto_sel  | 0       |
+|    output_array_new_w2_fu_384_p3         |     |        | output_array_new_w2        | select    | auto_sel  | 0       |
+|    output_array_new_w2_1_fu_392_p3       |     |        | output_array_new_w2_1      | select    | auto_sel  | 0       |
+|    select_ln166_fu_400_p3                |     |        | select_ln166               | select    | auto_sel  | 0       |
+|    select_ln166_1_fu_408_p3              |     |        | select_ln166_1             | select    | auto_sel  | 0       |
+|    select_ln166_2_fu_416_p3              |     |        | select_ln166_2             | select    | auto_sel  | 0       |
+|    select_ln166_3_fu_424_p3              |     |        | select_ln166_3             | select    | auto_sel  | 0       |
+|    select_ln166_4_fu_432_p3              |     |        | select_ln166_4             | select    | auto_sel  | 0       |
+|    select_ln166_5_fu_440_p3              |     |        | select_ln166_5             | select    | auto_sel  | 0       |
+|    select_ln166_6_fu_448_p3              |     |        | select_ln166_6             | select    | auto_sel  | 0       |
+|    select_ln166_7_fu_456_p3              |     |        | select_ln166_7             | select    | auto_sel  | 0       |
+|    select_ln166_8_fu_464_p3              |     |        | select_ln166_8             | select    | auto_sel  | 0       |
+|    select_ln166_9_fu_472_p3              |     |        | select_ln166_9             | select    | auto_sel  | 0       |
+|    select_ln166_10_fu_480_p3             |     |        | select_ln166_10            | select    | auto_sel  | 0       |
+|    select_ln166_11_fu_488_p3             |     |        | select_ln166_11            | select    | auto_sel  | 0       |
++------------------------------------------+-----+--------+----------------------------+-----------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + accelerator     |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------+------------------------------------------------+
+| Type            | Options                      | Location                                       |
++-----------------+------------------------------+------------------------------------------------+
+| interface       | mode=s_axilite port=w1       | ../accelerator.cpp:13 in accelerator, w1       |
+| interface       | mode=s_axilite port=w2       | ../accelerator.cpp:14 in accelerator, w2       |
+| interface       | mode=s_axilite port=bias_1   | ../accelerator.cpp:15 in accelerator, bias_1   |
+| interface       | mode=s_axilite port=bias_2   | ../accelerator.cpp:16 in accelerator, bias_2   |
+| interface       | mode=s_axilite port=training | ../accelerator.cpp:17 in accelerator, training |
+| interface       | mode=s_axilite port=return   | ../accelerator.cpp:18 in accelerator, return   |
+| array_partition | variable=w1                  | ../accelerator.cpp:20 in accelerator, w1       |
+| array_partition | variable=w2                  | ../accelerator.cpp:21 in accelerator, w2       |
+| pipeline        | II=200                       | ../accelerator.cpp:74 in accelerator           |
++-----------------+------------------------------+------------------------------------------------+
+
+

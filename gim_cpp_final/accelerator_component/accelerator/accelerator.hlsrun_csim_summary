@@ -1,0 +1,161 @@
+<ENTRY>
+{
+ "thisFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\accelerator.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "10/29/24 09:30:30",
+ "timestampMillis": "3635377099",
+ "buildStep": {
+  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
+  "name": "vitis-run",
+  "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\logs\\accelerator.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg --work_dir accelerator ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg",
+   "--work_dir",
+   "accelerator"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/29/24 09:30:30",
+ "timestampMillis": "3635377099",
+ "status": {
+  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "10/29/24 09:30:35",
+ "timestampMillis": "3635382273",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator.cpp",
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\act_pe.cpp",
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\array.cpp",
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\bias_pe.cpp",
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\error_pe.cpp",
+     "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "10/29/24 09:30:35",
+ "timestampMillis": "3635382274",
+ "buildStep": {
+  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
+  "name": "csim_design",
+  "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/29/24 09:30:35",
+ "timestampMillis": "3635382275",
+ "status": {
+  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/29/24 09:30:40",
+ "timestampMillis": "3635387751",
+ "status": {
+  "cmdId": "43cf8fba-3043-43dc-906a-dd358c23ffcb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "10/29/24 09:30:40",
+ "timestampMillis": "3635387837",
+ "status": {
+  "cmdId": "23b40619-21d2-4907-a9f3-6c7e006d72d3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "10/29/24 09:30:40",
+ "timestampMillis": "3635387838",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "10/29/24 09:30:40",
+ "timestampMillis": "3635387839",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

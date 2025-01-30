@@ -1,0 +1,79 @@
+{
+    "1": {
+        "name": "accelerator_Pipeline_VITIS_LOOP_73_3",
+        "file": "..\/accelerator.cpp",
+        "fileloc": "12",
+        "instructions": "493",
+        "total_instructions": "2269",
+        "calls": "4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4",
+        "basicblocks": "7",
+        "loads": {
+            "L": "33"
+        },
+        "stores": {
+            "L": "30"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "accelerator_Pipeline_VITIS_LOOP_55_1",
+        "file": "..\/accelerator.cpp",
+        "fileloc": "53",
+        "instructions": "120",
+        "total_instructions": "120",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "25",
+            "T": "2"
+        },
+        "stores": {
+            "L": "26"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "accelerator",
+        "file": "accelerator.cpp",
+        "fileloc": "7",
+        "instructions": "181",
+        "total_instructions": "2675",
+        "calls": "2 1 3",
+        "basicblocks": "1",
+        "loads": {
+            "L": "56",
+            "T": "8"
+        }
+    },
+    "3": {
+        "name": "accelerator_Pipeline_VITIS_LOOP_165_9",
+        "file": "..\/accelerator.cpp",
+        "fileloc": "12",
+        "instructions": "105",
+        "total_instructions": "105",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "25"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "model_array",
+        "file": "..\/array.cpp",
+        "fileloc": "13",
+        "instructions": "111",
+        "total_instructions": "111",
+        "calls": "",
+        "basicblocks": "1"
+    }
+}

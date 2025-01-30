@@ -1,0 +1,374 @@
+{
+    "rules": {
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\accelerator.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\accelerator.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../accelerator.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.bc"
+            ],
+            "exectime": 2.4899027347564697,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\act_pe.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\act_pe.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../act_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.bc"
+            ],
+            "exectime": 1.1295485496520996,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\array.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\array.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../array.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.bc"
+            ],
+            "exectime": 1.0529627799987793,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\bias_pe.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\bias_pe.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../bias_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.bc"
+            ],
+            "exectime": 1.2073636054992676,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\error_pe.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\error_pe.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../error_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.bc"
+            ],
+            "exectime": 1.0663130283355713,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\weight_pe.cpp.0.bc', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\weight_pe.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxtrace",
+                "../weight_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.bc"
+            ],
+            "exectime": 1.142463207244873,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\main.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\main.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-DHW_COSIM",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\main.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../main.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\main.cpp.0.o"
+            ],
+            "exectime": 2.127699136734009,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\accelerator.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\accelerator.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../accelerator.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.o"
+            ],
+            "exectime": 2.2089295387268066,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\act_pe.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\act_pe.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../act_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.o"
+            ],
+            "exectime": 1.5758612155914307,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\array.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\array.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../array.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.o"
+            ],
+            "exectime": 1.3924086093902588,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\bias_pe.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\bias_pe.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../bias_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.o"
+            ],
+            "exectime": 1.5831797122955322,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\error_pe.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\error_pe.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../error_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.o"
+            ],
+            "exectime": 1.529541254043579,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\weight_pe.cpp.0.o', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\weight_pe.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=accelerator",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../weight_pe.cpp",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.o"
+            ],
+            "exectime": 1.7892327308654785,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.bc']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/llvm-link.exe",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.bc",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.bc",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.bc",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.bc",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.bc",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.bc",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc"
+            ],
+            "exectime": 0.18567538261413574,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.opt.bc']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/opt.exe",
+                "-check-single-toplevel",
+                "-make-non-toplevel-internal",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc"
+            ],
+            "exectime": 0.08196854591369629,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\app.exe']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang++.exe",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\main.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\accelerator.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\act_pe.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\array.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\bias_pe.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\error_pe.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\weight_pe.cpp.0.o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc",
+                "-fhls",
+                "-fhlstoplevel=accelerator",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "-fslxtrace",
+                "-Wl,-mllvm,-profilerOutputDirectory=C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\profiler\\0",
+                "-fslxpthreads",
+                "-lpthread",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt"
+            ],
+            "exectime": 3.6594080924987793,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\binary_dependencies.json']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\libexec\\clang-scan-deps.exe",
+                "--compilation-database=C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\compile_commands.json",
+                "--format=vitiscxx",
+                "--reuse-filemanager=false",
+                "--output=C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\binary_dependencies.json"
+            ],
+            "exectime": 0.19411420822143555,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionGraph']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/staticCallGraph.exe",
+                "-i",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "-o",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\output\\app.functionGraph"
+            ],
+            "exectime": 1.4452366828918457,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionMapping']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/functionMapper.exe",
+                "--static-xml",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "--function-mapping",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\output\\app.functionMapping",
+                "--ir-module",
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "--fn",
+                "1113"
+            ],
+            "exectime": 0.7120978832244873,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
+        },
+        "['C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stdout.txt', 'C:\\\\ELEC522\\\\GIM\\\\GIM-2024-2025\\\\gim_cpp_final\\\\accelerator_component\\\\accelerator\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stderr.txt']": {
+            "command": [
+                "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe"
+            ],
+            "exectime": 0.08632278442382812,
+            "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\csim\\code_analyzer\\tracing\\csim\\build"
+        }
+    }
+}

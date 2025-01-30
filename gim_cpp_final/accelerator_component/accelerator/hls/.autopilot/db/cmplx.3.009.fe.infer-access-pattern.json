@@ -1,0 +1,33 @@
+{
+  "0": {
+    "basicblocks": 104,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "accelerator.cpp",
+    "fileloc": 7,
+    "instructions": 1020,
+    "loads": {
+      "L": 84,
+      "T": 6
+    },
+    "name": "accelerator",
+    "stores": {
+      "L": 124
+    },
+    "total_instructions": 3548
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "array.cpp",
+    "fileloc": 4,
+    "instructions": 158,
+    "loads": {
+      "L": 11
+    },
+    "name": "model_array",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 158
+  }
+}

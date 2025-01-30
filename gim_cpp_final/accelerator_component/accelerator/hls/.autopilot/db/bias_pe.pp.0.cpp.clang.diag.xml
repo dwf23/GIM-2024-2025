@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/.autopilot/db/bias_pe.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../bias_pe.cpp</string>
+      <key>line</key>
+      <integer>9</integer>
+      <key>column</key>
+      <integer>14</integer>
+      <key>message</key>
+      <string>unused parameter &apos;training&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+  </array>
+</dict>

@@ -1,0 +1,87 @@
+[
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp"
+  },
+  {
+    "directory": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-D HW_COSIM",
+      "-c",
+      "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp"
+    ],
+    "file": "C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp"
+  }
+]

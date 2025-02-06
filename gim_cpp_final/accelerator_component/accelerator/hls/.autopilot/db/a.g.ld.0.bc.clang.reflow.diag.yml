@@ -1,0 +1,2544 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 70, Column: 26 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_70_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 128, Column: 31 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_128_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 130, Column: 35 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 137, Column: 31 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 139, Column: 35 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../array.cpp, Line: 38, Column: 22 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_38_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../array.cpp, Line: 17, Column: 22 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../array.cpp, Line: 22, Column: 26 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_22_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_4
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:137:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_128_5
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:128:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:137:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_128_5
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:128:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:137:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_128_5
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:128:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_137_7
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:137:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_8
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:139:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_128_5
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:128:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_6
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:130:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_38_3
+  - String:          ''' ('
+  - LoopLoc:         '../array.cpp:38:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          ''' ('
+  - LoopLoc:         '../array.cpp:17:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_22_2
+  - String:          ''' ('
+  - LoopLoc:         '../array.cpp:22:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_22_2
+  - String:          ''' ('
+  - LoopLoc:         '../array.cpp:22:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          model_array
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'weights_pe(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../weight_pe.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bias_pe(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../bias_pe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'act_pe(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../act_pe.cpp, Line: 4, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+Function:        _Z11model_arrayPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S5_S5_S2_cS2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'error_pe(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../error_pe.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'model_array(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, char, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../array.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            w2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            w1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../accelerator.cpp, Line: 65, Column: 22 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_65_3
+  - String:          ' '
+  - LoopLoc:         '../accelerator.cpp:65:22'
+  - String:          ' '
+  - Function:        'accelerator(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [2], ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_47_1
+  - String:          '> at '
+  - LoopLoc:         '../accelerator.cpp:47:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_157_9
+  - String:          '> at '
+  - LoopLoc:         '../accelerator.cpp:157:23'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 160, Column: 28 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_160_10
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 50, Column: 26 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_50_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_160_10
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:160:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../accelerator.cpp, Line: 9, Column: 0 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_50_2
+  - String:          ''' ('
+  - LoopLoc:         '../accelerator.cpp:50:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           output_array.new_w1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           output_array.new_w2
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           output_array.new_b1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           output_array.new_b2
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           w1_local
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           w2_local
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           bias_1_local
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           bias_2_local
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out1.output_k
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out1.delta_kmin1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out1.weight_changes
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out1.bias_change
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out2.output_k
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out2.delta_kmin1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out2.weight_changes
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_out2.bias_change
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back2.output_k
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back2.delta_kmin1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back2.weight_changes
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back2.bias_change
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back1.output_k
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back1.delta_kmin1
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back1.weight_changes
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           array_back1.bias_change
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=retval.new_b1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_b1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            retval.new_b1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=retval.new_b2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_b2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            retval.new_b2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=retval.new_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            retval.new_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=retval.new_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            retval.new_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=retval.new_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            retval.new_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=retval.new_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:12:15'
+  - String:          ' '
+  - VarName:         retval.new_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            retval.new_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=w1_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:43:14'
+  - String:          ' '
+  - VarName:         w1_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            w1_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=w1_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:43:14'
+  - String:          ' '
+  - VarName:         w1_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            w1_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=w2_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:44:14'
+  - String:          ' '
+  - VarName:         w2_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            w2_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=w2_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:44:14'
+  - String:          ' '
+  - VarName:         w2_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            w2_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=bias_1_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:45:14'
+  - String:          ' '
+  - VarName:         bias_1_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            bias_1_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=bias_2_local'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - varLoc:          '../accelerator.cpp:46:14'
+  - String:          ' '
+  - VarName:         bias_2_local
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            bias_2_local
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out1.bias_change'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out1.bias_change
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out1.bias_change
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out1.delta_kmin1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out1.delta_kmin1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out1.delta_kmin1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out1.output_k'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out1.output_k
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out1.output_k
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out1.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out1.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out1.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=array_out1.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out1.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            array_out1.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out2.bias_change'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out2.bias_change
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out2.bias_change
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out2.delta_kmin1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out2.delta_kmin1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out2.delta_kmin1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out2.output_k'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out2.output_k
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out2.output_k
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_out2.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out2.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_out2.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=array_out2.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_out2.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            array_out2.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back2.bias_change'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back2.bias_change
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back2.bias_change
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back2.delta_kmin1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back2.delta_kmin1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back2.delta_kmin1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back2.output_k'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back2.output_k
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back2.output_k
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back2.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back2.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back2.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=array_back2.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back2.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            array_back2.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back1.bias_change'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back1.bias_change
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back1.bias_change
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back1.delta_kmin1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back1.delta_kmin1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back1.delta_kmin1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back1.output_k'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back1.output_k
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back1.output_k
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=array_back1.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back1.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            array_back1.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=array_back1.weight_changes'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  accelerator
+  - String:          ' '
+  - VarName:         array_back1.weight_changes
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            array_back1.weight_changes
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          retval.new_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          retval.new_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          retval.new_b1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 12, Column: 15 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          retval.new_b2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 43, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w1_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 44, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w2_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 45, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          bias_1_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../accelerator.cpp, Line: 46, Column: 14 }
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          bias_2_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out1.output_k
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out1.delta_kmin1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out1.weight_changes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out1.bias_change
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out2.output_k
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out2.delta_kmin1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out2.weight_changes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_out2.bias_change
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back2.output_k
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back2.delta_kmin1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back2.weight_changes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back2.bias_change
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back1.output_k
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back1.delta_kmin1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back1.weight_changes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z11acceleratorPA2_8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_PS2_S5_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          array_back1.bias_change
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

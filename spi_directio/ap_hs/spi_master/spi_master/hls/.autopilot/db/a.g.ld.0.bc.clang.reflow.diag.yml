@@ -1,0 +1,145 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          ''' ('
+  - LoopLoc:         '../dut.cpp:27:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          spi_master
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_spi_master_ir
+Args:            
+  - Callee:          'spi_master(hls::directio<bool, 3>&, hls::directio<bool, 3>&, hls::directio<bool, 3>&, hls::directio<bool, 1>&, hls::directio<int, 1>&, hls::directio<int, 1>&)'
+    DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_spi_master_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            miso
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mosi
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            cs
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            sclk
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../dut.cpp, Line: 18, Column: 22 }
+Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          '''('
+  - LoopLoc:         '../dut.cpp:18:22'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          '> at '
+  - LoopLoc:         '../dut.cpp:18:22'
+  - String:          ' '
+...

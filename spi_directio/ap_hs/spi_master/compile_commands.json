@@ -1,0 +1,29 @@
+[
+  {
+    "directory": "C:\\testing_comm\\spi_directio\\ap_hs\\spi_master",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=spi_master",
+      "-c",
+      "C:/testing_comm/spi_directio/ap_hs/dut.cpp"
+    ],
+    "file": "C:/testing_comm/spi_directio/ap_hs/dut.cpp"
+  },
+  {
+    "directory": "C:\\testing_comm\\spi_directio\\ap_hs\\spi_master",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-D",
+      "HW_COSIM",
+      "-c",
+      "C:/testing_comm/spi_directio/ap_hs/tb.cpp"
+    ],
+    "file": "C:/testing_comm/spi_directio/ap_hs/tb.cpp"
+  }
+]

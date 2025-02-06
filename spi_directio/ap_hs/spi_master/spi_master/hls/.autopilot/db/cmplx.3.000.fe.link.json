@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "dut.cpp",
+    "fileloc": 5,
+    "instructions": 118,
+    "loads": {
+      "L": 4
+    },
+    "name": "spi_master",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 191
+  }
+}

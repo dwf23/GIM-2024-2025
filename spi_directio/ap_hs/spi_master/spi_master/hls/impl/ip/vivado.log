@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Feb  6 14:52:55 2025
+# Process ID         : 46980
+# Current directory  : C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip
+# Command line       : vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file           : C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/vivado.log
+# Journal file       : C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip\vivado.jou
+# Running On         : Lindsey_laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34042 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 45854 MB
+# Available Virtual  : 14967 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/hls_data.json outdir=C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip srcdir=C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/misc
+INFO: Copied 1 verilog file(s) to C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/hdl/verilog
+INFO: Copied 1 vhdl file(s) to C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/hdl/vhdl
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 625.949 ; gain = 183.148
+INFO: Import ports from HDL: C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/hdl/vhdl/spi_master.vhd (spi_master)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add data interface sclk
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add data interface cs
+INFO: Add data interface mosi
+INFO: Add data interface miso
+INFO: Add data interface data_out
+INFO: Add data interface data_in
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/component.xml
+INFO: Created IP archive C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls/impl/ip/xilinx_com_hls_spi_master_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  6 14:53:05 2025...

@@ -1,0 +1,18 @@
+Natalia Mendiola, C Simulation of Distributed Communication C++
+2/6/2025
+
+1. If on windows, please ensure you have mingw-w64 downloaded 
+to run C++ files on VScode
+https://code.visualstudio.com/docs/cpp/config-mingw
+
+2. If making edits to code, run
+g++ -o desired_main_file_name test_c_main.cpp -lws2_32
+g++ -o desired_sub_file_name test_c_sub.cpp -lws2_32
+
+3. Open two terminals, one for main and the other for Sub
+
+4. On a terminal, first run :
+./desired_main_file_name
+
+On the other terminal, run the following:
+./desired_sub_file_name

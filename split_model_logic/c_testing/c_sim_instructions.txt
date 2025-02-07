@@ -23,15 +23,15 @@ https://code.visualstudio.com/docs/cpp/config-mingw
 g++  test_c_main.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_server 
 g++  test_c_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_client 
 
-note: If #pragma comment(lib, "ws2_32.lib") not present, also use  -lws2_32
+note: If #pragma comment(lib, "ws2_32.lib") not present in code, also use  -lws2_32 after -o exe_file_name
 
 3. Open two terminals, one for main and the other for Sub
 
 4. On a terminal, first run :
-./desired_main_file_name
+./c_server
 
 On the other terminal, run the following:
-./desired_sub_file_name
+./c_client
 
 
 

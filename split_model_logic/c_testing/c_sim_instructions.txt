@@ -6,8 +6,10 @@ to run C++ files on VScode
 https://code.visualstudio.com/docs/cpp/config-mingw
 
 2. If making edits to code, run
-g++  test_c_main.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o desired_main_file_name -lws2_32
-g++  test_c_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o desired_sub_file_name -lws2_32
+g++  test_c_main.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_server 
+g++  test_c_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_client 
+
+note: If #pragma comment(lib, "ws2_32.lib") not present, also use  -lws2_32
 
 3. Open two terminals, one for main and the other for Sub
 

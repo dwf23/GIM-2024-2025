@@ -5,9 +5,10 @@ C sim of distributed learning
 Natalia Mendiola, 2/6/2025
 test_c_main.cpp: Acts as the main client that connects to the server and 
 runs the neural network calculations, handling data transfer, and updates.
-
 */
+
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <memory>
 #include <cstring>
@@ -15,10 +16,13 @@ runs the neural network calculations, handling data transfer, and updates.
 #include <ws2tcpip.h>
 #include "gim_model.h"
 
+#pragma comment(lib, "ws2_32.lib")
+
 constexpr int PORT = 12345;
 constexpr int BUFFER_SIZE = 1024;
 
 using namespace std;
+
 
 
 int main() {
@@ -93,8 +97,11 @@ int main() {
     fixed_16 output_1[ARRAY_SIZE] = {};
     fixed_16 delta_1[ARRAY_SIZE] = {};
 
-    Array array_out2;
-    Array array_back2;
+    fixed_16 y[4] = {0, 1, 1, 0};
+    fixed_16 bias_2_local[ARRAY_SIZE] = {};
+    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {};
+    fixed_16 delta_2[ARRAY_SIZE] = {};
+
 
     // make local versions of the weights/biases
     fixed_16 w1_local[ARRAY_SIZE][ARRAY_SIZE] = {};
@@ -111,7 +118,11 @@ int main() {
     char model = 'r';
     fixed_16 alpha = 0.1; // for leaky relu
     fixed_16 lr = 0.1; // learning rate
+    // Send header first
+    const char* header = "DATA";  // Use "END" when you want to terminate
+    const char*  end_signal = "END";
 
+    cout << "Training for: " << NUM_ITERATIONS << " Iterations" << endl;
     for (int i=0; i<NUM_ITERATIONS;i++){
         for(int j=0; j<DATA_SIZE; j++){ //go through each data point
             //Set up initial input
@@ -120,44 +131,110 @@ int main() {
                 output_0[p] = data[p][j];
                 // initialize the error backpropagation
                 delta_1[p] = 0;
+                delta_2[p] = 0;
             }
             //FORWARD PASS ----- Layer 1
             Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, TRAINING);
-            for (int o = 0; o < ARRAY_SIZE; o++){
+            int o;
+            for (o = 0; o < ARRAY_SIZE; o++){
                 output_1[o] = array_out1.output_k[o];
             }
 
-            // send output_1 to sub board
+            // send output_1 and delta_2 to sub board
+            
             int bytesSent;
+            //send header expecting DATA
+            // cout << "Sending DATA header" << endl;
+            bytesSent = send(new_socket, header, 4, 0);  // Send a 4-byte header
+            if (bytesSent == SOCKET_ERROR) {
+                cerr << "Error sending header: " << WSAGetLastError() << endl;
+                return -1;
+            }
+            //output_1
+            // cout << "output_1 before sending: ";
+            // for (int i = 0; i < ARRAY_SIZE; i++) {
+            //     cout << output_1[i] << " ";
+            // }
+            // cout << endl;
             bytesSent = send(new_socket, reinterpret_cast<char*>(output_1), sizeof(output_1), 0);
+            // cout << "Sent output_1 bytes: " << bytesSent << " / " << sizeof(output_1) << endl;
             if (bytesSent == SOCKET_ERROR) {
                 cerr << "Error sending output_1: " << WSAGetLastError() << endl;
+            } 
+ 
+            //delta_2
+            // cout << "delta_2 before sending: ";
+            // for (int i = 0; i < ARRAY_SIZE; i++) {
+            //     cout << delta_2[i] << " ";
+            // }
+            // cout << endl;
+            bytesSent = send(new_socket, reinterpret_cast<char*>(delta_2), sizeof(delta_2), 0);
+            // cout << "Sent delta_2 bytes: " << bytesSent << " / " << sizeof(delta_2) << endl;
+            if (bytesSent == SOCKET_ERROR) {
+                cerr << "Error sending delta_2: " << WSAGetLastError() << endl;
             }
+
+            //-----------------------------
             // Receive output_2 from sub board
-            ssize_t bytesReceived;
-            bytesReceived = recv(new_socket, reinterpret_cast<char*>(&array_out2), sizeof(array_out2), 0);
+            int bytesReceived;
+            fixed_16 output_2[ARRAY_SIZE];
+            bytesReceived = recv(new_socket, reinterpret_cast<char*>(output_2), sizeof(output_2), 0);
             if (bytesReceived == SOCKET_ERROR) {
-                cerr << "Error receiving forward propogation array_out2." << endl;
-            } else {
-                cout << "Received array_out2 from client. " << endl;
-            }
-
-            
-            bytesReceived = recv(new_socket, reinterpret_cast<char*>(&array_back2), sizeof(array_back2), 0);
+                cerr << "Error receiving backpropagation array_back2 output_2." << endl;
+            } 
+            // else {
+            //     cout << "Received array_back2 output_2 from client." << endl;
+            // }
+            //update delta_1
+            fixed_16 delta1[ARRAY_SIZE];
+            bytesReceived = recv(new_socket, reinterpret_cast<char*>(delta1), sizeof(delta1), 0);
             if (bytesReceived == SOCKET_ERROR) {
-                cerr << "Error receiving backpropagation array_back2." << endl;
-            } else {
-                cout << "Received array_back2 from client." << endl;
-            }
-
+                cerr << "Error receiving backpropagation array_back2 delta1." << endl;
+            } 
+            // else {
+            //     cout << "Received array_back2 delta1 from client." << endl;
+            // }
             for (int e = 0; e < ARRAY_SIZE; e++) {
-                delta_1[e] = array_back2.delta_kmin1[e];
+                delta_1[e] = delta1[e];
             }
-
+            //bias_2
+            bytesReceived = recv(new_socket, reinterpret_cast<char*>(bias_2_local), sizeof(bias_2_local), 0);
+            if (bytesReceived == SOCKET_ERROR) {
+                cerr << "Error receiving backpropagation bias_2_local delta1." << endl;
+            } 
+            // else {
+            //     cout << "Received array_back2 bias_2_local from client." << endl;
+            // }
+            //w2_local
+            bytesReceived = recv(new_socket, reinterpret_cast<char*>(w2_local), sizeof(w2_local), 0);
+            if (bytesReceived == SOCKET_ERROR) {
+                cerr << "Error receiving backpropagation w2_local delta1." << endl;
+            } 
+            // else {
+            //     cout << "Received array_back2 w2_local from client." << endl;
+            // }
+            int e;
+            for (e = 0; e < ARRAY_SIZE; e++) {
+                if (model == 'r') {
+                    if (output_2[e] > 0)
+                        delta_2[e] = -(y[j] - output_2[e]);
+                    else
+                        delta_2[e] = 0;
+                    }
+                else if (model == 'l') {
+                    if (output_2[e] > 0)
+                        delta_2[e] = -(y[j] - output_2[e]);
+                    else
+                        delta_2[e] = -(y[j] - output_2[e]) * alpha;
+                }
+                else {
+                    // std::cout << "model invalid" << std::endl;
+                    break;
+                }
+            }
 
             //BACKPROPOGATION ---
             Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, TRAINING);
- 
             //update local w1, bias_1
             for (int n = 0; n < ARRAY_SIZE; n++) {
                 bias_1_local[n] = array_back1.bias_change[n];
@@ -165,6 +242,7 @@ int main() {
                     w1_local[n][m] = array_back1.weight_changes[n][m];
                 }
             }
+
             if ((TRAINING==0)&&(j == (DATA_SIZE-1))){
                 break;// only run this for all data points once if infering
             }
@@ -173,17 +251,13 @@ int main() {
             break; // only run this once if we are infering
         }
     }
-    
-    fixed_16 bias_2_local[ARRAY_SIZE] = {};
-    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {};
-    // update the weights and biases
-    for (int n = 0; n < ARRAY_SIZE; n++) {
-        bias_2_local[n] = array_back2.bias_change[n];
-        for (int m = 0; m < ARRAY_SIZE; m++) {
-            w2_local[n][m] = array_back2.weight_changes[n][m];
-        }
-    }
 
+    cout << "Sending END header" << endl;
+    int endSent = send(new_socket, header, 4, 0);  // Send a 4-byte header
+    if (endSent == SOCKET_ERROR) {
+        cerr << "Error sending header: " << WSAGetLastError() << endl;
+        return -1;
+    }
     // produce the final weights to be used in inference
     for (int n = 0; n<ARRAY_SIZE; n++) {
         output_array.new_b1[n] = bias_1_local[n];
@@ -232,5 +306,50 @@ int main() {
     }
     cout << endl;
 
+ofstream outfile("learned_weights_bias.txt", ios::trunc); // Open file in truncate mode
+
+    if (!outfile) {
+        cerr << "Error opening file!" << endl;
+        return 1;
+    }
+
+    // Print new_w1
+    outfile << "new_w1:" << endl;
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        for (int j = 0; j < ARRAY_SIZE; j++) {
+            outfile << output_array.new_w1[i][j] << " ";
+        }
+        outfile << endl;
+    }
+
+    // Print new_w2
+    outfile << "new_w2:" << endl;
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        for (int j = 0; j < ARRAY_SIZE; j++) {
+            outfile << output_array.new_w2[i][j] << " ";
+        }
+        outfile << endl;
+    }
+
+    // Print new_b1
+    outfile << "new_b1: ";
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        outfile << output_array.new_b1[i] << " ";
+    }
+    outfile << endl;
+
+    // Print new_b2
+    outfile << "new_b2: ";
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        outfile << output_array.new_b2[i] << " ";
+    }
+    outfile << endl;
+
+    outfile.close(); // Close the file
+    cout << "File overwritten: learned_weights_bias.txt" << endl;
+
+
+
     return 0;
 }
+

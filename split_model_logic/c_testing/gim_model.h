@@ -7,7 +7,7 @@
 #include <iostream>
 
 #define ARRAY_SIZE 2
-#define NUM_ITERATIONS 3 //500
+#define NUM_ITERATIONS 500
 #define DATA_SIZE 4
 #define TRAINING 1
 

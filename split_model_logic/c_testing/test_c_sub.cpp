@@ -15,14 +15,13 @@ results back to the server.
 #include <ws2tcpip.h>
 #include "gim_model.h"
 
+#pragma comment(lib, "ws2_32.lib")
+
 constexpr int PORT = 12345;
 constexpr int BUFFER_SIZE = 1024;
-// constexpr int ARRAY_SIZE = 2;
 constexpr int TIMEOUT = 5000; //5 sec timeout
 
 using namespace std;
-
-// typedef fixed_16 fixed_16;
 
 int main() {
     //inputs to function from cpp_accelerator_generic/accelerator.cpp
@@ -41,7 +40,8 @@ int main() {
     // Create socket
     SOCKET sock = INVALID_SOCKET;
     struct sockaddr_in serv_addr;
-    char buffer[BUFFER_SIZE] = {0};
+    // char buffer[BUFFER_SIZE] = {0};
+    char header[5] = {0};  // 4 bytes + null terminator
 
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
         cerr << "Socket creation error" << endl;
@@ -69,14 +69,15 @@ int main() {
     }
 
     //------------------------
-    cout << "Connected to server. Waiting for data..." << endl;
+    cout << "Connected to server." << endl;
 
     //based  on from cpp_accelerator_generic/accelerator.cpp
-    fixed_16 y[4] = {0, 1, 1, 0};
+    fixed_16 delta_1[ARRAY_SIZE] = {};
+    fixed_16 delta_2[ARRAY_SIZE] = {};
 
     // initializing internal arrays with zeros
     fixed_16 output_2[ARRAY_SIZE] = {0, 0};
-    fixed_16 delta_2[ARRAY_SIZE] = {};
+    fixed_16 output_1[ARRAY_SIZE] = {0, 0};
 
     // make local versions of the weights/biases
     fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
@@ -94,18 +95,18 @@ int main() {
     fixed_16 lr = 0.1; // learning rate
 
     // Continuous loop for receiving data 
+    cout <<"Waiting for data from main board." << endl;
 
     while(true){ //this runs for each data point
 
         // Check for END signal first
-        int bytesReceived = recv(sock, buffer, BUFFER_SIZE, 0);
+        int bytesReceived = recv(sock, header, 4, 0);
         if (bytesReceived > 0) {
-            buffer[bytesReceived] = '\0';  // Null terminate the buffer
-            if (strcmp(buffer, "END") == 0) {
-                cout << "Received termination signal.  Stopping client." << endl;// Making inferences and calculating final error." << endl;
-                // cout << "sending back return array and stopping client." << endl;
+            header[bytesReceived] = '\0';  // Null terminate the header string
+            if (strcmp(header, "END") == 0) {
+                cout << "Received termination signal. Stopping client." << endl;
                 break;
-            }            
+            }
         } else if (bytesReceived == SOCKET_ERROR) {
             if (WSAGetLastError() == WSAETIMEDOUT) {
                 cerr << "Receive operation timed out." << endl;
@@ -114,9 +115,18 @@ int main() {
             }
             break;
         }
-        // Receive output_1 from main board
-        fixed_16 output_1[ARRAY_SIZE];
+
+        //Receive output_1 and delta_2 from main
         bytesReceived = recv(sock, reinterpret_cast<char*>(output_1), sizeof(output_1), 0);
+        if (bytesReceived == SOCKET_ERROR) {
+            if (WSAGetLastError() == WSAETIMEDOUT) {
+                cerr << "Receive operation timed out." << endl;
+            } else {
+                cerr << "Error receiving output_1." << endl;
+            }
+            break;
+        }
+        bytesReceived = recv(sock, reinterpret_cast<char*>(delta_2), sizeof(delta_2), 0);
         if (bytesReceived == SOCKET_ERROR) {
             if (WSAGetLastError() == WSAETIMEDOUT) {
                 cerr << "Receive operation timed out." << endl;
@@ -125,23 +135,19 @@ int main() {
             }
             break;
         }
-        // Echo received data
-        cout << "Output 1 received: " << endl;
-        for (int row = 0; row < ARRAY_SIZE; row++) {
-            cout << output_1[row] << " ";  // Print the element at position 'row' in the 1D array
-        }
-        cout << endl;
-
-        //initialize the error backpropogation count
-        delta_2[0] = 0; 
-        delta_2[1] = 0;
 
         //Forward propogation of layer 2
         Array array_out2 = model_array(w2_local, bias_2_local, output_1, delta_2, lr, model, alpha, TRAINING);
+        for (int o = 0; o < ARRAY_SIZE; o++){
+            output_2[o] = array_out2.output_k[o];
+        }
 
         // run the backpropagation and update the array
         // start with layer 2
         Array array_back2 = model_array(w2_local, bias_2_local, output_1, delta_2, lr, model, alpha, TRAINING);
+        for (int e = 0; e < ARRAY_SIZE; e++) {
+            delta_1[e] = array_back2.delta_kmin1[e];
+        }
         // update the weights and biases
         for (int n = 0; n < ARRAY_SIZE; n++) {
             bias_2_local[n] = array_back2.bias_change[n];
@@ -149,18 +155,28 @@ int main() {
                 w2_local[n][m] = array_back2.weight_changes[n][m];
             }
         }
-        cout << "Size of array_out2: " << sizeof(array_out2) << endl;
-        cout << "Size of array_back2: " << sizeof(array_back2) << endl;
 
         int bytesSent;
-        //send w2_local and bias_2_local to main board
-        bytesSent= send(sock, reinterpret_cast<char*>(&array_out2), sizeof(array_out2), 0);
+        //send output2, delta1, w2_local and bias_2_local to main board
+        bytesSent= send(sock, reinterpret_cast<char*>(output_2), sizeof(output_2), 0);
+        // cout << "Sent array_out2 output bytes: " << bytesSent << " / " << sizeof(output_2) << endl;
         if (bytesSent == SOCKET_ERROR) {
-            cerr << "Error sending array_out2: " << WSAGetLastError() << endl;
+            cerr << "Error sending array_out2 output_2: " << WSAGetLastError() << endl;
         }
-        bytesSent= send(sock, reinterpret_cast<char*>(&array_back2), sizeof(array_back2), 0);
+        bytesSent= send(sock, reinterpret_cast<char*>(delta_1), sizeof(delta_1), 0);
+        // cout << "Sent array_out2 delta_1 bytes: " << bytesSent << " / " << sizeof(delta_1) << endl;
         if (bytesSent == SOCKET_ERROR) {
-            cerr << "Error sending array_back2: " << WSAGetLastError() << endl;
+            cerr << "Error sending array_out2 delta_1: " << WSAGetLastError() << endl;
+        }
+        bytesSent= send(sock, reinterpret_cast<char*>(bias_2_local), sizeof(bias_2_local), 0);
+        // cout << "Sent array_out2 bias_2_local bytes: " << bytesSent << " / " << sizeof(bias_2_local) << endl;
+        if (bytesSent == SOCKET_ERROR) {
+            cerr << "Error sending array_out2 bias_2_local: " << WSAGetLastError() << endl;
+        }
+        bytesSent= send(sock, reinterpret_cast<char*>(w2_local), sizeof(w2_local), 0);
+        // cout << "Sent array_out2 w2_local bytes: " << bytesSent << " / " << sizeof(w2_local) << endl;
+        if (bytesSent == SOCKET_ERROR) {
+            cerr << "Error sending array_back2 w2_local: " << WSAGetLastError() << endl;
         }
     }
 

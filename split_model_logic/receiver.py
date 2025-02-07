@@ -76,7 +76,7 @@ if __name__ == '__main__':
         weight_change = [[x + 1 for x in row] for row in received_data["weight_change"]]
         output_k = [[x + 1 for x in row] for row in received_data["output_k"]]
 
-        print("fUpdated bias, weight_change, and output_k: {bias_change},{weight_change},{output_k})
+        print("fUpdated bias, weight_change, and output_k: {bias_change},{weight_change},{output_k}")
         print("------\n")
 
     print("Ran through all epochs")

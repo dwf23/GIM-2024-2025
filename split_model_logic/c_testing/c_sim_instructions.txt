@@ -1,6 +1,20 @@
 Natalia Mendiola, C Simulation of Distributed Communication C++
 2/6/2025
 
+TO RUN:
+1.Open two terminals, one for main and the other for Sub
+
+2a. On a terminal, first run :
+./c_server
+
+2b. On the other terminal, run the following:
+./c_client
+
+3. Using xor_validation.py, copy the respective values of w1, w2, bias1, bias2 from learned_weights_bias.txt 
+and check accuracy
+
+---------------------------
+TO EDIT:
 1. If on windows, please ensure you have mingw-w64 downloaded 
 to run C++ files on VScode
 https://code.visualstudio.com/docs/cpp/config-mingw

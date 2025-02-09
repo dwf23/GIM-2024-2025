@@ -10,8 +10,10 @@ TO RUN:
 2b. On the other terminal, run the following:
 ./c_client
 
-3. Using xor_validation.py, copy the respective values of w1, w2, bias1, bias2 from learned_weights_bias.txt 
-and check accuracy
+NOTE: this results in rewriting a text file, learned_weights_bias.txt
+
+3. Open Csim_xor_validation.py and run script. This will read the bias/weights from
+the text file and determine accuracy for XOR problem
 
 ---------------------------
 TO EDIT:

@@ -1,7 +1,0 @@
-   Build using "C:/Xilinx/Vitis/2024.2/vcxx/libexec/clang++"
-   Compiling apatb_spi_master_util.cpp
-   Compiling dut.cpp_pre.cpp.tb.cpp
-   Compiling apatb_spi_master.cpp
-   Compiling tb.cpp_pre.cpp.tb.cpp
-   Compiling apatb_spi_master_ir.ll
-   Generating cosim.tv.exe

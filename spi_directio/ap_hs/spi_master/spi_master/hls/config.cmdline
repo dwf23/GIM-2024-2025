@@ -1,3 +1,0 @@
-relativeroot=C:/testing_comm/spi_directio/ap_hs/spi_master
-original_argv=--mode hls --package --config C:\testing_comm\spi_directio\ap_hs\spi_master\hls_config.cfg --work_dir spi_master 
-

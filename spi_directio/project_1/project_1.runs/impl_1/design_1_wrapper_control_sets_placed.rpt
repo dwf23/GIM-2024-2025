@@ -1,0 +1,148 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue Feb 11 09:26:31 2025
+| Host         : Lindsey_laptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xczu3eg
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    70 |
+|    Minimum number of control sets                        |    70 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    71 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    70 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    68 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             152 |           63 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             137 |           59 |
+| Yes          | No                    | No                     |            2015 |          235 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              37 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal                |                    Enable Signal                   |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 |                                                    | design_1_i/rst_ps8_0_99M/U0/EXT_LPF/lpf_int     |                1 |              4 |         4.00 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/rst_ps8_0_99M/U0/SEQ/seq_cnt_en         | design_1_i/rst_ps8_0_99M/U0/SEQ/seq_clr         |                1 |              6 |         6.00 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5142     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5214     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/data_in_ap_vld        | design_1_i/spi_master_0/inst/ap_CS_fsm_state1   |               12 |             31 |         2.58 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5096     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5110     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5098     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5118     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5114     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5106     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5124     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5108     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_4056     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5154     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5104     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_CS_fsm[67]_i_1_n_0 |                                                 |               10 |             31 |         3.10 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5136     |                                                 |                9 |             31 |         3.44 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5126     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5134     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5102     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5116     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5152     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5156     |                                                 |                8 |             31 |         3.88 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5148     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5140     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5138     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5120     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5132     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5150     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5128     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5122     |                                                 |                8 |             31 |         3.88 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5144     |                                                 |                8 |             31 |         3.88 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5130     |                                                 |                8 |             31 |         3.88 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5146     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5112     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5100     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5164     |                                                 |                8 |             31 |         3.88 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5172     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5184     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5190     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5158     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5196     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5216     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5174     |                                                 |                9 |             31 |         3.44 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5182     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5198     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5218     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5176     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5188     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5178     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5162     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5206     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5186     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5210     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5180     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5192     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5212     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5166     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5208     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5168     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5220     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5194     |                                                 |                7 |             31 |         4.43 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5200     |                                                 |                6 |             31 |         5.17 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5202     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5160     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5170     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 | design_1_i/spi_master_0/inst/ap_condition_5204     |                                                 |                5 |             31 |         6.20 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 |                                                    | design_1_i/rst_ps8_0_99M/U0/peripheral_reset[0] |               58 |            133 |         2.29 |
+|  design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 |                                                    |                                                 |               64 |            153 |         2.39 |
++--------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+
+

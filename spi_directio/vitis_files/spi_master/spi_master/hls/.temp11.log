@@ -1,0 +1,541 @@
+Received data: 0
+Test failed!
+WARNING [HLS SIM]: hls::directio 'hls::directio<int, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Received data in progress: 0
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Initial check0
+No data received!
+WARNING [HLS SIM]: hls::directio 'hls::directio<int, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+test 1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+test 1
+test 3
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+test 1
+test 3
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+test 1
+test 3
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+test 1
+test 3
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+test 1
+test 3
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+test 1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+test 1
+test 3
+Received data: 0
+Test failed!
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+Data Out:-1698898192
+test 1
+test 3
+CS:1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+data out validity0
+test 1
+test 3
+CS:1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+data out validity0
+test 1
+test 3
+CS:1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+data out validity0
+test 1
+test 3
+CS:1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Data Out:-1698898192
+data out validity0
+checkpoint
+test 1
+test 3
+CS:1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+CS:0
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+CS:0
+Received data: 0
+Test failed!
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>2' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing Point1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+Received data: 0
+Test failed!
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>2' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing Point1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing Point1
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing Point1
+Testing 2ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing Point1
+Testing 2
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+Writing data
+test 1
+test 3
+test 2
+Testing 4
+Testing Point1
+Testing 2
+Testing 3 
+Testing 4
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+data out validity1
+Chip Select Activated
+checkpoint
+redo master loop
+Writing data
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+redo master loop
+end of master loop
+test 1
+test 3
+test 2
+Testing 4
+Testing Point1
+Testing 2
+Testing 3 
+Testing 4
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+Chip Select Activated
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Received data: 0
+Test failed!
+Chip Select Activated
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Received data: 0
+Test failed!
+Chip Select Activated
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Received data: 0
+Test failed!

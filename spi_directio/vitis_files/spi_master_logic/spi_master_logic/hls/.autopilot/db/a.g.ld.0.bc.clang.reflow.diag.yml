@@ -1,0 +1,43 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_spi_master_logic_ir
+Args:            
+  - Callee:          'spi_master_logic(hls::directio<int, 1>&, hls::directio<int, 1>&)'
+    DebugLoc:        { File: ../spi_master_logic.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_spi_master_logic_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../spi_master_logic.cpp, Line: 15, Column: 0 }
+Function:        _Z16spi_master_logicRN3hls8directioIiLi1EEES2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../spi_master_logic.cpp, Line: 15, Column: 0 }
+Function:        _Z16spi_master_logicRN3hls8directioIiLi1EEES2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...

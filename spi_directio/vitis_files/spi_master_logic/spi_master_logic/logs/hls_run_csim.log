@@ -1,0 +1,79 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master_logic' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'csim.O=0' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls-debug.cfg(3)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying ini 'csim.clean=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls-debug.cfg(4)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying ini 'csim.setup=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls-debug.cfg(2)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [SIM 211-200] Skipping execution of Code Analyzer due to 'setup' option, executing classic HLS C simulation
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../spi_master_logic_tb.cpp in debug mode
+   Compiling ../../../../../spi_master_logic.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../spi_master_logic_tb.cpp:1:
+In file included from ../../../../../spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../../../spi_master_logic_tb.cpp:14:20: warning: result of comparison of constant 4294967295 with expression of type 'int' is always false [-Wtautological-constant-out-of-range-compare]
+    if(output_data == 4294967295){
+       ~~~~~~~~~~~ ^  ~~~~~~~~~~
+2 warnings generated.
+In file included from ../../../../../spi_master_logic.cpp:1:
+In file included from ../../../../../spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../../../spi_master_logic.cpp:16:21: warning: implicit conversion from 'long long' to 'int' changes value from 4294967295 to -1 [-Wconstant-conversion]
+    int test_data = 4294967295; // Default data to send
+        ~~~~~~~~~   ^~~~~~~~~~
+2 warnings generated.
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.597 seconds; peak allocated memory: 620.645 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 10s

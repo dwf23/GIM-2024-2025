@@ -1,0 +1,137 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic 
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master_logic' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling spi_master_logic.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:91: recipe for target 'obj/spi_master_logic.cpp_pre.cpp.tb.o' failed
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:1:
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:2304:345: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+C:/Xilinx/Vitis/2024.2/include/gmp.h:2304:345: note: remove extraneous parentheses around the comparison to silence this warning
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                     ~                                                                                  ^   ~
+C:/Xilinx/Vitis/2024.2/include/gmp.h:2304:345: note: use '=' to turn this equality comparison into an assignment
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                                                                                                        ^~
+                                                                                                                                                                                                                                                                                                                                                        =
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:1:
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:375:30: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:375:30: note: remove extraneous parentheses around the comparison to silence this warning
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+            ~                ^                                                ~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:375:30: note: use '=' to turn this equality comparison into an assignment
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                             ^~
+                             =
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:377:37: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                    ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:377:37: note: remove extraneous parentheses around the comparison to silence this warning
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                   ~                ^                                                ~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:377:37: note: use '=' to turn this equality comparison into an assignment
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                                    ^~
+                                    =
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:379:37: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                    ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:379:37: note: remove extraneous parentheses around the comparison to silence this warning
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                   ~                ^                                                ~
+C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:379:37: note: use '=' to turn this equality comparison into an assignment
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                                    ^~
+                                    =
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:1:
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:11:
+C:/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:394:22: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+              ~~~~~~~^~~~
+C:/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:394:22: note: remove extraneous parentheses around the comparison to silence this warning
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+             ~       ^   ~
+C:/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h:394:22: note: use '=' to turn this equality comparison into an assignment
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+                     ^~
+                     =
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:1:
+In file included from C:/testing_comm/spi_directio/vitis_files/spi_master_logic.h:1:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:364:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_fixed.h:10:
+C:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:447:21: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+              ~~~~~~^~~~
+C:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:447:21: note: remove extraneous parentheses around the comparison to silence this warning
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+             ~      ^   ~
+C:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h:447:21: note: use '=' to turn this equality comparison into an assignment
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+                    ^~
+                    =
+C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:16:21: warning: implicit conversion from 'long long' to 'int' changes value from 1311768467463790320 to -1698898192 [-Wconstant-conversion]
+    int test_data = 0x123456789ABCDEF0;
+        ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~
+C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:47:18: error: calling a private constructor of class 'hls::directio<int, 1>'
+spi_master_logic(*((hls::directio<int, 1>*)data_out), *((hls::directio<int, 1>*)data_in));
+                 ^
+C:/Xilinx/Vitis/2024.2/include/hls_directio.h:87:5: note: declared private here
+    directio(const directio< __STREAM_T__, __MODE__ >& chn):
+    ^
+C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp:47:55: error: calling a private constructor of class 'hls::directio<int, 1>'
+spi_master_logic(*((hls::directio<int, 1>*)data_out), *((hls::directio<int, 1>*)data_in));
+                                                      ^
+C:/Xilinx/Vitis/2024.2/include/hls_directio.h:87:5: note: declared private here
+    directio(const directio< __STREAM_T__, __MODE__ >& chn):
+    ^
+7 warnings and 2 errors generated.
+make: *** [obj/spi_master_logic.cpp_pre.cpp.tb.o] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.845 seconds; peak allocated memory: 689.730 MB.

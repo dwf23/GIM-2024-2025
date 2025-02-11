@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="WARNING" prefix="[COSIM 212-382]" key="COSIM_TCL_382_1253" tag="COSIM" content="This design has top-level non-blocking FIFO/Stream accesses with ap_ctrl_none control interface, which may result in mismatches or simulation hanging." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-359]" key="COSIM_TCL_359_1230" tag="" content="Aborting co-simulation: C TB simulation failed, nonzero return value &apos;3&apos;." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-320]" key="COSIM_TCL_320_1192" tag="" content="C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-1621]" key="HLS 200-1621" tag="" content="This design has top-level non-blocking FIFO/Stream accesses with ap_ctrl_none control interface which is not supported by cosimulation and could be the cause of this cosimulation failure. Please check the earlier messages to verify that there was indeed a cosimulation mismatch rather than a compilation error. If there was a cosimulation mismatch then verification of this interface combination must be done using a custom RTL testbench. See UG1399 for interface combinations supported by cosimulation." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-5]" key="COSIM_TCL_5_1075" tag="" content="*** C/RTL co-simulation file generation failed. ***" resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***" resolution=""/>
+</Messages>

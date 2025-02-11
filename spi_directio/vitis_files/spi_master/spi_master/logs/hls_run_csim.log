@@ -1,0 +1,104 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/ap_hs/dut.cpp' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/ap_hs/dut.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/ap_hs/tb.cpp' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/ap_hs/tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/ap_hs/tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'csim.O=0' from C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls-debug.cfg(3)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying ini 'csim.clean=1' from C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls-debug.cfg(4)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying ini 'csim.setup=1' from C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master/hls-debug.cfg(2)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../tb.cpp in debug mode
+csim.mk:88: recipe for target 'obj/tb.o' failed
+In file included from ../../../../../tb.cpp:1:
+In file included from ../../../../../dut.h:17:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:15:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../../../tb.cpp:74:5: error: expected expression
+    } else {
+    ^
+../../../../../tb.cpp:60:21: warning: implicit conversion from 'long long' to 'int' changes value from 1311768467463790320 to -1698898192 [-Wconstant-conversion]
+    int test_data = 0x123456789ABCDEF0; // Example 64-bit data to send
+        ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~
+In file included from ../../../../../tb.cpp:1:
+In file included from ../../../../../dut.h:17:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:16:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_stream.h:31:
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:119:2: error: static_assert failed due to requirement '__is_invocable<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>::value' "std::thread arguments must be invocable after conversion to rvalues"
+        static_assert( __is_invocable<typename decay<_Callable>::type,
+        ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../../tb.cpp:57:17: note: in instantiation of function template specialization 'std::thread::thread<void (&)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>, void>' requested here
+    std::thread spi_master_thread(spi_master, std::ref(sclk), std::ref(cs), std::ref(mosi), std::ref(miso), std::ref(master_data_out), std::ref(master_data_in));
+                ^
+In file included from ../../../../../tb.cpp:1:
+In file included from ../../../../../dut.h:17:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:16:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_stream.h:31:
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:242:31: error: no type named 'type' in 'std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>::__result<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>'
+          typename __result<_Tuple>::type
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:131:8: note: in instantiation of template class 'std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>' requested here
+              __make_invoker(std::forward<_Callable>(__f),
+              ^
+../../../../../tb.cpp:57:17: note: in instantiation of function template specialization 'std::thread::thread<void (&)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>, void>' requested here
+    std::thread spi_master_thread(spi_master, std::ref(sclk), std::ref(cs), std::ref(mosi), std::ref(miso), std::ref(master_data_out), std::ref(master_data_in));
+                ^
+In file included from ../../../../../tb.cpp:1:
+In file included from ../../../../../dut.h:17:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h:16:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_stream.h:31:
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:246:29: error: no type named 'type' in 'std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>::__result<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>'
+        typename __result<_Tuple>::type
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:195:13: error: type 'std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>' does not provide a call operator
+        _M_run() { _M_func(); }
+                   ^~~~~~~
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:191:2: note: in instantiation of member function 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>>::_M_run' requested here
+        _State_impl(_Callable&& __f) : _M_func(std::forward<_Callable>(__f))
+        ^
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:206:24: note: in instantiation of member function 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>>::_State_impl' requested here
+        return _State_ptr{new _Impl{std::forward<_Callable>(__f)}};
+                              ^
+C:/Xilinx/Vitis/2024.2/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/thread:130:25: note: in instantiation of function template specialization 'std::thread::_S_make_state<std::thread::_Invoker<std::tuple<void (*)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>>>>' requested here
+        _M_start_thread(_S_make_state(
+                        ^
+../../../../../tb.cpp:57:17: note: in instantiation of function template specialization 'std::thread::thread<void (&)(hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<bool, 0> &, hls::directio<int, 0> &, hls::directio<int, 0> &), std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 3>>, std::reference_wrapper<hls::directio<bool, 1>>, std::reference_wrapper<hls::directio<int, 1>>, std::reference_wrapper<hls::directio<int, 1>>, void>' requested here
+    std::thread spi_master_thread(spi_master, std::ref(sclk), std::ref(cs), std::ref(mosi), std::ref(miso), std::ref(master_data_out), std::ref(master_data_in));
+                ^
+2 warnings and 5 errors generated.
+make: *** [obj/tb.o] Error 1
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 5
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.586 seconds; peak allocated memory: 620.645 MB.

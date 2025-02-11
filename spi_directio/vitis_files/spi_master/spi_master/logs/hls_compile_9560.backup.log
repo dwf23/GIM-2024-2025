@@ -1,0 +1,30 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/vitis_files/spi_master/spi_master 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found 'C:/testing_comm/spi_directio/ap_hs/dut.cpp' see [hls] from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(8)
+WARNING: [HLS 200-2001] file not found 'C:/testing_comm/spi_directio/ap_hs/tb.cpp' see [hls] from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(9)
+WARNING: [HLS 200-2001] file not found 'C:/testing_comm/spi_directio/ap_hs/tb.cpp' see [hls] from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/ap_hs/dut.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(8)
+WARNING: [HLS 200-40] Cannot find design file 'C:/testing_comm/spi_directio/ap_hs/dut.cpp'
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/ap_hs/tb.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(9)
+WARNING: [HLS 200-40] Cannot find test bench file 'C:/testing_comm/spi_directio/ap_hs/tb.cpp'
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/ap_hs/tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/vitis_files/spi_master/hls_config.cfg(5)
+WARNING: [HLS 200-40] Cannot find source file C:/testing_comm/spi_directio/ap_hs/dut.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.951 seconds; current allocated memory: 619.109 MB.
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (:0)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 619.352 MB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+ERROR: Error in linking the design.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 5.041 seconds; peak allocated memory: 619.484 MB.

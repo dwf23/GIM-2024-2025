@@ -1,0 +1,27 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master_logic' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.704 seconds; current allocated memory: 618.863 MB.
+INFO: [HLS 200-10] Analyzing design file '../spi_master_logic.cpp' ... 
+ERROR: [HLS 207-2972] no member named 'this_thread' in namespace 'std' (../spi_master_logic.cpp:25:14)
+WARNING: [HLS 207-4899] implicit conversion from 'long' to 'int' changes value from 1311768467463790320 to -1698898192 (../spi_master_logic.cpp:12:21)
+ERROR:  
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 4.934 seconds; peak allocated memory: 620.727 MB.

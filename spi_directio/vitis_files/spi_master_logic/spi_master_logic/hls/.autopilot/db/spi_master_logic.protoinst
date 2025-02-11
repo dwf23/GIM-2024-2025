@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"spi_master_logic": {
+			"proto_instances": {
+			}
+		}
+	}
+}

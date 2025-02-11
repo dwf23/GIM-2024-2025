@@ -1,0 +1,3 @@
+relativeroot=C:/testing_comm/spi_directio/vitis_files/spi_master_logic
+original_argv=--mode hls --package --config C:\testing_comm\spi_directio\vitis_files\spi_master_logic\hls_config.cfg --work_dir spi_master_logic 
+

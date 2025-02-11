@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb  9 20:36:48 2025
+# Process ID         : 23404
+# Current directory  : C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/spi_master_logic/xsim_script.tcl}
+# Log file           : C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls/sim/verilog/xsim.log
+# Journal file       : C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls/sim/verilog\xsim.jou
+# Running On         : Lindsey_laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34042 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 45317 MB
+# Available Virtual  : 19814 MB
+#-----------------------------------------------------------
+source xsim.dir/spi_master_logic/xsim_script.tcl
+# xsim {spi_master_logic} -autoloadwcfg -tclbatch {spi_master_logic.tcl}
+Time resolution is 1 ps
+source spi_master_logic.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 1 / 2 [n/a] @ "135000"
+// RTL Simulation : 2 / 2 [n/a] @ "145000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 205 ns : File "C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic/hls/sim/verilog/spi_master_logic.autotb.v" Line 256
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Feb  9 20:36:50 2025...

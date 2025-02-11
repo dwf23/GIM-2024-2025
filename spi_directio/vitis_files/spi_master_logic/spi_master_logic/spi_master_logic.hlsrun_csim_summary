@@ -1,0 +1,158 @@
+<ENTRY>
+{
+ "thisFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\spi_master_logic\\spi_master_logic.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/07/25 18:53:37",
+ "timestampMillis": "1738976017947",
+ "buildStep": {
+  "cmdId": "1b57ad5c-8665-4efd-8cc0-830f8c000690",
+  "name": "vitis-run",
+  "logFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\spi_master_logic\\logs\\spi_master_logic.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\spi_master_logic\\hls-debug.cfg --config C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\hls_config.cfg --work_dir spi_master_logic ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\spi_master_logic\\hls-debug.cfg",
+   "--config",
+   "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\hls_config.cfg",
+   "--work_dir",
+   "spi_master_logic"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/07/25 18:53:37",
+ "timestampMillis": "1738976017948",
+ "status": {
+  "cmdId": "1b57ad5c-8665-4efd-8cc0-830f8c000690",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/07/25 18:53:42",
+ "timestampMillis": "1738976022825",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "spi_master_logic",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/testing_comm\\spi_directio\\vitis_files\\spi_master_logic.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/07/25 18:53:42",
+ "timestampMillis": "1738976022826",
+ "buildStep": {
+  "cmdId": "d17e57ea-50ce-48da-bc72-cab6830802cf",
+  "name": "",
+  "logFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master_logic\\spi_master_logic\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master_logic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/07/25 18:53:42",
+ "timestampMillis": "1738976022827",
+ "status": {
+  "cmdId": "d17e57ea-50ce-48da-bc72-cab6830802cf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/07/25 18:53:46",
+ "timestampMillis": "1738976026056",
+ "status": {
+  "cmdId": "d17e57ea-50ce-48da-bc72-cab6830802cf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/07/25 18:53:46",
+ "timestampMillis": "1738976026200",
+ "status": {
+  "cmdId": "1b57ad5c-8665-4efd-8cc0-830f8c000690",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/07/25 18:53:46",
+ "timestampMillis": "1738976026201",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/07/25 18:53:46",
+ "timestampMillis": "1738976026201",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

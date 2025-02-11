@@ -1,0 +1,9 @@
+<pragmas>
+<pragma file="../spi_master_logic.cpp" line="0" pragmaType="interface" parentfunction="spi_master_logic" mode="ap_vld" port="data_out" name="" register="0"/>
+<pragma file="../spi_master_logic.cpp" line="0" pragmaType="interface" parentfunction="spi_master_logic" mode="ap_vld" port="data_in" name="" register="0"/>
+<pragma file="../spi_master_logic.cpp" line="16" pragmaType="interface" parentfunction="spi_master_logic" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read_nb" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="valid" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+</pragmas>

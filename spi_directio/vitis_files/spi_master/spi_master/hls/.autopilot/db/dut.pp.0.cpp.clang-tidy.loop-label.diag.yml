@@ -1,0 +1,58 @@
+---
+MainSourceFile:  'C:/testing_comm/spi_directio/vitis_files/spi_master/spi_master/hls/.autopilot/db/dut.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          280016
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          280482
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          280949
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          564302
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_19_1:  '
+    FileOffset:      19
+    FilePath:        'C:\testing_comm\spi_directio\vitis_files\dut.cpp'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          1695299
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_19_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_2:  '
+    FileOffset:      28
+    FilePath:        'C:\testing_comm\spi_directio\vitis_files\dut.cpp'
+    Replacements:    
+      - FilePath:        'C:\testing_comm\spi_directio\vitis_files\spi_master\spi_master\hls\.autopilot\db\dut.pp.0.cpp'
+        Offset:          1695585
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_2: '
+...

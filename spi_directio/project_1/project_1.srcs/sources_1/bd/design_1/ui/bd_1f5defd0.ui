@@ -1,0 +1,36 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.618826",
+   "Default View_TopLeft":"-191,-494",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_miso_ap_vld_0 -pg 1 -lvl 0 -x -50 -y -170 -defaultsOSRD
+preplace portBus miso_0 -pg 1 -lvl 0 -x -50 -y -90 -defaultsOSRD
+preplace portBus sclk_0 -pg 1 -lvl 4 -x 1410 -y -200 -defaultsOSRD
+preplace portBus cs_0 -pg 1 -lvl 4 -x 1410 -y -170 -defaultsOSRD
+preplace portBus mosi_0 -pg 1 -lvl 4 -x 1410 -y -110 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 730 -y 90 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 3 -x 1210 -y -100 -defaultsOSRD
+preplace inst spi_master_0 -pg 1 -lvl 1 -x 200 -y -130 -defaultsOSRD
+preplace inst spi_master_logic_0 -pg 1 -lvl 1 -x 200 -y -330 -defaultsOSRD
+preplace netloc miso_0_1 1 0 1 -30 -100n
+preplace netloc miso_ap_vld_0_1 1 0 1 -30 -180n
+preplace netloc rst_ps8_0_99M_peripheral_reset 1 0 4 0 -420 NJ -420 NJ -420 1380
+preplace netloc spi_master_0_cs 1 1 3 390J -210 NJ -210 1390J
+preplace netloc spi_master_0_data_in 1 0 2 20 0 360
+preplace netloc spi_master_0_data_in_ap_vld 1 0 2 30 -10 370
+preplace netloc spi_master_0_mosi 1 1 3 400J 0 NJ 0 1390J
+preplace netloc spi_master_0_sclk 1 1 3 400J -200 NJ -200 NJ
+preplace netloc spi_master_logic_0_data_out 1 0 2 40 -20 380
+preplace netloc spi_master_logic_0_data_out_ap_vld 1 0 2 40 -240 360
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 10 30 400 180 1020
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 1030 -120n
+levelinfo -pg 1 -50 200 730 1210 1410
+pagesize -pg 1 -db -bbox -sgen -200 -430 1530 210
+"
+}
+{
+   "da_clkrst_cnt":"3",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

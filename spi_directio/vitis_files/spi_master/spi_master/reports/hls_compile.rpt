@@ -1,0 +1,104 @@
+
+
+================================================================
+== Synthesis Summary Report of 'spi_master'
+================================================================
++ General Information: 
+    * Date:           Sun Feb  9 20:41:21 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        spi_master
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu3eg-sfvc784-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |       Modules      | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |       & Loops      | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ spi_master        |     -|  7.45|        -|       -|         -|        -|     -|        no|     -|   -|  2375 (1%)|  2160 (3%)|    -|
+    | o VITIS_LOOP_19_1  |    II|  8.00|        -|       -|       129|      128|     -|       yes|     -|   -|          -|          -|    -|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++----------+--------+-----------+----------+
+| Port     | Mode   | Direction | Bitwidth |
++----------+--------+-----------+----------+
+| cs       | ap_hs  | out       | 1        |
+| data_in  | ap_vld | out       | 32       |
+| data_out | ap_vld | in        | 32       |
+| miso     | ap_vld | in        | 1        |
+| mosi     | ap_hs  | out       | 1        |
+| sclk     | ap_hs  | out       | 1        |
++----------+--------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------+
+| Argument | Direction | Datatype           |
++----------+-----------+--------------------+
+| sclk     | out       | directio<bool, 3>& |
+| cs       | out       | directio<bool, 3>& |
+| mosi     | out       | directio<bool, 3>& |
+| miso     | in        | directio<bool, 1>& |
+| data_out | in        | directio<int, 1>&  |
+| data_in  | out       | directio<int, 1>&  |
++----------+-----------+--------------------+
+
+* SW-to-HW Mapping
++----------+-----------------+---------+
+| Argument | HW Interface    | HW Type |
++----------+-----------------+---------+
+| sclk     | sclk            | port    |
+| cs       | cs              | port    |
+| mosi     | mosi            | port    |
+| miso     | miso            | port    |
+| miso     | miso_ap_vld     | port    |
+| data_out | data_out        | port    |
+| data_out | data_out_ap_vld | port    |
+| data_in  | data_in         | port    |
+| data_in  | data_in_ap_vld  | port    |
++----------+-----------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------+-------------------------------------+
+| Type      | Options                       | Location                            |
++-----------+-------------------------------+-------------------------------------+
+| interface | mode=ap_ctrl_none port=return | ../dut.cpp:13 in spi_master, return |
+| unroll    |                               | ../dut.cpp:29 in spi_master         |
++-----------+-------------------------------+-------------------------------------+
+
+

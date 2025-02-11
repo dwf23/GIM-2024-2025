@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_autofifo_data_in.v"
+sv xil_defaultlib "AESL_autofifo_data_out.v"
+sv xil_defaultlib "spi_master_logic.autotb.v"
+sv xil_defaultlib "spi_master_logic.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

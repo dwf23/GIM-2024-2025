@@ -1,0 +1,29 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/ap_hs/spi_master/spi_master 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/ap_hs/dut.cpp' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/ap_hs/dut.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/ap_hs/tb.cpp' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/ap_hs/tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/ap_hs/tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/ap_hs/spi_master/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.979 seconds; current allocated memory: 620.555 MB.
+INFO: [HLS 200-10] Analyzing design file '../dut.cpp' ... 
+ERROR: [HLS 207-3777] use of undeclared identifier 'cout'; did you mean 'std::cout'? (../dut.cpp:20:9)
+INFO: [HLS 207-4436] 'std::cout' declared here (C:/Xilinx/Vitis/2024.2/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\iostream:61:18)
+ERROR: [HLS 207-1213] expected ';' after expression (../dut.cpp:20:40)
+ERROR: [HLS 207-3777] use of undeclared identifier 'cout'; did you mean 'std::cout'? (../dut.cpp:29:13)
+ERROR: [HLS 207-1213] expected ';' after expression (../dut.cpp:29:35)
+ERROR:  
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.66 seconds; peak allocated memory: 621.902 MB.

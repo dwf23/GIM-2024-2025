@@ -1,0 +1,120 @@
+
+
+================================================================
+== Vitis HLS Report for 'spi_master_logic'
+================================================================
+* Date:           Sun Feb  9 20:36:03 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        spi_master_logic
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  0.489 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%spectopmodule_ln12 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [../spi_master_logic.cpp:12]   --->   Operation 2 'spectopmodule' 'spectopmodule_ln12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln12 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0" [../spi_master_logic.cpp:12]   --->   Operation 3 'specinterface' 'specinterface_ln12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %data_out"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_out, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 2, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %data_in"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_in, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 2, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_vld.i32P0A, i32 %data_in, i32 1" [../spi_master_logic.cpp:22]   --->   Operation 8 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.48ns)   --->   "%br_ln22 = br i1 %tmp, void %_ZN3hls8directioIiLi1EE7read_nbILi1ELi0EEEbRi.exit, void" [../spi_master_logic.cpp:22]   --->   Operation 9 'br' 'br_ln22' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%reading_result = read i32 @_ssdm_op_Read.ap_vld.volatile.p0i32, i32 %data_in" [../spi_master_logic.cpp:22]   --->   Operation 10 'read' 'reading_result' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%shl_ln24 = shl i32 %reading_result, i32 1" [../spi_master_logic.cpp:24]   --->   Operation 11 'shl' 'shl_ln24' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.48ns)   --->   "%br_ln22 = br void %_ZN3hls8directioIiLi1EE7read_nbILi1ELi0EEEbRi.exit" [../spi_master_logic.cpp:22]   --->   Operation 12 'br' 'br_ln22' <Predicate = (tmp)> <Delay = 0.48>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%test_data = phi i32 %shl_ln24, void, i32 268435455, void %entry" [../spi_master_logic.cpp:24]   --->   Operation 13 'phi' 'test_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_vld.volatile.p0i32, i32 %data_out, i32 %test_data" [../spi_master_logic.cpp:27]   --->   Operation 14 'write' 'write_ln27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln30 = ret" [../spi_master_logic.cpp:30]   --->   Operation 15 'ret' 'ret_ln30' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 0.489ns
+The critical path consists of the following:
+	wire request operation ('tmp', ../spi_master_logic.cpp:22) on port 'data_in' (../spi_master_logic.cpp:22) [9]  (0.000 ns)
+	multiplexor before 'phi' operation 32 bit ('test_data', ../spi_master_logic.cpp:24) with incoming values : ('shl_ln24', ../spi_master_logic.cpp:24) [16]  (0.489 ns)
+	'phi' operation 32 bit ('test_data', ../spi_master_logic.cpp:24) with incoming values : ('shl_ln24', ../spi_master_logic.cpp:24) [16]  (0.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

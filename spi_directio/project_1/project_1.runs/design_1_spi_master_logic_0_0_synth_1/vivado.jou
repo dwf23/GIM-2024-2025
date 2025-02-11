@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb  9 20:38:29 2025
+# Process ID         : 5652
+# Current directory  : C:/testing_comm/spi_directio/project_1/project_1.runs/design_1_spi_master_logic_0_0_synth_1
+# Command line       : vivado.exe -log design_1_spi_master_logic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_spi_master_logic_0_0.tcl
+# Log file           : C:/testing_comm/spi_directio/project_1/project_1.runs/design_1_spi_master_logic_0_0_synth_1/design_1_spi_master_logic_0_0.vds
+# Journal file       : C:/testing_comm/spi_directio/project_1/project_1.runs/design_1_spi_master_logic_0_0_synth_1\vivado.jou
+# Running On         : Lindsey_laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34042 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 45317 MB
+# Available Virtual  : 20122 MB
+#-----------------------------------------------------------
+source design_1_spi_master_logic_0_0.tcl -notrace

@@ -1,0 +1,44 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/testing_comm/spi_directio/vitis_files/spi_master_logic/spi_master_logic 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp,-D HW_COSIM' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master_logic' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/testing_comm/spi_directio/vitis_files/spi_master_logic/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [HLS 211-200] Compiling source code ../spi_master_logic.cpp as hardware code with instrumentation
+INFO: [HLS 211-200] Compiling source code C:/testing_comm/spi_directio/vitis_files/spi_master_logic_tb.cpp as test bench code with instrumentation
+INFO: [HLS 211-200] Compiling source code ../spi_master_logic.cpp as test bench code with instrumentation
+In file included from ../spi_master_logic.cpp:1:
+In file included from ../spi_master_logic.h:4:
+c:\xilinx\vitis\2024.2\vcxx\data\autopilot/hls_directio.h:9:2: error: ERROR: [HLS 211-200] hls_directio.h is not supported by Code Analyzer C simulation
+#error ERROR: [HLS 211-200] hls_directio.h is not supported by Code Analyzer C simulation
+ ^
+c:\xilinx\vitis\2024.2\vcxx\data\autopilot/hls_directio.h:40:7: error: use of undeclared identifier '_STREAM_UNUSED_PARAM'
+      _STREAM_UNUSED_PARAM(name);
+      ^
+c:\xilinx\vitis\2024.2\vcxx\data\autopilot/hls_directio.h:119:39: error: use of undeclared identifier '_STREAM_UNUSED_PARAM'
+    void set_name(const char* name) { _STREAM_UNUSED_PARAM(name); }
+                                      ^
+../spi_master_logic.cpp:9:21: warning: implicit conversion from 'long long' to 'int' changes value from 1311768467463790320 to -1698898192 [-Wconstant-conversion]
+    int test_data = 0x123456789ABCDEF0; // Default 64-bit data to send
+        ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~
+1 warning and 3 errors generated.
+slxcmd:0:0: warning: Non-zero exit code: 1 returned by 'INFO: [HLS 211-200] Compiling source code ../spi_master_logic.cpp as hardware code with instrumentation'
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.798 seconds; peak allocated memory: 620.902 MB.

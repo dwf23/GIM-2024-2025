@@ -1,0 +1,11 @@
+{
+    "0": {
+        "name": "spi_master_logic",
+        "file": "spi_master_logic.cpp",
+        "fileloc": "12",
+        "instructions": "14",
+        "total_instructions": "14",
+        "calls": "",
+        "basicblocks": "3"
+    }
+}

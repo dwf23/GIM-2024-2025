@@ -17,7 +17,7 @@ NOTE: this results in rewriting a text file, learned_weights_bias.txt
 
 3. To determine accuracy, on any terminal run the following. This will read the bias/weights from the text file and determine accuracy for XOR problem
 ```
-pthon Csim_xor_validation.py
+python Csim_xor_validation.py
 ```
 
 ---------------------------

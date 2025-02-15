@@ -1,0 +1,7 @@
+{
+  "workspaceRoot": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw",
+  "mapping": {
+    "dut.cpp": "spi_master",
+    "tb.cpp": "spi_master"
+  }
+}

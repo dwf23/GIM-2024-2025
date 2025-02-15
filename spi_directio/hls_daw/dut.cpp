@@ -10,6 +10,8 @@ void spi_master(
     hls::ap_vld<int> &data_out,
     hls::ap_vld<int> &data_in
 ) {
+    #pragma HLS INTERFACE mode=ap_ctrl_none port=return
+    #pragma HLS INTERFACE mode=set_in
     const int BITS = 64;
     int received_data = 0;
     int send_data = 0;

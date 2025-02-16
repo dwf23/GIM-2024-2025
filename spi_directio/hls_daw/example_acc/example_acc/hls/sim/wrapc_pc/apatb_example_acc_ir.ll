@@ -6,11 +6,11 @@ target triple = "fpga64-xilinx-none"
 %"class.hls::directio<int>" = type { i32 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define i32 @apatb_example_acc_ir(i32 %w1, i32 %w2, %"class.hls::directio<int>"* noalias nonnull dereferenceable(4) %data_out) local_unnamed_addr #0 {
+define i32 @apatb_example_acc_ir(i32 %w1, i32 %w2, %"class.hls::directio<int>"* noalias nonnull dereferenceable(4) %data_out, i1 zeroext %start) local_unnamed_addr #0 {
 entry:
   %data_out_copy = alloca i32, align 512
   call fastcc void @copy_in(%"class.hls::directio<int>"* nonnull %data_out, i32* nonnull align 512 %data_out_copy)
-  %0 = call i32 @apatb_example_acc_hw(i32 %w1, i32 %w2, i32* %data_out_copy)
+  %0 = call i32 @apatb_example_acc_hw(i32 %w1, i32 %w2, i32* %data_out_copy, i1 %start)
   call void @copy_back(%"class.hls::directio<int>"* %data_out, i32* %data_out_copy)
   ret i32 %0
 }
@@ -123,7 +123,7 @@ define internal i32 @"_llvm.fpga.pack.bits.i32.s_class.hls::directio<int>s"(%"cl
   ret i32 %A.0
 }
 
-declare i32 @apatb_example_acc_hw(i32, i32, i32*)
+declare i32 @apatb_example_acc_hw(i32, i32, i32*, i1)
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
 define internal fastcc void @copy_back(%"class.hls::directio<int>"* noalias, i32* noalias align 512) unnamed_addr #4 {
@@ -132,16 +132,16 @@ entry:
   ret void
 }
 
-define i32 @example_acc_hw_stub_wrapper(i32, i32, i32*) #6 {
+define i32 @example_acc_hw_stub_wrapper(i32, i32, i32*, i1) #6 {
 entry:
-  %3 = alloca %"class.hls::directio<int>"
-  call void @copy_out(%"class.hls::directio<int>"* %3, i32* %2)
-  %4 = call i32 @example_acc_hw_stub(i32 %0, i32 %1, %"class.hls::directio<int>"* %3)
-  call void @copy_in(%"class.hls::directio<int>"* %3, i32* %2)
-  ret i32 %4
+  %4 = alloca %"class.hls::directio<int>"
+  call void @copy_out(%"class.hls::directio<int>"* %4, i32* %2)
+  %5 = call i32 @example_acc_hw_stub(i32 %0, i32 %1, %"class.hls::directio<int>"* %4, i1 %3)
+  call void @copy_in(%"class.hls::directio<int>"* %4, i32* %2)
+  ret i32 %5
 }
 
-declare i32 @example_acc_hw_stub(i32, i32, %"class.hls::directio<int>"* noalias nonnull)
+declare i32 @example_acc_hw_stub(i32, i32, %"class.hls::directio<int>"* noalias nonnull, i1 zeroext)
 
 declare i1 @fpga_direct_valid_4(i8*)
 

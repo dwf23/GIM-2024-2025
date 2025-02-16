@@ -21,6 +21,7 @@
 `define AESL_DEPTH_w2 1
 `define AESL_FIFO_data_out AESL_autofifo_data_out
 `define AESL_FIFO_INST_data_out AESL_autofifo_inst_data_out
+`define AESL_DEPTH_start_r 1
 `define AUTOTB_TVIN_w1  "../tv/cdatafile/c.example_acc.autotvin_w1.dat"
 `define AUTOTB_TVIN_w2  "../tv/cdatafile/c.example_acc.autotvin_w2.dat"
 `define AUTOTB_TVIN_w1_out_wrapc  "../tv/rtldatafile/rtl.example_acc.autotvin_w1.dat"
@@ -33,15 +34,16 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 13;
+parameter LATENCY_ESTIMATION = 61;
 parameter LENGTH_ap_return = 1;
-parameter LENGTH_data_out = 8;
+parameter LENGTH_data_out = 40;
+parameter LENGTH_start_r = 1;
 parameter LENGTH_w1 = 1;
 parameter LENGTH_w2 = 1;
 
 task read_token;
     input integer fp;
-    output reg [143 : 0] token;
+    output reg [191 : 0] token;
     integer ret;
     begin
         token = "";
@@ -68,15 +70,31 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
+wire [4 : 0] control_AWADDR;
+wire  control_AWVALID;
+wire  control_AWREADY;
+wire  control_WVALID;
+wire  control_WREADY;
+wire [31 : 0] control_WDATA;
+wire [3 : 0] control_WSTRB;
+wire [4 : 0] control_ARADDR;
+wire  control_ARVALID;
+wire  control_ARREADY;
+wire  control_RVALID;
+wire  control_RREADY;
+wire [31 : 0] control_RDATA;
+wire [1 : 0] control_RRESP;
+wire  control_BVALID;
+wire  control_BREADY;
+wire [1 : 0] control_BRESP;
 wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
 wire  data_out_ap_ack;
-wire [31 : 0] w1;
-wire [31 : 0] w2;
 wire [31 : 0] data_out;
 wire  data_out_ap_vld;
+wire [0 : 0] start_r;
 wire [31 : 0] ap_return;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
@@ -87,40 +105,157 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire control_write_data_finish;
+wire AESL_slave_start;
+reg AESL_slave_start_lock = 0;
+wire AESL_slave_write_start_in;
+wire AESL_slave_write_start_finish;
+reg AESL_slave_ready;
+wire AESL_slave_output_done;
+wire AESL_slave_done;
+reg ready_rise = 0;
+reg start_rise = 0;
+reg slave_start_status = 0;
+reg slave_done_status = 0;
+reg ap_done_lock = 0;
 
 
 wire ap_clk;
-wire ap_rst;
 wire ap_rst_n;
+wire ap_rst_n_n;
 
 `AUTOTB_DUT `AUTOTB_DUT_INST(
+    .s_axi_control_AWADDR(control_AWADDR),
+    .s_axi_control_AWVALID(control_AWVALID),
+    .s_axi_control_AWREADY(control_AWREADY),
+    .s_axi_control_WVALID(control_WVALID),
+    .s_axi_control_WREADY(control_WREADY),
+    .s_axi_control_WDATA(control_WDATA),
+    .s_axi_control_WSTRB(control_WSTRB),
+    .s_axi_control_ARADDR(control_ARADDR),
+    .s_axi_control_ARVALID(control_ARVALID),
+    .s_axi_control_ARREADY(control_ARREADY),
+    .s_axi_control_RVALID(control_RVALID),
+    .s_axi_control_RREADY(control_RREADY),
+    .s_axi_control_RDATA(control_RDATA),
+    .s_axi_control_RRESP(control_RRESP),
+    .s_axi_control_BVALID(control_BVALID),
+    .s_axi_control_BREADY(control_BREADY),
+    .s_axi_control_BRESP(control_BRESP),
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_rst_n(ap_rst_n),
     .ap_start(ap_start),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
     .data_out_ap_ack(data_out_ap_ack),
-    .w1(w1),
-    .w2(w2),
     .data_out(data_out),
     .data_out_ap_vld(data_out_ap_vld),
+    .start_r(start_r),
     .ap_return(ap_return));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
-assign ap_rst = dut_rst;
-assign ap_rst_n = ~dut_rst;
+assign ap_rst_n = dut_rst;
+assign ap_rst_n_n = ~dut_rst;
 assign AESL_reset = rst;
-assign ap_start = AESL_start;
+assign ap_start = AESL_slave_start | AESL_slave_start_lock;
 assign AESL_start = start;
-assign AESL_done = ap_done;
 assign AESL_idle = ap_idle;
 assign AESL_ready = ap_ready;
 assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
+  assign AESL_slave_write_start_in = slave_start_status  & control_write_data_finish;
+  assign AESL_slave_write_start_finish = AESL_slave_write_start_in;
+  assign AESL_slave_start = AESL_slave_write_start_finish;
+  assign AESL_slave_done =  1 ;
+  assign AESL_done = (ap_done_lock | ap_done) & AESL_slave_done & slave_done_status;
+  assign AESL_slave_output_done = ap_done;
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        AESL_slave_start_lock <= 0;
+    end
+    else begin
+        if (AESL_ready == 1) begin
+            AESL_slave_start_lock <= 0;
+        end
+        else if (AESL_slave_start == 1) begin
+            AESL_slave_start_lock <= 1;
+        end
+    end
+end
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        ap_done_lock <= 0;
+    end
+    else begin
+        if (AESL_done == 1) begin
+            ap_done_lock <= 0;
+        end
+        else if (ap_done == 1) begin
+            ap_done_lock <= 1;
+        end
+    end
+end
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        slave_start_status <= 1;
+    end
+    else begin
+        if (AESL_start == 1 ) begin
+            start_rise = 1;
+        end
+        if (start_rise == 1 && AESL_done == 1 ) begin
+            slave_start_status <= 1;
+        end
+        if (AESL_slave_write_start_in == 1 && AESL_done == 0) begin 
+            slave_start_status <= 0;
+            start_rise = 0;
+        end
+    end
+end
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        AESL_slave_ready <= 0;
+        ready_rise = 0;
+    end
+    else begin
+        if (AESL_ready == 1 ) begin
+            ready_rise = 1;
+        end
+        if (ready_rise == 1 && AESL_done_delay == 1 ) begin
+            AESL_slave_ready <= 1;
+        end
+        if (AESL_slave_ready == 1) begin 
+            AESL_slave_ready <= 0;
+            ready_rise = 0;
+        end
+    end
+end
+
+always @ (posedge AESL_clock)
+begin
+    if (AESL_done == 1) begin
+        slave_done_status <= 0;
+    end
+    else if (AESL_slave_done == 1 ) begin
+        slave_done_status <= 1;
+    end
+end
     always @(posedge AESL_clock) begin
-        if (AESL_reset) begin
+        if (AESL_reset === 0) begin
         end else begin
             if (AESL_done !== 1 && AESL_done !== 0) begin
                 $display("ERROR: Control signal AESL_done is invalid!");
@@ -129,7 +264,7 @@ assign AESL_continue = tb_continue;
         end
     end
     always @(posedge AESL_clock) begin
-        if (AESL_reset) begin
+        if (AESL_reset === 0) begin
         end else begin
             if (AESL_ready !== 1 && AESL_ready !== 0) begin
                 $display("ERROR: Control signal AESL_ready is invalid!");
@@ -137,112 +272,6 @@ assign AESL_continue = tb_continue;
             end
         end
     end
-// The signal of port w1
-reg [31: 0] AESL_REG_w1 = 0;
-assign w1 = AESL_REG_w1;
-initial begin : read_file_process_w1
-    integer fp;
-    integer err;
-    integer ret;
-    integer proc_rand;
-    reg [143  : 0] token;
-    integer i;
-    reg transaction_finish;
-    integer transaction_idx;
-    transaction_idx = 0;
-    wait(AESL_reset === 0);
-    fp = $fopen(`AUTOTB_TVIN_w1,"r");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_w1);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    if (token != "[[[runtime]]]") begin
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    while (token != "[[[/runtime]]]") begin
-        if (token != "[[transaction]]") begin
-            $display("ERROR: Simulation using HLS TB failed.");
-              $finish;
-        end
-        read_token(fp, token);  // skip transaction number
-          read_token(fp, token);
-            # 0.2;
-            while(ready_wire !== 1) begin
-                @(posedge AESL_clock);
-                # 0.2;
-            end
-        if(token != "[[/transaction]]") begin
-            ret = $sscanf(token, "0x%x", AESL_REG_w1);
-              if (ret != 1) begin
-                  $display("Failed to parse token!");
-                $display("ERROR: Simulation using HLS TB failed.");
-                  $finish;
-              end
-            @(posedge AESL_clock);
-              read_token(fp, token);
-        end
-          read_token(fp, token);
-    end
-    $fclose(fp);
-end
-
-
-// The signal of port w2
-reg [31: 0] AESL_REG_w2 = 0;
-assign w2 = AESL_REG_w2;
-initial begin : read_file_process_w2
-    integer fp;
-    integer err;
-    integer ret;
-    integer proc_rand;
-    reg [143  : 0] token;
-    integer i;
-    reg transaction_finish;
-    integer transaction_idx;
-    transaction_idx = 0;
-    wait(AESL_reset === 0);
-    fp = $fopen(`AUTOTB_TVIN_w2,"r");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_w2);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    if (token != "[[[runtime]]]") begin
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    while (token != "[[[/runtime]]]") begin
-        if (token != "[[transaction]]") begin
-            $display("ERROR: Simulation using HLS TB failed.");
-              $finish;
-        end
-        read_token(fp, token);  // skip transaction number
-          read_token(fp, token);
-            # 0.2;
-            while(ready_wire !== 1) begin
-                @(posedge AESL_clock);
-                # 0.2;
-            end
-        if(token != "[[/transaction]]") begin
-            ret = $sscanf(token, "0x%x", AESL_REG_w2);
-              if (ret != 1) begin
-                  $display("Failed to parse token!");
-                $display("ERROR: Simulation using HLS TB failed.");
-                  $finish;
-              end
-            @(posedge AESL_clock);
-              read_token(fp, token);
-        end
-          read_token(fp, token);
-    end
-    $fclose(fp);
-end
 
 
 //instantiate directIO port
@@ -291,6 +320,38 @@ assign      data_out_full_n    =   reg_fifodata_out_full_n;
 assign      data_out_ap_ack    =   data_out_full_n;
 
 
+// The signal of port start_r
+reg [0: 0] AESL_REG_start_r = 0;
+assign start_r = AESL_REG_start_r;
+
+AESL_axi_slave_control AESL_AXI_SLAVE_control(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_s_axi_control_AWADDR (control_AWADDR),
+    .TRAN_s_axi_control_AWVALID (control_AWVALID),
+    .TRAN_s_axi_control_AWREADY (control_AWREADY),
+    .TRAN_s_axi_control_WVALID (control_WVALID),
+    .TRAN_s_axi_control_WREADY (control_WREADY),
+    .TRAN_s_axi_control_WDATA (control_WDATA),
+    .TRAN_s_axi_control_WSTRB (control_WSTRB),
+    .TRAN_s_axi_control_ARADDR (control_ARADDR),
+    .TRAN_s_axi_control_ARVALID (control_ARVALID),
+    .TRAN_s_axi_control_ARREADY (control_ARREADY),
+    .TRAN_s_axi_control_RVALID (control_RVALID),
+    .TRAN_s_axi_control_RREADY (control_RREADY),
+    .TRAN_s_axi_control_RDATA (control_RDATA),
+    .TRAN_s_axi_control_RRESP (control_RRESP),
+    .TRAN_s_axi_control_BVALID (control_BVALID),
+    .TRAN_s_axi_control_BREADY (control_BREADY),
+    .TRAN_s_axi_control_BRESP (control_BRESP),
+    .TRAN_control_write_data_finish(control_write_data_finish),
+    .TRAN_control_ready_in (AESL_slave_ready),
+    .TRAN_control_done_in (AESL_slave_output_done),
+    .TRAN_control_idle_in (AESL_idle),
+    .TRAN_control_transaction_done_in (AESL_done_delay),
+    .TRAN_control_start_in  (AESL_slave_start)
+);
+
 initial begin : write_file_process_ap_return
     integer fp;
     integer fp_size;
@@ -300,10 +361,10 @@ initial begin : write_file_process_ap_return
     integer hls_stream_size;
     integer proc_rand;
     integer ap_return_count;
-    reg [143:0] token;
+    reg [191:0] token;
     integer transaction_idx;
     reg [8 * 5:1] str;
-    wait(AESL_reset === 0);
+    wait(AESL_reset === 1);
     fp = $fopen(`AUTOTB_TVOUT_ap_return_out_wrapc,"w");
     if(fp == 0) begin       // Failed to open file
         $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_ap_return_out_wrapc);
@@ -328,7 +389,7 @@ end
 
 initial begin : generate_AESL_ready_cnt_proc
     AESL_ready_cnt = 0;
-    wait(AESL_reset === 0);
+    wait(AESL_reset === 1);
     while(AESL_ready_cnt != AUTOTB_TRANSACTION_NUM) begin
         while(AESL_ready !== 1) begin
             @(posedge AESL_clock);
@@ -345,7 +406,7 @@ end
     
     initial begin : gen_ready_cnt
         ready_cnt = 0;
-        wait (AESL_reset === 0);
+        wait (AESL_reset === 1);
         forever begin
             @ (posedge AESL_clock);
             if (ready == 1) begin
@@ -361,7 +422,7 @@ end
     
     // done_cnt
     always @ (posedge AESL_clock) begin
-        if (AESL_reset) begin
+        if (~AESL_reset) begin
             done_cnt <= 0;
         end else begin
             if (AESL_done == 1) begin
@@ -400,25 +461,25 @@ reg [31:0] size_ap_return_backup;
 
 initial begin : initial_process
     integer proc_rand;
-    rst = 1;
+    rst = 0;
     # 100;
     repeat(0+3) @ (posedge AESL_clock);
     # 0.1;
-    rst = 0;
+    rst = 1;
 end
 initial begin : initial_process_for_dut_rst
     integer proc_rand;
-    dut_rst = 1;
+    dut_rst = 0;
     # 100;
     repeat(3) @ (posedge AESL_clock);
     # 0.1;
-    dut_rst = 0;
+    dut_rst = 1;
 end
 initial begin : start_process
     integer proc_rand;
     start = 0;
     ce = 1;
-    wait(AESL_reset === 0);
+    wait(AESL_reset === 1);
     @ (posedge AESL_clock);
     while (1) begin
         if (done_cnt < AUTOTB_TRANSACTION_NUM) begin
@@ -463,7 +524,7 @@ end
 assign ready = (ready_initial | AESL_done_delay);
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
       ready_delay_last_n = 0;
   else
       ready_delay_last_n <= ready_last_n;
@@ -479,7 +540,7 @@ end
 
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
   begin
       AESL_done_delay <= 0;
       AESL_done_delay2 <= 0;
@@ -491,7 +552,7 @@ begin
 end
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
       interface_done = 0;
   else begin
       # 0.01;
@@ -585,7 +646,7 @@ reg AESL_ready_p1;
 reg AESL_start_p1;
 
 always @ (posedge AESL_clock) begin
-    if (AESL_reset == 1) begin
+    if (AESL_reset == 0) begin
         clk_cnt <= 32'h0;
         AESL_ready_p1 <= 1'b0;
         AESL_start_p1 <= 1'b0;
@@ -616,7 +677,7 @@ initial begin
     start_cnt = 0;
     finish_cnt = 0;
     ap_ready_cnt = 0;
-    wait (AESL_reset == 0);
+    wait (AESL_reset == 1);
     wait_start();
     start_timestamp[start_cnt] = clk_cnt;
     start_cnt = start_cnt + 1;
@@ -653,7 +714,7 @@ reg [31:0] progress_timeout;
 
 initial begin : simulation_progress
     real intra_progress;
-    wait (AESL_reset == 0);
+    wait (AESL_reset == 1);
     progress_timeout = PROGRESS_TIMEOUT;
     $display("////////////////////////////////////////////////////////////////////////////////////");
     $display("// Inter-Transaction Progress: Completed Transaction / Total Transaction");
@@ -803,7 +864,7 @@ endtask
 ///////////////////////////////////////////////////////
 dataflow_monitor U_dataflow_monitor(
     .clock(AESL_clock),
-    .reset(rst),
+    .reset(~rst),
     .finish(all_finish));
 
 `include "fifo_para.vh"

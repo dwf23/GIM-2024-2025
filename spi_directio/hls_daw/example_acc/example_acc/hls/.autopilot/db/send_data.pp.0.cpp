@@ -31882,7 +31882,8 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );
 # 6 "../send_data.cpp" 2
 

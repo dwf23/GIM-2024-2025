@@ -7,10 +7,14 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/AESL_autofifo_data_out.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_autofifo_data_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_example_acc_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module example_acc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc_control_s_axi
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc_flow_control_loop_pipe.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module example_acc_flow_control_loop_pipe
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc_regslice_both.v" into library xil_defaultlib
@@ -24,10 +28,12 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.example_acc_control_s_axi
 Compiling module xil_defaultlib.example_acc_flow_control_loop_pi...
 Compiling module xil_defaultlib.example_acc_regslice_both(DataWi...
 Compiling module xil_defaultlib.example_acc
 Compiling module xil_defaultlib.AESL_autofifo_data_out
+Compiling module xil_defaultlib.AESL_axi_slave_control
 Compiling module xil_defaultlib.nodf_module_intf_default
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
 Compiling module xil_defaultlib.dataflow_monitor_1

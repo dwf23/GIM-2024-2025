@@ -1,0 +1,12 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc\example_acc.hlsrun_csim_summary, at 02/15/25 22:02:02
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc -config C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg -cmdlineconfig C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Feb 15 22:02:04 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace

@@ -27,8 +27,8 @@ localparam
 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 32;
-parameter ADDR_WIDTH = 32'd 4;
-parameter DEPTH = 32'd 8;
+parameter ADDR_WIDTH = 32'd 7;
+parameter DEPTH = 32'd 40;
 
 // Input and Output
 input clk;
@@ -74,7 +74,7 @@ endtask
 
 // Write operation for write-only fifo
 always @ (posedge clk) begin
-    if (reset === 1) begin
+    if (reset === 0) begin
 	    mInPtr = 0;
   end
   else if(if_write) begin

@@ -1,3 +1,4 @@
+example_acc_control_s_axi
 example_acc_regslice_both
 example_acc_flow_control_loop_pipe
 example_acc

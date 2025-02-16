@@ -1,8 +1,8 @@
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../example_acc.cpp, Line: 8, Column: 0 }
-Function:        _Z11example_acciiRN3hls8directioIiEE
+DebugLoc:        { File: ../example_acc.cpp, Line: 9, Column: 0 }
+Function:        _Z11example_acciiRN3hls8directioIiEEb
 Args:            
   - String:          'Aggregating '
   - HwTyName:        scalar

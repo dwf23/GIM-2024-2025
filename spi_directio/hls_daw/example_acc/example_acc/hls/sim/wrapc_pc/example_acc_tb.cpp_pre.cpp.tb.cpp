@@ -77939,7 +77939,8 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );
 # 5 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
 
@@ -77949,10 +77950,10 @@ int example_acc(
 #ifdef __cplusplus
 extern "C"
 #endif
-int apatb_example_acc_sw(int, int, hls::directio<int> &);
+int apatb_example_acc_sw(int, int, hls::directio<int> &, bool);
 #endif
 # 7 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
-int example_acc(int w1, int w2, miso &data_out);
+int example_acc(int w1, int w2, miso &data_out, bool start);
 
 
 #ifndef HLS_FASTSIM
@@ -77962,20 +77963,22 @@ int main()
     std::cout << "Starting Testbench" << "\n";
     int w1 = 10;
     int w2 = 0;
+    bool start = false;
     miso data_out;
 
 
 
 
     std::cout << "Beginning HLS Func" << "\n";
+    start = true;
     
 #ifndef HLS_FASTSIM
 #define example_acc apatb_example_acc_sw
 #endif
-# 20 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
-example_acc(w1,w2, data_out);
+# 22 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
+example_acc(w1,w2, data_out, start);
 #undef example_acc
-# 20 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
+# 22 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
 
 
 
@@ -77983,5 +77986,5 @@ example_acc(w1,w2, data_out);
    return 0;
 }
 #endif
-# 25 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
+# 27 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp"
 

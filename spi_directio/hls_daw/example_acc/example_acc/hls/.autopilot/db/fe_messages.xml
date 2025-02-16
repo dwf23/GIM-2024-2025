@@ -65,13 +65,25 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=example_acc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:12:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:13:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_hs port=data_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=start" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:20:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=50" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../example_acc.cpp:8:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../example_acc.cpp:9:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="32" HwTyName="scalar" Name="data_out"/>
     </msg>
 </xilinx:hls_fe_msgs>

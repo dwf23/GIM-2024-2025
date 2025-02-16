@@ -4,7 +4,7 @@
 #include "hls_directio.h"
 #include <iostream>
 
-#define NUM_RUNS 4
+#define NUM_RUNS 20
 #define BITS 32
 
 typedef hls::ap_hs<int> mosi;
@@ -27,5 +27,6 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );

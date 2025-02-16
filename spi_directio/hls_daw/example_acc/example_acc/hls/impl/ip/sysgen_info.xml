@@ -17,13 +17,8 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>w1</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>w2</name>
-        <type>Signed</type>
+        <name>start_r</name>
+        <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
   </CTypeInfo>
@@ -33,7 +28,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>13</latency>
-    <II>12</II>
+    <latency>61</latency>
+    <II>60</II>
   </modelParameters>
 </AdditionalInfo>

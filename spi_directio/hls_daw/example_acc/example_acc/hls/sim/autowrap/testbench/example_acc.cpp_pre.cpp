@@ -77912,6 +77912,7 @@ using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
                             0b01111111 ^ 0b00100000, false>;
 # 4 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
 
+
 # 1 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/GIM_comm.h" 1
 
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
@@ -77943,18 +77944,23 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );
-# 6 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
+# 7 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
 
 
-int example_acc(int w1, int w2, miso &data_out){
+int example_acc(int w1, int w2, miso &data_out, bool start){
 
     pkt example_pkt;
 
-#pragma HLS interface ap_hs port=data_out
+#pragma HLS INTERFACE ap_hs port=data_out
+#pragma HLS INTERFACE mode=s_axilite port=w1
+#pragma HLS INTERFACE mode=s_axilite port=w2
+#pragma HLS INTERFACE ap_none port=start
+#pragma HLS INTERFACE mode=ap_ctrl_hs port=return
 
-    for (int i = 0; i< 4; i++) {
+    for (int i = 0; i< 20; i++) {
 #pragma HLS PIPELINE II=50
         w1 +=1;
         w2 +=2;

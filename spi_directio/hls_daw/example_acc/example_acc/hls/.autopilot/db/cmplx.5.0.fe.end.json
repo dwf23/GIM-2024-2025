@@ -2,9 +2,9 @@
     "0": {
         "name": "example_acc",
         "file": "example_acc.cpp",
-        "fileloc": "8",
-        "instructions": "34",
-        "total_instructions": "34",
+        "fileloc": "9",
+        "instructions": "39",
+        "total_instructions": "39",
         "calls": "",
         "basicblocks": "3",
         "loads": {

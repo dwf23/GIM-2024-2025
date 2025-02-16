@@ -6,63 +6,104 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="example_acc_example_acc,hls_ip_2024_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sfvc784-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.181000,HLS_SYN_LAT=13,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=70,HLS_SYN_LUT=190,HLS_VERSION=2024_1}" *)
+(* CORE_GENERATION_INFO="example_acc_example_acc,hls_ip_2024_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sfvc784-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.181000,HLS_SYN_LAT=61,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=179,HLS_SYN_LUT=364,HLS_VERSION=2024_1}" *)
 
 module example_acc (
         ap_clk,
-        ap_rst,
+        ap_rst_n,
         ap_start,
         ap_done,
         ap_idle,
         ap_ready,
         data_out_ap_ack,
-        w1,
-        w2,
         data_out,
         data_out_ap_vld,
-        ap_return
+        start_r,
+        ap_return,
+        s_axi_control_AWVALID,
+        s_axi_control_AWREADY,
+        s_axi_control_AWADDR,
+        s_axi_control_WVALID,
+        s_axi_control_WREADY,
+        s_axi_control_WDATA,
+        s_axi_control_WSTRB,
+        s_axi_control_ARVALID,
+        s_axi_control_ARREADY,
+        s_axi_control_ARADDR,
+        s_axi_control_RVALID,
+        s_axi_control_RREADY,
+        s_axi_control_RDATA,
+        s_axi_control_RRESP,
+        s_axi_control_BVALID,
+        s_axi_control_BREADY,
+        s_axi_control_BRESP
 );
 
 parameter    ap_ST_fsm_state1 = 3'd1;
 parameter    ap_ST_fsm_state2 = 3'd2;
 parameter    ap_ST_fsm_state3 = 3'd4;
+parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
+parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 5;
+parameter    C_S_AXI_DATA_WIDTH = 32;
+
+parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
-input   ap_rst;
+input   ap_rst_n;
 input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input   data_out_ap_ack;
-input  [31:0] w1;
-input  [31:0] w2;
 output  [31:0] data_out;
 output   data_out_ap_vld;
+input  [0:0] start_r;
 output  [31:0] ap_return;
+input   s_axi_control_AWVALID;
+output   s_axi_control_AWREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
+input   s_axi_control_WVALID;
+output   s_axi_control_WREADY;
+input  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_WDATA;
+input  [C_S_AXI_CONTROL_WSTRB_WIDTH - 1:0] s_axi_control_WSTRB;
+input   s_axi_control_ARVALID;
+output   s_axi_control_ARREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_ARADDR;
+output   s_axi_control_RVALID;
+input   s_axi_control_RREADY;
+output  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_RDATA;
+output  [1:0] s_axi_control_RRESP;
+output   s_axi_control_BVALID;
+input   s_axi_control_BREADY;
+output  [1:0] s_axi_control_BRESP;
 
 reg ap_idle;
 
+ reg    ap_rst_n_inv;
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 wire    ap_CS_fsm_state3;
 wire    regslice_both_data_out_U_apdone_blk;
 reg    ap_block_state3_pp0_stage2_iter0;
-wire   [0:0] icmp_ln14_fu_135_p2;
+wire   [0:0] icmp_ln19_fu_151_p2;
 reg    ap_condition_exit_pp0_iter0_stage2;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
+wire   [31:0] w1;
+wire   [31:0] w2;
 reg    data_out_blk_n;
 wire    ap_CS_fsm_state2;
-wire   [31:0] example_pkt_data_fu_99_p2;
+wire   [31:0] example_pkt_data_fu_115_p2;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [31:0] example_pkt_data_1_fu_114_p2;
+wire   [31:0] example_pkt_data_1_fu_130_p2;
 reg    ap_block_state2_pp0_stage1_iter0;
-reg   [31:0] w1_assign1_fu_50;
+reg   [31:0] w1_assign1_fu_66;
 wire    ap_loop_init;
 reg   [31:0] ap_sig_allocacmp_w1_assign1_load;
-reg   [31:0] w2_assign2_fu_54;
-reg   [1:0] i3_fu_58;
-wire   [1:0] i_fu_129_p2;
+reg   [31:0] w2_assign2_fu_70;
+reg   [4:0] i3_fu_74;
+wire   [4:0] i_fu_145_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -77,21 +118,49 @@ reg   [31:0] data_out_int_regslice;
 reg    data_out_ap_vld_int_regslice;
 wire    data_out_ap_ack_int_regslice;
 wire    regslice_both_data_out_U_vld_out;
-reg    ap_condition_158;
+reg    ap_condition_196;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 3'd1;
-#0 w1_assign1_fu_50 = 32'd0;
-#0 w2_assign2_fu_54 = 32'd0;
-#0 i3_fu_58 = 2'd0;
+#0 w1_assign1_fu_66 = 32'd0;
+#0 w2_assign2_fu_70 = 32'd0;
+#0 i3_fu_74 = 5'd0;
 #0 ap_done_reg = 1'b0;
 end
 
+example_acc_control_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_DATA_WIDTH ))
+control_s_axi_U(
+    .AWVALID(s_axi_control_AWVALID),
+    .AWREADY(s_axi_control_AWREADY),
+    .AWADDR(s_axi_control_AWADDR),
+    .WVALID(s_axi_control_WVALID),
+    .WREADY(s_axi_control_WREADY),
+    .WDATA(s_axi_control_WDATA),
+    .WSTRB(s_axi_control_WSTRB),
+    .ARVALID(s_axi_control_ARVALID),
+    .ARREADY(s_axi_control_ARREADY),
+    .ARADDR(s_axi_control_ARADDR),
+    .RVALID(s_axi_control_RVALID),
+    .RREADY(s_axi_control_RREADY),
+    .RDATA(s_axi_control_RDATA),
+    .RRESP(s_axi_control_RRESP),
+    .BVALID(s_axi_control_BVALID),
+    .BREADY(s_axi_control_BREADY),
+    .BRESP(s_axi_control_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .w1(w1),
+    .w2(w2)
+);
+
 example_acc_flow_control_loop_pipe flow_control_loop_pipe_U(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_rst(ap_rst_n_inv),
     .ap_start(ap_start),
     .ap_ready(ap_ready_sig),
     .ap_done(ap_done_sig),
@@ -109,7 +178,7 @@ example_acc_regslice_both #(
     .DataWidth( 32 ))
 regslice_both_data_out_U(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
+    .ap_rst(ap_rst_n_inv),
     .data_in(data_out_int_regslice),
     .vld_in(data_out_ap_vld_int_regslice),
     .ack_in(data_out_ap_ack_int_regslice),
@@ -120,7 +189,7 @@ regslice_both_data_out_U(
 );
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+    if (ap_rst_n_inv == 1'b1) begin
         ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
         ap_CS_fsm <= ap_NS_fsm;
@@ -128,7 +197,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
+    if (ap_rst_n_inv == 1'b1) begin
         ap_done_reg <= 1'b0;
     end else begin
         if ((ap_continue_int == 1'b1)) begin
@@ -140,24 +209,24 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i3_fu_58 <= 2'd0;
+    if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
+        i3_fu_74 <= 5'd0;
     end else if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
-        i3_fu_58 <= i_fu_129_p2;
+        i3_fu_74 <= i_fu_145_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_158)) begin
-        w1_assign1_fu_50 <= example_pkt_data_fu_99_p2;
+    if ((1'b1 == ap_condition_196)) begin
+        w1_assign1_fu_66 <= example_pkt_data_fu_115_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-    w2_assign2_fu_54 <= w2;
+if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
+    w2_assign2_fu_70 <= w2;
 end else if ((~((1'b1 == ap_block_state2_pp0_stage1_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state2))) begin
-    w2_assign2_fu_54 <= example_pkt_data_1_fu_114_p2;
+    w2_assign2_fu_70 <= example_pkt_data_1_fu_130_p2;
 end
 end
 
@@ -186,7 +255,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (icmp_ln14_fu_135_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (icmp_ln19_fu_151_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_condition_exit_pp0_iter0_stage2 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage2 = 1'b0;
@@ -218,10 +287,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
         ap_sig_allocacmp_w1_assign1_load = w1;
     end else begin
-        ap_sig_allocacmp_w1_assign1_load = w1_assign1_fu_50;
+        ap_sig_allocacmp_w1_assign1_load = w1_assign1_fu_66;
     end
 end
 
@@ -242,10 +311,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state2_pp0_stage1_iter0) & (1'b1 == ap_CS_fsm_state2))) begin
-        data_out_int_regslice = example_pkt_data_1_fu_114_p2;
-    end else if (((1'b0 == ap_block_state1_pp0_stage0_iter0) & (1'b1 == ap_CS_fsm_state1))) begin
-        data_out_int_regslice = example_pkt_data_fu_99_p2;
+    if (((1'b1 == ap_CS_fsm_state2) & (1'b0 == ap_block_state2_pp0_stage1_iter0))) begin
+        data_out_int_regslice = example_pkt_data_1_fu_130_p2;
+    end else if (((1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1_pp0_stage0_iter0))) begin
+        data_out_int_regslice = example_pkt_data_fu_115_p2;
     end else begin
         data_out_int_regslice = 'bx;
     end
@@ -299,7 +368,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_condition_158 = (~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1));
+    ap_condition_196 = (~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1));
 end
 
 assign ap_done = ap_done_sig;
@@ -310,14 +379,18 @@ assign ap_ready = ap_ready_sig;
 
 assign ap_return = 32'd0;
 
+always @ (*) begin
+    ap_rst_n_inv = ~ap_rst_n;
+end
+
 assign data_out_ap_vld = regslice_both_data_out_U_vld_out;
 
-assign example_pkt_data_1_fu_114_p2 = (w2_assign2_fu_54 + 32'd2);
+assign example_pkt_data_1_fu_130_p2 = (w2_assign2_fu_70 + 32'd2);
 
-assign example_pkt_data_fu_99_p2 = (ap_sig_allocacmp_w1_assign1_load + 32'd1);
+assign example_pkt_data_fu_115_p2 = (ap_sig_allocacmp_w1_assign1_load + 32'd1);
 
-assign i_fu_129_p2 = (i3_fu_58 + 2'd1);
+assign i_fu_145_p2 = (i3_fu_74 + 5'd1);
 
-assign icmp_ln14_fu_135_p2 = ((i3_fu_58 == 2'd3) ? 1'b1 : 1'b0);
+assign icmp_ln19_fu_151_p2 = ((i3_fu_74 == 5'd19) ? 1'b1 : 1'b0);
 
 endmodule //example_acc

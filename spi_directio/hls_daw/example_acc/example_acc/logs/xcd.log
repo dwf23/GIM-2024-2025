@@ -1037,3 +1037,928 @@
 02/15/25 22:04:31: SERVER: destructor for server bound to port 49697
 02/15/25 22:04:31: Server exiting with status 0.
 02/15/25 22:04:31: Closing log file.
+02/15/25 22:40:59: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:40:59: Server was asked to start on port: '50721'
+02/15/25 22:40:59: Server is using token UUID: 'ac390afd-152a-4713-9697-613fd840e8ec'
+02/15/25 22:40:59: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:40:59: Attempting to start server on port '50721'
+02/15/25 22:40:59: Running Dispatch Server
+02/15/25 22:40:59: Version 2.2.0
+02/15/25 22:41:00: Dispatch Server: Accepted socket connection from client
+02/15/25 22:41:00: Starting Socket connection
+02/15/25 22:41:00: EXCHANGE_TOKEN received, server token: ac390afd-152a-4713-9697-613fd840e8ec, passed token: ac390afd-152a-4713-9697-613fd840e8ec
+02/15/25 22:41:00: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:41:00: SESSION_MGR: creating session with session uuid: 'e0194ff1-66bc-453c-a672-b8223f94a452' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:00: KERNEL_SVC: creating session with uuid: 'e0194ff1-66bc-453c-a672-b8223f94a452' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:00: GUIDANCE_SMGR: creating guidance session with uuid: 'e0194ff1-66bc-453c-a672-b8223f94a452' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:07: Dispatch Server: Accepted socket connection from client
+02/15/25 22:41:07: Starting Socket connection
+02/15/25 22:41:11: SESSION_MGR: closing session for UUID 'e0194ff1-66bc-453c-a672-b8223f94a452' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:11: KERNEL_SVC: closing session for UUID 'e0194ff1-66bc-453c-a672-b8223f94a452' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:11: GUIDANCE_SMGR: closing session for UUID 'e0194ff1-66bc-453c-a672-b8223f94a452' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:11: STOP_SERVER received, server token: ac390afd-152a-4713-9697-613fd840e8ec, passed token: ac390afd-152a-4713-9697-613fd840e8ec
+02/15/25 22:41:11: Socket received request to stop server.
+02/15/25 22:41:11: Dispatch Server: do_await_stop
+02/15/25 22:41:11: SERVER: destructor for server bound to port 50721
+02/15/25 22:41:11: Server exiting with status 0.
+02/15/25 22:41:11: Closing log file.
+02/15/25 22:41:33: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:41:33: Server was asked to start on port: '50742'
+02/15/25 22:41:33: Server is using token UUID: '3af400a7-29bf-4dc0-bd9b-df3c18b91e00'
+02/15/25 22:41:33: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:41:33: Attempting to start server on port '50742'
+02/15/25 22:41:33: Running Dispatch Server
+02/15/25 22:41:33: Version 2.2.0
+02/15/25 22:41:35: Dispatch Server: Accepted socket connection from client
+02/15/25 22:41:35: Starting Socket connection
+02/15/25 22:41:35: EXCHANGE_TOKEN received, server token: 3af400a7-29bf-4dc0-bd9b-df3c18b91e00, passed token: 3af400a7-29bf-4dc0-bd9b-df3c18b91e00
+02/15/25 22:41:35: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:41:35: SESSION_MGR: creating session with session uuid: 'f683e816-ce43-4cf3-82a1-25892d12a09f' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:35: KERNEL_SVC: creating session with uuid: 'f683e816-ce43-4cf3-82a1-25892d12a09f' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:35: GUIDANCE_SMGR: creating guidance session with uuid: 'f683e816-ce43-4cf3-82a1-25892d12a09f' and name 'vitis-run_compile_example_acc'
+02/15/25 22:41:41: Dispatch Server: Accepted socket connection from client
+02/15/25 22:41:41: Starting Socket connection
+02/15/25 22:41:50: SESSION_MGR: closing session for UUID 'f683e816-ce43-4cf3-82a1-25892d12a09f' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:50: KERNEL_SVC: closing session for UUID 'f683e816-ce43-4cf3-82a1-25892d12a09f' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:50: GUIDANCE_SMGR: closing session for UUID 'f683e816-ce43-4cf3-82a1-25892d12a09f' with name 'vitis-run_compile_example_acc'
+02/15/25 22:41:50: STOP_SERVER received, server token: 3af400a7-29bf-4dc0-bd9b-df3c18b91e00, passed token: 3af400a7-29bf-4dc0-bd9b-df3c18b91e00
+02/15/25 22:41:50: Socket received request to stop server.
+02/15/25 22:41:50: Dispatch Server: do_await_stop
+02/15/25 22:41:50: SERVER: destructor for server bound to port 50742
+02/15/25 22:41:50: Server exiting with status 0.
+02/15/25 22:41:50: Closing log file.
+02/15/25 22:41:57: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:41:57: Server was asked to start on port: '50749'
+02/15/25 22:41:57: Server is using token UUID: 'f80c8f23-b975-4731-a677-a54422259a28'
+02/15/25 22:41:57: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:41:57: Attempting to start server on port '50749'
+02/15/25 22:41:57: Running Dispatch Server
+02/15/25 22:41:57: Version 2.2.0
+02/15/25 22:41:59: Dispatch Server: Accepted socket connection from client
+02/15/25 22:41:59: Starting Socket connection
+02/15/25 22:41:59: EXCHANGE_TOKEN received, server token: f80c8f23-b975-4731-a677-a54422259a28, passed token: f80c8f23-b975-4731-a677-a54422259a28
+02/15/25 22:41:59: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:41:59: SESSION_MGR: creating session with session uuid: 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' and name 'v++_compile_example_acc'
+02/15/25 22:41:59: KERNEL_SVC: creating session with uuid: 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' and name 'v++_compile_example_acc'
+02/15/25 22:41:59: GUIDANCE_SMGR: creating guidance session with uuid: 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' and name 'v++_compile_example_acc'
+02/15/25 22:42:05: Dispatch Server: Accepted socket connection from client
+02/15/25 22:42:05: Starting Socket connection
+02/15/25 22:42:33: SESSION_MGR: closing session for UUID 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' with name 'v++_compile_example_acc'
+02/15/25 22:42:33: KERNEL_SVC: closing session for UUID 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' with name 'v++_compile_example_acc'
+02/15/25 22:42:33: GUIDANCE_SMGR: closing session for UUID 'a6ed2a99-89fb-41fe-ad7c-2be4da661d9d' with name 'v++_compile_example_acc'
+02/15/25 22:42:33: STOP_SERVER received, server token: f80c8f23-b975-4731-a677-a54422259a28, passed token: f80c8f23-b975-4731-a677-a54422259a28
+02/15/25 22:42:33: Socket received request to stop server.
+02/15/25 22:42:33: Dispatch Server: do_await_stop
+02/15/25 22:42:33: SERVER: destructor for server bound to port 50749
+02/15/25 22:42:33: Server exiting with status 0.
+02/15/25 22:42:33: Closing log file.
+02/15/25 22:45:36: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:45:36: Server was asked to start on port: '50810'
+02/15/25 22:45:36: Server is using token UUID: '47ecdc6e-c27c-44ed-8cf4-22041aa20da7'
+02/15/25 22:45:36: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:45:36: Attempting to start server on port '50810'
+02/15/25 22:45:36: Running Dispatch Server
+02/15/25 22:45:36: Version 2.2.0
+02/15/25 22:45:38: Dispatch Server: Accepted socket connection from client
+02/15/25 22:45:38: Starting Socket connection
+02/15/25 22:45:38: EXCHANGE_TOKEN received, server token: 47ecdc6e-c27c-44ed-8cf4-22041aa20da7, passed token: 47ecdc6e-c27c-44ed-8cf4-22041aa20da7
+02/15/25 22:45:38: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:45:38: SESSION_MGR: creating session with session uuid: 'b2dacf65-127f-4357-9922-ea48d3e4fc73' and name 'vitis-run_compile_example_acc'
+02/15/25 22:45:38: KERNEL_SVC: creating session with uuid: 'b2dacf65-127f-4357-9922-ea48d3e4fc73' and name 'vitis-run_compile_example_acc'
+02/15/25 22:45:38: GUIDANCE_SMGR: creating guidance session with uuid: 'b2dacf65-127f-4357-9922-ea48d3e4fc73' and name 'vitis-run_compile_example_acc'
+02/15/25 22:45:45: Dispatch Server: Accepted socket connection from client
+02/15/25 22:45:45: Starting Socket connection
+02/15/25 22:46:22: SESSION_MGR: closing session for UUID 'b2dacf65-127f-4357-9922-ea48d3e4fc73' with name 'vitis-run_compile_example_acc'
+02/15/25 22:46:22: KERNEL_SVC: closing session for UUID 'b2dacf65-127f-4357-9922-ea48d3e4fc73' with name 'vitis-run_compile_example_acc'
+02/15/25 22:46:22: GUIDANCE_SMGR: closing session for UUID 'b2dacf65-127f-4357-9922-ea48d3e4fc73' with name 'vitis-run_compile_example_acc'
+02/15/25 22:46:22: STOP_SERVER received, server token: 47ecdc6e-c27c-44ed-8cf4-22041aa20da7, passed token: 47ecdc6e-c27c-44ed-8cf4-22041aa20da7
+02/15/25 22:46:22: Socket received request to stop server.
+02/15/25 22:46:22: Dispatch Server: do_await_stop
+02/15/25 22:46:22: SERVER: destructor for server bound to port 50810
+02/15/25 22:46:22: Server exiting with status 0.
+02/15/25 22:46:22: Closing log file.
+02/15/25 22:47:54: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:47:54: Server was asked to start on port: '50966'
+02/15/25 22:47:54: Server is using token UUID: '4643c778-df12-4ed8-a134-f4aa42aca4a1'
+02/15/25 22:47:54: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:47:54: Attempting to start server on port '50966'
+02/15/25 22:47:54: Running Dispatch Server
+02/15/25 22:47:54: Version 2.2.0
+02/15/25 22:47:55: Dispatch Server: Accepted socket connection from client
+02/15/25 22:47:55: Starting Socket connection
+02/15/25 22:47:55: EXCHANGE_TOKEN received, server token: 4643c778-df12-4ed8-a134-f4aa42aca4a1, passed token: 4643c778-df12-4ed8-a134-f4aa42aca4a1
+02/15/25 22:47:55: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:47:55: SESSION_MGR: creating session with session uuid: '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' and name 'vitis-run_compile_example_acc'
+02/15/25 22:47:55: KERNEL_SVC: creating session with uuid: '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' and name 'vitis-run_compile_example_acc'
+02/15/25 22:47:55: GUIDANCE_SMGR: creating guidance session with uuid: '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' and name 'vitis-run_compile_example_acc'
+02/15/25 22:48:02: Dispatch Server: Accepted socket connection from client
+02/15/25 22:48:02: Starting Socket connection
+02/15/25 22:48:22: SESSION_MGR: closing session for UUID '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' with name 'vitis-run_compile_example_acc'
+02/15/25 22:48:22: KERNEL_SVC: closing session for UUID '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' with name 'vitis-run_compile_example_acc'
+02/15/25 22:48:22: GUIDANCE_SMGR: closing session for UUID '2b1fbc63-2a99-4473-8efe-4ac5dd7dda89' with name 'vitis-run_compile_example_acc'
+02/15/25 22:48:22: STOP_SERVER received, server token: 4643c778-df12-4ed8-a134-f4aa42aca4a1, passed token: 4643c778-df12-4ed8-a134-f4aa42aca4a1
+02/15/25 22:48:22: Socket received request to stop server.
+02/15/25 22:48:22: Dispatch Server: do_await_stop
+02/15/25 22:48:22: SERVER: destructor for server bound to port 50966
+02/15/25 22:48:22: Server exiting with status 0.
+02/15/25 22:48:22: Closing log file.
+02/15/25 22:51:44: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:51:44: Server was asked to start on port: '51029'
+02/15/25 22:51:44: Server is using token UUID: '8f8df328-df53-401b-9b17-955cd74f9155'
+02/15/25 22:51:44: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:51:44: Attempting to start server on port '51029'
+02/15/25 22:51:44: Running Dispatch Server
+02/15/25 22:51:44: Version 2.2.0
+02/15/25 22:51:45: Dispatch Server: Accepted socket connection from client
+02/15/25 22:51:45: Starting Socket connection
+02/15/25 22:51:45: EXCHANGE_TOKEN received, server token: 8f8df328-df53-401b-9b17-955cd74f9155, passed token: 8f8df328-df53-401b-9b17-955cd74f9155
+02/15/25 22:51:45: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:51:45: SESSION_MGR: creating session with session uuid: '07f77596-9f7a-4f7f-af8e-14615d8f3c95' and name 'v++_compile_example_acc'
+02/15/25 22:51:45: KERNEL_SVC: creating session with uuid: '07f77596-9f7a-4f7f-af8e-14615d8f3c95' and name 'v++_compile_example_acc'
+02/15/25 22:51:45: GUIDANCE_SMGR: creating guidance session with uuid: '07f77596-9f7a-4f7f-af8e-14615d8f3c95' and name 'v++_compile_example_acc'
+02/15/25 22:51:52: Dispatch Server: Accepted socket connection from client
+02/15/25 22:51:52: Starting Socket connection
+02/15/25 22:52:19: SESSION_MGR: closing session for UUID '07f77596-9f7a-4f7f-af8e-14615d8f3c95' with name 'v++_compile_example_acc'
+02/15/25 22:52:19: KERNEL_SVC: closing session for UUID '07f77596-9f7a-4f7f-af8e-14615d8f3c95' with name 'v++_compile_example_acc'
+02/15/25 22:52:19: GUIDANCE_SMGR: closing session for UUID '07f77596-9f7a-4f7f-af8e-14615d8f3c95' with name 'v++_compile_example_acc'
+02/15/25 22:52:19: STOP_SERVER received, server token: 8f8df328-df53-401b-9b17-955cd74f9155, passed token: 8f8df328-df53-401b-9b17-955cd74f9155
+02/15/25 22:52:19: Socket received request to stop server.
+02/15/25 22:52:19: Dispatch Server: do_await_stop
+02/15/25 22:52:19: SERVER: destructor for server bound to port 51029
+02/15/25 22:52:19: Server exiting with status 0.
+02/15/25 22:52:19: Closing log file.
+02/15/25 22:53:13: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:53:13: Server was asked to start on port: '51047'
+02/15/25 22:53:13: Server is using token UUID: '0ca06c25-3771-41a9-a565-8f2df60deb9c'
+02/15/25 22:53:13: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:53:13: Attempting to start server on port '51047'
+02/15/25 22:53:13: Running Dispatch Server
+02/15/25 22:53:13: Version 2.2.0
+02/15/25 22:53:15: Dispatch Server: Accepted socket connection from client
+02/15/25 22:53:15: Starting Socket connection
+02/15/25 22:53:15: EXCHANGE_TOKEN received, server token: 0ca06c25-3771-41a9-a565-8f2df60deb9c, passed token: 0ca06c25-3771-41a9-a565-8f2df60deb9c
+02/15/25 22:53:15: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:53:15: SESSION_MGR: creating session with session uuid: 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' and name 'v++_compile_example_acc'
+02/15/25 22:53:15: KERNEL_SVC: creating session with uuid: 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' and name 'v++_compile_example_acc'
+02/15/25 22:53:15: GUIDANCE_SMGR: creating guidance session with uuid: 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' and name 'v++_compile_example_acc'
+02/15/25 22:53:21: Dispatch Server: Accepted socket connection from client
+02/15/25 22:53:21: Starting Socket connection
+02/15/25 22:53:48: SESSION_MGR: closing session for UUID 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' with name 'v++_compile_example_acc'
+02/15/25 22:53:48: KERNEL_SVC: closing session for UUID 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' with name 'v++_compile_example_acc'
+02/15/25 22:53:48: GUIDANCE_SMGR: closing session for UUID 'ebcfcb4e-b961-45b2-ab45-636b0d3cb83e' with name 'v++_compile_example_acc'
+02/15/25 22:53:48: STOP_SERVER received, server token: 0ca06c25-3771-41a9-a565-8f2df60deb9c, passed token: 0ca06c25-3771-41a9-a565-8f2df60deb9c
+02/15/25 22:53:48: Socket received request to stop server.
+02/15/25 22:53:48: Dispatch Server: do_await_stop
+02/15/25 22:53:48: SERVER: destructor for server bound to port 51047
+02/15/25 22:53:48: Server exiting with status 0.
+02/15/25 22:53:48: Closing log file.
+02/15/25 22:54:30: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:54:30: Server was asked to start on port: '51073'
+02/15/25 22:54:30: Server is using token UUID: '4169071c-eeb6-421e-844c-0c4bb2941210'
+02/15/25 22:54:30: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:54:30: Attempting to start server on port '51073'
+02/15/25 22:54:30: Running Dispatch Server
+02/15/25 22:54:30: Version 2.2.0
+02/15/25 22:54:32: Dispatch Server: Accepted socket connection from client
+02/15/25 22:54:32: Starting Socket connection
+02/15/25 22:54:32: EXCHANGE_TOKEN received, server token: 4169071c-eeb6-421e-844c-0c4bb2941210, passed token: 4169071c-eeb6-421e-844c-0c4bb2941210
+02/15/25 22:54:32: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:54:32: SESSION_MGR: creating session with session uuid: '83aa8f10-4dc4-4649-822c-43daf0bfc78c' and name 'v++_compile_example_acc'
+02/15/25 22:54:32: KERNEL_SVC: creating session with uuid: '83aa8f10-4dc4-4649-822c-43daf0bfc78c' and name 'v++_compile_example_acc'
+02/15/25 22:54:32: GUIDANCE_SMGR: creating guidance session with uuid: '83aa8f10-4dc4-4649-822c-43daf0bfc78c' and name 'v++_compile_example_acc'
+02/15/25 22:54:38: Dispatch Server: Accepted socket connection from client
+02/15/25 22:54:38: Starting Socket connection
+02/15/25 22:55:03: SESSION_MGR: closing session for UUID '83aa8f10-4dc4-4649-822c-43daf0bfc78c' with name 'v++_compile_example_acc'
+02/15/25 22:55:03: KERNEL_SVC: closing session for UUID '83aa8f10-4dc4-4649-822c-43daf0bfc78c' with name 'v++_compile_example_acc'
+02/15/25 22:55:03: GUIDANCE_SMGR: closing session for UUID '83aa8f10-4dc4-4649-822c-43daf0bfc78c' with name 'v++_compile_example_acc'
+02/15/25 22:55:03: STOP_SERVER received, server token: 4169071c-eeb6-421e-844c-0c4bb2941210, passed token: 4169071c-eeb6-421e-844c-0c4bb2941210
+02/15/25 22:55:03: Socket received request to stop server.
+02/15/25 22:55:03: Dispatch Server: do_await_stop
+02/15/25 22:55:03: SERVER: destructor for server bound to port 51073
+02/15/25 22:55:03: Server exiting with status 0.
+02/15/25 22:55:03: Closing log file.
+02/15/25 22:55:55: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:55:55: Server was asked to start on port: '51090'
+02/15/25 22:55:55: Server is using token UUID: '7579e158-9515-4c65-9faf-7eaf6f05e309'
+02/15/25 22:55:55: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:55:55: Attempting to start server on port '51090'
+02/15/25 22:55:55: Running Dispatch Server
+02/15/25 22:55:55: Version 2.2.0
+02/15/25 22:55:57: Dispatch Server: Accepted socket connection from client
+02/15/25 22:55:57: Starting Socket connection
+02/15/25 22:55:57: EXCHANGE_TOKEN received, server token: 7579e158-9515-4c65-9faf-7eaf6f05e309, passed token: 7579e158-9515-4c65-9faf-7eaf6f05e309
+02/15/25 22:55:57: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:55:57: SESSION_MGR: creating session with session uuid: '24d9d6f2-71c2-463f-b412-a5fd68e61c18' and name 'v++_compile_example_acc'
+02/15/25 22:55:57: KERNEL_SVC: creating session with uuid: '24d9d6f2-71c2-463f-b412-a5fd68e61c18' and name 'v++_compile_example_acc'
+02/15/25 22:55:57: GUIDANCE_SMGR: creating guidance session with uuid: '24d9d6f2-71c2-463f-b412-a5fd68e61c18' and name 'v++_compile_example_acc'
+02/15/25 22:56:03: Dispatch Server: Accepted socket connection from client
+02/15/25 22:56:03: Starting Socket connection
+02/15/25 22:56:30: SESSION_MGR: closing session for UUID '24d9d6f2-71c2-463f-b412-a5fd68e61c18' with name 'v++_compile_example_acc'
+02/15/25 22:56:30: KERNEL_SVC: closing session for UUID '24d9d6f2-71c2-463f-b412-a5fd68e61c18' with name 'v++_compile_example_acc'
+02/15/25 22:56:30: GUIDANCE_SMGR: closing session for UUID '24d9d6f2-71c2-463f-b412-a5fd68e61c18' with name 'v++_compile_example_acc'
+02/15/25 22:56:30: STOP_SERVER received, server token: 7579e158-9515-4c65-9faf-7eaf6f05e309, passed token: 7579e158-9515-4c65-9faf-7eaf6f05e309
+02/15/25 22:56:30: Socket received request to stop server.
+02/15/25 22:56:30: Dispatch Server: do_await_stop
+02/15/25 22:56:30: SERVER: destructor for server bound to port 51090
+02/15/25 22:56:30: Server exiting with status 0.
+02/15/25 22:56:30: Closing log file.
+02/15/25 22:57:01: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 22:57:01: Server was asked to start on port: '51107'
+02/15/25 22:57:01: Server is using token UUID: '7100ea54-1f66-40ee-8b10-3a72be9e5785'
+02/15/25 22:57:01: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 22:57:01: Attempting to start server on port '51107'
+02/15/25 22:57:01: Running Dispatch Server
+02/15/25 22:57:01: Version 2.2.0
+02/15/25 22:57:03: Dispatch Server: Accepted socket connection from client
+02/15/25 22:57:03: Starting Socket connection
+02/15/25 22:57:03: EXCHANGE_TOKEN received, server token: 7100ea54-1f66-40ee-8b10-3a72be9e5785, passed token: 7100ea54-1f66-40ee-8b10-3a72be9e5785
+02/15/25 22:57:03: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 22:57:03: SESSION_MGR: creating session with session uuid: 'c5536083-5402-4c3d-a2ef-e7659f0e2903' and name 'v++_compile_example_acc'
+02/15/25 22:57:03: KERNEL_SVC: creating session with uuid: 'c5536083-5402-4c3d-a2ef-e7659f0e2903' and name 'v++_compile_example_acc'
+02/15/25 22:57:03: GUIDANCE_SMGR: creating guidance session with uuid: 'c5536083-5402-4c3d-a2ef-e7659f0e2903' and name 'v++_compile_example_acc'
+02/15/25 22:57:09: Dispatch Server: Accepted socket connection from client
+02/15/25 22:57:09: Starting Socket connection
+02/15/25 22:57:34: SESSION_MGR: closing session for UUID 'c5536083-5402-4c3d-a2ef-e7659f0e2903' with name 'v++_compile_example_acc'
+02/15/25 22:57:34: KERNEL_SVC: closing session for UUID 'c5536083-5402-4c3d-a2ef-e7659f0e2903' with name 'v++_compile_example_acc'
+02/15/25 22:57:34: GUIDANCE_SMGR: closing session for UUID 'c5536083-5402-4c3d-a2ef-e7659f0e2903' with name 'v++_compile_example_acc'
+02/15/25 22:57:34: STOP_SERVER received, server token: 7100ea54-1f66-40ee-8b10-3a72be9e5785, passed token: 7100ea54-1f66-40ee-8b10-3a72be9e5785
+02/15/25 22:57:34: Socket received request to stop server.
+02/15/25 22:57:34: Dispatch Server: do_await_stop
+02/15/25 22:57:34: SERVER: destructor for server bound to port 51107
+02/15/25 22:57:34: Server exiting with status 0.
+02/15/25 22:57:34: Closing log file.
+02/15/25 23:05:01: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:05:01: Server was asked to start on port: '51251'
+02/15/25 23:05:01: Server is using token UUID: 'a58d003e-d2f9-48a9-be5e-4e9ac299dd9d'
+02/15/25 23:05:01: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:05:01: Attempting to start server on port '51251'
+02/15/25 23:05:01: Running Dispatch Server
+02/15/25 23:05:01: Version 2.2.0
+02/15/25 23:05:03: Dispatch Server: Accepted socket connection from client
+02/15/25 23:05:03: Starting Socket connection
+02/15/25 23:05:03: EXCHANGE_TOKEN received, server token: a58d003e-d2f9-48a9-be5e-4e9ac299dd9d, passed token: a58d003e-d2f9-48a9-be5e-4e9ac299dd9d
+02/15/25 23:05:03: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:05:03: SESSION_MGR: creating session with session uuid: '4a6af320-66f0-434c-adab-98e0723efc0a' and name 'v++_compile_example_acc'
+02/15/25 23:05:03: KERNEL_SVC: creating session with uuid: '4a6af320-66f0-434c-adab-98e0723efc0a' and name 'v++_compile_example_acc'
+02/15/25 23:05:03: GUIDANCE_SMGR: creating guidance session with uuid: '4a6af320-66f0-434c-adab-98e0723efc0a' and name 'v++_compile_example_acc'
+02/15/25 23:05:09: Dispatch Server: Accepted socket connection from client
+02/15/25 23:05:09: Starting Socket connection
+02/15/25 23:05:35: SESSION_MGR: closing session for UUID '4a6af320-66f0-434c-adab-98e0723efc0a' with name 'v++_compile_example_acc'
+02/15/25 23:05:35: KERNEL_SVC: closing session for UUID '4a6af320-66f0-434c-adab-98e0723efc0a' with name 'v++_compile_example_acc'
+02/15/25 23:05:35: GUIDANCE_SMGR: closing session for UUID '4a6af320-66f0-434c-adab-98e0723efc0a' with name 'v++_compile_example_acc'
+02/15/25 23:05:35: STOP_SERVER received, server token: a58d003e-d2f9-48a9-be5e-4e9ac299dd9d, passed token: a58d003e-d2f9-48a9-be5e-4e9ac299dd9d
+02/15/25 23:05:35: Socket received request to stop server.
+02/15/25 23:05:35: Dispatch Server: do_await_stop
+02/15/25 23:05:35: SERVER: destructor for server bound to port 51251
+02/15/25 23:05:35: Server exiting with status 0.
+02/15/25 23:05:35: Closing log file.
+02/15/25 23:10:12: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:10:12: Server was asked to start on port: '51332'
+02/15/25 23:10:12: Server is using token UUID: '80502c12-70a6-43ea-91ed-bb081100bcb8'
+02/15/25 23:10:12: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:10:12: Attempting to start server on port '51332'
+02/15/25 23:10:12: Running Dispatch Server
+02/15/25 23:10:12: Version 2.2.0
+02/15/25 23:10:13: Dispatch Server: Accepted socket connection from client
+02/15/25 23:10:13: Starting Socket connection
+02/15/25 23:10:13: EXCHANGE_TOKEN received, server token: 80502c12-70a6-43ea-91ed-bb081100bcb8, passed token: 80502c12-70a6-43ea-91ed-bb081100bcb8
+02/15/25 23:10:13: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:10:13: SESSION_MGR: creating session with session uuid: '862d8e6c-8365-4631-8a16-eaf8e885e151' and name 'vitis-run_compile_example_acc'
+02/15/25 23:10:13: KERNEL_SVC: creating session with uuid: '862d8e6c-8365-4631-8a16-eaf8e885e151' and name 'vitis-run_compile_example_acc'
+02/15/25 23:10:13: GUIDANCE_SMGR: creating guidance session with uuid: '862d8e6c-8365-4631-8a16-eaf8e885e151' and name 'vitis-run_compile_example_acc'
+02/15/25 23:10:20: Dispatch Server: Accepted socket connection from client
+02/15/25 23:10:20: Starting Socket connection
+02/15/25 23:10:31: SESSION_MGR: closing session for UUID '862d8e6c-8365-4631-8a16-eaf8e885e151' with name 'vitis-run_compile_example_acc'
+02/15/25 23:10:31: KERNEL_SVC: closing session for UUID '862d8e6c-8365-4631-8a16-eaf8e885e151' with name 'vitis-run_compile_example_acc'
+02/15/25 23:10:31: GUIDANCE_SMGR: closing session for UUID '862d8e6c-8365-4631-8a16-eaf8e885e151' with name 'vitis-run_compile_example_acc'
+02/15/25 23:10:31: STOP_SERVER received, server token: 80502c12-70a6-43ea-91ed-bb081100bcb8, passed token: 80502c12-70a6-43ea-91ed-bb081100bcb8
+02/15/25 23:10:31: Socket received request to stop server.
+02/15/25 23:10:31: Dispatch Server: do_await_stop
+02/15/25 23:10:31: SERVER: destructor for server bound to port 51332
+02/15/25 23:10:31: Server exiting with status 0.
+02/15/25 23:10:31: Closing log file.
+02/15/25 23:10:38: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:10:38: Server was asked to start on port: '51341'
+02/15/25 23:10:38: Server is using token UUID: '209bbac1-197f-4551-aaf6-2d4b3a90dcf7'
+02/15/25 23:10:38: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:10:38: Attempting to start server on port '51341'
+02/15/25 23:10:38: Running Dispatch Server
+02/15/25 23:10:38: Version 2.2.0
+02/15/25 23:10:40: Dispatch Server: Accepted socket connection from client
+02/15/25 23:10:40: Starting Socket connection
+02/15/25 23:10:40: EXCHANGE_TOKEN received, server token: 209bbac1-197f-4551-aaf6-2d4b3a90dcf7, passed token: 209bbac1-197f-4551-aaf6-2d4b3a90dcf7
+02/15/25 23:10:40: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:10:40: SESSION_MGR: creating session with session uuid: 'c457d414-7177-4b47-acd1-018cdc3d07b9' and name 'v++_compile_example_acc'
+02/15/25 23:10:40: KERNEL_SVC: creating session with uuid: 'c457d414-7177-4b47-acd1-018cdc3d07b9' and name 'v++_compile_example_acc'
+02/15/25 23:10:40: GUIDANCE_SMGR: creating guidance session with uuid: 'c457d414-7177-4b47-acd1-018cdc3d07b9' and name 'v++_compile_example_acc'
+02/15/25 23:10:46: Dispatch Server: Accepted socket connection from client
+02/15/25 23:10:46: Starting Socket connection
+02/15/25 23:11:12: SESSION_MGR: closing session for UUID 'c457d414-7177-4b47-acd1-018cdc3d07b9' with name 'v++_compile_example_acc'
+02/15/25 23:11:12: KERNEL_SVC: closing session for UUID 'c457d414-7177-4b47-acd1-018cdc3d07b9' with name 'v++_compile_example_acc'
+02/15/25 23:11:12: GUIDANCE_SMGR: closing session for UUID 'c457d414-7177-4b47-acd1-018cdc3d07b9' with name 'v++_compile_example_acc'
+02/15/25 23:11:12: STOP_SERVER received, server token: 209bbac1-197f-4551-aaf6-2d4b3a90dcf7, passed token: 209bbac1-197f-4551-aaf6-2d4b3a90dcf7
+02/15/25 23:11:12: Socket received request to stop server.
+02/15/25 23:11:12: Dispatch Server: do_await_stop
+02/15/25 23:11:12: SERVER: destructor for server bound to port 51341
+02/15/25 23:11:12: Server exiting with status 0.
+02/15/25 23:11:12: Closing log file.
+02/15/25 23:11:44: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:11:44: Server was asked to start on port: '51365'
+02/15/25 23:11:44: Server is using token UUID: 'e9ce03c9-9a8a-449e-ba7a-5ed4547d40b0'
+02/15/25 23:11:44: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:11:44: Attempting to start server on port '51365'
+02/15/25 23:11:44: Running Dispatch Server
+02/15/25 23:11:44: Version 2.2.0
+02/15/25 23:11:46: Dispatch Server: Accepted socket connection from client
+02/15/25 23:11:46: Starting Socket connection
+02/15/25 23:11:46: EXCHANGE_TOKEN received, server token: e9ce03c9-9a8a-449e-ba7a-5ed4547d40b0, passed token: e9ce03c9-9a8a-449e-ba7a-5ed4547d40b0
+02/15/25 23:11:46: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:11:46: SESSION_MGR: creating session with session uuid: 'abaabbcc-2505-41cc-93bf-14c892e402c9' and name 'vitis-run_compile_example_acc'
+02/15/25 23:11:46: KERNEL_SVC: creating session with uuid: 'abaabbcc-2505-41cc-93bf-14c892e402c9' and name 'vitis-run_compile_example_acc'
+02/15/25 23:11:46: GUIDANCE_SMGR: creating guidance session with uuid: 'abaabbcc-2505-41cc-93bf-14c892e402c9' and name 'vitis-run_compile_example_acc'
+02/15/25 23:11:52: Dispatch Server: Accepted socket connection from client
+02/15/25 23:11:52: Starting Socket connection
+02/15/25 23:12:30: SESSION_MGR: closing session for UUID 'abaabbcc-2505-41cc-93bf-14c892e402c9' with name 'vitis-run_compile_example_acc'
+02/15/25 23:12:30: KERNEL_SVC: closing session for UUID 'abaabbcc-2505-41cc-93bf-14c892e402c9' with name 'vitis-run_compile_example_acc'
+02/15/25 23:12:30: GUIDANCE_SMGR: closing session for UUID 'abaabbcc-2505-41cc-93bf-14c892e402c9' with name 'vitis-run_compile_example_acc'
+02/15/25 23:12:30: STOP_SERVER received, server token: e9ce03c9-9a8a-449e-ba7a-5ed4547d40b0, passed token: e9ce03c9-9a8a-449e-ba7a-5ed4547d40b0
+02/15/25 23:12:30: Socket received request to stop server.
+02/15/25 23:12:30: Dispatch Server: do_await_stop
+02/15/25 23:12:30: SERVER: destructor for server bound to port 51365
+02/15/25 23:12:30: Server exiting with status 0.
+02/15/25 23:12:30: Closing log file.
+02/15/25 23:12:39: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:12:39: Server was asked to start on port: '51382'
+02/15/25 23:12:39: Server is using token UUID: '39eb0029-3c27-45f6-bb4a-f6805916216c'
+02/15/25 23:12:39: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:12:39: Attempting to start server on port '51382'
+02/15/25 23:12:39: Running Dispatch Server
+02/15/25 23:12:39: Version 2.2.0
+02/15/25 23:12:41: Dispatch Server: Accepted socket connection from client
+02/15/25 23:12:41: Starting Socket connection
+02/15/25 23:12:41: EXCHANGE_TOKEN received, server token: 39eb0029-3c27-45f6-bb4a-f6805916216c, passed token: 39eb0029-3c27-45f6-bb4a-f6805916216c
+02/15/25 23:12:41: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:12:41: SESSION_MGR: creating session with session uuid: '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' and name 'vitis-run_compile_example_acc'
+02/15/25 23:12:41: KERNEL_SVC: creating session with uuid: '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' and name 'vitis-run_compile_example_acc'
+02/15/25 23:12:41: GUIDANCE_SMGR: creating guidance session with uuid: '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' and name 'vitis-run_compile_example_acc'
+02/15/25 23:12:47: Dispatch Server: Accepted socket connection from client
+02/15/25 23:12:47: Starting Socket connection
+02/15/25 23:13:07: SESSION_MGR: closing session for UUID '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' with name 'vitis-run_compile_example_acc'
+02/15/25 23:13:07: KERNEL_SVC: closing session for UUID '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' with name 'vitis-run_compile_example_acc'
+02/15/25 23:13:07: GUIDANCE_SMGR: closing session for UUID '59c8e1a7-a55b-41e4-97d0-ab371ded9ebe' with name 'vitis-run_compile_example_acc'
+02/15/25 23:13:07: STOP_SERVER received, server token: 39eb0029-3c27-45f6-bb4a-f6805916216c, passed token: 39eb0029-3c27-45f6-bb4a-f6805916216c
+02/15/25 23:13:07: Socket received request to stop server.
+02/15/25 23:13:07: Dispatch Server: do_await_stop
+02/15/25 23:13:07: SERVER: destructor for server bound to port 51382
+02/15/25 23:13:07: Server exiting with status 0.
+02/15/25 23:13:07: Closing log file.
+02/15/25 23:32:15: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:32:15: Server was asked to start on port: '51767'
+02/15/25 23:32:15: Server is using token UUID: 'efbcbd57-3c42-4a68-99b2-a9d267c5f9e6'
+02/15/25 23:32:15: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:32:15: Attempting to start server on port '51767'
+02/15/25 23:32:15: Running Dispatch Server
+02/15/25 23:32:15: Version 2.2.0
+02/15/25 23:32:16: Dispatch Server: Accepted socket connection from client
+02/15/25 23:32:16: Starting Socket connection
+02/15/25 23:32:16: EXCHANGE_TOKEN received, server token: efbcbd57-3c42-4a68-99b2-a9d267c5f9e6, passed token: efbcbd57-3c42-4a68-99b2-a9d267c5f9e6
+02/15/25 23:32:16: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:32:16: SESSION_MGR: creating session with session uuid: 'e7f53acf-faed-46eb-831c-3840930835ec' and name 'vitis-run_compile_example_acc'
+02/15/25 23:32:16: KERNEL_SVC: creating session with uuid: 'e7f53acf-faed-46eb-831c-3840930835ec' and name 'vitis-run_compile_example_acc'
+02/15/25 23:32:16: GUIDANCE_SMGR: creating guidance session with uuid: 'e7f53acf-faed-46eb-831c-3840930835ec' and name 'vitis-run_compile_example_acc'
+02/15/25 23:32:25: Dispatch Server: Accepted socket connection from client
+02/15/25 23:32:25: Starting Socket connection
+02/15/25 23:32:32: SESSION_MGR: closing session for UUID 'e7f53acf-faed-46eb-831c-3840930835ec' with name 'vitis-run_compile_example_acc'
+02/15/25 23:32:32: KERNEL_SVC: closing session for UUID 'e7f53acf-faed-46eb-831c-3840930835ec' with name 'vitis-run_compile_example_acc'
+02/15/25 23:32:32: GUIDANCE_SMGR: closing session for UUID 'e7f53acf-faed-46eb-831c-3840930835ec' with name 'vitis-run_compile_example_acc'
+02/15/25 23:32:32: STOP_SERVER received, server token: efbcbd57-3c42-4a68-99b2-a9d267c5f9e6, passed token: efbcbd57-3c42-4a68-99b2-a9d267c5f9e6
+02/15/25 23:32:32: Socket received request to stop server.
+02/15/25 23:32:32: Dispatch Server: do_await_stop
+02/15/25 23:32:32: SERVER: destructor for server bound to port 51767
+02/15/25 23:32:32: Server exiting with status 0.
+02/15/25 23:32:32: Closing log file.
+02/15/25 23:32:37: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:32:37: Server was asked to start on port: '51772'
+02/15/25 23:32:37: Server is using token UUID: '3b04a391-e24c-4b16-ad17-e4bb877363b3'
+02/15/25 23:32:37: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:32:37: Attempting to start server on port '51772'
+02/15/25 23:32:37: Running Dispatch Server
+02/15/25 23:32:37: Version 2.2.0
+02/15/25 23:32:39: Dispatch Server: Accepted socket connection from client
+02/15/25 23:32:39: Starting Socket connection
+02/15/25 23:32:39: EXCHANGE_TOKEN received, server token: 3b04a391-e24c-4b16-ad17-e4bb877363b3, passed token: 3b04a391-e24c-4b16-ad17-e4bb877363b3
+02/15/25 23:32:39: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:32:39: SESSION_MGR: creating session with session uuid: '181e6817-0e5b-4438-b272-5e75fb926da5' and name 'v++_compile_example_acc'
+02/15/25 23:32:39: KERNEL_SVC: creating session with uuid: '181e6817-0e5b-4438-b272-5e75fb926da5' and name 'v++_compile_example_acc'
+02/15/25 23:32:39: GUIDANCE_SMGR: creating guidance session with uuid: '181e6817-0e5b-4438-b272-5e75fb926da5' and name 'v++_compile_example_acc'
+02/15/25 23:32:45: Dispatch Server: Accepted socket connection from client
+02/15/25 23:32:45: Starting Socket connection
+02/15/25 23:33:13: SESSION_MGR: closing session for UUID '181e6817-0e5b-4438-b272-5e75fb926da5' with name 'v++_compile_example_acc'
+02/15/25 23:33:13: KERNEL_SVC: closing session for UUID '181e6817-0e5b-4438-b272-5e75fb926da5' with name 'v++_compile_example_acc'
+02/15/25 23:33:13: GUIDANCE_SMGR: closing session for UUID '181e6817-0e5b-4438-b272-5e75fb926da5' with name 'v++_compile_example_acc'
+02/15/25 23:33:13: STOP_SERVER received, server token: 3b04a391-e24c-4b16-ad17-e4bb877363b3, passed token: 3b04a391-e24c-4b16-ad17-e4bb877363b3
+02/15/25 23:33:13: Socket received request to stop server.
+02/15/25 23:33:13: Dispatch Server: do_await_stop
+02/15/25 23:33:13: SERVER: destructor for server bound to port 51772
+02/15/25 23:33:13: Server exiting with status 0.
+02/15/25 23:33:13: Closing log file.
+02/15/25 23:33:44: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:33:44: Server was asked to start on port: '51785'
+02/15/25 23:33:44: Server is using token UUID: 'd265675b-bbce-4901-897f-ee5d7fb8d88f'
+02/15/25 23:33:44: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:33:44: Attempting to start server on port '51785'
+02/15/25 23:33:44: Running Dispatch Server
+02/15/25 23:33:44: Version 2.2.0
+02/15/25 23:33:46: Dispatch Server: Accepted socket connection from client
+02/15/25 23:33:46: Starting Socket connection
+02/15/25 23:33:46: EXCHANGE_TOKEN received, server token: d265675b-bbce-4901-897f-ee5d7fb8d88f, passed token: d265675b-bbce-4901-897f-ee5d7fb8d88f
+02/15/25 23:33:46: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:33:46: SESSION_MGR: creating session with session uuid: 'd8015064-7002-4327-b492-345af9e8ed7f' and name 'vitis-run_compile_example_acc'
+02/15/25 23:33:46: KERNEL_SVC: creating session with uuid: 'd8015064-7002-4327-b492-345af9e8ed7f' and name 'vitis-run_compile_example_acc'
+02/15/25 23:33:46: GUIDANCE_SMGR: creating guidance session with uuid: 'd8015064-7002-4327-b492-345af9e8ed7f' and name 'vitis-run_compile_example_acc'
+02/15/25 23:33:52: Dispatch Server: Accepted socket connection from client
+02/15/25 23:33:52: Starting Socket connection
+02/15/25 23:34:31: SESSION_MGR: closing session for UUID 'd8015064-7002-4327-b492-345af9e8ed7f' with name 'vitis-run_compile_example_acc'
+02/15/25 23:34:31: KERNEL_SVC: closing session for UUID 'd8015064-7002-4327-b492-345af9e8ed7f' with name 'vitis-run_compile_example_acc'
+02/15/25 23:34:31: GUIDANCE_SMGR: closing session for UUID 'd8015064-7002-4327-b492-345af9e8ed7f' with name 'vitis-run_compile_example_acc'
+02/15/25 23:34:31: STOP_SERVER received, server token: d265675b-bbce-4901-897f-ee5d7fb8d88f, passed token: d265675b-bbce-4901-897f-ee5d7fb8d88f
+02/15/25 23:34:31: Socket received request to stop server.
+02/15/25 23:34:31: Dispatch Server: do_await_stop
+02/15/25 23:34:31: SERVER: destructor for server bound to port 51785
+02/15/25 23:34:31: Server exiting with status 0.
+02/15/25 23:34:31: Closing log file.
+02/15/25 23:34:35: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:34:35: Server was asked to start on port: '51798'
+02/15/25 23:34:35: Server is using token UUID: '0be0154e-a4dc-4608-9e41-81ea17b0bd41'
+02/15/25 23:34:35: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:34:35: Attempting to start server on port '51798'
+02/15/25 23:34:35: Running Dispatch Server
+02/15/25 23:34:35: Version 2.2.0
+02/15/25 23:34:37: Dispatch Server: Accepted socket connection from client
+02/15/25 23:34:37: Starting Socket connection
+02/15/25 23:34:37: EXCHANGE_TOKEN received, server token: 0be0154e-a4dc-4608-9e41-81ea17b0bd41, passed token: 0be0154e-a4dc-4608-9e41-81ea17b0bd41
+02/15/25 23:34:37: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:34:37: SESSION_MGR: creating session with session uuid: 'd5742116-6925-4d47-aa8a-dc4ed364b43c' and name 'vitis-run_compile_example_acc'
+02/15/25 23:34:37: KERNEL_SVC: creating session with uuid: 'd5742116-6925-4d47-aa8a-dc4ed364b43c' and name 'vitis-run_compile_example_acc'
+02/15/25 23:34:37: GUIDANCE_SMGR: creating guidance session with uuid: 'd5742116-6925-4d47-aa8a-dc4ed364b43c' and name 'vitis-run_compile_example_acc'
+02/15/25 23:34:43: Dispatch Server: Accepted socket connection from client
+02/15/25 23:34:43: Starting Socket connection
+02/15/25 23:35:03: SESSION_MGR: closing session for UUID 'd5742116-6925-4d47-aa8a-dc4ed364b43c' with name 'vitis-run_compile_example_acc'
+02/15/25 23:35:03: KERNEL_SVC: closing session for UUID 'd5742116-6925-4d47-aa8a-dc4ed364b43c' with name 'vitis-run_compile_example_acc'
+02/15/25 23:35:03: GUIDANCE_SMGR: closing session for UUID 'd5742116-6925-4d47-aa8a-dc4ed364b43c' with name 'vitis-run_compile_example_acc'
+02/15/25 23:35:03: STOP_SERVER received, server token: 0be0154e-a4dc-4608-9e41-81ea17b0bd41, passed token: 0be0154e-a4dc-4608-9e41-81ea17b0bd41
+02/15/25 23:35:03: Socket received request to stop server.
+02/15/25 23:35:03: Dispatch Server: do_await_stop
+02/15/25 23:35:03: SERVER: destructor for server bound to port 51798
+02/15/25 23:35:03: Server exiting with status 0.
+02/15/25 23:35:03: Closing log file.
+02/15/25 23:40:00: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:40:00: Server was asked to start on port: '51886'
+02/15/25 23:40:00: Server is using token UUID: '685b79f1-6903-41f6-9ee6-b449e644e679'
+02/15/25 23:40:00: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:40:00: Attempting to start server on port '51886'
+02/15/25 23:40:00: Running Dispatch Server
+02/15/25 23:40:00: Version 2.2.0
+02/15/25 23:40:02: Dispatch Server: Accepted socket connection from client
+02/15/25 23:40:02: Starting Socket connection
+02/15/25 23:40:02: EXCHANGE_TOKEN received, server token: 685b79f1-6903-41f6-9ee6-b449e644e679, passed token: 685b79f1-6903-41f6-9ee6-b449e644e679
+02/15/25 23:40:02: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:40:02: SESSION_MGR: creating session with session uuid: '158011f4-34af-4160-bc70-51e269c03e87' and name 'vitis-run_compile_example_acc'
+02/15/25 23:40:02: KERNEL_SVC: creating session with uuid: '158011f4-34af-4160-bc70-51e269c03e87' and name 'vitis-run_compile_example_acc'
+02/15/25 23:40:02: GUIDANCE_SMGR: creating guidance session with uuid: '158011f4-34af-4160-bc70-51e269c03e87' and name 'vitis-run_compile_example_acc'
+02/15/25 23:40:09: Dispatch Server: Accepted socket connection from client
+02/15/25 23:40:09: Starting Socket connection
+02/15/25 23:40:31: SESSION_MGR: closing session for UUID '158011f4-34af-4160-bc70-51e269c03e87' with name 'vitis-run_compile_example_acc'
+02/15/25 23:40:31: KERNEL_SVC: closing session for UUID '158011f4-34af-4160-bc70-51e269c03e87' with name 'vitis-run_compile_example_acc'
+02/15/25 23:40:31: GUIDANCE_SMGR: closing session for UUID '158011f4-34af-4160-bc70-51e269c03e87' with name 'vitis-run_compile_example_acc'
+02/15/25 23:40:31: STOP_SERVER received, server token: 685b79f1-6903-41f6-9ee6-b449e644e679, passed token: 685b79f1-6903-41f6-9ee6-b449e644e679
+02/15/25 23:40:31: Socket received request to stop server.
+02/15/25 23:40:31: Dispatch Server: do_await_stop
+02/15/25 23:40:31: SERVER: destructor for server bound to port 51886
+02/15/25 23:40:31: Server exiting with status 0.
+02/15/25 23:40:31: Closing log file.
+02/15/25 23:45:08: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:45:08: Server was asked to start on port: '52039'
+02/15/25 23:45:08: Server is using token UUID: 'cc2d2657-3223-4d08-bd86-2142e5b3e2d2'
+02/15/25 23:45:08: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:45:08: Attempting to start server on port '52039'
+02/15/25 23:45:08: Running Dispatch Server
+02/15/25 23:45:08: Version 2.2.0
+02/15/25 23:45:09: Dispatch Server: Accepted socket connection from client
+02/15/25 23:45:09: Starting Socket connection
+02/15/25 23:45:09: EXCHANGE_TOKEN received, server token: cc2d2657-3223-4d08-bd86-2142e5b3e2d2, passed token: cc2d2657-3223-4d08-bd86-2142e5b3e2d2
+02/15/25 23:45:09: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:45:09: SESSION_MGR: creating session with session uuid: '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' and name 'vitis-run_compile_example_acc'
+02/15/25 23:45:09: KERNEL_SVC: creating session with uuid: '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' and name 'vitis-run_compile_example_acc'
+02/15/25 23:45:09: GUIDANCE_SMGR: creating guidance session with uuid: '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' and name 'vitis-run_compile_example_acc'
+02/15/25 23:45:16: Dispatch Server: Accepted socket connection from client
+02/15/25 23:45:16: Starting Socket connection
+02/15/25 23:45:27: SESSION_MGR: closing session for UUID '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' with name 'vitis-run_compile_example_acc'
+02/15/25 23:45:27: KERNEL_SVC: closing session for UUID '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' with name 'vitis-run_compile_example_acc'
+02/15/25 23:45:27: GUIDANCE_SMGR: closing session for UUID '9b7b2a9f-ca1f-4216-bf23-bc6ea94facf4' with name 'vitis-run_compile_example_acc'
+02/15/25 23:45:27: STOP_SERVER received, server token: cc2d2657-3223-4d08-bd86-2142e5b3e2d2, passed token: cc2d2657-3223-4d08-bd86-2142e5b3e2d2
+02/15/25 23:45:27: Socket received request to stop server.
+02/15/25 23:45:27: Dispatch Server: do_await_stop
+02/15/25 23:45:27: SERVER: destructor for server bound to port 52039
+02/15/25 23:45:27: Server exiting with status 0.
+02/15/25 23:45:27: Closing log file.
+02/15/25 23:45:33: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:45:33: Server was asked to start on port: '52047'
+02/15/25 23:45:33: Server is using token UUID: 'daebc9d1-0a7f-494c-8c9d-f295a6794933'
+02/15/25 23:45:33: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:45:33: Attempting to start server on port '52047'
+02/15/25 23:45:33: Running Dispatch Server
+02/15/25 23:45:33: Version 2.2.0
+02/15/25 23:45:35: Dispatch Server: Accepted socket connection from client
+02/15/25 23:45:35: Starting Socket connection
+02/15/25 23:45:35: EXCHANGE_TOKEN received, server token: daebc9d1-0a7f-494c-8c9d-f295a6794933, passed token: daebc9d1-0a7f-494c-8c9d-f295a6794933
+02/15/25 23:45:35: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:45:35: SESSION_MGR: creating session with session uuid: 'afa890a0-72b0-499e-8280-883db722eaeb' and name 'v++_compile_example_acc'
+02/15/25 23:45:35: KERNEL_SVC: creating session with uuid: 'afa890a0-72b0-499e-8280-883db722eaeb' and name 'v++_compile_example_acc'
+02/15/25 23:45:35: GUIDANCE_SMGR: creating guidance session with uuid: 'afa890a0-72b0-499e-8280-883db722eaeb' and name 'v++_compile_example_acc'
+02/15/25 23:45:41: Dispatch Server: Accepted socket connection from client
+02/15/25 23:45:41: Starting Socket connection
+02/15/25 23:46:09: SESSION_MGR: closing session for UUID 'afa890a0-72b0-499e-8280-883db722eaeb' with name 'v++_compile_example_acc'
+02/15/25 23:46:09: KERNEL_SVC: closing session for UUID 'afa890a0-72b0-499e-8280-883db722eaeb' with name 'v++_compile_example_acc'
+02/15/25 23:46:09: GUIDANCE_SMGR: closing session for UUID 'afa890a0-72b0-499e-8280-883db722eaeb' with name 'v++_compile_example_acc'
+02/15/25 23:46:09: STOP_SERVER received, server token: daebc9d1-0a7f-494c-8c9d-f295a6794933, passed token: daebc9d1-0a7f-494c-8c9d-f295a6794933
+02/15/25 23:46:09: Socket received request to stop server.
+02/15/25 23:46:09: Dispatch Server: do_await_stop
+02/15/25 23:46:09: SERVER: destructor for server bound to port 52047
+02/15/25 23:46:09: Server exiting with status 0.
+02/15/25 23:46:09: Closing log file.
+02/15/25 23:46:30: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:46:30: Server was asked to start on port: '52063'
+02/15/25 23:46:30: Server is using token UUID: '9471b905-ae5e-4626-8da8-514db95f1c8c'
+02/15/25 23:46:30: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:46:30: Attempting to start server on port '52063'
+02/15/25 23:46:30: Running Dispatch Server
+02/15/25 23:46:30: Version 2.2.0
+02/15/25 23:46:32: Dispatch Server: Accepted socket connection from client
+02/15/25 23:46:32: Starting Socket connection
+02/15/25 23:46:32: EXCHANGE_TOKEN received, server token: 9471b905-ae5e-4626-8da8-514db95f1c8c, passed token: 9471b905-ae5e-4626-8da8-514db95f1c8c
+02/15/25 23:46:32: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:46:32: SESSION_MGR: creating session with session uuid: '27e9f707-488b-491f-b273-f4dd7a678fcc' and name 'vitis-run_compile_example_acc'
+02/15/25 23:46:32: KERNEL_SVC: creating session with uuid: '27e9f707-488b-491f-b273-f4dd7a678fcc' and name 'vitis-run_compile_example_acc'
+02/15/25 23:46:32: GUIDANCE_SMGR: creating guidance session with uuid: '27e9f707-488b-491f-b273-f4dd7a678fcc' and name 'vitis-run_compile_example_acc'
+02/15/25 23:46:38: Dispatch Server: Accepted socket connection from client
+02/15/25 23:46:38: Starting Socket connection
+02/15/25 23:47:15: SESSION_MGR: closing session for UUID '27e9f707-488b-491f-b273-f4dd7a678fcc' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:15: KERNEL_SVC: closing session for UUID '27e9f707-488b-491f-b273-f4dd7a678fcc' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:15: GUIDANCE_SMGR: closing session for UUID '27e9f707-488b-491f-b273-f4dd7a678fcc' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:15: STOP_SERVER received, server token: 9471b905-ae5e-4626-8da8-514db95f1c8c, passed token: 9471b905-ae5e-4626-8da8-514db95f1c8c
+02/15/25 23:47:15: Socket received request to stop server.
+02/15/25 23:47:15: Dispatch Server: do_await_stop
+02/15/25 23:47:15: SERVER: destructor for server bound to port 52063
+02/15/25 23:47:15: Server exiting with status 0.
+02/15/25 23:47:15: Closing log file.
+02/15/25 23:47:23: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/15/25 23:47:23: Server was asked to start on port: '52078'
+02/15/25 23:47:23: Server is using token UUID: 'd6a856d7-da57-49d5-91c1-f3a3b125eccd'
+02/15/25 23:47:23: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/15/25 23:47:23: Attempting to start server on port '52078'
+02/15/25 23:47:23: Running Dispatch Server
+02/15/25 23:47:23: Version 2.2.0
+02/15/25 23:47:24: Dispatch Server: Accepted socket connection from client
+02/15/25 23:47:24: Starting Socket connection
+02/15/25 23:47:24: EXCHANGE_TOKEN received, server token: d6a856d7-da57-49d5-91c1-f3a3b125eccd, passed token: d6a856d7-da57-49d5-91c1-f3a3b125eccd
+02/15/25 23:47:24: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/15/25 23:47:24: SESSION_MGR: creating session with session uuid: '6729ea4c-817f-4c06-89d1-54dcf9f76a32' and name 'vitis-run_compile_example_acc'
+02/15/25 23:47:24: KERNEL_SVC: creating session with uuid: '6729ea4c-817f-4c06-89d1-54dcf9f76a32' and name 'vitis-run_compile_example_acc'
+02/15/25 23:47:24: GUIDANCE_SMGR: creating guidance session with uuid: '6729ea4c-817f-4c06-89d1-54dcf9f76a32' and name 'vitis-run_compile_example_acc'
+02/15/25 23:47:31: Dispatch Server: Accepted socket connection from client
+02/15/25 23:47:31: Starting Socket connection
+02/15/25 23:47:49: SESSION_MGR: closing session for UUID '6729ea4c-817f-4c06-89d1-54dcf9f76a32' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:49: KERNEL_SVC: closing session for UUID '6729ea4c-817f-4c06-89d1-54dcf9f76a32' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:49: GUIDANCE_SMGR: closing session for UUID '6729ea4c-817f-4c06-89d1-54dcf9f76a32' with name 'vitis-run_compile_example_acc'
+02/15/25 23:47:49: STOP_SERVER received, server token: d6a856d7-da57-49d5-91c1-f3a3b125eccd, passed token: d6a856d7-da57-49d5-91c1-f3a3b125eccd
+02/15/25 23:47:49: Socket received request to stop server.
+02/15/25 23:47:49: Dispatch Server: do_await_stop
+02/15/25 23:47:49: SERVER: destructor for server bound to port 52078
+02/15/25 23:47:49: Server exiting with status 0.
+02/15/25 23:47:49: Closing log file.
+02/16/25 00:18:47: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:18:47: Server was asked to start on port: '49810'
+02/16/25 00:18:47: Server is using token UUID: 'c1e4d53f-8a04-4ecb-9825-a1aeedd1d2f3'
+02/16/25 00:18:47: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:18:47: Attempting to start server on port '49810'
+02/16/25 00:18:47: Running Dispatch Server
+02/16/25 00:18:47: Version 2.2.0
+02/16/25 00:18:48: Dispatch Server: Accepted socket connection from client
+02/16/25 00:18:48: Starting Socket connection
+02/16/25 00:18:48: EXCHANGE_TOKEN received, server token: c1e4d53f-8a04-4ecb-9825-a1aeedd1d2f3, passed token: c1e4d53f-8a04-4ecb-9825-a1aeedd1d2f3
+02/16/25 00:18:48: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:18:48: SESSION_MGR: creating session with session uuid: '483eab78-acda-4e2b-a154-09eba84d6934' and name 'vitis-run_compile_example_acc'
+02/16/25 00:18:48: KERNEL_SVC: creating session with uuid: '483eab78-acda-4e2b-a154-09eba84d6934' and name 'vitis-run_compile_example_acc'
+02/16/25 00:18:48: GUIDANCE_SMGR: creating guidance session with uuid: '483eab78-acda-4e2b-a154-09eba84d6934' and name 'vitis-run_compile_example_acc'
+02/16/25 00:19:00: Dispatch Server: Accepted socket connection from client
+02/16/25 00:19:00: Starting Socket connection
+02/16/25 00:19:14: SESSION_MGR: closing session for UUID '483eab78-acda-4e2b-a154-09eba84d6934' with name 'vitis-run_compile_example_acc'
+02/16/25 00:19:14: KERNEL_SVC: closing session for UUID '483eab78-acda-4e2b-a154-09eba84d6934' with name 'vitis-run_compile_example_acc'
+02/16/25 00:19:14: GUIDANCE_SMGR: closing session for UUID '483eab78-acda-4e2b-a154-09eba84d6934' with name 'vitis-run_compile_example_acc'
+02/16/25 00:19:14: STOP_SERVER received, server token: c1e4d53f-8a04-4ecb-9825-a1aeedd1d2f3, passed token: c1e4d53f-8a04-4ecb-9825-a1aeedd1d2f3
+02/16/25 00:19:14: Socket received request to stop server.
+02/16/25 00:19:14: Dispatch Server: do_await_stop
+02/16/25 00:19:14: SERVER: destructor for server bound to port 49810
+02/16/25 00:19:14: Server exiting with status 0.
+02/16/25 00:19:14: Closing log file.
+02/16/25 00:19:19: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:19:19: Server was asked to start on port: '49816'
+02/16/25 00:19:19: Server is using token UUID: '1d58a025-5c65-4131-9380-c0b1bf616be7'
+02/16/25 00:19:19: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:19:19: Attempting to start server on port '49816'
+02/16/25 00:19:19: Running Dispatch Server
+02/16/25 00:19:19: Version 2.2.0
+02/16/25 00:19:21: Dispatch Server: Accepted socket connection from client
+02/16/25 00:19:21: Starting Socket connection
+02/16/25 00:19:21: EXCHANGE_TOKEN received, server token: 1d58a025-5c65-4131-9380-c0b1bf616be7, passed token: 1d58a025-5c65-4131-9380-c0b1bf616be7
+02/16/25 00:19:21: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:19:21: SESSION_MGR: creating session with session uuid: 'd93b0817-278a-495a-8aed-e671898997c5' and name 'v++_compile_example_acc'
+02/16/25 00:19:21: KERNEL_SVC: creating session with uuid: 'd93b0817-278a-495a-8aed-e671898997c5' and name 'v++_compile_example_acc'
+02/16/25 00:19:21: GUIDANCE_SMGR: creating guidance session with uuid: 'd93b0817-278a-495a-8aed-e671898997c5' and name 'v++_compile_example_acc'
+02/16/25 00:19:27: Dispatch Server: Accepted socket connection from client
+02/16/25 00:19:27: Starting Socket connection
+02/16/25 00:19:55: SESSION_MGR: closing session for UUID 'd93b0817-278a-495a-8aed-e671898997c5' with name 'v++_compile_example_acc'
+02/16/25 00:19:55: KERNEL_SVC: closing session for UUID 'd93b0817-278a-495a-8aed-e671898997c5' with name 'v++_compile_example_acc'
+02/16/25 00:19:55: GUIDANCE_SMGR: closing session for UUID 'd93b0817-278a-495a-8aed-e671898997c5' with name 'v++_compile_example_acc'
+02/16/25 00:19:55: STOP_SERVER received, server token: 1d58a025-5c65-4131-9380-c0b1bf616be7, passed token: 1d58a025-5c65-4131-9380-c0b1bf616be7
+02/16/25 00:19:55: Socket received request to stop server.
+02/16/25 00:19:55: Dispatch Server: do_await_stop
+02/16/25 00:19:55: SERVER: destructor for server bound to port 49816
+02/16/25 00:19:55: Server exiting with status 0.
+02/16/25 00:19:55: Closing log file.
+02/16/25 00:20:32: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:20:32: Server was asked to start on port: '49832'
+02/16/25 00:20:32: Server is using token UUID: 'a6acef58-6a78-444d-b9b3-6008be060247'
+02/16/25 00:20:32: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:20:32: Attempting to start server on port '49832'
+02/16/25 00:20:32: Running Dispatch Server
+02/16/25 00:20:32: Version 2.2.0
+02/16/25 00:20:34: Dispatch Server: Accepted socket connection from client
+02/16/25 00:20:34: Starting Socket connection
+02/16/25 00:20:34: EXCHANGE_TOKEN received, server token: a6acef58-6a78-444d-b9b3-6008be060247, passed token: a6acef58-6a78-444d-b9b3-6008be060247
+02/16/25 00:20:34: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:20:34: SESSION_MGR: creating session with session uuid: '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:20:34: KERNEL_SVC: creating session with uuid: '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:20:34: GUIDANCE_SMGR: creating guidance session with uuid: '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:20:40: Dispatch Server: Accepted socket connection from client
+02/16/25 00:20:40: Starting Socket connection
+02/16/25 00:20:59: SESSION_MGR: closing session for UUID '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:20:59: KERNEL_SVC: closing session for UUID '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:20:59: GUIDANCE_SMGR: closing session for UUID '7a24ce9e-2837-48f4-a7a6-2e167c7344b7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:20:59: STOP_SERVER received, server token: a6acef58-6a78-444d-b9b3-6008be060247, passed token: a6acef58-6a78-444d-b9b3-6008be060247
+02/16/25 00:20:59: Socket received request to stop server.
+02/16/25 00:20:59: Dispatch Server: do_await_stop
+02/16/25 00:20:59: SERVER: destructor for server bound to port 49832
+02/16/25 00:20:59: Server exiting with status 0.
+02/16/25 00:20:59: Closing log file.
+02/16/25 00:21:59: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:21:59: Server was asked to start on port: '49863'
+02/16/25 00:21:59: Server is using token UUID: '167d6ab2-4563-4dae-b7fd-96c5eca32793'
+02/16/25 00:21:59: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:21:59: Attempting to start server on port '49863'
+02/16/25 00:21:59: Running Dispatch Server
+02/16/25 00:21:59: Version 2.2.0
+02/16/25 00:22:01: Dispatch Server: Accepted socket connection from client
+02/16/25 00:22:01: Starting Socket connection
+02/16/25 00:22:01: EXCHANGE_TOKEN received, server token: 167d6ab2-4563-4dae-b7fd-96c5eca32793, passed token: 167d6ab2-4563-4dae-b7fd-96c5eca32793
+02/16/25 00:22:01: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:22:01: SESSION_MGR: creating session with session uuid: 'dc2e35e8-1679-48db-af92-7c01d23035a3' and name 'vitis-run_compile_example_acc'
+02/16/25 00:22:01: KERNEL_SVC: creating session with uuid: 'dc2e35e8-1679-48db-af92-7c01d23035a3' and name 'vitis-run_compile_example_acc'
+02/16/25 00:22:01: GUIDANCE_SMGR: creating guidance session with uuid: 'dc2e35e8-1679-48db-af92-7c01d23035a3' and name 'vitis-run_compile_example_acc'
+02/16/25 00:22:07: Dispatch Server: Accepted socket connection from client
+02/16/25 00:22:07: Starting Socket connection
+02/16/25 00:22:10: SESSION_MGR: closing session for UUID 'dc2e35e8-1679-48db-af92-7c01d23035a3' with name 'vitis-run_compile_example_acc'
+02/16/25 00:22:10: KERNEL_SVC: closing session for UUID 'dc2e35e8-1679-48db-af92-7c01d23035a3' with name 'vitis-run_compile_example_acc'
+02/16/25 00:22:10: GUIDANCE_SMGR: closing session for UUID 'dc2e35e8-1679-48db-af92-7c01d23035a3' with name 'vitis-run_compile_example_acc'
+02/16/25 00:22:10: STOP_SERVER received, server token: 167d6ab2-4563-4dae-b7fd-96c5eca32793, passed token: 167d6ab2-4563-4dae-b7fd-96c5eca32793
+02/16/25 00:22:10: Socket received request to stop server.
+02/16/25 00:22:10: Dispatch Server: do_await_stop
+02/16/25 00:22:10: SERVER: destructor for server bound to port 49863
+02/16/25 00:22:10: Server exiting with status 0.
+02/16/25 00:22:10: Closing log file.
+02/16/25 00:22:16: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:22:16: Server was asked to start on port: '49869'
+02/16/25 00:22:16: Server is using token UUID: 'dd3acc9e-8cf0-4a3f-8383-765387c62961'
+02/16/25 00:22:16: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:22:16: Attempting to start server on port '49869'
+02/16/25 00:22:16: Running Dispatch Server
+02/16/25 00:22:16: Version 2.2.0
+02/16/25 00:22:18: Dispatch Server: Accepted socket connection from client
+02/16/25 00:22:18: Starting Socket connection
+02/16/25 00:22:18: EXCHANGE_TOKEN received, server token: dd3acc9e-8cf0-4a3f-8383-765387c62961, passed token: dd3acc9e-8cf0-4a3f-8383-765387c62961
+02/16/25 00:22:18: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:22:18: SESSION_MGR: creating session with session uuid: '62e2068f-c68d-4476-a224-d336c1767479' and name 'v++_compile_example_acc'
+02/16/25 00:22:18: KERNEL_SVC: creating session with uuid: '62e2068f-c68d-4476-a224-d336c1767479' and name 'v++_compile_example_acc'
+02/16/25 00:22:18: GUIDANCE_SMGR: creating guidance session with uuid: '62e2068f-c68d-4476-a224-d336c1767479' and name 'v++_compile_example_acc'
+02/16/25 00:22:24: Dispatch Server: Accepted socket connection from client
+02/16/25 00:22:24: Starting Socket connection
+02/16/25 00:22:50: SESSION_MGR: closing session for UUID '62e2068f-c68d-4476-a224-d336c1767479' with name 'v++_compile_example_acc'
+02/16/25 00:22:50: KERNEL_SVC: closing session for UUID '62e2068f-c68d-4476-a224-d336c1767479' with name 'v++_compile_example_acc'
+02/16/25 00:22:50: GUIDANCE_SMGR: closing session for UUID '62e2068f-c68d-4476-a224-d336c1767479' with name 'v++_compile_example_acc'
+02/16/25 00:22:50: STOP_SERVER received, server token: dd3acc9e-8cf0-4a3f-8383-765387c62961, passed token: dd3acc9e-8cf0-4a3f-8383-765387c62961
+02/16/25 00:22:50: Socket received request to stop server.
+02/16/25 00:22:50: Dispatch Server: do_await_stop
+02/16/25 00:22:50: SERVER: destructor for server bound to port 49869
+02/16/25 00:22:50: Server exiting with status 0.
+02/16/25 00:22:50: Closing log file.
+02/16/25 00:23:00: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:23:00: Server was asked to start on port: '49882'
+02/16/25 00:23:00: Server is using token UUID: 'b6d27c10-9e23-486d-bb22-881ed7e12780'
+02/16/25 00:23:00: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:23:00: Attempting to start server on port '49882'
+02/16/25 00:23:00: Running Dispatch Server
+02/16/25 00:23:00: Version 2.2.0
+02/16/25 00:23:01: Dispatch Server: Accepted socket connection from client
+02/16/25 00:23:01: Starting Socket connection
+02/16/25 00:23:01: EXCHANGE_TOKEN received, server token: b6d27c10-9e23-486d-bb22-881ed7e12780, passed token: b6d27c10-9e23-486d-bb22-881ed7e12780
+02/16/25 00:23:01: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:23:01: SESSION_MGR: creating session with session uuid: 'ad99d835-edf1-498d-8da6-86e63d27d173' and name 'vitis-run_compile_example_acc'
+02/16/25 00:23:01: KERNEL_SVC: creating session with uuid: 'ad99d835-edf1-498d-8da6-86e63d27d173' and name 'vitis-run_compile_example_acc'
+02/16/25 00:23:01: GUIDANCE_SMGR: creating guidance session with uuid: 'ad99d835-edf1-498d-8da6-86e63d27d173' and name 'vitis-run_compile_example_acc'
+02/16/25 00:23:07: Dispatch Server: Accepted socket connection from client
+02/16/25 00:23:07: Starting Socket connection
+02/16/25 00:23:48: SESSION_MGR: closing session for UUID 'ad99d835-edf1-498d-8da6-86e63d27d173' with name 'vitis-run_compile_example_acc'
+02/16/25 00:23:48: KERNEL_SVC: closing session for UUID 'ad99d835-edf1-498d-8da6-86e63d27d173' with name 'vitis-run_compile_example_acc'
+02/16/25 00:23:48: GUIDANCE_SMGR: closing session for UUID 'ad99d835-edf1-498d-8da6-86e63d27d173' with name 'vitis-run_compile_example_acc'
+02/16/25 00:23:48: STOP_SERVER received, server token: b6d27c10-9e23-486d-bb22-881ed7e12780, passed token: b6d27c10-9e23-486d-bb22-881ed7e12780
+02/16/25 00:23:48: Socket received request to stop server.
+02/16/25 00:23:48: Dispatch Server: do_await_stop
+02/16/25 00:23:48: SERVER: destructor for server bound to port 49882
+02/16/25 00:23:48: Server exiting with status 0.
+02/16/25 00:23:48: Closing log file.
+02/16/25 00:24:43: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:24:43: Server was asked to start on port: '64465'
+02/16/25 00:24:43: Server is using token UUID: 'f5fd4267-006d-440b-b907-c9b56d5e3599'
+02/16/25 00:24:43: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:24:43: Attempting to start server on port '64465'
+02/16/25 00:24:43: Running Dispatch Server
+02/16/25 00:24:43: Version 2.2.0
+02/16/25 00:24:45: Dispatch Server: Accepted socket connection from client
+02/16/25 00:24:45: Starting Socket connection
+02/16/25 00:24:45: EXCHANGE_TOKEN received, server token: f5fd4267-006d-440b-b907-c9b56d5e3599, passed token: f5fd4267-006d-440b-b907-c9b56d5e3599
+02/16/25 00:24:45: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:24:45: SESSION_MGR: creating session with session uuid: 'f16336c0-74d1-41a7-9da2-c0463049f182' and name 'vitis-run_compile_example_acc'
+02/16/25 00:24:45: KERNEL_SVC: creating session with uuid: 'f16336c0-74d1-41a7-9da2-c0463049f182' and name 'vitis-run_compile_example_acc'
+02/16/25 00:24:45: GUIDANCE_SMGR: creating guidance session with uuid: 'f16336c0-74d1-41a7-9da2-c0463049f182' and name 'vitis-run_compile_example_acc'
+02/16/25 00:24:52: Dispatch Server: Accepted socket connection from client
+02/16/25 00:24:52: Starting Socket connection
+02/16/25 00:25:20: SESSION_MGR: closing session for UUID 'f16336c0-74d1-41a7-9da2-c0463049f182' with name 'vitis-run_compile_example_acc'
+02/16/25 00:25:20: KERNEL_SVC: closing session for UUID 'f16336c0-74d1-41a7-9da2-c0463049f182' with name 'vitis-run_compile_example_acc'
+02/16/25 00:25:20: GUIDANCE_SMGR: closing session for UUID 'f16336c0-74d1-41a7-9da2-c0463049f182' with name 'vitis-run_compile_example_acc'
+02/16/25 00:25:20: STOP_SERVER received, server token: f5fd4267-006d-440b-b907-c9b56d5e3599, passed token: f5fd4267-006d-440b-b907-c9b56d5e3599
+02/16/25 00:25:20: Socket received request to stop server.
+02/16/25 00:25:20: Dispatch Server: do_await_stop
+02/16/25 00:25:20: SERVER: destructor for server bound to port 64465
+02/16/25 00:25:20: Server exiting with status 0.
+02/16/25 00:25:20: Closing log file.
+02/16/25 00:34:59: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:34:59: Server was asked to start on port: '64542'
+02/16/25 00:34:59: Server is using token UUID: 'e0c81c91-3542-4e7b-ab52-4fd9aaa82f76'
+02/16/25 00:34:59: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:34:59: Attempting to start server on port '64542'
+02/16/25 00:34:59: Running Dispatch Server
+02/16/25 00:34:59: Version 2.2.0
+02/16/25 00:35:01: Dispatch Server: Accepted socket connection from client
+02/16/25 00:35:01: Starting Socket connection
+02/16/25 00:35:01: EXCHANGE_TOKEN received, server token: e0c81c91-3542-4e7b-ab52-4fd9aaa82f76, passed token: e0c81c91-3542-4e7b-ab52-4fd9aaa82f76
+02/16/25 00:35:01: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:35:01: SESSION_MGR: creating session with session uuid: '62da0aef-0313-4dfc-be2c-77b47df27d46' and name 'vitis-run_compile_example_acc'
+02/16/25 00:35:01: KERNEL_SVC: creating session with uuid: '62da0aef-0313-4dfc-be2c-77b47df27d46' and name 'vitis-run_compile_example_acc'
+02/16/25 00:35:01: GUIDANCE_SMGR: creating guidance session with uuid: '62da0aef-0313-4dfc-be2c-77b47df27d46' and name 'vitis-run_compile_example_acc'
+02/16/25 00:35:08: Dispatch Server: Accepted socket connection from client
+02/16/25 00:35:08: Starting Socket connection
+02/16/25 00:35:12: SESSION_MGR: closing session for UUID '62da0aef-0313-4dfc-be2c-77b47df27d46' with name 'vitis-run_compile_example_acc'
+02/16/25 00:35:12: KERNEL_SVC: closing session for UUID '62da0aef-0313-4dfc-be2c-77b47df27d46' with name 'vitis-run_compile_example_acc'
+02/16/25 00:35:12: GUIDANCE_SMGR: closing session for UUID '62da0aef-0313-4dfc-be2c-77b47df27d46' with name 'vitis-run_compile_example_acc'
+02/16/25 00:35:12: STOP_SERVER received, server token: e0c81c91-3542-4e7b-ab52-4fd9aaa82f76, passed token: e0c81c91-3542-4e7b-ab52-4fd9aaa82f76
+02/16/25 00:35:12: Socket received request to stop server.
+02/16/25 00:35:12: Dispatch Server: do_await_stop
+02/16/25 00:35:12: SERVER: destructor for server bound to port 64542
+02/16/25 00:35:12: Server exiting with status 0.
+02/16/25 00:35:12: Closing log file.
+02/16/25 00:36:01: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:36:01: Server was asked to start on port: '64557'
+02/16/25 00:36:01: Server is using token UUID: '31924a29-1bd7-4d8f-af76-31af4ddaf41a'
+02/16/25 00:36:01: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:36:01: Attempting to start server on port '64557'
+02/16/25 00:36:01: Running Dispatch Server
+02/16/25 00:36:01: Version 2.2.0
+02/16/25 00:36:02: Dispatch Server: Accepted socket connection from client
+02/16/25 00:36:02: Starting Socket connection
+02/16/25 00:36:02: EXCHANGE_TOKEN received, server token: 31924a29-1bd7-4d8f-af76-31af4ddaf41a, passed token: 31924a29-1bd7-4d8f-af76-31af4ddaf41a
+02/16/25 00:36:02: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:36:02: SESSION_MGR: creating session with session uuid: '81832793-d50d-4d15-a961-1930344f04ed' and name 'v++_compile_example_acc'
+02/16/25 00:36:02: KERNEL_SVC: creating session with uuid: '81832793-d50d-4d15-a961-1930344f04ed' and name 'v++_compile_example_acc'
+02/16/25 00:36:02: GUIDANCE_SMGR: creating guidance session with uuid: '81832793-d50d-4d15-a961-1930344f04ed' and name 'v++_compile_example_acc'
+02/16/25 00:36:11: Dispatch Server: Accepted socket connection from client
+02/16/25 00:36:11: Starting Socket connection
+02/16/25 00:36:39: SESSION_MGR: closing session for UUID '81832793-d50d-4d15-a961-1930344f04ed' with name 'v++_compile_example_acc'
+02/16/25 00:36:39: KERNEL_SVC: closing session for UUID '81832793-d50d-4d15-a961-1930344f04ed' with name 'v++_compile_example_acc'
+02/16/25 00:36:39: GUIDANCE_SMGR: closing session for UUID '81832793-d50d-4d15-a961-1930344f04ed' with name 'v++_compile_example_acc'
+02/16/25 00:36:39: STOP_SERVER received, server token: 31924a29-1bd7-4d8f-af76-31af4ddaf41a, passed token: 31924a29-1bd7-4d8f-af76-31af4ddaf41a
+02/16/25 00:36:39: Socket received request to stop server.
+02/16/25 00:36:39: Dispatch Server: do_await_stop
+02/16/25 00:36:39: SERVER: destructor for server bound to port 64557
+02/16/25 00:36:39: Server exiting with status 0.
+02/16/25 00:36:39: Closing log file.
+02/16/25 00:39:22: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:39:22: Server was asked to start on port: '64586'
+02/16/25 00:39:22: Server is using token UUID: '3de16ae6-8d7b-47f0-8e99-f164eac3afd0'
+02/16/25 00:39:22: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:39:22: Attempting to start server on port '64586'
+02/16/25 00:39:22: Running Dispatch Server
+02/16/25 00:39:22: Version 2.2.0
+02/16/25 00:39:23: Dispatch Server: Accepted socket connection from client
+02/16/25 00:39:23: Starting Socket connection
+02/16/25 00:39:23: EXCHANGE_TOKEN received, server token: 3de16ae6-8d7b-47f0-8e99-f164eac3afd0, passed token: 3de16ae6-8d7b-47f0-8e99-f164eac3afd0
+02/16/25 00:39:23: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:39:23: SESSION_MGR: creating session with session uuid: '8588ab0a-f786-4a0b-bca5-fc0412e85289' and name 'vitis-run_compile_example_acc'
+02/16/25 00:39:23: KERNEL_SVC: creating session with uuid: '8588ab0a-f786-4a0b-bca5-fc0412e85289' and name 'vitis-run_compile_example_acc'
+02/16/25 00:39:23: GUIDANCE_SMGR: creating guidance session with uuid: '8588ab0a-f786-4a0b-bca5-fc0412e85289' and name 'vitis-run_compile_example_acc'
+02/16/25 00:39:32: Dispatch Server: Accepted socket connection from client
+02/16/25 00:39:32: Starting Socket connection
+02/16/25 00:40:11: SESSION_MGR: closing session for UUID '8588ab0a-f786-4a0b-bca5-fc0412e85289' with name 'vitis-run_compile_example_acc'
+02/16/25 00:40:11: KERNEL_SVC: closing session for UUID '8588ab0a-f786-4a0b-bca5-fc0412e85289' with name 'vitis-run_compile_example_acc'
+02/16/25 00:40:11: GUIDANCE_SMGR: closing session for UUID '8588ab0a-f786-4a0b-bca5-fc0412e85289' with name 'vitis-run_compile_example_acc'
+02/16/25 00:40:11: STOP_SERVER received, server token: 3de16ae6-8d7b-47f0-8e99-f164eac3afd0, passed token: 3de16ae6-8d7b-47f0-8e99-f164eac3afd0
+02/16/25 00:40:11: Socket received request to stop server.
+02/16/25 00:40:11: Dispatch Server: do_await_stop
+02/16/25 00:40:11: SERVER: destructor for server bound to port 64586
+02/16/25 00:40:11: Server exiting with status 0.
+02/16/25 00:40:11: Closing log file.
+02/16/25 00:40:40: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:40:40: Server was asked to start on port: '64616'
+02/16/25 00:40:40: Server is using token UUID: '84fa1193-c88c-4c4e-a641-9ba7228747a2'
+02/16/25 00:40:40: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:40:40: Attempting to start server on port '64616'
+02/16/25 00:40:40: Running Dispatch Server
+02/16/25 00:40:40: Version 2.2.0
+02/16/25 00:40:41: Dispatch Server: Accepted socket connection from client
+02/16/25 00:40:41: Starting Socket connection
+02/16/25 00:40:41: EXCHANGE_TOKEN received, server token: 84fa1193-c88c-4c4e-a641-9ba7228747a2, passed token: 84fa1193-c88c-4c4e-a641-9ba7228747a2
+02/16/25 00:40:41: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:40:41: SESSION_MGR: creating session with session uuid: 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' and name 'v++_compile_example_acc'
+02/16/25 00:40:41: KERNEL_SVC: creating session with uuid: 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' and name 'v++_compile_example_acc'
+02/16/25 00:40:41: GUIDANCE_SMGR: creating guidance session with uuid: 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' and name 'v++_compile_example_acc'
+02/16/25 00:40:49: Dispatch Server: Accepted socket connection from client
+02/16/25 00:40:49: Starting Socket connection
+02/16/25 00:41:19: SESSION_MGR: closing session for UUID 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' with name 'v++_compile_example_acc'
+02/16/25 00:41:19: KERNEL_SVC: closing session for UUID 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' with name 'v++_compile_example_acc'
+02/16/25 00:41:19: GUIDANCE_SMGR: closing session for UUID 'd7d5162c-0ae4-4c01-9a61-d9d6e96b1853' with name 'v++_compile_example_acc'
+02/16/25 00:41:19: STOP_SERVER received, server token: 84fa1193-c88c-4c4e-a641-9ba7228747a2, passed token: 84fa1193-c88c-4c4e-a641-9ba7228747a2
+02/16/25 00:41:19: Socket received request to stop server.
+02/16/25 00:41:19: Dispatch Server: do_await_stop
+02/16/25 00:41:19: SERVER: destructor for server bound to port 64616
+02/16/25 00:41:19: Server exiting with status 0.
+02/16/25 00:41:19: Closing log file.
+02/16/25 00:43:01: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:43:01: Server was asked to start on port: '64639'
+02/16/25 00:43:01: Server is using token UUID: 'b51a3237-0483-481f-9dee-b8ace160e9d4'
+02/16/25 00:43:01: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:43:01: Attempting to start server on port '64639'
+02/16/25 00:43:01: Running Dispatch Server
+02/16/25 00:43:01: Version 2.2.0
+02/16/25 00:43:03: Dispatch Server: Accepted socket connection from client
+02/16/25 00:43:03: Starting Socket connection
+02/16/25 00:43:03: EXCHANGE_TOKEN received, server token: b51a3237-0483-481f-9dee-b8ace160e9d4, passed token: b51a3237-0483-481f-9dee-b8ace160e9d4
+02/16/25 00:43:03: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:43:03: SESSION_MGR: creating session with session uuid: '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' and name 'vitis-run_compile_example_acc'
+02/16/25 00:43:03: KERNEL_SVC: creating session with uuid: '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' and name 'vitis-run_compile_example_acc'
+02/16/25 00:43:03: GUIDANCE_SMGR: creating guidance session with uuid: '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' and name 'vitis-run_compile_example_acc'
+02/16/25 00:43:11: Dispatch Server: Accepted socket connection from client
+02/16/25 00:43:11: Starting Socket connection
+02/16/25 00:43:50: SESSION_MGR: closing session for UUID '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' with name 'vitis-run_compile_example_acc'
+02/16/25 00:43:50: KERNEL_SVC: closing session for UUID '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' with name 'vitis-run_compile_example_acc'
+02/16/25 00:43:50: GUIDANCE_SMGR: closing session for UUID '794e3217-9aec-4f4b-8baf-f6bd0bfd72df' with name 'vitis-run_compile_example_acc'
+02/16/25 00:43:50: STOP_SERVER received, server token: b51a3237-0483-481f-9dee-b8ace160e9d4, passed token: b51a3237-0483-481f-9dee-b8ace160e9d4
+02/16/25 00:43:50: Socket received request to stop server.
+02/16/25 00:43:50: Dispatch Server: do_await_stop
+02/16/25 00:43:50: SERVER: destructor for server bound to port 64639
+02/16/25 00:43:50: Server exiting with status 0.
+02/16/25 00:43:50: Closing log file.
+02/16/25 00:43:59: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/16/25 00:43:59: Server was asked to start on port: '64654'
+02/16/25 00:43:59: Server is using token UUID: '8fb7d638-3c25-455f-a1f8-973efedf1c17'
+02/16/25 00:43:59: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/16/25 00:43:59: Attempting to start server on port '64654'
+02/16/25 00:43:59: Running Dispatch Server
+02/16/25 00:43:59: Version 2.2.0
+02/16/25 00:44:00: Dispatch Server: Accepted socket connection from client
+02/16/25 00:44:00: Starting Socket connection
+02/16/25 00:44:00: EXCHANGE_TOKEN received, server token: 8fb7d638-3c25-455f-a1f8-973efedf1c17, passed token: 8fb7d638-3c25-455f-a1f8-973efedf1c17
+02/16/25 00:44:00: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+02/16/25 00:44:00: SESSION_MGR: creating session with session uuid: 'b390bd5f-d7e0-491d-85e8-e647beced5d7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:44:00: KERNEL_SVC: creating session with uuid: 'b390bd5f-d7e0-491d-85e8-e647beced5d7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:44:00: GUIDANCE_SMGR: creating guidance session with uuid: 'b390bd5f-d7e0-491d-85e8-e647beced5d7' and name 'vitis-run_compile_example_acc'
+02/16/25 00:44:09: Dispatch Server: Accepted socket connection from client
+02/16/25 00:44:09: Starting Socket connection
+02/16/25 00:44:29: SESSION_MGR: closing session for UUID 'b390bd5f-d7e0-491d-85e8-e647beced5d7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:44:29: KERNEL_SVC: closing session for UUID 'b390bd5f-d7e0-491d-85e8-e647beced5d7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:44:29: GUIDANCE_SMGR: closing session for UUID 'b390bd5f-d7e0-491d-85e8-e647beced5d7' with name 'vitis-run_compile_example_acc'
+02/16/25 00:44:29: STOP_SERVER received, server token: 8fb7d638-3c25-455f-a1f8-973efedf1c17, passed token: 8fb7d638-3c25-455f-a1f8-973efedf1c17
+02/16/25 00:44:29: Socket received request to stop server.
+02/16/25 00:44:29: Dispatch Server: do_await_stop
+02/16/25 00:44:29: SERVER: destructor for server bound to port 64654
+02/16/25 00:44:29: Server exiting with status 0.
+02/16/25 00:44:29: Closing log file.

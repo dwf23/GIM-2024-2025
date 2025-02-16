@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'example_acc'
 ================================================================
-* Date:           Sat Feb 15 22:02:42 2025
+* Date:           Sun Feb 16 00:41:16 2025
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        example_acc
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
     |   min   |   max   |    min   |    max   | min | max |                      Type                     |
     +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
-    |       13|       13|  0.130 us|  0.130 us|   12|   12|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    |       61|       61|  0.610 us|  0.610 us|   60|   60|  loop auto-rewind stp(delay=0 clock cycles(s))|
     +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_14_1  |       11|       11|         3|          3|         50|     4|       yes|
+        |- VITIS_LOOP_19_1  |       59|       59|         3|          3|         50|    20|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    102|    -|
+|Expression       |        -|    -|       0|    108|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     106|    168|    0|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|     88|    -|
-|Register         |        -|    -|      70|      -|    -|
+|Register         |        -|    -|      73|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|      70|    190|    0|
+|Total            |        0|    0|     179|    364|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -70,7 +70,13 @@
 
 + Detail: 
     * Instance: 
-    N/A
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |     Instance    |     Module    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |control_s_axi_U  |control_s_axi  |        0|   0|  106|  168|    0|
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |Total            |               |        0|   0|  106|  168|    0|
+    +-----------------+---------------+---------+----+-----+-----+-----+
 
     * DSP: 
     N/A
@@ -85,15 +91,15 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |example_pkt_data_1_fu_114_p2      |         +|   0|  0|  39|          32|           2|
-    |example_pkt_data_fu_99_p2         |         +|   0|  0|  39|          32|           1|
-    |i_fu_129_p2                       |         +|   0|  0|   9|           2|           1|
-    |ap_condition_158                  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln14_fu_135_p2               |      icmp|   0|  0|   9|           2|           2|
+    |example_pkt_data_1_fu_130_p2      |         +|   0|  0|  39|          32|           2|
+    |example_pkt_data_fu_115_p2        |         +|   0|  0|  39|          32|           1|
+    |i_fu_145_p2                       |         +|   0|  0|  12|           5|           1|
+    |ap_condition_196                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln19_fu_151_p2               |      icmp|   0|  0|  12|           5|           5|
     |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
     |ap_block_state3_pp0_stage2_iter0  |        or|   0|  0|   2|           1|           1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |Total                             |          |   0|  0| 102|          71|           9|
+    |Total                             |          |   0|  0| 108|          77|          12|
     +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -105,11 +111,11 @@
     |ap_sig_allocacmp_w1_assign1_load  |   9|          2|   32|         64|
     |data_out_blk_n                    |   9|          2|    1|          2|
     |data_out_int_regslice             |  14|          3|   32|         96|
-    |i3_fu_58                          |   9|          2|    2|          4|
-    |w1_assign1_fu_50                  |   9|          2|   32|         64|
-    |w2_assign2_fu_54                  |   9|          2|   32|         64|
+    |i3_fu_74                          |   9|          2|    5|         10|
+    |w1_assign1_fu_66                  |   9|          2|   32|         64|
+    |w2_assign2_fu_70                  |   9|          2|   32|         64|
     +----------------------------------+----+-----------+-----+-----------+
-    |Total                             |  88|         19|  133|        300|
+    |Total                             |  88|         19|  136|        306|
     +----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -118,11 +124,11 @@
     +------------------+----+----+-----+-----------+
     |ap_CS_fsm         |   3|   0|    3|          0|
     |ap_done_reg       |   1|   0|    1|          0|
-    |i3_fu_58          |   2|   0|    2|          0|
-    |w1_assign1_fu_50  |  32|   0|   32|          0|
-    |w2_assign2_fu_54  |  32|   0|   32|          0|
+    |i3_fu_74          |   5|   0|    5|          0|
+    |w1_assign1_fu_66  |  32|   0|   32|          0|
+    |w2_assign2_fu_70  |  32|   0|   32|          0|
     +------------------+----+----+-----+-----------+
-    |Total             |  70|   0|   70|          0|
+    |Total             |  73|   0|   73|          0|
     +------------------+----+----+-----+-----------+
 
 
@@ -131,20 +137,36 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------+-----+-----+------------+--------------+--------------+
-|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+-----------------+-----+-----+------------+--------------+--------------+
-|ap_clk           |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_rst           |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_start         |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_done          |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_idle          |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_ready         |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
-|ap_return        |  out|   32|  ap_ctrl_hs|   example_acc|  return value|
-|data_out_ap_ack  |   in|    1|       ap_hs|      data_out|       pointer|
-|data_out         |  out|   32|       ap_hs|      data_out|       pointer|
-|data_out_ap_vld  |  out|    1|       ap_hs|      data_out|       pointer|
-|w1               |   in|   32|     ap_none|            w1|        scalar|
-|w2               |   in|   32|     ap_none|            w2|        scalar|
-+-----------------+-----+-----+------------+--------------+--------------+
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_return              |  out|   32|  ap_ctrl_hs|   example_acc|  return value|
+|data_out_ap_ack        |   in|    1|       ap_hs|      data_out|       pointer|
+|data_out               |  out|   32|       ap_hs|      data_out|       pointer|
+|data_out_ap_vld        |  out|    1|       ap_hs|      data_out|       pointer|
+|start_r                |   in|    1|     ap_none|       start_r|        scalar|
++-----------------------+-----+-----+------------+--------------+--------------+
 

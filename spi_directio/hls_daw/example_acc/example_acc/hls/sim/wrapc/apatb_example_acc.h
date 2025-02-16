@@ -9,4 +9,5 @@
 extern "C" int AESL_WRAP_example_acc (
 int w1,
 int w2,
-volatile void* data_out);
+volatile void* data_out,
+char start_r);

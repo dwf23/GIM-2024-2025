@@ -77932,25 +77932,28 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );
 # 5 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
 
 
-int example_acc(int w1, int w2, miso &data_out);
+int example_acc(int w1, int w2, miso &data_out, bool start);
 
 int main()
 {
     std::cout << "Starting Testbench" << "\n";
     int w1 = 10;
     int w2 = 0;
+    bool start = false;
     miso data_out;
 
 
 
 
     std::cout << "Beginning HLS Func" << "\n";
-    example_acc(w1,w2, data_out);
+    start = true;
+    example_acc(w1,w2, data_out, start);
 
 
 

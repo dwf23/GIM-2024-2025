@@ -2,14 +2,19 @@
 #include "hls_directio.h"
 #include "ap_axi_sdata.h"
 #include <iostream>
+#include <memory>
 #include "GIM_comm.h"
 
 
-int example_acc(int w1, int w2, miso &data_out){
+int example_acc(int w1, int w2, miso &data_out, bool start){
 
     pkt example_pkt;
 
-    #pragma HLS interface ap_hs port=data_out
+    #pragma HLS INTERFACE ap_hs port=data_out
+    #pragma HLS INTERFACE mode=s_axilite port=w1
+    #pragma HLS INTERFACE mode=s_axilite port=w2
+    #pragma HLS INTERFACE ap_none port=start
+    #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
 
     for (int i = 0; i< NUM_RUNS; i++) {
         #pragma HLS PIPELINE II=50

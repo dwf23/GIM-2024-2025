@@ -1,0 +1,15 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../demo_last.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../demo_last.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../demo_last.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/drivers/example_acc_v1_0/src" \
+"../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../../demo_last.gen/sources_1/bd/design_1/ipshared/0b25/hdl/verilog/example_acc_control_s_axi.v" \
+"../../../../demo_last.gen/sources_1/bd/design_1/ipshared/0b25/hdl/verilog/example_acc_flow_control_loop_pipe.v" \
+"../../../../demo_last.gen/sources_1/bd/design_1/ipshared/0b25/hdl/verilog/example_acc_regslice_both.v" \
+"../../../../demo_last.gen/sources_1/bd/design_1/ipshared/0b25/hdl/verilog/example_acc.v" \
+"../../../bd/design_1/ip/design_1_example_acc_0_0/sim/design_1_example_acc_0_0.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

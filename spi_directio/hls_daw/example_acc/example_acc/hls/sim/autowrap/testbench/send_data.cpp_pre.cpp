@@ -77943,7 +77943,8 @@ void recv_data(
 int example_acc(
     int w1,
     int w2,
-    miso &data_out
+    miso &data_out,
+    bool start
 );
 # 6 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/send_data.cpp" 2
 

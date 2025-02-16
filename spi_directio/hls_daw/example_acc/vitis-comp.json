@@ -1,11 +1,11 @@
 {
-  "name": "spi_master",
+  "name": "example_acc",
   "type": "HLS",
   "configuration": {
     "componentType": "HLS",
     "configFiles": [
       "hls_config.cfg"
     ],
-    "work_dir": "spi_master"
+    "work_dir": "example_acc"
   }
 }

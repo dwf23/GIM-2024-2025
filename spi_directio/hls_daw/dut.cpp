@@ -1,5 +1,6 @@
 #include "dut.h"
 #include <hls_stream.h>
+#include 
 #include <iostream>
 
 void spi_master(
@@ -17,6 +18,7 @@ void spi_master(
     int send_data = 0;
     bool transfer_active = false;
 
+    //shouldn't the module check to see if the sub is ready to read before sending data?
     while (true) {
         if (data_out.valid() && !transfer_active) {
             send_data = data_out.read();

@@ -1,7 +1,12 @@
 {
   "workspaceRoot": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw",
   "mapping": {
+    "sub_send_data.cpp": "sub_send_data",
     "dut.cpp": "spi_master",
+    "example_acc_tb.cpp": "example_acc",
+    "send_tb.cpp": "sub_send_data",
+    "send_data.cpp": "example_acc",
+    "example_acc.cpp": "example_acc",
     "tb.cpp": "spi_master"
   }
 }

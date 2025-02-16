@@ -1,0 +1,739 @@
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:04:51 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 3.221 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.131 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.44 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 3.499 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 3.968 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:06:06 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.514 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.111 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.694 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.741 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 6.496 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:10:20 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.688 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.113 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.869 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.915 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 6.019 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:11:01 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.596 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.125 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.177 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.843 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.888 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 4.128 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:13:57 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.589 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.118 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.797 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.839 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 6.911 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:15:35 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.512 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.109 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.695 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.742 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 3.739 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:19:25 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.649 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.112 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.835 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.881 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 7.096 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sat Feb 15 20:21:57 -0600 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+Execute     add_files C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\send_data.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\send_data.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(13)
+Execute     add_files C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\send_data.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/send_data.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+Execute     add_files -tb C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -appendflags -cflags -DHW_COSIM 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+Execute     set_top example_acc 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+Execute     set_part xczu3eg-sfvc784-1-e 
+Execute       create_platform xczu3eg-sfvc784-1-e -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+Command       create_platform done; 2.506 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.114 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.702 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+Execute     set_clock_uncertainty 2ns 
+Execute       ap_set_clock -name default -uncertainty 2 -unit ns 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.75 sec.
+Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.459 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 4.598 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

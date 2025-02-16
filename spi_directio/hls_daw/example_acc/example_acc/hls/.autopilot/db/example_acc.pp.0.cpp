@@ -31901,11 +31901,11 @@ __attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2){
  VITIS_LOOP_16_1: for (int i = 0; i< 4; i++) {
         w1 +=1;
         w2 +=2;
-        std::cout << "Modify W1" << "\n";
+        std::cout << "Modify W1: " << w1 << "\n";
 
         example_pkt.data = w1;
         send_data(data_out, example_pkt);
-        std::cout << "Modify W2 buffer" << "\n";
+        std::cout << "Modify W2: " << w2 << "\n";
 
         example_pkt.data = w2;
         send_data(data_out, example_pkt);

@@ -4,7 +4,7 @@
     "calls": "1 1",
     "file": "example_acc.cpp",
     "fileloc": 9,
-    "instructions": 56,
+    "instructions": 58,
     "loads": {
       "L": 4
     },
@@ -12,7 +12,7 @@
     "stores": {
       "L": 4
     },
-    "total_instructions": 129
+    "total_instructions": 131
   },
   "1": {
     "basicblocks": 1,

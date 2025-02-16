@@ -10,7 +10,6 @@
 void send_data(miso &data_out, pkt example_pkt) {
     
 
-
     data_out.write(example_pkt.data);
 
 }

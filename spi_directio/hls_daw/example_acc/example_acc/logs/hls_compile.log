@@ -1,16 +1,16 @@
-INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc\example_acc.hlscompile_summary, at 02/15/25 21:12:33
+INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc\example_acc.hlscompile_summary, at 02/15/25 21:14:52
 INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc -config C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg -cmdlineconfig C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
   **** SW Build 5069499 on May 21 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sat Feb 15 21:12:35 2025
+  **** Start of session at: Sat Feb 15 21:14:54 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
-INFO: [HLS 200-10] For user 'Dawso' on host 'laptop-dp0ojsk0' (Windows NT_amd64 version 10.0) on Sat Feb 15 21:12:36 -0600 2025
+INFO: [HLS 200-10] For user 'Dawso' on host 'laptop-dp0ojsk0' (Windows NT_amd64 version 10.0) on Sat Feb 15 21:14:55 -0600 2025
 INFO: [HLS 200-10] In directory 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc'
 INFO: [HLS 200-2005] Using work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
@@ -33,12 +33,12 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 4.211 seconds; current allocated memory: 230.301 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 4.157 seconds; current allocated memory: 230.648 MB.
 INFO: [HLS 200-10] Analyzing design file '../send_data.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file '../example_acc.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.307 seconds; current allocated memory: 233.324 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 13.317 seconds; current allocated memory: 233.656 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 131 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
@@ -56,14 +56,14 @@ INFO: [HLS 200-1995] There were 5 instructions in the design after the 'HW Trans
 INFO: [HLS 200-1995] There were 6 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 214-178] Inlining function 'send_data(hls::directio<int>&, hls::axis<ap_int<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)' into 'example_acc(int, int)' (../example_acc.cpp:9:0)
 WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'example_acc(int, int)' (../example_acc.cpp:14:9)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.712 seconds; current allocated memory: 234.988 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 234.992 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.75 seconds; current allocated memory: 235.344 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 235.344 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 239.375 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 239.230 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 241.746 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 262.441 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 262.520 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 241.562 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 262.625 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 262.824 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'example_acc' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -71,13 +71,13 @@ INFO: [HLS 200-42] -- Implementing module 'example_acc'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 262.520 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 262.824 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 262.520 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 262.824 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'example_acc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -89,11 +89,11 @@ WARNING: [RTGEN 206-101] Port 'example_acc/w1' has no fanin or fanout and is lef
 WARNING: [RTGEN 206-101] Port 'example_acc/w2' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'example_acc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 262.520 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.373 seconds; current allocated memory: 264.184 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.768 seconds; current allocated memory: 265.410 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 262.824 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.378 seconds; current allocated memory: 265.418 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.73 seconds; current allocated memory: 266.113 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for example_acc.
 INFO: [VLOG 209-307] Generating Verilog RTL for example_acc.
 INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 29.999 seconds; peak allocated memory: 265.781 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 29.955 seconds; peak allocated memory: 266.512 MB.
 INFO: [v++ 60-791] Total elapsed time: 0h 0m 34s

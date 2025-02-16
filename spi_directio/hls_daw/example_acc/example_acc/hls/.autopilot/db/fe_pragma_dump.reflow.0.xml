@@ -3,6 +3,7 @@
 <pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="../example_acc.cpp" line="15" pragmaType="pipeline" parentfunction="example_acc" off="0" ii="50" rewind="0" style=""/>
 <pragma file="../example_acc.cpp" line="12" pragmaType="interface" parentfunction="example_acc" mode="ap_hs" port="data_out" name="" register="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int(int)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator long long() const" off="0" region="0" recursive="0"/>

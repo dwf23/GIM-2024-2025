@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'example_acc'
 ================================================================
 + General Information: 
-    * Date:           Sat Feb 15 21:57:17 2025
+    * Date:           Sat Feb 15 22:02:42 2025
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        example_acc
     * Solution:       hls (Vivado IP Flow Target)
@@ -19,8 +19,8 @@
     |       Modules      | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |          |           |     |
     |       & Loops      | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
     +--------------------+------+------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
-    |+ example_acc       |    II|  5.82|       10|  100.000|         -|        8|     -|    rewind|     -|   -|  73 (~0%)|  232 (~0%)|    -|
-    | o VITIS_LOOP_14_1  |    II|  8.00|        8|   80.000|         3|        2|     4|       yes|     -|   -|         -|          -|    -|
+    |+ example_acc       |    II|  5.82|       13|  130.000|         -|       12|     -|    rewind|     -|   -|  70 (~0%)|  190 (~0%)|    -|
+    | o VITIS_LOOP_14_1  |     -|  8.00|       11|  110.000|         3|        3|     4|       yes|     -|   -|         -|          -|    -|
     +--------------------+------+------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
 
 
@@ -80,10 +80,10 @@
 | Name                           | DSP | Pragma | Variable           | Op    | Impl   | Latency |
 +--------------------------------+-----+--------+--------------------+-------+--------+---------+
 | + example_acc                  | 0   |        |                    |       |        |         |
-|   example_pkt_data_fu_100_p2   |     |        | example_pkt_data   | add   | fabric | 0       |
-|   example_pkt_data_1_fu_132_p2 |     |        | example_pkt_data_1 | add   | fabric | 0       |
-|   i_fu_107_p2                  |     |        | i                  | add   | fabric | 0       |
-|   icmp_ln14_fu_113_p2          |     |        | icmp_ln14          | seteq | auto   | 0       |
+|   example_pkt_data_fu_99_p2    |     |        | example_pkt_data   | add   | fabric | 0       |
+|   example_pkt_data_1_fu_114_p2 |     |        | example_pkt_data_1 | add   | fabric | 0       |
+|   i_fu_129_p2                  |     |        | i                  | add   | fabric | 0       |
+|   icmp_ln14_fu_135_p2          |     |        | icmp_ln14          | seteq | auto   | 0       |
 +--------------------------------+-----+--------+--------------------+-------+--------+---------+
 
 
@@ -100,6 +100,7 @@
 | Type      | Options             | Location                                       |
 +-----------+---------------------+------------------------------------------------+
 | interface | ap_hs port=data_out | ../example_acc.cpp:12 in example_acc, data_out |
+| pipeline  | II=50               | ../example_acc.cpp:15 in example_acc           |
 | interface | ap_hs port=data_out | ../send_data.cpp:12 in send_data, data_out     |
 +-----------+---------------------+------------------------------------------------+
 

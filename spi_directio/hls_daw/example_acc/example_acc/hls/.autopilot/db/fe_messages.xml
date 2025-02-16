@@ -68,6 +68,9 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_hs port=data_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=50" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../example_acc.cpp:8:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="32" HwTyName="scalar" Name="data_out"/>
     </msg>

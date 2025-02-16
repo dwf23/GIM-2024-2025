@@ -584,63 +584,6 @@
 						<name>w1_assign1_load</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>15</lineNumber>
-						<contextFuncName>example_acc</contextFuncName>
-						<contextNormFuncName>example_acc</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../example_acc.cpp</first>
-											<second>example_acc</second>
-										</first>
-										<second>15</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>58</item>
-					<item>196</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>10</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_14">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>23</id>
-						<name>w2_assign2_load</name>
-						<fileName>../example_acc.cpp</fileName>
-						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
 						<lineNumber>16</lineNumber>
 						<contextFuncName>example_acc</contextFuncName>
 						<contextNormFuncName>example_acc</contextNormFuncName>
@@ -678,8 +621,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>59</item>
-					<item>194</item>
+					<item>58</item>
+					<item>197</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -687,7 +630,64 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>19</m_topoIndex>
+				<m_topoIndex>10</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_14">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>23</id>
+						<name>w2_assign2_load</name>
+						<fileName>../example_acc.cpp</fileName>
+						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
+						<lineNumber>17</lineNumber>
+						<contextFuncName>example_acc</contextFuncName>
+						<contextNormFuncName>example_acc</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../example_acc.cpp</first>
+											<second>example_acc</second>
+										</first>
+										<second>17</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>59</item>
+					<item>195</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>14</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_15">
@@ -736,7 +736,7 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>60</item>
-					<item>192</item>
+					<item>193</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -744,7 +744,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>11</m_topoIndex>
+				<m_topoIndex>18</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_16">
@@ -753,63 +753,6 @@
 						<type>0</type>
 						<id>28</id>
 						<name>example_pkt_data</name>
-						<fileName>../example_acc.cpp</fileName>
-						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>15</lineNumber>
-						<contextFuncName>example_acc</contextFuncName>
-						<contextNormFuncName>example_acc</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../example_acc.cpp</first>
-											<second>example_acc</second>
-										</first>
-										<second>15</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>example_pkt.data</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>61</item>
-					<item>62</item>
-				</oprand_edges>
-				<opcode>add</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.20</m_delay>
-				<m_topoIndex>12</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_17">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>29</id>
-						<name>example_pkt_data_1</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -849,8 +792,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>63</item>
-					<item>65</item>
+					<item>61</item>
+					<item>62</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -858,18 +801,18 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.20</m_delay>
-				<m_topoIndex>20</m_topoIndex>
+				<m_topoIndex>11</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_18">
+			<item class_id_reference="9" object_id="_17">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>30</id>
-						<name>data_out_write_ln20</name>
+						<id>29</id>
+						<name>example_pkt_data_1</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>example_acc</contextFuncName>
 						<contextNormFuncName>example_acc</contextNormFuncName>
 						<inlineStackInfo>
@@ -885,7 +828,64 @@
 											<first>../example_acc.cpp</first>
 											<second>example_acc</second>
 										</first>
-										<second>20</second>
+										<second>17</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>example_pkt.data</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>63</item>
+					<item>65</item>
+				</oprand_edges>
+				<opcode>add</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.20</m_delay>
+				<m_topoIndex>15</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_18">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>30</id>
+						<name>data_out_write_ln21</name>
+						<fileName>../example_acc.cpp</fileName>
+						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
+						<lineNumber>21</lineNumber>
+						<contextFuncName>example_acc</contextFuncName>
+						<contextNormFuncName>example_acc</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../example_acc.cpp</first>
+											<second>example_acc</second>
+										</first>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -911,12 +911,12 @@
 					<item>69</item>
 				</oprand_edges>
 				<opcode>write</opcode>
-				<m_Display>1</m_Display>
+				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>1</m_isLCDNode>
-				<m_isStartOfPath>1</m_isStartOfPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>13</m_topoIndex>
+				<m_topoIndex>12</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_19">
@@ -924,10 +924,10 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>data_out_write_ln24</name>
+						<name>data_out_write_ln25</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>example_acc</contextFuncName>
 						<contextNormFuncName>example_acc</contextNormFuncName>
 						<inlineStackInfo>
@@ -943,7 +943,7 @@
 											<first>../example_acc.cpp</first>
 											<second>example_acc</second>
 										</first>
-										<second>24</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -962,21 +962,20 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>5</count>
+					<count>4</count>
 					<item_version>0</item_version>
 					<item>70</item>
 					<item>71</item>
 					<item>72</item>
-					<item>188</item>
-					<item>2147483647</item>
+					<item>189</item>
 				</oprand_edges>
 				<opcode>write</opcode>
-				<m_Display>1</m_Display>
+				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>1</m_isLCDNode>
+				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>21</m_topoIndex>
+				<m_topoIndex>16</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_20">
@@ -1033,7 +1032,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.62</m_delay>
-				<m_topoIndex>14</m_topoIndex>
+				<m_topoIndex>19</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_21">
@@ -1090,7 +1089,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.62</m_delay>
-				<m_topoIndex>15</m_topoIndex>
+				<m_topoIndex>20</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_22">
@@ -1140,8 +1139,8 @@
 					<item_version>0</item_version>
 					<item>79</item>
 					<item>80</item>
-					<item>189</item>
-					<item>193</item>
+					<item>190</item>
+					<item>194</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1149,7 +1148,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.48</m_delay>
-				<m_topoIndex>16</m_topoIndex>
+				<m_topoIndex>21</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_23">
@@ -1157,7 +1156,66 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>w2_assign2_write_ln16</name>
+						<name>w2_assign2_write_ln17</name>
+						<fileName>../example_acc.cpp</fileName>
+						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
+						<lineNumber>17</lineNumber>
+						<contextFuncName>example_acc</contextFuncName>
+						<contextNormFuncName>example_acc</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../example_acc.cpp</first>
+											<second>example_acc</second>
+										</first>
+										<second>17</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>81</item>
+					<item>82</item>
+					<item>191</item>
+					<item>196</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.48</m_delay>
+				<m_topoIndex>17</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_24">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>36</id>
+						<name>w1_assign1_write_ln16</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -1197,69 +1255,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>81</item>
-					<item>82</item>
-					<item>190</item>
-					<item>195</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.48</m_delay>
-				<m_topoIndex>22</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_24">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>36</id>
-						<name>w1_assign1_write_ln15</name>
-						<fileName>../example_acc.cpp</fileName>
-						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>15</lineNumber>
-						<contextFuncName>example_acc</contextFuncName>
-						<contextNormFuncName>example_acc</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../example_acc.cpp</first>
-											<second>example_acc</second>
-										</first>
-										<second>15</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
 					<item>83</item>
 					<item>84</item>
-					<item>191</item>
-					<item>197</item>
+					<item>192</item>
+					<item>198</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1267,7 +1266,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.48</m_delay>
-				<m_topoIndex>17</m_topoIndex>
+				<m_topoIndex>13</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_25">
@@ -1325,7 +1324,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>18</m_topoIndex>
+				<m_topoIndex>22</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_26">
@@ -1333,10 +1332,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>_ln27</name>
+						<name>_ln28</name>
 						<fileName>../example_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>example_acc</contextFuncName>
 						<contextNormFuncName>example_acc</contextNormFuncName>
 						<inlineStackInfo>
@@ -1352,7 +1351,7 @@
 											<first>../example_acc.cpp</first>
 											<second>example_acc</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -1693,7 +1692,7 @@
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>51</count>
+			<count>50</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_36">
 				<id>42</id>
@@ -1955,109 +1954,102 @@
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_73">
-				<id>185</id>
+				<id>186</id>
 				<edge_type>2</edge_type>
 				<source_obj>21</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_74">
-				<id>186</id>
+				<id>187</id>
 				<edge_type>2</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>40</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_75">
-				<id>187</id>
+				<id>188</id>
 				<edge_type>2</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_76">
-				<id>188</id>
+				<id>189</id>
 				<edge_type>4</edge_type>
 				<source_obj>30</source_obj>
 				<sink_obj>31</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_77">
-				<id>189</id>
+				<id>190</id>
 				<edge_type>4</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>34</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_78">
-				<id>190</id>
+				<id>191</id>
 				<edge_type>4</edge_type>
 				<source_obj>23</source_obj>
 				<sink_obj>35</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_79">
-				<id>191</id>
+				<id>192</id>
 				<edge_type>4</edge_type>
 				<source_obj>22</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_80">
-				<id>192</id>
+				<id>193</id>
 				<edge_type>4</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>24</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_81">
-				<id>193</id>
+				<id>194</id>
 				<edge_type>4</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>34</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_82">
-				<id>194</id>
+				<id>195</id>
 				<edge_type>4</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>23</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_83">
-				<id>195</id>
+				<id>196</id>
 				<edge_type>4</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>35</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_84">
-				<id>196</id>
+				<id>197</id>
 				<edge_type>4</edge_type>
 				<source_obj>19</source_obj>
 				<sink_obj>22</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_85">
-				<id>197</id>
+				<id>198</id>
 				<edge_type>4</edge_type>
 				<source_obj>19</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_86">
-				<id>2147483647</id>
-				<edge_type>1</edge_type>
-				<source_obj>31</source_obj>
-				<sink_obj>30</sink_obj>
-				<is_back_edge>1</is_back_edge>
 			</item>
 		</edges>
 	</cdfg>
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>4</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_87">
+		<item class_id="22" tracking_level="1" version="0" object_id="_86">
 			<mId>1</mId>
 			<mTag>example_acc</mTag>
 			<mNormTag>example_acc</mNormTag>
@@ -2077,12 +2069,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>10</mMinLatency>
-			<mMaxLatency>10</mMaxLatency>
+			<mMinLatency>13</mMinLatency>
+			<mMaxLatency>13</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_88">
+		<item class_id_reference="22" object_id="_87">
 			<mId>2</mId>
 			<mTag>Entry</mTag>
 			<mNormTag>Entry</mNormTag>
@@ -2105,7 +2097,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_89">
+		<item class_id_reference="22" object_id="_88">
 			<mId>3</mId>
 			<mTag>VITIS_LOOP_14_1</mTag>
 			<mNormTag>VITIS_LOOP_14_1</mNormTag>
@@ -2119,16 +2111,16 @@
 				<item_version>0</item_version>
 				<item>38</item>
 			</basic_blocks>
-			<mII>2</mII>
+			<mII>3</mII>
 			<mDepth>3</mDepth>
 			<mMinTripCount>4</mMinTripCount>
 			<mMaxTripCount>4</mMaxTripCount>
-			<mMinLatency>8</mMinLatency>
-			<mMaxLatency>8</mMaxLatency>
+			<mMinLatency>11</mMinLatency>
+			<mMaxLatency>11</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_90">
+		<item class_id_reference="22" object_id="_89">
 			<mId>4</mId>
 			<mTag>Return</mTag>
 			<mNormTag>Return</mNormTag>
@@ -2237,7 +2229,7 @@
 		<item>
 			<first>24</first>
 			<second>
-				<first>0</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2272,21 +2264,21 @@
 		<item>
 			<first>32</first>
 			<second>
-				<first>0</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
-				<first>0</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
-				<first>0</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2307,7 +2299,7 @@
 		<item>
 			<first>37</first>
 			<second>
-				<first>0</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2347,7 +2339,7 @@
 	<regions class_id="32" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_91">
+		<item class_id="33" tracking_level="1" version="0" object_id="_90">
 			<region_name>VITIS_LOOP_14_1</region_name>
 			<basic_blocks>
 				<count>1</count>
@@ -2360,47 +2352,19 @@
 			</nodes>
 			<anchor_node>-1</anchor_node>
 			<region_type>8</region_type>
-			<interval>2</interval>
+			<interval>3</interval>
 			<pipe_depth>3</pipe_depth>
 			<mDBIIViolationVec class_id="34" tracking_level="0" version="0">
-				<count>1</count>
+				<count>0</count>
 				<item_version>0</item_version>
-				<item class_id="35" tracking_level="1" version="0" object_id="_92">
-					<mType>0</mType>
-					<mFailedII>1</mFailedII>
-					<mDependenceDistance>1</mDependenceDistance>
-					<mNumPorts>-1</mNumPorts>
-					<mLimitedResource class_id="36" tracking_level="0" version="0">
-						<first class_id="-1"></first>
-						<second>0</second>
-					</mLimitedResource>
-					<mNodesInfo class_id="37" tracking_level="0" version="0">
-						<count>2</count>
-						<item_version>0</item_version>
-						<item class_id="38" tracking_level="0" version="0">
-							<first class_id="39" tracking_level="0" version="0">
-								<first class_id_reference="9" object_id_reference="_19"></first>
-								<second></second>
-							</first>
-							<second>31</second>
-						</item>
-						<item>
-							<first>
-								<first class_id_reference="9" object_id_reference="_18"></first>
-								<second></second>
-							</first>
-							<second>30</second>
-						</item>
-					</mNodesInfo>
-				</item>
 			</mDBIIViolationVec>
 		</item>
 	</regions>
-	<dp_fu_nodes class_id="40" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="35" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="41" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -2416,7 +2380,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="42" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="37" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -2436,7 +2400,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="43" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="38" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_port_io_nodes>

@@ -12,6 +12,7 @@ int example_acc(int w1, int w2, miso &data_out){
     #pragma HLS interface ap_hs port=data_out
 
     for (int i = 0; i< NUM_RUNS; i++) {
+        #pragma HLS PIPELINE II=50
         w1 +=1;
         w2 +=2;
         std::cout << "Modify W1: " << w1 <<  "\n";

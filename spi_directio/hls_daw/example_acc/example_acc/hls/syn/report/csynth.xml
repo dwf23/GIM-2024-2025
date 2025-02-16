@@ -19,22 +19,22 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>10</Best-caseLatency>
-            <Average-caseLatency>10</Average-caseLatency>
-            <Worst-caseLatency>10</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
-            <Interval-min>8</Interval-min>
-            <Interval-max>8</Interval-max>
+            <Best-caseLatency>13</Best-caseLatency>
+            <Average-caseLatency>13</Average-caseLatency>
+            <Worst-caseLatency>13</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+            <Interval-min>12</Interval-min>
+            <Interval-max>12</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <VITIS_LOOP_14_1>
                 <Slack>8.00</Slack>
                 <TripCount>4</TripCount>
-                <Latency>8</Latency>
-                <AbsoluteTimeLatency>80</AbsoluteTimeLatency>
-                <PipelineII>2</PipelineII>
+                <Latency>11</Latency>
+                <AbsoluteTimeLatency>110</AbsoluteTimeLatency>
+                <PipelineII>3</PipelineII>
                 <PipelineDepth>3</PipelineDepth>
                 <InstanceList/>
             </VITIS_LOOP_14_1>
@@ -46,18 +46,17 @@
             <SummaryOfLoopViolations>
                 <VITIS_LOOP_14_1>
                     <Name>VITIS_LOOP_14_1</Name>
-                    <IssueType>II Violation</IssueType>
-                    <ViolationType>Memory Dependency</ViolationType>
-                    <IterationDistance>1</IterationDistance>
-                    <SourceLocation>../example_acc.cpp:15</SourceLocation>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../example_acc.cpp:16</SourceLocation>
                 </VITIS_LOOP_14_1>
             </SummaryOfLoopViolations>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <FF>73</FF>
-            <LUT>230</LUT>
+            <FF>70</FF>
+            <LUT>190</LUT>
             <BRAM_18K>0</BRAM_18K>
             <DSP>0</DSP>
             <URAM>0</URAM>
@@ -212,7 +211,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>example_acc</ModuleName>
-            <BindInstances>example_pkt_data_fu_100_p2 example_pkt_data_1_fu_132_p2 i_fu_107_p2 icmp_ln14_fu_113_p2</BindInstances>
+            <BindInstances>example_pkt_data_fu_99_p2 example_pkt_data_1_fu_114_p2 i_fu_129_p2 icmp_ln14_fu_135_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -228,13 +227,13 @@
                     <EstimatedClockPeriod>2.181</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>10</Best-caseLatency>
-                    <Average-caseLatency>10</Average-caseLatency>
-                    <Worst-caseLatency>10</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>8</PipelineInitiationInterval>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
                     <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -242,9 +241,9 @@
                         <Name>VITIS_LOOP_14_1</Name>
                         <Slack>8.00</Slack>
                         <TripCount>4</TripCount>
-                        <Latency>8</Latency>
-                        <AbsoluteTimeLatency>80.000 ns</AbsoluteTimeLatency>
-                        <PipelineII>2</PipelineII>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
@@ -257,20 +256,19 @@
                     <SummaryOfLoopViolations>
                         <VITIS_LOOP_14_1>
                             <Name>VITIS_LOOP_14_1</Name>
-                            <IssueType>II Violation</IssueType>
-                            <ViolationType>Memory Dependency</ViolationType>
-                            <IterationDistance>1</IterationDistance>
-                            <SourceLocation>../example_acc.cpp:15</SourceLocation>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../example_acc.cpp:16</SourceLocation>
                         </VITIS_LOOP_14_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>73</FF>
+                    <FF>70</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>232</LUT>
+                    <LUT>190</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -285,10 +283,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_fu_100_p2" SOURCE="../example_acc.cpp:15" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_1_fu_132_p2" SOURCE="../example_acc.cpp:16" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data_1" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_107_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln14_fu_113_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_fu_99_p2" SOURCE="../example_acc.cpp:16" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_1_fu_114_p2" SOURCE="../example_acc.cpp:17" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_129_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln14_fu_135_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln14" VISIBLE="false"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -443,6 +441,7 @@
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
         <Pragma type="interface" location="../example_acc.cpp:12" status="valid" parentFunction="example_acc" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
+        <Pragma type="pipeline" location="../example_acc.cpp:15" status="valid" parentFunction="example_acc" variable="" isDirective="0" options="II=50"/>
         <Pragma type="interface" location="../send_data.cpp:12" status="valid" parentFunction="send_data" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
     </PragmaReport>
 </profile>

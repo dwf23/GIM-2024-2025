@@ -31898,7 +31898,8 @@ __attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2, mi
 #pragma HLS interface ap_hs port=data_out
 
  VITIS_LOOP_14_1: for (int i = 0; i< 4; i++) {
-        w1 +=1;
+#pragma HLS PIPELINE II=50
+ w1 +=1;
         w2 +=2;
         std::cout << "Modify W1: " << w1 << "\n";
 

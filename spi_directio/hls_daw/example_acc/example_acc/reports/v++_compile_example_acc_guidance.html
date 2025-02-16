@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2024.1 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Sat Feb 15 21:57:19 2025</td></tr>
+<tr><td><b>Date</b></td><td>Sat Feb 15 22:02:43 2025</td></tr>
 <tr><td><b>Host</b></td><td>LAPTOP-DP0OJSK0 running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\hls_config.cfg --work_dir example_acc </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 4
+<pre>Violations found: 3
 </pre>
 <pre>Rule Specs Violated: 2
 </pre>
@@ -3436,22 +3436,11 @@ window.onload = function () { addSorting(); }
 <tr>
 <td align="left">1</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.example_acc.Throughput</td>
-<td align="left">The II Violation in module 'example_acc' (loop 'VITIS_LOOP_14_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between register write operation ('data_out_write_ln24', <a href="file:///C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc\../example_acc.cpp#line=24">example_acc.cpp</a>) on port 'data_out' (<a href="file:///C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc\../example_acc.cpp#line=24">example_acc.cpp</a>) and register write operation ('data_out_write_ln20', <a href="file:///C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc\../example_acc.cpp#line=20">example_acc.cpp</a>) on port 'data_out' (<a href="file:///C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc\../example_acc.cpp#line=20">example_acc.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.example_acc.Kernel</td>
-<td align="left">**** Estimated Fmax: 458.51 MHz
+<td align="left">Pipelining result : Target II = 50, Final II = 3, Depth = 3, loop 'VITIS_LOOP_14_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3462,18 +3451,18 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.example_acc.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+<td align="left">**** Estimated Fmax: 458.51 MHz
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">2</td>
-<td align="left">Throughput</td>
+<td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.example_acc.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_14_1'
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.example_acc.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

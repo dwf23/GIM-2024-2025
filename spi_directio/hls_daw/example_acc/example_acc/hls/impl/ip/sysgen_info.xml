@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdditionalInfo>
+  <CTypeInfo>
+      <RtlPort>
+        <name>data_out</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>data_out_ap_ack</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>data_out_ap_vld</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+  </CTypeInfo>
+  <DesignConstraint>
+    <clk_period>10</clk_period>
+  </DesignConstraint>
+  <Machine>64</Machine>
+  <modelParameters>
+    <combinational>0</combinational>
+    <latency>13</latency>
+    <II>12</II>
+  </modelParameters>
+</AdditionalInfo>

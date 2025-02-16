@@ -19,13 +19,13 @@
 <EstimatedClockPeriod>2.181</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>10</Best-caseLatency>
-<Average-caseLatency>10</Average-caseLatency>
-<Worst-caseLatency>10</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>8</PipelineInitiationInterval>
+<Best-caseLatency>13</Best-caseLatency>
+<Average-caseLatency>13</Average-caseLatency>
+<Worst-caseLatency>13</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>12</PipelineInitiationInterval>
 <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -33,9 +33,9 @@
 <Name>VITIS_LOOP_14_1</Name>
 <Slack>8.00</Slack>
 <TripCount>4</TripCount>
-<Latency>8</Latency>
-<AbsoluteTimeLatency>80.000 ns</AbsoluteTimeLatency>
-<PipelineII>2</PipelineII>
+<Latency>11</Latency>
+<AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+<PipelineII>3</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
@@ -49,20 +49,19 @@
 <SummaryOfLoopViolations>
 <VITIS_LOOP_14_1>
 <Name>VITIS_LOOP_14_1</Name>
-<IssueType>II Violation</IssueType>
-<ViolationType>Memory Dependency</ViolationType>
-<IterationDistance>1</IterationDistance>
-<SourceLocation>../example_acc.cpp:15</SourceLocation>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../example_acc.cpp:16</SourceLocation>
 </VITIS_LOOP_14_1>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>73</FF>
+<FF>70</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>232</LUT>
+<LUT>190</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>

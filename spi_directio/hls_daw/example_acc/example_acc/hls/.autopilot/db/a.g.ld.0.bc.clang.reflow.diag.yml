@@ -14,13 +14,3 @@ Args:
   - Bitwidth:        '32'
   - String:          '-bits'
 ...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_14_1
-  - String:          '> at '
-  - LoopLoc:         '../example_acc.cpp:14:19'
-  - String:          ' '
-...

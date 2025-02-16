@@ -1,7 +1,5 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../../../example_acc_tb.cpp in debug mode
-   Compiling ../../../../../send_data.cpp in debug mode
    Compiling ../../../../../example_acc.cpp in debug mode
    Generating csim.exe
 Starting Testbench

@@ -1,0 +1,99 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
+   Compiling example_acc.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example_acc_util.cpp
+   Compiling send_data.cpp_pre.cpp.tb.cpp
+   Compiling example_acc_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example_acc.cpp
+   Compiling apatb_example_acc_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Starting Testbench
+Beginning HLS Func
+Modify W1: 11
+Modify W2: 2
+Modify W1: 12
+Modify W2: 4
+Modify W1: 13
+Modify W2: 6
+Modify W1: 14
+Modify W2: 8
+WARNING [HLS SIM]: hls::directio 'hls::directio<int>0' contains leftover data, which may result in RTL simulation hanging.
+
+C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\sim\verilog>set PATH= 
+
+C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\sim\verilog>call C:/Xilinx/Vivado/2024.1/bin/xelab xil_defaultlib.apatb_example_acc_top glbl -Oenable_linking_all_libraries  -prj example_acc.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib "ieee_proposed=./ieee_proposed" -s example_acc  
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_example_acc_top glbl -Oenable_linking_all_libraries -prj example_acc.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib ieee_proposed=./ieee_proposed -s example_acc 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/AESL_autofifo_data_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_data_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_example_acc_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.example_acc_flow_control_loop_pi...
+Compiling module xil_defaultlib.example_acc_regslice_both(DataWi...
+Compiling module xil_defaultlib.example_acc
+Compiling module xil_defaultlib.AESL_autofifo_data_out
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_example_acc_top
+Compiling module work.glbl
+Built simulation snapshot example_acc
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Feb 15 22:03:55 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/example_acc/xsim_script.tcl
+# xsim {example_acc} -autoloadwcfg -tclbatch {example_acc.tcl}
+Time resolution is 1 ps
+source example_acc.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "255000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 315 ns : File "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.autotb.v" Line 379
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Feb 15 22:03:57 2025...
+Starting Testbench
+Beginning HLS Func
+WARNING [HLS SIM]: hls::directio 'hls::directio<int>0' contains leftover data, which may result in RTL simulation hanging.
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

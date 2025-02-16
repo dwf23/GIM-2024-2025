@@ -31870,7 +31870,7 @@ typedef hls::stream<pkt> stream;
 
 void send_data(
     miso &data_out,
-    pkt example_pkt
+    pkt &example_pkt
 );
 
 void recv_data(
@@ -31881,34 +31881,33 @@ void recv_data(
 
 __attribute__((sdx_kernel("example_acc", 0))) int example_acc(
     int w1,
-    int w2
+    int w2,
+    miso &data_out
 );
 # 6 "../example_acc.cpp" 2
 
 
-
-__attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2){
+__attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2, miso &data_out){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=example_acc
-# 9 "../example_acc.cpp"
+# 8 "../example_acc.cpp"
 
 
     pkt example_pkt;
-    miso data_out;
 
 #pragma HLS interface ap_hs port=data_out
 
- VITIS_LOOP_16_1: for (int i = 0; i< 4; i++) {
+ VITIS_LOOP_14_1: for (int i = 0; i< 4; i++) {
         w1 +=1;
         w2 +=2;
         std::cout << "Modify W1: " << w1 << "\n";
 
         example_pkt.data = w1;
-        send_data(data_out, example_pkt);
+        data_out.write(example_pkt.data);
         std::cout << "Modify W2: " << w2 << "\n";
 
         example_pkt.data = w2;
-        send_data(data_out, example_pkt);
+        data_out.write(example_pkt.data);
     }
 
     return 0;

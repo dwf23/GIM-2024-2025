@@ -15,7 +15,7 @@ typedef hls::stream<pkt> stream;
 
 void send_data(
     miso &data_out, 
-    pkt example_pkt
+    pkt &example_pkt
 );
 
 void recv_data(
@@ -26,5 +26,6 @@ void recv_data(
 
 int example_acc(
     int w1,
-    int w2
+    int w2,
+    miso &data_out
 );

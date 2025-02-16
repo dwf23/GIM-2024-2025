@@ -1,26 +1,26 @@
 --- !Passed
-Pass:            reflow-inliner
-Name:            Inline
-DebugLoc:        { File: ../example_acc.cpp, Line: 9, Column: 0 }
-Function:        _Z11example_accii
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../example_acc.cpp, Line: 8, Column: 0 }
+Function:        _Z11example_acciiRN3hls8directioIiEE
 Args:            
-  - String:          'Inlining function '''
-  - Callee:          'send_data(hls::directio<int>&, hls::axis<ap_int<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)'
-    DebugLoc:        { File: ../send_data.cpp, Line: 10, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'example_acc(int, int)'
-    DebugLoc:        { File: ../example_acc.cpp, Line: 9, Column: 0 }
-  - String:          ''''
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
 ...
---- !Passed
-Pass:            reflow-interface-encoding-change
-Name:            InterfaceFieldStructByValue
-DebugLoc:        { File: ../example_acc.cpp, Line: 14, Column: 9 }
-Function:        _Z11example_accii
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
 Args:            
-  - String:          'Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. '
-  - String:          'In function '''
-  - Function:        'example_acc(int, int)'
-    DebugLoc:        { File: ../example_acc.cpp, Line: 9, Column: 0 }
-  - String:          ''''
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_14_1
+  - String:          '> at '
+  - LoopLoc:         '../example_acc.cpp:14:19'
+  - String:          ' '
 ...

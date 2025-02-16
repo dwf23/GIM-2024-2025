@@ -23,10 +23,15 @@ using namespace std;
 #define AUTOTB_TVOUT_w1 "../tv/cdatafile/c.example_acc.autotvout_w1.dat"
 #define AUTOTB_TVIN_w2 "../tv/cdatafile/c.example_acc.autotvin_w2.dat"
 #define AUTOTB_TVOUT_w2 "../tv/cdatafile/c.example_acc.autotvout_w2.dat"
+#define AUTOTB_TVIN_data_out "../tv/cdatafile/c.example_acc.autotvin_data_out.dat"
+#define AUTOTB_TVOUT_data_out "../tv/cdatafile/c.example_acc.autotvout_data_out.dat"
+#define WRAPC_DIRECTIO_SIZE_OUT_data_out "../tv/directio_size/directio_size_out_data_out.dat"
+#define WRAPC_DIRECTIO_EGRESS_STATUS_data_out "../tv/directio_size/directio_egress_status_data_out.dat"
 #define AUTOTB_TVOUT_return "../tv/cdatafile/c.example_acc.autotvout_ap_return.dat"
 
 
 // tvout file define:
+#define AUTOTB_TVOUT_PC_data_out "../tv/rtldatafile/rtl.example_acc.autotvout_data_out.dat"
 #define AUTOTB_TVOUT_PC_return "../tv/rtldatafile/rtl.example_acc.autotvout_ap_return.dat"
 
 
@@ -1158,10 +1163,10 @@ namespace hls::sim
 
 
 extern "C"
-hls::sim::Byte<4> example_acc_hw_stub_wrapper(hls::sim::Byte<4>, hls::sim::Byte<4>);
+hls::sim::Byte<4> example_acc_hw_stub_wrapper(hls::sim::Byte<4>, hls::sim::Byte<4>, void*);
 
 extern "C"
-hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, hls::sim::Byte<4> __xlx_apatb_param_w2)
+hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, hls::sim::Byte<4> __xlx_apatb_param_w2, void* __xlx_apatb_param_data_out)
 {
   hls::sim::Byte<4> ap_return;
   static hls::sim::Register port0 {
@@ -1198,10 +1203,25 @@ hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, h
   };
   port2.param = &__xlx_apatb_param_w2;
 
+  static hls::sim::DirectIO<hls::sim::Byte<4>> port3 {
+    .width = 32,
+    .name = "data_out",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_data_out),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_data_out),
+    .swriter = new hls::sim::Writer(WRAPC_DIRECTIO_SIZE_OUT_data_out),
+    .gwriter = new hls::sim::Writer(WRAPC_DIRECTIO_EGRESS_STATUS_data_out),
+#endif
+  };
+  port3.param = (hls::directio<hls::sim::Byte<4>>*)__xlx_apatb_param_data_out;
+  port3.hasWrite = true;
+
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
     check(port0);
+    check(port3);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
@@ -1209,11 +1229,15 @@ hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, h
     dump(port2, port2.iwriter, tcl.AESL_transaction);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
+    port3.markSize();
     CodeState = CALL_C_DUT;
-    ap_return = example_acc_hw_stub_wrapper(__xlx_apatb_param_w1, __xlx_apatb_param_w2);
+    ap_return = example_acc_hw_stub_wrapper(__xlx_apatb_param_w1, __xlx_apatb_param_w2, __xlx_apatb_param_data_out);
+    port3.buffer();
     CodeState = DUMP_OUTPUTS;
     dump(port0, port0.owriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
+    dump(port3, tcl.AESL_transaction);
+    port3.doTCL(tcl);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

@@ -12,34 +12,54 @@
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
-        <PipelineType>no</PipelineType>
+        <PipelineType>loop auto-rewind stp(delay=0 clock cycles(s))</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
+            <EstimatedClockPeriod>2.181</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>0</Best-caseLatency>
-            <Average-caseLatency>0</Average-caseLatency>
-            <Worst-caseLatency>0</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
-            <Interval-min>1</Interval-min>
-            <Interval-max>1</Interval-max>
+            <Best-caseLatency>10</Best-caseLatency>
+            <Average-caseLatency>10</Average-caseLatency>
+            <Worst-caseLatency>10</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+            <Interval-min>8</Interval-min>
+            <Interval-max>8</Interval-max>
         </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_14_1>
+                <Slack>8.00</Slack>
+                <TripCount>4</TripCount>
+                <Latency>8</Latency>
+                <AbsoluteTimeLatency>80</AbsoluteTimeLatency>
+                <PipelineII>2</PipelineII>
+                <PipelineDepth>3</PipelineDepth>
+                <InstanceList/>
+            </VITIS_LOOP_14_1>
+        </SummaryOfLoopLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../example_acc.cpp:9</SourceLocation>
+            <SourceLocation>../example_acc.cpp:8</SourceLocation>
+            <SummaryOfLoopViolations>
+                <VITIS_LOOP_14_1>
+                    <Name>VITIS_LOOP_14_1</Name>
+                    <IssueType>II Violation</IssueType>
+                    <ViolationType>Memory Dependency</ViolationType>
+                    <IterationDistance>1</IterationDistance>
+                    <SourceLocation>../example_acc.cpp:15</SourceLocation>
+                </VITIS_LOOP_14_1>
+            </SummaryOfLoopViolations>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
+            <FF>73</FF>
+            <LUT>230</LUT>
             <BRAM_18K>0</BRAM_18K>
             <DSP>0</DSP>
-            <FF>0</FF>
-            <LUT>0</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -51,6 +71,28 @@
         </AvailableResources>
     </AreaEstimates>
     <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>example_acc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>example_acc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
         <RtlPorts>
             <name>ap_start</name>
             <Object>example_acc</Object>
@@ -107,15 +149,40 @@
             <Attribute>data</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_rst</name>
-            <Object>example_acc</Object>
-            <Type>return value</Type>
+            <name>data_out_ap_ack</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out_ap_vld</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
             <name>w1</name>
@@ -143,54 +210,86 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="1">
+        <TopModule MAX_DEPTH="2">
             <ModuleName>example_acc</ModuleName>
+            <BindInstances>example_pkt_data_fu_100_p2 example_pkt_data_1_fu_132_p2 i_fu_107_p2 icmp_ln14_fu_113_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
             <Name>example_acc</Name>
+            <Loops>
+                <VITIS_LOOP_14_1/>
+            </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.00</ClockUncertainty>
-                    <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>2.181</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>0</Best-caseLatency>
-                    <Average-caseLatency>0</Average-caseLatency>
-                    <Worst-caseLatency>0</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>8</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
                 </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_14_1>
+                        <Name>VITIS_LOOP_14_1</Name>
+                        <Slack>8.00</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>8</Latency>
+                        <AbsoluteTimeLatency>80.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_14_1>
+                </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../example_acc.cpp:9</SourceLocation>
+                    <SourceLocation>../example_acc.cpp:8</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_14_1>
+                            <Name>VITIS_LOOP_14_1</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>../example_acc.cpp:15</SourceLocation>
+                        </VITIS_LOOP_14_1>
+                    </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
+                    <FF>73</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>232</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
                     <AVAIL_DSP>360</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
-                    <FF>0</FF>
-                    <AVAIL_FF>141120</AVAIL_FF>
-                    <UTIL_FF>0</UTIL_FF>
-                    <LUT>0</LUT>
-                    <AVAIL_LUT>70560</AVAIL_LUT>
-                    <UTIL_LUT>0</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_fu_100_p2" SOURCE="../example_acc.cpp:15" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_1_fu_132_p2" SOURCE="../example_acc.cpp:16" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_107_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_14_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln14_fu_113_p2" SOURCE="../example_acc.cpp:14" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln14" VISIBLE="false"/>
+            </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
@@ -206,11 +305,40 @@
                 <hwRef type="port" interface="w2" name="w2" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
+        <Arg ArgName="data_out" index="2" direction="out" srcType="directio&lt;int&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="data_out_ap_ack" name="data_out_ap_ack" usage="control" direction="in"/>
+                <hwRef type="port" interface="data_out" name="data_out" usage="data" direction="out"/>
+                <hwRef type="port" interface="data_out_ap_vld" name="data_out_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
     </Args>
     <ReturnValue ReturnValueName="srcType">int</ReturnValue>
     <ReturnValue ReturnValueName="srcSize">32</ReturnValue>
     <ReturnValue ReturnValueName="hwRefs" type="port" interface="ap_return" name="ap_return" usage="data" direction="out"/>
     <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
         <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
             <portMaps>
                 <portMap portMapName="ap_start">start</portMap>
@@ -233,16 +361,16 @@
                 <port>ap_return</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
-            <busParams>
-                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
-            </busParams>
+        <Interface InterfaceName="data_out" type="data" busTypeName="data" protocol="ap_hs" mode="master" dataWidth="32">
             <portMaps>
-                <portMap portMapName="ap_rst">RST</portMap>
+                <portMap portMapName="data_out">DATA</portMap>
             </portMaps>
             <ports>
-                <port>ap_rst</port>
+                <port>data_out</port>
             </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_hs" register_option="0" argName="data_out"/>
+            </constraints>
         </Interface>
         <Interface InterfaceName="w1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
             <portMaps>
@@ -273,6 +401,7 @@
                 <table>
                     <keys size="4">Port, Mode, Direction, Bitwidth</keys>
                     <column name="ap_return">, out, 32</column>
+                    <column name="data_out">ap_hs, out, 32</column>
                     <column name="w1">ap_none, in, 32</column>
                     <column name="w2">ap_none, in, 32</column>
                 </table>
@@ -280,6 +409,7 @@
             <item name="TOP LEVEL CONTROL">
                 <table>
                     <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
                     <column name="ap_rst">reset, ap_rst</column>
                     <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
                 </table>
@@ -293,6 +423,7 @@
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="w1">in, int</column>
                     <column name="w2">in, int</column>
+                    <column name="data_out">out, directio&lt;int&gt;&amp;</column>
                     <column name="return">out, int</column>
                 </table>
             </item>
@@ -301,6 +432,9 @@
                     <keys size="3">Argument, HW Interface, HW Type</keys>
                     <column name="w1">w1, port</column>
                     <column name="w2">w2, port</column>
+                    <column name="data_out">data_out_ap_ack, port</column>
+                    <column name="data_out">data_out, port</column>
+                    <column name="data_out">data_out_ap_vld, port</column>
                     <column name="return">ap_return, port</column>
                 </table>
             </item>
@@ -308,9 +442,8 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="../example_acc.cpp:14" status="warning" parentFunction="example_acc" variable="data_out" isDirective="0" options="ap_hs port=data_out">
-            <Msg msg_id="214-238" msg_severity="WARNING" msg_body="Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'example_acc(int, int)'"/>
-        </Pragma>
+        <Pragma type="interface" location="../example_acc.cpp:12" status="valid" parentFunction="example_acc" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
+        <Pragma type="interface" location="../send_data.cpp:12" status="valid" parentFunction="send_data" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
     </PragmaReport>
 </profile>
 

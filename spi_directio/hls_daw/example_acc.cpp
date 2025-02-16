@@ -5,11 +5,9 @@
 #include "GIM_comm.h"
 
 
-
-int example_acc(int w1, int w2){
+int example_acc(int w1, int w2, miso &data_out){
 
     pkt example_pkt;
-    miso data_out;
 
     #pragma HLS interface ap_hs port=data_out
 
@@ -19,11 +17,11 @@ int example_acc(int w1, int w2){
         std::cout << "Modify W1: " << w1 <<  "\n";
         //id 0 --> w1
         example_pkt.data = w1;
-        send_data(data_out, example_pkt);
+        data_out.write(example_pkt.data);
         std::cout << "Modify W2: " << w2 << "\n";
         //id 1 --> w2
         example_pkt.data = w2;
-        send_data(data_out, example_pkt);
+        data_out.write(example_pkt.data);
     }
 
     return 0;

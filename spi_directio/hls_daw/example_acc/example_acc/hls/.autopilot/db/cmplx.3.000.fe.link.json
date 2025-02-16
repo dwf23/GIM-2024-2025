@@ -1,29 +1,17 @@
 {
   "0": {
     "basicblocks": 7,
-    "calls": "1 1",
+    "calls": "",
     "file": "example_acc.cpp",
-    "fileloc": 9,
-    "instructions": 58,
+    "fileloc": 8,
+    "instructions": 67,
     "loads": {
-      "L": 4
+      "L": 2
     },
     "name": "example_acc",
     "stores": {
       "L": 4
     },
-    "total_instructions": 131
-  },
-  "1": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "send_data.cpp",
-    "fileloc": 10,
-    "instructions": 12,
-    "name": "send_data",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 21
+    "total_instructions": 115
   }
 }

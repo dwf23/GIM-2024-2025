@@ -31870,7 +31870,7 @@ typedef hls::stream<pkt> stream;
 
 void send_data(
     miso &data_out,
-    pkt example_pkt
+    pkt &example_pkt
 );
 
 void recv_data(
@@ -31881,17 +31881,19 @@ void recv_data(
 
 int example_acc(
     int w1,
-    int w2
+    int w2,
+    miso &data_out
 );
 # 6 "../send_data.cpp" 2
 
 
 
 
-void send_data(miso &data_out, pkt example_pkt) {
+void send_data(miso &data_out, pkt &example_pkt) {
+
+#pragma HLS interface ap_hs port=data_out
 
 
-
-    data_out.write(example_pkt.data);
+ data_out.write(example_pkt.data);
 
 }

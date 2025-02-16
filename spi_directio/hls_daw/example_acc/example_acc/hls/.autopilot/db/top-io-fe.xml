@@ -11,6 +11,11 @@
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
+      <arg id="2" access_type="w" src_name="data_out" src_type="directio&lt;int&gt;&amp;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="data_out" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_hs" register_option="0"/>
+        </hw>
+      </arg>
     </args>
     <return src_type="int" src_bitwidth="32" offset="0x0">
       <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="32" hw_kernel_support="false"/>

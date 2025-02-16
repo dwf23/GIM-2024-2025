@@ -1,3 +1,3 @@
 relativeroot=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc
-original_argv=--mode hls --csim --config C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\hls_config.cfg --work_dir example_acc 
+original_argv=-c --mode hls --config C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\hls_config.cfg --work_dir example_acc 
 

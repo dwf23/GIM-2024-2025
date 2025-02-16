@@ -7,15 +7,10 @@
 // sclk, cs, mosi, miso is the spi part that goes across the boards
 // data_out, data_in for communication of the module with the FPGAs
 //NUM = number of numbers we're sending
-void send_data(miso &data_out, hls::stream<pkt>&out) {
+void send_data(miso &data_out, pkt example_pkt) {
     
-    #pragma HLS interface ap_hs port=data_out
-    #pragma HLS interface mode=axis port=out
 
-    while(!out.empty()){
-        pkt tmp = out.read();
-        std::cout << "Sending: " << tmp.data << "\n";
-        data_out.write(tmp.data);
-    }
+
+    data_out.write(example_pkt.data);
 
 }

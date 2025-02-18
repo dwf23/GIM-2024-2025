@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Feb 16 00:43:47 2025
-# Process ID: 33956
+# Start of session at: Mon Feb 17 22:15:53 2025
+# Process ID: 18708
 # Current directory: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/example_acc/xsim_script.tcl}
 # Log file: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/xsim.log
@@ -17,9 +17,9 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16556 MB
-# Swap memory       :19752 MB
-# Total Virtual     :36309 MB
-# Available Virtual :5944 MB
+# Swap memory       :17819 MB
+# Total Virtual     :34375 MB
+# Available Virtual :6008 MB
 #-----------------------------------------------------------
 source xsim.dir/example_acc/xsim_script.tcl
 source example_acc.tcl

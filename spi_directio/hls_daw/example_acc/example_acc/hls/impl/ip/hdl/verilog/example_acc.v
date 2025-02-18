@@ -86,7 +86,7 @@ wire    ap_CS_fsm_state1;
 wire    ap_CS_fsm_state3;
 wire    regslice_both_data_out_U_apdone_blk;
 reg    ap_block_state3_pp0_stage2_iter0;
-wire   [0:0] icmp_ln19_fu_151_p2;
+wire   [0:0] icmp_ln20_fu_151_p2;
 reg    ap_condition_exit_pp0_iter0_stage2;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -94,16 +94,16 @@ wire   [31:0] w1;
 wire   [31:0] w2;
 reg    data_out_blk_n;
 wire    ap_CS_fsm_state2;
-wire   [31:0] example_pkt_data_fu_115_p2;
+wire   [31:0] w1_2_fu_115_p2;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [31:0] example_pkt_data_1_fu_130_p2;
+wire   [31:0] w2_2_fu_130_p2;
 reg    ap_block_state2_pp0_stage1_iter0;
-reg   [31:0] w1_assign1_fu_66;
-wire    ap_loop_init;
-reg   [31:0] ap_sig_allocacmp_w1_assign1_load;
-reg   [31:0] w2_assign2_fu_70;
-reg   [4:0] i3_fu_74;
+reg   [4:0] i1_fu_66;
 wire   [4:0] i_fu_145_p2;
+wire    ap_loop_init;
+reg   [31:0] w1_12_fu_70;
+reg   [31:0] ap_sig_allocacmp_w1_12_load;
+reg   [31:0] w2_13_fu_74;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -124,9 +124,9 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 3'd1;
-#0 w1_assign1_fu_66 = 32'd0;
-#0 w2_assign2_fu_70 = 32'd0;
-#0 i3_fu_74 = 5'd0;
+#0 i1_fu_66 = 5'd0;
+#0 w1_12_fu_70 = 32'd0;
+#0 w2_13_fu_74 = 32'd0;
 #0 ap_done_reg = 1'b0;
 end
 
@@ -210,23 +210,23 @@ end
 
 always @ (posedge ap_clk) begin
     if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        i3_fu_74 <= 5'd0;
+        i1_fu_66 <= 5'd0;
     end else if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
-        i3_fu_74 <= i_fu_145_p2;
+        i1_fu_66 <= i_fu_145_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_condition_196)) begin
-        w1_assign1_fu_66 <= example_pkt_data_fu_115_p2;
+        w1_12_fu_70 <= w1_2_fu_115_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
 if ((~((1'b1 == ap_block_state1_pp0_stage0_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-    w2_assign2_fu_70 <= w2;
+    w2_13_fu_74 <= w2;
 end else if ((~((1'b1 == ap_block_state2_pp0_stage1_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (1'b1 == ap_CS_fsm_state2))) begin
-    w2_assign2_fu_70 <= example_pkt_data_1_fu_130_p2;
+    w2_13_fu_74 <= w2_2_fu_130_p2;
 end
 end
 
@@ -255,7 +255,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (icmp_ln19_fu_151_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((1'b1 == ap_block_state3_pp0_stage2_iter0) | (data_out_ap_ack_int_regslice == 1'b0)) & (icmp_ln20_fu_151_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_condition_exit_pp0_iter0_stage2 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage2 = 1'b0;
@@ -288,9 +288,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_w1_assign1_load = w1;
+        ap_sig_allocacmp_w1_12_load = w1;
     end else begin
-        ap_sig_allocacmp_w1_assign1_load = w1_assign1_fu_66;
+        ap_sig_allocacmp_w1_12_load = w1_12_fu_70;
     end
 end
 
@@ -312,9 +312,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state2) & (1'b0 == ap_block_state2_pp0_stage1_iter0))) begin
-        data_out_int_regslice = example_pkt_data_1_fu_130_p2;
+        data_out_int_regslice = w2_2_fu_130_p2;
     end else if (((1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1_pp0_stage0_iter0))) begin
-        data_out_int_regslice = example_pkt_data_fu_115_p2;
+        data_out_int_regslice = w1_2_fu_115_p2;
     end else begin
         data_out_int_regslice = 'bx;
     end
@@ -385,12 +385,12 @@ end
 
 assign data_out_ap_vld = regslice_both_data_out_U_vld_out;
 
-assign example_pkt_data_1_fu_130_p2 = (w2_assign2_fu_70 + 32'd2);
+assign i_fu_145_p2 = (i1_fu_66 + 5'd1);
 
-assign example_pkt_data_fu_115_p2 = (ap_sig_allocacmp_w1_assign1_load + 32'd1);
+assign icmp_ln20_fu_151_p2 = ((i1_fu_66 == 5'd19) ? 1'b1 : 1'b0);
 
-assign i_fu_145_p2 = (i3_fu_74 + 5'd1);
+assign w1_2_fu_115_p2 = (ap_sig_allocacmp_w1_12_load + 32'd1);
 
-assign icmp_ln19_fu_151_p2 = ((i3_fu_74 == 5'd19) ? 1'b1 : 1'b0);
+assign w2_2_fu_130_p2 = (w2_13_fu_74 + 32'd2);
 
 endmodule //example_acc

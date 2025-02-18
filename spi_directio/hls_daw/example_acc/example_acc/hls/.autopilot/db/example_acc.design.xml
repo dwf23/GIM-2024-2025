@@ -10,7 +10,7 @@
 <Module>
 <Name>example_acc</Name>
 <Loops>
-<VITIS_LOOP_19_1></VITIS_LOOP_19_1>
+<VITIS_LOOP_20_1></VITIS_LOOP_20_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -29,8 +29,8 @@
 <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_19_1>
-<Name>VITIS_LOOP_19_1</Name>
+<VITIS_LOOP_20_1>
+<Name>VITIS_LOOP_20_1</Name>
 <Slack>8.00</Slack>
 <TripCount>20</TripCount>
 <Latency>59</Latency>
@@ -40,19 +40,19 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_19_1>
+</VITIS_LOOP_20_1>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../example_acc.cpp:9</SourceLocation>
+<SourceLocation>../example_acc.cpp:10</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_19_1>
-<Name>VITIS_LOOP_19_1</Name>
+<VITIS_LOOP_20_1>
+<Name>VITIS_LOOP_20_1</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../example_acc.cpp:21</SourceLocation>
-</VITIS_LOOP_19_1>
+<SourceLocation>../example_acc.cpp:20</SourceLocation>
+</VITIS_LOOP_20_1>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'example_acc'" level="0">
-<item name = "Date">Sun Feb 16 00:41:16 2025
+<item name = "Date">Mon Feb 17 22:12:42 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">example_acc</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_19_1">59, 59, 3, 3, 50, 20, yes</column>
+<column name="- VITIS_LOOP_20_1">59, 59, 3, 3, 50, 20, yes</column>
 </table>
 </item>
 </section>
@@ -79,11 +79,11 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="example_pkt_data_1_fu_130_p2">+, 0, 0, 39, 32, 2</column>
-<column name="example_pkt_data_fu_115_p2">+, 0, 0, 39, 32, 1</column>
 <column name="i_fu_145_p2">+, 0, 0, 12, 5, 1</column>
+<column name="w1_2_fu_115_p2">+, 0, 0, 39, 32, 1</column>
+<column name="w2_2_fu_130_p2">+, 0, 0, 39, 32, 2</column>
 <column name="ap_condition_196">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln19_fu_151_p2">icmp, 0, 0, 12, 5, 5</column>
+<column name="icmp_ln20_fu_151_p2">icmp, 0, 0, 12, 5, 5</column>
 <column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_pp0_stage2_iter0">or, 0, 0, 2, 1, 1</column>
 </table>
@@ -92,21 +92,21 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">20, 4, 1, 4</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_w1_assign1_load">9, 2, 32, 64</column>
+<column name="ap_sig_allocacmp_w1_12_load">9, 2, 32, 64</column>
 <column name="data_out_blk_n">9, 2, 1, 2</column>
 <column name="data_out_int_regslice">14, 3, 32, 96</column>
-<column name="i3_fu_74">9, 2, 5, 10</column>
-<column name="w1_assign1_fu_66">9, 2, 32, 64</column>
-<column name="w2_assign2_fu_70">9, 2, 32, 64</column>
+<column name="i1_fu_66">9, 2, 5, 10</column>
+<column name="w1_12_fu_70">9, 2, 32, 64</column>
+<column name="w2_13_fu_74">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="i3_fu_74">5, 0, 5, 0</column>
-<column name="w1_assign1_fu_66">32, 0, 32, 0</column>
-<column name="w2_assign2_fu_70">32, 0, 32, 0</column>
+<column name="i1_fu_66">5, 0, 5, 0</column>
+<column name="w1_12_fu_70">32, 0, 32, 0</column>
+<column name="w2_13_fu_74">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

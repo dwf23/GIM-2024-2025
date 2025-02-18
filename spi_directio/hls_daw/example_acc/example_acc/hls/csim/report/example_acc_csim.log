@@ -44,6 +44,6 @@ Modify W1: 29
 Modify W2: 38
 Modify W1: 30
 Modify W2: 40
-WARNING [HLS SIM]: hls::directio 'hls::directio<int>0' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<ap_uint<32> >0' contains leftover data, which may result in RTL simulation hanging.
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

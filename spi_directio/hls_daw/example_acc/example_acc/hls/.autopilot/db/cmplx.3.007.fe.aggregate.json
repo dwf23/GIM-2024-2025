@@ -3,9 +3,9 @@
     "basicblocks": 3,
     "calls": "",
     "file": "example_acc.cpp",
-    "fileloc": 9,
-    "instructions": 21,
+    "fileloc": 10,
+    "instructions": 25,
     "name": "example_acc",
-    "total_instructions": 21
+    "total_instructions": 25
   }
 }

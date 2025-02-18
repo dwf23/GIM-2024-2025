@@ -31862,8 +31862,8 @@ namespace std
 
 
 
-typedef hls::ap_hs<int> mosi;
-typedef hls::ap_hs<int> miso;
+typedef hls::ap_hs<ap_uint<32>> mosi;
+typedef hls::ap_hs<ap_uint<32>> miso;
 typedef ap_axis<32, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
 
@@ -31880,8 +31880,8 @@ void recv_data(
 );
 
 int example_acc(
-    int w1,
-    int w2,
+    ap_uint<32> w1,
+    ap_uint<32> w2,
     miso &data_out,
     bool start
 );

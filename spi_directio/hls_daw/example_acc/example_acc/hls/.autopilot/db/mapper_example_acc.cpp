@@ -243,10 +243,11 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" int example_acc(int, int, volatile void *, char);
-extern "C" int apatb_example_acc_hw(int __xlx_apatb_param_w1, int __xlx_apatb_param_w2, volatile void * __xlx_apatb_param_data_out, char __xlx_apatb_param_start_r) {
+struct __cosim_s4__ { char data[4]; };
+extern "C" int example_acc(__cosim_s4__, __cosim_s4__, volatile void *, char);
+extern "C" int apatb_example_acc_hw(__cosim_s4__* __xlx_apatb_param_w1, __cosim_s4__* __xlx_apatb_param_w2, volatile void * __xlx_apatb_param_data_out, char __xlx_apatb_param_start_r) {
 using hls::sim::createStream;
   // DUT call
-  int ap_return = example_acc(__xlx_apatb_param_w1, __xlx_apatb_param_w2, __xlx_apatb_param_data_out, __xlx_apatb_param_start_r);
+  int ap_return = example_acc(*__xlx_apatb_param_w1, *__xlx_apatb_param_w2, __xlx_apatb_param_data_out, __xlx_apatb_param_start_r);
 return ap_return;
 }

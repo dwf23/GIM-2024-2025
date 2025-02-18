@@ -57,7 +57,7 @@ Modify W1: 29
 Modify W2: 38
 Modify W1: 30
 Modify W2: 40
-WARNING [HLS SIM]: hls::directio 'hls::directio<int>0' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<ap_uint<32> >0' contains leftover data, which may result in RTL simulation hanging.
 
 C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\sim\verilog>set PATH= 
 
@@ -109,7 +109,7 @@ Built simulation snapshot example_acc
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Feb 16 00:43:47 2025
+  **** Start of session at: Mon Feb 17 22:15:53 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -129,9 +129,9 @@ source example_acc.tcl
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 905 ns : File "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/sim/verilog/example_acc.autotb.v" Line 440
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Feb 16 00:43:49 2025...
+INFO: [Common 17-206] Exiting xsim at Mon Feb 17 22:15:57 2025...
 Starting Testbench
 Beginning HLS Func
-WARNING [HLS SIM]: hls::directio 'hls::directio<int>0' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<ap_uint<32> >0' contains leftover data, which may result in RTL simulation hanging.
 INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

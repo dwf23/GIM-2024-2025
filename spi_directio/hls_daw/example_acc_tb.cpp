@@ -2,15 +2,16 @@
 #include <iostream>
 #include "hls_stream.h"
 #include "GIM_comm.h"
+#include "ap_int.h"
 
 
-int example_acc(int w1, int w2, miso &data_out, bool start);
+int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start);
 
 int main()
 {
     std::cout << "Starting Testbench" << "\n";
-    int w1 = 10;
-    int w2 = 0;
+    ap_uint<32> w1 = 10;
+    ap_uint<32> w2 = 0;
     bool start = false;
     miso data_out;
 

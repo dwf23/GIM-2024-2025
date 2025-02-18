@@ -1,0 +1,240 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Feb 17 20:19:38 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 628.160 ; gain = 201.023
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+Command: link_design -top design_1_wrapper -part xczu3eg-sfvc784-1-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/design_1_example_acc_0_0.dcp' for cell 'design_1_i/example_acc_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.dcp' for cell 'design_1_i/rst_ps8_0_99M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp' for cell 'design_1_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.dcp' for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1599.223 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+create_clock: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1728.223 ; gain = 35.035
+Finished Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:30]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:51]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc:54]
+Finished Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_last/demo_last.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 16 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2194.453 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+
+17 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:46 . Memory (MB): peak = 2194.453 ; gain = 1501.059
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2233.648 ; gain = 39.195
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2536.852 ; gain = 303.203
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2931.645 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Phase 1 Initialization | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2931.645 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 2931.645 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: e00aad5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 2931.645 ; gain = 0.000
+
+Phase 3 Retarget
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/ap_start is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/ap_idle_INST_0
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/w1_assign1_fu_66[0]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_CS_fsm[1]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/data_p2[31]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/i3_fu_74[4]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_CS_fsm[0]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[0]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[10]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[11]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[12]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[13]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[14]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[15]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[16]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[17]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[18]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[19]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[1]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[20]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[21]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[22]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[23]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[24]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[25]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[26]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[27]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[28]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[29]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[2]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[30]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/flow_control_loop_pipe_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/flow_control_loop_pipe_U/w2_assign2_fu_70[31]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[31]_i_2
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[3]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[4]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[5]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[6]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[7]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[8]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/control_s_axi_U/ap_start is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/control_s_axi_U/w2_assign2_fu_70[9]_i_1
+WARNING: [Opt 31-155] Driverless net design_1_i/example_acc_0/inst/regslice_both_data_out_U/ap_start is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: design_1_i/example_acc_0/inst/regslice_both_data_out_U/i3_fu_74[0]_i_1
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 5 pins
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 458 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: f8ce1228
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Retarget | Checksum: f8ce1228
+INFO: [Opt 31-389] Phase Retarget created 2 cells and removed 281 cells
+INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 49e3671c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.403 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Constant propagation | Checksum: 49e3671c
+INFO: [Opt 31-389] Phase Constant propagation created 4 cells and removed 25 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 762d0822
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.741 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Sweep | Checksum: 762d0822
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 752 cells
+INFO: [Opt 31-1021] In phase Sweep, 98 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 762d0822
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.817 . Memory (MB): peak = 2931.645 ; gain = 0.000
+BUFG optimization | Checksum: 762d0822
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 762d0822
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.824 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Shift Register Optimization | Checksum: 762d0822
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 10de298ee
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.843 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Post Processing Netlist | Checksum: 10de298ee
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 16e8ec95a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.916 . Memory (MB): peak = 2931.645 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+ERROR: [Opt 31-67] Problem: A LUT3 cell in the design is missing a connection on input pin I1, which is used by the LUT equation. This pin has either been left unconnected in the design or the connection was removed due to the trimming of unused logic. The LUT cell name is: design_1_i/example_acc_0/inst/regslice_both_data_out_U/w1_assign1_fu_66[0]_i_1.
+Resolution: Please review the preceding OPT INFO messages that detail what has been trimmed in the design to determine if the removal of unused logic is causing this error. If opt_design is being specified directly, it will need to be rerun with opt_design -verbose to generate detailed INFO messages about trimming.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 16e8ec95a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.926 . Memory (MB): peak = 2931.645 ; gain = 0.000
+Phase 9 Finalization | Checksum: 16e8ec95a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.926 . Memory (MB): peak = 2931.645 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 56 Warnings, 0 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Opt 31-67] Problem: A LUT3 cell in the design is missing a connection on input pin I1, which is used by the LUT equation. This pin has either been left unconnected in the design or the connection was removed due to the trimming of unused logic. The LUT cell name is: design_1_i/example_acc_0/inst/regslice_both_data_out_U/w1_assign1_fu_66[0]_i_1.
+Resolution: Please review the preceding OPT INFO messages that detail what has been trimmed in the design to determine if the removal of unused logic is causing this error. If opt_design is being specified directly, it will need to be rerun with opt_design -verbose to generate detailed INFO messages about trimming.
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 17 20:21:18 2025...

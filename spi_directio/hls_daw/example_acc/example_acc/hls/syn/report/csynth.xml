@@ -29,7 +29,7 @@
             <Interval-max>60</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_19_1>
+            <VITIS_LOOP_20_1>
                 <Slack>8.00</Slack>
                 <TripCount>20</TripCount>
                 <Latency>59</Latency>
@@ -37,19 +37,19 @@
                 <PipelineII>3</PipelineII>
                 <PipelineDepth>3</PipelineDepth>
                 <InstanceList/>
-            </VITIS_LOOP_19_1>
+            </VITIS_LOOP_20_1>
         </SummaryOfLoopLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../example_acc.cpp:9</SourceLocation>
+            <SourceLocation>../example_acc.cpp:10</SourceLocation>
             <SummaryOfLoopViolations>
-                <VITIS_LOOP_19_1>
-                    <Name>VITIS_LOOP_19_1</Name>
+                <VITIS_LOOP_20_1>
+                    <Name>VITIS_LOOP_20_1</Name>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../example_acc.cpp:21</SourceLocation>
-                </VITIS_LOOP_19_1>
+                    <SourceLocation>../example_acc.cpp:20</SourceLocation>
+                </VITIS_LOOP_20_1>
             </SummaryOfLoopViolations>
         </SummaryOfViolations>
     </PerformanceEstimates>
@@ -386,14 +386,14 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>example_acc</ModuleName>
-            <BindInstances>example_pkt_data_fu_115_p2 example_pkt_data_1_fu_130_p2 i_fu_145_p2 icmp_ln19_fu_151_p2 control_s_axi_U</BindInstances>
+            <BindInstances>w1_2_fu_115_p2 w2_2_fu_130_p2 i_fu_145_p2 icmp_ln20_fu_151_p2 control_s_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
             <Name>example_acc</Name>
             <Loops>
-                <VITIS_LOOP_19_1/>
+                <VITIS_LOOP_20_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -412,8 +412,8 @@
                     <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_19_1>
-                        <Name>VITIS_LOOP_19_1</Name>
+                    <VITIS_LOOP_20_1>
+                        <Name>VITIS_LOOP_20_1</Name>
                         <Slack>8.00</Slack>
                         <TripCount>20</TripCount>
                         <Latency>59</Latency>
@@ -422,19 +422,19 @@
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_19_1>
+                    </VITIS_LOOP_20_1>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../example_acc.cpp:9</SourceLocation>
+                    <SourceLocation>../example_acc.cpp:10</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_19_1>
-                            <Name>VITIS_LOOP_19_1</Name>
+                        <VITIS_LOOP_20_1>
+                            <Name>VITIS_LOOP_20_1</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../example_acc.cpp:21</SourceLocation>
-                        </VITIS_LOOP_19_1>
+                            <SourceLocation>../example_acc.cpp:20</SourceLocation>
+                        </VITIS_LOOP_20_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
@@ -458,10 +458,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_19_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_fu_115_p2" SOURCE="../example_acc.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_19_1" OPTYPE="add" PRAGMA="" RTLNAME="example_pkt_data_1_fu_130_p2" SOURCE="../example_acc.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="example_pkt_data_1" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_19_1" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_145_p2" SOURCE="../example_acc.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_19_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln19_fu_151_p2" SOURCE="../example_acc.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="w1_2_fu_115_p2" SOURCE="../example_acc.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="w1_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="w2_2_fu_130_p2" SOURCE="../example_acc.cpp:23" STORAGESUBTYPE="" URAM="0" VARIABLE="w2_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_145_p2" SOURCE="../example_acc.cpp:20" STORAGESUBTYPE="" URAM="0" VARIABLE="i" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln20_fu_151_p2" SOURCE="../example_acc.cpp:20" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln20" VISIBLE="false"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
             </BindNodes>
         </Module>
@@ -469,17 +469,17 @@
     <FIFOInformation/>
     <UserConfigCommands/>
     <Args>
-        <Arg ArgName="w1" index="0" direction="in" srcType="int" srcSize="32">
+        <Arg ArgName="w1" index="0" direction="in" srcType="ap_uint&lt;32&gt;" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="w1" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="w2" index="1" direction="in" srcType="int" srcSize="32">
+        <Arg ArgName="w2" index="1" direction="in" srcType="ap_uint&lt;32&gt;" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="w2" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="data_out" index="2" direction="out" srcType="directio&lt;int&gt;&amp;" srcSize="32">
+        <Arg ArgName="data_out" index="2" direction="out" srcType="directio&lt;ap_uint&lt;32&gt; &gt;&amp;" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="data_out_ap_ack" name="data_out_ap_ack" usage="control" direction="in"/>
                 <hwRef type="port" interface="data_out" name="data_out" usage="data" direction="out"/>
@@ -639,9 +639,9 @@
             <item name="Top Function Arguments">
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="w1">in, int</column>
-                    <column name="w2">in, int</column>
-                    <column name="data_out">out, directio&lt;int&gt;&amp;</column>
+                    <column name="w1">in, ap_uint&lt;32&gt;</column>
+                    <column name="w2">in, ap_uint&lt;32&gt;</column>
+                    <column name="data_out">out, directio&lt;ap_uint&lt;32&gt; &gt;&amp;</column>
                     <column name="start">in, bool</column>
                     <column name="return">out, int</column>
                 </table>
@@ -662,12 +662,12 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="../example_acc.cpp:13" status="valid" parentFunction="example_acc" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
-        <Pragma type="interface" location="../example_acc.cpp:14" status="valid" parentFunction="example_acc" variable="w1" isDirective="0" options="mode=s_axilite port=w1"/>
-        <Pragma type="interface" location="../example_acc.cpp:15" status="valid" parentFunction="example_acc" variable="w2" isDirective="0" options="mode=s_axilite port=w2"/>
-        <Pragma type="interface" location="../example_acc.cpp:16" status="valid" parentFunction="example_acc" variable="start" isDirective="0" options="ap_none port=start"/>
-        <Pragma type="interface" location="../example_acc.cpp:17" status="valid" parentFunction="example_acc" variable="return" isDirective="0" options="mode=ap_ctrl_hs port=return"/>
-        <Pragma type="pipeline" location="../example_acc.cpp:20" status="valid" parentFunction="example_acc" variable="" isDirective="0" options="II=50"/>
+        <Pragma type="interface" location="../example_acc.cpp:14" status="valid" parentFunction="example_acc" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
+        <Pragma type="interface" location="../example_acc.cpp:15" status="valid" parentFunction="example_acc" variable="w1" isDirective="0" options="mode=s_axilite port=w1"/>
+        <Pragma type="interface" location="../example_acc.cpp:16" status="valid" parentFunction="example_acc" variable="w2" isDirective="0" options="mode=s_axilite port=w2"/>
+        <Pragma type="interface" location="../example_acc.cpp:17" status="valid" parentFunction="example_acc" variable="start" isDirective="0" options="ap_none port=start"/>
+        <Pragma type="interface" location="../example_acc.cpp:18" status="valid" parentFunction="example_acc" variable="return" isDirective="0" options="mode=ap_ctrl_hs port=return"/>
+        <Pragma type="pipeline" location="../example_acc.cpp:21" status="valid" parentFunction="example_acc" variable="" isDirective="0" options="II=50"/>
         <Pragma type="interface" location="../send_data.cpp:12" status="valid" parentFunction="send_data" variable="data_out" isDirective="0" options="ap_hs port=data_out"/>
     </PragmaReport>
 </profile>

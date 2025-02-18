@@ -1165,10 +1165,10 @@ namespace hls::sim
 
 
 extern "C"
-hls::sim::Byte<4> example_acc_hw_stub_wrapper(hls::sim::Byte<4>, hls::sim::Byte<4>, void*, hls::sim::Byte<1>);
+hls::sim::Byte<4> example_acc_hw_stub_wrapper(hls::sim::Byte<4>*, hls::sim::Byte<4>*, void*, hls::sim::Byte<1>);
 
 extern "C"
-hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, hls::sim::Byte<4> __xlx_apatb_param_w2, void* __xlx_apatb_param_data_out, hls::sim::Byte<1> __xlx_apatb_param_start_r)
+hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4>* __xlx_apatb_param_w1, hls::sim::Byte<4>* __xlx_apatb_param_w2, void* __xlx_apatb_param_data_out, hls::sim::Byte<1> __xlx_apatb_param_start_r)
 {
   hls::sim::Byte<4> ap_return;
   static hls::sim::Register port0 {
@@ -1192,7 +1192,7 @@ hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, h
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_w1),
 #endif
   };
-  port1.param = &__xlx_apatb_param_w1;
+  port1.param = __xlx_apatb_param_w1;
 
   static hls::sim::Register port2 {
     .name = "w2",
@@ -1203,7 +1203,7 @@ hls::sim::Byte<4> apatb_example_acc_hw(hls::sim::Byte<4> __xlx_apatb_param_w1, h
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_w2),
 #endif
   };
-  port2.param = &__xlx_apatb_param_w2;
+  port2.param = __xlx_apatb_param_w2;
 
   static hls::sim::DirectIO<hls::sim::Byte<4>> port3 {
     .width = 32,

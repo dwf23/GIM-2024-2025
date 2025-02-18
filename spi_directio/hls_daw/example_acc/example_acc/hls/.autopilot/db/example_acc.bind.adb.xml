@@ -29,12 +29,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="32" op_0_bw="32">
+<Node id="5" bw="5" op_0_bw="32">
 <![CDATA[
-entry:0 %w1_assign1 = alloca i32 1
+entry:0 %i1 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="w1_assign1"/></StgValue>
+<StgValue><ssdm name="i1"/></StgValue>
 </operation>
 
 <operation id="7" st_id="1" stage="1" lat="1">
@@ -46,10 +46,10 @@ entry:0 %w1_assign1 = alloca i32 1
 
 <Node id="6" bw="32" op_0_bw="32">
 <![CDATA[
-entry:1 %w2_assign2 = alloca i32 1
+entry:1 %w1_12 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="w2_assign2"/></StgValue>
+<StgValue><ssdm name="w1_12"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -59,12 +59,12 @@ entry:1 %w2_assign2 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="5" op_0_bw="32">
+<Node id="7" bw="32" op_0_bw="32">
 <![CDATA[
-entry:2 %i3 = alloca i32 1
+entry:2 %w2_13 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i3"/></StgValue>
+<StgValue><ssdm name="w2_13"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="1" lat="1">
@@ -91,10 +91,10 @@ entry:3 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:4 %spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
+entry:4 %spectopmodule_ln10 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln9"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln10"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -106,10 +106,10 @@ entry:4 %spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @e
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln9 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0
+entry:5 %specinterface_ln10 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="specinterface_ln9"/></StgValue>
+<StgValue><ssdm name="specinterface_ln10"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -299,12 +299,12 @@ entry:17 %w1_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %w1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="5" op_1_bw="5">
+<Node id="23" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:18 %store_ln0 = store i5 0, i5 %i3
+entry:18 %store_ln10 = store i32 %w2_read, i32 %w2_13
 
 ]]></Node>
-<StgValue><ssdm name="store_ln0"/></StgValue>
+<StgValue><ssdm name="store_ln10"/></StgValue>
 </operation>
 
 <operation id="25" st_id="1" stage="1" lat="1">
@@ -316,10 +316,10 @@ entry:18 %store_ln0 = store i5 0, i5 %i3
 
 <Node id="24" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:19 %store_ln9 = store i32 %w2_read, i32 %w2_assign2
+entry:19 %store_ln10 = store i32 %w1_read, i32 %w1_12
 
 ]]></Node>
-<StgValue><ssdm name="store_ln9"/></StgValue>
+<StgValue><ssdm name="store_ln10"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
@@ -329,12 +329,12 @@ entry:19 %store_ln9 = store i32 %w2_read, i32 %w2_assign2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="0" op_0_bw="32" op_1_bw="32">
+<Node id="25" bw="0" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-entry:20 %store_ln9 = store i32 %w1_read, i32 %w1_assign1
+entry:20 %store_ln0 = store i5 0, i5 %i1
 
 ]]></Node>
-<StgValue><ssdm name="store_ln9"/></StgValue>
+<StgValue><ssdm name="store_ln0"/></StgValue>
 </operation>
 
 <operation id="27" st_id="1" stage="1" lat="1">
@@ -346,10 +346,10 @@ entry:20 %store_ln9 = store i32 %w1_read, i32 %w1_assign1
 
 <Node id="26" bw="0" op_0_bw="0">
 <![CDATA[
-entry:21 %br_ln19 = br void %for.inc.split
+entry:21 %br_ln20 = br void %for.inc.split
 
 ]]></Node>
-<StgValue><ssdm name="br_ln19"/></StgValue>
+<StgValue><ssdm name="br_ln20"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="1" lat="1">
@@ -359,12 +359,12 @@ entry:21 %br_ln19 = br void %for.inc.split
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="32" op_0_bw="32" op_1_bw="0">
+<Node id="29" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.inc.split:0 %w1_assign1_load = load i32 %w1_assign1
+for.inc.split:1 %w1_12_load = load i32 %w1_12
 
 ]]></Node>
-<StgValue><ssdm name="w1_assign1_load"/></StgValue>
+<StgValue><ssdm name="w1_12_load"/></StgValue>
 </operation>
 
 <operation id="29" st_id="1" stage="1" lat="1">
@@ -376,10 +376,10 @@ for.inc.split:0 %w1_assign1_load = load i32 %w1_assign1
 
 <Node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:6 %example_pkt_data = add i32 %w1_assign1_load, i32 1
+for.inc.split:6 %w1_2 = add i32 %w1_12_load, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="example_pkt_data"/></StgValue>
+<StgValue><ssdm name="w1_2"/></StgValue>
 </operation>
 
 <operation id="30" st_id="1" stage="2" lat="2">
@@ -391,10 +391,10 @@ for.inc.split:6 %example_pkt_data = add i32 %w1_assign1_load, i32 1
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.inc.split:8 %write_ln26 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %example_pkt_data
+for.inc.split:8 %write_ln27 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %w1_2
 
 ]]></Node>
-<StgValue><ssdm name="write_ln26"/></StgValue>
+<StgValue><ssdm name="write_ln27"/></StgValue>
 </operation>
 
 <operation id="31" st_id="1" stage="1" lat="1">
@@ -404,12 +404,12 @@ for.inc.split:8 %write_ln26 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
+<Node id="41" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.split:14 %store_ln21 = store i32 %example_pkt_data, i32 %w1_assign1
+for.inc.split:13 %store_ln22 = store i32 %w1_2, i32 %w1_12
 
 ]]></Node>
-<StgValue><ssdm name="store_ln21"/></StgValue>
+<StgValue><ssdm name="store_ln22"/></StgValue>
 </operation>
 </state>
 
@@ -422,12 +422,12 @@ for.inc.split:14 %store_ln21 = store i32 %example_pkt_data, i32 %w1_assign1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="32" op_0_bw="32" op_1_bw="0">
+<Node id="30" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.inc.split:1 %w2_assign2_load = load i32 %w2_assign2
+for.inc.split:2 %w2_13_load = load i32 %w2_13
 
 ]]></Node>
-<StgValue><ssdm name="w2_assign2_load"/></StgValue>
+<StgValue><ssdm name="w2_13_load"/></StgValue>
 </operation>
 
 <operation id="33" st_id="2" stage="1" lat="1">
@@ -439,10 +439,10 @@ for.inc.split:1 %w2_assign2_load = load i32 %w2_assign2
 
 <Node id="35" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:7 %example_pkt_data_1 = add i32 %w2_assign2_load, i32 2
+for.inc.split:7 %w2_2 = add i32 %w2_13_load, i32 2
 
 ]]></Node>
-<StgValue><ssdm name="example_pkt_data_1"/></StgValue>
+<StgValue><ssdm name="w2_2"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="2">
@@ -454,10 +454,10 @@ for.inc.split:7 %example_pkt_data_1 = add i32 %w2_assign2_load, i32 2
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.inc.split:8 %write_ln26 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %example_pkt_data
+for.inc.split:8 %write_ln27 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %w1_2
 
 ]]></Node>
-<StgValue><ssdm name="write_ln26"/></StgValue>
+<StgValue><ssdm name="write_ln27"/></StgValue>
 </operation>
 
 <operation id="35" st_id="2" stage="2" lat="2">
@@ -469,10 +469,10 @@ for.inc.split:8 %write_ln26 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-for.inc.split:9 %write_ln30 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %example_pkt_data_1
+for.inc.split:9 %write_ln31 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %w2_2
 
 ]]></Node>
-<StgValue><ssdm name="write_ln30"/></StgValue>
+<StgValue><ssdm name="write_ln31"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -482,12 +482,12 @@ for.inc.split:9 %write_ln30 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="41" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
+<Node id="40" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.split:13 %store_ln22 = store i32 %example_pkt_data_1, i32 %w2_assign2
+for.inc.split:12 %store_ln23 = store i32 %w2_2, i32 %w2_13
 
 ]]></Node>
-<StgValue><ssdm name="store_ln22"/></StgValue>
+<StgValue><ssdm name="store_ln23"/></StgValue>
 </operation>
 </state>
 
@@ -500,12 +500,12 @@ for.inc.split:13 %store_ln22 = store i32 %example_pkt_data_1, i32 %w2_assign2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="5" op_0_bw="5" op_1_bw="0">
+<Node id="28" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-for.inc.split:2 %i3_load = load i5 %i3
+for.inc.split:0 %i1_load = load i5 %i1
 
 ]]></Node>
-<StgValue><ssdm name="i3_load"/></StgValue>
+<StgValue><ssdm name="i1_load"/></StgValue>
 </operation>
 
 <operation id="38" st_id="3" stage="1" lat="1">
@@ -517,10 +517,10 @@ for.inc.split:2 %i3_load = load i5 %i3
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.split:3 %specpipeline_ln20 = specpipeline void @_ssdm_op_SpecPipeline, i32 50, i32 0, i32 0, i32 0, void @empty_3
+for.inc.split:3 %specpipeline_ln21 = specpipeline void @_ssdm_op_SpecPipeline, i32 50, i32 0, i32 0, i32 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specpipeline_ln20"/></StgValue>
+<StgValue><ssdm name="specpipeline_ln21"/></StgValue>
 </operation>
 
 <operation id="39" st_id="3" stage="1" lat="1">
@@ -532,10 +532,10 @@ for.inc.split:3 %specpipeline_ln20 = specpipeline void @_ssdm_op_SpecPipeline, i
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc.split:4 %speclooptripcount_ln19 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 20, i64 20, i64 20
+for.inc.split:4 %speclooptripcount_ln10 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 20, i64 20, i64 20
 
 ]]></Node>
-<StgValue><ssdm name="speclooptripcount_ln19"/></StgValue>
+<StgValue><ssdm name="speclooptripcount_ln10"/></StgValue>
 </operation>
 
 <operation id="40" st_id="3" stage="1" lat="1">
@@ -547,10 +547,10 @@ for.inc.split:4 %speclooptripcount_ln19 = speclooptripcount void @_ssdm_op_SpecL
 
 <Node id="33" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:5 %specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
+for.inc.split:5 %specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
-<StgValue><ssdm name="specloopname_ln19"/></StgValue>
+<StgValue><ssdm name="specloopname_ln20"/></StgValue>
 </operation>
 
 <operation id="41" st_id="3" stage="1" lat="2">
@@ -562,10 +562,10 @@ for.inc.split:5 %specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, v
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-for.inc.split:9 %write_ln30 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %example_pkt_data_1
+for.inc.split:9 %write_ln31 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i32 %data_out, i32 %w2_2
 
 ]]></Node>
-<StgValue><ssdm name="write_ln30"/></StgValue>
+<StgValue><ssdm name="write_ln31"/></StgValue>
 </operation>
 
 <operation id="42" st_id="3" stage="1" lat="1">
@@ -577,7 +577,7 @@ for.inc.split:9 %write_ln30 = write void @_ssdm_op_Write.ap_hs.volatile.p0i32, i
 
 <Node id="38" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-for.inc.split:10 %i = add i5 %i3_load, i5 1
+for.inc.split:10 %i = add i5 %i1_load, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -592,10 +592,10 @@ for.inc.split:10 %i = add i5 %i3_load, i5 1
 
 <Node id="39" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-for.inc.split:11 %icmp_ln19 = icmp_eq  i5 %i3_load, i5 19
+for.inc.split:11 %icmp_ln20 = icmp_eq  i5 %i1_load, i5 19
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln19"/></StgValue>
+<StgValue><ssdm name="icmp_ln20"/></StgValue>
 </operation>
 
 <operation id="44" st_id="3" stage="1" lat="1">
@@ -605,12 +605,12 @@ for.inc.split:11 %icmp_ln19 = icmp_eq  i5 %i3_load, i5 19
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="40" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
+<Node id="42" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.split:12 %store_ln19 = store i5 %i, i5 %i3
+for.inc.split:14 %store_ln20 = store i5 %i, i5 %i1
 
 ]]></Node>
-<StgValue><ssdm name="store_ln19"/></StgValue>
+<StgValue><ssdm name="store_ln20"/></StgValue>
 </operation>
 
 <operation id="45" st_id="3" stage="1" lat="1">
@@ -622,26 +622,26 @@ for.inc.split:12 %store_ln19 = store i5 %i, i5 %i3
 
 <Node id="43" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc.split:15 %br_ln19 = br i1 %icmp_ln19, void %for.inc.split, void %for.end
+for.inc.split:15 %br_ln20 = br i1 %icmp_ln20, void %for.inc.split, void %for.end
 
 ]]></Node>
-<StgValue><ssdm name="br_ln19"/></StgValue>
+<StgValue><ssdm name="br_ln20"/></StgValue>
 </operation>
 
 <operation id="46" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln19" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln20" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="45" bw="0" op_0_bw="32">
 <![CDATA[
-for.end:0 %ret_ln33 = ret i32 0
+for.end:0 %ret_ln34 = ret i32 0
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln33"/></StgValue>
+<StgValue><ssdm name="ret_ln34"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -664,59 +664,59 @@ for.end:0 %ret_ln33 = ret i32 0
 
 
 <dataflows>
-<dataflow id="62" from="StgValue_61" to="w1_assign1" fromId="61" toId="6">
+<dataflow id="62" from="StgValue_61" to="i1" fromId="61" toId="6">
 </dataflow>
-<dataflow id="63" from="StgValue_61" to="w2_assign2" fromId="61" toId="7">
+<dataflow id="63" from="StgValue_61" to="w1_12" fromId="61" toId="7">
 </dataflow>
-<dataflow id="64" from="StgValue_61" to="i3" fromId="61" toId="8">
+<dataflow id="64" from="StgValue_61" to="w2_13" fromId="61" toId="8">
 </dataflow>
 <dataflow id="66" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="65" toId="9">
 </dataflow>
 <dataflow id="68" from="StgValue_67" to="specbitsmap_ln0" fromId="67" toId="9">
 </dataflow>
-<dataflow id="70" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln9" fromId="69" toId="10">
+<dataflow id="70" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln10" fromId="69" toId="10">
 </dataflow>
-<dataflow id="72" from="empty_8" to="spectopmodule_ln9" fromId="71" toId="10">
+<dataflow id="72" from="empty_8" to="spectopmodule_ln10" fromId="71" toId="10">
 </dataflow>
-<dataflow id="74" from="_ssdm_op_SpecInterface" to="specinterface_ln9" fromId="73" toId="11">
+<dataflow id="74" from="_ssdm_op_SpecInterface" to="specinterface_ln10" fromId="73" toId="11">
 </dataflow>
-<dataflow id="75" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="75" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="77" from="empty_9" to="specinterface_ln9" fromId="76" toId="11">
+<dataflow id="77" from="empty_9" to="specinterface_ln10" fromId="76" toId="11">
 </dataflow>
-<dataflow id="78" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="78" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="79" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="79" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="81" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="81" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="82" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="82" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="83" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="83" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="84" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="84" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="85" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="85" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="86" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="86" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="87" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="87" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="88" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="88" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="89" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="89" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="90" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="90" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="91" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="91" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="92" from="empty_3" to="specinterface_ln9" fromId="80" toId="11">
+<dataflow id="92" from="empty_3" to="specinterface_ln10" fromId="80" toId="11">
 </dataflow>
-<dataflow id="94" from="StgValue_93" to="specinterface_ln9" fromId="93" toId="11">
+<dataflow id="94" from="StgValue_93" to="specinterface_ln10" fromId="93" toId="11">
 </dataflow>
-<dataflow id="95" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="95" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
-<dataflow id="96" from="StgValue_67" to="specinterface_ln9" fromId="67" toId="11">
+<dataflow id="96" from="StgValue_67" to="specinterface_ln10" fromId="67" toId="11">
 </dataflow>
 <dataflow id="97" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="65" toId="12">
 </dataflow>
@@ -982,105 +982,105 @@ for.end:0 %ret_ln33 = ret i32 0
 </dataflow>
 <dataflow id="238" from="w1" to="w1_read" fromId="57" toId="23">
 </dataflow>
-<dataflow id="240" from="StgValue_239" to="store_ln0" fromId="239" toId="24">
+<dataflow id="239" from="w2_read" to="store_ln10" fromId="22" toId="24">
 </dataflow>
-<dataflow id="241" from="i3" to="store_ln0" fromId="8" toId="24">
+<dataflow id="240" from="w2_13" to="store_ln10" fromId="8" toId="24">
 </dataflow>
-<dataflow id="242" from="w2_read" to="store_ln9" fromId="22" toId="25">
+<dataflow id="241" from="w1_read" to="store_ln10" fromId="23" toId="25">
 </dataflow>
-<dataflow id="243" from="w2_assign2" to="store_ln9" fromId="7" toId="25">
+<dataflow id="242" from="w1_12" to="store_ln10" fromId="7" toId="25">
 </dataflow>
-<dataflow id="244" from="w1_read" to="store_ln9" fromId="23" toId="26">
+<dataflow id="244" from="StgValue_243" to="store_ln0" fromId="243" toId="26">
 </dataflow>
-<dataflow id="245" from="w1_assign1" to="store_ln9" fromId="6" toId="26">
+<dataflow id="245" from="i1" to="store_ln0" fromId="6" toId="26">
 </dataflow>
-<dataflow id="246" from="w1_assign1" to="w1_assign1_load" fromId="6" toId="28">
+<dataflow id="246" from="w1_12" to="w1_12_load" fromId="7" toId="28">
 </dataflow>
-<dataflow id="247" from="w1_assign1_load" to="example_pkt_data" fromId="28" toId="29">
+<dataflow id="247" from="w1_12_load" to="w1_2" fromId="28" toId="29">
 </dataflow>
-<dataflow id="248" from="StgValue_61" to="example_pkt_data" fromId="61" toId="29">
+<dataflow id="248" from="StgValue_61" to="w1_2" fromId="61" toId="29">
 </dataflow>
-<dataflow id="250" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln26" fromId="249" toId="30">
+<dataflow id="250" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln27" fromId="249" toId="30">
 </dataflow>
-<dataflow id="251" from="data_out" to="write_ln26" fromId="59" toId="30">
+<dataflow id="251" from="data_out" to="write_ln27" fromId="59" toId="30">
 </dataflow>
-<dataflow id="252" from="example_pkt_data" to="write_ln26" fromId="29" toId="30">
+<dataflow id="252" from="w1_2" to="write_ln27" fromId="29" toId="30">
 </dataflow>
-<dataflow id="253" from="example_pkt_data" to="store_ln21" fromId="29" toId="31">
+<dataflow id="253" from="w1_2" to="store_ln22" fromId="29" toId="31">
 </dataflow>
-<dataflow id="254" from="w1_assign1" to="store_ln21" fromId="6" toId="31">
+<dataflow id="254" from="w1_12" to="store_ln22" fromId="7" toId="31">
 </dataflow>
-<dataflow id="255" from="w2_assign2" to="w2_assign2_load" fromId="7" toId="32">
+<dataflow id="255" from="w2_13" to="w2_13_load" fromId="8" toId="32">
 </dataflow>
-<dataflow id="256" from="w2_assign2_load" to="example_pkt_data_1" fromId="32" toId="33">
+<dataflow id="256" from="w2_13_load" to="w2_2" fromId="32" toId="33">
 </dataflow>
-<dataflow id="257" from="StgValue_208" to="example_pkt_data_1" fromId="208" toId="33">
+<dataflow id="257" from="StgValue_208" to="w2_2" fromId="208" toId="33">
 </dataflow>
-<dataflow id="258" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln26" fromId="249" toId="34">
+<dataflow id="258" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln27" fromId="249" toId="34">
 </dataflow>
-<dataflow id="259" from="data_out" to="write_ln26" fromId="59" toId="34">
+<dataflow id="259" from="data_out" to="write_ln27" fromId="59" toId="34">
 </dataflow>
-<dataflow id="260" from="example_pkt_data" to="write_ln26" fromId="29" toId="34">
+<dataflow id="260" from="w1_2" to="write_ln27" fromId="29" toId="34">
 </dataflow>
-<dataflow id="261" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln30" fromId="249" toId="35">
+<dataflow id="261" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln31" fromId="249" toId="35">
 </dataflow>
-<dataflow id="262" from="data_out" to="write_ln30" fromId="59" toId="35">
+<dataflow id="262" from="data_out" to="write_ln31" fromId="59" toId="35">
 </dataflow>
-<dataflow id="263" from="example_pkt_data_1" to="write_ln30" fromId="33" toId="35">
+<dataflow id="263" from="w2_2" to="write_ln31" fromId="33" toId="35">
 </dataflow>
-<dataflow id="264" from="example_pkt_data_1" to="store_ln22" fromId="33" toId="36">
+<dataflow id="264" from="w2_2" to="store_ln23" fromId="33" toId="36">
 </dataflow>
-<dataflow id="265" from="w2_assign2" to="store_ln22" fromId="7" toId="36">
+<dataflow id="265" from="w2_13" to="store_ln23" fromId="8" toId="36">
 </dataflow>
-<dataflow id="266" from="i3" to="i3_load" fromId="8" toId="37">
+<dataflow id="266" from="i1" to="i1_load" fromId="6" toId="37">
 </dataflow>
-<dataflow id="268" from="_ssdm_op_SpecPipeline" to="specpipeline_ln20" fromId="267" toId="38">
+<dataflow id="268" from="_ssdm_op_SpecPipeline" to="specpipeline_ln21" fromId="267" toId="38">
 </dataflow>
-<dataflow id="270" from="StgValue_269" to="specpipeline_ln20" fromId="269" toId="38">
+<dataflow id="270" from="StgValue_269" to="specpipeline_ln21" fromId="269" toId="38">
 </dataflow>
-<dataflow id="271" from="StgValue_67" to="specpipeline_ln20" fromId="67" toId="38">
+<dataflow id="271" from="StgValue_67" to="specpipeline_ln21" fromId="67" toId="38">
 </dataflow>
-<dataflow id="272" from="StgValue_67" to="specpipeline_ln20" fromId="67" toId="38">
+<dataflow id="272" from="StgValue_67" to="specpipeline_ln21" fromId="67" toId="38">
 </dataflow>
-<dataflow id="273" from="StgValue_67" to="specpipeline_ln20" fromId="67" toId="38">
+<dataflow id="273" from="StgValue_67" to="specpipeline_ln21" fromId="67" toId="38">
 </dataflow>
-<dataflow id="274" from="empty_3" to="specpipeline_ln20" fromId="80" toId="38">
+<dataflow id="274" from="empty_3" to="specpipeline_ln21" fromId="80" toId="38">
 </dataflow>
-<dataflow id="276" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln19" fromId="275" toId="39">
+<dataflow id="276" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln10" fromId="275" toId="39">
 </dataflow>
-<dataflow id="278" from="StgValue_277" to="speclooptripcount_ln19" fromId="277" toId="39">
+<dataflow id="278" from="StgValue_277" to="speclooptripcount_ln10" fromId="277" toId="39">
 </dataflow>
-<dataflow id="279" from="StgValue_277" to="speclooptripcount_ln19" fromId="277" toId="39">
+<dataflow id="279" from="StgValue_277" to="speclooptripcount_ln10" fromId="277" toId="39">
 </dataflow>
-<dataflow id="280" from="StgValue_277" to="speclooptripcount_ln19" fromId="277" toId="39">
+<dataflow id="280" from="StgValue_277" to="speclooptripcount_ln10" fromId="277" toId="39">
 </dataflow>
-<dataflow id="282" from="_ssdm_op_SpecLoopName" to="specloopname_ln19" fromId="281" toId="40">
+<dataflow id="282" from="_ssdm_op_SpecLoopName" to="specloopname_ln20" fromId="281" toId="40">
 </dataflow>
-<dataflow id="284" from="empty_10" to="specloopname_ln19" fromId="283" toId="40">
+<dataflow id="284" from="empty_10" to="specloopname_ln20" fromId="283" toId="40">
 </dataflow>
-<dataflow id="285" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln30" fromId="249" toId="41">
+<dataflow id="285" from="_ssdm_op_Write.ap_hs.volatile.p0i32" to="write_ln31" fromId="249" toId="41">
 </dataflow>
-<dataflow id="286" from="data_out" to="write_ln30" fromId="59" toId="41">
+<dataflow id="286" from="data_out" to="write_ln31" fromId="59" toId="41">
 </dataflow>
-<dataflow id="287" from="example_pkt_data_1" to="write_ln30" fromId="33" toId="41">
+<dataflow id="287" from="w2_2" to="write_ln31" fromId="33" toId="41">
 </dataflow>
-<dataflow id="288" from="i3_load" to="i" fromId="37" toId="42">
+<dataflow id="288" from="i1_load" to="i" fromId="37" toId="42">
 </dataflow>
 <dataflow id="290" from="StgValue_289" to="i" fromId="289" toId="42">
 </dataflow>
-<dataflow id="291" from="i3_load" to="icmp_ln19" fromId="37" toId="43">
+<dataflow id="291" from="i1_load" to="icmp_ln20" fromId="37" toId="43">
 </dataflow>
-<dataflow id="293" from="StgValue_292" to="icmp_ln19" fromId="292" toId="43">
+<dataflow id="293" from="StgValue_292" to="icmp_ln20" fromId="292" toId="43">
 </dataflow>
-<dataflow id="294" from="i" to="store_ln19" fromId="42" toId="44">
+<dataflow id="294" from="i" to="store_ln20" fromId="42" toId="44">
 </dataflow>
-<dataflow id="295" from="i3" to="store_ln19" fromId="8" toId="44">
+<dataflow id="295" from="i1" to="store_ln20" fromId="6" toId="44">
 </dataflow>
-<dataflow id="296" from="icmp_ln19" to="br_ln19" fromId="43" toId="45">
+<dataflow id="296" from="icmp_ln20" to="br_ln20" fromId="43" toId="45">
 </dataflow>
-<dataflow id="297" from="StgValue_67" to="ret_ln33" fromId="67" toId="46">
+<dataflow id="297" from="StgValue_67" to="ret_ln34" fromId="67" toId="46">
 </dataflow>
-<dataflow id="298" from="icmp_ln19" to="StgValue_4" fromId="43" toId="4">
+<dataflow id="298" from="icmp_ln20" to="StgValue_4" fromId="43" toId="4">
 </dataflow>
 </dataflows>
 

@@ -47,12 +47,12 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_19_1:  '
-    FileOffset:      19
+    Message:         'Added loop label VITIS_LOOP_20_1:  '
+    FileOffset:      20
     FilePath:        'C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc.cpp'
     Replacements:    
       - FilePath:        'C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp'
-        Offset:          1945699
+        Offset:          1945848
         Length:          0
-        ReplacementText: 'VITIS_LOOP_19_1: '
+        ReplacementText: 'VITIS_LOOP_20_1: '
 ...

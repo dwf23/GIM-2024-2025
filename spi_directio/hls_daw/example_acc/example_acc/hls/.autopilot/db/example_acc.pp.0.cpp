@@ -9850,6 +9850,8 @@ private:
 
 }
 # 4 "../example_acc.cpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 1
+# 5 "../example_acc.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
 
@@ -31850,7 +31852,7 @@ namespace std
 
 
 }
-# 5 "../example_acc.cpp" 2
+# 6 "../example_acc.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\memory" 1 3
 # 47 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\memory" 3
 # 64 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\memory" 3
@@ -40317,7 +40319,7 @@ get_pointer_safety() noexcept { return pointer_safety::relaxed; }
 
 
 }
-# 6 "../example_acc.cpp" 2
+# 7 "../example_acc.cpp" 2
 # 1 "../GIM_comm.h" 1
 
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 1
@@ -40329,8 +40331,8 @@ get_pointer_safety() noexcept { return pointer_safety::relaxed; }
 
 
 
-typedef hls::ap_hs<int> mosi;
-typedef hls::ap_hs<int> miso;
+typedef hls::ap_hs<ap_uint<32>> mosi;
+typedef hls::ap_hs<ap_uint<32>> miso;
 typedef ap_axis<32, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
 
@@ -40347,21 +40349,21 @@ void recv_data(
 );
 
 __attribute__((sdx_kernel("example_acc", 0))) int example_acc(
-    int w1,
-    int w2,
+    ap_uint<32> w1,
+    ap_uint<32> w2,
     miso &data_out,
     bool start
 );
-# 7 "../example_acc.cpp" 2
+# 8 "../example_acc.cpp" 2
 
 
-__attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2, miso &data_out, bool start){
+__attribute__((sdx_kernel("example_acc", 0))) int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=example_acc
-# 9 "../example_acc.cpp"
+# 10 "../example_acc.cpp"
 
 
-    pkt example_pkt;
+    ap_uint<32> tmp;
 
 #pragma HLS INTERFACE ap_hs port=data_out
 #pragma HLS INTERFACE mode=s_axilite port=w1
@@ -40369,18 +40371,18 @@ __attribute__((sdx_kernel("example_acc", 0))) int example_acc(int w1, int w2, mi
 #pragma HLS INTERFACE ap_none port=start
 #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
 
- VITIS_LOOP_19_1: for (int i = 0; i< 20; i++) {
+ VITIS_LOOP_20_1: for (int i = 0; i< 20; i++) {
 #pragma HLS PIPELINE II=50
  w1 +=1;
         w2 +=2;
         std::cout << "Modify W1: " << w1 << "\n";
 
-        example_pkt.data = w1;
-        data_out.write(example_pkt.data);
+        tmp = w1;
+        data_out.write(tmp);
         std::cout << "Modify W2: " << w2 << "\n";
 
-        example_pkt.data = w2;
-        data_out.write(example_pkt.data);
+        tmp = w2;
+        data_out.write(tmp);
     }
 
     return 0;

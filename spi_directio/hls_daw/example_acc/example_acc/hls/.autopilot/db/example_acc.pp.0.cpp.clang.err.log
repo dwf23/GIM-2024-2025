@@ -32,22 +32,22 @@ C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\ap_axi_sdata.h:398:9: war
 directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=name=example_acc_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=example_acc
         ^
-../example_acc.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=ap_hs port=data_out_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=ap_hs port=data_out_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE ap_hs port=data_out
         ^
-../example_acc.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite port=w1
         ^
-../example_acc.cpp:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=s_axilite port=w2
         ^
-../example_acc.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=ap_none port=start_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=ap_none port=start_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE ap_none port=start
         ^
-../example_acc.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=mode=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
         ^
-../example_acc.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=II=50_XLX_SEP_ [-Wdump-hls-pragmas]
+../example_acc.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_acc_XLX_SEP_ PragmaOptions=II=50_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE II=50
         ^
 17 warnings generated.

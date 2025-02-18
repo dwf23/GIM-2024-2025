@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sun Feb 16 00:40:47 -0600 2025
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Mon Feb 17 22:11:43 -0600 2025
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
@@ -32,7 +32,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
-Command       create_platform done; 2.707 sec.
+Command       create_platform done; 6.125 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
@@ -43,12 +43,14 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.215 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.118 sec.
+Command       ap_source done; 0.279 sec.
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.137 sec.
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.9 sec.
+Command     set_part done; 6.556 sec.
 Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
 INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
 Execute     create_clock -period 10ns 
@@ -62,7 +64,7 @@ INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
 Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
 Execute     config_export -format=ip_catalog 
-Command   apply_ini done; 2.954 sec.
+Command   apply_ini done; 6.709 sec.
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
 Execute   csynth_design 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
@@ -70,7 +72,7 @@ Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.787 seconds; current allocated memory: 230.363 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 11.226 seconds; current allocated memory: 230.336 MB.
 Execute       set_directive_top example_acc -name=example_acc 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -78,59 +80,62 @@ INFO: [HLS 200-10] Analyzing design file '../send_data.cpp' ...
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling ../send_data.cpp as C++
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.116 sec.
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang ../send_data.cpp -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.cpp.clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.cpp.clang.err.log
-INFO-FLOW: Done: GCC PP 39 time: 0.5 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 3.5 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/.systemc_flag -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.92 sec.
+Command       clang_tidy done; 1.935 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.787 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.8 seconds per iteration
+Command       clang_tidy done; 1.614 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 1.583 sec.
+Command       clang_tidy done; 3.59 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.109 sec.
 INFO-FLOW: compiling source code to llvm bc
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.bc {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp.clang.err.log
 INFO: [HLS 200-10] Analyzing design file '../example_acc.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling ../example_acc.cpp as C++
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
-Command       ap_part_info done; 0.198 sec.
+Command       ap_part_info done; 0.111 sec.
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang ../example_acc.cpp -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.cpp.clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.cpp.clang.err.log
-INFO-FLOW: Done: GCC PP 39 time: 0.5 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 1.1 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/.systemc_flag -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.907 sec.
+Command       clang_tidy done; 2.124 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/all.directive.json -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 1.382 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.4 seconds per iteration
+Command       clang_tidy done; 3.104 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.1 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang-tidy.loop-label.err.log
-Command       clang_tidy done; 1.764 sec.
+Command       clang_tidy done; 3.842 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.109 sec.
 INFO-FLOW: compiling source code to llvm bc
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.bc {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.pp.0.cpp.clang.err.log
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 15.478 seconds; current allocated memory: 233.574 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 35.892 seconds; current allocated memory: 233.793 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.g.bc" "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.g.bc"  
@@ -145,13 +150,13 @@ INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libhlsmc++_39.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.941 sec.
+Command       run_link_or_opt done; 4.249 sec.
 Execute       run_link_or_opt -opt -out C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example_acc -reflow-float-conversion 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example_acc -reflow-float-conversion -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.916 sec.
+Command       run_link_or_opt done; 1.898 sec.
 Execute       run_link_or_opt -out C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2024.1/win64/lib/libfloatconversion_39.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: 
@@ -165,72 +170,73 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 INFO-FLOW: run_clang (background poll_ms 5000) exec: C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=example_acc -mllvm -hls-db-dir -mllvm C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -reflow-complete-threshold=4 -mllvm -reflow-array-promotion-threshold=64 -mllvm -assume-maxi-align=1 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-small-array-partition=true -mllvm -reflow-enable-auto-array-partition-for-flatten=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -auto-unroll-tripcount-threshold=0 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -reflow-enable-codegen-with-if=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -mllvm -use_read_first_ram_in_loop=1 -mllvm -default-clock-uncertainty=2 -x ir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=C:/Xilinx\Vitis_HLS\2024.1\common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_slow -device-resource-info=BRAM_432.000000_DSP_360.000000_FF_141120.000000_LUT_70560.000000_SLICE_8820.000000_URAM_0.000000 -device-name-info=xczu3eg-sfvc784-1-e 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 119 Compile/Link C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 119 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 22 Unroll/Inline (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 19 Unroll/Inline (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 19 Unroll/Inline (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 19 Unroll/Inline (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 19 Array/Struct (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 19 Array/Struct (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 21 Array/Struct (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 22 Array/Struct (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 22 Array/Struct (step 5) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 18 Performance (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 18 Performance (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 18 Performance (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 18 Performance (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 24 HW Transforms (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-Command       send_msg_by_id done; 0.861 sec.
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 115 Compile/Link C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 115 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 26 Unroll/Inline (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23 Unroll/Inline (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23 Unroll/Inline (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23 Unroll/Inline (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23 Array/Struct (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23 Array/Struct (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 25 Array/Struct (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Array/Struct (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Array/Struct (step 5) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Performance (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Performance (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Performance (step 3) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 32 Performance (step 4) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 28 HW Transforms (step 1) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+Command       send_msg_by_id done; 0.794 sec.
 Execute       send_msg_by_id INFO @200-1995@%s%s%s 28 HW Transforms (step 2) C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt 
 INFO: [HLS 200-1995] There were 28 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-241] Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits (../example_acc.cpp:9:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits (../example_acc.cpp:10:0)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 9.518 seconds; current allocated memory: 235.324 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.016 seconds; current allocated memory: 235.324 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.065 seconds; current allocated memory: 235.328 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 235.328 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top example_acc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -promote-dbg-pointer -norm-name C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.0.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 240.328 MB.
+Command         transform done; 0.128 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 240.312 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.1.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.2.prechk.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 242.773 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 242.723 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.g.1.bc to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -lcssa -loop-simplify -phi-select-elim -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.1.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.1.tmp.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 265.227 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 265.004 MB.
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -inst-simplify -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -mul2addshift -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -inst-clarity -bitwidth -dce -validate-dataflow -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.2.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -cdfg-build C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.3.bc -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 265.254 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 265.023 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.427 sec.
-Command     elaborate done; 25.482 sec.
+Command       opt_and_import_c done; 0.63 sec.
+Command     elaborate done; 49.681 sec.
 Execute     ap_eval exec zip -j C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
-Command     ap_eval done; 0.157 sec.
+Command     ap_eval done; 0.193 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -255,11 +261,11 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       set_default_model example_acc 
 Execute       schedule -model example_acc 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 50, Final II = 3, Depth = 3, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 50, Final II = 3, Depth = 3, loop 'VITIS_LOOP_20_1'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.138 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.435 seconds; current allocated memory: 265.254 MB.
+Command       schedule done; 0.212 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.518 seconds; current allocated memory: 265.023 MB.
 Execute       syn_report -verbosereport -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.verbose.sched.rpt 
 Execute         list_part -family xczu3eg-sfvc784-1-e 
 Execute           ap_family_info -name xczu3eg-sfvc784-1-e -data names 
@@ -273,7 +279,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 265.254 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 265.023 MB.
 Execute       syn_report -verbosereport -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.verbose.bind.rpt 
 Execute         list_part -family xczu3eg-sfvc784-1-e 
 Execute           ap_family_info -name xczu3eg-sfvc784-1-e -data names 
@@ -298,8 +304,8 @@ INFO: [RTGEN 206-100] Bundling port 'w1' and 'w2' to AXI-Lite port control.
 WARNING: [RTGEN 206-101] Port 'example_acc/start_r' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'example_acc'.
-Command       create_rtl_model done; 0.147 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 266.820 MB.
+Command       create_rtl_model done; 0.233 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.371 seconds; current allocated memory: 266.875 MB.
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.rtl_wrap.cfg.tcl 
 Execute       gen_rtl example_acc -istop -style xilinx -f -lang vhdl -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/vhdl/example_acc 
 Execute       gen_rtl example_acc -istop -style xilinx -f -lang vlog -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/verilog/example_acc 
@@ -370,10 +376,10 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.123 sec.
+Command         ap_source done; 0.203 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.166 sec.
+Command       ap_source done; 0.263 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/vhdl' dstVlogDir='C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/vlog' tclDir='C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db' modelList='example_acc_control_s_axi
 example_acc_regslice_both
@@ -383,19 +389,20 @@ example_acc
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command       ap_part_info done; 0.106 sec.
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.compgen.tcl 
 Execute         source ./control.slave.tcl 
-Command       ap_source done; 0.104 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.796 seconds; current allocated memory: 269.844 MB.
+Command       ap_source done; 0.15 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.256 seconds; current allocated memory: 270.152 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='example_acc_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml bind info
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml config info
-INFO-FLOW: Done: create_csynth_xml config info time: 0.7 seconds per iteration
+INFO-FLOW: Done: create_csynth_xml config info time: 1.1 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth.xml
@@ -416,28 +423,29 @@ Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_a
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command       ap_part_info done; 0.126 sec.
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.constraint.tcl 
 Execute       sc_get_clocks example_acc 
 Execute       source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST example_acc MODULE2INSTS {example_acc example_acc} INST2MODULE {example_acc example_acc} INSTDATA {example_acc {DEPTH 1 CHILDREN {}}} MODULEDATA {example_acc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME example_pkt_data_fu_115_p2 SOURCE ../example_acc.cpp:21 VARIABLE example_pkt_data LOOP VITIS_LOOP_19_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME example_pkt_data_1_fu_130_p2 SOURCE ../example_acc.cpp:22 VARIABLE example_pkt_data_1 LOOP VITIS_LOOP_19_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_fu_145_p2 SOURCE ../example_acc.cpp:19 VARIABLE i LOOP VITIS_LOOP_19_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln19_fu_151_p2 SOURCE ../example_acc.cpp:19 VARIABLE icmp_ln19 LOOP VITIS_LOOP_19_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false}} AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST example_acc MODULE2INSTS {example_acc example_acc} INST2MODULE {example_acc example_acc} INSTDATA {example_acc {DEPTH 1 CHILDREN {}}} MODULEDATA {example_acc {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME w1_2_fu_115_p2 SOURCE ../example_acc.cpp:22 VARIABLE w1_2 LOOP VITIS_LOOP_20_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME w2_2_fu_130_p2 SOURCE ../example_acc.cpp:23 VARIABLE w2_2 LOOP VITIS_LOOP_20_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_fu_145_p2 SOURCE ../example_acc.cpp:20 VARIABLE i LOOP VITIS_LOOP_20_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln20_fu_151_p2 SOURCE ../example_acc.cpp:20 VARIABLE icmp_ln20 LOOP VITIS_LOOP_20_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false}} AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
-INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.1 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.413 seconds; current allocated memory: 272.441 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.336 seconds; current allocated memory: 272.582 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for example_acc.
 INFO: [VLOG 209-307] Generating Verilog RTL for example_acc.
 Execute       syn_report -model example_acc -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 458.51 MHz
-Command     autosyn done; 2.993 sec.
-Command   csynth_design done; 28.83 sec.
+Command     autosyn done; 4.643 sec.
+Command   csynth_design done; 54.905 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
-INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sun Feb 16 00:43:08 -0600 2025
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Mon Feb 17 22:14:25 -0600 2025
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute     set_part xczu3eg-sfvc784-1-e 
 Execute       create_platform xczu3eg-sfvc784-1-e -board  
@@ -445,7 +453,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
-Command       create_platform done; 2.881 sec.
+Command       create_platform done; 6.249 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
@@ -456,15 +464,17 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.199 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.117 sec.
+Command       ap_source done; 0.257 sec.
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.126 sec.
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 3.084 sec.
+Command     set_part done; 6.661 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Command   open_solution done; 3.108 sec.
+Command   open_solution done; 6.736 sec.
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
 Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
 INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
@@ -492,7 +502,7 @@ Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/
 INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
 Execute     set_part xczu3eg-sfvc784-1-e 
 Execute       create_platform xczu3eg-sfvc784-1-e -board  
-Command       create_platform done; 0.214 sec.
+Command       create_platform done; 0.416 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
@@ -503,12 +513,14 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.213 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.101 sec.
+Command       ap_source done; 0.269 sec.
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.102 sec.
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.39 sec.
+Command     set_part done; 0.81 sec.
 Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
 INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
 Execute     create_clock -period 10ns 
@@ -522,7 +534,7 @@ INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
 Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
 Execute     config_export -format=ip_catalog 
-Command   apply_ini done; 0.442 sec.
+Command   apply_ini done; 0.924 sec.
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
 Execute   cosim_design 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
@@ -550,11 +562,14 @@ Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.202 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.264 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command     ap_part_info done; 0.107 sec.
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.rtl_wrap.cfg.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.tbgen.tcl 
@@ -564,23 +579,26 @@ Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command     ap_part_info done; 0.103 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang -fno-builtin-isinf -fno-builtin-isnan -E -DHW_COSIM -Wno-unknown-pragmas -Wno-unknown-pragmas -DGCC_COMPATIBLE_APINT -DAESL_TB -D__HLS_COSIM__ -D__VITIS_HLS__ -D__USE_XOPEN2K8 -I C:/Xilinx/Vitis_HLS/2024.1/include -I include C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc_tb.cpp_pre.cpp -std=gnu++14 -D__DSP48E2__ --sysroot=C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc_tb.cpp.clang.autosim-tb.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc_tb.cpp.clang.autosim-tb.err.log
 INFO-FLOW: TB processing: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc_tb.cpp_pre.cpp
 Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc_tb.cpp_pre.cpp.tb.cpp std=gnu++14 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc_tb.cpp_pre.cpp.tb.cpp -- -std=gnu++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 1.858 sec.
+Command     clang_tidy done; 4.173 sec.
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command     ap_part_info done; 0.114 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang -fno-builtin-isinf -fno-builtin-isnan -E -DGCC_COMPATIBLE_APINT -DAESL_TB -D__HLS_COSIM__ -D__VITIS_HLS__ -D__USE_XOPEN2K8 -I C:/Xilinx/Vitis_HLS/2024.1/include -I include C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/send_data.cpp -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/send_data.cpp_pre.cpp -std=gnu++14 -D__DSP48E2__ --sysroot=C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.cpp.clang.autosim-tb.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/send_data.cpp.clang.autosim-tb.err.log
 INFO-FLOW: TB processing: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/send_data.cpp C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/send_data.cpp_pre.cpp
 Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/send_data.cpp_pre.cpp.tb.cpp std=gnu++14 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/send_data.cpp_pre.cpp.tb.cpp -- -std=gnu++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 0.973 sec.
+Command     clang_tidy done; 2.45 sec.
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command     ap_part_info done; 0.116 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang -fno-builtin-isinf -fno-builtin-isnan -E -DGCC_COMPATIBLE_APINT -DAESL_TB -D__HLS_COSIM__ -D__VITIS_HLS__ -D__USE_XOPEN2K8 -I C:/Xilinx/Vitis_HLS/2024.1/include -I include C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp -o C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc.cpp_pre.cpp -std=gnu++14 -D__DSP48E2__ --sysroot=C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt > C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.cpp.clang.autosim-tb.out.log 2> C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.cpp.clang.autosim-tb.err.log
 INFO-FLOW: TB processing: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc.cpp_pre.cpp
 Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc.cpp_pre.cpp.tb.cpp std=gnu++14 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2024.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/./sim/autowrap/testbench/example_acc.cpp_pre.cpp.tb.cpp -- -std=gnu++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 1.84 sec.
+Command     clang_tidy done; 4.095 sec.
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.rtl_wrap.cfg.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.rtl_wrap.cfg.tcl 
@@ -589,9 +607,10 @@ Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.tbgen.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.tbgen.tcl 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command     ap_part_info done; 0.132 sec.
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.29 sec.
+Command     ap_source done; 0.625 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
 Execute     source ../tv/cdatafile/ref.tcl 
@@ -621,15 +640,15 @@ Execute       source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 11.011 sec.
+Command     ap_source done; 24.407 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command   cosim_design done; 38.698 sec.
+Command   cosim_design done; 85.11 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
-INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Sun Feb 16 00:44:05 -0600 2025
+INFO-FLOW: Workspace C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls opened at Mon Feb 17 22:16:20 -0600 2025
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute     set_part xczu3eg-sfvc784-1-e 
 Execute       create_platform xczu3eg-sfvc784-1-e -board  
@@ -637,7 +656,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
-Command       create_platform done; 2.558 sec.
+Command       create_platform done; 6.094 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
@@ -648,15 +667,17 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.211 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.105 sec.
+Command       ap_source done; 0.269 sec.
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.106 sec.
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.733 sec.
+Command     set_part done; 6.485 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Command   open_solution done; 2.757 sec.
+Command   open_solution done; 6.542 sec.
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg 
 Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12) 
 INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
@@ -684,7 +705,7 @@ Execute     send_msg_by_id INFO @200-1465@%s 'part=xczu3eg-sfvc784-1-e' from C:/
 INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
 Execute     set_part xczu3eg-sfvc784-1-e 
 Execute       create_platform xczu3eg-sfvc784-1-e -board  
-Command       create_platform done; 0.213 sec.
+Command       create_platform done; 0.384 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
@@ -695,12 +716,14 @@ Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.204 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.11 sec.
+Command       ap_source done; 0.268 sec.
 Execute       ap_part_info -name xczu3eg-sfvc784-1-e -data info 
+Command       ap_part_info done; 0.112 sec.
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.4 sec.
+Command     set_part done; 0.774 sec.
 Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10) 
 INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
 Execute     create_clock -period 10ns 
@@ -714,7 +737,7 @@ INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
 Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
 Execute     config_export -format=ip_catalog 
-Command   apply_ini done; 0.458 sec.
+Command   apply_ini done; 0.906 sec.
 Execute   apply_ini C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline 
 Execute   export_design -flow none 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
@@ -749,9 +772,10 @@ Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.219 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.107 sec.
+Command     ap_source done; 0.28 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=example_acc xml_exists=0
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.rtl_wrap.cfg.tcl 
@@ -785,21 +809,25 @@ Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command     ap_part_info done; 0.107 sec.
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.constraint.tcl 
 Execute     sc_get_clocks example_acc 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:PUTS:       generate_syn_sh
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command     ap_part_info done; 0.103 sec.
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:PUTS:       generate_imp_constraints
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command     ap_part_info done; 0.115 sec.
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.constraint.tcl 
 Execute     source C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/example_acc.tbgen.tcl 
 INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data names -quiet 
 Execute     ap_part_info -name xczu3eg-sfvc784-1-e -data info -quiet 
+Command     ap_part_info done; 0.106 sec.
 INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/.autopilot/db/global.setting.tcl
 Execute     source C:/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/common.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/APCoreGen.gen 
@@ -817,14 +845,15 @@ Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.18 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.115 sec.
+Command     ap_source done; 0.237 sec.
 INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/pack.bat
 INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/pack.bat
 Execute     send_msg_by_id INFO @200-802@%s example_acc/example_acc.zip 
 INFO: [HLS 200-802] Generated output file example_acc/example_acc.zip
-Command   export_design done; 20.611 sec.
+Command   export_design done; 48.488 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 

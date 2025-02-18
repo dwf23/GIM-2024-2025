@@ -77911,6 +77911,8 @@ template <std::size_t WData, std::size_t WUser, std::size_t WId,
 using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
                             0b01111111 ^ 0b00100000, false>;
 # 4 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
+# 5 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
 
 
 # 1 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/GIM_comm.h" 1
@@ -77924,8 +77926,8 @@ using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
 
 
 
-typedef hls::ap_hs<int> mosi;
-typedef hls::ap_hs<int> miso;
+typedef hls::ap_hs<ap_uint<32>> mosi;
+typedef hls::ap_hs<ap_uint<32>> miso;
 typedef ap_axis<32, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
 
@@ -77942,17 +77944,17 @@ void recv_data(
 );
 
 int example_acc(
-    int w1,
-    int w2,
+    ap_uint<32> w1,
+    ap_uint<32> w2,
     miso &data_out,
     bool start
 );
-# 7 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
+# 8 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp" 2
 
 
-int example_acc(int w1, int w2, miso &data_out, bool start){
+int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start){
 
-    pkt example_pkt;
+    ap_uint<32> tmp;
 
 #pragma HLS INTERFACE ap_hs port=data_out
 #pragma HLS INTERFACE mode=s_axilite port=w1
@@ -77966,12 +77968,12 @@ int example_acc(int w1, int w2, miso &data_out, bool start){
         w2 +=2;
         std::cout << "Modify W1: " << w1 << "\n";
 
-        example_pkt.data = w1;
-        data_out.write(example_pkt.data);
+        tmp = w1;
+        data_out.write(tmp);
         std::cout << "Modify W2: " << w2 << "\n";
 
-        example_pkt.data = w2;
-        data_out.write(example_pkt.data);
+        tmp = w2;
+        data_out.write(tmp);
     }
 
     return 0;

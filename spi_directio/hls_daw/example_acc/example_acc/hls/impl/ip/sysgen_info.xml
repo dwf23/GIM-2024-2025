@@ -3,7 +3,7 @@
   <CTypeInfo>
       <RtlPort>
         <name>data_out</name>
-        <type>Signed</type>
+        <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>

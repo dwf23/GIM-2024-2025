@@ -74,7 +74,7 @@ architecture behav of example_acc is
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal regslice_both_data_out_U_apdone_blk : STD_LOGIC;
     signal ap_block_state3_pp0_stage2_iter0 : BOOLEAN;
-    signal icmp_ln19_fu_151_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln20_fu_151_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_condition_exit_pp0_iter0_stage2 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
@@ -83,16 +83,16 @@ architecture behav of example_acc is
     signal data_out_blk_n : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal example_pkt_data_fu_115_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal w1_2_fu_115_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_block_state1_pp0_stage0_iter0 : BOOLEAN;
-    signal example_pkt_data_1_fu_130_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal w2_2_fu_130_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_block_state2_pp0_stage1_iter0 : BOOLEAN;
-    signal w1_assign1_fu_66 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_w1_assign1_load : STD_LOGIC_VECTOR (31 downto 0);
-    signal w2_assign2_fu_70 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    signal i3_fu_74 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
+    signal i1_fu_66 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
     signal i_fu_145_p2 : STD_LOGIC_VECTOR (4 downto 0);
+    signal ap_loop_init : STD_LOGIC;
+    signal w1_12_fu_70 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+    signal ap_sig_allocacmp_w1_12_load : STD_LOGIC_VECTOR (31 downto 0);
+    signal w2_13_fu_74 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -266,33 +266,33 @@ begin
     end process;
 
 
-    i3_fu_74_assign_proc : process (ap_clk)
+    i1_fu_66_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_const_boolean_1 = ap_block_state1_pp0_stage0_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_loop_init = ap_const_logic_1))) then 
-                i3_fu_74 <= ap_const_lv5_0;
+                i1_fu_66 <= ap_const_lv5_0;
             elsif ((not(((ap_const_boolean_1 = ap_block_state3_pp0_stage2_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
-                i3_fu_74 <= i_fu_145_p2;
+                i1_fu_66 <= i_fu_145_p2;
             end if; 
         end if;
     end process;
 
-    w1_assign1_fu_66_assign_proc : process (ap_clk)
+    w1_12_fu_70_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_boolean_1 = ap_condition_196)) then
-                w1_assign1_fu_66 <= example_pkt_data_fu_115_p2;
+                w1_12_fu_70 <= w1_2_fu_115_p2;
             end if;
         end if;
     end process;
 
-    w2_assign2_fu_70_assign_proc : process (ap_clk)
+    w2_13_fu_74_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_const_boolean_1 = ap_block_state1_pp0_stage0_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_loop_init = ap_const_logic_1))) then 
-                w2_assign2_fu_70 <= w2;
+                w2_13_fu_74 <= w2;
             elsif ((not(((ap_const_boolean_1 = ap_block_state2_pp0_stage1_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                w2_assign2_fu_70 <= example_pkt_data_1_fu_130_p2;
+                w2_13_fu_74 <= w2_2_fu_130_p2;
             end if; 
         end if;
     end process;
@@ -380,9 +380,9 @@ begin
     end process;
 
 
-    ap_condition_exit_pp0_iter0_stage2_assign_proc : process(ap_CS_fsm_state3, ap_block_state3_pp0_stage2_iter0, icmp_ln19_fu_151_p2, data_out_ap_ack_int_regslice)
+    ap_condition_exit_pp0_iter0_stage2_assign_proc : process(ap_CS_fsm_state3, ap_block_state3_pp0_stage2_iter0, icmp_ln20_fu_151_p2, data_out_ap_ack_int_regslice)
     begin
-        if ((not(((ap_const_boolean_1 = ap_block_state3_pp0_stage2_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (icmp_ln19_fu_151_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if ((not(((ap_const_boolean_1 = ap_block_state3_pp0_stage2_iter0) or (data_out_ap_ack_int_regslice = ap_const_logic_0))) and (icmp_ln20_fu_151_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
             ap_condition_exit_pp0_iter0_stage2 <= ap_const_logic_1;
         else 
             ap_condition_exit_pp0_iter0_stage2 <= ap_const_logic_0;
@@ -430,12 +430,12 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_w1_assign1_load_assign_proc : process(ap_CS_fsm_state1, w1, w1_assign1_fu_66, ap_loop_init)
+    ap_sig_allocacmp_w1_12_load_assign_proc : process(ap_CS_fsm_state1, w1, ap_loop_init, w1_12_fu_70)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_loop_init = ap_const_logic_1))) then 
-            ap_sig_allocacmp_w1_assign1_load <= w1;
+            ap_sig_allocacmp_w1_12_load <= w1;
         else 
-            ap_sig_allocacmp_w1_assign1_load <= w1_assign1_fu_66;
+            ap_sig_allocacmp_w1_12_load <= w1_12_fu_70;
         end if; 
     end process;
 
@@ -461,19 +461,19 @@ begin
     end process;
 
 
-    data_out_int_regslice_assign_proc : process(ap_CS_fsm_state1, ap_CS_fsm_state2, example_pkt_data_fu_115_p2, ap_block_state1_pp0_stage0_iter0, example_pkt_data_1_fu_130_p2, ap_block_state2_pp0_stage1_iter0)
+    data_out_int_regslice_assign_proc : process(ap_CS_fsm_state1, ap_CS_fsm_state2, w1_2_fu_115_p2, ap_block_state1_pp0_stage0_iter0, w2_2_fu_130_p2, ap_block_state2_pp0_stage1_iter0)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_boolean_0 = ap_block_state2_pp0_stage1_iter0))) then 
-            data_out_int_regslice <= example_pkt_data_1_fu_130_p2;
+            data_out_int_regslice <= w2_2_fu_130_p2;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_const_boolean_0 = ap_block_state1_pp0_stage0_iter0))) then 
-            data_out_int_regslice <= example_pkt_data_fu_115_p2;
+            data_out_int_regslice <= w1_2_fu_115_p2;
         else 
             data_out_int_regslice <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
-    example_pkt_data_1_fu_130_p2 <= std_logic_vector(unsigned(w2_assign2_fu_70) + unsigned(ap_const_lv32_2));
-    example_pkt_data_fu_115_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_w1_assign1_load) + unsigned(ap_const_lv32_1));
-    i_fu_145_p2 <= std_logic_vector(unsigned(i3_fu_74) + unsigned(ap_const_lv5_1));
-    icmp_ln19_fu_151_p2 <= "1" when (i3_fu_74 = ap_const_lv5_13) else "0";
+    i_fu_145_p2 <= std_logic_vector(unsigned(i1_fu_66) + unsigned(ap_const_lv5_1));
+    icmp_ln20_fu_151_p2 <= "1" when (i1_fu_66 = ap_const_lv5_13) else "0";
+    w1_2_fu_115_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_w1_12_load) + unsigned(ap_const_lv32_1));
+    w2_2_fu_130_p2 <= std_logic_vector(unsigned(w2_13_fu_74) + unsigned(ap_const_lv32_2));
 end behav;

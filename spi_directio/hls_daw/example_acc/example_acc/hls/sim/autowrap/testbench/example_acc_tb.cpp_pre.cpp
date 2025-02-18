@@ -77912,8 +77912,8 @@ using ap_hs = directio<__STREAM_T__>;
 
 
 
-typedef hls::ap_hs<int> mosi;
-typedef hls::ap_hs<int> miso;
+typedef hls::ap_hs<ap_uint<32>> mosi;
+typedef hls::ap_hs<ap_uint<32>> miso;
 typedef ap_axis<32, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
 
@@ -77930,21 +77930,23 @@ void recv_data(
 );
 
 int example_acc(
-    int w1,
-    int w2,
+    ap_uint<32> w1,
+    ap_uint<32> w2,
     miso &data_out,
     bool start
 );
 # 5 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
+# 6 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
 
 
-int example_acc(int w1, int w2, miso &data_out, bool start);
+int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start);
 
 int main()
 {
     std::cout << "Starting Testbench" << "\n";
-    int w1 = 10;
-    int w2 = 0;
+    ap_uint<32> w1 = 10;
+    ap_uint<32> w2 = 0;
     bool start = false;
     miso data_out;
 

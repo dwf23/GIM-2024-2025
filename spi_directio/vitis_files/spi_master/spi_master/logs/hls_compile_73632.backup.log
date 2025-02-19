@@ -1,0 +1,114 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/testing_comm/spi_directio/vitis_files/dut.cpp' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/testing_comm/spi_directio/vitis_files/dut.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/testing_comm/spi_directio/vitis_files/tb.cpp' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/testing_comm/spi_directio/vitis_files/tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/testing_comm/spi_directio/vitis_files/tb.cpp,-D HW_COSIM' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(9)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 19.971 seconds; current allocated memory: 619.301 MB.
+INFO: [HLS 200-10] Analyzing design file 'C:/testing_comm/spi_directio/vitis_files/dut.cpp' ... 
+WARNING: [HLS 207-5570] unexpected pragma argument 'set_in', expects ap_none/ap_vld/ap_ack/ap_hs/ap_ovld/ap_fifo/ap_memory/bram/axis/s_axilite/m_axi/ap_ctrl_none/ap_ctrl_hs/ap_ctrl_chain/ap_stable/ (C:/testing_comm/spi_directio/vitis_files/dut.cpp:14:28)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.976 seconds; current allocated memory: 622.285 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 192 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 855 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 841 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 841 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 841 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 836 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 836 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,098 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,034 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,034 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 830 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 830 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 830 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 830 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 836 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 833 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_29_2' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:29:30) in function 'spi_master' completely with a factor of 64 (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_in' with compact=bit mode in 32-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'miso' with compact=bit mode in 1-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mosi' with compact=bit mode in 1-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'cs' with compact=bit mode in 1-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'sclk' with compact=bit mode in 1-bits (C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_20_1> at C:/testing_comm/spi_directio/vitis_files/dut.cpp:20:22 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.079 seconds; current allocated memory: 623.922 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 623.922 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 629.562 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 631.855 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 656.359 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_20_1' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:20:22) in function 'spi_master' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.729 seconds; current allocated memory: 662.621 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'spi_master' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'spi_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('received_data_write_ln16', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16) of variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:53 on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16 and 'load' operation 32 bit ('received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:53) on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('received_data_write_ln16', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16) of variable 'received_data' on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16 and 'load' operation 32 bit ('received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:53) on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('received_data_write_ln16', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16) of variable 'received_data' on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16 and 'load' operation 32 bit ('received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:53) on local variable 'received_data', C:/testing_comm/spi_directio/vitis_files/dut.cpp:16.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between wire read operation ('miso_read_9', C:/testing_comm/spi_directio/vitis_files/dut.cpp:42) on port 'miso' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:42) and wire request operation ('tmp_2', C:/testing_comm/spi_directio/vitis_files/dut.cpp:52) on port 'miso' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:52).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1) between wire write operation ('sclk_write_ln39', C:/testing_comm/spi_directio/vitis_files/dut.cpp:39) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:39) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1) between wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 114, distance = 1, offset = 1) between wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 122, distance = 1, offset = 1) between wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 126, distance = 1, offset = 1) between wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'spi_master' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 127, distance = 1, offset = 1) between wire write operation ('sclk_write_ln39', C:/testing_comm/spi_directio/vitis_files/dut.cpp:39) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:39) and wire write operation ('sclk_write_ln33', C:/testing_comm/spi_directio/vitis_files/dut.cpp:33) on port 'sclk' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:33).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 128, Depth = 129, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 11.642 seconds; current allocated memory: 756.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.023 seconds; current allocated memory: 756.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'spi_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/sclk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/cs' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/mosi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/miso' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/data_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/data_in' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'spi_master' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'spi_master'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.168 seconds; current allocated memory: 756.324 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.555 seconds; current allocated memory: 756.324 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.297 seconds; current allocated memory: 756.324 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for spi_master.
+INFO: [VLOG 209-307] Generating Verilog RTL for spi_master.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 1828.15 MHz
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 61.515 seconds; peak allocated memory: 756.324 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 8s

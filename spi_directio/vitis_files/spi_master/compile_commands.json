@@ -1,6 +1,6 @@
 [
   {
-    "directory": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master",
+    "directory": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master",
     "arguments": [
       "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
       "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
@@ -13,7 +13,7 @@
     "file": "C:/testing_comm/spi_directio/vitis_files/dut.cpp"
   },
   {
-    "directory": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master",
+    "directory": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master",
     "arguments": [
       "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
       "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",

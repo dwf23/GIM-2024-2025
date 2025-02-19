@@ -1,0 +1,95 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master.cpp' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master_tb.cpp' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master_tb.cpp,-D HW_COSIM' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'syn.top=spi_master' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.873 seconds; current allocated memory: 619.242 MB.
+INFO: [HLS 200-10] Analyzing design file '../spi_master.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 5.316 seconds; current allocated memory: 621.711 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 195 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 860 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 845 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 846 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 846 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 840 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 840 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,102 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,038 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,039 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 835 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 835 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 834 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 834 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 842 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 840 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_1' is marked as complete unroll implied by the pipeline pragma (../spi_master.cpp:23:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_32_2' is marked as complete unroll implied by the pipeline pragma (../spi_master.cpp:32:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_32_2' (../spi_master.cpp:32:30) in function 'spi_master' completely with a factor of 64 (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_in' with compact=bit mode in 32-bits (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'miso' with compact=bit mode in 1-bits (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mosi' with compact=bit mode in 1-bits (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'cs' with compact=bit mode in 1-bits (../spi_master.cpp:14:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'sclk' with compact=bit mode in 1-bits (../spi_master.cpp:14:0)
+WARNING: [HLS 214-187] Cannot unroll loop 'VITIS_LOOP_23_1' (../spi_master.cpp:23:22) in function 'spi_master' as it has a variable trip count (../spi_master.cpp:23:22)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.965 seconds; current allocated memory: 623.895 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 623.895 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 630.160 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 632.164 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 657.527 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.631 seconds; current allocated memory: 664.336 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'spi_master' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'spi_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'spi_master': contains subloop(s) that are not unrolled.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'spi_master': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.669 seconds; current allocated memory: 701.172 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 702.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'spi_master' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/sclk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/cs' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/mosi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/miso' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/data_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/data_in' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spi_master/flag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'spi_master' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'spi_master'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.759 seconds; current allocated memory: 703.539 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 2.245 seconds; current allocated memory: 721.070 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.8 seconds; current allocated memory: 721.070 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for spi_master.
+INFO: [VLOG 209-307] Generating Verilog RTL for spi_master.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 965.25 MHz
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 3 seconds. Total elapsed time: 26.216 seconds; peak allocated memory: 721.070 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 31s

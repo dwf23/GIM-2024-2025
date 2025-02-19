@@ -1,0 +1,4 @@
+spi_master_bitselect_1ns_32ns_32ns_1_1_1
+spi_master_flow_control_loop_pipe_sequential_init
+spi_master_Pipeline_VITIS_LOOP_30_2
+spi_master

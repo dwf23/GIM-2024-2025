@@ -1,13 +1,14 @@
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_28_2
   - String:          ''' ('
-  - LoopLoc:         '../dut.cpp:28:30'
+  - LoopLoc:         'C:/testing_comm/spi_directio/vitis_files/dut.cpp:28:30'
   - String:          ') '
   - String:          'in function '''
   - String:          spi_master
@@ -20,7 +21,8 @@ Name:            NeverInline
 Function:        apatb_spi_master_ir
 Args:            
   - Callee:          'spi_master(hls::directio<bool, 3>&, hls::directio<bool, 3>&, hls::directio<bool, 3>&, hls::directio<bool, 1>&, hls::directio<int, 1>&, hls::directio<int, 1>&)'
-    DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+    DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                       Line: 12, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_spi_master_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -28,7 +30,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -44,7 +47,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -60,7 +64,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -76,7 +81,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -92,7 +98,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -108,7 +115,8 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../dut.cpp, Line: 12, Column: 0 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 12, Column: 0 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Aggregating '
@@ -124,13 +132,14 @@ Args:
 --- !Failure
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
-DebugLoc:        { File: ../dut.cpp, Line: 19, Column: 22 }
+DebugLoc:        { File: 'C:/testing_comm/spi_directio/vitis_files/dut.cpp', 
+                   Line: 19, Column: 22 }
 Function:        _Z10spi_masterRN3hls8directioIbLi3EEES2_S2_RNS0_IbLi1EEERNS0_IiLi1EEES6_
 Args:            
   - String:          'Could not analyze occurrence information within '''
   - LoopName:        VITIS_LOOP_19_1
   - String:          '''('
-  - LoopLoc:         '../dut.cpp:19:22'
+  - LoopLoc:         'C:/testing_comm/spi_directio/vitis_files/dut.cpp:19:22'
   - String:          ') . Requires loop in simplify form and with single exit.'
 ...
 --- !HLSReportInfo
@@ -140,6 +149,6 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        VITIS_LOOP_19_1
   - String:          '> at '
-  - LoopLoc:         '../dut.cpp:19:22'
+  - LoopLoc:         'C:/testing_comm/spi_directio/vitis_files/dut.cpp:19:22'
   - String:          ' '
 ...

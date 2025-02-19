@@ -42,14 +42,14 @@
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../dut.cpp:15</SourceLocation>
+            <SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:15</SourceLocation>
             <SummaryOfLoopViolations>
                 <VITIS_LOOP_19_1>
                     <Name>VITIS_LOOP_19_1</Name>
                     <IssueType>II Violation</IssueType>
                     <ViolationType>Memory Dependency</ViolationType>
                     <IterationDistance>1</IterationDistance>
-                    <SourceLocation>../dut.cpp:52</SourceLocation>
+                    <SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:52</SourceLocation>
                 </VITIS_LOOP_19_1>
             </SummaryOfLoopViolations>
         </SummaryOfViolations>
@@ -245,14 +245,14 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../dut.cpp:15</SourceLocation>
+                    <SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:15</SourceLocation>
                     <SummaryOfLoopViolations>
                         <VITIS_LOOP_19_1>
                             <Name>VITIS_LOOP_19_1</Name>
                             <IssueType>II Violation</IssueType>
                             <ViolationType>Memory Dependency</ViolationType>
                             <IterationDistance>1</IterationDistance>
-                            <SourceLocation>../dut.cpp:52</SourceLocation>
+                            <SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:52</SourceLocation>
                         </VITIS_LOOP_19_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -279,7 +279,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_csim code_analyzer="1"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="sclk" index="0" direction="out" srcType="directio&lt;bool, 3&gt;&amp;" srcSize="8">
             <hwRefs>
@@ -459,8 +461,8 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="../dut.cpp:13" status="valid" parentFunction="spi_master" variable="return" isDirective="0" options="mode=ap_ctrl_none port=return"/>
-        <Pragma type="unroll" location="../dut.cpp:29" status="valid" parentFunction="spi_master" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.cpp:13" status="valid" parentFunction="spi_master" variable="return" isDirective="0" options="mode=ap_ctrl_none port=return"/>
+        <Pragma type="unroll" location="../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.cpp:29" status="valid" parentFunction="spi_master" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 

@@ -1,0 +1,29 @@
+[
+  {
+    "directory": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio2\\spi_master",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=spi_master",
+      "-c",
+      "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master.cpp"
+    ],
+    "file": "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master.cpp"
+  },
+  {
+    "directory": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio2\\spi_master",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-D",
+      "HW_COSIM",
+      "-c",
+      "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master_tb.cpp"
+    ],
+    "file": "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master_tb.cpp"
+  }
+]

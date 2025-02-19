@@ -6,8 +6,8 @@
 # 
 # ==============================================================
 source -notrace "C:/Xilinx/Vitis/2024.2/common/scripts/ipxhls.tcl"
-set ip_dir "C:/testing_comm/spi_directio/vitis_files/spi_master/spi_master/hls/impl/ip"
-set data_file "C:/testing_comm/spi_directio/vitis_files/spi_master/spi_master/hls/hls_data.json"
+set ip_dir "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/impl/ip"
+set data_file "C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/hls_data.json"
 set ip_types "vitis sysgen"
 if { [catch {::ipx::utils::package_hls_ip $ip_dir $data_file $ip_types } res] } {
   puts "Caught error:\n$::errorInfo"

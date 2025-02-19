@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op seteq" ID="" IMPL="auto" LATENCY="0" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln30_fu_134_p2" SOURCE="../spi_master.cpp:30" VARIABLE="icmp_ln30" MODULE="spi_master_Pipeline_VITIS_LOOP_30_2" LOOP="VITIS_LOOP_30_2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_140_p2" SOURCE="../spi_master.cpp:30" VARIABLE="i_2" MODULE="spi_master_Pipeline_VITIS_LOOP_30_2" LOOP="VITIS_LOOP_30_2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op xor" ID="" IMPL="auto" LATENCY="0" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln36_fu_150_p2" SOURCE="../spi_master.cpp:36" VARIABLE="xor_ln36" MODULE="spi_master_Pipeline_VITIS_LOOP_30_2" LOOP="VITIS_LOOP_30_2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op bitselect" ID="" IMPL="auto" LATENCY="0" OPTYPE="bitselect" PRAGMA="" RTLNAME="bitselect_1ns_32ns_32ns_1_1_1_U1" SOURCE="../spi_master.cpp:36" VARIABLE="tobool" MODULE="spi_master_Pipeline_VITIS_LOOP_30_2" LOOP="VITIS_LOOP_30_2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+</BindInfo>

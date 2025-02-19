@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>C:/testing_comm/spi_directio/vitis_files/spi_master/spi_master/hls/.autopilot/db/dut.pp.0.cpp</string>
+  <string>C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio/vitis_files/spi_master/spi_master/hls/.autopilot/db/dut.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -183,7 +183,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>../dut.cpp</string>
+      <string>C:/testing_comm/spi_directio/vitis_files/dut.cpp</string>
       <key>line</key>
       <integer>13</integer>
       <key>column</key>
@@ -199,7 +199,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>../dut.cpp</string>
+      <string>C:/testing_comm/spi_directio/vitis_files/dut.cpp</string>
       <key>line</key>
       <integer>29</integer>
       <key>column</key>

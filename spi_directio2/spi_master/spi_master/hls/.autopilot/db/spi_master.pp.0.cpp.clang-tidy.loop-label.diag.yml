@@ -1,0 +1,58 @@
+---
+MainSourceFile:  'C:/Users/linds/OneDrive/Desktop/2024-2025_Semester_1/GIM/GIM-2024-2025/spi_directio2/spi_master/spi_master/hls/.autopilot/db/spi_master.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          280025
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          280491
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          280958
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          564311
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_1:  '
+    FileOffset:      20
+    FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          1752574
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_30_2:  '
+    FileOffset:      30
+    FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\linds\OneDrive\Desktop\2024-2025_Semester_1\GIM\GIM-2024-2025\spi_directio2\spi_master\spi_master\hls\.autopilot\db\spi_master.pp.0.cpp'
+        Offset:          1752835
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_30_2: '
+...

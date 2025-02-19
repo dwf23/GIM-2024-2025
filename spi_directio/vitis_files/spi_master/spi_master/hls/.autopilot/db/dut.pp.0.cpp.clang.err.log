@@ -1,5 +1,5 @@
-In file included from ../dut.cpp:1:
-In file included from ../dut.h:17:
+In file included from C:/testing_comm/spi_directio/vitis_files/dut.cpp:1:
+In file included from C:/testing_comm/spi_directio/vitis_files/dut.h:17:
 C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS inline
         ^
@@ -33,10 +33,10 @@ C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:400:9: warning
 directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=spi_master_XLX_SEP_ PragmaOptions=name=spi_master_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=spi_master
         ^
-../dut.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spi_master_XLX_SEP_ PragmaOptions=mode=ap_ctrl_none port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+C:/testing_comm/spi_directio/vitis_files/dut.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spi_master_XLX_SEP_ PragmaOptions=mode=ap_ctrl_none port=return_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=ap_ctrl_none port=return
         ^
-../dut.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spi_master_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+C:/testing_comm/spi_directio/vitis_files/dut.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spi_master_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
 13 warnings generated.

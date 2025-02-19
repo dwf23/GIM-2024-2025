@@ -32,31 +32,31 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="spi_master" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=spi_master" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../dut.cpp:13:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:13:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="spi_master" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../dut.cpp:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:29:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="spi_master" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Unrolling loop 'VITIS_LOOP_28_2' (../dut.cpp:28:30) in function 'spi_master' completely with a factor of 64">
-        <args Factor="64" LoopLoc="../dut.cpp:28:30" LoopName="VITIS_LOOP_28_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Unrolling loop 'VITIS_LOOP_28_2' (C:/testing_comm/spi_directio/vitis_files/dut.cpp:28:30) in function 'spi_master' completely with a factor of 64">
+        <args Factor="64" LoopLoc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:28:30" LoopName="VITIS_LOOP_28_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'data_in' with compact=bit mode in 32-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'data_in' with compact=bit mode in 32-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="32" HwTyName="scalar" Name="data_in"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 32-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="32" HwTyName="scalar" Name="data_out"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'miso' with compact=bit mode in 1-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'miso' with compact=bit mode in 1-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="1" HwTyName="scalar" Name="miso"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'mosi' with compact=bit mode in 1-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'mosi' with compact=bit mode in 1-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="1" HwTyName="scalar" Name="mosi"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'cs' with compact=bit mode in 1-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'cs' with compact=bit mode in 1-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="1" HwTyName="scalar" Name="cs"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../dut.cpp:12:0" msg_body="Aggregating scalar variable 'sclk' with compact=bit mode in 1-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="C:/testing_comm/spi_directio/vitis_files/dut.cpp:12:0" msg_body="Aggregating scalar variable 'sclk' with compact=bit mode in 1-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="1" HwTyName="scalar" Name="sclk"/>
     </msg>
 </xilinx:hls_fe_msgs>

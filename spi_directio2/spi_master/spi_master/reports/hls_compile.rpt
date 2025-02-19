@@ -1,0 +1,125 @@
+
+
+================================================================
+== Synthesis Summary Report of 'spi_master'
+================================================================
++ General Information: 
+    * Date:           Mon Feb 17 22:47:12 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        spi_master
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu3eg-sfvc784-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                 Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |           |     |
+    |                 & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ spi_master                             |     -|  6.12|        -|          -|         -|        -|     -|        no|     -|   -|  156 (~0%)|  325 (~0%)|    -|
+    | o VITIS_LOOP_20_1                       |     -|  8.00|        -|          -|       134|        -|     -|        no|     -|   -|          -|          -|    -|
+    |  + spi_master_Pipeline_VITIS_LOOP_30_2  |     -|  6.12|      130|  1.300e+03|         -|      130|     -|        no|     -|   -|   51 (~0%)|  184 (~0%)|    -|
+    |   o VITIS_LOOP_30_2                     |    II|  8.00|      128|  1.280e+03|         3|        2|    64|       yes|     -|   -|          -|          -|    -|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++----------+---------+-----------+----------+
+| Port     | Mode    | Direction | Bitwidth |
++----------+---------+-----------+----------+
+| cs       | ap_hs   | out       | 1        |
+| data_in  | ap_vld  | out       | 32       |
+| data_out | ap_vld  | in        | 32       |
+| flag     | ap_none | in        | 1        |
+| miso     | ap_vld  | in        | 1        |
+| mosi     | ap_hs   | out       | 1        |
+| sclk     | ap_hs   | out       | 1        |
++----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------+
+| Argument | Direction | Datatype           |
++----------+-----------+--------------------+
+| sclk     | out       | directio<bool, 3>& |
+| cs       | out       | directio<bool, 3>& |
+| mosi     | out       | directio<bool, 3>& |
+| miso     | in        | directio<bool, 1>& |
+| data_out | in        | directio<int, 1>&  |
+| data_in  | out       | directio<int, 1>&  |
+| flag     | in        | &                  |
++----------+-----------+--------------------+
+
+* SW-to-HW Mapping
++----------+-----------------+---------+
+| Argument | HW Interface    | HW Type |
++----------+-----------------+---------+
+| sclk     | sclk            | port    |
+| cs       | cs              | port    |
+| mosi     | mosi            | port    |
+| miso     | miso            | port    |
+| miso     | miso_ap_vld     | port    |
+| data_out | data_out        | port    |
+| data_out | data_out_ap_vld | port    |
+| data_in  | data_in         | port    |
+| data_in  | data_in_ap_vld  | port    |
+| flag     | flag            | port    |
++----------+-----------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+-----------+-----------+--------+---------+
+| Name                                   | DSP | Pragma | Variable  | Op        | Impl   | Latency |
++----------------------------------------+-----+--------+-----------+-----------+--------+---------+
+| + spi_master                           | 0   |        |           |           |        |         |
+|  + spi_master_Pipeline_VITIS_LOOP_30_2 | 0   |        |           |           |        |         |
+|    icmp_ln30_fu_134_p2                 |     |        | icmp_ln30 | seteq     | auto   | 0       |
+|    i_2_fu_140_p2                       |     |        | i_2       | add       | fabric | 0       |
+|    xor_ln36_fu_150_p2                  |     |        | xor_ln36  | xor       | auto   | 0       |
+|    bitselect_1ns_32ns_32ns_1_1_1_U1    |     |        | tobool    | bitselect | auto   | 0       |
++----------------------------------------+-----+--------+-----------+-----------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------+------------------------------------+
+| Type      | Options                           | Location                           |
++-----------+-----------------------------------+------------------------------------+
+| interface | mode = ap_ctrl_none port = return | ../spi_master.cpp:12 in spi_master |
+| pipeline  | off                               | ../spi_master.cpp:21 in spi_master |
++-----------+-----------------------------------+------------------------------------+
+
+

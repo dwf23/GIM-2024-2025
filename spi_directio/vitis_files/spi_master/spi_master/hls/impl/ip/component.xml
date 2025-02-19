@@ -544,8 +544,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Spi_master</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113948003</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-02-10T02:43:28Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113950502</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-02-11T20:23:08Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>

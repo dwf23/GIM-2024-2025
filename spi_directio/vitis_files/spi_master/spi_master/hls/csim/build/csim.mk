@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../tb.cpp ../../../../../dut.cpp
+HLS_SOURCES = ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/tb.cpp ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.cpp
 
 override TARGET := csim.exe
 
@@ -84,14 +84,14 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb.o: ../../../../../tb.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../../tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/tb.o: ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/tb.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -DHW_COSIM -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/tb.d
 
-$(ObjDir)/dut.o: ../../../../../dut.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../../dut.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/dut.o: ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/dut.d

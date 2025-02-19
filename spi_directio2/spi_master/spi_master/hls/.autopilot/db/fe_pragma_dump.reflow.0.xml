@@ -1,0 +1,18 @@
+<pragmas>
+<pragma file="../spi_master.cpp" line="21" pragmaType="pipeline" parentfunction="spi_master" off="1" ii="0" rewind="0" style=""/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_none" port="sclk" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_none" port="cs" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_none" port="mosi" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_vld" port="miso" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_vld" port="data_out" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="0" pragmaType="interface" parentfunction="spi_master" mode="ap_vld" port="data_in" name="" register="0"/>
+<pragma file="../spi_master.cpp" line="12" pragmaType="interface" parentfunction="spi_master" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="valid" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="valid" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+</pragmas>

@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master\\spi_master\\spi_master.hlsrun_package_summary",
+ "thisFile": "C:/Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\spi_master\\spi_master.hlsrun_package_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/09/25 20:43:04",
- "timestampMillis": "1739155384677",
+ "dateTimestamp": "02/11/25 14:22:11",
+ "timestampMillis": "1739305331328",
  "buildStep": {
-  "cmdId": "cc1c13e6-f6f3-493f-9e98-90f109f3afed",
+  "cmdId": "2365194f-8138-4771-bf4a-f43c57c48d20",
   "name": "vitis-run",
-  "logFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master\\spi_master\\logs\\spi_master.steps.log",
-  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\testing_comm\\spi_directio\\vitis_files\\spi_master\\hls_config.cfg --work_dir spi_master ",
+  "logFile": "C:/Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\spi_master\\logs\\spi_master.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\hls_config.cfg --work_dir spi_master ",
   "args": [
    "--mode",
    "hls",
    "--package",
    "--config",
-   "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master\\hls_config.cfg",
+   "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\hls_config.cfg",
    "--work_dir",
    "spi_master"
   ],
   "iniFiles": [],
-  "cwd": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master"
+  "cwd": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/09/25 20:43:04",
- "timestampMillis": "1739155384677",
+ "dateTimestamp": "02/11/25 14:22:11",
+ "timestampMillis": "1739305331329",
  "status": {
-  "cmdId": "cc1c13e6-f6f3-493f-9e98-90f109f3afed",
+  "cmdId": "2365194f-8138-4771-bf4a-f43c57c48d20",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/09/25 20:43:11",
- "timestampMillis": "1739155391790",
+ "dateTimestamp": "02/11/25 14:22:30",
+ "timestampMillis": "1739305350694",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -59,7 +59,7 @@
     "base": {
      "type": "KERNEL",
      "name": "spi_master",
-     "file": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master\\spi_master\\spi_master.zip",
+     "file": "C:/Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\spi_master\\spi_master.zip",
      "reports": [],
      "uuid": ""
     },
@@ -80,26 +80,26 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/09/25 20:43:11",
- "timestampMillis": "1739155391791",
+ "dateTimestamp": "02/11/25 14:22:30",
+ "timestampMillis": "1739305350697",
  "buildStep": {
-  "cmdId": "9104a5d6-b818-46ba-b1be-5fff9fe22501",
+  "cmdId": "bc19578a-45e7-4744-829c-434f374adf76",
   "name": "",
-  "logFile": "C:/testing_comm\\spi_directio\\vitis_files\\spi_master\\spi_master\\hls\\hls.log",
+  "logFile": "C:/Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master\\spi_master\\hls\\hls.log",
   "commandLine": "",
   "args": [],
   "iniFiles": [],
-  "cwd": "C:\\testing_comm\\spi_directio\\vitis_files\\spi_master"
+  "cwd": "C:\\Users\\linds\\OneDrive\\Desktop\\2024-2025_Semester_1\\GIM\\GIM-2024-2025\\spi_directio\\vitis_files\\spi_master"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/09/25 20:43:11",
- "timestampMillis": "1739155391792",
+ "dateTimestamp": "02/11/25 14:22:30",
+ "timestampMillis": "1739305350697",
  "status": {
-  "cmdId": "9104a5d6-b818-46ba-b1be-5fff9fe22501",
+  "cmdId": "bc19578a-45e7-4744-829c-434f374adf76",
   "state": "CS_RUNNING"
  }
 }
@@ -107,10 +107,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/09/25 20:43:28",
- "timestampMillis": "1739155408510",
+ "dateTimestamp": "02/11/25 14:23:08",
+ "timestampMillis": "1739305388811",
  "status": {
-  "cmdId": "9104a5d6-b818-46ba-b1be-5fff9fe22501",
+  "cmdId": "bc19578a-45e7-4744-829c-434f374adf76",
   "state": "CS_PASSED"
  }
 }
@@ -118,10 +118,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/09/25 20:43:28",
- "timestampMillis": "1739155408720",
+ "dateTimestamp": "02/11/25 14:23:09",
+ "timestampMillis": "1739305389079",
  "status": {
-  "cmdId": "cc1c13e6-f6f3-493f-9e98-90f109f3afed",
+  "cmdId": "2365194f-8138-4771-bf4a-f43c57c48d20",
   "state": "CS_PASSED"
  }
 }
@@ -129,8 +129,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/09/25 20:43:28",
- "timestampMillis": "1739155408721",
+ "dateTimestamp": "02/11/25 14:23:09",
+ "timestampMillis": "1739305389081",
  "report": {
   "path": "",
   "name": "",
@@ -143,8 +143,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/09/25 20:43:28",
- "timestampMillis": "1739155408721",
+ "dateTimestamp": "02/11/25 14:23:09",
+ "timestampMillis": "1739305389082",
  "report": {
   "path": "",
   "name": "",

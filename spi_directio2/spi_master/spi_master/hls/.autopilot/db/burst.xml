@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../spi_master.cpp:20:20" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../spi_master.cpp:20:20" LoopName="VITIS_LOOP_20_1" ParentFunc="spi_master(hls::directio&lt;bool, 3&gt;&amp;, hls::directio&lt;bool, 3&gt;&amp;, hls::directio&lt;bool, 3&gt;&amp;, hls::directio&lt;bool, 1&gt;&amp;, hls::directio&lt;int, 1&gt;&amp;, hls::directio&lt;int, 1&gt;&amp;, bool volatile&amp;)"/>
+</VitisHLS:BurstInfo>
+

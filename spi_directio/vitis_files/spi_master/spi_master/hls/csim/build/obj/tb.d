@@ -1,4 +1,6 @@
-obj/tb.o: ../../../../../tb.cpp ../../../../../dut.h \
+obj/tb.o: \
+  ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/tb.cpp \
+  ../../../../../../../../../../../../../../testing_comm/spi_directio/vitis_files/dut.h \
   C:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h \
   C:/Xilinx/Vitis/2024.2/include/ap_int.h \
   C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h \

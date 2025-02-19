@@ -1,0 +1,76 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../spi_master.cpp in debug mode
+   Generating csim.exe
+Chip Select Activated
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Received data: 0
+Test failed!
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 3>2' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 3>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 3>0' contains leftover data, which may result in RTL simulation hanging.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

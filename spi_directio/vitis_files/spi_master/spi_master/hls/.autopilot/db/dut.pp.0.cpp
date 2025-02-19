@@ -1,4 +1,4 @@
-# 1 "../dut.cpp"
+# 1 "C:/testing_comm/spi_directio/vitis_files/dut.cpp"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 396 "<built-in>" 3
@@ -152,9 +152,9 @@ extern "C" {
 
 }
 # 2 "<built-in>" 2
-# 1 "../dut.cpp" 2
-# 1 "../dut.h" 1
-# 17 "../dut.h"
+# 1 "C:/testing_comm/spi_directio/vitis_files/dut.cpp" 2
+# 1 "C:/testing_comm/spi_directio/vitis_files/dut.h" 1
+# 17 "C:/testing_comm/spi_directio/vitis_files/dut.h"
 # 1 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_axi_sdata.h" 1
 # 15 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_axi_sdata.h"
 # 1 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_int.h" 1
@@ -9733,9 +9733,9 @@ private:
 };
 
 }
-# 18 "../dut.h" 2
+# 18 "C:/testing_comm/spi_directio/vitis_files/dut.h" 2
 # 1 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_int.h" 1
-# 19 "../dut.h" 2
+# 19 "C:/testing_comm/spi_directio/vitis_files/dut.h" 2
 
 # 1 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot\\hls_directio.h" 1
 # 21 "C:/Xilinx/Vitis/2024.2/common/technology/autopilot\\hls_directio.h"
@@ -9855,7 +9855,7 @@ using ap_none = directio<__STREAM_T__, static_cast<int>(mode::none)>;
 
 
 }
-# 21 "../dut.h" 2
+# 21 "C:/testing_comm/spi_directio/vitis_files/dut.h" 2
 # 1 "C:/Xilinx/Vitis/2024.2/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis/2024.2/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
 
@@ -31856,7 +31856,7 @@ namespace std
 
 
 }
-# 22 "../dut.h" 2
+# 22 "C:/testing_comm/spi_directio/vitis_files/dut.h" 2
 
 
 
@@ -31872,7 +31872,7 @@ __attribute__((sdx_kernel("spi_master", 0))) void spi_master(
     hls::ap_vld<int> &data_out,
     hls::ap_vld<int> &data_in
 );
-# 2 "../dut.cpp" 2
+# 2 "C:/testing_comm/spi_directio/vitis_files/dut.cpp" 2
 
 
 
@@ -31886,7 +31886,7 @@ __attribute__((sdx_kernel("spi_master", 0))) void spi_master(
 ) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=spi_master
-# 12 "../dut.cpp"
+# 12 "C:/testing_comm/spi_directio/vitis_files/dut.cpp"
 
 #pragma HLS INTERFACE mode=ap_ctrl_none port=return
  const int BITS = 64;

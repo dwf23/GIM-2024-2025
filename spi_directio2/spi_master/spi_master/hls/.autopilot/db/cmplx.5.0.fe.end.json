@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "spi_master",
+        "file": "spi_master.cpp",
+        "fileloc": "6",
+        "instructions": "46",
+        "total_instructions": "83",
+        "calls": "1",
+        "basicblocks": "8",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "spi_master_Pipeline_VITIS_LOOP_30_2",
+        "file": "..\/spi_master.cpp",
+        "fileloc": "16",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

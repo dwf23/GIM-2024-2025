@@ -5,8 +5,8 @@
       "name": "spi_master",
       "type": "gdb",
       "request": "launch",
-      "target": "${workspaceFolder}\\ap_hs\\spi_master\\spi_master\\hls\\csim\\build\\csim.exe",
-      "cwd": "${workspaceFolder}\\ap_hs\\spi_master\\spi_master\\hls\\csim\\build",
+      "target": "${workspaceFolder}\\vitis_files\\spi_master\\spi_master\\hls\\csim\\build\\csim.exe",
+      "cwd": "${workspaceFolder}\\vitis_files\\spi_master\\spi_master\\hls\\csim\\build",
       "gdbpath": "${env:XILINX_HLS}\\tps\\win64\\msys64\\mingw64\\bin\\gdb.exe",
       "debugger_args": [
         "--init-command=${env:XILINX_HLS}\\tps\\win64\\msys64\\mingw64\\bin\\gdbinit"

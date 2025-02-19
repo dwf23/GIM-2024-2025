@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "spi_master.cpp",
+    "fileloc": 6,
+    "instructions": 65,
+    "loads": {
+      "T": 1
+    },
+    "name": "spi_master",
+    "total_instructions": 65
+  }
+}

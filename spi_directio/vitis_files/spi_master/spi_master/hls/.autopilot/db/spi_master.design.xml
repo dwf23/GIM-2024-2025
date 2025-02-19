@@ -45,14 +45,14 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../dut.cpp:15</SourceLocation>
+<SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:15</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_19_1>
 <Name>VITIS_LOOP_19_1</Name>
 <IssueType>II Violation</IssueType>
 <ViolationType>Memory Dependency</ViolationType>
 <IterationDistance>1</IterationDistance>
-<SourceLocation>../dut.cpp:52</SourceLocation>
+<SourceLocation>C:/testing_comm/spi_directio/vitis_files/dut.cpp:52</SourceLocation>
 </VITIS_LOOP_19_1>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>

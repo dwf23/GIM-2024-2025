@@ -43,7 +43,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sfvc784:-1-e
-set SourceFiles {sc {} c ../../../dut.cpp}
+set SourceFiles {sc {} c C:/testing_comm/spi_directio/vitis_files/dut.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
 set TBFiles {verilog C:/testing_comm/spi_directio/vitis_files/tb.cpp bc C:/testing_comm/spi_directio/vitis_files/tb.cpp vhdl C:/testing_comm/spi_directio/vitis_files/tb.cpp sc C:/testing_comm/spi_directio/vitis_files/tb.cpp cas C:/testing_comm/spi_directio/vitis_files/tb.cpp c {}}

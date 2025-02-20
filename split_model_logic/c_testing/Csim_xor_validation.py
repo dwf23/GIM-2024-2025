@@ -1,6 +1,4 @@
-### Code mostly taken from Maya's google colab notebook linked below
-### https://colab.research.google.com/drive/1esl6YgfoboAyaEYdRGiY6Jg3cW6rjfI8
-### This assumes sigmoid activation function
+
 
 import numpy as np
 import os
@@ -47,7 +45,7 @@ def parse_file(filename):
     return weight_1, weight_2, bias_1, bias_2
 
 script_dir = os.path.dirname(os.path.abspath(__file__))  # Get script's directory
-filename = os.path.join(script_dir, "final_w_b.txt")  # Construct full path
+filename = os.path.join(script_dir, "learned_weights_bias.txt")  # Construct full path
 
 weight_1, weight_2, bias_1, bias_2 = parse_file(filename)
 
@@ -59,14 +57,82 @@ print("bias_2 =", bias_2.shape, "\n", bias_2, "\n")
 
 ###change the numbers below then run script
 #weight1 is 2by2 for weights from input to hidden
-# weight_1 = np.array([[0.13458, 0.513578 ],[0.18444, 0.785335 ]])
 # #weight2 is 2by1 for weights from hidden to output
-# weight_2 = np.array([0.853975, 0.494237 ])
-# #biases for inputs
-# bias_1 = np.array([[0.505246], [0.0652865]])
-# #biases for the output
-# bias_2 = np.array([0.428122])
+# bias_1 #biases for inputs
+# bias_2 #bias for the output
+"""
+#from learned_weights_bias.txt
 
+new_w1:
+0.862141 0.862142 
+1.11563 1.11563 
+new_w2:
+1.15989 -1.79269 
+0 0 
+new_b1: 
+2.49782e-07 -1.11563 
+new_b2: 
+1.06684e-05 0 
+
+For input [1, 0] output is 1
+For input [0, 1] output is 1
+For input [1, 1] output is 0
+For input [0, 0] output is 0
+Accuracy: 1.0
+"""
+class XOR:
+    def __init__(self, weight1, weight2, bias1, bias2):
+        self.weight1 = weight1
+        self.weight2 = weight2
+        self.bias1 = bias1
+        self.bias2 = bias2
+
+    def leaky_relu(self, z, alpha=0.01):
+        """Leaky ReLU activation function"""
+        return np.where(z > 0, z, alpha * z)
+    
+    def forward_prop(self, w1, w2, b1, b2, x):
+        z1 = np.dot(w1, x) + b1
+        a1 = self.leaky_relu(z1)  # Using Leaky ReLU
+        z2 = np.dot(w2, a1) + b2
+        a2 = self.leaky_relu(z2)  # Using Leaky ReLU
+        return z1, a1, z2, a2
+    
+    def predict(self, w1, w2, b1, b2, x):
+        _, _, _, a2 = self.forward_prop(w1, w2, b1, b2, x)
+        a2 = np.squeeze(a2)
+        if a2 >= 0.5:
+            print("For input", [i[0] for i in x], "output is 1")
+            return 1
+        else:
+            print("For input", [i[0] for i in x], "output is 0")
+            return 0
+        
+    def test(self):
+        accuracy = 0
+        test_cases = [
+            (np.array([[1], [0]]), 1),
+            (np.array([[0], [1]]), 1),
+            (np.array([[1], [1]]), 0),
+            (np.array([[0], [0]]), 0)
+        ]
+        
+        for x, expected in test_cases:
+            output = self.predict(self.weight1, self.weight2, self.bias1, self.bias2, x)
+            if output == expected:
+                accuracy += 1
+        
+        print("Accuracy:", accuracy / len(test_cases))
+
+# Run test
+xor_nn = XOR(weight_1, weight_2, bias_1, bias_2)
+xor_nn.test()
+
+"""
+Assumes sigmoid
+### Code mostly taken from Maya's google colab notebook linked below
+### https://colab.research.google.com/drive/1esl6YgfoboAyaEYdRGiY6Jg3cW6rjfI8
+### This assumes sigmoid activation function
 class xor:
     def __init__(self, weight1, weight2, bias1, bias2):
         self.weight1 = weight1
@@ -124,3 +190,6 @@ class xor:
 
 testmodel = xor(weight_1, weight_2, bias_1, bias_2)
 testmodel.test()
+
+
+"""

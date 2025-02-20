@@ -1,0 +1,140 @@
+
+
+================================================================
+== Synthesis Summary Report of 'example_acc'
+================================================================
++ General Information: 
+    * Date:           Thu Feb 20 10:57:06 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        example_acc
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu3eg-sfvc784-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                 Modules                 | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
+    |                 & Loops                 | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ example_acc                            |     -|  6.13|       42|  420.000|         -|       43|     -|        no|     -|   -|  167 (~0%)|  318 (~0%)|    -|
+    | + example_acc_Pipeline_VITIS_LOOP_11_1  |     -|  6.47|        4|   40.000|         -|        4|     -|        no|     -|   -|   37 (~0%)|   82 (~0%)|    -|
+    |  o VITIS_LOOP_11_1                      |     -|  8.00|        2|   20.000|         1|        1|     2|       yes|     -|   -|          -|          -|    -|
+    | + example_acc_Pipeline_VITIS_LOOP_31_1  |     -|  6.13|       34|  340.000|         -|       34|     -|        no|     -|   -|   10 (~0%)|   90 (~0%)|    -|
+    |  o VITIS_LOOP_31_1                      |     -|  8.00|       32|  320.000|         2|        1|    32|       yes|     -|   -|          -|          -|    -|
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | w1       | 0x10   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control | w2       | 0x18   | 32    | W      | Data signal of w2                |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* Other Ports
++---------------------+-------+-----------+----------+
+| Port                | Mode  | Direction | Bitwidth |
++---------------------+-------+-----------+----------+
+| alpha_transmit_line | ap_hs | out       | 1        |
++---------------------+-------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------------+-----------+-------------------------------------+
+| Argument            | Direction | Datatype                            |
++---------------------+-----------+-------------------------------------+
+| w1                  | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0> |
+| w2                  | in        | ap_fixed<16, 7, AP_TRN, AP_WRAP, 0> |
+| alpha_transmit_line | out       | directio<bool, 0>&                  |
++---------------------+-----------+-------------------------------------+
+
+* SW-to-HW Mapping
++---------------------+----------------------------+----------+------------------------------+
+| Argument            | HW Interface               | HW Type  | HW Info                      |
++---------------------+----------------------------+----------+------------------------------+
+| w1                  | s_axi_control              | register | name=w1 offset=0x10 range=32 |
+| w2                  | s_axi_control              | register | name=w2 offset=0x18 range=32 |
+| alpha_transmit_line | alpha_transmit_line        | port     |                              |
+| alpha_transmit_line | alpha_transmit_line_ap_vld | port     |                              |
+| alpha_transmit_line | alpha_transmit_line_ap_ack | port     |                              |
++---------------------+----------------------------+----------+------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+-----------+-----------+----------+---------+
+| Name                                    | DSP | Pragma | Variable  | Op        | Impl     | Latency |
++-----------------------------------------+-----+--------+-----------+-----------+----------+---------+
+| + example_acc                           | 0   |        |           |           |          |         |
+|  + example_acc_Pipeline_VITIS_LOOP_11_1 | 0   |        |           |           |          |         |
+|    icmp_ln11_fu_76_p2                   |     |        | icmp_ln11 | seteq     | auto     | 0       |
+|    add_ln11_fu_82_p2                    |     |        | add_ln11  | add       | fabric   | 0       |
+|    icmp_ln12_fu_91_p2                   |     |        | icmp_ln12 | seteq     | auto     | 0       |
+|    number_fu_97_p3                      |     |        | number    | select    | auto_sel | 0       |
+|  + example_acc_Pipeline_VITIS_LOOP_31_1 | 0   |        |           |           |          |         |
+|    icmp_ln31_fu_67_p2                   |     |        | icmp_ln31 | seteq     | auto     | 0       |
+|    i_2_fu_73_p2                         |     |        | i_2       | add       | fabric   | 0       |
+|    xor_ln32_fu_83_p2                    |     |        | xor_ln32  | xor       | auto     | 0       |
+|    bitselect_1ns_32ns_32ns_1_1_1_U4     |     |        | bit       | bitselect | auto     | 0       |
++-----------------------------------------+-----+--------+-----------+-----------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + example_acc     |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------+-----------------------------------------------------------+
+| Type      | Options                        | Location                                                  |
++-----------+--------------------------------+-----------------------------------------------------------+
+| interface | ap_hs port=alpha_transmit_line | ../example_acc.cpp:13 in example_acc, alpha_transmit_line |
+| interface | mode=s_axilite port=w1         | ../example_acc.cpp:14 in example_acc, w1                  |
+| interface | mode=s_axilite port=w2         | ../example_acc.cpp:15 in example_acc, w2                  |
+| interface | mode=s_axilite port=return     | ../example_acc.cpp:16 in example_acc, return              |
+| interface | ap_hs port=alpha_transmit_line | ../send_data.cpp:22 in send_data, alpha_transmit_line     |
++-----------+--------------------------------+-----------------------------------------------------------+
+
+

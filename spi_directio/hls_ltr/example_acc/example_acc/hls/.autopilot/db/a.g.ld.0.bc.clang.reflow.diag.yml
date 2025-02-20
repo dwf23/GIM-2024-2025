@@ -1,0 +1,193 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../send_data.cpp, Line: 28, Column: 17 }
+Function:        _Z9send_dataRN3hls8directioIbLi0EEEP8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'convert_to_bitstream(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../example_acc.cpp, Line: 20, Column: 5 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - Callee:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'example_acc(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, hls::directio<bool, 0>&)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../send_data.cpp, Line: 28, Column: 17 }
+Function:        _Z9send_dataRN3hls8directioIbLi0EEEP8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'convert_to_bitstream(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../example_acc.cpp, Line: 20, Column: 5 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - Callee:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'example_acc(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, hls::directio<bool, 0>&)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_example_acc_ir
+Args:            
+  - Callee:          'example_acc(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, hls::directio<bool, 0>&)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_example_acc_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+Function:        _Z9send_dataRN3hls8directioIbLi0EEEP8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'convert_to_bitstream(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'send_data(hls::directio<bool, 0>&, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../send_data.cpp, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'example_acc(ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, hls::directio<bool, 0>&)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            alpha_transmit_line
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_11_1
+  - String:          '> at '
+  - LoopLoc:         '../send_data.cpp:11:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_31_1
+  - String:          '> at '
+  - LoopLoc:         '../send_data.cpp:31:22'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../example_acc.cpp, Line: 18, Column: 11 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - String:          'Automatically partitioning small array '''
+  - Value:           data_out
+  - String:          ''' completely based on array size.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../example_acc.cpp, Line: 18, Column: 11 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=data_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  example_acc
+  - String:          ' '
+  - varLoc:          '../example_acc.cpp:18:11'
+  - String:          ' '
+  - VarName:         data_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../example_acc.cpp, Line: 18, Column: 11 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            data_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../example_acc.cpp, Line: 18, Column: 11 }
+Function:        _Z11example_acc8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EES2_RN3hls8directioIbLi0EEE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          data_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

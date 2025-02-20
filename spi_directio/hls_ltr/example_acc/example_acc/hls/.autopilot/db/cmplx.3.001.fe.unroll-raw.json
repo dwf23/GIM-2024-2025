@@ -1,0 +1,41 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "example_acc.cpp",
+    "fileloc": 11,
+    "instructions": 16,
+    "name": "example_acc",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 63
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "send_data.cpp",
+    "fileloc": 7,
+    "instructions": 19,
+    "loads": {
+      "L": 2
+    },
+    "name": "convert_to_bitstream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 19
+  },
+  "2": {
+    "basicblocks": 8,
+    "calls": "1",
+    "file": "send_data.cpp",
+    "fileloc": 20,
+    "instructions": 28,
+    "loads": {
+      "L": 1
+    },
+    "name": "send_data",
+    "total_instructions": 47
+  }
+}

@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'example_acc_Pipeline_VITIS_LOOP_31_1'
+================================================================
+* Date:           Thu Feb 20 10:57:04 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        example_acc
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.865 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_31_1  |       32|       32|         2|          1|          1|    32|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.86>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %alpha_transmit_line, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 2, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%or_i3_i_i_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %or_i3_i_i_reload"   --->   Operation 7 'read' 'or_i3_i_i_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.48ns)   --->   "%store_ln31 = store i6 0, i6 %i" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 8 'store' 'store_ln31' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%i_1 = load i6 %i" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 10 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.88ns)   --->   "%icmp_ln31 = icmp_eq  i6 %i_1, i6 32" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 11 'icmp' 'icmp_ln31' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.88ns)   --->   "%i_2 = add i6 %i_1, i6 1" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 12 'add' 'i_2' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %icmp_ln31, void %for.body.i.split, void %_Z9send_dataRN3hls8directioIbLi0EEEP8ap_fixedILi16ELi7EL9ap_q_mode5EL9ap_o_mode3ELi0EE.exit.exitStub" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 13 'br' 'br_ln31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln31 = trunc i6 %i_1" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 14 'trunc' 'trunc_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.24ns)   --->   "%xor_ln32 = xor i5 %trunc_ln31, i5 31" [../send_data.cpp:32->../example_acc.cpp:20]   --->   Operation 15 'xor' 'xor_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.24> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln32 = zext i5 %xor_ln32" [../send_data.cpp:32->../example_acc.cpp:20]   --->   Operation 16 'zext' 'zext_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.98ns)   --->   "%bit = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %or_i3_i_i_reload_read, i32 %zext_ln32" [../send_data.cpp:32->../example_acc.cpp:20]   --->   Operation 17 'bitselect' 'bit' <Predicate = (!icmp_ln31)> <Delay = 0.98> <CoreInst = "BitSelector">   --->   Core 153 'BitSelector' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'bitselect'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.48ns)   --->   "%store_ln31 = store i6 %i_2, i6 %i" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 18 'store' 'store_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.48>
+ST_1 : Operation 24 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (icmp_ln31)> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln31 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_3" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 19 'specpipeline' 'specpipeline_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln31 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln31 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 21 'specloopname' 'specloopname_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%write_ln33 = write void @_ssdm_op_Write.ap_hs.volatile.p0i1, i1 %alpha_transmit_line, i1 %bit" [../send_data.cpp:33->../example_acc.cpp:20]   --->   Operation 22 'write' 'write_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln31 = br void %for.body.i" [../send_data.cpp:31->../example_acc.cpp:20]   --->   Operation 23 'br' 'br_ln31' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 1.865ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln31', ../send_data.cpp:31->../example_acc.cpp:20) of constant 0 on local variable 'i', ../send_data.cpp:31->../example_acc.cpp:20 [6]  (0.489 ns)
+	'load' operation 6 bit ('i', ../send_data.cpp:31->../example_acc.cpp:20) on local variable 'i', ../send_data.cpp:31->../example_acc.cpp:20 [9]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln31', ../send_data.cpp:31->../example_acc.cpp:20) [10]  (0.887 ns)
+	'store' operation 0 bit ('store_ln31', ../send_data.cpp:31->../example_acc.cpp:20) of variable 'i', ../send_data.cpp:31->../example_acc.cpp:20 on local variable 'i', ../send_data.cpp:31->../example_acc.cpp:20 [22]  (0.489 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

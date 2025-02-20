@@ -1,0 +1,58 @@
+---
+MainSourceFile:  'C:/GIM/hls_ltr/example_acc/example_acc/hls/.autopilot/db/send_data.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          351492
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          351958
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          352425
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        'C:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          635778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_11_1:  '
+    FileOffset:      11
+    FilePath:        'C:\GIM\hls_ltr\send_data.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          1694896
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_11_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_1:  '
+    FileOffset:      31
+    FilePath:        'C:\GIM\hls_ltr\send_data.cpp'
+    Replacements:    
+      - FilePath:        'C:\GIM\hls_ltr\example_acc\example_acc\hls\.autopilot\db\send_data.pp.0.cpp'
+        Offset:          1695460
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_1: '
+...

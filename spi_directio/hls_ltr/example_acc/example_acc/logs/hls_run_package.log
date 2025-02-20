@@ -1,0 +1,58 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/GIM/hls_ltr/example_acc/example_acc 
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/hls_ltr/example_acc.cpp' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/hls_ltr/example_acc.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/hls_ltr/send_data.cpp' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/hls_ltr/send_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM/hls_ltr/example_acc_tb.cpp' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/GIM/hls_ltr/example_acc_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/GIM/hls_ltr/example_acc_tb.cpp,-D HW_COSIM' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(13)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/GIM/hls_ltr/example_acc/hls_config.cfg(5)
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: C:/Xilinx/Vivado/2024.2/tps/win64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Feb 20 10:58:15 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/GIM/hls_ltr/example_acc/example_acc/hls/hls_data.json outdir=C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip srcdir=C:/GIM/hls_ltr/example_acc/example_acc/hls sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/misc
+INFO: Copied 7 verilog file(s) to C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/hdl/verilog
+INFO: Copied 7 vhdl file(s) to C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 626.527 ; gain = 186.445
+INFO: Import ports from HDL: C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/hdl/vhdl/example_acc.vhd (example_acc)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add data interface alpha_transmit_line
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/component.xml
+INFO: Created IP archive C:/GIM/hls_ltr/example_acc/example_acc/hls/impl/ip/xilinx_com_hls_example_acc_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 20 10:58:29 2025...
+INFO: [HLS 200-802] Generated output file example_acc/example_acc.zip
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 22.356 seconds; peak allocated memory: 684.434 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 27s

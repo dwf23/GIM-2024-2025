@@ -5,12 +5,12 @@ TO RUN:
 1.Open two terminals, one for main and the other for Sub
 
 2a. On a terminal, first run :
-./c_server
+./c_main.exe
 
 2b. On the other terminal, run the following:
-./c_client
+./c_sub.exe
 
-NOTE: this results in rewriting a text file, learned_weights_bias.txt
+NOTE: this results in rewriting a text file, final_w_b.txt
 
 3. Open Csim_xor_validation.py and run script. This will read the bias/weights from
 the text file and determine accuracy for XOR problem

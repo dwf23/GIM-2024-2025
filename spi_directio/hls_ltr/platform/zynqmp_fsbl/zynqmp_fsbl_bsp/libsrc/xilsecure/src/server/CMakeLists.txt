@@ -1,0 +1,22 @@
+# Copyright (C) 2024 Advanced Micro Devices, Inc.  All rights reserved.
+# SPDX-License-Identifier: MIT
+
+if(NOT("${CMAKE_MACHINE}" STREQUAL "ZynqMP"))
+  add_subdirectory(core)
+endif()
+if(("${CMAKE_MACHINE}" STREQUAL "Versal"))
+  add_subdirectory(versal)
+endif()
+if("${CMAKE_MACHINE}" STREQUAL "VersalNet")
+    if("${CMAKE_SUBMACHINE}" STREQUAL "VersalNet")
+        add_subdirectory(versal_net)
+    elseif("${CMAKE_SUBMACHINE}" STREQUAL "VersalGen2")
+        add_subdirectory(versal_aiepg2)
+    endif()
+endif()
+if("${CMAKE_MACHINE}" STREQUAL "ZynqMP")
+   add_subdirectory(zynqmp)
+endif()
+if("${CMAKE_MACHINE}" STREQUAL "SPARTANUP")
+   add_subdirectory(spartanup)
+endif()

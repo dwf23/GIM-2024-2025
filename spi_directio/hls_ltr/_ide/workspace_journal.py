@@ -1,23 +1,29 @@
-# 2025-02-20T10:47:44.964922700
+# 2025-02-20T11:24:46.049120500
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="hls_ltr")
 
-comp = client.create_hls_component(name = "example_acc",cfg_file = ["hls_config.cfg"],template = "empty_hls_component")
+platform = client.create_platform_component(name = "platform",hw_design = "$COMPONENT_LOCATION/../project_1/design_1_wrapper.xsa",os = "standalone",cpu = "psu_cortexa53_0",domain_name = "standalone_psu_cortexa53_0")
 
-comp = client.get_component(name="example_acc")
-comp.run(operation="C_SIMULATION")
+platform = client.get_component(name="platform")
+status = platform.build()
 
-comp.run(operation="C_SIMULATION")
+comp = client.create_app_component(name="example_acc_file",platform = "$COMPONENT_LOCATION/../platform/export/platform/platform.xpfm",domain = "standalone_psu_cortexa53_0")
 
-comp.run(operation="C_SIMULATION")
+comp = client.get_component(name="example_acc_file")
+status = comp.import_files(from_loc="$COMPONENT_LOCATION/..", files=["accelerator.cc", "accelerator_io.cc"], dest_dir_in_cmp = "src")
 
-comp.run(operation="C_SIMULATION")
+status = platform.build()
 
-comp.run(operation="SYNTHESIS")
+comp = client.get_component(name="example_acc_file")
+comp.build()
 
-comp.run(operation="CO_SIMULATION")
+status = platform.build()
 
-comp.run(operation="PACKAGE")
+comp.build()
+
+status = platform.build()
+
+comp.build()
 

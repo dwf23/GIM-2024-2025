@@ -47,7 +47,7 @@ def parse_file(filename):
     return weight_1, weight_2, bias_1, bias_2
 
 script_dir = os.path.dirname(os.path.abspath(__file__))  # Get script's directory
-filename = os.path.join(script_dir, "learned_weights_bias.txt")  # Construct full path
+filename = os.path.join(script_dir, "final_w_b.txt")  # Construct full path
 
 weight_1, weight_2, bias_1, bias_2 = parse_file(filename)
 
@@ -124,15 +124,3 @@ class xor:
 
 testmodel = xor(weight_1, weight_2, bias_1, bias_2)
 testmodel.test()
-"""
-new_w1:
-0.862147 0.862147 
-1.11563 1.11563 
-new_w2:
-1.15989 -1.7927 
-0 0 
-new_b1: 
-6.18615e-08 -1.11563 
-new_b2: 
-4.05084e-07 0 
-"""

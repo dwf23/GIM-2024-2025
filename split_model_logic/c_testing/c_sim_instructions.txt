@@ -22,15 +22,13 @@ to run C++ files on VScode
 https://code.visualstudio.com/docs/cpp/config-mingw
 
 2. If making edits to code, run
-g++  test_c_main.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_server 
-g++  test_c_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_client 
-
-        note: If #pragma comment(lib, "ws2_32.lib") not present in code, also use  -lws2_32 after -o exe_file_name
+g++  c_sim_main.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_main -lws2_32
+g++  c_sim_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -o c_sub  -lws2_32
 
 3. Open two terminals, one for main and the other for Sub
 
 4. On a terminal, first run :
-./c_server
+./c_main
 
 On the other terminal, run the following:
 ./c_client
@@ -39,84 +37,3 @@ NOTE: this results in rewriting a text file, learned_weights_bias.txt
 
 5. Open Csim_xor_validation.py and run script. This will read the bias/weights from
 the text file and determine accuracy for XOR problem
-
-
-For C++ on windows:
-Example of setting up server for communication:
-    //Communication
-    //------------------------
-    // Initialize Winsock
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
-        cerr << "WSAStartup failed" << endl;
-        return 1;
-    }
-    // Create TCP server
-    SOCKET server_fd, new_socket;
-    struct sockaddr_in address;
-    int opt = 1;
-    int addrlen = sizeof(address);
-    char buffer[BUFFER_SIZE];
-    // Creating socket file descriptor
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
-        cerr << "Socket creation failed" << endl;
-        WSACleanup();
-        return 1;
-    }
-    // Forcefully attaching socket to port 12345
-    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (const char*)&opt, sizeof(opt)) == SOCKET_ERROR) {
-        cerr << "setsockopt failed" << endl;
-        closesocket(server_fd);
-        WSACleanup();
-        return 1;
-    }
-    address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
-    // Bind the socket to the network address and port
-    if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) == SOCKET_ERROR) {
-        cerr << "Bind failed" << endl;
-        closesocket(server_fd);
-        WSACleanup();
-        return 1;
-    }
-    // Start listening for incoming connections
-    if (listen(server_fd, 3) == SOCKET_ERROR) {
-        cerr << "Listen failed" << endl;
-        closesocket(server_fd);
-        WSACleanup();
-        return 1;
-    }
-    //------------------------
-    cout << "Main Board listening on port " << PORT << endl;
-
-Example of how to send stuff:
-    // send header to sub board
-    int bytesSent;
-
-    bytesSent = send(new_socket, header, 4, 0);  // Send a 4-byte header
-    // cout << "Sending DATA header" << endl;
-    if (bytesSent == SOCKET_ERROR) {
-        cerr << "Error sending header: " << WSAGetLastError() << endl;
-        return -1;
-    }
-Example of how to receive stuff: 
-    // Receive output_2 from sub board
-    int bytesReceived;
-    bytesReceived = recv(new_socket, reinterpret_cast<char*>(output_2), sizeof(output_2), 0);
-    if (bytesReceived == SOCKET_ERROR) {
-        cerr << "Error receiving backpropagation array_back2 output_2." << endl;
-    } 
-
-
-how to close socket at end:
-cout<<"Ran through all epochs! Sending termination signal, 'END'"<<endl;
-int endSent = send(new_socket, "END", 4, 0);  // Send a 4-byte header
-if (endSent == SOCKET_ERROR) {
-    cerr << "Error sending header: " << WSAGetLastError() << endl;
-    return -1;
-}
-// Close the sockets
-closesocket(new_socket);
-closesocket(server_fd);
-WSACleanup();

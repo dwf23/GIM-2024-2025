@@ -164,7 +164,7 @@ int main() {
                 cerr << "Error sending output_1: " << WSAGetLastError() << endl;
             } 
             bytesSent = send(new_socket, reinterpret_cast<char*>(&y[j]), sizeof(y[j]), 0);
-            // cout << "Sent y bytes: " << bytesSent << " / " << sizeof(delta_2) << endl;
+            // cout << "Sent y bytes: " << bytesSent << " / " << sizeof(y[j]) << endl;
             if (bytesSent == SOCKET_ERROR) {
                 cerr << "Error sending y: " << WSAGetLastError() << endl;
             }  

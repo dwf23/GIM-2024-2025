@@ -151,7 +151,6 @@ int main() {
         output_2[0] = array_out2.output_k[0];
         output_2[1] = array_out2.output_k[1];
 
-
         
         // lastly calculate the final error with the derivative of mse after the last output
         if (model == 's') {

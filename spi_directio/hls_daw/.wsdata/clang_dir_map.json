@@ -1,8 +1,10 @@
 {
   "workspaceRoot": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw",
   "mapping": {
+    "pulse_gen.cpp": "pulse_gen",
+    "receive_data.cpp": "example_acc",
     "example_acc_tb.cpp": "example_acc",
-    "send_data.cpp": "example_acc",
+    "pulse_gen_tb.cpp": "pulse_gen",
     "example_acc.cpp": "example_acc"
   }
 }

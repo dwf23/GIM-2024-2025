@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'example_acc'" level="0">
-<item name = "Date">Mon Feb 17 22:12:42 2025
+<item name = "Date">Wed Feb 19 22:04:22 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">example_acc</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.181 ns, 2.00 ns</column>
+<column name="ap_clk">10.00 ns, 2.067 ns, 2.00 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">61, 61, 0.610 us, 0.610 us, 60, 60, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="">?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_20_1">59, 59, 3, 3, 50, 20, yes</column>
+<column name="- VITIS_LOOP_22_1">?, ?, 16, 16, 1, ?, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 108, -</column>
+<column name="Expression">-, -, 0, 28, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, -, 106, 168, 0</column>
+<column name="Instance">0, -, 37, 42, 0</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 88, -</column>
-<column name="Register">-, -, 73, -, -</column>
+<column name="Multiplexer">-, -, 0, 117, -</column>
+<column name="Register">-, -, 21, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 106, 168, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 37, 42, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,34 +79,26 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_fu_145_p2">+, 0, 0, 12, 5, 1</column>
-<column name="w1_2_fu_115_p2">+, 0, 0, 39, 32, 1</column>
-<column name="w2_2_fu_130_p2">+, 0, 0, 39, 32, 2</column>
-<column name="ap_condition_196">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln20_fu_151_p2">icmp, 0, 0, 12, 5, 5</column>
+<column name="rx_3_fu_88_p2">+, 0, 0, 12, 4, 1</column>
+<column name="and_ln29_fu_100_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln29_fu_94_p2">icmp, 0, 0, 12, 4, 4</column>
 <column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state3_pp0_stage2_iter0">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_w1_12_load">9, 2, 32, 64</column>
-<column name="data_out_blk_n">9, 2, 1, 2</column>
-<column name="data_out_int_regslice">14, 3, 32, 96</column>
-<column name="i1_fu_66">9, 2, 5, 10</column>
-<column name="w1_12_fu_70">9, 2, 32, 64</column>
-<column name="w2_13_fu_74">9, 2, 32, 64</column>
+<column name="ap_phi_mux_start_assign_phi_fu_73_p4">9, 2, 1, 2</column>
+<column name="data_in_blk_n">9, 2, 1, 2</column>
+<column name="rx_fu_54">9, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="i1_fu_66">5, 0, 5, 0</column>
-<column name="w1_12_fu_70">32, 0, 32, 0</column>
-<column name="w2_13_fu_74">32, 0, 32, 0</column>
+<column name="rx_fu_54">4, 0, 4, 0</column>
 </table>
 </item>
 </section>
@@ -140,10 +132,9 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, example_acc, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, example_acc, return value</column>
 <column name="ap_return">out, 32, ap_ctrl_hs, example_acc, return value</column>
-<column name="data_out_ap_ack">in, 1, ap_hs, data_out, pointer</column>
-<column name="data_out">out, 32, ap_hs, data_out, pointer</column>
-<column name="data_out_ap_vld">out, 1, ap_hs, data_out, pointer</column>
-<column name="start_r">in, 1, ap_none, start_r, scalar</column>
+<column name="data_in_ap_vld">in, 1, ap_hs, data_in, pointer</column>
+<column name="data_in">in, 1, ap_hs, data_in, pointer</column>
+<column name="data_in_ap_ack">out, 1, ap_hs, data_in, pointer</column>
 </table>
 </item>
 </section>

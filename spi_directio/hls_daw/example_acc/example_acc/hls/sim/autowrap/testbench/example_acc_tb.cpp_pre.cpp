@@ -77912,27 +77912,19 @@ using ap_hs = directio<__STREAM_T__>;
 
 
 
-typedef hls::ap_hs<ap_uint<32>> mosi;
-typedef hls::ap_hs<ap_uint<32>> miso;
-typedef ap_axis<32, 0, 0, 0> pkt;
+typedef ap_axis<16, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
+typedef ap_fixed<16,7> fixed_16;
+typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
-void send_data(
-    miso &data_out,
-    pkt &example_pkt
-);
-
-void recv_data(
-    mosi &data_in,
-    hls::stream<pkt>&in
+fixed_16 receive_data(
+    dataline &data_in
 
 );
 
 int example_acc(
-    ap_uint<32> w1,
-    ap_uint<32> w2,
-    miso &data_out,
+    dataline &data_in,
     bool start
 );
 # 5 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
@@ -77940,22 +77932,20 @@ int example_acc(
 # 6 "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp" 2
 
 
-int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start);
+int example_acc(dataline &data_in, bool start);
 
 int main()
 {
     std::cout << "Starting Testbench" << "\n";
-    ap_uint<32> w1 = 10;
-    ap_uint<32> w2 = 0;
     bool start = false;
-    miso data_out;
+    dataline data_in;
 
 
 
 
     std::cout << "Beginning HLS Func" << "\n";
     start = true;
-    example_acc(w1,w2, data_out, start);
+    example_acc(data_in, start);
 
 
 

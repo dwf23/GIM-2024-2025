@@ -5,28 +5,22 @@
 #include <iostream>
 
 #define NUM_RUNS 20
-#define BITS 32
+#define BITS 16
 
-typedef hls::ap_hs<ap_uint<32>> mosi;
-typedef hls::ap_hs<ap_uint<32>> miso;
 typedef ap_axis<BITS, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
+typedef ap_fixed<16,7> fixed_16;
+typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
-void send_data(
-    miso &data_out, 
-    pkt &example_pkt
-);
+bool pulse_gen(bool start);
 
-void recv_data(
-    mosi &data_in,
-    hls::stream<pkt>&in
+fixed_16 receive_data(
+    dataline &data_in
 
 );
 
 int example_acc(
-    ap_uint<32> w1,
-    ap_uint<32> w2,
-    miso &data_out,
+    dataline &data_in,
     bool start
 );

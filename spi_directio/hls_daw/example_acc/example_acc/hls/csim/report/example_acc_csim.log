@@ -1,49 +1,8 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../example_acc_tb.cpp in debug mode
+   Compiling ../../../../../receive_data.cpp in debug mode
    Compiling ../../../../../example_acc.cpp in debug mode
    Generating csim.exe
-Starting Testbench
-Beginning HLS Func
-Modify W1: 11
-Modify W2: 2
-Modify W1: 12
-Modify W2: 4
-Modify W1: 13
-Modify W2: 6
-Modify W1: 14
-Modify W2: 8
-Modify W1: 15
-Modify W2: 10
-Modify W1: 16
-Modify W2: 12
-Modify W1: 17
-Modify W2: 14
-Modify W1: 18
-Modify W2: 16
-Modify W1: 19
-Modify W2: 18
-Modify W1: 20
-Modify W2: 20
-Modify W1: 21
-Modify W2: 22
-Modify W1: 22
-Modify W2: 24
-Modify W1: 23
-Modify W2: 26
-Modify W1: 24
-Modify W2: 28
-Modify W1: 25
-Modify W2: 30
-Modify W1: 26
-Modify W2: 32
-Modify W1: 27
-Modify W2: 34
-Modify W1: 28
-Modify W2: 36
-Modify W1: 29
-Modify W2: 38
-Modify W1: 30
-Modify W2: 40
-WARNING [HLS SIM]: hls::directio 'hls::directio<ap_uint<32> >0' contains leftover data, which may result in RTL simulation hanging.
-INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -87,8 +87,8 @@ $(ObjDir)/example_acc_tb.cpp_pre.cpp.tb.o : example_acc_tb.cpp_pre.cpp.tb.cpp $(
 	$(Echo) "   Compiling example_acc_tb.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
 	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++14 -fno-builtin-isinf -fno-builtin-isnan -c -Wno-unknown-pragmas -Wno-unknown-pragmas $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/send_data.cpp_pre.cpp.tb.o : send_data.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling send_data.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
+$(ObjDir)/receive_data.cpp_pre.cpp.tb.o : receive_data.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling receive_data.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
 	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++14 -fno-builtin-isinf -fno-builtin-isnan -c  $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/example_acc.cpp_pre.cpp.tb.o : example_acc.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir

@@ -1,0 +1,226 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\pulse_gen.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/19/25 23:20:49",
+ "timestampMillis": "567094346",
+ "buildStep": {
+  "cmdId": "b30962f7-aab6-406b-a380-7e07fffbcc7a",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\logs\\pulse_gen.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\hls_config.cfg --work_dir pulse_gen ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\hls_config.cfg",
+   "--work_dir",
+   "pulse_gen"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:20:49",
+ "timestampMillis": "567094347",
+ "status": {
+  "cmdId": "b30962f7-aab6-406b-a380-7e07fffbcc7a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111936",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "pulse_gen",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111939",
+ "buildStep": {
+  "cmdId": "3fde1a08-70b1-4249-950d-a09454c64178",
+  "name": "cosim_design",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls\\hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111941",
+ "status": {
+  "cmdId": "3fde1a08-70b1-4249-950d-a09454c64178",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111942",
+ "report": {
+  "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls\\sim\\report\\pulse_gen_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111944",
+ "report": {
+  "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111945",
+ "report": {
+  "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111946",
+ "report": {
+  "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:21:06",
+ "timestampMillis": "567111948",
+ "report": {
+  "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:22:07",
+ "timestampMillis": "567172776",
+ "status": {
+  "cmdId": "3fde1a08-70b1-4249-950d-a09454c64178",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:22:07",
+ "timestampMillis": "567173107",
+ "status": {
+  "cmdId": "b30962f7-aab6-406b-a380-7e07fffbcc7a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:22:07",
+ "timestampMillis": "567173108",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:22:07",
+ "timestampMillis": "567173108",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

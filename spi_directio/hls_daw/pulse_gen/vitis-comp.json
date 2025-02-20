@@ -1,0 +1,11 @@
+{
+  "name": "pulse_gen",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "pulse_gen"
+  }
+}

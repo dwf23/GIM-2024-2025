@@ -93,10 +93,8 @@ int XExample_acc_Release(XExample_acc *InstancePtr);
 #endif
 
 
-void XExample_acc_Set_w1(XExample_acc *InstancePtr, u32 Data);
-u32 XExample_acc_Get_w1(XExample_acc *InstancePtr);
-void XExample_acc_Set_w2(XExample_acc *InstancePtr, u32 Data);
-u32 XExample_acc_Get_w2(XExample_acc *InstancePtr);
+void XExample_acc_Set_start_r(XExample_acc *InstancePtr, u32 Data);
+u32 XExample_acc_Get_start_r(XExample_acc *InstancePtr);
 
 #ifdef __cplusplus
 }

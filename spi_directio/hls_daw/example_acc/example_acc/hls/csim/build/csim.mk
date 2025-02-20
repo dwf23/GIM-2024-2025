@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../example_acc_tb.cpp ../../../../../send_data.cpp ../../../../../example_acc.cpp
+HLS_SOURCES = ../../../../../example_acc_tb.cpp ../../../../../receive_data.cpp ../../../../../example_acc.cpp
 
 override TARGET := csim.exe
 
@@ -90,11 +90,11 @@ $(ObjDir)/example_acc_tb.o: ../../../../../example_acc_tb.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/example_acc_tb.d
 
-$(ObjDir)/send_data.o: ../../../../../send_data.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../send_data.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/receive_data.o: ../../../../../receive_data.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../receive_data.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/send_data.d
+-include $(ObjDir)/receive_data.d
 
 $(ObjDir)/example_acc.o: ../../../../../example_acc.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../example_acc.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

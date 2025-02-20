@@ -1,0 +1,4 @@
+Starting Testbench
+Beginning HLS Func
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.

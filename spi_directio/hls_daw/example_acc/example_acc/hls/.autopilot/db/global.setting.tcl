@@ -42,7 +42,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sfvc784:-1-e
-set SourceFiles {sc {} c {../../../send_data.cpp ../../../example_acc.cpp}}
+set SourceFiles {sc {} c {../../../receive_data.cpp ../../../example_acc.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {}
 set TBFiles {verilog ../../../example_acc_tb.cpp bc ../../../example_acc_tb.cpp vhdl ../../../example_acc_tb.cpp sc ../../../example_acc_tb.cpp cas ../../../example_acc_tb.cpp c {}}

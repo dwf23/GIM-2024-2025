@@ -7,9 +7,9 @@
       "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
       "",
       "-c",
-      "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp"
+      "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/receive_data.cpp"
     ],
-    "file": "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp"
+    "file": "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/receive_data.cpp"
   },
   {
     "directory": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc",
@@ -19,9 +19,9 @@
       "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
       "",
       "-c",
-      "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\send_data.cpp"
+      "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp"
     ],
-    "file": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\send_data.cpp"
+    "file": "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp"
   },
   {
     "directory": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc",

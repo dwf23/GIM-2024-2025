@@ -3,38 +3,38 @@ source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
-%"struct.ap_uint<32>" = type { %"struct.ap_int_base<32, false>" }
-%"struct.ap_int_base<32, false>" = type { %"struct.ssdm_int<32, false>" }
-%"struct.ssdm_int<32, false>" = type { i32 }
-%"class.hls::directio<ap_uint<32> >" = type { %"struct.ap_uint<32>" }
+%"class.hls::directio<ap_uint<1> >" = type { %"struct.ap_uint<1>" }
+%"struct.ap_uint<1>" = type { %"struct.ap_int_base<1, false>" }
+%"struct.ap_int_base<1, false>" = type { %"struct.ssdm_int<1, false>" }
+%"struct.ssdm_int<1, false>" = type { i1 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define i32 @apatb_example_acc_ir(%"struct.ap_uint<32>"* nocapture readonly %w1, %"struct.ap_uint<32>"* nocapture readonly %w2, %"class.hls::directio<ap_uint<32> >"* noalias nonnull dereferenceable(4) %data_out, i1 zeroext %start) local_unnamed_addr #0 {
+define i32 @apatb_example_acc_ir(%"class.hls::directio<ap_uint<1> >"* noalias nonnull dereferenceable(1) %data_in, i1 zeroext %start) local_unnamed_addr #0 {
 entry:
-  %data_out_copy = alloca i32, align 512
-  call fastcc void @copy_in(%"class.hls::directio<ap_uint<32> >"* nonnull %data_out, i32* nonnull align 512 %data_out_copy)
-  %0 = call i32 @apatb_example_acc_hw(%"struct.ap_uint<32>"* %w1, %"struct.ap_uint<32>"* %w2, i32* %data_out_copy, i1 %start)
-  call void @copy_back(%"class.hls::directio<ap_uint<32> >"* %data_out, i32* %data_out_copy)
+  %data_in_copy = alloca i1, align 512
+  call fastcc void @copy_in(%"class.hls::directio<ap_uint<1> >"* nonnull %data_in, i1* nonnull align 512 %data_in_copy)
+  %0 = call i32 @apatb_example_acc_hw(i1* %data_in_copy, i1 %start)
+  call void @copy_back(%"class.hls::directio<ap_uint<1> >"* %data_in, i1* %data_in_copy)
   ret i32 %0
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @copy_in(%"class.hls::directio<ap_uint<32> >"* noalias, i32* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #1 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<32> >.hls::directio"(i32* align 512 %1, %"class.hls::directio<ap_uint<32> >"* %0)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio"(i1* align 512 %1, %"class.hls::directio<ap_uint<1> >"* %0)
   ret void
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<32> >.hls::directio"(i32* noalias align 512 %dst, %"class.hls::directio<ap_uint<32> >"* noalias %src) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio"(i1* noalias align 512 %dst, %"class.hls::directio<ap_uint<1> >"* noalias %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq i32* %dst, null
-  %1 = icmp eq %"class.hls::directio<ap_uint<32> >"* %src, null
+  %0 = icmp eq i1* %dst, null
+  %1 = icmp eq %"class.hls::directio<ap_uint<1> >"* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<32> >"(i32* nonnull align 512 %dst, %"class.hls::directio<ap_uint<32> >"* nonnull %src)
+  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >"(i1* nonnull align 512 %dst, %"class.hls::directio<ap_uint<1> >"* nonnull %src)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -42,27 +42,27 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<32> >"(i32* noalias align 512, %"class.hls::directio<ap_uint<32> >"* noalias) unnamed_addr #3 {
+define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >"(i1* noalias align 512, %"class.hls::directio<ap_uint<1> >"* noalias) unnamed_addr #3 {
 entry:
-  %2 = alloca %"class.hls::directio<ap_uint<32> >"
-  %3 = alloca i32
+  %2 = alloca %"class.hls::directio<ap_uint<1> >"
+  %3 = alloca i1
   br label %empty
 
 empty:                                            ; preds = %push, %entry
-  %4 = bitcast %"class.hls::directio<ap_uint<32> >"* %1 to i8*
-  %5 = call i1 @fpga_direct_valid_4(i8* %4)
+  %4 = bitcast %"class.hls::directio<ap_uint<1> >"* %1 to i8*
+  %5 = call i1 @fpga_direct_valid_1(i8* %4)
   br i1 %5, label %push, label %ret
 
 push:                                             ; preds = %empty
-  %6 = bitcast %"class.hls::directio<ap_uint<32> >"* %2 to i8*
-  %7 = bitcast %"class.hls::directio<ap_uint<32> >"* %1 to i8*
-  call void @fpga_direct_load_4(i8* %6, i8* %7)
-  %8 = load volatile %"class.hls::directio<ap_uint<32> >", %"class.hls::directio<ap_uint<32> >"* %2
-  %9 = call i32 @"_llvm.fpga.pack.bits.i32.s_class.hls::directio<ap_uint<32> >s"(%"class.hls::directio<ap_uint<32> >" %8)
-  store i32 %9, i32* %3
-  %10 = bitcast i32* %3 to i8*
-  %11 = bitcast i32* %0 to i8*
-  call void @fpga_direct_store_4(i8* %10, i8* %11)
+  %6 = bitcast %"class.hls::directio<ap_uint<1> >"* %2 to i8*
+  %7 = bitcast %"class.hls::directio<ap_uint<1> >"* %1 to i8*
+  call void @fpga_direct_load_1(i8* %6, i8* %7)
+  %8 = load volatile %"class.hls::directio<ap_uint<1> >", %"class.hls::directio<ap_uint<1> >"* %2
+  %9 = call i1 @"_llvm.fpga.pack.bits.i1.s_class.hls::directio<ap_uint<1> >s"(%"class.hls::directio<ap_uint<1> >" %8)
+  store i1 %9, i1* %3
+  %10 = bitcast i1* %3 to i8*
+  %11 = bitcast i1* %0 to i8*
+  call void @fpga_direct_store_1(i8* %10, i8* %11)
   br label %empty, !llvm.loop !5
 
 ret:                                              ; preds = %empty
@@ -70,22 +70,22 @@ ret:                                              ; preds = %empty
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @copy_out(%"class.hls::directio<ap_uint<32> >"* noalias, i32* noalias align 512) unnamed_addr #4 {
+define internal fastcc void @copy_out(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<32> >.hls::directio.5"(%"class.hls::directio<ap_uint<32> >"* %0, i32* align 512 %1)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
   ret void
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<32> >.hls::directio.5"(%"class.hls::directio<ap_uint<32> >"* noalias %dst, i32* noalias align 512 %src) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* noalias %dst, i1* noalias align 512 %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq %"class.hls::directio<ap_uint<32> >"* %dst, null
-  %1 = icmp eq i32* %src, null
+  %0 = icmp eq %"class.hls::directio<ap_uint<1> >"* %dst, null
+  %1 = icmp eq i1* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<32> >.8"(%"class.hls::directio<ap_uint<32> >"* nonnull %dst, i32* nonnull align 512 %src)
+  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.12"(%"class.hls::directio<ap_uint<1> >"* nonnull %dst, i1* nonnull align 512 %src)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -93,31 +93,33 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<32> >.8"(%"class.hls::directio<ap_uint<32> >"* noalias, i32* noalias align 512) unnamed_addr #3 {
+define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.12"(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #3 {
 entry:
-  %2 = alloca %"class.hls::directio<ap_uint<32> >"
-  %3 = alloca i32
+  %2 = alloca %"class.hls::directio<ap_uint<1> >"
+  %3 = alloca i1
   br label %empty
 
 empty:                                            ; preds = %push, %entry
-  %4 = bitcast i32* %1 to i8*
-  %5 = call i1 @fpga_direct_valid_4(i8* %4)
+  %4 = bitcast i1* %1 to i8*
+  %5 = call i1 @fpga_direct_valid_1(i8* %4)
   br i1 %5, label %push, label %ret
 
 push:                                             ; preds = %empty
-  %6 = bitcast i32* %3 to i8*
-  %7 = bitcast i32* %1 to i8*
-  call void @fpga_direct_load_4(i8* %6, i8* %7)
-  %8 = load volatile i32, i32* %3
-  %9 = call i32 @"_llvm.fpga.unpack.bits.s_class.hls::directio<ap_uint<32> >s.i32"(i32 %8)
-  %oldret3 = insertvalue %"struct.ssdm_int<32, false>" undef, i32 %9, 0
-  %oldret2 = insertvalue %"struct.ap_int_base<32, false>" undef, %"struct.ssdm_int<32, false>" %oldret3, 0
-  %oldret1 = insertvalue %"struct.ap_uint<32>" undef, %"struct.ap_int_base<32, false>" %oldret2, 0
-  %oldret = insertvalue %"class.hls::directio<ap_uint<32> >" undef, %"struct.ap_uint<32>" %oldret1, 0
-  store %"class.hls::directio<ap_uint<32> >" %oldret, %"class.hls::directio<ap_uint<32> >"* %2
-  %10 = bitcast %"class.hls::directio<ap_uint<32> >"* %2 to i8*
-  %11 = bitcast %"class.hls::directio<ap_uint<32> >"* %0 to i8*
-  call void @fpga_direct_store_4(i8* %10, i8* %11)
+  %6 = bitcast i1* %3 to i8*
+  %7 = bitcast i1* %1 to i8*
+  call void @fpga_direct_load_1(i8* %6, i8* %7)
+  %8 = bitcast i1* %3 to i8*
+  %9 = load i8, i8* %8
+  %10 = trunc i8 %9 to i1
+  %11 = call i1 @"_llvm.fpga.unpack.bits.s_class.hls::directio<ap_uint<1> >s.i1"(i1 %10)
+  %oldret3 = insertvalue %"struct.ssdm_int<1, false>" undef, i1 %11, 0
+  %oldret2 = insertvalue %"struct.ap_int_base<1, false>" undef, %"struct.ssdm_int<1, false>" %oldret3, 0
+  %oldret1 = insertvalue %"struct.ap_uint<1>" undef, %"struct.ap_int_base<1, false>" %oldret2, 0
+  %oldret = insertvalue %"class.hls::directio<ap_uint<1> >" undef, %"struct.ap_uint<1>" %oldret1, 0
+  store %"class.hls::directio<ap_uint<1> >" %oldret, %"class.hls::directio<ap_uint<1> >"* %2
+  %12 = bitcast %"class.hls::directio<ap_uint<1> >"* %2 to i8*
+  %13 = bitcast %"class.hls::directio<ap_uint<1> >"* %0 to i8*
+  call void @fpga_direct_store_1(i8* %12, i8* %13)
   br label %empty, !llvm.loop !5
 
 ret:                                              ; preds = %empty
@@ -125,46 +127,46 @@ ret:                                              ; preds = %empty
 }
 
 ; Function Attrs: alwaysinline nounwind readnone willreturn
-define internal i32 @"_llvm.fpga.unpack.bits.s_class.hls::directio<ap_uint<32> >s.i32"(i32 %A) #5 {
-  %.0 = insertvalue %"struct.ssdm_int<32, false>" undef, i32 %A, 0
-  %oldret = extractvalue %"struct.ssdm_int<32, false>" %.0, 0
-  ret i32 %oldret
+define internal i1 @"_llvm.fpga.unpack.bits.s_class.hls::directio<ap_uint<1> >s.i1"(i1 %A) #5 {
+  %.0 = insertvalue %"struct.ssdm_int<1, false>" undef, i1 %A, 0
+  %oldret = extractvalue %"struct.ssdm_int<1, false>" %.0, 0
+  ret i1 %oldret
 }
 
 ; Function Attrs: alwaysinline nounwind readnone willreturn
-define internal i32 @"_llvm.fpga.pack.bits.i32.s_class.hls::directio<ap_uint<32> >s"(%"class.hls::directio<ap_uint<32> >" %A) #5 {
-  %A.0 = extractvalue %"class.hls::directio<ap_uint<32> >" %A, 0
-  %A.0.0 = extractvalue %"struct.ap_uint<32>" %A.0, 0
-  %A.0.0.0 = extractvalue %"struct.ap_int_base<32, false>" %A.0.0, 0
-  %A.0.0.0.0 = extractvalue %"struct.ssdm_int<32, false>" %A.0.0.0, 0
-  ret i32 %A.0.0.0.0
+define internal i1 @"_llvm.fpga.pack.bits.i1.s_class.hls::directio<ap_uint<1> >s"(%"class.hls::directio<ap_uint<1> >" %A) #5 {
+  %A.0 = extractvalue %"class.hls::directio<ap_uint<1> >" %A, 0
+  %A.0.0 = extractvalue %"struct.ap_uint<1>" %A.0, 0
+  %A.0.0.0 = extractvalue %"struct.ap_int_base<1, false>" %A.0.0, 0
+  %A.0.0.0.0 = extractvalue %"struct.ssdm_int<1, false>" %A.0.0.0, 0
+  ret i1 %A.0.0.0.0
 }
 
-declare i32 @apatb_example_acc_hw(%"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, i32*, i1)
+declare i32 @apatb_example_acc_hw(i1*, i1)
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @copy_back(%"class.hls::directio<ap_uint<32> >"* noalias, i32* noalias align 512) unnamed_addr #4 {
+define internal fastcc void @copy_back(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<32> >.hls::directio.5"(%"class.hls::directio<ap_uint<32> >"* %0, i32* align 512 %1)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
   ret void
 }
 
-define i32 @example_acc_hw_stub_wrapper(%"struct.ap_uint<32>"*, %"struct.ap_uint<32>"*, i32*, i1) #6 {
+define i32 @example_acc_hw_stub_wrapper(i1*, i1) #6 {
 entry:
-  %4 = alloca %"class.hls::directio<ap_uint<32> >"
-  call void @copy_out(%"class.hls::directio<ap_uint<32> >"* %4, i32* %2)
-  %5 = call i32 @example_acc_hw_stub(%"struct.ap_uint<32>"* %0, %"struct.ap_uint<32>"* %1, %"class.hls::directio<ap_uint<32> >"* %4, i1 %3)
-  call void @copy_in(%"class.hls::directio<ap_uint<32> >"* %4, i32* %2)
-  ret i32 %5
+  %2 = alloca %"class.hls::directio<ap_uint<1> >"
+  call void @copy_out(%"class.hls::directio<ap_uint<1> >"* %2, i1* %0)
+  %3 = call i32 @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* %2, i1 %1)
+  call void @copy_in(%"class.hls::directio<ap_uint<1> >"* %2, i1* %0)
+  ret i32 %3
 }
 
-declare i32 @example_acc_hw_stub(%"struct.ap_uint<32>"* nocapture readonly, %"struct.ap_uint<32>"* nocapture readonly, %"class.hls::directio<ap_uint<32> >"* noalias nonnull, i1 zeroext)
+declare i32 @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* noalias nonnull, i1 zeroext)
 
-declare i1 @fpga_direct_valid_4(i8*)
+declare i1 @fpga_direct_valid_1(i8*)
 
-declare void @fpga_direct_store_4(i8*, i8*)
+declare void @fpga_direct_store_1(i8*, i8*)
 
-declare void @fpga_direct_load_4(i8*, i8*)
+declare void @fpga_direct_load_1(i8*, i8*)
 
 attributes #0 = { inaccessiblemem_or_argmemonly noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { inaccessiblemem_or_argmemonly noinline "fpga.wrapper.func"="copyin" }

@@ -9,21 +9,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control {
-w1 { 
+start_r { 
 	dir I
-	width 32
+	width 1
 	depth 1
 	mode ap_none
 	offset 16
 	offset_end 23
-}
-w2 { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 24
-	offset_end 31
 }
 }
 dict set axilite_register_dict control $port_control
@@ -57,14 +49,14 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 2 \
-    name data_out \
+    name data_in \
     type other \
-    dir O \
+    dir I \
     reset_level 0 \
     sync_rst true \
-    corename dc_data_out \
+    corename dc_data_in \
     op interface \
-    ports { data_out_ap_ack { I 1 bit } data_out { O 32 vector } data_out_ap_vld { O 1 bit } } \
+    ports { data_in_ap_vld { I 1 bit } data_in { I 1 vector } data_in_ap_ack { O 1 bit } } \
 } "
 }
 
@@ -143,11 +135,6 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_end
     cg_default_interface_gen_bundle_end
     AESL_LIB_XILADAPTER::native_axis_end
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler example_acc_regslice_both BINDTYPE {interface} TYPE {adapter} IMPL {reg_slice}
 }
 
 

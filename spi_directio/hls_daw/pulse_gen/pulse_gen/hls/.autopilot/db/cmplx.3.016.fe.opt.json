@@ -1,0 +1,11 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "pulse_gen.cpp",
+    "fileloc": 4,
+    "instructions": 5,
+    "name": "pulse_gen",
+    "total_instructions": 5
+  }
+}

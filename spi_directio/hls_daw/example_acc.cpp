@@ -7,34 +7,31 @@
 #include "GIM_comm.h"
 
 
-int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start){
-    // fixed_16 will be the
-    ap_uint<32> tmp;
 
-    #pragma HLS INTERFACE ap_hs port=data_out
-    #pragma HLS INTERFACE mode=s_axilite port=w1
-    #pragma HLS INTERFACE mode=s_axilite port=w2
-    #pragma HLS INTERFACE ap_none port=start
+int example_acc(dataline &data_in, bool start){
+    // fixed_16 will be the
+    // LSB first
+    // for the purposes of signaling start needs to be passed in as true, but you won't see it in code
+    fixed_16 tmp;
+    int rx = 0;
+
+    #pragma HLS INTERFACE ap_hs port=data_in
+    #pragma HLS INTERFACE mode=s_axilite port=start
     #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
 
-    for (int i = 0; i< NUM_RUNS; i++) {
-        #pragma HLS PIPELINE II=50
+    do {
         //need to serialize this data
-        //need to talk to Lindsey to figure out protocal for this.
-        w1 +=1;
-        w2 +=2;
-        std::cout << "Modify W1: " << w1 <<  "\n";
+        //need to talk to Lindsey to figure out protocal for this
         //id 0 --> w1
-        tmp = w1;
-        data_out.write(tmp);
-        std::cout << "Modify W2: " << w2 << "\n";
-        //id 1 --> w2
-        tmp = w2;
-        data_out.write(tmp);
-    }
+        tmp = data_in.read();
+        std::cout << "Data Received: " << tmp.range(15,0) << std::endl;
+        rx ++;
+        if (rx > 10){
+            start = false;
+        }
+    } while(start);
 
     return 0;
     
-
 
 }

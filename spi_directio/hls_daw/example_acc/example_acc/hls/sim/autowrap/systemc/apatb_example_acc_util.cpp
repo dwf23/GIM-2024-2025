@@ -4,25 +4,25 @@
 
 using namespace std;
 
-struct __cosim_T_4__ {char data[4];};
-extern "C" void fpga_fifo_push_4(__cosim_T_4__* val, hls::stream<__cosim_T_4__>* fifo) {
+struct __cosim_T_1__ {char data[1];};
+extern "C" void fpga_fifo_push_1(__cosim_T_1__* val, hls::stream<__cosim_T_1__>* fifo) {
   fifo->write(*val);
 }
-extern "C" void fpga_fifo_pop_4(__cosim_T_4__* val, hls::stream<__cosim_T_4__>* fifo) {
+extern "C" void fpga_fifo_pop_1(__cosim_T_1__* val, hls::stream<__cosim_T_1__>* fifo) {
   *val = fifo->read();
 }
-extern "C" bool fpga_fifo_not_empty_4(hls::stream<__cosim_T_4__>* fifo) {
+extern "C" bool fpga_fifo_not_empty_1(hls::stream<__cosim_T_1__>* fifo) {
   return !fifo->empty();
 }
-extern "C" bool fpga_fifo_exist_4(hls::stream<__cosim_T_4__>* fifo) {
+extern "C" bool fpga_fifo_exist_1(hls::stream<__cosim_T_1__>* fifo) {
   return fifo->exist();
 }
-extern "C" bool fpga_direct_valid_4(hls::directio<__cosim_T_4__>* direct) {
+extern "C" bool fpga_direct_valid_1(hls::directio<__cosim_T_1__>* direct) {
   return direct->valid();
 }
-extern "C" void fpga_direct_load_4(__cosim_T_4__* val, hls::directio<__cosim_T_4__>* direct) {
+extern "C" void fpga_direct_load_1(__cosim_T_1__* val, hls::directio<__cosim_T_1__>* direct) {
   *val = direct->read();
 }
-extern "C" void fpga_direct_store_4(__cosim_T_4__* val, hls::directio<__cosim_T_4__>* direct) {
+extern "C" void fpga_direct_store_1(__cosim_T_1__* val, hls::directio<__cosim_T_1__>* direct) {
   direct->write(*val);
 }

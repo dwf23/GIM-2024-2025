@@ -40331,62 +40331,53 @@ get_pointer_safety() noexcept { return pointer_safety::relaxed; }
 
 
 
-typedef hls::ap_hs<ap_uint<32>> mosi;
-typedef hls::ap_hs<ap_uint<32>> miso;
-typedef ap_axis<32, 0, 0, 0> pkt;
+typedef ap_axis<16, 0, 0, 0> pkt;
 typedef hls::stream<pkt> stream;
+typedef ap_fixed<16,7> fixed_16;
+typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
-void send_data(
-    miso &data_out,
-    pkt &example_pkt
-);
-
-void recv_data(
-    mosi &data_in,
-    hls::stream<pkt>&in
+fixed_16 receive_data(
+    dataline &data_in
 
 );
 
 __attribute__((sdx_kernel("example_acc", 0))) int example_acc(
-    ap_uint<32> w1,
-    ap_uint<32> w2,
-    miso &data_out,
+    dataline &data_in,
     bool start
 );
 # 8 "../example_acc.cpp" 2
 
 
-__attribute__((sdx_kernel("example_acc", 0))) int example_acc(ap_uint<32> w1, ap_uint<32> w2, miso &data_out, bool start){
+
+__attribute__((sdx_kernel("example_acc", 0))) int example_acc(dataline &data_in, bool start){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=example_acc
-# 10 "../example_acc.cpp"
+# 11 "../example_acc.cpp"
 
 
-    ap_uint<32> tmp;
 
-#pragma HLS INTERFACE ap_hs port=data_out
-#pragma HLS INTERFACE mode=s_axilite port=w1
-#pragma HLS INTERFACE mode=s_axilite port=w2
-#pragma HLS INTERFACE ap_none port=start
+
+    fixed_16 tmp;
+    int rx = 0;
+
+#pragma HLS INTERFACE ap_hs port=data_in
+#pragma HLS INTERFACE mode=s_axilite port=start
 #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
 
- VITIS_LOOP_20_1: for (int i = 0; i< 20; i++) {
-#pragma HLS PIPELINE II=50
- w1 +=1;
-        w2 +=2;
-        std::cout << "Modify W1: " << w1 << "\n";
+ VITIS_LOOP_22_1: do {
 
-        tmp = w1;
-        data_out.write(tmp);
-        std::cout << "Modify W2: " << w2 << "\n";
 
-        tmp = w2;
-        data_out.write(tmp);
-    }
+
+        tmp = receive_data(data_in);
+        std::cout << "Data Received: " << tmp.range(15,0) << std::endl;
+        rx ++;
+        if (rx > 10){
+            start = false;
+        }
+    } while(start);
 
     return 0;
-
 
 
 }

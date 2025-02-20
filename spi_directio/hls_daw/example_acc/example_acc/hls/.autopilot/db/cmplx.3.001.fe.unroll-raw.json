@@ -1,11 +1,23 @@
 {
   "0": {
-    "basicblocks": 5,
-    "calls": "",
+    "basicblocks": 6,
+    "calls": "1",
     "file": "example_acc.cpp",
-    "fileloc": 10,
-    "instructions": 26,
+    "fileloc": 11,
+    "instructions": 21,
     "name": "example_acc",
-    "total_instructions": 26
+    "total_instructions": 52
+  },
+  "1": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "receive_data.cpp",
+    "fileloc": 10,
+    "instructions": 31,
+    "name": "receive_data",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 31
   }
 }

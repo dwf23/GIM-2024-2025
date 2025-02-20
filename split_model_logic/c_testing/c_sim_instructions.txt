@@ -28,12 +28,12 @@ g++  c_sim_sub.cpp act_pe.cpp array.cpp bias_pe.cpp error_pe.cpp weight_pe.cpp -
 3. Open two terminals, one for main and the other for Sub
 
 4. On a terminal, first run :
-./c_main
+./c_main.exe
 
 On the other terminal, run the following:
-./c_client
+./c_sub.exe
 
-NOTE: this results in rewriting a text file, learned_weights_bias.txt
+NOTE: this results in rewriting a text file, final_w_b.txt
 
 5. Open Csim_xor_validation.py and run script. This will read the bias/weights from
 the text file and determine accuracy for XOR problem

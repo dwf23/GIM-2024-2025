@@ -32,7 +32,7 @@ int main()
 	
 	
 	// cout is c++ version of printf and needs the iostream.h and namespace std declared above
-	cout << "Integer variables initialized for software sim, a=" << a_in << " b=" << b_in << " c=" << c_in << " d=" << d_in << " e=" << e_in << " f=" << f_in << " g=" << g_in << " h=" << h_in << endl;
+	cout << "Integer variables initialized for software sim, w1=" << w1_in << " w2=" << w2_in << endl;
 
 	// Get the starting time in cycle counts
 	XTime_GetTime(&start_time_co);
@@ -43,7 +43,7 @@ int main()
 
 	// Trigger the accelerator to start
 	XExample_acc_Start(&Example_acc);
-	while (!XT_int_IsReady(&T_int));
+	while (!XExample_acc_IsReady(&Example_acc));
 
 	// Capture the stop time on the processor
 	XTime_GetTime(&stop_time_co);

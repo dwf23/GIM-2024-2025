@@ -1,63 +1,63 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "tcf-debug",
-      "request": "launch",
-      "name": "example_acc_file_app_hw_1",
-      "debugType": "baremetal-zu",
-      "attachToRunningTargetOptions": {
-        "targetSetupMode": "standalone",
-        "executeScript": true,
-        "scriptPath": ""
-      },
-      "autoAttachProcessChildren": false,
-      "target": {
-        "targetConnectionId": "Local",
-        "peersIniPath": "../../_ide/.peers.ini",
-        "context": "ZUPlus"
-      },
-      "pathMap": [],
-      "targetSetup": {
-        "resetSystem": true,
-        "programDevice": true,
-        "enableRPUSplitMode": false,
-        "resetAPU": false,
-        "resetRPU": false,
-        "bitstreamFile": "${workspaceFolder}\\example_acc_file\\_ide\\bitstream\\design_1_wrapper.bit",
-        "zuInitialization": {
-          "isFsbl": true,
-          "usingFSBL": {
-            "initWithFSBL": true,
-            "fsblFile": "${workspaceFolder}\\platform\\export\\platform\\sw\\boot\\fsbl.elf",
-            "fsblExitSymbol": "XFsbl_Exit"
-          },
-          "usingPsuInit": {
-            "runPsuInit": true,
-            "plPowerup": false,
-            "psuInitTclFile": "${workspaceFolder}\\example_acc_file\\_ide\\psinit\\example_acc.tcl"
-          }
-        },
-        "zuTraceOptions": {
-          "isSelected": false,
-          "scratchAddress": "0x60000",
-          "scratchSize": "0x60000",
-          "traceOutputPath": ""
-        },
-        "downloadElf": [
-          {
-            "core": "psu_cortexa53_0",
-            "resetProcessor": true,
-            "elfFile": "${workspaceFolder}\\example_acc_file\\build\\example_acc_file.elf",
-            "stopAtEntry": false
-          }
-        ],
-        "crossTriggerBreakpoints": {
-          "isSelected": false,
-          "breakpoints": []
-        }
-      },
-      "internalConsoleOptions": "openOnSessionStart"
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "tcf-debug",
+			"request": "launch",
+			"name": "example_acc_file_app_hw_1",
+			"debugType": "baremetal-zu",
+			"attachToRunningTargetOptions": {
+				"targetSetupMode": "standalone",
+				"executeScript": true,
+				"scriptPath": ""
+			},
+			"autoAttachProcessChildren": false,
+			"target": {
+				"targetConnectionId": "Local",
+				"peersIniPath": "../../_ide/.peers.ini",
+				"context": "ZUPlus"
+			},
+			"pathMap": [],
+			"targetSetup": {
+				"resetSystem": true,
+				"programDevice": true,
+				"enableRPUSplitMode": false,
+				"resetAPU": false,
+				"resetRPU": false,
+				"bitstreamFile": "${workspaceFolder}\\example_acc_file\\_ide\\bitstream\\design_1_wrapper.bit",
+				"zuInitialization": {
+					"isFsbl": true,
+					"usingFSBL": {
+						"initWithFSBL": true,
+						"fsblFile": "${workspaceFolder}\\platform\\export\\platform\\sw\\boot\\fsbl.elf",
+						"fsblExitSymbol": "XFsbl_Exit"
+					},
+					"usingPsuInit": {
+						"runPsuInit": true,
+						"plPowerup": false,
+						"psuInitTclFile": "${workspaceFolder}\\example_acc_file\\_ide\\psinit\\example_acc.tcl"
+					}
+				},
+				"zuTraceOptions": {
+					"isSelected": false,
+					"scratchAddress": "0x60000",
+					"scratchSize": "0x60000",
+					"traceOutputPath": ""
+				},
+				"downloadElf": [
+					{
+						"core": "psu_cortexa53_0",
+						"resetProcessor": true,
+						"elfFile": "${workspaceFolder}\\example_acc_file\\build\\example_acc_file.elf",
+						"stopAtEntry": false
+					}
+				],
+				"crossTriggerBreakpoints": {
+					"isSelected": false,
+					"breakpoints": []
+				}
+			},
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
 }

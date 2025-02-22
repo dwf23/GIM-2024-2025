@@ -1,7 +1,0 @@
-sv work "glbl.v"
-sv xil_defaultlib "AESL_axi_slave_control.v"
-sv xil_defaultlib "pulse_gen.autotb.v"
-sv xil_defaultlib "pulse_gen.v"
-sv xil_defaultlib "pulse_gen_control_s_axi.v"
-sv xil_defaultlib "dataflow_monitor.sv"
-

@@ -6,14 +6,9 @@
           <constraint constraint_type="pragma interface" mode="ap_hs" register_option="0"/>
         </hw>
       </arg>
-      <arg id="1" access_type="r" src_name="start" src_type="bool" src_isptr="0" src_bitwidth="1" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="1" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
-        </hw>
-      </arg>
     </args>
-    <return src_type="int" src_bitwidth="32" offset="0x0">
-      <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="32" hw_kernel_support="false"/>
+    <return src_type="float" src_bitwidth="32" offset="0x0">
+      <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_kernel_support="true"/>
     </return>
   </kernel>
 </root>

@@ -13,11 +13,6 @@ generic (
     C_S_AXI_CONTROL_ADDR_WIDTH : INTEGER := 5;
     C_S_AXI_CONTROL_DATA_WIDTH : INTEGER := 32 );
 port (
-    ap_start : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
-    ap_return : OUT STD_LOGIC_VECTOR (0 downto 0);
     s_axi_control_AWVALID : IN STD_LOGIC;
     s_axi_control_AWREADY : OUT STD_LOGIC;
     s_axi_control_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
@@ -44,15 +39,14 @@ architecture behav of pulse_gen is
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
     "pulse_gen_pulse_gen,hls_ip_2024_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sfvc784-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=0.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=37,HLS_SYN_LUT=42,HLS_VERSION=2024_1}";
-    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_S_AXI_DATA_WIDTH : INTEGER := 32;
+    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
-    constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;
+    constant ap_const_logic_0 : STD_LOGIC := '0';
 
-    signal start_r : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_rst_n_inv : STD_LOGIC;
-    signal ap_ce_reg : STD_LOGIC;
+    signal ap_return : STD_LOGIC_VECTOR (0 downto 0);
 
     component pulse_gen_control_s_axi IS
     generic (
@@ -79,7 +73,7 @@ architecture behav of pulse_gen is
         ACLK : IN STD_LOGIC;
         ARESET : IN STD_LOGIC;
         ACLK_EN : IN STD_LOGIC;
-        start_r : OUT STD_LOGIC_VECTOR (0 downto 0) );
+        ap_return : IN STD_LOGIC_VECTOR (0 downto 0) );
     end component;
 
 
@@ -110,15 +104,11 @@ begin
         ACLK => ap_clk,
         ARESET => ap_rst_n_inv,
         ACLK_EN => ap_const_logic_1,
-        start_r => start_r);
+        ap_return => ap_const_lv1_1);
 
 
 
 
-    ap_done <= ap_start;
-    ap_idle <= ap_const_logic_1;
-    ap_ready <= ap_start;
-    ap_return <= ap_const_lv1_1;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin

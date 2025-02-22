@@ -3,11 +3,11 @@ source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
-; Function Attrs: inaccessiblemem_or_argmemonly noinline willreturn
-define i1 @apatb_pulse_gen_ir(i1 zeroext %start) local_unnamed_addr #0 {
+; Function Attrs: noinline optnone
+define i1 @apatb_pulse_gen_ir() local_unnamed_addr #0 {
 entry:
   call fastcc void @copy_in()
-  %0 = call i1 @apatb_pulse_gen_hw(i1 %start)
+  %0 = call i1 @apatb_pulse_gen_hw()
   call void @copy_back()
   ret i1 %0
 }
@@ -24,7 +24,7 @@ entry:
   ret void
 }
 
-declare i1 @apatb_pulse_gen_hw(i1)
+declare i1 @apatb_pulse_gen_hw()
 
 ; Function Attrs: argmemonly noinline norecurse readnone willreturn
 define internal fastcc void @copy_back() unnamed_addr #2 {
@@ -32,17 +32,17 @@ entry:
   ret void
 }
 
-define i1 @pulse_gen_hw_stub_wrapper(i1) #3 {
+define i1 @pulse_gen_hw_stub_wrapper() #3 {
 entry:
   call void @copy_out()
-  %1 = call i1 @pulse_gen_hw_stub(i1 %0)
+  %0 = call i1 @pulse_gen_hw_stub()
   call void @copy_in()
-  ret i1 %1
+  ret i1 %0
 }
 
-declare i1 @pulse_gen_hw_stub(i1 zeroext)
+declare i1 @pulse_gen_hw_stub()
 
-attributes #0 = { inaccessiblemem_or_argmemonly noinline willreturn "fpga.wrapper.func"="wrapper" }
+attributes #0 = { noinline optnone "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse readnone willreturn "fpga.wrapper.func"="copyin" }
 attributes #2 = { argmemonly noinline norecurse readnone willreturn "fpga.wrapper.func"="copyout" }
 attributes #3 = { "fpga.wrapper.func"="stub" }

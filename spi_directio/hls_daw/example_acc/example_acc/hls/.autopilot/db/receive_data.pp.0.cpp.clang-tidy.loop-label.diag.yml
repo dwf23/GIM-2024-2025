@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        'C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\receive_data.cpp'
     Replacements:    
       - FilePath:        'C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\receive_data.pp.0.cpp'
-        Offset:          1700564
+        Offset:          1700569
         Length:          0
         ReplacementText: 'VITIS_LOOP_17_1: '
 ...

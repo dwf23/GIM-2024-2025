@@ -1,8 +1,0 @@
-   Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
-   Compiling example_acc.cpp_pre.cpp.tb.cpp
-   Compiling apatb_example_acc_util.cpp
-   Compiling receive_data.cpp_pre.cpp.tb.cpp
-   Compiling example_acc_tb.cpp_pre.cpp.tb.cpp
-   Compiling apatb_example_acc.cpp
-   Compiling apatb_example_acc_ir.ll
-   Generating cosim.tv.exe

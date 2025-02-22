@@ -9,69 +9,33 @@
       <module_structure>Sequential</module_structure>
       <ret_bitwidth>1</ret_bitwidth>
       <ports class_id="2" tracking_level="0" version="0">
-        <count>1</count>
+        <count>0</count>
         <item_version>0</item_version>
-        <item class_id="3" tracking_level="1" version="0" object_id="_1">
-          <Value class_id="4" tracking_level="0" version="0">
-            <Obj class_id="5" tracking_level="0" version="0">
-              <type>1</type>
-              <id>1</id>
-              <name>start_r</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <contextNormFuncName/>
-              <inlineStackInfo class_id="6" tracking_level="0" version="0">
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName>start</originalName>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>1</bitwidth>
-          </Value>
-          <direction>0</direction>
-          <if_type>0</if_type>
-          <array_size>0</array_size>
-          <bit_vecs class_id="7" tracking_level="0" version="0">
-            <count>0</count>
-            <item_version>0</item_version>
-          </bit_vecs>
-        </item>
       </ports>
-      <nodes class_id="8" tracking_level="0" version="0">
+      <nodes class_id="3" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="9" tracking_level="1" version="0" object_id="_2">
-          <Value>
-            <Obj>
+        <item class_id="4" tracking_level="1" version="0" object_id="_1">
+          <Value class_id="5" tracking_level="0" version="0">
+            <Obj class_id="6" tracking_level="0" version="0">
               <type>0</type>
-              <id>7</id>
+              <id>5</id>
               <name>_ln8</name>
               <fileName>../pulse_gen.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>8</lineNumber>
               <contextFuncName>pulse_gen</contextFuncName>
               <contextNormFuncName>pulse_gen</contextNormFuncName>
-              <inlineStackInfo>
+              <inlineStackInfo class_id="7" tracking_level="0" version="0">
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id="10" tracking_level="0" version="0">
+                <item class_id="8" tracking_level="0" version="0">
                   <first>C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\pulse_gen</first>
-                  <second class_id="11" tracking_level="0" version="0">
+                  <second class_id="9" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
-                    <item class_id="12" tracking_level="0" version="0">
-                      <first class_id="13" tracking_level="0" version="0">
+                    <item class_id="10" tracking_level="0" version="0">
+                      <first class_id="11" tracking_level="0" version="0">
                         <first>../pulse_gen.cpp</first>
                         <second>pulse_gen</second>
                       </first>
@@ -96,7 +60,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>10</item>
+            <item>8</item>
           </oprand_edges>
           <opcode>ret</opcode>
           <m_Display>0</m_Display>
@@ -108,14 +72,14 @@
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
       </nodes>
-      <consts class_id="15" tracking_level="0" version="0">
+      <consts class_id="13" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="16" tracking_level="1" version="0" object_id="_3">
+        <item class_id="14" tracking_level="1" version="0" object_id="_2">
           <Value>
             <Obj>
               <type>2</type>
-              <id>9</id>
+              <id>7</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -143,13 +107,13 @@
           <content>1</content>
         </item>
       </consts>
-      <blocks class_id="17" tracking_level="0" version="0">
+      <blocks class_id="15" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="18" tracking_level="1" version="0" object_id="_4">
+        <item class_id="16" tracking_level="1" version="0" object_id="_3">
           <Obj>
             <type>3</type>
-            <id>8</id>
+            <id>6</id>
             <name>pulse_gen</name>
             <fileName/>
             <fileDirectory/>
@@ -174,26 +138,26 @@
           <node_objs>
             <count>1</count>
             <item_version>0</item_version>
-            <item>7</item>
+            <item>5</item>
           </node_objs>
         </item>
       </blocks>
-      <edges class_id="19" tracking_level="0" version="0">
+      <edges class_id="17" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="20" tracking_level="1" version="0" object_id="_5">
-          <id>10</id>
+        <item class_id="18" tracking_level="1" version="0" object_id="_4">
+          <id>8</id>
           <edge_type>1</edge_type>
-          <source_obj>9</source_obj>
-          <sink_obj>7</sink_obj>
+          <source_obj>7</source_obj>
+          <sink_obj>5</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
       </edges>
     </cdfg>
-    <cdfg_regions class_id="21" tracking_level="0" version="0">
+    <cdfg_regions class_id="19" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_6">
+      <item class_id="20" tracking_level="1" version="0" object_id="_5">
         <mId>1</mId>
         <mTag>pulse_gen</mTag>
         <mNormTag>pulse_gen</mNormTag>
@@ -205,7 +169,7 @@
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
-          <item>8</item>
+          <item>6</item>
         </basic_blocks>
         <mII>-1</mII>
         <mDepth>-1</mDepth>
@@ -217,63 +181,58 @@
         <mDfPipe class_id="-1"/>
       </item>
     </cdfg_regions>
-    <fsm class_id="24" tracking_level="1" version="0" object_id="_7">
-      <states class_id="25" tracking_level="0" version="0">
+    <fsm class_id="22" tracking_level="1" version="0" object_id="_6">
+      <states class_id="23" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="26" tracking_level="1" version="0" object_id="_8">
+        <item class_id="24" tracking_level="1" version="0" object_id="_7">
           <id>1</id>
-          <operations class_id="27" tracking_level="0" version="0">
-            <count>6</count>
+          <operations class_id="25" tracking_level="0" version="0">
+            <count>5</count>
             <item_version>0</item_version>
-            <item class_id="28" tracking_level="1" version="0" object_id="_9">
+            <item class_id="26" tracking_level="1" version="0" object_id="_8">
+              <id>1</id>
+              <stage>1</stage>
+              <latency>1</latency>
+            </item>
+            <item class_id_reference="26" object_id="_9">
               <id>2</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_10">
+            <item class_id_reference="26" object_id="_10">
               <id>3</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_11">
+            <item class_id_reference="26" object_id="_11">
               <id>4</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_12">
+            <item class_id_reference="26" object_id="_12">
               <id>5</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="28" object_id="_13">
-              <id>6</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="28" object_id="_14">
-              <id>7</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
           </operations>
         </item>
       </states>
-      <transitions class_id="29" tracking_level="0" version="0">
+      <transitions class_id="27" tracking_level="0" version="0">
         <count>0</count>
         <item_version>0</item_version>
       </transitions>
     </fsm>
-    <res class_id="30" tracking_level="1" version="0" object_id="_15">
-      <dp_component_resource class_id="31" tracking_level="0" version="0">
+    <res class_id="28" tracking_level="1" version="0" object_id="_13">
+      <dp_component_resource class_id="29" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="32" tracking_level="0" version="0">
+        <item class_id="30" tracking_level="0" version="0">
           <first>control_s_axi_U (control_s_axi)</first>
-          <second class_id="33" tracking_level="0" version="0">
+          <second class_id="31" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
-            <item class_id="34" tracking_level="0" version="0">
+            <item class_id="32" tracking_level="0" version="0">
               <first>BRAM</first>
               <second>0</second>
             </item>
@@ -323,7 +282,7 @@
           </second>
         </item>
       </dp_dsp_resource>
-      <dp_component_map class_id="35" tracking_level="0" version="0">
+      <dp_component_map class_id="33" tracking_level="0" version="0">
         <count>0</count>
         <item_version>0</item_version>
       </dp_component_map>
@@ -340,37 +299,37 @@
         <item_version>0</item_version>
       </dp_memory_map>
     </res>
-    <node_label_latency class_id="36" tracking_level="0" version="0">
+    <node_label_latency class_id="34" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="37" tracking_level="0" version="0">
-        <first>7</first>
-        <second class_id="38" tracking_level="0" version="0">
+      <item class_id="35" tracking_level="0" version="0">
+        <first>5</first>
+        <second class_id="36" tracking_level="0" version="0">
           <first>0</first>
           <second>0</second>
         </second>
       </item>
     </node_label_latency>
-    <bblk_ent_exit class_id="39" tracking_level="0" version="0">
+    <bblk_ent_exit class_id="37" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="40" tracking_level="0" version="0">
-        <first>8</first>
-        <second class_id="41" tracking_level="0" version="0">
+      <item class_id="38" tracking_level="0" version="0">
+        <first>6</first>
+        <second class_id="39" tracking_level="0" version="0">
           <first>0</first>
           <second>0</second>
         </second>
       </item>
     </bblk_ent_exit>
-    <regions class_id="42" tracking_level="0" version="0">
+    <regions class_id="40" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </regions>
-    <dp_fu_nodes class_id="43" tracking_level="0" version="0">
+    <dp_fu_nodes class_id="41" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_fu_nodes>
-    <dp_fu_nodes_expression class_id="44" tracking_level="0" version="0">
+    <dp_fu_nodes_expression class_id="42" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_fu_nodes_expression>
@@ -385,16 +344,16 @@
     <return_ports>
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="45" tracking_level="0" version="0">
+      <item class_id="43" tracking_level="0" version="0">
         <first>ap_return</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>7</item>
+          <item>5</item>
         </second>
       </item>
     </return_ports>
-    <dp_mem_port_nodes class_id="47" tracking_level="0" version="0">
+    <dp_mem_port_nodes class_id="45" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_mem_port_nodes>
@@ -414,16 +373,9 @@
       <count>0</count>
       <item_version>0</item_version>
     </dp_regname_phi>
-    <dp_port_io_nodes class_id="48" tracking_level="0" version="0">
-      <count>1</count>
+    <dp_port_io_nodes class_id="46" tracking_level="0" version="0">
+      <count>0</count>
       <item_version>0</item_version>
-      <item class_id="49" tracking_level="0" version="0">
-        <first>start_r</first>
-        <second>
-          <count>0</count>
-          <item_version>0</item_version>
-        </second>
-      </item>
     </dp_port_io_nodes>
     <port2core>
       <count>0</count>

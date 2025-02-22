@@ -9,19 +9,17 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/19/25 21:52:18",
- "timestampMillis": "561783457",
+ "dateTimestamp": "02/22/25 16:19:01",
+ "timestampMillis": "800987070",
  "buildStep": {
-  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
+  "cmdId": "b3f32602-76b3-404e-9880-41e8036a2c81",
   "name": "vitis-run",
   "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\logs\\example_acc.steps.log",
-  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls-debug.cfg --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg --work_dir example_acc ",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg --work_dir example_acc ",
   "args": [
    "--mode",
    "hls",
    "--csim",
-   "--config",
-   "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls-debug.cfg",
    "--config",
    "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg",
    "--work_dir",
@@ -35,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 21:52:18",
- "timestampMillis": "561783457",
+ "dateTimestamp": "02/22/25 16:19:01",
+ "timestampMillis": "800987072",
  "status": {
-  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
+  "cmdId": "b3f32602-76b3-404e-9880-41e8036a2c81",
   "state": "CS_RUNNING"
  }
 }
@@ -46,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/19/25 21:52:24",
- "timestampMillis": "561789432",
+ "dateTimestamp": "02/22/25 16:19:18",
+ "timestampMillis": "801003717",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -83,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/19/25 21:52:24",
- "timestampMillis": "561789434",
+ "dateTimestamp": "02/22/25 16:19:18",
+ "timestampMillis": "801003720",
  "buildStep": {
-  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
+  "cmdId": "79d63973-85a7-4151-bb38-a191fc79076e",
   "name": "csim_design",
   "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\hls.log",
   "commandLine": "csim_design",
@@ -99,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 21:52:24",
- "timestampMillis": "561789434",
+ "dateTimestamp": "02/22/25 16:19:18",
+ "timestampMillis": "801003722",
  "status": {
-  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
+  "cmdId": "79d63973-85a7-4151-bb38-a191fc79076e",
   "state": "CS_RUNNING"
  }
 }
@@ -110,30 +108,30 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 21:52:34",
- "timestampMillis": "561799240",
+ "dateTimestamp": "02/22/25 16:19:28",
+ "timestampMillis": "801013608",
  "status": {
-  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
-  "state": "CS_PASSED"
+  "cmdId": "79d63973-85a7-4151-bb38-a191fc79076e",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 21:52:34",
- "timestampMillis": "561799412",
+ "dateTimestamp": "02/22/25 16:19:28",
+ "timestampMillis": "801013931",
  "status": {
-  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
-  "state": "CS_PASSED"
+  "cmdId": "b3f32602-76b3-404e-9880-41e8036a2c81",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 21:52:34",
- "timestampMillis": "561799413",
+ "dateTimestamp": "02/22/25 16:19:28",
+ "timestampMillis": "801013932",
  "report": {
   "path": "",
   "name": "",
@@ -146,8 +144,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 21:52:34",
- "timestampMillis": "561799414",
+ "dateTimestamp": "02/22/25 16:19:28",
+ "timestampMillis": "801013932",
  "report": {
   "path": "",
   "name": "",

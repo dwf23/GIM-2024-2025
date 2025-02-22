@@ -31,32 +31,53 @@ module example_acc_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [0:0]                    start_r
+    output wire                          interrupt,
+    output wire                          ap_start,
+    input  wire                          ap_done,
+    input  wire                          ap_ready,
+    input  wire                          ap_idle,
+    input  wire [31:0]                   ap_return
 );
 //------------------------Address Info-------------------
-// Protocol Used: ap_ctrl_none
+// Protocol Used: ap_ctrl_hs
 //
-// 0x00 : reserved
-// 0x04 : reserved
-// 0x08 : reserved
-// 0x0c : reserved
-// 0x10 : Data signal of start_r
-//        bit 0  - start_r[0] (Read/Write)
+// 0x00 : Control signals
+//        bit 0  - ap_start (Read/Write/COH)
+//        bit 1  - ap_done (Read/COR)
+//        bit 2  - ap_idle (Read)
+//        bit 3  - ap_ready (Read/COR)
+//        bit 7  - auto_restart (Read/Write)
+//        bit 9  - interrupt (Read)
 //        others - reserved
-// 0x14 : reserved
+// 0x04 : Global Interrupt Enable Register
+//        bit 0  - Global Interrupt Enable (Read/Write)
+//        others - reserved
+// 0x08 : IP Interrupt Enable Register (Read/Write)
+//        bit 0 - enable ap_done interrupt (Read/Write)
+//        bit 1 - enable ap_ready interrupt (Read/Write)
+//        others - reserved
+// 0x0c : IP Interrupt Status Register (Read/TOW)
+//        bit 0 - ap_done (Read/TOW)
+//        bit 1 - ap_ready (Read/TOW)
+//        others - reserved
+// 0x10 : Data signal of ap_return
+//        bit 31~0 - ap_return[31:0] (Read)
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_START_R_DATA_0 = 5'h10,
-    ADDR_START_R_CTRL   = 5'h14,
-    WRIDLE              = 2'd0,
-    WRDATA              = 2'd1,
-    WRRESP              = 2'd2,
-    WRRESET             = 2'd3,
-    RDIDLE              = 2'd0,
-    RDDATA              = 2'd1,
-    RDRESET             = 2'd2,
+    ADDR_AP_CTRL     = 5'h00,
+    ADDR_GIE         = 5'h04,
+    ADDR_IER         = 5'h08,
+    ADDR_ISR         = 5'h0c,
+    ADDR_AP_RETURN_0 = 5'h10,
+    WRIDLE           = 2'd0,
+    WRDATA           = 2'd1,
+    WRRESP           = 2'd2,
+    WRRESET          = 2'd3,
+    RDIDLE           = 2'd0,
+    RDDATA           = 2'd1,
+    RDRESET          = 2'd2,
     ADDR_BITS                = 5;
 
 //------------------------Local signal-------------------
@@ -72,7 +93,21 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [0:0]                    int_start_r = 'b0;
+    reg                           int_ap_idle = 1'b0;
+    reg                           int_ap_ready = 1'b0;
+    wire                          task_ap_ready;
+    reg                           int_ap_done = 1'b0;
+    wire                          task_ap_done;
+    reg                           int_task_ap_done = 1'b0;
+    reg                           int_ap_start = 1'b0;
+    reg                           int_interrupt = 1'b0;
+    reg                           int_auto_restart = 1'b0;
+    reg                           auto_restart_status = 1'b0;
+    wire                          auto_restart_done;
+    reg                           int_gie = 1'b0;
+    reg  [1:0]                    int_ier = 2'b0;
+    reg  [1:0]                    int_isr = 2'b0;
+    reg  [31:0]                   int_ap_return;
 
 //------------------------Instantiation------------------
 
@@ -165,8 +200,25 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
-                ADDR_START_R_DATA_0: begin
-                    rdata <= int_start_r[0:0];
+                ADDR_AP_CTRL: begin
+                    rdata[0] <= int_ap_start;
+                    rdata[1] <= int_task_ap_done;
+                    rdata[2] <= int_ap_idle;
+                    rdata[3] <= int_ap_ready;
+                    rdata[7] <= int_auto_restart;
+                    rdata[9] <= int_interrupt;
+                end
+                ADDR_GIE: begin
+                    rdata <= int_gie;
+                end
+                ADDR_IER: begin
+                    rdata <= int_ier;
+                end
+                ADDR_ISR: begin
+                    rdata <= int_isr;
+                end
+                ADDR_AP_RETURN_0: begin
+                    rdata <= int_ap_return[31:0];
                 end
             endcase
         end
@@ -175,17 +227,163 @@ end
 
 
 //------------------------Register logic-----------------
-assign start_r = int_start_r;
-// int_start_r[0:0]
+assign interrupt         = int_interrupt;
+assign ap_start          = int_ap_start;
+assign task_ap_done      = (ap_done && !auto_restart_status) || auto_restart_done;
+assign task_ap_ready     = ap_ready && !int_auto_restart;
+assign auto_restart_done = auto_restart_status && (ap_idle && !int_ap_idle);
+// int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
-        int_start_r[0:0] <= 0;
+        int_interrupt <= 1'b0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_START_R_DATA_0)
-            int_start_r[0:0] <= (WDATA[31:0] & wmask) | (int_start_r[0:0] & ~wmask);
+        if (int_gie && (|int_isr))
+            int_interrupt <= 1'b1;
+        else
+            int_interrupt <= 1'b0;
     end
 end
 
+// int_ap_start
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_start <= 1'b0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_AP_CTRL && WSTRB[0] && WDATA[0])
+            int_ap_start <= 1'b1;
+        else if (ap_ready)
+            int_ap_start <= int_auto_restart; // clear on handshake/auto restart
+    end
+end
+
+// int_ap_done
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_done <= 1'b0;
+    else if (ACLK_EN) begin
+            int_ap_done <= ap_done;
+    end
+end
+
+// int_task_ap_done
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_task_ap_done <= 1'b0;
+    else if (ACLK_EN) begin
+        if (task_ap_done)
+            int_task_ap_done <= 1'b1;
+        else if (ar_hs && raddr == ADDR_AP_CTRL)
+            int_task_ap_done <= 1'b0; // clear on read
+    end
+end
+
+// int_ap_idle
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_idle <= 1'b0;
+    else if (ACLK_EN) begin
+            int_ap_idle <= ap_idle;
+    end
+end
+
+// int_ap_ready
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_ready <= 1'b0;
+    else if (ACLK_EN) begin
+        if (task_ap_ready)
+            int_ap_ready <= 1'b1;
+        else if (ar_hs && raddr == ADDR_AP_CTRL)
+            int_ap_ready <= 1'b0;
+    end
+end
+
+// int_auto_restart
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_auto_restart <= 1'b0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_AP_CTRL && WSTRB[0])
+            int_auto_restart <= WDATA[7];
+    end
+end
+
+// auto_restart_status
+always @(posedge ACLK) begin
+    if (ARESET)
+        auto_restart_status <= 1'b0;
+    else if (ACLK_EN) begin
+        if (int_auto_restart)
+            auto_restart_status <= 1'b1;
+        else if (ap_idle)
+            auto_restart_status <= 1'b0;
+    end
+end
+
+// int_gie
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_gie <= 1'b0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_GIE && WSTRB[0])
+            int_gie <= WDATA[0];
+    end
+end
+
+// int_ier
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ier <= 1'b0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_IER && WSTRB[0])
+            int_ier <= WDATA[1:0];
+    end
+end
+
+// int_isr[0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_isr[0] <= 1'b0;
+    else if (ACLK_EN) begin
+        if (int_ier[0] & ap_done)
+            int_isr[0] <= 1'b1;
+        else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
+            int_isr[0] <= int_isr[0] ^ WDATA[0]; // toggle on write
+    end
+end
+
+// int_isr[1]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_isr[1] <= 1'b0;
+    else if (ACLK_EN) begin
+        if (int_ier[1] & ap_ready)
+            int_isr[1] <= 1'b1;
+        else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
+            int_isr[1] <= int_isr[1] ^ WDATA[1]; // toggle on write
+    end
+end
+
+// int_ap_return
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_return <= 0;
+    else if (ACLK_EN) begin
+        if (ap_done)
+            int_ap_return <= ap_return;
+    end
+end
+
+//synthesis translate_off
+always @(posedge ACLK) begin
+    if (ACLK_EN) begin
+        if (int_gie & ~int_isr[0] & int_ier[0] & ap_done)
+            $display ("// Interrupt Monitor : interrupt for ap_done detected @ \"%0t\"", $time);
+        if (int_gie & ~int_isr[1] & int_ier[1] & ap_ready)
+            $display ("// Interrupt Monitor : interrupt for ap_ready detected @ \"%0t\"", $time);
+    end
+end
+//synthesis translate_on
 
 //------------------------Memory logic-------------------
 

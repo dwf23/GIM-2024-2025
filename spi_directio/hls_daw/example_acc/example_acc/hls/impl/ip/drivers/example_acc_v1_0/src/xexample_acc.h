@@ -92,9 +92,22 @@ int XExample_acc_Initialize(XExample_acc *InstancePtr, const char* InstanceName)
 int XExample_acc_Release(XExample_acc *InstancePtr);
 #endif
 
+void XExample_acc_Start(XExample_acc *InstancePtr);
+u32 XExample_acc_IsDone(XExample_acc *InstancePtr);
+u32 XExample_acc_IsIdle(XExample_acc *InstancePtr);
+u32 XExample_acc_IsReady(XExample_acc *InstancePtr);
+void XExample_acc_EnableAutoRestart(XExample_acc *InstancePtr);
+void XExample_acc_DisableAutoRestart(XExample_acc *InstancePtr);
+u32 XExample_acc_Get_return(XExample_acc *InstancePtr);
 
-void XExample_acc_Set_start_r(XExample_acc *InstancePtr, u32 Data);
-u32 XExample_acc_Get_start_r(XExample_acc *InstancePtr);
+
+void XExample_acc_InterruptGlobalEnable(XExample_acc *InstancePtr);
+void XExample_acc_InterruptGlobalDisable(XExample_acc *InstancePtr);
+void XExample_acc_InterruptEnable(XExample_acc *InstancePtr, u32 Mask);
+void XExample_acc_InterruptDisable(XExample_acc *InstancePtr, u32 Mask);
+void XExample_acc_InterruptClear(XExample_acc *InstancePtr, u32 Mask);
+u32 XExample_acc_InterruptGetEnabled(XExample_acc *InstancePtr);
+u32 XExample_acc_InterruptGetStatus(XExample_acc *InstancePtr);
 
 #ifdef __cplusplus
 }

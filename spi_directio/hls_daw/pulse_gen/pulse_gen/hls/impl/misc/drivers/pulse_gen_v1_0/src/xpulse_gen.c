@@ -21,20 +21,12 @@ int XPulse_gen_CfgInitialize(XPulse_gen *InstancePtr, XPulse_gen_Config *ConfigP
 }
 #endif
 
-void XPulse_gen_Set_start_r(XPulse_gen *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XPulse_gen_WriteReg(InstancePtr->Control_BaseAddress, XPULSE_GEN_CONTROL_ADDR_START_R_DATA, Data);
-}
-
-u32 XPulse_gen_Get_start_r(XPulse_gen *InstancePtr) {
+u32 XPulse_gen_Get_return(XPulse_gen *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XPulse_gen_ReadReg(InstancePtr->Control_BaseAddress, XPULSE_GEN_CONTROL_ADDR_START_R_DATA);
+    Data = XPulse_gen_ReadReg(InstancePtr->Control_BaseAddress, XPULSE_GEN_CONTROL_ADDR_AP_RETURN);
     return Data;
 }
-

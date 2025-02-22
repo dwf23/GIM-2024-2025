@@ -4,8 +4,8 @@
     "calls": "",
     "file": "pulse_gen.cpp",
     "fileloc": 4,
-    "instructions": 4,
+    "instructions": 3,
     "name": "pulse_gen",
-    "total_instructions": 4
+    "total_instructions": 3
   }
 }

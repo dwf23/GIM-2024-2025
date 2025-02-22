@@ -1,0 +1,15 @@
+{
+  "name": "example_acc_file",
+  "type": "HOST",
+  "platform": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\platform\\export\\platform\\platform.xpfm",
+  "domain": "standalone_psu_cortexa53_0",
+  "cpuInstance": "psu_cortexa53_0",
+  "cpuType": "cortex-a53",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_psu_cortexa53_0",
+  "applicationFlow": "EMBEDDED"
+}

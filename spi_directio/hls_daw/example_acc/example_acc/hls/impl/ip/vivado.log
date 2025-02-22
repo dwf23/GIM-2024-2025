@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Feb 19 22:08:55 2025
-# Process ID: 33384
+# Start of session at: Sat Feb 22 16:24:06 2025
+# Process ID: 11812
 # Current directory: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/vivado.log
@@ -17,9 +17,9 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16556 MB
-# Swap memory       :12348 MB
-# Total Virtual     :28904 MB
-# Available Virtual :4430 MB
+# Swap memory       :13421 MB
+# Total Virtual     :29978 MB
+# Available Virtual :10306 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
 INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/hls_data.json outdir=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip srcdir=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls sort_interfaces_ports=false
@@ -27,13 +27,12 @@ INFO: Copied 1 ipmisc file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_d
 INFO: Copied 3 verilog file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/hdl/verilog
 INFO: Copied 3 vhdl file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 636.234 ; gain = 194.895
+ipx::create_core: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 634.816 ; gain = 191.969
 INFO: Import ports from HDL: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/hdl/vhdl/example_acc.vhd (example_acc)
 INFO: Add axi4lite interface s_axi_control
 INFO: Add clock interface ap_clk
 INFO: Add reset interface ap_rst_n
-INFO: Add ap_ctrl interface ap_ctrl
-INFO: Add data interface ap_return
+INFO: Add interrupt interface interrupt
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
@@ -43,4 +42,4 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/component.xml
 INFO: Created IP archive C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip/xilinx_com_hls_example_acc_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 22:09:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 22 16:24:43 2025...

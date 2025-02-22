@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/19/25 22:03:50",
- "timestampMillis": "562475946",
+ "dateTimestamp": "02/22/25 16:20:29",
+ "timestampMillis": "801074561",
  "buildStep": {
-  "cmdId": "5ced9651-43a5-452d-9a22-1ab1bab7977d",
+  "cmdId": "84ca3d66-8aff-42b8-b6dd-3c7d8a6cf9d6",
   "name": "v++",
   "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\logs\\example_acc.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg --work_dir example_acc ",
@@ -38,10 +38,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 22:03:50",
- "timestampMillis": "562475947",
+ "dateTimestamp": "02/22/25 16:20:29",
+ "timestampMillis": "801074563",
  "status": {
-  "cmdId": "5ced9651-43a5-452d-9a22-1ab1bab7977d",
+  "cmdId": "84ca3d66-8aff-42b8-b6dd-3c7d8a6cf9d6",
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +49,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482082",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091153",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -86,10 +86,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482084",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091157",
  "buildStep": {
-  "cmdId": "2c0b36a2-d561-49dc-9969-29c62e5cd6cd",
+  "cmdId": "745d4cf8-9cc8-4c38-8fe0-248c5fcdae36",
   "name": "csynth_design",
   "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\hls.log",
   "commandLine": "csynth_design",
@@ -102,10 +102,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482085",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091158",
  "status": {
-  "cmdId": "2c0b36a2-d561-49dc-9969-29c62e5cd6cd",
+  "cmdId": "745d4cf8-9cc8-4c38-8fe0-248c5fcdae36",
   "state": "CS_RUNNING"
  }
 }
@@ -113,8 +113,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482085",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091159",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\hls_data.json",
   "name": "",
@@ -127,8 +127,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482086",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091161",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\syn\\report\\csynth.rpt",
   "name": "",
@@ -141,8 +141,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:03:56",
- "timestampMillis": "562482087",
+ "dateTimestamp": "02/22/25 16:20:46",
+ "timestampMillis": "801091163",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\syn\\report\\csynth.xml",
   "name": "",
@@ -155,8 +155,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509212",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145547",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls",
   "name": "",
@@ -169,8 +169,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509213",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145548",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls",
   "name": "",
@@ -183,8 +183,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509214",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145550",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls",
   "name": "",
@@ -197,10 +197,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509215",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145552",
  "status": {
-  "cmdId": "2c0b36a2-d561-49dc-9969-29c62e5cd6cd",
+  "cmdId": "745d4cf8-9cc8-4c38-8fe0-248c5fcdae36",
   "state": "CS_PASSED"
  }
 }
@@ -208,10 +208,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509429",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145877",
  "status": {
-  "cmdId": "5ced9651-43a5-452d-9a22-1ab1bab7977d",
+  "cmdId": "84ca3d66-8aff-42b8-b6dd-3c7d8a6cf9d6",
   "state": "CS_PASSED"
  }
 }
@@ -219,8 +219,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509450",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145932",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\reports\\v++_compile_example_acc_guidance.html",
   "name": "",
@@ -233,8 +233,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/19/25 22:04:24",
- "timestampMillis": "562509451",
+ "dateTimestamp": "02/22/25 16:21:40",
+ "timestampMillis": "801145934",
  "report": {
   "path": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\reports\\.db\\v++_compile_example_acc_guidance.pb3",
   "name": "",

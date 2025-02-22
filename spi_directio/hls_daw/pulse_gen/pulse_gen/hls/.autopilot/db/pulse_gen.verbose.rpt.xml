@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pulse_gen'" level="0">
-<item name = "Date">Wed Feb 19 23:20:28 2025
+<item name = "Date">Sat Feb 22 15:44:36 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">pulse_gen</item>
@@ -95,30 +95,25 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWADDR">in, 5, s_axi, control, scalar</column>
-<column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
-<column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
-<column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARADDR">in, 5, s_axi, control, scalar</column>
-<column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>
-<column name="s_axi_control_RRESP">out, 2, s_axi, control, scalar</column>
-<column name="s_axi_control_BVALID">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_BREADY">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_BRESP">out, 2, s_axi, control, scalar</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_return">out, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_clk">in, 1, ap_ctrl_hs, pulse_gen, return value</column>
-<column name="ap_rst_n">in, 1, ap_ctrl_hs, pulse_gen, return value</column>
+<column name="s_axi_control_AWVALID">in, 1, s_axi, control, return value</column>
+<column name="s_axi_control_AWREADY">out, 1, s_axi, control, return value</column>
+<column name="s_axi_control_AWADDR">in, 5, s_axi, control, return value</column>
+<column name="s_axi_control_WVALID">in, 1, s_axi, control, return value</column>
+<column name="s_axi_control_WREADY">out, 1, s_axi, control, return value</column>
+<column name="s_axi_control_WDATA">in, 32, s_axi, control, return value</column>
+<column name="s_axi_control_WSTRB">in, 4, s_axi, control, return value</column>
+<column name="s_axi_control_ARVALID">in, 1, s_axi, control, return value</column>
+<column name="s_axi_control_ARREADY">out, 1, s_axi, control, return value</column>
+<column name="s_axi_control_ARADDR">in, 5, s_axi, control, return value</column>
+<column name="s_axi_control_RVALID">out, 1, s_axi, control, return value</column>
+<column name="s_axi_control_RREADY">in, 1, s_axi, control, return value</column>
+<column name="s_axi_control_RDATA">out, 32, s_axi, control, return value</column>
+<column name="s_axi_control_RRESP">out, 2, s_axi, control, return value</column>
+<column name="s_axi_control_BVALID">out, 1, s_axi, control, return value</column>
+<column name="s_axi_control_BREADY">in, 1, s_axi, control, return value</column>
+<column name="s_axi_control_BRESP">out, 2, s_axi, control, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, pulse_gen, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, pulse_gen, return value</column>
 </table>
 </item>
 </section>

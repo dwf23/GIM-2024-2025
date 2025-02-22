@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Feb 20 00:07:17 2025
-# Process ID: 15352
+# Start of session at: Thu Feb 20 14:49:29 2025
+# Process ID: 41080
 # Current directory: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.runs/impl_1/design_1_wrapper.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16556 MB
-# Swap memory       :17566 MB
-# Total Virtual     :34122 MB
-# Available Virtual :4725 MB
+# Swap memory       :19695 MB
+# Total Virtual     :36251 MB
+# Available Virtual :6875 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

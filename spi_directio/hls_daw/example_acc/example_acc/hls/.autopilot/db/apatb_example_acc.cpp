@@ -23,8 +23,6 @@ using namespace std;
 #define AUTOTB_TVOUT_data_in "../tv/cdatafile/c.example_acc.autotvout_data_in.dat"
 #define WRAPC_DIRECTIO_SIZE_IN_data_in "../tv/directio_size/directio_size_in_data_in.dat"
 #define WRAPC_DIRECTIO_INGRESS_STATUS_data_in "../tv/directio_size/directio_ingress_status_data_in.dat"
-#define AUTOTB_TVIN_start_r "../tv/cdatafile/c.example_acc.autotvin_start_r.dat"
-#define AUTOTB_TVOUT_start_r "../tv/cdatafile/c.example_acc.autotvout_start_r.dat"
 #define AUTOTB_TVOUT_return "../tv/cdatafile/c.example_acc.autotvout_ap_return.dat"
 
 
@@ -1160,12 +1158,12 @@ namespace hls::sim
 
 
 extern "C"
-hls::sim::Byte<4> example_acc_hw_stub_wrapper(void*, hls::sim::Byte<1>);
+float example_acc_hw_stub_wrapper(void*);
 
 extern "C"
-hls::sim::Byte<4> apatb_example_acc_hw(void* __xlx_apatb_param_data_in, hls::sim::Byte<1> __xlx_apatb_param_start_r)
+float apatb_example_acc_hw(void* __xlx_apatb_param_data_in)
 {
-  hls::sim::Byte<4> ap_return;
+  float ap_return;
   static hls::sim::Register port0 {
     .name = "return",
     .width = 32,
@@ -1192,17 +1190,6 @@ hls::sim::Byte<4> apatb_example_acc_hw(void* __xlx_apatb_param_data_in, hls::sim
   port1.param = (hls::directio<hls::sim::Byte<1>>*)__xlx_apatb_param_data_in;
   port1.hasWrite = false;
 
-  static hls::sim::Register port2 {
-    .name = "start_r",
-    .width = 1,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_start_r),
-#endif
-  };
-  port2.param = &__xlx_apatb_param_start_r;
-
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
@@ -1211,12 +1198,10 @@ hls::sim::Byte<4> apatb_example_acc_hw(void* __xlx_apatb_param_data_in, hls::sim
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
-    dump(port2, port2.iwriter, tcl.AESL_transaction);
-    port2.doTCL(tcl);
     port1.markSize();
     port1.buffer();
     CodeState = CALL_C_DUT;
-    ap_return = example_acc_hw_stub_wrapper(__xlx_apatb_param_data_in, __xlx_apatb_param_start_r);
+    ap_return = example_acc_hw_stub_wrapper(__xlx_apatb_param_data_in);
     dump(port1, tcl.AESL_transaction);
     port1.doTCL(tcl);
     CodeState = DUMP_OUTPUTS;

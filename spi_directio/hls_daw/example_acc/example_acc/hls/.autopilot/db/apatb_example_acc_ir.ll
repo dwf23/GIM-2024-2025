@@ -9,13 +9,13 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<1, false>" = type { i1 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define i32 @apatb_example_acc_ir(%"class.hls::directio<ap_uint<1> >"* noalias nonnull dereferenceable(1) %data_in, i1 zeroext %start) local_unnamed_addr #0 {
+define float @apatb_example_acc_ir(%"class.hls::directio<ap_uint<1> >"* noalias nonnull dereferenceable(1) %data_in) local_unnamed_addr #0 {
 entry:
   %data_in_copy = alloca i1, align 512
   call fastcc void @copy_in(%"class.hls::directio<ap_uint<1> >"* nonnull %data_in, i1* nonnull align 512 %data_in_copy)
-  %0 = call i32 @apatb_example_acc_hw(i1* %data_in_copy, i1 %start)
+  %0 = call float @apatb_example_acc_hw(i1* %data_in_copy)
   call void @copy_back(%"class.hls::directio<ap_uint<1> >"* %data_in, i1* %data_in_copy)
-  ret i32 %0
+  ret float %0
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
@@ -72,12 +72,12 @@ ret:                                              ; preds = %empty
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
 define internal fastcc void @copy_out(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.6"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
   ret void
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* noalias %dst, i1* noalias align 512 %src) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.6"(%"class.hls::directio<ap_uint<1> >"* noalias %dst, i1* noalias align 512 %src) unnamed_addr #2 {
 entry:
   %0 = icmp eq %"class.hls::directio<ap_uint<1> >"* %dst, null
   %1 = icmp eq i1* %src, null
@@ -85,7 +85,7 @@ entry:
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.12"(%"class.hls::directio<ap_uint<1> >"* nonnull %dst, i1* nonnull align 512 %src)
+  call fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.9"(%"class.hls::directio<ap_uint<1> >"* nonnull %dst, i1* nonnull align 512 %src)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -93,7 +93,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
-define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.12"(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #3 {
+define internal fastcc void @"directiocpy_hls.p0class.hls::directio<ap_uint<1> >.9"(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #3 {
 entry:
   %2 = alloca %"class.hls::directio<ap_uint<1> >"
   %3 = alloca i1
@@ -142,25 +142,25 @@ define internal i1 @"_llvm.fpga.pack.bits.i1.s_class.hls::directio<ap_uint<1> >s
   ret i1 %A.0.0.0.0
 }
 
-declare i32 @apatb_example_acc_hw(i1*, i1)
+declare float @apatb_example_acc_hw(i1*)
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline
 define internal fastcc void @copy_back(%"class.hls::directio<ap_uint<1> >"* noalias, i1* noalias align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.9"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
+  call fastcc void @"onebyonecpy_hls.p0class.hls::directio<ap_uint<1> >.hls::directio.6"(%"class.hls::directio<ap_uint<1> >"* %0, i1* align 512 %1)
   ret void
 }
 
-define i32 @example_acc_hw_stub_wrapper(i1*, i1) #6 {
+define float @example_acc_hw_stub_wrapper(i1*) #6 {
 entry:
-  %2 = alloca %"class.hls::directio<ap_uint<1> >"
-  call void @copy_out(%"class.hls::directio<ap_uint<1> >"* %2, i1* %0)
-  %3 = call i32 @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* %2, i1 %1)
-  call void @copy_in(%"class.hls::directio<ap_uint<1> >"* %2, i1* %0)
-  ret i32 %3
+  %1 = alloca %"class.hls::directio<ap_uint<1> >"
+  call void @copy_out(%"class.hls::directio<ap_uint<1> >"* %1, i1* %0)
+  %2 = call float @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* %1)
+  call void @copy_in(%"class.hls::directio<ap_uint<1> >"* %1, i1* %0)
+  ret float %2
 }
 
-declare i32 @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* noalias nonnull, i1 zeroext)
+declare float @example_acc_hw_stub(%"class.hls::directio<ap_uint<1> >"* noalias nonnull)
 
 declare i1 @fpga_direct_valid_1(i8*)
 

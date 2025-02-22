@@ -1,0 +1,3 @@
+domain_path: C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\platform\zynqmp_fsbl\zynqmp_fsbl_bsp
+app_src_dir: C:\Xilinx\Vitis\2024.1\data\embeddedsw\lib\sw_apps\zynqmp_fsbl
+template: zynqmp_fsbl

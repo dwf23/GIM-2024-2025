@@ -92,9 +92,8 @@ int XPulse_gen_Initialize(XPulse_gen *InstancePtr, const char* InstanceName);
 int XPulse_gen_Release(XPulse_gen *InstancePtr);
 #endif
 
+u32 XPulse_gen_Get_return(XPulse_gen *InstancePtr);
 
-void XPulse_gen_Set_start_r(XPulse_gen *InstancePtr, u32 Data);
-u32 XPulse_gen_Get_start_r(XPulse_gen *InstancePtr);
 
 #ifdef __cplusplus
 }

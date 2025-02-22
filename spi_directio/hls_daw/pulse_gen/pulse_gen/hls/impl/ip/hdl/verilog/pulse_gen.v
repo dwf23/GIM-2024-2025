@@ -9,11 +9,6 @@
 (* CORE_GENERATION_INFO="pulse_gen_pulse_gen,hls_ip_2024_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sfvc784-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=0.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=37,HLS_SYN_LUT=42,HLS_VERSION=2024_1}" *)
 
 module pulse_gen (
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
-        ap_return,
         s_axi_control_AWVALID,
         s_axi_control_AWREADY,
         s_axi_control_AWADDR,
@@ -42,11 +37,6 @@ parameter    C_S_AXI_DATA_WIDTH = 32;
 parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
 parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
-output  [0:0] ap_return;
 input   s_axi_control_AWVALID;
 output   s_axi_control_AWREADY;
 input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
@@ -67,9 +57,8 @@ output  [1:0] s_axi_control_BRESP;
 input   ap_clk;
 input   ap_rst_n;
 
-wire   [0:0] start_r;
  reg    ap_rst_n_inv;
-wire    ap_ce_reg;
+wire   [0:0] ap_return;
 
 pulse_gen_control_s_axi #(
     .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
@@ -95,16 +84,8 @@ control_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .start_r(start_r)
+    .ap_return(1'd1)
 );
-
-assign ap_done = ap_start;
-
-assign ap_idle = 1'b1;
-
-assign ap_ready = ap_start;
-
-assign ap_return = 1'd1;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;

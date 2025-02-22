@@ -31,7 +31,7 @@ module pulse_gen_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [0:0]                    start_r
+    input  wire [0:0]                    ap_return
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
@@ -40,23 +40,21 @@ module pulse_gen_control_s_axi
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of start_r
-//        bit 0  - start_r[0] (Read/Write)
+// 0x10 : Data signal of ap_return
+//        bit 0  - ap_return[0] (Read)
 //        others - reserved
-// 0x14 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_START_R_DATA_0 = 5'h10,
-    ADDR_START_R_CTRL   = 5'h14,
-    WRIDLE              = 2'd0,
-    WRDATA              = 2'd1,
-    WRRESP              = 2'd2,
-    WRRESET             = 2'd3,
-    RDIDLE              = 2'd0,
-    RDDATA              = 2'd1,
-    RDRESET             = 2'd2,
+    ADDR_AP_RETURN_0 = 5'h10,
+    WRIDLE           = 2'd0,
+    WRDATA           = 2'd1,
+    WRRESP           = 2'd2,
+    WRRESET          = 2'd3,
+    RDIDLE           = 2'd0,
+    RDDATA           = 2'd1,
+    RDRESET          = 2'd2,
     ADDR_BITS                = 5;
 
 //------------------------Local signal-------------------
@@ -72,7 +70,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [0:0]                    int_start_r = 'b0;
+    reg  [0:0]                    int_ap_return;
 
 //------------------------Instantiation------------------
 
@@ -165,8 +163,8 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
-                ADDR_START_R_DATA_0: begin
-                    rdata <= int_start_r[0:0];
+                ADDR_AP_RETURN_0: begin
+                    rdata <= int_ap_return[0:0];
                 end
             endcase
         end
@@ -175,14 +173,13 @@ end
 
 
 //------------------------Register logic-----------------
-assign start_r = int_start_r;
-// int_start_r[0:0]
+// int_ap_return
 always @(posedge ACLK) begin
     if (ARESET)
-        int_start_r[0:0] <= 0;
+        int_ap_return <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_START_R_DATA_0)
-            int_start_r[0:0] <= (WDATA[31:0] & wmask) | (int_start_r[0:0] & ~wmask);
+        if (ap_done)
+            int_ap_return <= ap_return;
     end
 end
 

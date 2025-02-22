@@ -1,16 +1,16 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen\pulse_gen.hlsrun_package_summary, at 02/19/25 23:22:36
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen\pulse_gen.hlsrun_package_summary, at 02/22/25 15:44:53
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run package -work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen -config C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/hls_config.cfg -cmdlineconfig C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
   **** SW Build 5069499 on May 21 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Feb 19 23:22:43 2025
+  **** Start of session at: Sat Feb 22 15:45:00 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
-INFO: [HLS 200-10] For user 'Dawso' on host 'laptop-dp0ojsk0' (Windows NT_amd64 version 10.0) on Wed Feb 19 23:22:46 -0600 2025
+INFO: [HLS 200-10] For user 'Dawso' on host 'laptop-dp0ojsk0' (Windows NT_amd64 version 10.0) on Sat Feb 22 15:45:02 -0600 2025
 INFO: [HLS 200-10] In directory 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen'
 INFO: [HLS 200-2005] Using work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen 
 INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
@@ -37,7 +37,7 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Feb 19 23:23:04 2025
+  **** Start of session at: Sat Feb 22 15:45:20 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -47,14 +47,9 @@ INFO: Copied 1 ipmisc file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_d
 INFO: Copied 2 verilog file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/hdl/verilog
 INFO: Copied 2 vhdl file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 635.414 ; gain = 194.414
+ipx::create_core: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 632.664 ; gain = 191.789
 INFO: Import ports from HDL: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/hdl/vhdl/pulse_gen.vhd (pulse_gen)
 INFO: Add axi4lite interface s_axi_control
-INFO: Add ap_ctrl interface ap_ctrl
-INFO: Add data interface ap_return
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
 INFO: Add clock interface ap_clk
 INFO: Add reset interface ap_rst_n
 INFO: Calling post_process_vitis to specialize IP
@@ -62,7 +57,7 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/component.xml
 INFO: Created IP archive C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip/xilinx_com_hls_pulse_gen_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 23:23:42 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 22 15:45:59 2025...
 INFO: [HLS 200-802] Generated output file pulse_gen/pulse_gen.zip
-INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 4 seconds. Total elapsed time: 60.209 seconds; peak allocated memory: 287.805 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 4 seconds. Total elapsed time: 60.011 seconds; peak allocated memory: 288.004 MB.
 INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 9s

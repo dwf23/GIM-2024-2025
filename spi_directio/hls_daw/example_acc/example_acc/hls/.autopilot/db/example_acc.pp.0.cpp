@@ -40337,20 +40337,21 @@ typedef ap_fixed<16,7> fixed_16;
 typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
+bool pulse_gen();
+
 fixed_16 receive_data(
     dataline &data_in
 
 );
 
-__attribute__((sdx_kernel("example_acc", 0))) int example_acc(
-    dataline &data_in,
-    bool start
+__attribute__((sdx_kernel("example_acc", 0))) float example_acc(
+    dataline &data_in
 );
 # 8 "../example_acc.cpp" 2
 
 
 
-__attribute__((sdx_kernel("example_acc", 0))) int example_acc(dataline &data_in, bool start){
+__attribute__((sdx_kernel("example_acc", 0))) float example_acc(dataline &data_in){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=example_acc
 # 11 "../example_acc.cpp"
@@ -40360,22 +40361,18 @@ __attribute__((sdx_kernel("example_acc", 0))) int example_acc(dataline &data_in,
 
     fixed_16 tmp;
     int rx = 0;
+    bool start = true;
 
 #pragma HLS INTERFACE ap_hs port=data_in
-#pragma HLS INTERFACE mode=s_axilite port=start
 #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
+#pragma HLS INTERFACE mode=s_axilite port=return
 
- VITIS_LOOP_22_1: do {
-
-
-
-        tmp = receive_data(data_in);
+ VITIS_LOOP_23_1: while (rx<10){
+        tmp = data_in.read();
         std::cout << "Data Received: " << tmp.range(15,0) << std::endl;
         rx ++;
-        if (rx > 10){
-            start = false;
-        }
-    } while(start);
+    }
+
 
     return 0;
 

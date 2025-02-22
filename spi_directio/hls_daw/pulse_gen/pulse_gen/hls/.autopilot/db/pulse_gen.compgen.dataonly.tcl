@@ -2,13 +2,15 @@
 
 set axilite_register_dict [dict create]
 set port_control {
-start_r { 
-	dir I
+ap_return { 
+	dir o
 	width 1
 	depth 1
-	mode ap_none
+	mode ap_ctrl_none
 	offset 16
-	offset_end 23
+	offset_end 0
+}
+interrupt {
 }
 }
 dict set axilite_register_dict control $port_control

@@ -1,3 +1,4 @@
 <pragmas>
-<pragma file="../pulse_gen.cpp" line="5" pragmaType="interface" parentfunction="pulse_gen" mode="s_axilite" port="start" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../pulse_gen.cpp" line="5" pragmaType="interface" parentfunction="pulse_gen" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../pulse_gen.cpp" line="6" pragmaType="interface" parentfunction="pulse_gen" mode="ap_ctrl_none" port="return" name=""/>
 </pragmas>

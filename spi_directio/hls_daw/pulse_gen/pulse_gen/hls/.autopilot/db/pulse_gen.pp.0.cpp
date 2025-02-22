@@ -31864,7 +31864,7 @@ typedef ap_fixed<16,7> fixed_16;
 typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
-__attribute__((sdx_kernel("pulse_gen", 0))) bool pulse_gen(bool start);
+__attribute__((sdx_kernel("pulse_gen", 0))) bool pulse_gen();
 
 fixed_16 receive_data(
     dataline &data_in
@@ -31878,13 +31878,14 @@ int example_acc(
 # 2 "../pulse_gen.cpp" 2
 
 
-__attribute__((sdx_kernel("pulse_gen", 0))) bool pulse_gen(bool start){
+__attribute__((sdx_kernel("pulse_gen", 0))) bool pulse_gen(){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=pulse_gen
 # 4 "../pulse_gen.cpp"
 
-#pragma HLS INTERFACE mode=s_axilite port=start
-
+#pragma HLS INTERFACE mode=s_axilite port=return
+#pragma HLS INTERFACE ap_ctrl_none port=return
 
  return true;
+
 }

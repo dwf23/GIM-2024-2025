@@ -23,8 +23,8 @@ C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.a
       ^~~
       VITIS_LOOP_1247_1: 
 C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp:4173:7: note: FIX-IT applied suggested code changes
-C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp:40368:2: warning: Added loop label VITIS_LOOP_22_1:   [xilinx-label-all-loops]
- do {
- ^~
- VITIS_LOOP_22_1: 
-C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp:40368:2: note: FIX-IT applied suggested code changes
+C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp:40370:2: warning: Added loop label VITIS_LOOP_23_1:   [xilinx-label-all-loops]
+ while (rx<10){
+ ^~~~~
+ VITIS_LOOP_23_1: 
+C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\example_acc\example_acc\hls\.autopilot\db\example_acc.pp.0.cpp:40370:2: note: FIX-IT applied suggested code changes

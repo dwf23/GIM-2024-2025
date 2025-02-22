@@ -3,8 +3,8 @@
         "name": "example_acc",
         "file": "example_acc.cpp",
         "fileloc": "11",
-        "instructions": "38",
-        "total_instructions": "38",
+        "instructions": "19",
+        "total_instructions": "19",
         "calls": "",
         "basicblocks": "3",
         "loads": {

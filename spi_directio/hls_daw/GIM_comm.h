@@ -13,14 +13,13 @@ typedef ap_fixed<16,7> fixed_16;
 typedef hls::ap_hs<ap_uint<1>> dataline;
 
 
-bool pulse_gen(bool start);
+bool pulse_gen();
 
 fixed_16 receive_data(
     dataline &data_in
 
 );
 
-int example_acc(
-    dataline &data_in,
-    bool start
+float example_acc(
+    dataline &data_in
 );

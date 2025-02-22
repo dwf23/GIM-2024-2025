@@ -1,8 +1,10 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
    Compiling ../../../../../example_acc_tb.cpp in debug mode
-   Compiling ../../../../../receive_data.cpp in debug mode
-   Compiling ../../../../../example_acc.cpp in debug mode
    Generating csim.exe
-INFO: [SIM 1] CSim file generation done with 0 errors.
+Starting Testbench
+Beginning HLS Func
+ERROR [HLS SIM]: an hls::directio is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::directio::read() call to debug.
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
 INFO: [SIM 3] *************** CSIM finish ***************

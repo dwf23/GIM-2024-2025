@@ -1,0 +1,77 @@
+{
+    "c_function_name" : "bias_pe",
+    "rtl_top_module_name" : "bias_pe", 
+    "c_files" : [{
+                "c_file": "bias_pe.cpp",
+                "c_flag": ""
+                }],
+
+    "rtl_files" : [
+                "bias_pe.v" 
+                ], 
+
+    "c_parameters": [
+            {"c_name": "delta_k",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "delta_k"
+                        } 
+            },
+            {"c_name": "sum_in",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "sum_in" 
+                        } 
+            },          
+            {"c_name": "init_bias",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "init_bias" 
+                        } 
+            },
+            {"c_name": "eta",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "eta"
+                        } 
+            },
+            {"c_name": "training",
+            "c_port_direction": "in",
+            "rtl_ports": {
+                        "data_read_in": "training"
+                        } 
+            },
+            {"c_name": "return_array",
+            "c_port_direction": "out",
+            "rtl_ports": {
+                        "RAM_address": "return_array",
+                        "RAM_clock_enable":,
+                        "RAM_write_enable":,
+                        "RAM_data_write_out": 
+                        } 
+            }
+        ], 
+
+    "rtl_common_signal": 
+        {
+            "module_clock"                    : "ap_clk",
+            "module_reset"                    : "ap_rst",
+            "module_clock_enable"             : "ap_ce",
+            "ap_ctrl_chain_protocol_idle"     : "",
+            "ap_ctrl_chain_protocol_start"    : "",
+            "ap_ctrl_chain_protocol_ready"    : "",
+            "ap_ctrl_chain_protocol_done"     : "",
+            "ap_ctrl_chain_protocol_continue" : ""
+        },
+"rtl_performance" : {
+                     "latency" : "2",
+                     "II"      : "1"
+                    },
+"rtl_resource_usage" : {
+                        "FF"   :   "0",
+                        "LUT"  :   "0",
+                        "BRAM" :   "0",
+                        "URAM" :   "0",
+                        "DSP"  :   "15"
+                       }
+}

@@ -1,0 +1,36 @@
+#include <cmath>
+#include <iostream>
+#include "hls_stream.h"
+#include "GIM_comm.h"
+#include "ap_int.h"
+#include <iostream>
+#include <unistd.h>
+#include <csignal>
+#include <atomic>
+
+int main()
+{
+    std::cout << "Starting Testbench" << "\n";
+    fixed_16 w1 = 2.8;
+    fixed_16 w2 = 4;
+    fixed_16 example_data[ARRAY_SIZE] = {w1, w2};
+    pkt example_packet;
+    example_packet.ID = 0; 
+    std::copy(example_data, example_data + ARRAY_SIZE, example_packet.data_out);
+    packet_line data_out;
+    comm_line alpha_transmit_line;
+    volatile bool flag = true;
+
+// #ifdef HW_COSIM
+    std::cout << "Beginning Send Data Thread" << "\n";
+    std::thread send_data_thread(send_data, std::ref(alpha_transmit_line), std::ref(data_out), std::ref(flag));
+    data_out.write_nb(example_packet);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    flag = false;
+    send_data_thread.join();
+    std::cout << "Beginning Send Data with flag False" << "\n";
+    send_data(alpha_transmit_line, data_out, flag);
+
+// #endif
+   return 0;
+}

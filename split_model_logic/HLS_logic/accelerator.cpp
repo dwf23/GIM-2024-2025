@@ -4,21 +4,27 @@
 using namespace std;
 
 // now, we actually run the full model
-Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-    fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE], fixed_16 output_inference[DATA_SIZE],
+Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
+    fixed_16  bias_1[ARRAY_SIZE],fixed_16 output_inference[DATA_SIZE],
     fixed_16 training) {
+
+    /*
+    fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
+    fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE], fixed_16 output_inference[DATA_SIZE],
+    fixed_16 training
+    */
 
     // array for the final output
     Inference output_array;
     #pragma HLS INTERFACE mode=s_axilite port=w1
-    #pragma HLS INTERFACE mode=s_axilite port=w2
+    // #pragma HLS INTERFACE mode=s_axilite port=w2
     #pragma HLS INTERFACE mode=s_axilite port=bias_1
-    #pragma HLS INTERFACE mode=s_axilite port=bias_2
+    // #pragma HLS INTERFACE mode=s_axilite port=bias_2
     #pragma HLS INTERFACE mode=s_axilite port=training
     #pragma HLS INTERFACE mode=s_axilite port=return
 
     #pragma HLS array_partition variable=w1
-    #pragma HLS array_partition variable=w2
+    // #pragma HLS array_partition variable=w2
     //Communication
 
     //SET UP COMM

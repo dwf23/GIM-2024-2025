@@ -17,7 +17,6 @@ float example_acc(dataline &data_in){
     bool start = true;
 
     #pragma HLS INTERFACE ap_hs port=data_in
-    #pragma HLS INTERFACE mode=ap_ctrl_hs port=return
     #pragma HLS INTERFACE mode=s_axilite port=return
 
     while (rx<10){

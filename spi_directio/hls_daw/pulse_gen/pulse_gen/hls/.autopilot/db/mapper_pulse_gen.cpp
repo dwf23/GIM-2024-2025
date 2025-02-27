@@ -243,10 +243,10 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" char pulse_gen();
-extern "C" char apatb_pulse_gen_hw() {
+extern "C" char pulse_gen(char);
+extern "C" char apatb_pulse_gen_hw(char __xlx_apatb_param_start_r) {
 using hls::sim::createStream;
   // DUT call
-  char ap_return = pulse_gen();
+  char ap_return = pulse_gen(__xlx_apatb_param_start_r);
 return ap_return;
 }

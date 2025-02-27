@@ -1,5 +1,6 @@
 #include "hls_design_meta.h"
 const Port_Property HLS_Design_Meta::port_props[]={
+	Port_Property("ap_return", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_control_AWVALID", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_control_AWREADY", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_control_AWADDR", 5, hls_in, -1, "", "", 1),

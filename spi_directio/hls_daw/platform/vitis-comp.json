@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\demo_rec\\design_1_wrapper.xsa",
+    "xsa": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\demo_rx\\design_1_wrapper.xsa",
     "xsaPathInPlatform": "platform\\hw\\design_1_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

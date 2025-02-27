@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'pulse_gen'
 ================================================================
-* Date:           Sat Feb 22 15:44:36 2025
+* Date:           Sun Feb 23 16:13:50 2025
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        pulse_gen
@@ -100,23 +100,24 @@
 +-----------------------+-----+-----+--------------+--------------+--------------+
 |       RTL Ports       | Dir | Bits|   Protocol   | Source Object|    C Type    |
 +-----------------------+-----+-----+--------------+--------------+--------------+
-|s_axi_control_AWVALID  |   in|    1|         s_axi|       control|  return value|
-|s_axi_control_AWREADY  |  out|    1|         s_axi|       control|  return value|
-|s_axi_control_AWADDR   |   in|    5|         s_axi|       control|  return value|
-|s_axi_control_WVALID   |   in|    1|         s_axi|       control|  return value|
-|s_axi_control_WREADY   |  out|    1|         s_axi|       control|  return value|
-|s_axi_control_WDATA    |   in|   32|         s_axi|       control|  return value|
-|s_axi_control_WSTRB    |   in|    4|         s_axi|       control|  return value|
-|s_axi_control_ARVALID  |   in|    1|         s_axi|       control|  return value|
-|s_axi_control_ARREADY  |  out|    1|         s_axi|       control|  return value|
-|s_axi_control_ARADDR   |   in|    5|         s_axi|       control|  return value|
-|s_axi_control_RVALID   |  out|    1|         s_axi|       control|  return value|
-|s_axi_control_RREADY   |   in|    1|         s_axi|       control|  return value|
-|s_axi_control_RDATA    |  out|   32|         s_axi|       control|  return value|
-|s_axi_control_RRESP    |  out|    2|         s_axi|       control|  return value|
-|s_axi_control_BVALID   |  out|    1|         s_axi|       control|  return value|
-|s_axi_control_BREADY   |   in|    1|         s_axi|       control|  return value|
-|s_axi_control_BRESP    |  out|    2|         s_axi|       control|  return value|
+|s_axi_control_AWVALID  |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|         s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|         s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|         s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|         s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|         s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|         s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|         s_axi|       control|        scalar|
+|ap_return              |  out|    1|  ap_ctrl_none|     pulse_gen|  return value|
 |ap_clk                 |   in|    1|  ap_ctrl_none|     pulse_gen|  return value|
 |ap_rst_n               |   in|    1|  ap_ctrl_none|     pulse_gen|  return value|
 +-----------------------+-----+-----+--------------+--------------+--------------+

@@ -8,8 +8,9 @@
 // data_out, data_in for communication of the module with the FPGAs
 //NUM = number of numbers we're sending
 fixed_16 receive_data(dataline &data_in) {
-
+    
     #pragma HLS interface ap_hs port=data_in
+    
 
     ap_uint<BITS> bit_bin = 0;
     ap_uint<1> bit_read;

@@ -316,6 +316,3 @@ psu_wdt_0:
 psu_wdt_1:
 - psu_wdt
 - wdtps
-pulse_gen_0:
-- pulse_gen
-- pulse_gen

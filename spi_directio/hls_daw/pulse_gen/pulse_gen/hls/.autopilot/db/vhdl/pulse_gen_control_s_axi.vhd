@@ -34,7 +34,7 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
-    ap_return             :in   STD_LOGIC_VECTOR(0 downto 0)
+    start_r               :out  STD_LOGIC_VECTOR(0 downto 0)
 );
 end entity pulse_gen_control_s_axi;
 
@@ -45,9 +45,10 @@ end entity pulse_gen_control_s_axi;
 -- 0x04 : reserved
 -- 0x08 : reserved
 -- 0x0c : reserved
--- 0x10 : Data signal of ap_return
---        bit 0  - ap_return[0] (Read)
+-- 0x10 : Data signal of start_r
+--        bit 0  - start_r[0] (Read/Write)
 --        others - reserved
+-- 0x14 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of pulse_gen_control_s_axi is
@@ -55,7 +56,8 @@ architecture behave of pulse_gen_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_RETURN_0 : INTEGER := 16#10#;
+    constant ADDR_START_R_DATA_0 : INTEGER := 16#10#;
+    constant ADDR_START_R_CTRL   : INTEGER := 16#14#;
     constant ADDR_BITS         : INTEGER := 5;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -70,7 +72,7 @@ architecture behave of pulse_gen_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
-    signal int_ap_return       : UNSIGNED(0 downto 0);
+    signal int_start_r         : UNSIGNED(0 downto 0) := (others => '0');
 
 
 begin
@@ -186,8 +188,8 @@ begin
                 if (ar_hs = '1') then
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
-                    when ADDR_AP_RETURN_0 =>
-                        rdata_data <= RESIZE(int_ap_return(0 downto 0), 32);
+                    when ADDR_START_R_DATA_0 =>
+                        rdata_data <= RESIZE(int_start_r(0 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -197,15 +199,16 @@ begin
     end process;
 
 -- ----------------------- Register logic ----------------
+    start_r              <= STD_LOGIC_VECTOR(int_start_r);
 
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_ap_return <= (others => '0');
+                int_start_r(0 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
-                if (ap_done = '1') then
-                    int_ap_return <= UNSIGNED(ap_return);
+                if (w_hs = '1' and waddr = ADDR_START_R_DATA_0) then
+                    int_start_r(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_start_r(0 downto 0));
                 end if;
             end if;
         end if;

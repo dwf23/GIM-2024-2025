@@ -106,14 +106,12 @@ set(USER_LINK_OMIT_ALL_SYMBOL_INFO )
 # Add any libraries to be linked below, they will be added as extra libraries.
 # User need to update USER_LINK_DIRECTORIES below with these library paths.
 set(USER_LINK_LIBRARIES
-C:\Xilinx\Vitis_HLS\2024.1\lib
 )
 
 # Add any directories to look for the libraries to be linked.
 # Example 1: Adding /proj/compression/lib will pass -L/proj/compression/lib to the linker.
 # Example adding Adding ../../common/lib will consider the path as relative to this directory. and will pass the path to -L option.
 set(USER_LINK_DIRECTORIES
-
 )
 
 # -----------------------------------------

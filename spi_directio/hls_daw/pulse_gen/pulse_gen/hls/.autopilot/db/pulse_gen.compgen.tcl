@@ -9,15 +9,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control {
-ap_return { 
-	dir o
+start_r { 
+	dir I
 	width 1
 	depth 1
-	mode ap_ctrl_none
+	mode ap_none
 	offset 16
-	offset_end 0
-}
-interrupt {
+	offset_end 23
 }
 }
 dict set axilite_register_dict control $port_control

@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\demo_rec\demo_rec.runs\impl_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied

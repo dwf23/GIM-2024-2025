@@ -428,10 +428,6 @@ drv_info:
     driver: wdtps
     ip_name: psu_wdt
     path: C:\Xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\wdtps_v3_7
-  pulse_gen_0:
-    driver: pulse_gen
-    ip_name: pulse_gen
-    path: C:\Users\Dawso\GIM-2024-2025\spi_directio\hls_daw\platform\zynqmp_fsbl\zynqmp_fsbl_bsp\hw_artifacts\drivers\pulse_gen_v1_0
 lib_info:
   xiltimer:
     path: C:\Xilinx\Vitis\2024.1\data\embeddedsw\lib\sw_services\xiltimer_v2_0

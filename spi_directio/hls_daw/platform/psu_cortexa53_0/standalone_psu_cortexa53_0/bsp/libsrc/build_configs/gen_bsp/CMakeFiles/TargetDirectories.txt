@@ -108,13 +108,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/stand
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install.dir
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install/local.dir
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install/strip.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/pulse_gen.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/edit_cache.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/rebuild_cache.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/list_install_components.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/install.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/install/local.dir
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src/CMakeFiles/install/strip.dir
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src/CMakeFiles/qspipsu.dir
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src/CMakeFiles/edit_cache.dir
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src/CMakeFiles/rebuild_cache.dir

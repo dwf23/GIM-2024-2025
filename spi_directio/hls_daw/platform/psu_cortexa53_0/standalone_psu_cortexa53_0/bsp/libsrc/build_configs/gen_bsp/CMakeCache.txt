@@ -443,15 +443,6 @@ proc_compiler_flags:STRING= -O2 -DSDT;-c
 proc_extra_compiler_flags:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
 
 //Value Computed by CMake
-pulse_gen_BINARY_DIR:STATIC=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/pulse_gen/src
-
-//Value Computed by CMake
-pulse_gen_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-pulse_gen_SOURCE_DIR:STATIC=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/pulse_gen/src
-
-//Value Computed by CMake
 qspipsu_BINARY_DIR:STATIC=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src
 
 //Value Computed by CMake
@@ -736,7 +727,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=50
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=49
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

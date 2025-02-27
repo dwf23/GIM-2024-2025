@@ -5,31 +5,13 @@
 		#address-cells = <2>;
 		#size-cells = <2>;
 		firmware-name = "design_1_wrapper.bit.bin";
-		example_acc_0: example_acc@80000000 {
+		example_acc_0: example_acc@80010000 {
 			compatible = "xlnx,example-acc-1.0";
-			xlnx,ii = <0>;
+			xlnx,ii = <10>;
 			xlnx,s-axi-control-addr-width = <5>;
 			xlnx,machine = <64>;
 			xlnx,rable = <0>;
 			xlnx,ip-name = "example_acc";
-			reg = <0x0 0x80000000 0x0 0x10000>;
-			clocks = <&zynqmp_clk 71>;
-			xlnx,clk-period = <10>;
-			xlnx,s-axi-control-data-width = <32>;
-			xlnx,edk-iptype = "PERIPHERAL";
-			status = "okay";
-			clock-names = "ap_clk";
-			xlnx,combinational = <0>;
-			xlnx,latency = "undef";
-			xlnx,name = "example_acc_0";
-		};
-		pulse_gen_0: pulse_gen@80010000 {
-			compatible = "xlnx,pulse-gen-1.0";
-			xlnx,ii = <1>;
-			xlnx,s-axi-control-addr-width = <5>;
-			xlnx,machine = <64>;
-			xlnx,rable = <0>;
-			xlnx,ip-name = "pulse_gen";
 			reg = <0x0 0x80010000 0x0 0x10000>;
 			clocks = <&zynqmp_clk 71>;
 			xlnx,clk-period = <10>;
@@ -37,9 +19,9 @@
 			xlnx,edk-iptype = "PERIPHERAL";
 			status = "okay";
 			clock-names = "ap_clk";
-			xlnx,combinational = <1>;
-			xlnx,latency = <0>;
-			xlnx,name = "pulse_gen_0";
+			xlnx,combinational = <0>;
+			xlnx,latency = <11>;
+			xlnx,name = "example_acc_0";
 		};
 		clocking0: clocking0 {
 			compatible = "xlnx,fclk";

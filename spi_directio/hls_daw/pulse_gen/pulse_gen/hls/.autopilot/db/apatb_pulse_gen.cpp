@@ -19,6 +19,8 @@
 using namespace std;
 
 // wrapc file define:
+#define AUTOTB_TVIN_start_r "../tv/cdatafile/c.pulse_gen.autotvin_start_r.dat"
+#define AUTOTB_TVOUT_start_r "../tv/cdatafile/c.pulse_gen.autotvout_start_r.dat"
 #define AUTOTB_TVOUT_return "../tv/cdatafile/c.pulse_gen.autotvout_ap_return.dat"
 
 
@@ -1154,10 +1156,10 @@ namespace hls::sim
 
 
 extern "C"
-hls::sim::Byte<1> pulse_gen_hw_stub_wrapper();
+hls::sim::Byte<1> pulse_gen_hw_stub_wrapper(hls::sim::Byte<1>);
 
 extern "C"
-hls::sim::Byte<1> apatb_pulse_gen_hw()
+hls::sim::Byte<1> apatb_pulse_gen_hw(hls::sim::Byte<1> __xlx_apatb_param_start_r)
 {
   hls::sim::Byte<1> ap_return;
   static hls::sim::Register port0 {
@@ -1172,6 +1174,17 @@ hls::sim::Byte<1> apatb_pulse_gen_hw()
   };
   port0.param = &ap_return;
 
+  static hls::sim::Register port1 {
+    .name = "start_r",
+    .width = 1,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_start_r),
+#endif
+  };
+  port1.param = &__xlx_apatb_param_start_r;
+
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
@@ -1179,8 +1192,10 @@ hls::sim::Byte<1> apatb_pulse_gen_hw()
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
+    dump(port1, port1.iwriter, tcl.AESL_transaction);
+    port1.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    ap_return = pulse_gen_hw_stub_wrapper();
+    ap_return = pulse_gen_hw_stub_wrapper(__xlx_apatb_param_start_r);
     CodeState = DUMP_OUTPUTS;
     dump(port0, port0.owriter, tcl.AESL_transaction);
     port0.doTCL(tcl);

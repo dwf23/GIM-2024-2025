@@ -1,0 +1,342 @@
+
+*** Running vivado
+    with args -log design_1_example_acc_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_example_acc_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Feb 23 16:26:13 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_example_acc_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 631.262 ; gain = 200.453
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/pulse_gen/pulse_gen/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 649.762 ; gain = 18.500
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_example_acc_0_0
+Command: synth_design -top design_1_example_acc_0_0 -part xczu3eg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6368
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1974.055 ; gain = 393.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_example_acc_0_0' [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/synth/design_1_example_acc_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'example_acc' [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'example_acc_control_s_axi' [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_control_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_control_s_axi.v:202]
+INFO: [Synth 8-6155] done synthesizing module 'example_acc_control_s_axi' (0#1) [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'example_acc_flow_control_loop_pipe' [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'example_acc_flow_control_loop_pipe' (0#1) [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'example_acc' (0#1) [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_example_acc_0_0' (0#1) [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/synth/design_1_example_acc_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ipshared/8a51/hdl/verilog/example_acc_control_s_axi.v:262]
+WARNING: [Synth 8-7129] Port ap_done_int in module example_acc_flow_control_loop_pipe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[1] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[0] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[31] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[15] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[14] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[13] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[12] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[11] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[10] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[9] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[8] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[6] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[5] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[4] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[3] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[2] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[1] in module example_acc_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0] in module example_acc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2089.371 ; gain = 509.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2089.371 ; gain = 509.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2089.371 ; gain = 509.129
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2089.371 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/constraints/example_acc_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2153.992 ; gain = 2.676
+Finished Parsing XDC File [c:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/constraints/example_acc_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.runs/design_1_example_acc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.runs/design_1_example_acc_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2153.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 2155.621 ; gain = 1.629
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 2155.621 ; gain = 575.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 2155.621 ; gain = 575.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.runs/design_1_example_acc_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 2155.621 ; gain = 575.379
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'example_acc_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'example_acc_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'example_acc_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'example_acc_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 2155.621 ; gain = 575.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port data_in[0] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_AWADDR[1] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_AWADDR[0] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[31] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[30] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[29] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[28] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[27] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[26] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[25] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[24] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[23] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[22] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[21] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[20] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[19] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[18] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[17] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[16] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[15] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[14] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[13] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[12] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[11] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[10] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[9] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[8] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[6] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[5] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[4] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[3] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WDATA[2] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WSTRB[3] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WSTRB[2] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_control_WSTRB[1] in module example_acc is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module example_acc.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module example_acc.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 2155.621 ; gain = 575.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:01:58 . Memory (MB): peak = 2594.410 ; gain = 1014.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:01:59 . Memory (MB): peak = 2624.426 ; gain = 1044.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:45 ; elapsed = 00:01:59 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     6|
+|3     |LUT3 |     6|
+|4     |LUT4 |     7|
+|5     |LUT5 |    10|
+|6     |LUT6 |    10|
+|7     |FDRE |    31|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:01:51 . Memory (MB): peak = 2624.695 ; gain = 978.203
+Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:17 . Memory (MB): peak = 2624.695 ; gain = 1044.453
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2624.695 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2624.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 787d9ba2
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:29 ; elapsed = 00:02:56 . Memory (MB): peak = 2624.695 ; gain = 1942.344
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2624.695 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.runs/design_1_example_acc_0_0_synth_1/design_1_example_acc_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_example_acc_0_0, cache-ID = 96712f41369d758b
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2624.695 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rx/demo_rx.runs/design_1_example_acc_0_0_synth_1/design_1_example_acc_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_example_acc_0_0_utilization_synth.rpt -pb design_1_example_acc_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 23 16:30:00 2025...

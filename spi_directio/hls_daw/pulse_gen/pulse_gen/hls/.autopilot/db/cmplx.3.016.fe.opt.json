@@ -3,9 +3,9 @@
     "basicblocks": 1,
     "calls": "",
     "file": "pulse_gen.cpp",
-    "fileloc": 4,
-    "instructions": 4,
+    "fileloc": 5,
+    "instructions": 6,
     "name": "pulse_gen",
-    "total_instructions": 4
+    "total_instructions": 6
   }
 }

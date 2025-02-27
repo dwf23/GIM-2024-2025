@@ -85,8 +85,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/stand
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_hw.h
@@ -210,8 +208,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/stand
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_hw.h
@@ -335,8 +331,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/stand
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xqspipsu_hw.h

@@ -98,8 +98,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h
@@ -252,8 +250,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h
@@ -406,8 +402,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h
@@ -560,8 +554,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h
@@ -714,8 +706,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h
@@ -868,8 +858,6 @@ C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fs
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpm_counter.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpseudo_asm_gcc.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen.h
-C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xpulse_gen_hw.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_control.h
 C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xqspipsu_hw.h

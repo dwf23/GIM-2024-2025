@@ -13,6 +13,7 @@ generic (
     C_S_AXI_CONTROL_ADDR_WIDTH : INTEGER := 5;
     C_S_AXI_CONTROL_DATA_WIDTH : INTEGER := 32 );
 port (
+    ap_return : OUT STD_LOGIC_VECTOR (0 downto 0);
     s_axi_control_AWVALID : IN STD_LOGIC;
     s_axi_control_AWREADY : OUT STD_LOGIC;
     s_axi_control_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
@@ -45,8 +46,8 @@ architecture behav of pulse_gen is
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
+    signal start_r : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_rst_n_inv : STD_LOGIC;
-    signal ap_return : STD_LOGIC_VECTOR (0 downto 0);
 
     component pulse_gen_control_s_axi IS
     generic (
@@ -73,7 +74,7 @@ architecture behav of pulse_gen is
         ACLK : IN STD_LOGIC;
         ARESET : IN STD_LOGIC;
         ACLK_EN : IN STD_LOGIC;
-        ap_return : IN STD_LOGIC_VECTOR (0 downto 0) );
+        start_r : OUT STD_LOGIC_VECTOR (0 downto 0) );
     end component;
 
 
@@ -104,11 +105,12 @@ begin
         ACLK => ap_clk,
         ARESET => ap_rst_n_inv,
         ACLK_EN => ap_const_logic_1,
-        ap_return => ap_const_lv1_1);
+        start_r => start_r);
 
 
 
 
+    ap_return <= ap_const_lv1_1;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin

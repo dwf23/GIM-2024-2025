@@ -8,7 +8,7 @@
 
 
 
-void example_acc(fixed_16 w1, fixed_16 w2, hls::stream<pkt> &data_out, hls::stream<pkt> &data_in, volatile bool flag){
+void example_acc(fixed_16 w1, fixed_16 w2, hls::stream<pkt> &data_out){
 
     #pragma HLS INTERFACE mode=s_axilite port=w1
     #pragma HLS INTERFACE mode=s_axilite port=w2
@@ -26,11 +26,6 @@ void example_acc(fixed_16 w1, fixed_16 w2, hls::stream<pkt> &data_out, hls::stre
     else{
         std::cout << "Failed to write data" << std::endl;
     }
-    data_out.write_nb()
-
-    while(data_in.read_nb() | flag);
-
-    read_packet.data_out
 
 
 }

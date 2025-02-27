@@ -4,6 +4,7 @@
 #include <iostream>
 #include "ap_fixed.h"
 #include <hls_stream.h>
+#include <thread>
 
 #define ARRAY_SIZE 2
 
@@ -16,7 +17,9 @@ typedef hls::stream<pkt> packet_line;
 void send_data(
     comm_line &alpha_transmit_line,
     hls::stream<pkt> &data_out,
-    volatile bool &flag);
+    volatile bool &flag,
+    int interval
+);
 
 void example_acc(
     fixed_16 w1, 

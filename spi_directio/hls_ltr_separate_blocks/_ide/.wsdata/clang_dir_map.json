@@ -1,0 +1,9 @@
+{
+  "workspaceRoot": "C:\\GIM\\hls_ltr_separate_blocks",
+  "mapping": {
+    "source_files\\example_acc.cpp": "example_acc",
+    "source_files\\send_data.cpp": "send_data",
+    "source_files\\send_data_tb.cpp": "send_data",
+    "source_files\\example_acc_tb.cpp": "example_acc"
+  }
+}

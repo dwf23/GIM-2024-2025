@@ -10,16 +10,21 @@ ap_uint<16 * ARRAY_SIZE> convert_to_bitstream(fixed_16 data[ARRAY_SIZE]) {
     ap_uint<16 * ARRAY_SIZE> bitstream = 0;
 
 
-    for (int i = 0; i < ARRAY_SIZE; i++) {
-        ap_uint<16> number = *reinterpret_cast<ap_uint<16>*>(&data[i]);
-        std::cout << "Converted number: " << number << std::endl;;
-        bitstream = (bitstream << 16) | number;  // Shift and concatenate
+    for (int i = 0; i < ARRAY_SIZE; i++) {        
+        ap_uint<16 * ARRAY_SIZE> number = *reinterpret_cast<ap_uint<16>*>(&data[i]);
+        std::cout << "Converted number: " << std::hex << number << std::endl;;
+        bitstream = (number << (i*16)) | bitstream;  // Shift and concatenate
     }
 
     return bitstream;
 }
 
-void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volatile bool &flag) {
+void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volatile bool &flag, int interval) {
+    /*
+    alpha_transmit_line is the line between transmitters and receivers on which the data flows. comm_line is the type ap_hs
+    data_out is the data given to the transmitter to send 
+    Interval is the time in between sending each bit: we will use this function to tune this interval for maximum efficiency without dropping data
+    */
 
     #pragma HLS INTERFACE ap_hs port=alpha_transmit_line
     #pragma HLS INTERFACE mode=s_axilite port = return
@@ -34,18 +39,16 @@ void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volat
     while(flag){
         if(data_out.read_nb(input_packet)){
             std::copy(input_packet.data_out, input_packet.data_out + ARRAY_SIZE, input_packet_data);
-            // std::cout << "Input packet data received by transmitter" << std::endl;
-            // std::cout << "First value: " << input_packet_data[0] << std::endl;
-            // std::cout << "Second value: " << input_packet_data[1] << std::endl;
             input_packet_id = input_packet.ID;
             bitstream = convert_to_bitstream(input_packet_data);
             std::cout << "Converted bitstream: " << bitstream << std::endl;
             alpha_transmit_line.write(input_packet_id);
             std::cout << "sent ID: " << input_packet_id << std::endl;
             for (int i = 0; i < BITS; i++){
-                bit = (bitstream >> (BITS - 1 - i)) & 1;
+                for (int j = 0; j < interval; j++);  // Delay for the interval
+                bit = (bitstream >> i) & 1;
                 alpha_transmit_line.write(bit);
-                std::cout << "Writing bit" << bit << std::endl;
+                std::cout << "Writing bit " << std::dec << i << ": " << bit << std::endl;
             }
         }
     }

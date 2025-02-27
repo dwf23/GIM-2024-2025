@@ -10,7 +10,7 @@ int main()
     std::cout << "Starting Testbench" << "\n";
     fixed_16 w1 = 2.5;
     fixed_16 w2 = 3;
-    hls::stream<pkt> &data_out;
+    hls::stream<pkt> data_out;
 
 #ifdef HW_COSIM
    // Run the Vitis HLS block and pass pointer to r_hw to allow writing of variable

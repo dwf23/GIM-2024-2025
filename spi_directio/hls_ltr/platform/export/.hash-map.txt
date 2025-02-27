@@ -1,0 +1,1 @@
+{"generate.platform":[{"uri":"C:\\GIM\\hls_ltr\\platform\\vitis-comp.json","md5":"93ec8f2612e624ff177294eb224aea50"},{"uri":"C:\\GIM\\hls_ltr\\platform\\zynqmp_fsbl\\zynqmp_fsbl_bsp\\bsp.yaml","md5":"412ff2e5af2d0b534d656472bb64596d"},{"uri":"C:\\GIM\\hls_ltr\\platform\\psu_cortexa53_0\\standalone_psu_cortexa53_0\\bsp\\bsp.yaml","md5":"10dbcbbee22c0065cfaad0136cb8bf52"}]}

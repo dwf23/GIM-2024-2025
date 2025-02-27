@@ -16,7 +16,7 @@ int main()
     fixed_16 example_data[ARRAY_SIZE] = {w1, w2};
     pkt example_packet;
     example_packet.ID = 0; 
-    std::copy(example_data, example_data + ARRAY_SIZE, example_packet.data_out);
+    std::copy(example_data, example_data + ARRAY_SIZE, example_packet.data);
     packet_line data_out;
     comm_line alpha_transmit_line;
     volatile bool flag = true;

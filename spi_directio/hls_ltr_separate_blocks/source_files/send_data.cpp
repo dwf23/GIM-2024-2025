@@ -38,7 +38,7 @@ void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volat
 
     while(flag){
         if(data_out.read_nb(input_packet)){
-            std::copy(input_packet.data_out, input_packet.data_out + ARRAY_SIZE, input_packet_data);
+            std::copy(input_packet.data, input_packet.data + ARRAY_SIZE, input_packet_data);
             input_packet_id = input_packet.ID;
             bitstream = convert_to_bitstream(input_packet_data);
             std::cout << "Converted bitstream: " << bitstream << std::endl;

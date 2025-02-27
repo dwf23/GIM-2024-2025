@@ -7,7 +7,7 @@
 // sclk, cs, mosi, miso is the spi part that goes across the boards
 // data_out, data_in for communication of the module with the FPGAs
 //NUM = number of numbers we're sending
-fixed_16 receive_data(packet_line &data_out, comm_line &alpha_tx) {
+pkt receive_data(packet_line &data_out, comm_line &alpha_tx) {
     
     #pragma HLS interface ap_hs port=alpha_tx
     #pragma HLS interface s_axilite port=return
@@ -47,11 +47,16 @@ fixed_16 receive_data(packet_line &data_out, comm_line &alpha_tx) {
             data_out.write(rx);
             
         }
+
+        //for testing purposes
+        if (ID > 0){
+            return rx;
+        }
         
 
     }
 
-
+    return rx;
 
 
 

@@ -6,19 +6,21 @@
 
 #define NUM_RUNS 20
 #define BITS 16
+#define ARRAY_SIZE 2
 
-typedef hls::stream<pkt> packet_line;
 typedef ap_fixed<16,7> fixed_16;
 typedef hls::ap_hs<ap_uint<1>> comm_line;
-struct pkt {fixed_16 data_out[ARRAY_SIZE]; int ID;};
+struct pkt {fixed_16 data[ARRAY_SIZE]; int ID;};
+typedef hls::stream<pkt> packet_line;
 
 
 
-fixed_16 receive_data(
-    dataline &data_in
+pkt receive_data(
+    packet_line &data_out, comm_line &alpha_tx
+
 
 );
 
 pkt example_acc(
-    packet_line &data_out, comm_line &alpha_tx
+    packet_line &data_in
 );

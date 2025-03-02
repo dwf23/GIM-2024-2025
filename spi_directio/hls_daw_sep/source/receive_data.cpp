@@ -12,11 +12,10 @@ pkt receive_data(packet_line &data_out, comm_line &alpha_tx) {
     #pragma HLS interface ap_hs port=alpha_tx
     #pragma HLS interface s_axilite port=return
 
-    volatile pkt rx;
-    volatile int ID = 0;
-    volatile fixed_16 rx1;
-    volatile fixed_16 rx2;
-    volatile fixed_16[ARRAY_SIZE] data;
+    pkt rx;
+    int ID = 0;
+    fixed_16 rx1;
+    fixed_16 rx2;
     
     while(true){
         //check to make sure we can store data
@@ -31,7 +30,7 @@ pkt receive_data(packet_line &data_out, comm_line &alpha_tx) {
             }
 
             fixed_16 rx1 = (fixed_16) bit_bin;
-            data[0] = rx1;
+            rx.data[0] = rx1;
 
             for (int i = 0; i< BITS; i++){
                 bit_read = alpha_tx.read();
@@ -39,8 +38,7 @@ pkt receive_data(packet_line &data_out, comm_line &alpha_tx) {
             }
 
             fixed_16 rx2 = (fixed_16) bit_bin;
-            data[1] = rx2;
-            rx.data = data;
+            rx.data[1] = rx2;
             rx.ID = ID;
             ID++;
             //priority to get it to stream asap

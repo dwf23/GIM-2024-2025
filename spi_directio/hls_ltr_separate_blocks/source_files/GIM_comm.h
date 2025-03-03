@@ -12,6 +12,7 @@ typedef ap_fixed<16, 7> fixed_16;
 typedef hls::ap_hs<bool> comm_line;
 struct pkt {fixed_16 data[ARRAY_SIZE]; int ID;};
 typedef hls::stream<pkt> packet_line;
+const int BITS = 16*ARRAY_SIZE;
 
 
 void send_data(
@@ -29,5 +30,6 @@ void example_acc(
     fixed_16 in_w2,
     hls::stream<pkt> &data_out,
     hls::stream<pkt> &data_in,
-    int interval
+    int interval,
+    bool expecting_input
 );

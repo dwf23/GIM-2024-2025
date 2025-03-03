@@ -8,7 +8,7 @@
 
 
 
-void example_acc(fixed_16 out_w1, fixed_16 out_w2, fixed_16 in_w1, fixed_16 in_w2, hls::stream<pkt> &data_out, hls::stream<pkt> &data_in, int interval){
+void example_acc(fixed_16 out_w1, fixed_16 out_w2, fixed_16 in_w1, fixed_16 in_w2, hls::stream<pkt> &data_out, hls::stream<pkt> &data_in, int interval, bool expecting_input){
 
     #pragma HLS INTERFACE mode=s_axilite port=out_w1
     #pragma HLS INTERFACE mode=s_axilite port=out_w2
@@ -30,16 +30,17 @@ void example_acc(fixed_16 out_w1, fixed_16 out_w2, fixed_16 in_w1, fixed_16 in_w
         std::cout << "Failed to write data" << std::endl;
     }
 
-    // Do we need a stall here? To wait for the data_in to be complete?
-    for (int j = 0; j < interval*16*ARRAY_SIZE*2; j++);  // Delay for the interval
-
-    if(data_in.read_nb(read_packet)){
+    if(expecting_input){
+        while(data_in.empty());
+        data_in.read(read_packet);
         in_w1 = read_packet.data[0];
         in_w2 = read_packet.data[1];
         std::cout << "Read data" << in_w1.to_float() << "and" << in_w2.to_float() << std::endl;
     } else {
-        std::cout << "Failed to read data" << std::endl;
+        std::cout << "Not reading data currently" << std::endl;
     }
+
+
 
 
 }

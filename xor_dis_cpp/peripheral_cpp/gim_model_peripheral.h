@@ -1,5 +1,5 @@
-#ifndef GIM_MODEL_CONTROLLER
-#define GIM_MODEL_CONTROLLER
+#ifndef GIM_MODEL_PERIPHERAL
+#define GIM_MODEL_PERIPHERAL
 
 #include "ap_fixed.h"
 #include <cmath>
@@ -76,6 +76,8 @@ Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
 			fixed_16 delta_k[ARRAY_SIZE], fixed_16 eta,
 			char model, fixed_16 alpha, fixed_16 training);
 
-void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1[ARRAY_SIZE], fixed_16 training);
+Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
+				fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE],
+                fixed_16 training);
 
 #endif // GIM_MODEL_

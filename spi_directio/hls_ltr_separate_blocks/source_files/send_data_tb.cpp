@@ -18,13 +18,14 @@ int main()
     example_packet.ID = 0; 
     std::copy(example_data, example_data + ARRAY_SIZE, example_packet.data);
     packet_line data_out;
-    comm_line alpha_transmit_line;
+    packet_line data_in;
+    comm_line alpha_tx;
     volatile bool flag = true;
     int interval = 100; // Interval is the amount of milliseconds in between sending every bit
 
 // #ifdef HW_COSIM
     std::cout << "Beginning Send Data Thread" << "\n";
-    std::thread send_data_thread(send_data, std::ref(alpha_transmit_line), std::ref(data_out), std::ref(flag), std::ref(interval));
+    std::thread send_data_thread(send_data, std::ref(alpha_tx), std::ref(data_out), std::ref(flag), std::ref(interval));
     data_out.write_nb(example_packet);
     std::this_thread::sleep_for(std::chrono::milliseconds(interval * 16 * ARRAY_SIZE *2));
     flag = false;
@@ -32,7 +33,7 @@ int main()
 
    
     std::cout << "Beginning Send Data with flag False" << "\n";
-    send_data(alpha_transmit_line, data_out, flag, interval);
+    send_data(alpha_tx, data_out, flag, interval);
 
 
 // #endif

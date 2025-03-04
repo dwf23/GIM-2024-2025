@@ -8,18 +8,22 @@
 
 
 
-void example_acc(fixed_16 out_w1, fixed_16 out_w2, fixed_16 in_w1, fixed_16 in_w2, hls::stream<pkt> &data_out, hls::stream<pkt> &data_in, int interval, bool expecting_input){
+void example_acc(fixed_16 out_w1, fixed_16 out_w2, fixed_16 in_w1, fixed_16 in_w2, packet_line &data_out, packet_line &data_in, bool expecting_input){
 
     #pragma HLS INTERFACE mode=s_axilite port=out_w1
     #pragma HLS INTERFACE mode=s_axilite port=out_w2
     #pragma HLS INTERFACE mode=s_axilite port=in_w1
     #pragma HLS INTERFACE mode=s_axilite port=in_w2
+    #pragma HLS INTERFACE mode=s_axilite port=expecting_input
     #pragma HLS INTERFACE mode=s_axilite port=return
+    #pragma HLS INTERFACE ap_fifo port=data_out
+    #pragma HLS INTERFACE ap_fifo port=data_in
+    #pragma HLS RESOURCE variable=data_out core=AXIS  
+    #pragma HLS RESOURCE variable=data_in core=AXIS  
 
     fixed_16 example_data[ARRAY_SIZE] = {out_w1, out_w2};
     pkt example_packet;
     pkt read_packet;
-
     example_packet.ID = 0; 
     std::copy(example_data, example_data + ARRAY_SIZE, example_packet.data);
 

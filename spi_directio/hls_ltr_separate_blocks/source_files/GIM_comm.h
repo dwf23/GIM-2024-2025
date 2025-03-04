@@ -16,8 +16,8 @@ const int BITS = 16*ARRAY_SIZE;
 
 
 void send_data(
-    comm_line &alpha_transmit_line,
-    hls::stream<pkt> &data_out,
+    comm_line &alpha_tx,
+    packet_line &data_out,
     volatile bool &flag,
     int interval
 );
@@ -27,9 +27,13 @@ void example_acc(
     fixed_16 out_w1, 
     fixed_16 out_w2, 
     fixed_16 in_w1,
-    fixed_16 in_w2,
-    hls::stream<pkt> &data_out,
-    hls::stream<pkt> &data_in,
-    int interval,
+    fixed_16 in_w2, 
+    packet_line &data_out, 
+    packet_line &data_in, 
     bool expecting_input
 );
+
+pkt receive_data(
+    packet_line &data_in, 
+    comm_line &alpha_tx,
+    volatile bool &flag);

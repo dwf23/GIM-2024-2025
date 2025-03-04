@@ -19,15 +19,17 @@ ap_uint<16 * ARRAY_SIZE> convert_to_bitstream(fixed_16 data[ARRAY_SIZE]) {
     return bitstream;
 }
 
-void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volatile bool &flag, int interval) {
+void send_data(comm_line &alpha_tx, packet_line &data_out, volatile bool &flag, int interval) {
     /*
-    alpha_transmit_line is the line between transmitters and receivers on which the data flows. comm_line is the type ap_hs
+    alpha_tx is the line between transmitters and receivers on which the data flows. comm_line is the type ap_hs
     data_out is the data given to the transmitter to send 
     Interval is the time in between sending each bit: we will use this function to tune this interval for maximum efficiency without dropping data
     */
 
-    #pragma HLS INTERFACE ap_hs port=alpha_transmit_line
+    #pragma HLS INTERFACE ap_hs port=alpha_tx
     #pragma HLS INTERFACE mode=s_axilite port = return
+    #pragma HLS INTERFACE mode=s_axilite port=flag
+    #pragma HLS INTERFACE mode=s_axilite port=interval
 
     ap_uint<16*ARRAY_SIZE> bitstream;
     bool bit;
@@ -42,12 +44,12 @@ void send_data(comm_line &alpha_transmit_line, hls::stream<pkt> &data_out, volat
             input_packet_id = input_packet.ID;
             bitstream = convert_to_bitstream(input_packet_data);
             std::cout << "Converted bitstream: " << bitstream << std::endl;
-            alpha_transmit_line.write(input_packet_id);
+            alpha_tx.write(input_packet_id);
             std::cout << "sent ID: " << input_packet_id << std::endl;
             for (int i = 0; i < BITS; i++){
                 for (int j = 0; j < interval; j++);  // Delay for the interval
                 bit = (bitstream >> i) & 1;
-                alpha_transmit_line.write(bit);
+                alpha_tx.write(bit);
                 std::cout << "Writing bit " << std::dec << i << ": " << bit << std::endl;
             }
         }

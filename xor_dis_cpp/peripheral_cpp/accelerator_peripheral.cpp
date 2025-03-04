@@ -7,7 +7,7 @@ using namespace std;
 Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
 				fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE],
                 fixed_16 training) {
-
+    
     // array for the final output
     Inference output_array;
 
@@ -33,8 +33,8 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
         bias_1_local[n] = bias_1[n];
         // bias_2_local[n] = bias_2[n];
         for (int m = 0;m<ARRAY_SIZE; m++) {
-            w1_local[n][m] = w1[n][m];
-            // w2_local[n][m] = w2[n][m];
+            // w1_local[n][m] = w1[n][m];
+            w2_local[n][m] = w2[n][m];
         }
     }
 

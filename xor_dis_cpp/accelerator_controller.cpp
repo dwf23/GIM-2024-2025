@@ -1,12 +1,10 @@
-#include "gim_model.h"
+#include "gim_model_controller.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
 
 // now, we actually run the full model
-void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-				fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE],
-                fixed_16 training) {
+void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1[ARRAY_SIZE], fixed_16 training) {
 
     // array for the final output
     // Inference output_array;
@@ -25,9 +23,9 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARR
 
     // make local versions of the weights/biases
     fixed_16 w1_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
-    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
+    // fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
     fixed_16 bias_1_local[ARRAY_SIZE] = {0, 0};
-    fixed_16 bias_2_local[ARRAY_SIZE] = {0, 0};
+    // fixed_16 bias_2_local[ARRAY_SIZE] = {0, 0};
 
     for (int n = 0; n<ARRAY_SIZE; n++) {
         bias_1_local[n] = bias_1[n];

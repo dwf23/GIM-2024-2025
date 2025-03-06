@@ -11,7 +11,7 @@ int main() {
     // fixed_16 bias_2[ARRAY_SIZE] = {0.42812233, 0};
 
     // training the array
-    Inference training = accelerator_controller(w1, bias_1, 1);
+    void training = accelerator_controller(w1, bias_1, 1);
 
     // running inference using the trained accelerator
     // Inference output = accelerator(training.new_w1, training.new_b1, 0);

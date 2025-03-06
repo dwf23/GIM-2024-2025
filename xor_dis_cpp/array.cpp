@@ -1,4 +1,4 @@
-#include "gim_model.h"
+#include "gim_model_controller.h"
 using namespace std;
 
 Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],

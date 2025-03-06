@@ -6,11 +6,20 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+#include "ap_int.h"
+#include "hls_directio.h"
+#include <hls_stream.h>
+#include <thread>
 
 #define ARRAY_SIZE 2
 #define NUM_ITERATIONS 500
 
-typedef ap_fixed<16,4> fixed_16;
+// typedef ap_fixed<16,4> fixed_16;
+typedef ap_fixed<16, 7> fixed_16;
+typedef hls::ap_hs<bool> comm_line;
+struct pkt {fixed_16 data[ARRAY_SIZE]; int ID;};
+typedef hls::stream<pkt> packet_line;
+const int BITS = 16*ARRAY_SIZE;
 using namespace std;
 
 // these structs are used to hold return values/arrays for simplicity
@@ -75,6 +84,17 @@ Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
 			fixed_16 delta_k[ARRAY_SIZE], fixed_16 eta,
 			char model, fixed_16 alpha, fixed_16 training);
 
-Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1[ARRAY_SIZE], fixed_16 training);
+void send_data(
+    comm_line &alpha_tx,
+    packet_line &data_out,
+    volatile bool &flag,
+    int interval);
+
+pkt receive_data(
+    packet_line &data_in, 
+    comm_line &alpha_tx,
+    volatile bool &flag);
+
+void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1[ARRAY_SIZE], fixed_16 training);
 
 #endif // GIM_MODEL_

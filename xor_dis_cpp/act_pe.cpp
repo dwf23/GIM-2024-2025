@@ -1,4 +1,4 @@
-#include "gim_model.h"
+#include "gim_model_controller.h"
 
 // activation pe function
 fixed_16 act_pe(fixed_16 net_in, char model, fixed_16 alpha) {

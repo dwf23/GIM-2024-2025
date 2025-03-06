@@ -1,4 +1,4 @@
-#include "gim_model.h"
+#include "gim_model_controller.h"
 
 // weight pe function
 

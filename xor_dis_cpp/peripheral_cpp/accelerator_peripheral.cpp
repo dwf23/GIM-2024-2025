@@ -1,4 +1,4 @@
-#include "gim_model.h"
+#include "gim_model_peripheral.h"
 #include <iostream>
 #include <fstream>
 using namespace std;

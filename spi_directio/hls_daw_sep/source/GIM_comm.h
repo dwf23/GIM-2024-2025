@@ -16,11 +16,20 @@ typedef hls::stream<pkt> packet_line;
 
 
 pkt receive_data(
-    packet_line &data_out, comm_line &alpha_tx
+    packet_line &data_out, comm_line &alpha_tx,
+    volatile bool &flag
 
 
 );
 
 pkt example_acc(
-    packet_line &data_in
+    packet_line &data_in,
+    packet_line &data_out
+);
+
+void send_data(
+    comm_line &alpha_tx,
+    packet_line &data_out,
+    volatile bool &flag,
+    int interval
 );

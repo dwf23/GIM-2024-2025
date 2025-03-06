@@ -31,5 +31,5 @@ void send_data(
     comm_line &alpha_tx,
     packet_line &data_out,
     volatile bool &flag,
-    int interval
+    int &interval
 );

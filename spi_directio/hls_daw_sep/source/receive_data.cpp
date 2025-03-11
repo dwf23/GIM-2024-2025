@@ -8,16 +8,17 @@
 // sclk, cs, mosi, miso is the spi part that goes across the boards
 // data_in, data_in for communication of the module with the FPGAs
 //NUM = number of numbers we're sending
-pkt receive_data(packet_line &data_in, comm_line &alpha_rx, volatile bool &flag) {
+pkt receive_data(packet_line &data_in, comm_line &alpha_rx, volatile bool &flag, volatile fixed_16
+rx1, volatile fixed_16 rx2) {
     
     #pragma HLS interface ap_hs port=alpha_rx
     #pragma HLS INTERFACE mode=s_axilite port=flag
     #pragma HLS interface s_axilite port=return
+    #pragma HLS interface s_axilite port=rx1
+    #pragma HLS interface s_axilite port=rx2
 
     pkt rx;
     int ID = 0;
-    fixed_16 rx1;
-    fixed_16 rx2;
     
     
     while(flag){
@@ -28,7 +29,6 @@ pkt receive_data(packet_line &data_in, comm_line &alpha_rx, volatile bool &flag)
             ap_uint<BITS> bit_read;
             std::cout << "Receiving Data" << std::endl;
             for (int i = 0; i< BITS; i++){
-                while(!alpha_rx.valid());
                 bit_read = alpha_rx.read();
                 std::cout << "Read bit "<< i  << ": "<< bit_read << std::endl;
                 bit_bin = bit_bin | (bit_read << i);
@@ -39,7 +39,6 @@ pkt receive_data(packet_line &data_in, comm_line &alpha_rx, volatile bool &flag)
             rx.data[0] = rx1;
 
             for (int i = 0; i< BITS; i++){
-                while(!alpha_rx.valid());
                 bit_read = alpha_rx.read();
                 std::cout << "Read bit " << i << ": " << bit_read << std::endl;
                 bit_bin = bit_bin | (bit_read << i);
@@ -53,11 +52,6 @@ pkt receive_data(packet_line &data_in, comm_line &alpha_rx, volatile bool &flag)
             //priority to get it to stream asap
             data_in.write(rx);
             
-        }
-
-        //for testing purposes
-        if (ID > 0){
-            return rx;
         }
         
 

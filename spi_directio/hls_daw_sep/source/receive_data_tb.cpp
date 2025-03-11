@@ -12,6 +12,8 @@ int main()
     packet_line data_in;
     comm_line alpha_rx;
     pkt tmp;
+    fixed_16 rx1 = 0;
+    fixed_16 rx2 = 0;
     volatile bool flag = true;
     int interval = 100;
     pkt data_received;
@@ -20,7 +22,8 @@ int main()
 #ifdef HW_COSIM
    // Run the Vitis HLS block and pass pointer to r_hw to allow writing of variable
     std::cout << "Beginning HLS Func" << std::endl;;
-    std::thread receive_data_thread(receive_data, std::ref(data_in), std::ref(alpha_rx), std::ref(flag));
+    std::thread receive_data_thread(receive_data, std::ref(data_in), std::ref(alpha_rx), std::ref(flag),
+    std::ref(rx1), std::ref(rx2));
     for (int i = 0; i < 64; i++){
         for (int j = 0; j < interval; j++);  // Delay for the interval
         alpha_rx.write(i % 2);

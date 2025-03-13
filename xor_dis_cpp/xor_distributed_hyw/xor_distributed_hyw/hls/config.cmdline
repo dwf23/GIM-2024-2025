@@ -1,0 +1,3 @@
+relativeroot=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw
+original_argv=--mode hls --cosim --config C:\GIM\HongYe\GIM-2024-2025\xor_dis_cpp\xor_distributed_hyw\hls_config.cfg --work_dir xor_distributed_hyw 
+

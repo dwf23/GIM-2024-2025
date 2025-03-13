@@ -2,7 +2,7 @@
 #include "hls_directio.h"
 #include "ap_axi_sdata.h"
 #include <iostream>
-#include "GIM_comm.h"
+#include "gim_model_controller.h"
 
 
 
@@ -40,7 +40,9 @@ void send_data(comm_line &alpha_tx, packet_line &data_out, volatile bool &flag, 
 
     while(flag){
         if(data_out.read_nb(input_packet)){
-            std::copy(input_packet.data, input_packet.data + ARRAY_SIZE, input_packet_data);
+            // std::copy(input_packet.data, input_packet.data + ARRAY_SIZE, input_packet_data);
+            input_packet.data[0] = input_packet_data[0];
+            input_packet.data[1] = input_packet_data[1];
             input_packet_id = input_packet.ID;
             bitstream = convert_to_bitstream(input_packet_data);
             std::cout << "Converted bitstream: " << bitstream << std::endl;

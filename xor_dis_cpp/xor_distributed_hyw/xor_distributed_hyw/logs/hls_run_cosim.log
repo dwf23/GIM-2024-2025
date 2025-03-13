@@ -1,0 +1,301 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw\xor_distributed_hyw.hlsrun_cosim_summary, at 03/06/25 16:56:05
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw -config C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg -cmdlineconfig C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Mar  6 16:56:11 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'GIM' on host 'gim_laptop_2' (Windows NT_amd64 version 10.0) on Thu Mar 06 16:56:15 -0600 2025
+INFO: [HLS 200-10] In directory 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw'
+INFO: [HLS 200-2005] Using work_dir C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw 
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/act_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/act_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/array.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/array.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/bias_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/bias_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/error_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/error_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/gim_model_controller.h' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/gim_model_controller.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/receive_data.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/receive_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/send_data.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/send_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/weight_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/weight_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding test bench file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp,-D HW_COSIM' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(17)
+INFO: [HLS 200-1465] Applying ini 'syn.top=accelerator_controller' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(20)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(18)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(19)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(5)
+WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
+   Compiling bias_pe.cpp_pre.cpp.tb.cpp
+   Compiling weight_pe.cpp_pre.cpp.tb.cpp
+   Compiling accelerator_controller_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller.cpp
+   Compiling send_data.cpp_pre.cpp.tb.cpp
+   Compiling error_pe.cpp_pre.cpp.tb.cpp
+   Compiling receive_data.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller_util.cpp
+   Compiling accelerator_controller.cpp_pre.cpp.tb.cpp
+   Compiling act_pe.cpp_pre.cpp.tb.cpp
+   Compiling array.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Starting Testbench
+Beginning HLS Func
+iteration 0
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 0
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 0
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 0
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 1
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 1
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 1
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 1
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 2
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 2
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 2
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 2
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 3
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 3
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 3
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 3
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 4
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 4
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 4
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 4
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 5
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 5
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 5
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 5
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 6
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 6
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 6
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 6
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 7
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 7
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 7
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 7
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 8
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 8
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 8
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 8
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 9
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 9
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 9
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 9
+data point 3
+Wrote data 1.15308 and 1.03467
+WARNING [HLS SIM]: hls::stream 'hls::stream<pkt, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 40
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\GIM\HongYe\GIM-2024-2025\xor_dis_cpp\xor_distributed_hyw\xor_distributed_hyw\hls\sim\verilog>set PATH= 
+
+C:\GIM\HongYe\GIM-2024-2025\xor_dis_cpp\xor_distributed_hyw\xor_distributed_hyw\hls\sim\verilog>call C:/Xilinx/Vivado/2024.1/bin/xelab xil_defaultlib.apatb_accelerator_controller_top glbl -Oenable_linking_all_libraries  -prj accelerator_controller.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib "ieee_proposed=./ieee_proposed" -s accelerator_controller  
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_accelerator_controller_top glbl -Oenable_linking_all_libraries -prj accelerator_controller.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib ieee_proposed=./ieee_proposed -s accelerator_controller 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_accelerator_controller_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_accelerator_controller_Pipeline_VITIS_LOOP_26_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_accelerator_controller_Pipeline_VITIS_LOOP_26_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_accelerator_controller_Pipeline_VITIS_LOOP_60_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_accelerator_controller_Pipeline_VITIS_LOOP_60_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_mac_muladd_16s_13ns_28ns_28_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_mac_muladd_16s_13ns_28ns_28_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module accelerator_controller_mac_muladd_16s_13ns_28ns_28_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_mul_16s_10ns_26_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_mul_16s_10ns_26_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_mul_16s_13ns_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_mul_16s_13ns_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller_sparsemux_9_2_13_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelerator_controller_sparsemux_9_2_13_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/AESL_autofifo_data_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_data_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/AESL_automem_bias_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_bias_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/AESL_automem_w1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.accelerator_controller_flow_cont...
+Compiling module xil_defaultlib.accelerator_controller_accelerat...
+Compiling module xil_defaultlib.accelerator_controller_sparsemux...
+Compiling module xil_defaultlib.accelerator_controller_mul_16s_1...
+Compiling module xil_defaultlib.accelerator_controller_mul_16s_1...
+Compiling module xil_defaultlib.accelerator_controller_mac_mulad...
+Compiling module xil_defaultlib.accelerator_controller_mac_mulad...
+Compiling module xil_defaultlib.accelerator_controller_accelerat...
+Compiling module xil_defaultlib.accelerator_controller_control_s...
+Compiling module xil_defaultlib.accelerator_controller
+Compiling module xil_defaultlib.AESL_automem_w1
+Compiling module xil_defaultlib.AESL_automem_bias_1
+Compiling module xil_defaultlib.AESL_autofifo_data_out
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_accelerator_controller_top
+Compiling module work.glbl
+Built simulation snapshot accelerator_controller
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Mar  6 16:59:44 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/accelerator_controller/xsim_script.tcl
+# xsim {accelerator_controller} -autoloadwcfg -tclbatch {accelerator_controller.tcl}
+Time resolution is 1 ps
+source accelerator_controller.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1265000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1325 ns : File "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller.autotb.v" Line 501
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar  6 16:59:54 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Starting Testbench
+Beginning HLS Func
+WARNING [HLS SIM]: hls::stream 'hls::stream<pkt, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 40
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 3 seconds. Total elapsed time: 226.535 seconds; peak allocated memory: 295.133 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 3m 55s

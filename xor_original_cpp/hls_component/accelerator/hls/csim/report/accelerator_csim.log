@@ -1,0 +1,275 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../accelerator.cpp in debug mode
+   Generating csim.exe
+iteration: 0
+data point: 0
+output_1[0] data: 0.505127
+output_1[0] data: 0.0651855
+delta_1[0] data: 0.760742
+delta_1[0] data: 0.440186
+iteration: 0
+data point: 1
+output_1[0] data: 0.942383
+output_1[0] data: 0.806152
+delta_1[0] data: 0.399658
+delta_1[0] data: 0.241211
+iteration: 0
+data point: 2
+output_1[0] data: 0.523438
+output_1[0] data: 0.181152
+delta_1[0] data: -0.176025
+delta_1[0] data: -0.10376
+iteration: 0
+data point: 3
+output_1[0] data: 1.03149
+output_1[0] data: 0.962646
+delta_1[0] data: 1.19604
+delta_1[0] data: 0.699219
+iteration: 1
+data point: 0
+output_1[0] data: 0.286621
+output_1[0] data: -0.00634766
+delta_1[0] data: 0.203857
+delta_1[0] data: 0.0100098
+iteration: 1
+data point: 1
+output_1[0] data: 0.619873
+output_1[0] data: 0.627197
+delta_1[0] data: -0.187744
+delta_1[0] data: -0.0942383
+iteration: 1
+data point: 2
+output_1[0] data: 0.316895
+output_1[0] data: 0.0700684
+delta_1[0] data: -0.389893
+delta_1[0] data: -0.201904
+iteration: 1
+data point: 3
+output_1[0] data: 0.766846
+output_1[0] data: 0.810547
+delta_1[0] data: 0.62793
+delta_1[0] data: 0.319092
+iteration: 2
+data point: 0
+output_1[0] data: 0.260742
+output_1[0] data: -0.00683594
+delta_1[0] data: 0.151367
+delta_1[0] data: 0.00634766
+iteration: 2
+data point: 1
+output_1[0] data: 0.555176
+output_1[0] data: 0.601074
+delta_1[0] data: -0.250732
+delta_1[0] data: -0.11084
+iteration: 2
+data point: 2
+output_1[0] data: 0.278809
+output_1[0] data: 0.0563965
+delta_1[0] data: -0.400879
+delta_1[0] data: -0.187988
+iteration: 2
+data point: 3
+output_1[0] data: 0.692871
+output_1[0] data: 0.772949
+delta_1[0] data: 0.508057
+delta_1[0] data: 0.233643
+iteration: 3
+data point: 0
+output_1[0] data: 0.259521
+output_1[0] data: -0.00634766
+delta_1[0] data: 0.143311
+delta_1[0] data: 0.00537109
+iteration: 3
+data point: 1
+output_1[0] data: 0.528809
+output_1[0] data: 0.593994
+delta_1[0] data: -0.266113
+delta_1[0] data: -0.105225
+iteration: 3
+data point: 2
+output_1[0] data: 0.268799
+output_1[0] data: 0.0563965
+delta_1[0] data: -0.390381
+delta_1[0] data: -0.167236
+iteration: 3
+data point: 3
+output_1[0] data: 0.656494
+output_1[0] data: 0.756104
+delta_1[0] data: 0.457275
+delta_1[0] data: 0.192383
+iteration: 4
+data point: 0
+output_1[0] data: 0.264404
+output_1[0] data: -0.00561523
+delta_1[0] data: 0.145996
+delta_1[0] data: 0.00488281
+iteration: 4
+data point: 1
+output_1[0] data: 0.513916
+output_1[0] data: 0.592529
+delta_1[0] data: -0.269287
+delta_1[0] data: -0.0957031
+iteration: 4
+data point: 2
+output_1[0] data: 0.266846
+output_1[0] data: 0.0600586
+delta_1[0] data: -0.375977
+delta_1[0] data: -0.147949
+iteration: 4
+data point: 3
+output_1[0] data: 0.632568
+output_1[0] data: 0.746094
+delta_1[0] data: 0.427734
+delta_1[0] data: 0.165771
+iteration: 5
+data point: 0
+output_1[0] data: 0.27124
+output_1[0] data: -0.00488281
+delta_1[0] data: 0.1521
+delta_1[0] data: 0.00463867
+iteration: 5
+data point: 1
+output_1[0] data: 0.50415
+output_1[0] data: 0.592529
+delta_1[0] data: -0.268311
+delta_1[0] data: -0.0861816
+iteration: 5
+data point: 2
+output_1[0] data: 0.267334
+output_1[0] data: 0.064209
+delta_1[0] data: -0.361572
+delta_1[0] data: -0.131104
+iteration: 5
+data point: 3
+output_1[0] data: 0.614014
+output_1[0] data: 0.73877
+delta_1[0] data: 0.407471
+delta_1[0] data: 0.145752
+iteration: 6
+data point: 0
+output_1[0] data: 0.277588
+output_1[0] data: -0.00415039
+delta_1[0] data: 0.158447
+delta_1[0] data: 0.00439453
+iteration: 6
+data point: 1
+output_1[0] data: 0.49585
+output_1[0] data: 0.592773
+delta_1[0] data: -0.266113
+delta_1[0] data: -0.0769043
+iteration: 6
+data point: 2
+output_1[0] data: 0.268066
+output_1[0] data: 0.0678711
+delta_1[0] data: -0.348389
+delta_1[0] data: -0.116211
+iteration: 6
+data point: 3
+output_1[0] data: 0.5979
+output_1[0] data: 0.732422
+delta_1[0] data: 0.391113
+delta_1[0] data: 0.129395
+iteration: 7
+data point: 0
+output_1[0] data: 0.283691
+output_1[0] data: -0.00366211
+delta_1[0] data: 0.164307
+delta_1[0] data: 0.00415039
+iteration: 7
+data point: 1
+output_1[0] data: 0.488525
+output_1[0] data: 0.593018
+delta_1[0] data: -0.263428
+delta_1[0] data: -0.0686035
+iteration: 7
+data point: 2
+output_1[0] data: 0.268799
+output_1[0] data: 0.0712891
+delta_1[0] data: -0.33667
+delta_1[0] data: -0.103516
+iteration: 7
+data point: 3
+output_1[0] data: 0.583252
+output_1[0] data: 0.727295
+delta_1[0] data: 0.377441
+delta_1[0] data: 0.115234
+iteration: 8
+data point: 0
+output_1[0] data: 0.288818
+output_1[0] data: -0.00317383
+delta_1[0] data: 0.169434
+delta_1[0] data: 0.00366211
+iteration: 8
+data point: 1
+output_1[0] data: 0.481445
+output_1[0] data: 0.593018
+delta_1[0] data: -0.260986
+delta_1[0] data: -0.060791
+iteration: 8
+data point: 2
+output_1[0] data: 0.268799
+output_1[0] data: 0.0737305
+delta_1[0] data: -0.325928
+delta_1[0] data: -0.0922852
+iteration: 8
+data point: 3
+output_1[0] data: 0.569336
+output_1[0] data: 0.721436
+delta_1[0] data: 0.365234
+delta_1[0] data: 0.103027
+iteration: 9
+data point: 0
+output_1[0] data: 0.293457
+output_1[0] data: -0.00268555
+delta_1[0] data: 0.173828
+delta_1[0] data: 0.00341797
+iteration: 9
+data point: 1
+output_1[0] data: 0.474854
+output_1[0] data: 0.592285
+delta_1[0] data: -0.258057
+delta_1[0] data: -0.0537109
+iteration: 9
+data point: 2
+output_1[0] data: 0.268555
+output_1[0] data: 0.0754395
+delta_1[0] data: -0.316406
+delta_1[0] data: -0.0825195
+iteration: 9
+data point: 3
+output_1[0] data: 0.556152
+output_1[0] data: 0.71582
+delta_1[0] data: 0.354492
+delta_1[0] data: 0.0922852
+iteration: 0
+data point: 0
+output_1[0] data: 0.297607
+output_1[0] data: -0.00244141
+delta_1[0] data: 0
+delta_1[0] data: 0
+iteration: 0
+data point: 1
+output_1[0] data: 0.486816
+output_1[0] data: 0.592041
+delta_1[0] data: 0
+delta_1[0] data: 0
+iteration: 0
+data point: 2
+output_1[0] data: 0.260742
+output_1[0] data: 0.072998
+delta_1[0] data: 0
+delta_1[0] data: 0
+iteration: 0
+data point: 3
+output_1[0] data: 0.449951
+output_1[0] data: 0.687988
+delta_1[0] data: 0
+delta_1[0] data: 0
+The following are the predictions of the DNN:
+0
+0
+0
+1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

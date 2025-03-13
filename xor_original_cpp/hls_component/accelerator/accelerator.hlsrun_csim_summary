@@ -1,0 +1,162 @@
+<ENTRY>
+{
+ "thisFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component\\accelerator\\accelerator.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/06/25 15:08:59",
+ "timestampMillis": "1833584754",
+ "buildStep": {
+  "cmdId": "5261ecfc-d476-45f1-b126-7bed5d178d22",
+  "name": "vitis-run",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component\\accelerator\\logs\\accelerator.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component\\hls_config.cfg --work_dir accelerator ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "accelerator"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 15:08:59",
+ "timestampMillis": "1833584756",
+ "status": {
+  "cmdId": "5261ecfc-d476-45f1-b126-7bed5d178d22",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/06/25 15:09:17",
+ "timestampMillis": "1833602518",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\accelerator.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\act_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\array.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\bias_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\error_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\gim_model.h",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/06/25 15:09:17",
+ "timestampMillis": "1833602527",
+ "buildStep": {
+  "cmdId": "ca949581-e616-45db-8ab6-00114e27d90a",
+  "name": "csim_design",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component\\accelerator\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 15:09:17",
+ "timestampMillis": "1833602529",
+ "status": {
+  "cmdId": "ca949581-e616-45db-8ab6-00114e27d90a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 15:09:33",
+ "timestampMillis": "1833618338",
+ "status": {
+  "cmdId": "ca949581-e616-45db-8ab6-00114e27d90a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 15:09:33",
+ "timestampMillis": "1833618775",
+ "status": {
+  "cmdId": "5261ecfc-d476-45f1-b126-7bed5d178d22",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 15:09:33",
+ "timestampMillis": "1833618777",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 15:09:33",
+ "timestampMillis": "1833618778",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

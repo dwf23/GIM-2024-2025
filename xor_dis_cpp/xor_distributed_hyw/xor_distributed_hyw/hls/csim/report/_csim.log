@@ -1,0 +1,138 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../accelerator_controller_tb.cpp in debug mode
+   Compiling ../../../../../weight_pe.cpp in debug mode
+   Compiling ../../../../../send_data.cpp in debug mode
+   Compiling ../../../../../receive_data.cpp in debug mode
+   Compiling ../../../../../error_pe.cpp in debug mode
+   Compiling ../../../../../bias_pe.cpp in debug mode
+   Compiling ../../../../../array.cpp in debug mode
+   Compiling ../../../../../act_pe.cpp in debug mode
+   Compiling ../../../../../accelerator_controller.cpp in debug mode
+   Generating csim.exe
+Starting Testbench
+Beginning HLS Func
+iteration 0
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 0
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 0
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 0
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 1
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 1
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 1
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 1
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 2
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 2
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 2
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 2
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 3
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 3
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 3
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 3
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 4
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 4
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 4
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 4
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 5
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 5
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 5
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 5
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 6
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 6
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 6
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 6
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 7
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 7
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 7
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 7
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 8
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 8
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 8
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 8
+data point 3
+Wrote data 1.15308 and 1.03467
+iteration 9
+data point 0
+Wrote data 0.505127 and 0.0651855
+iteration 9
+data point 1
+Wrote data 1.01855 and 0.850342
+iteration 9
+data point 2
+Wrote data 0.639648 and 0.249512
+iteration 9
+data point 3
+Wrote data 1.15308 and 1.03467
+WARNING [HLS SIM]: hls::stream 'hls::stream<pkt, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 40
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

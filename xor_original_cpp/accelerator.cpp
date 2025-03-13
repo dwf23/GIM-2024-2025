@@ -81,6 +81,7 @@ Inference accelerator(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZ
             output_1[1] = array_out1.output_k[1];
 
             std::cout << "iteration: " << i << std::endl;
+            std::cout << "data point: " << j << std::endl;
             std::cout << "output_1[0] data: " << output_1[0].to_float() << std::endl;
             std::cout << "output_1[0] data: " << output_1[1].to_float() << std::endl;
 

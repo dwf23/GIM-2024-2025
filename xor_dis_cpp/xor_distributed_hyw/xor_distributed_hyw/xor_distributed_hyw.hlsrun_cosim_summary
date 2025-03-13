@@ -1,0 +1,234 @@
+<ENTRY>
+{
+ "thisFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\xor_distributed_hyw.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/06/25 16:56:05",
+ "timestampMillis": "1840011109",
+ "buildStep": {
+  "cmdId": "66efff49-0305-473d-a30f-598d2c55ffbc",
+  "name": "vitis-run",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\logs\\xor_distributed_hyw.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\hls_config.cfg --work_dir xor_distributed_hyw ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\hls_config.cfg",
+   "--work_dir",
+   "xor_distributed_hyw"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:56:05",
+ "timestampMillis": "1840011111",
+ "status": {
+  "cmdId": "66efff49-0305-473d-a30f-598d2c55ffbc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029848",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "accelerator_controller",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\accelerator_controller.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\act_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\array.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\bias_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\error_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\gim_model_controller.h",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\receive_data.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\send_data.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029860",
+ "buildStep": {
+  "cmdId": "d7142d58-d7fb-435d-9c27-bf59e93531f1",
+  "name": "cosim_design",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls\\hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029863",
+ "status": {
+  "cmdId": "d7142d58-d7fb-435d-9c27-bf59e93531f1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029863",
+ "report": {
+  "path": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls\\sim\\report\\accelerator_controller_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029865",
+ "report": {
+  "path": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029868",
+ "report": {
+  "path": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029870",
+ "report": {
+  "path": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:56:24",
+ "timestampMillis": "1840029872",
+ "report": {
+  "path": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:59:57",
+ "timestampMillis": "1840242874",
+ "status": {
+  "cmdId": "d7142d58-d7fb-435d-9c27-bf59e93531f1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:59:58",
+ "timestampMillis": "1840243418",
+ "status": {
+  "cmdId": "66efff49-0305-473d-a30f-598d2c55ffbc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:59:58",
+ "timestampMillis": "1840243419",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:59:58",
+ "timestampMillis": "1840243421",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

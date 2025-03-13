@@ -1,0 +1,57 @@
+{
+    "1": {
+        "name": "accelerator_controller_Pipeline_VITIS_LOOP_60_4",
+        "file": "..\/accelerator_controller.cpp",
+        "fileloc": "59",
+        "instructions": "62",
+        "total_instructions": "62",
+        "calls": "",
+        "basicblocks": "5",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "accelerator_controller_Pipeline_VITIS_LOOP_26_1",
+        "file": "..\/accelerator_controller.cpp",
+        "fileloc": "25",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "13",
+            "T": "3"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "accelerator_controller",
+        "file": "..\/accelerator_controller.cpp",
+        "fileloc": "11",
+        "instructions": "45",
+        "total_instructions": "177",
+        "calls": "2 1",
+        "basicblocks": "5",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

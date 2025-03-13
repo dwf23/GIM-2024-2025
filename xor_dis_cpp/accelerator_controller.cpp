@@ -59,6 +59,8 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1
         int j;
         for (j = 0; j < 4; j++) {
             #pragma HLS PIPELINE
+            std::cout << "iteration " << i << std::endl;
+            std::cout << "data point " << j << std::endl;
             // setup the initial data input
             output_0[0] = x1[j];
             output_0[1] = x2[j];
@@ -73,9 +75,11 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1
             // send output_1 to beta
             pkt output_1_packet;
             output_1_packet.ID = 0;
-            std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
+            // std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
+            output_1_packet.data[0] = output_1[0];
+            output_1_packet.data[1] = output_1[1];
             if(data_out.write_nb(output_1_packet)){
-                std::cout << "Wrote data " << output_1[0].to_float() << "and " << output_1[1].to_float() << std::endl;
+                std::cout << "Wrote data " << output_1[0].to_float() << " and " << output_1[1].to_float() << std::endl;
             }
             else{
                 std::cout << "Failed to write data" << std::endl;
@@ -83,15 +87,15 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 bias_1
 
             // Receive delta_1 from beta
             pkt read_packet;
-            if(expecting_input){
-                while(data_in.empty());
-                data_in.read(read_packet);
-                delta_1[0] = read_packet.data[0];
-                delta_1[1] = read_packet.data[1];
-                std::cout << "Read data" << delta_1[0].to_float() << "and" << delta_1[1].to_float() << std::endl;
-            } else {
-                std::cout << "Not reading data currently" << std::endl;
-            }
+            // if(expecting_input){
+            //     while(data_in.empty());
+            //     data_in.read(read_packet);
+            //     delta_1[0] = read_packet.data[0];
+            //     delta_1[1] = read_packet.data[1];
+            //     std::cout << "Read data" << delta_1[0].to_float() << "and" << delta_1[1].to_float() << std::endl;
+            // } else {
+            //     std::cout << "Not reading data currently" << std::endl;
+            // }
             
             // end with layer 1
             Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);

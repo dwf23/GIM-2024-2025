@@ -1,0 +1,3 @@
+relativeroot=C:/GIM/HongYe/GIM-2024-2025/xor_original_cpp/hls_component
+original_argv=--mode hls --csim --config C:\GIM\HongYe\GIM-2024-2025\xor_original_cpp\hls_component\hls_config.cfg --work_dir accelerator 
+

@@ -1,0 +1,14 @@
+   Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
+   Compiling bias_pe.cpp_pre.cpp.tb.cpp
+   Compiling weight_pe.cpp_pre.cpp.tb.cpp
+   Compiling accelerator_controller_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller.cpp
+   Compiling send_data.cpp_pre.cpp.tb.cpp
+   Compiling error_pe.cpp_pre.cpp.tb.cpp
+   Compiling receive_data.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller_util.cpp
+   Compiling accelerator_controller.cpp_pre.cpp.tb.cpp
+   Compiling act_pe.cpp_pre.cpp.tb.cpp
+   Compiling array.cpp_pre.cpp.tb.cpp
+   Compiling apatb_accelerator_controller_ir.ll
+   Generating cosim.tv.exe

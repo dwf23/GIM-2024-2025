@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/.autopilot/db/weight_pe.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../weight_pe.cpp</string>
+      <key>line</key>
+      <integer>7</integer>
+      <key>column</key>
+      <integer>28</integer>
+      <key>message</key>
+      <string>unused parameter &apos;training&apos;</string>
+      <key>ID</key>
+      <integer>5292</integer>
+      <key>WarningOption</key>
+      <string>unused-parameter</string>
+    </dict>
+  </array>
+</dict>

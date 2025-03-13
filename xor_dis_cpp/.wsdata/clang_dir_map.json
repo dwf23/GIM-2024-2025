@@ -1,0 +1,14 @@
+{
+  "workspaceRoot": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp",
+  "mapping": {
+    "weight_pe.cpp": "xor_distributed_hyw",
+    "act_pe.cpp": "xor_distributed_hyw",
+    "accelerator_controller_tb.cpp": "xor_distributed_hyw",
+    "bias_pe.cpp": "xor_distributed_hyw",
+    "receive_data.cpp": "xor_distributed_hyw",
+    "error_pe.cpp": "xor_distributed_hyw",
+    "send_data.cpp": "xor_distributed_hyw",
+    "array.cpp": "xor_distributed_hyw",
+    "accelerator_controller.cpp": "xor_distributed_hyw"
+  }
+}

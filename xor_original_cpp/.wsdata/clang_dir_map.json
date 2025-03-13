@@ -1,0 +1,12 @@
+{
+  "workspaceRoot": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_original_cpp",
+  "mapping": {
+    "weight_pe.cpp": "hls_component",
+    "act_pe.cpp": "hls_component",
+    "main.cpp": "hls_component",
+    "accelerator.cpp": "hls_component",
+    "bias_pe.cpp": "hls_component",
+    "error_pe.cpp": "hls_component",
+    "array.cpp": "hls_component"
+  }
+}

@@ -33,6 +33,11 @@ int main()
     flag = false;
     receive_data_thread.join();
 
+    for (int j = 0; j < interval; j++);
+    receive_data(data_in, alpha_rx, flag, rx1, rx2);
+    return 0;
+
+
 
 #endif
 

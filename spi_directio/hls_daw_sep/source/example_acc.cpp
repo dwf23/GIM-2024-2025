@@ -8,46 +8,40 @@
 
 
 
-pkt example_acc(packet_line &data_in, packet_line &data_out){
+acc_ret example_acc(packet_line &data_in, packet_line &data_out, int &debug){
     // fixed_16 will be the
     // LSB first
     // for the purposes of signaling start needs to be passed in as true, but you won't see it in code
     pkt rx;
     pkt tmp;
+    acc_ret ret;
+    int j = 0;
 
     #pragma HLS INTERFACE mode=s_axilite port=return
+    #pragma HLS INTERFACE mode=s_axilite port=debug
+    #pragma HLS INTERFACE axis port=data_in
+    #pragma HLS INTERFACE axis port=data_out
+    #pragma HLS pipeline II=2
 
-    //If you need the data urgently do this
-    rx = data_in.read();
-    tmp = rx;
-    tmp.data[0] = rx.data[0] + (fixed_16).375;
-    tmp.data[1] = rx.data[1] * (fixed_16)-1.1;
-    tmp.ID = 1;
-    data_out.write(tmp);
-    
+    std::cout << "Start" << std::endl;
 
-    //If you don't do something like this
-    //to make the program do other things while waiting
-    //I would recommend making a FIFO struct check each cycle
-    //if data and then immediately storing
-    // for(int i=0; i<1000; i++){
-    //     //don't pipeline this
-    //     #pragma HLS PIPELINE II=0
-    //     if(data_in.read_nb(rx)){
-    //         //keep old data off rx immediately!!!
-    //         tmp = rx;
-    //         break;
-    //     }
-    //     else{
-    //         counter++;
-    //     }
-    // }
-    //alt you can just do a 
-    // if(data_in.empty())
-    //but this won't read anything
-    //you would then do a rx = data_in.read()
+    //reading two numbers
+    for(int i = 0; i<2; i++){
+        debug = 0;
+        rx = data_in.read(); //blocking read from stream
+        debug = 1;
+        tmp = rx;
+        ret.data[j] = rx.data[0];
+        j++;
+        ret.data[j] = rx.data[1];
+        j++;
+        tmp.data[0] = rx.data[0] + (fixed_16).375;
+        tmp.data[1] = rx.data[1] * (fixed_16)-1.1;
+        debug = 2;
+        data_out.write(tmp); //blocking write 
 
-    return rx;
+    }
+    return ret;
     
 
 }

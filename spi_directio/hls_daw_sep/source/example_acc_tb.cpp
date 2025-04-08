@@ -5,7 +5,6 @@
 #include "ap_int.h"
 
 
-pkt example_acc(packet_line &data_in, packet_line &data_out);
 
 int main()
 {
@@ -13,11 +12,11 @@ int main()
     packet_line data_in;
     packet_line data_out;
     pkt tmp;
-    pkt res;
+    acc_ret res;
     tmp.data[0]  = 3.1;
     tmp.data[1] = 2.2;
-    tmp.ID = 0;
     int interval = 1000;
+    int debug = 0;
 
 
 #ifdef HW_COSIM
@@ -26,10 +25,21 @@ int main()
     std::cout << "writing in" << "\n";
     data_in.write(tmp);
     for (int j = 0; j < interval; j++);  // Delay for the interval
-    example_acc(data_in, data_out);
-    res = data_out.read();
+    data_in.write(tmp);
+    for (int j = 0; j < interval; j++);
+    res = example_acc(data_in, data_out, debug);
+    data_out.read(tmp);
+    std::cout << "First Packet" <<std::endl;
+    std::cout << "Num1: " << (float) tmp.data[0] << std::endl;
+    std::cout << "Num2: " << (float) tmp.data[1] << std::endl;
+    std::cout << "Second Packet" <<std::endl;
+    std::cout << "Num1: " << (float) tmp.data[0] << std::endl;
+    std::cout << "Num2: " << (float) tmp.data[1] << std::endl;
+    std::cout << "RETURN" << std::endl;
     std::cout << "Num1: " << (float) res.data[0] << std::endl;
     std::cout << "Num2: " << (float) res.data[1] << std::endl;
+    std::cout << "Num3: " << (float) res.data[2] << std::endl;
+    std::cout << "Num4: " << (float) res.data[3] << std::endl; 
     return 0;
 #endif
 

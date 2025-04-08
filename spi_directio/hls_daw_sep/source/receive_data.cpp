@@ -16,15 +16,14 @@ rx1, volatile fixed_16 rx2) {
     #pragma HLS interface s_axilite port=return
     #pragma HLS interface s_axilite port=rx1
     #pragma HLS interface s_axilite port=rx2
+    #pragma HLS INTERFACE axis port=data_in
 
     pkt rx;
-    int ID = 0;
     
     
     while(flag){
         //check to make sure we can store data
-        if(!data_in.full() & alpha_rx.valid()){
-
+        if(!data_in.full()){ //checks to see whether FIFO is full
             ap_uint<BITS> bit_bin = 0;
             ap_uint<BITS> bit_read;
             std::cout << "Receiving Data" << std::endl;
@@ -47,8 +46,6 @@ rx1, volatile fixed_16 rx2) {
             fixed_16 rx2 = (fixed_16) bit_bin;
             std::cout << "Second number: " << rx2.to_float() << std::endl;
             rx.data[1] = rx2;
-            rx.ID = ID;
-            ID++;
             //priority to get it to stream asap
             data_in.write(rx);
             

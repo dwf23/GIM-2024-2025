@@ -30,11 +30,10 @@ int main()
         for (int j = 0; j < interval; j++); //delay for interval
     }
     flag = false;
-    return 0;
     receive_data_thread.join();
-    return 0;
     for (int j = 0; j < interval; j++);
-    receive_data( alpha_rx, flag, rx1, rx2);
+    receive_data(alpha_rx, flag, rx1, rx2);
+    flag = false;
     return 0;
 
 

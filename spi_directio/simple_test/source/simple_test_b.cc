@@ -23,6 +23,8 @@ int main()
 
 	// values for simulation and testing using C++ format with integers
     bool flag = true;
+    bool rx1_vld = false;
+    bool rx2_vld = false;
     int interval = 10000000;
 
 	XTime start_time_co;
@@ -36,9 +38,6 @@ int main()
 	XSimple_test_Initialize(&Simple_test, 0);
     XReceive_data_Initialize(&Receive_data,0);
 
-    cout << "rx1: " << XReceive_data_Get_rx1(&Receive_data) << endl;
-    cout << "rx2: " << XReceive_data_Get_rx2(&Receive_data) << endl;
-
 	XSimple_test_Set_flag(&Simple_test,flag);
     XReceive_data_Set_flag(&Receive_data, flag);
 
@@ -50,8 +49,16 @@ int main()
 
     do{
         for (int i = 0; i < interval; i++); //delay between reads
+        while(!rx1_vld){
+            rx1_vld = XReceive_data_Get_rx1_vld(&Receive_data);
+        }
         cout << "rx1: " << XReceive_data_Get_rx1(&Receive_data) << endl;
+        rx1_vld = false;
+        while(!rx2_vld){
+            rx2_vld = XReceive_data_Get_rx2_vld(&Receive_data);
+        }
         cout << "rx2: " << XReceive_data_Get_rx2(&Receive_data) << endl;
+        rx2_vld = false;
     }
     while(!XSimple_test_IsReady(&Simple_test));
 

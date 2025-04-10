@@ -69,7 +69,7 @@ void receive(
 void receive_data(
     comm_line &alpha_tx,
     volatile bool &flag, ap_uint<BITS> &rx1,
-    ap_uint<BITS> &rx2
+    ap_uint<BITS> &rx2, int &debug
 
 );
 

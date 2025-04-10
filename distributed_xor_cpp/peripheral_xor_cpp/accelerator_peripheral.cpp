@@ -4,9 +4,12 @@
 using namespace std;
 
 // now, we actually run the full model
-Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-				fixed_16  bias_1[ARRAY_SIZE], fixed_16 bias_2[ARRAY_SIZE],
-                fixed_16 training) {
+Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
+                                fixed_16 bias_2[ARRAY_SIZE],
+                                fixed_16 training
+                                packet_line &data_out, 
+                                packet_line &data_in, 
+                                bool expecting_input) {
     
     // array for the final output
     Inference output_array;
@@ -17,7 +20,6 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
     fixed_16 y[4] = {0, 1, 1, 0};
 
     // setting up initial values for signals between layers
-    // fixed_16 output_0[ARRAY_SIZE] = {0, 0};
     fixed_16 output_1[ARRAY_SIZE] = {0, 0};
     fixed_16 output_2[ARRAY_SIZE] = {0, 0};
     fixed_16 delta_1[ARRAY_SIZE] = {0, 0};
@@ -30,27 +32,28 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
     fixed_16 bias_2_local[ARRAY_SIZE] = {0, 0};
 
     for (int n = 0; n<ARRAY_SIZE; n++) {
-        bias_1_local[n] = bias_1[n];
-        // bias_2_local[n] = bias_2[n];
+        bias_2_local[n] = bias_2[n];
         for (int m = 0;m<ARRAY_SIZE; m++) {
-            // w1_local[n][m] = w1[n][m];
             w2_local[n][m] = w2[n][m];
         }
     }
-
-    // Unused variables in original accelerator.cpp
-    // fixed_16 delta_0[ARRAY_SIZE] = {0, 0};
-    // fixed_16 output_back1[ARRAY_SIZE] = {0, 0};
-    // fixed_16 output_back2[ARRAY_SIZE] = {0, 0};
-    // fixed_16 output_kmin1[2] = {0, 0};
-    // fixed_16 weight_changes_1[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
-    // fixed_16 weight_changes_2[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
-    // fixed_16 bias_1_update[ARRAY_SIZE] = {0, 0};
-    // fixed_16 bias_2_update[ARRAY_SIZE] = {0, 0};
-    // fixed_16 dummy1[ARRAY_SIZE];
-    // fixed_16 dummy2[ARRAY_SIZE][ARRAY_SIZE];
-    // fixed_16 dummy3[ARRAY_SIZE];
-    // number of iterations defined in the header file
+    
+    #pragma HLS INTERFACE mode=s_axilite port=output_1[0]
+    #pragma HLS INTERFACE mode=s_axilite port=output_1[1]
+    #pragma HLS INTERFACE mode=s_axilite port=delta_1[0]
+    #pragma HLS INTERFACE mode=s_axilite port=delta_1[1]
+    #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[0]
+    #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[1]
+    #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][0]
+    #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][1]
+    #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][0]
+    #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][1]
+    #pragma HLS INTERFACE mode=s_axilite port=expecting_input
+    #pragma HLS INTERFACE mode=s_axilite port=return
+    #pragma HLS INTERFACE ap_fifo port=data_out
+    #pragma HLS INTERFACE ap_fifo port=data_in
+    #pragma HLS RESOURCE variable=data_out core=AXIS
+    #pragma HLS RESOURCE variable=data_in core=AXIS
 
     // store actual and predicted difference in vector, set other params
     char model = 'l'; // s = sigmoid, r = relu, l = leaky relu NOTE: SIGMOID CANNOT BE USED ON HARDWARE
@@ -64,10 +67,6 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
         int j;
         for (j = 0; j < 4; j++) {
             #pragma HLS PIPELINE
-            // setup the initial data input
-            // output_0[0] = x1[j];
-            // output_0[1] = x2[j];
-
             // initialize the error backpropagationcout
             delta_1[0] = 0;
             delta_1[1] = 0; 
@@ -75,7 +74,18 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
             delta_2[1] = 0;
 
             // receive output_1 from alpha
-            // output_1 = 
+            pkt read_output_1_packet;
+            if(expecting_input){
+                while(data_in.empty());
+                data_in.read(read_output_1_packet);
+                output_1[0] = read_output_1_packet.data[0];
+                output_1[1] = read_output_1_packet.data[1];
+                std::cout << "read_output_1_packet: " 
+                        << output_1[0].to_float() << ", " 
+                        << output_1[1].to_float() << std::endl;
+            } else {
+                std::cout << "Failed to read_output_1_packet" << std::endl;
+            }
 
             // then layer two
             Array array_out2 = model_array(w2_local, bias_2_local, output_1, delta_2, lr, model, alpha, training);
@@ -126,9 +136,22 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
             }
 
             // send updated delta_1 to alpha
+            pkt write_delta_1_packet;
+            write_delta_1_packet.ID = 4;
+            write_delta_1_packet.data[0] = delta_1[0];
+            write_delta_1_packet.data[1] = delta_1[1];
+            if(data_out.write_nb(write_delta_1_packet)){
+                std::cout << "write_delta_1_packet " 
+                        << delta_1[0].to_float() << ", " 
+                        << delta_1[1].to_float() << std::endl;
+            }
+            else{
+                std::cout << "Failed to write_delta_1_packet" << std::endl;
+            }
             
+            // only run this for all 4 data points once if infering
             if ((training == 0) && (j == 3)) {
-                break; // only run this for all 4 data points once if infering
+                break; 
             }
         }
 
@@ -137,14 +160,53 @@ Inference accelerator_peripheral(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], fixed_16 w
         inaccuracy = y[j] - output_2[0];
         //cout  << inaccuracy << endl;
 
+        // only run this once if we are inferring
         if (training == 0) {
-            break; // only run this once if we are inferring
+            break; 
         }
     }
 
-    // // receive bias_1_local and w1_local from alpha 
-    // bias_1_local = 
-    // w1_local = 
+    // receive bias_1_local from alpha 
+    pkt read_bias_1_local_packet;
+    if(expecting_input){
+        while(data_in.empty());
+        data_in.read(read_bias_1_local_packet);
+        bias_1_local[0] = read_bias_1_local_packet.data[0];
+        bias_1_local[1] = read_bias_1_local_packet.data[1];
+        std::cout << "read_bias_1_local_packet: " 
+                << bias_1_local[0].to_float() << ", " 
+                << bias_1_local[1].to_float() << std::endl;
+    } else {
+        std::cout << "Failed to read_bias_1_local_packet" << std::endl;
+    }
+
+    // receive w1_local_packet1 (w1_local[0][0], w1_local[0][1]) from alpha 
+    pkt read_w1_local_packet1;
+    if(expecting_input){
+        while(data_in.empty());
+        data_in.read(read_w1_local_packet1);
+        w1_local[0][0] = read_w1_local_packet1.data[0];
+        w1_local[0][1] = read_w1_local_packet1.data[1];
+        std::cout << "read_w1_local_packet1: " 
+                << w1_local[0][0].to_float() << ", " 
+                << w1_local[0][1].to_float() << std::endl;
+    } else {
+        std::cout << "Failed to read_w1_local_packet1" << std::endl;
+    }
+
+    // receive w1_local_packet2 (w1_local[1][0], w1_local[1][1]) from alpha 
+    pkt read_w1_local_packet2;
+    if(expecting_input){
+        while(data_in.empty());
+        data_in.read(read_w1_local_packet2);
+        w1_local[1][0] = read_w1_local_packet2.data[0];
+        w1_local[1][1] = read_w1_local_packet2.data[1];
+        std::cout << "read_w1_local_packet2: " 
+                << w1_local[1][0].to_float() << ", " 
+                << w1_local[1][1].to_float() << std::endl;
+    } else {
+        std::cout << "Failed to read_w1_local_packet2" << std::endl;
+    }
 
     // produce the final weights to be used in inference
     for (int n = 0; n<ARRAY_SIZE; n++) {

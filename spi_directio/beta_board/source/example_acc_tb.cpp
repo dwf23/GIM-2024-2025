@@ -39,6 +39,7 @@ int main()
     int received_val_1 = 0;
     int received_val_2 = 0;
     int test = 0;
+    bool probe = false;
     // example_acc(rx_stream, wrote_flag, loop, tx_stream, received_flag, received_val_1, received_val_2);
     // while(!wrote_flag);
     // result = rx_stream.read();
@@ -50,16 +51,19 @@ int main()
     loop = true;
 
     std::thread example_acc_thread(example_acc, std::ref(rx_stream), std::ref(wrote_flag), std::ref(loop),
-     std::ref(tx_stream), std::ref(received_flag), std::ref(received_val_1), std::ref(received_val_2), std::ref(test));
+     std::ref(tx_stream), std::ref(received_flag), std::ref(received_val_1), std::ref(received_val_2), std::ref(test),
+    std::ref(probe));
 
     while(!wrote_flag);
     rx_stream.write(packet1);
     std::cout << "Sent Packet 1" << std::endl;
     while(!received_flag);
+    probe = true;
     for (int j = 0; j < 10000; j++);
     while(!wrote_flag);
     rx_stream.write(packet2);
     std::cout << "Sent Packet 2" << std::endl;
+    probe = true;
  
     example_acc_thread.join();
 

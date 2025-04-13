@@ -2,7 +2,7 @@
 #include <cstdint>
 
  void example_acc(packet_line& rx_stream, bool &wrote_flag, volatile bool &loop, packet_line& tx_stream,
-  bool &received_flag, int &received_val_1, int &received_val_2, int &test) {
+  bool &received_flag, int &received_val_1, int &received_val_2, int &test, bool &probe) {
     /*
     Something heading to example_acc has destination 1
     Something heading to send_data has destination 2
@@ -15,6 +15,7 @@
     #pragma HLS INTERFACE mode=s_axilite port=received_val_1
     #pragma HLS INTERFACE mode=s_axilite port=received_val_2
     #pragma HLS INTERFACE mode=s_axilite port=test
+    #pragma HLS INTERFACE mode=s_axilite port=probe
     #pragma HLS interface s_axilite port=return
     #pragma HLS pipeline II=2
     #pragma HLS INTERFACE axis port=tx_stream
@@ -69,30 +70,31 @@
                 }
             }
 
-            //delay then set false
-            for (int j = 0; j < 1000; j++);
+            while(!probe);
             wrote_flag = false;
             received_flag = false;
+            probe = wrote_flag;
         }
     }
     else if (test ==1){
         while(loop){
-            while(rx_stream.empty()); //wait until there is something to read
-            std::cout << "Packet off the FIFO" << std::endl;
-            in_val = rx_stream.read(); //blocking read
-            if(in_val.dest == 1){
-                in_val.display();
-                received_flag = true;
-                received_val_1 = in_val.data[0];
-                received_val_2 = in_val.data[1];
+            while(!received_flag){
+                while(rx_stream.empty()); //wait until there is something to read
+                std::cout << "Packet off the FIFO" << std::endl;
+                in_val = rx_stream.read(); //blocking read
+                if(in_val.dest == 1){
+                    in_val.display();
+                    received_flag = true;
+                    received_val_1 = in_val.data[0];
+                    received_val_2 = in_val.data[1];
+                }
+                else{
+                    std::cout << "Data Not Valid" << std::endl;
+                }
             }
-            else{
-                std::cout << "Data Not Valid" << std::endl;
-            }
-
             //Modify the values
             tx1 = received_val_1 * 2;
-            tx2 = received_val_2 - 20;
+            tx2 = received_val_2 + 20;
 
             //Write them off the packet
             id++;

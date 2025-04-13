@@ -74,6 +74,7 @@ int main()
     int example_received_val_2 = 0;
     volatile bool dest = 1;
     int test = 0; // 0 --> self test 1--> across boards
+    bool probe = false;
 
 	unsigned long long tt;
 	int tt_print;
@@ -93,6 +94,7 @@ int main()
     //XExample_acc_Set_loop_r(&Example_acc, loop);
     XSend_data_Set_loop_r(&Send_data, loop);
     XReceive_data_Set_loop_r(&Receive_data, loop);
+    XExample_acc_Set_probe(&Example_acc, 0);
     XExample_acc_Set_test(&Example_acc, test);
     // XReceive_data_Set_data_1(&Receive_data, 0.38);
     // XReceive_data_Set_data_2(&Receive_data, 2.79);
@@ -154,6 +156,7 @@ int main()
                     send_data_2 = XSend_data_Get_received_val_2(&Send_data);
 
                     cout << "Send data val 2: " << send_data_2 << endl;
+                    XExample_acc_Set_probe(&Example_acc, 1); //set probe to true
                 }
                 
             }

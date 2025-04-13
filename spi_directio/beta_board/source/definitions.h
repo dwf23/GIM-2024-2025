@@ -62,7 +62,8 @@ void example_acc(
     bool &received_flag, 
     int &received_val_1,
     int &received_val_2,
-    int &test
+    int &test,
+    bool &probe
 );
 
 void send_data(

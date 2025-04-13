@@ -1,0 +1,11 @@
+{
+  "name": "xor_distributed_hyw",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "xor_distributed_hyw"
+  }
+}

@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'accelerator_controller'" level="0">
+<item name = "Date">Thu Mar  6 16:55:24 2025
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">xor_distributed_hyw</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sfvc784-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.929 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7, 119, 70.000 ns, 1.190 us, 8, 120, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_accelerator_controller_Pipeline_VITIS_LOOP_26_1_fu_106">accelerator_controller_Pipeline_VITIS_LOOP_26_1, 4, 4, 40.000 ns, 40.000 ns, 3, 3, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_accelerator_controller_Pipeline_VITIS_LOOP_60_4_fu_120">accelerator_controller_Pipeline_VITIS_LOOP_60_4, 5, 9, 50.000 ns, 90.000 ns, 1, 5, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_57_3">0, 111, 7 ~ 11, -, -, 0 ~ 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Mar  6 16:59:44 2025
+# Process ID: 29980
+# Current directory: C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/accelerator_controller/xsim_script.tcl}
+# Log file: C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/xsim.log
+# Journal file: C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog\xsim.jou
+# Running On        :GIM_Laptop_2
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 3 3250U with Radeon Graphics         
+# CPU Frequency     :2595 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :14906 MB
+# Swap memory       :5368 MB
+# Total Virtual     :20275 MB
+# Available Virtual :4682 MB
+#-----------------------------------------------------------
+source xsim.dir/accelerator_controller/xsim_script.tcl
+# xsim {accelerator_controller} -autoloadwcfg -tclbatch {accelerator_controller.tcl}
+Time resolution is 1 ps
+source accelerator_controller.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1265000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1325 ns : File "C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/sim/verilog/accelerator_controller.autotb.v" Line 501
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar  6 16:59:54 2025...

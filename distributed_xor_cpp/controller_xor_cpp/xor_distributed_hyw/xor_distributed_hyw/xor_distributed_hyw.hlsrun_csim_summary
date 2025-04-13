@@ -1,0 +1,164 @@
+<ENTRY>
+{
+ "thisFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\xor_distributed_hyw.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/06/25 16:38:03",
+ "timestampMillis": "1838928238",
+ "buildStep": {
+  "cmdId": "feb57778-12eb-4477-8290-0644c14d4571",
+  "name": "vitis-run",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\logs\\xor_distributed_hyw.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\hls_config.cfg --work_dir xor_distributed_hyw ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\hls_config.cfg",
+   "--work_dir",
+   "xor_distributed_hyw"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:38:03",
+ "timestampMillis": "1838928239",
+ "status": {
+  "cmdId": "feb57778-12eb-4477-8290-0644c14d4571",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/06/25 16:38:17",
+ "timestampMillis": "1838942986",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\accelerator_controller.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\act_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\array.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\bias_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\error_pe.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\gim_model_controller.h",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\receive_data.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\send_data.cpp",
+     "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\weight_pe.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/06/25 16:38:17",
+ "timestampMillis": "1838942992",
+ "buildStep": {
+  "cmdId": "2fb13f78-b90b-4ca9-b164-c9e25fcde7cd",
+  "name": "csim_design",
+  "logFile": "C:/GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw\\xor_distributed_hyw\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\GIM\\HongYe\\GIM-2024-2025\\xor_dis_cpp\\xor_distributed_hyw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:38:17",
+ "timestampMillis": "1838942994",
+ "status": {
+  "cmdId": "2fb13f78-b90b-4ca9-b164-c9e25fcde7cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:39:39",
+ "timestampMillis": "1839024705",
+ "status": {
+  "cmdId": "2fb13f78-b90b-4ca9-b164-c9e25fcde7cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/06/25 16:39:40",
+ "timestampMillis": "1839025253",
+ "status": {
+  "cmdId": "feb57778-12eb-4477-8290-0644c14d4571",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:39:40",
+ "timestampMillis": "1839025259",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/06/25 16:39:40",
+ "timestampMillis": "1839025260",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

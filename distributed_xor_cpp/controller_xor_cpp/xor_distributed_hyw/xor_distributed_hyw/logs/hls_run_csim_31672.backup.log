@@ -1,0 +1,6077 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw\xor_distributed_hyw.hlsrun_csim_summary, at 03/06/25 16:32:42
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw -config C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg -cmdlineconfig C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Mar  6 16:32:47 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'GIM' on host 'gim_laptop_2' (Windows NT_amd64 version 10.0) on Thu Mar 06 16:32:50 -0600 2025
+INFO: [HLS 200-10] In directory 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw'
+INFO: [HLS 200-2005] Using work_dir C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/xor_distributed_hyw 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/act_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/act_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/array.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/array.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/bias_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/bias_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/error_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/error_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/gim_model_controller.h' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/gim_model_controller.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/receive_data.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/receive_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/send_data.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/send_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/weight_pe.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/weight_pe.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding test bench file 'C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/accelerator_controller_tb.cpp,-D HW_COSIM' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(17)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(18)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(19)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/GIM/HongYe/GIM-2024-2025/xor_dis_cpp/xor_distributed_hyw/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../accelerator_controller.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../accelerator_controller.cpp:1:
+In file included from ../../../../../gim_model_controller.h:4:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+Starting Testbench
+Beginning HLS Func
+iteration 0
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 0
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 0
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 0
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 1
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 1
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 1
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 1
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 2
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 2
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 2
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 2
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 3
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 3
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 3
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 3
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 4
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 4
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 4
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 4
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 5
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 5
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 5
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 5
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 6
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 6
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 6
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 6
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 7
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 7
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 7
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 7
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 8
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 8
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 8
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 8
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 9
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 9
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 9
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 9
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 10
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 10
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 10
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 10
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 11
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 11
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 11
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 11
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 12
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 12
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 12
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 12
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 13
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 13
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 13
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 13
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 14
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 14
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 14
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 14
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 15
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 15
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 15
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 15
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 16
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 16
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 16
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 16
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 17
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 17
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 17
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 17
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 18
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 18
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 18
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 18
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 19
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 19
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 19
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 19
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 20
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 20
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 20
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 20
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 21
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 21
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 21
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 21
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 22
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 22
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 22
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 22
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 23
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 23
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 23
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 23
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 24
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 24
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 24
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 24
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 25
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 25
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 25
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 25
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 26
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 26
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 26
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 26
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 27
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 27
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 27
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 27
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 28
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 28
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 28
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 28
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 29
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 29
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 29
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 29
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 30
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 30
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 30
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 30
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 31
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 31
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 31
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 31
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 32
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 32
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 32
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 32
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 33
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 33
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 33
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 33
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 34
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 34
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 34
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 34
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 35
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 35
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 35
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 35
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 36
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 36
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 36
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 36
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 37
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 37
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 37
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 37
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 38
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 38
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 38
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 38
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 39
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 39
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 39
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 39
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 40
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 40
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 40
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 40
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 41
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 41
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 41
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 41
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 42
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 42
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 42
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 42
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 43
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 43
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 43
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 43
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 44
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 44
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 44
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 44
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 45
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 45
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 45
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 45
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 46
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 46
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 46
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 46
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 47
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 47
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 47
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 47
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 48
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 48
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 48
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 48
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 49
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 49
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 49
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 49
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 50
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 50
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 50
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 50
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 51
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 51
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 51
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 51
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 52
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 52
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 52
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 52
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 53
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 53
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 53
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 53
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 54
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 54
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 54
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 54
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 55
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 55
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 55
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 55
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 56
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 56
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 56
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 56
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 57
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 57
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 57
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 57
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 58
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 58
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 58
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 58
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 59
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 59
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 59
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 59
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 60
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 60
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 60
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 60
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 61
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 61
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 61
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 61
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 62
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 62
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 62
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 62
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 63
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 63
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 63
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 63
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 64
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 64
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 64
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 64
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 65
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 65
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 65
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 65
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 66
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 66
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 66
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 66
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 67
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 67
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 67
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 67
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 68
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 68
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 68
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 68
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 69
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 69
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 69
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 69
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 70
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 70
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 70
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 70
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 71
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 71
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 71
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 71
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 72
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 72
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 72
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 72
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 73
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 73
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 73
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 73
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 74
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 74
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 74
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 74
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 75
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 75
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 75
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 75
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 76
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 76
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 76
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 76
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 77
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 77
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 77
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 77
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 78
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 78
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 78
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 78
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 79
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 79
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 79
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 79
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 80
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 80
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 80
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 80
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 81
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 81
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 81
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 81
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 82
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 82
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 82
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 82
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 83
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 83
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 83
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 83
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 84
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 84
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 84
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 84
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 85
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 85
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 85
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 85
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 86
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 86
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 86
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 86
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 87
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 87
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 87
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 87
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 88
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 88
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 88
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 88
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 89
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 89
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 89
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 89
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 90
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 90
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 90
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 90
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 91
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 91
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 91
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 91
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 92
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 92
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 92
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 92
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 93
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 93
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 93
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 93
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 94
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 94
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 94
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 94
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 95
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 95
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 95
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 95
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 96
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 96
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 96
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 96
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 97
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 97
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 97
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 97
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 98
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 98
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 98
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 98
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 99
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 99
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 99
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 99
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 100
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 100
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 100
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 100
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 101
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 101
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 101
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 101
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 102
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 102
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 102
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 102
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 103
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 103
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 103
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 103
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 104
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 104
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 104
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 104
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 105
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 105
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 105
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 105
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 106
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 106
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 106
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 106
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 107
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 107
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 107
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 107
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 108
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 108
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 108
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 108
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 109
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 109
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 109
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 109
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 110
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 110
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 110
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 110
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 111
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 111
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 111
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 111
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 112
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 112
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 112
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 112
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 113
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 113
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 113
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 113
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 114
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 114
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 114
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 114
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 115
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 115
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 115
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 115
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 116
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 116
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 116
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 116
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 117
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 117
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 117
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 117
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 118
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 118
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 118
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 118
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 119
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 119
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 119
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 119
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 120
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 120
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 120
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 120
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 121
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 121
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 121
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 121
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 122
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 122
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 122
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 122
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 123
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 123
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 123
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 123
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 124
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 124
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 124
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 124
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 125
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 125
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 125
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 125
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 126
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 126
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 126
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 126
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 127
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 127
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 127
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 127
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 128
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 128
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 128
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 128
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 129
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 129
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 129
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 129
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 130
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 130
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 130
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 130
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 131
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 131
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 131
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 131
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 132
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 132
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 132
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 132
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 133
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 133
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 133
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 133
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 134
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 134
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 134
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 134
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 135
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 135
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 135
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 135
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 136
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 136
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 136
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 136
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 137
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 137
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 137
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 137
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 138
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 138
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 138
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 138
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 139
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 139
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 139
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 139
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 140
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 140
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 140
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 140
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 141
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 141
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 141
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 141
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 142
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 142
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 142
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 142
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 143
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 143
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 143
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 143
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 144
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 144
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 144
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 144
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 145
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 145
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 145
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 145
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 146
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 146
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 146
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 146
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 147
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 147
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 147
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 147
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 148
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 148
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 148
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 148
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 149
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 149
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 149
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 149
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 150
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 150
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 150
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 150
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 151
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 151
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 151
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 151
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 152
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 152
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 152
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 152
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 153
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 153
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 153
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 153
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 154
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 154
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 154
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 154
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 155
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 155
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 155
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 155
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 156
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 156
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 156
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 156
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 157
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 157
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 157
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 157
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 158
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 158
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 158
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 158
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 159
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 159
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 159
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 159
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 160
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 160
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 160
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 160
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 161
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 161
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 161
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 161
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 162
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 162
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 162
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 162
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 163
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 163
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 163
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 163
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 164
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 164
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 164
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 164
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 165
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 165
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 165
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 165
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 166
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 166
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 166
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 166
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 167
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 167
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 167
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 167
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 168
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 168
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 168
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 168
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 169
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 169
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 169
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 169
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 170
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 170
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 170
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 170
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 171
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 171
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 171
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 171
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 172
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 172
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 172
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 172
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 173
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 173
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 173
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 173
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 174
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 174
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 174
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 174
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 175
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 175
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 175
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 175
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 176
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 176
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 176
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 176
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 177
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 177
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 177
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 177
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 178
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 178
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 178
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 178
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 179
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 179
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 179
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 179
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 180
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 180
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 180
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 180
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 181
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 181
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 181
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 181
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 182
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 182
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 182
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 182
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 183
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 183
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 183
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 183
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 184
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 184
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 184
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 184
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 185
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 185
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 185
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 185
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 186
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 186
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 186
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 186
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 187
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 187
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 187
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 187
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 188
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 188
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 188
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 188
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 189
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 189
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 189
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 189
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 190
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 190
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 190
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 190
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 191
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 191
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 191
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 191
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 192
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 192
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 192
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 192
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 193
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 193
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 193
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 193
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 194
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 194
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 194
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 194
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 195
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 195
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 195
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 195
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 196
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 196
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 196
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 196
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 197
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 197
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 197
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 197
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 198
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 198
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 198
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 198
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 199
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 199
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 199
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 199
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 200
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 200
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 200
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 200
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 201
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 201
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 201
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 201
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 202
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 202
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 202
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 202
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 203
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 203
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 203
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 203
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 204
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 204
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 204
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 204
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 205
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 205
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 205
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 205
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 206
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 206
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 206
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 206
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 207
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 207
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 207
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 207
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 208
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 208
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 208
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 208
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 209
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 209
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 209
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 209
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 210
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 210
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 210
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 210
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 211
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 211
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 211
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 211
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 212
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 212
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 212
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 212
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 213
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 213
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 213
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 213
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 214
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 214
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 214
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 214
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 215
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 215
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 215
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 215
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 216
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 216
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 216
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 216
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 217
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 217
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 217
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 217
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 218
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 218
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 218
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 218
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 219
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 219
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 219
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 219
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 220
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 220
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 220
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 220
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 221
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 221
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 221
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 221
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 222
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 222
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 222
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 222
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 223
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 223
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 223
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 223
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 224
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 224
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 224
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 224
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 225
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 225
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 225
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 225
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 226
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 226
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 226
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 226
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 227
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 227
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 227
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 227
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 228
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 228
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 228
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 228
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 229
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 229
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 229
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 229
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 230
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 230
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 230
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 230
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 231
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 231
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 231
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 231
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 232
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 232
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 232
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 232
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 233
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 233
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 233
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 233
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 234
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 234
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 234
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 234
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 235
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 235
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 235
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 235
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 236
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 236
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 236
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 236
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 237
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 237
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 237
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 237
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 238
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 238
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 238
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 238
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 239
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 239
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 239
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 239
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 240
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 240
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 240
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 240
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 241
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 241
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 241
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 241
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 242
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 242
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 242
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 242
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 243
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 243
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 243
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 243
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 244
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 244
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 244
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 244
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 245
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 245
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 245
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 245
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 246
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 246
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 246
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 246
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 247
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 247
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 247
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 247
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 248
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 248
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 248
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 248
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 249
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 249
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 249
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 249
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 250
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 250
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 250
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 250
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 251
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 251
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 251
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 251
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 252
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 252
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 252
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 252
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 253
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 253
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 253
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 253
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 254
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 254
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 254
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 254
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 255
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 255
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 255
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 255
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 256
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 256
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 256
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 256
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 257
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 257
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 257
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 257
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 258
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 258
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 258
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 258
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 259
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 259
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 259
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 259
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 260
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 260
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 260
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 260
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 261
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 261
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 261
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 261
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 262
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 262
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 262
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 262
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 263
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 263
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 263
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 263
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 264
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 264
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 264
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 264
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 265
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 265
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 265
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 265
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 266
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 266
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 266
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 266
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 267
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 267
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 267
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 267
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 268
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 268
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 268
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 268
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 269
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 269
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 269
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 269
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 270
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 270
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 270
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 270
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 271
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 271
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 271
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 271
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 272
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 272
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 272
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 272
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 273
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 273
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 273
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 273
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 274
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 274
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 274
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 274
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 275
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 275
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 275
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 275
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 276
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 276
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 276
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 276
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 277
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 277
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 277
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 277
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 278
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 278
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 278
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 278
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 279
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 279
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 279
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 279
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 280
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 280
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 280
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 280
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 281
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 281
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 281
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 281
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 282
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 282
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 282
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 282
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 283
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 283
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 283
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 283
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 284
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 284
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 284
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 284
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 285
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 285
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 285
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 285
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 286
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 286
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 286
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 286
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 287
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 287
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 287
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 287
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 288
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 288
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 288
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 288
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 289
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 289
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 289
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 289
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 290
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 290
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 290
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 290
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 291
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 291
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 291
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 291
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 292
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 292
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 292
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 292
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 293
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 293
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 293
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 293
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 294
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 294
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 294
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 294
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 295
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 295
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 295
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 295
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 296
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 296
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 296
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 296
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 297
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 297
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 297
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 297
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 298
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 298
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 298
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 298
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 299
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 299
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 299
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 299
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 300
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 300
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 300
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 300
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 301
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 301
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 301
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 301
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 302
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 302
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 302
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 302
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 303
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 303
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 303
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 303
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 304
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 304
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 304
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 304
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 305
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 305
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 305
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 305
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 306
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 306
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 306
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 306
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 307
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 307
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 307
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 307
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 308
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 308
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 308
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 308
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 309
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 309
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 309
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 309
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 310
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 310
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 310
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 310
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 311
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 311
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 311
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 311
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 312
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 312
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 312
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 312
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 313
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 313
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 313
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 313
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 314
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 314
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 314
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 314
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 315
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 315
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 315
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 315
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 316
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 316
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 316
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 316
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 317
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 317
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 317
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 317
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 318
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 318
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 318
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 318
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 319
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 319
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 319
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 319
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 320
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 320
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 320
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 320
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 321
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 321
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 321
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 321
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 322
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 322
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 322
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 322
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 323
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 323
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 323
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 323
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 324
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 324
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 324
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 324
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 325
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 325
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 325
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 325
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 326
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 326
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 326
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 326
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 327
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 327
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 327
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 327
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 328
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 328
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 328
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 328
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 329
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 329
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 329
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 329
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 330
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 330
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 330
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 330
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 331
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 331
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 331
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 331
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 332
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 332
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 332
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 332
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 333
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 333
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 333
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 333
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 334
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 334
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 334
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 334
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 335
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 335
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 335
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 335
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 336
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 336
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 336
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 336
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 337
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 337
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 337
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 337
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 338
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 338
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 338
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 338
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 339
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 339
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 339
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 339
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 340
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 340
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 340
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 340
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 341
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 341
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 341
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 341
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 342
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 342
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 342
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 342
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 343
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 343
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 343
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 343
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 344
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 344
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 344
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 344
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 345
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 345
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 345
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 345
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 346
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 346
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 346
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 346
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 347
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 347
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 347
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 347
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 348
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 348
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 348
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 348
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 349
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 349
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 349
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 349
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 350
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 350
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 350
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 350
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 351
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 351
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 351
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 351
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 352
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 352
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 352
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 352
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 353
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 353
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 353
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 353
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 354
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 354
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 354
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 354
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 355
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 355
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 355
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 355
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 356
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 356
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 356
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 356
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 357
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 357
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 357
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 357
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 358
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 358
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 358
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 358
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 359
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 359
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 359
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 359
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 360
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 360
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 360
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 360
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 361
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 361
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 361
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 361
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 362
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 362
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 362
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 362
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 363
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 363
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 363
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 363
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 364
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 364
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 364
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 364
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 365
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 365
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 365
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 365
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 366
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 366
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 366
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 366
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 367
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 367
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 367
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 367
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 368
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 368
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 368
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 368
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 369
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 369
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 369
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 369
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 370
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 370
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 370
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 370
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 371
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 371
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 371
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 371
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 372
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 372
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 372
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 372
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 373
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 373
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 373
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 373
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 374
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 374
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 374
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 374
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 375
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 375
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 375
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 375
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 376
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 376
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 376
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 376
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 377
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 377
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 377
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 377
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 378
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 378
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 378
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 378
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 379
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 379
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 379
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 379
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 380
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 380
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 380
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 380
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 381
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 381
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 381
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 381
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 382
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 382
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 382
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 382
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 383
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 383
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 383
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 383
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 384
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 384
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 384
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 384
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 385
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 385
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 385
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 385
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 386
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 386
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 386
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 386
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 387
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 387
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 387
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 387
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 388
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 388
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 388
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 388
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 389
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 389
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 389
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 389
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 390
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 390
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 390
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 390
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 391
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 391
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 391
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 391
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 392
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 392
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 392
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 392
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 393
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 393
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 393
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 393
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 394
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 394
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 394
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 394
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 395
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 395
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 395
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 395
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 396
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 396
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 396
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 396
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 397
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 397
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 397
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 397
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 398
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 398
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 398
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 398
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 399
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 399
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 399
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 399
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 400
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 400
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 400
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 400
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 401
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 401
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 401
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 401
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 402
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 402
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 402
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 402
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 403
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 403
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 403
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 403
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 404
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 404
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 404
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 404
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 405
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 405
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 405
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 405
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 406
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 406
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 406
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 406
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 407
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 407
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 407
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 407
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 408
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 408
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 408
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 408
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 409
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 409
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 409
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 409
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 410
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 410
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 410
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 410
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 411
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 411
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 411
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 411
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 412
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 412
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 412
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 412
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 413
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 413
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 413
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 413
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 414
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 414
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 414
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 414
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 415
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 415
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 415
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 415
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 416
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 416
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 416
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 416
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 417
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 417
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 417
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 417
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 418
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 418
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 418
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 418
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 419
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 419
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 419
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 419
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 420
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 420
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 420
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 420
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 421
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 421
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 421
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 421
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 422
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 422
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 422
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 422
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 423
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 423
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 423
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 423
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 424
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 424
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 424
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 424
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 425
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 425
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 425
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 425
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 426
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 426
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 426
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 426
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 427
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 427
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 427
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 427
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 428
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 428
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 428
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 428
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 429
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 429
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 429
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 429
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 430
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 430
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 430
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 430
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 431
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 431
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 431
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 431
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 432
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 432
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 432
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 432
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 433
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 433
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 433
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 433
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 434
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 434
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 434
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 434
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 435
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 435
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 435
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 435
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 436
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 436
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 436
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 436
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 437
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 437
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 437
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 437
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 438
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 438
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 438
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 438
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 439
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 439
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 439
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 439
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 440
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 440
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 440
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 440
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 441
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 441
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 441
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 441
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 442
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 442
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 442
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 442
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 443
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 443
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 443
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 443
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 444
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 444
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 444
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 444
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 445
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 445
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 445
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 445
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 446
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 446
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 446
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 446
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 447
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 447
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 447
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 447
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 448
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 448
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 448
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 448
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 449
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 449
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 449
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 449
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 450
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 450
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 450
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 450
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 451
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 451
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 451
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 451
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 452
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 452
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 452
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 452
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 453
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 453
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 453
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 453
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 454
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 454
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 454
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 454
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 455
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 455
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 455
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 455
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 456
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 456
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 456
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 456
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 457
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 457
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 457
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 457
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 458
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 458
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 458
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 458
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 459
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 459
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 459
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 459
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 460
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 460
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 460
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 460
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 461
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 461
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 461
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 461
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 462
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 462
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 462
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 462
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 463
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 463
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 463
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 463
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 464
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 464
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 464
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 464
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 465
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 465
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 465
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 465
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 466
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 466
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 466
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 466
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 467
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 467
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 467
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 467
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 468
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 468
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 468
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 468
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 469
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 469
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 469
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 469
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 470
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 470
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 470
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 470
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 471
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 471
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 471
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 471
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 472
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 472
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 472
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 472
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 473
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 473
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 473
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 473
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 474
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 474
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 474
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 474
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 475
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 475
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 475
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 475
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 476
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 476
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 476
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 476
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 477
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 477
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 477
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 477
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 478
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 478
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 478
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 478
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 479
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 479
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 479
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 479
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 480
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 480
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 480
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 480
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 481
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 481
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 481
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 481
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 482
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 482
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 482
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 482
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 483
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 483
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 483
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 483
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 484
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 484
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 484
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 484
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 485
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 485
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 485
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 485
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 486
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 486
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 486
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 486
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 487
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 487
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 487
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 487
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 488
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 488
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 488
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 488
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 489
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 489
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 489
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 489
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 490
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 490
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 490
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 490
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 491
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 491
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 491
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 491
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 492
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 492
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 492
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 492
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 493
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 493
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 493
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 493
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 494
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 494
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 494
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 494
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 495
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 495
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 495
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 495
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 496
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 496
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 496
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 496
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 497
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 497
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 497
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 497
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 498
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 498
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 498
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 498
+data point 3
+Wrote data 1.14844 and 1.0332
+iteration 499
+data point 0
+Wrote data 0.503906 and 0.0644531
+iteration 499
+data point 1
+Wrote data 1.01562 and 0.849609
+iteration 499
+data point 2
+Wrote data 0.636719 and 0.248047
+iteration 499
+data point 3
+Wrote data 1.14844 and 1.0332
+WARNING [HLS SIM]: hls::stream 'hls::stream<pkt, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2000
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 3 seconds. Total elapsed time: 26.588 seconds; peak allocated memory: 232.414 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 35s

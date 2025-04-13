@@ -95,6 +95,7 @@
             //Modify the values
             tx1 = received_val_1 * 2;
             tx2 = received_val_2 + 20;
+            
 
             //Write them off the packet
             id++;
@@ -102,6 +103,8 @@
             while(tx_stream.full());
             tx_stream.write(packet);
             wrote_flag = true;
+            received_flag = false;
+            
 
         }
     }

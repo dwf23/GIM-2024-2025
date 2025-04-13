@@ -26,6 +26,7 @@ int main()
     //axis<fixed_16, 0, 1, 1> data_to_send(fixed_16(27.5), fixed_16(0.0), 1, 1);
     axis<int, 0, 1, 1> packet1(int (2), int (5), 1, 1);
     axis<int, 0, 1, 1> packet2(int (17), int (1), 1, 1);
+    axis<int, 0, 1, 1> inpacket;
 
 // #ifdef HW_COSIM
     std::cout << "Beginning Send Data Thread" << "\n";
@@ -38,7 +39,7 @@ int main()
     volatile bool fifo_reset_busy = false;
     int received_val_1 = 0;
     int received_val_2 = 0;
-    int test = 0;
+    int test = 1;
     bool probe = false;
     // example_acc(rx_stream, wrote_flag, loop, tx_stream, received_flag, received_val_1, received_val_2);
     // while(!wrote_flag);
@@ -54,16 +55,21 @@ int main()
      std::ref(tx_stream), std::ref(received_flag), std::ref(received_val_1), std::ref(received_val_2), std::ref(test),
     std::ref(probe));
 
-    while(!wrote_flag);
     rx_stream.write(packet1);
     std::cout << "Sent Packet 1" << std::endl;
     while(!received_flag);
-    probe = true;
     for (int j = 0; j < 10000; j++);
     while(!wrote_flag);
+    tx_stream.read(inpacket);
+    inpacket.display();
+    std::cout << "Read Packet 1" << std::endl;
+    //packet 2
     rx_stream.write(packet2);
     std::cout << "Sent Packet 2" << std::endl;
-    probe = true;
+    for (int j = 0; j < 10000; j++);
+    tx_stream.read(inpacket);
+    inpacket.display();
+    std::cout << "Read Packet 2" << std::endl;
  
     example_acc_thread.join();
 

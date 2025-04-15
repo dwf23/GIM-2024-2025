@@ -13,18 +13,19 @@ void foo(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
         bool expecting_input, 
         bool &initialized,
         bool self_test,
-        int &epoch) {
+        int &epoch,
+        bool &complete) {
     
     Inference output;
 
     Inference prediciton;
 
     output = accelerator_peripheral(w2, bias_2, 1, rx_stream, tx_stream, expecting_input, initialized,
-    self_test, epoch);
+    self_test, epoch, complete);
 
     initialized = true;
     prediciton = accelerator_peripheral(output.new_w2, output.new_b2, 0, rx_stream,
-    tx_stream, expecting_input, initialized, self_test, epoch);
+    tx_stream, expecting_input, initialized, self_test, epoch, complete);
 
     cout << "The following are the predictions of the DNN:" << endl;
     cout << output.inference[0] << endl;
@@ -49,6 +50,7 @@ int main() {
     fixed_16 training = 1;
     bool self_test = false;
     int epoch;
+    bool complete;
     // bool flag = true;
 
     //this is the alpha code initialization
@@ -72,7 +74,7 @@ int main() {
     // training the array
     std::thread beta_thread(foo, std::ref(w2), std::ref(bias_2),
      std::ref(training), std::ref(rx_stream), std::ref(tx_stream), std::ref(expecting_input)
-     , std::ref(initialized), std::ref(self_test), std::ref(epoch));
+     , std::ref(initialized), std::ref(self_test), std::ref(epoch), std::ref(complete));
 
     //alpha code
     axis<fixed_16, 0, 1, 1> in_val;

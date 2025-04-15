@@ -114,6 +114,6 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
 				fixed_16 bias_2[ARRAY_SIZE], fixed_16 training,
                 packet_line &rx_stream, packet_line &tx_stream,
                 bool expecting_input, bool &initialized,
-			bool self_test, int &epoch);
+			bool self_test, int &epoch, bool &complete);
 
 #endif // GIM_MODEL_

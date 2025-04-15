@@ -12,7 +12,8 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
                                 bool expecting_input, 
                                 bool &initialized, 
                                 bool self_test,
-                                int &epoch) {
+                                int &epoch,
+                                bool &complete) {
 
 
     //initialization packet
@@ -20,6 +21,9 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
     axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(2), fixed_16(1), 1, 2);
     axis<fixed_16, 0, 1, 1> alpha_packet(fixed_16(4), fixed_16(3), 1, 2);
     axis<fixed_16, 0, 1, 1> goofy_ahh_packet(fixed_16(.420), fixed_16(4.20), 1, 2);
+
+    //set the complete flag
+    complete = false;
 
     if (self_test){
         while(tx_stream.full());
@@ -88,6 +92,9 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
     #pragma HLS INTERFACE mode=s_axilite port=bias_2
     #pragma HLS INTERFACE mode=s_axilite port=training
     #pragma HLS INTERFACE mode=s_axilite port=return
+    #pragma HLS INTERFACE mode=s_axilite port=self_test
+    #pragma HLS INTERFACE mode=s_axilite port=epoch
+    #pragma HLS INTERFACE mode=s_axilite port=complete
 
     #pragma HLS array_partition variable=w2
 
@@ -208,6 +215,8 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
             break; 
         }
     }
+
+    complete = true;
     
 
     // epoch = int(501);

@@ -5,6 +5,7 @@
 #include "ap_int.h"
 #include <iostream>
 #include <memory>
+#include <type_traits>
 using namespace std;
 
 // now, we actually run the full model
@@ -22,7 +23,9 @@ Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
                             bool &values_set_up,
                             bool &sent,
                             bool &received,
-                            bool &epochs_complete) {
+                            bool &epochs_complete,
+                            int &iteration,
+                            int &data_point) {
 
     #pragma HLS INTERFACE mode=s_axilite port=return
     #pragma HLS INTERFACE axis port=data_in
@@ -40,6 +43,8 @@ Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
     #pragma HLS INTERFACE mode=s_axilite port=epochs_complete
     #pragma HLS INTERFACE mode=s_axilite port=method
     #pragma HLS INTERFACE mode=s_axilite port=complete_flag
+    #pragma HLS INTERFACE mode=s_axilite port=iteration
+    #pragma HLS INTERFACE mode=s_axilite port=data_point
 
 
 
@@ -47,36 +52,40 @@ Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
     axis<fixed_16, 0, 1, 1> receive_packet(fixed_16(0), fixed_16(0), 0, 0);
     Inference output_array_controller;
 
+    bool initializing = true;
+
     if(method == 0){ // if method = 0 do this
-        while(!initialized){
+        while(initializing){
             while(data_out.full()); // wait for data out to be empty
             data_out.write(initialization_packet);
+            std::cout << "Checkpoint 1" << std::endl;
             initialized_1 = true;
             while(data_in.empty());// wait for data in to not be empty
             data_in.read(receive_packet);
             initialized_2 = true;
+            std::cout << "Checkpoint 2" << std::endl;
             if((receive_packet.dest == 1) & (receive_packet.data[0] == fixed_16(2)) & (receive_packet.data[1] == fixed_16(1))){
-                initialized = true;
-                std::cout << "Initialized!!" << std::endl;
+                std::cout << "Checkpoint 3" << std::endl;
+                initializing = false;
             }
         }
     }
     else if (method == 1){ // if method is 1 do this
-        while(!initialized){
+        while(initializing){
             if(data_out.write_nb(initialization_packet)){
                 initialized_1 = true;
             };
             if(data_in.read_nb(receive_packet)){
                 initialized_2 = true;
                 if((receive_packet.dest == 1) & (receive_packet.data[0] == fixed_16(2)) & (receive_packet.data[1] == fixed_16(1))){
-                    initialized = 1;
-                    std::cout << "Initialized!!" << std::endl;
+                    initializing = false;
+                    break;
                 }
             }
         }
     }
     else if (method == 2){ // attempt at a self test
-        while(!initialized){
+        while(initializing){
             while(data_out.full()); // wait for data out to be empty
             data_out.write(initialization_packet);
             initialized_1 = true;
@@ -84,28 +93,30 @@ Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
             data_in.read(receive_packet);
             initialized_2 = true;
             if((receive_packet.dest == 1) & (receive_packet.data[0] == fixed_16(4)) & (receive_packet.data[1] == fixed_16(3))){
-                initialized = true;
-                std::cout << "Initialized!!" << std::endl;
+                initializing = false;
+                break;
             }   
         }
     }
     else if (method == 3){ // attempt at a self test
-        while(!initialized){
+        while(initializing){
             if(data_out.write_nb(initialization_packet)){
                 initialized_1 = true;
-                std::cout << "Checkpoint 1" << std::endl;
+                // std::cout << "Checkpoint 1" << std::endl;
             };
             if(data_in.read_nb(receive_packet)){
                 initialized_2 = true;
-                std::cout << "Checkpoint 2" << std::endl;
+                // std::cout << "Checkpoint 2" << std::endl;
                 receive_packet.display();
                 if((receive_packet.dest == 1) & (receive_packet.data[0] == fixed_16(4)) & (receive_packet.data[1] == fixed_16(3))){
-                    initialized = 1;
-                    std::cout << "Initialized!!" << std::endl;
+                    initializing = false;
+                    break;
                 }
             }
         }  
     }
+    std::cout << "Initialized" << std::endl;
+    initialized = true;
         
     
     
@@ -146,7 +157,9 @@ Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
     for (i = 0; i < NUM_ITERATIONS; i++) {
         // iterate through all the data points
         int j;
+        iteration = i;
         for (j = 0; j < 4; j++) {
+            data_point = j;            
             #pragma HLS PIPELINE
             std::cout << "iteration " << i << std::endl;
             std::cout << "data point " << j << std::endl;

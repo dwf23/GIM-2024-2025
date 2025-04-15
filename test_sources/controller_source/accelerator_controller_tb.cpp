@@ -10,8 +10,8 @@ int main() {
     packet_line data_out;
     packet_line data_in;
     axis<fixed_16, 0, 1, 1> result(0, 0, 0, 0);
-    //axis<fixed_16, 0, 1, 1> initialization_packet(2, 1, 0, 1);
-    axis<fixed_16, 0, 1, 1> initialization_packet(4, 3, 0, 1);
+    axis<fixed_16, 0, 1, 1> initialization_packet(2, 1, 0, 1);
+    //axis<fixed_16, 0, 1, 1> initialization_packet(4, 3, 0, 1);
     int interval_in = 100;
     int interval_out = 100;
     bool expecting_input = true;
@@ -24,23 +24,35 @@ int main() {
     bool sent = false;
     bool received = false;
     bool epochs_complete = false;
-    int method = 2;
+    int method = 3;
+    int iteration = 0;
+    int data_point = 0;
     // bool flag = true;
 
 #ifdef HW_COSIM
     // Run the Vitis HLS block and pass pointer to r_hw to allow writing of variable
     std::cout << "Beginning HLS Func" << "\n";
     // training the array
-    std::thread accelerator_thread(accelerator_controller, std::ref(w1), std::ref(bias_1), std::ref(training), std::ref(data_out), std::ref(data_in), std::ref(expecting_input), std::ref(initialized), std::ref(complete_flag), std::ref(method), std::ref(initialized_1), std::ref(initialized_2), std::ref(values_set_up), std::ref(sent), std::ref(received), std::ref(epochs_complete));
+    std::thread accelerator_thread(accelerator_controller, std::ref(w1), std::ref(bias_1), std::ref(training), std::ref(data_out), std::ref(data_in), std::ref(expecting_input), std::ref(initialized), std::ref(complete_flag), std::ref(method), std::ref(initialized_1), std::ref(initialized_2), std::ref(values_set_up), std::ref(sent), std::ref(received), std::ref(epochs_complete), std::ref(iteration), std::ref(data_point));
 
-
+    // comment this out for self test
+    // while(!initialized){
+    //     if(!data_out.empty()){
+    //         data_out.read(result);
+    //         while(data_in.full());
+    //         result.dest = 1;
+    //         data_in.write(initialization_packet);
+    //         // std::cout << "wrote back on iteration " << iteration << " and data point " << data_point << std::endl;
+    //     }
+    // }
+    // keep this in for either test
     while(!complete_flag){
         if(!data_out.empty()){
             data_out.read(result);
             while(data_in.full());
             result.dest = 1;
             data_in.write(result);
-            std::cout << "wrote back" << std::endl;
+            //std::cout << "wrote back on iteration " << iteration << " and data point " << data_point << std::endl;
         }
     }
     

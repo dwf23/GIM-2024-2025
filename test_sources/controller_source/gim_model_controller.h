@@ -174,6 +174,8 @@ Inference accelerator_controller(
     bool &values_set_up,
     bool &sent,
     bool &received,
-    bool &epochs_complete                        
+    bool &epochs_complete,
+    int &iteration,
+    int &data_point                        
 );
 #endif // GIM_MODEL_

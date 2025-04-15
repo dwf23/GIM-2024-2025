@@ -152,6 +152,7 @@ int main() {
         }
     }
     //alpha inference
+
     std::cout << "Starting Inference from alpha" << std::endl;
     i = 0;
     training = 0;

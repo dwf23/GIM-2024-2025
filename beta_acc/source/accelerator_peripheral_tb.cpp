@@ -151,7 +151,7 @@ int main() {
             break; // only run this once if we are inferring
         }
     }
-
+    //alpha inference
     std::cout << "Starting Inference from alpha" << std::endl;
     i = 0;
     training = 0;

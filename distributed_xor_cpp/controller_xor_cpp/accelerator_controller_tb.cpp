@@ -18,8 +18,10 @@ int main() {
     // Run the Vitis HLS block and pass pointer to r_hw to allow writing of variable
     std::cout << "Beginning HLS Func" << "\n";
     // training the array
-    accelerator_controller(w1, bias_1, 1, data_out, data_in, expecting_input);
+    Inference training_controller = accelerator_controller(w1, bias_1, 1, data_out, data_in, expecting_input);
 #endif
-    // inference output will be shwon on beta
+    // running inference using the trained accelerator, output will be shown in board beta
+    Inference inference_controller = accelerator_controller(training_controller.new_w1, training_controller.new_b1, 0, data_out, data_in, expecting_input);
+
     return 0;
 }

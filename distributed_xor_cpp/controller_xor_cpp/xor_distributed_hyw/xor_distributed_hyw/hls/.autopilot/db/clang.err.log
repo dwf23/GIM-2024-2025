@@ -1,9 +1,0 @@
-../accelerator_controller.cpp:48:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
-#pragma HLS RESOURCE variable=data_out core=AXIS
-        ^
-../accelerator_controller.cpp:48:9: warning: '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' [-Wobsoleted-hls-pragmas]
-../accelerator_controller.cpp:49:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
-#pragma HLS RESOURCE variable=data_in core=AXIS
-        ^
-../accelerator_controller.cpp:49:9: warning: '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' [-Wobsoleted-hls-pragmas]
-4 warnings generated.

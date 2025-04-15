@@ -8,13 +8,14 @@
 using namespace std;
 
 // now, we actually run the full model
-void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
+Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
                             fixed_16 bias_1[ARRAY_SIZE], 
                             fixed_16 training, 
                             packet_line &data_out, 
                             packet_line &data_in, 
                             bool expecting_input) {
-    // Inference output_array;
+    Inference output_array_controller;
+
     // initializing the data for the XOR problem
     fixed_16 x1[4] = {0, 0, 1, 1};
     fixed_16 x2[4] = {0, 1, 0, 1};
@@ -40,12 +41,12 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
     #pragma HLS INTERFACE mode=s_axilite port=output_1[1]
     #pragma HLS INTERFACE mode=s_axilite port=delta_1[0]
     #pragma HLS INTERFACE mode=s_axilite port=delta_1[1]
-    #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[0]
-    #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[1]
-    #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][0]
-    #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][1]
-    #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][0]
-    #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][1]
+    // #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[0]
+    // #pragma HLS INTERFACE mode=s_axilite port=bias_1_local[1]
+    // #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][0]
+    // #pragma HLS INTERFACE mode=s_axilite port=w1_local[0][1]
+    // #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][0]
+    // #pragma HLS INTERFACE mode=s_axilite port=w1_local[1][1]
     #pragma HLS INTERFACE mode=s_axilite port=expecting_input
     #pragma HLS INTERFACE mode=s_axilite port=return
     #pragma HLS INTERFACE ap_fifo port=data_out
@@ -127,44 +128,56 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
         }
     }
 
-    // send bias_1_local to beta
-    pkt write_bias_1_local_packet;
-    write_bias_1_local_packet.ID = 1;
-    write_bias_1_local_packet.data[0] = bias_1_local[0];
-    write_bias_1_local_packet.data[1] = bias_1_local[1];
-    if(data_out.write_nb(write_delta_1_local_packet)){
-        std::cout << "write_bias_1_local_packet " 
-                << bias_1_local[0].to_float() << ", " 
-                << bias_1_local[1].to_float() << std::endl;
-    }
-    else{
-        std::cout << "Failed to write_bias_1_local_packet" << std::endl;
+    // produce the final w_1 and b_1 to be used in inference
+    for (int n = 0; n<ARRAY_SIZE; n++) {
+        output_array_controller.new_b1[n] = bias_1_local[n];
+        // output_array.new_b2[n] = bias_2_local[n];
+        for (int m = 0;m<ARRAY_SIZE; m++) {
+            output_array_controller.new_w1[n][m] = w1_local[n][m];
+            // output_array.new_w2[n][m] = w2_local[n][m];
+        }
     }
 
-    // send w1_local to beta
-    // First packet: w1_local[0][0], w1_local[0][1]
-    pkt write_w1_local_packet1;
-    write_w1_local_packet1.ID = 2;  
-    write_w1_local_packet1.data[0] = w1_local[0][0];
-    write_w1_local_packet1.data[1] = w1_local[0][1];
-    if (data_out.write_nb(write_w1_local_packet1)) {
-        std::cout << "write_w1_local_packet1: "
-                << w1_local[0][0].to_float() << ", "
-                << w1_local[0][1].to_float() << std::endl;
-    } else {
-        std::cout << "Failed to write_w1_local_packet1" << std::endl;
-    }
+    return output_array_controller;
 
-    // Second packet: w1_local[1][0], w1_local[1][1]
-    pkt write_w1_local_packet2;
-    write_w1_local_packet2.ID = 3; 
-    write_w1_local_packet2.data[0] = w1_local[1][0];
-    write_w1_local_packet2.data[1] = w1_local[1][1];
-    if (data_out.write_nb(write_w1_local_packet2)) {
-        std::cout << "write_w1_local_packet2: "
-                << w1_local[1][0].to_float() << ", "
-                << w1_local[1][1].to_float() << std::endl;
-    } else {
-        std::cout << "Failed to write_w1_local_packet2" << std::endl;
-    }
+    // // send bias_1_local to beta
+    // pkt write_bias_1_local_packet;
+    // write_bias_1_local_packet.ID = 1;
+    // write_bias_1_local_packet.data[0] = bias_1_local[0];
+    // write_bias_1_local_packet.data[1] = bias_1_local[1];
+    // if(data_out.write_nb(write_delta_1_local_packet)){
+    //     std::cout << "write_bias_1_local_packet " 
+    //             << bias_1_local[0].to_float() << ", " 
+    //             << bias_1_local[1].to_float() << std::endl;
+    // }
+    // else{
+    //     std::cout << "Failed to write_bias_1_local_packet" << std::endl;
+    // }
+
+    // // send w1_local to beta
+    // // First packet: w1_local[0][0], w1_local[0][1]
+    // pkt write_w1_local_packet1;
+    // write_w1_local_packet1.ID = 2;  
+    // write_w1_local_packet1.data[0] = w1_local[0][0];
+    // write_w1_local_packet1.data[1] = w1_local[0][1];
+    // if (data_out.write_nb(write_w1_local_packet1)) {
+    //     std::cout << "write_w1_local_packet1: "
+    //             << w1_local[0][0].to_float() << ", "
+    //             << w1_local[0][1].to_float() << std::endl;
+    // } else {
+    //     std::cout << "Failed to write_w1_local_packet1" << std::endl;
+    // }
+
+    // // Second packet: w1_local[1][0], w1_local[1][1]
+    // pkt write_w1_local_packet2;
+    // write_w1_local_packet2.ID = 3; 
+    // write_w1_local_packet2.data[0] = w1_local[1][0];
+    // write_w1_local_packet2.data[1] = w1_local[1][1];
+    // if (data_out.write_nb(write_w1_local_packet2)) {
+    //     std::cout << "write_w1_local_packet2: "
+    //             << w1_local[1][0].to_float() << ", "
+    //             << w1_local[1][1].to_float() << std::endl;
+    // } else {
+    //     std::cout << "Failed to write_w1_local_packet2" << std::endl;
+    // }
 }

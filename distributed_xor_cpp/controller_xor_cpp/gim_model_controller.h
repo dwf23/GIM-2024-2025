@@ -1,5 +1,5 @@
-#ifndef GIM_MODEL_PERIPHERAL
-#define GIM_MODEL_PERIPHERAL
+#ifndef GIM_MODEL_CONTROLLER
+#define GIM_MODEL_CONTROLLER
 
 #include "ap_fixed.h"
 #include <cmath>
@@ -12,8 +12,7 @@
 #include <thread>
 
 #define ARRAY_SIZE 2
-#define NUM_ITERATIONS 10 // for verification with original xor
-// #define NUM_ITERATIONS 500
+#define NUM_ITERATIONS 500
 
 typedef ap_fixed<16,4> fixed_16;
 // typedef ap_fixed<16, 7> fixed_16;
@@ -119,7 +118,7 @@ pkt receive_data(
     volatile bool &flag
 );
 
-void accelerator_controller(
+Inference accelerator_controller(
     fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
     fixed_16 bias_1[ARRAY_SIZE],
     fixed_16 training,  
@@ -128,4 +127,4 @@ void accelerator_controller(
     bool expecting_input
 );
 
-#endif // GIM_MODEL_
+#endif // GIM_MODEL_CONTROLLER

@@ -159,7 +159,7 @@ void receive_data(
     comm_line &alpha_rx
 ); 
 
-void accelerator_controller(
+Inference accelerator_controller(
     fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
     fixed_16 bias_1[ARRAY_SIZE], 
     fixed_16 training, 

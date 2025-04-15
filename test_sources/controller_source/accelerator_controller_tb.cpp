@@ -24,7 +24,7 @@ int main() {
     bool sent = false;
     bool received = false;
     bool epochs_complete = false;
-    int method = 3;
+    int method = 2;
     // bool flag = true;
 
 #ifdef HW_COSIM
@@ -32,26 +32,19 @@ int main() {
     std::cout << "Beginning HLS Func" << "\n";
     // training the array
     std::thread accelerator_thread(accelerator_controller, std::ref(w1), std::ref(bias_1), std::ref(training), std::ref(data_out), std::ref(data_in), std::ref(expecting_input), std::ref(initialized), std::ref(complete_flag), std::ref(method), std::ref(initialized_1), std::ref(initialized_2), std::ref(values_set_up), std::ref(sent), std::ref(received), std::ref(epochs_complete));
-    
-    while(!initialized){
-        data_out.read(result);
-        result.display();
-        // result.dest = 1;
-        data_in.write(initialization_packet);
-    }
-    while(!data_in.empty()){
-        data_in.read(result);
-    }
+
 
     while(!complete_flag){
-        if(data_out.full()){
+        if(!data_out.empty()){
             data_out.read(result);
-        }
-        // result.display();
-        if(data_in.empty()){
+            while(data_in.full());
+            result.dest = 1;
             data_in.write(result);
+            std::cout << "wrote back" << std::endl;
         }
     }
+    
+
     accelerator_thread.join();
 
 #endif

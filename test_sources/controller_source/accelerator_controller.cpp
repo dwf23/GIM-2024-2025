@@ -8,7 +8,7 @@
 using namespace std;
 
 // now, we actually run the full model
-void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
+Inference accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE], 
                             fixed_16 bias_1[ARRAY_SIZE], 
                             fixed_16 training, 
                             packet_line &data_out, 
@@ -45,6 +45,7 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
 
     axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(4), fixed_16(3), 1, 2);
     axis<fixed_16, 0, 1, 1> receive_packet(fixed_16(0), fixed_16(0), 0, 0);
+    Inference output_array_controller;
 
     if(method == 0){ // if method = 0 do this
         while(!initialized){
@@ -172,6 +173,7 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
             write_output_1_packet.data[1] = output_1[1];
             while(data_out.full());
             data_out.write(write_output_1_packet);
+            std::cout << "Wrote" << std::endl;
             sent = true;
             // if(data_out.write_nb(write_output_1_packet)){
             //     std::cout << "write_output_1_packet " 
@@ -221,61 +223,74 @@ void accelerator_controller(fixed_16 w1[ARRAY_SIZE][ARRAY_SIZE],
             break; // only run this once if we are inferring
         }
     }
-
     epochs_complete = true;
 
-    // send bias_1_local to beta
-    axis<fixed_16, 0, 1, 1> write_bias_1_local_packet(0, 0, 0, 0);
-    write_bias_1_local_packet.id = 1;
-    write_bias_1_local_packet.dest = 2;
-    write_bias_1_local_packet.data[0] = bias_1_local[0];
-    write_bias_1_local_packet.data[1] = bias_1_local[1];
-    while(data_out.full());
-    data_out.write(write_bias_1_local_packet);
-    sent = true;
-    // if(data_out.write_nb(write_bias_1_local_packet)){
-    //     std::cout << "write_bias_1_local_packet " 
-    //             << bias_1_local[0].to_float() << ", " 
-    //             << bias_1_local[1].to_float() << std::endl;
-    // }
-    // else{
-    //     std::cout << "Failed to write_bias_1_local_packet" << std::endl;
-    // }
-
-    // send w1_local to beta
-    // First packet: w1_local[0][0], w1_local[0][1]
-    axis<fixed_16, 0, 1, 1> write_w1_local_packet1(0, 0, 0, 0);
-    write_w1_local_packet1.id = 2;  
-    write_w1_local_packet1.dest = 2;  
-    write_w1_local_packet1.data[0] = w1_local[0][0];
-    write_w1_local_packet1.data[1] = w1_local[0][1];
-    while(data_out.full());
-    data_out.write(write_w1_local_packet1);
-    sent = true;
-    // if (data_out.write_nb(write_w1_local_packet1)) {
-    //     std::cout << "write_w1_local_packet1: "
-    //             << w1_local[0][0].to_float() << ", "
-    //             << w1_local[0][1].to_float() << std::endl;
-    // } else {
-    //     std::cout << "Failed to write_w1_local_packet1" << std::endl;
-    // }
-
-    // Second packet: w1_local[1][0], w1_local[1][1]
-    axis<fixed_16, 0, 1, 1> write_w1_local_packet2(0, 0, 0, 0);
-    write_w1_local_packet2.id = 3; 
-    write_w1_local_packet2.dest = 2; 
-    write_w1_local_packet2.data[0] = w1_local[1][0];
-    write_w1_local_packet2.data[1] = w1_local[1][1];
-    while(data_out.full());
-    data_out.write(write_w1_local_packet2);
-    sent = true;
-    // if (data_out.write_nb(write_w1_local_packet2)) {
-    //     std::cout << "write_w1_local_packet2: "
-    //             << w1_local[1][0].to_float() << ", "
-    //             << w1_local[1][1].to_float() << std::endl;
-    // } else {
-    //     std::cout << "Failed to write_w1_local_packet2" << std::endl;
-    // }
+    // produce the final w_1 and b_1 to be used in inference
+    for (int n = 0; n<ARRAY_SIZE; n++) {
+        output_array_controller.new_b1[n] = bias_1_local[n];
+        // output_array.new_b2[n] = bias_2_local[n];
+        for (int m = 0;m<ARRAY_SIZE; m++) {
+            output_array_controller.new_w1[n][m] = w1_local[n][m];
+            // output_array.new_w2[n][m] = w2_local[n][m];
+        }
+    }
 
     complete_flag = true;
+
+    return output_array_controller;
+
+    // // send bias_1_local to beta
+    // axis<fixed_16, 0, 1, 1> write_bias_1_local_packet(0, 0, 0, 0);
+    // write_bias_1_local_packet.id = 1;
+    // write_bias_1_local_packet.dest = 2;
+    // write_bias_1_local_packet.data[0] = bias_1_local[0];
+    // write_bias_1_local_packet.data[1] = bias_1_local[1];
+    // while(data_out.full());
+    // data_out.write(write_bias_1_local_packet);
+    // sent = true;
+    // // if(data_out.write_nb(write_bias_1_local_packet)){
+    // //     std::cout << "write_bias_1_local_packet " 
+    // //             << bias_1_local[0].to_float() << ", " 
+    // //             << bias_1_local[1].to_float() << std::endl;
+    // // }
+    // // else{
+    // //     std::cout << "Failed to write_bias_1_local_packet" << std::endl;
+    // // }
+
+    // // send w1_local to beta
+    // // First packet: w1_local[0][0], w1_local[0][1]
+    // axis<fixed_16, 0, 1, 1> write_w1_local_packet1(0, 0, 0, 0);
+    // write_w1_local_packet1.id = 2;  
+    // write_w1_local_packet1.dest = 2;  
+    // write_w1_local_packet1.data[0] = w1_local[0][0];
+    // write_w1_local_packet1.data[1] = w1_local[0][1];
+    // while(data_out.full());
+    // data_out.write(write_w1_local_packet1);
+    // sent = true;
+    // // if (data_out.write_nb(write_w1_local_packet1)) {
+    // //     std::cout << "write_w1_local_packet1: "
+    // //             << w1_local[0][0].to_float() << ", "
+    // //             << w1_local[0][1].to_float() << std::endl;
+    // // } else {
+    // //     std::cout << "Failed to write_w1_local_packet1" << std::endl;
+    // // }
+
+    // // Second packet: w1_local[1][0], w1_local[1][1]
+    // axis<fixed_16, 0, 1, 1> write_w1_local_packet2(0, 0, 0, 0);
+    // write_w1_local_packet2.id = 3; 
+    // write_w1_local_packet2.dest = 2; 
+    // write_w1_local_packet2.data[0] = w1_local[1][0];
+    // write_w1_local_packet2.data[1] = w1_local[1][1];
+    // while(data_out.full());
+    // data_out.write(write_w1_local_packet2);
+    // sent = true;
+    // // if (data_out.write_nb(write_w1_local_packet2)) {
+    // //     std::cout << "write_w1_local_packet2: "
+    // //             << w1_local[1][0].to_float() << ", "
+    // //             << w1_local[1][1].to_float() << std::endl;
+    // // } else {
+    // //     std::cout << "Failed to write_w1_local_packet2" << std::endl;
+    // // }
+
+    // complete_flag = true;
 }

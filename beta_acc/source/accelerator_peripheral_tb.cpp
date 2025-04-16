@@ -5,35 +5,35 @@ using namespace std;
 
 typedef ap_fixed<16,4> fixed_16;
 
-void foo(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-        fixed_16 bias_2[ARRAY_SIZE],
-        fixed_16 training,
-        packet_line &rx_stream, 
-        packet_line &tx_stream, 
-        bool expecting_input, 
-        bool &initialized,
-        bool self_test,
-        int &epoch,
-        bool &complete) {
+// void foo(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
+//         fixed_16 bias_2[ARRAY_SIZE],
+//         fixed_16 training,
+//         packet_line &rx_stream, 
+//         packet_line &tx_stream,  
+//         bool &initialized_flag,
+//         bool self_test,
+//         int &epoch,
+//         bool &complete,
+//         int &test) {
     
-    Inference output;
+//     Inference output;
 
-    Inference prediciton;
+//     Inference prediciton;
 
-    output = accelerator_peripheral(w2, bias_2, 1, rx_stream, tx_stream, expecting_input, initialized,
-    self_test, epoch, complete);
+//     output = accelerator_peripheral(w2, bias_2, 1, rx_stream, tx_stream, initialized_flag,
+//     self_test, epoch, complete, test);
 
-    initialized = true;
-    prediciton = accelerator_peripheral(output.new_w2, output.new_b2, 0, rx_stream,
-    tx_stream, expecting_input, initialized, self_test, epoch, complete);
+//     //initialized = true;
+//     prediciton = accelerator_peripheral(output.new_w2, output.new_b2, 0, rx_stream,
+//     tx_stream, initialized_flag, self_test, epoch, complete, test);
 
-    cout << "The following are the predictions of the DNN:" << endl;
-    cout << output.inference[0] << endl;
-    cout << output.inference[1] << endl;
-    cout << output.inference[2] << endl;
-    cout << output.inference[3] << endl;
+//     cout << "The following are the predictions of the DNN:" << endl;
+//     cout << output.inference[0] << endl;
+//     cout << output.inference[1] << endl;
+//     cout << output.inference[2] << endl;
+//     cout << output.inference[3] << endl;
     
-}
+// }
 
 int main() {
     std::cout << "Starting Testbench" << "\n";
@@ -46,11 +46,12 @@ int main() {
     int interval_in = 100;
     int interval_out = 100;
     bool expecting_input = true;
-    bool initialized = false;
-    fixed_16 training = 1;
-    bool self_test = false;
+    bool initialized;
+    fixed_16 training = 0;
+    bool self_test = true;
     int epoch;
     bool complete;
+    int test =6;
     // bool flag = true;
 
     //this is the alpha code initialization
@@ -72,148 +73,163 @@ int main() {
     // Run the Vitis HLS block and pass pointer to r_hw to allow writing of variable
     std::cout << "Beginning HLS Func" << "\n";
     // training the array
-    std::thread beta_thread(foo, std::ref(w2), std::ref(bias_2),
-     std::ref(training), std::ref(rx_stream), std::ref(tx_stream), std::ref(expecting_input)
-     , std::ref(initialized), std::ref(self_test), std::ref(epoch), std::ref(complete));
 
-    //alpha code
-    axis<fixed_16, 0, 1, 1> in_val;
-    axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(4), fixed_16(3), 1, 1);
-    while(rx_stream.full());
-    rx_stream.write(initialization_packet);
-    std::cout << "Alpha wrote initialization packet" << std::endl;
-    while(tx_stream.empty());
-    in_val = tx_stream.read();
-    std::cout << "Alpha read initialization packet" << std::endl;
+    Inference output;
 
-    // store actual and predicted difference in vector, set other params
-    char model = 'l'; // s = sigmoid, r = relu, l = leaky relu NOTE: SIGMOID CANNOT BE USED ON HARDWARE
-    fixed_16 alpha = 0.1; // for leaky relu
-    fixed_16 lr = 0.1; // learning rate
-
-    //iterate through all of the epochs
-    int i;
-    for (i = 0; i < NUM_ITERATIONS; i++) {
-        // iterate through all the data points
-        int j;
-        for (j = 0; j < 4; j++) {
-            #pragma HLS PIPELINE
-            std::cout << "iteration " << i << std::endl;
-            std::cout << "data point " << j << std::endl;
-            // setup the initial data input
-            output_0[0] = x1[j];
-            output_0[1] = x2[j];
-
-            // initialize the error backpropagationcout
-            delta_1[0] = 0;
-            delta_1[1] = 0;
-
-            // run the forward propagation
-            // start with layer 1
-            Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
-            output_1[0] = array_out1.output_k[0];
-            output_1[1] = array_out1.output_k[1];
-
-            // send output_1 to beta
-            axis<fixed_16, 0, 1, 1> write_output_1_packet;
-            write_output_1_packet.id = 0;
-            write_output_1_packet.dest = 1;
-            // std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
-            write_output_1_packet.data[0] = output_1[0];
-            write_output_1_packet.data[1] = output_1[1];
-            std::cout << "Alpha Writing output Packet" << std::endl;
-            write_output_1_packet.display();
-            while(rx_stream.full());
-            rx_stream.write(write_output_1_packet);
+    output = accelerator_peripheral(w2, bias_2, training, rx_stream, rx_stream, 
+        initialized, self_test, epoch, complete, test);
 
 
-            // Receive delta_1 from beta
-            axis<fixed_16, 0, 1, 1> read_delta_1_packet;
-            while(tx_stream.empty());
-            read_delta_1_packet = tx_stream.read();
-            std::cout << "Alpha reading delta packet" << std::endl;
-            read_delta_1_packet.display();
+    // std::thread beta_thread(foo, std::ref(w2), std::ref(bias_2),
+    //  std::ref(training), std::ref(rx_stream), std::ref(tx_stream),
+    //  std::ref(initialized), std::ref(self_test), std::ref(epoch), std::ref(complete), 
+    //  std::ref(test));
+
+    // //alpha code
+    // axis<fixed_16, 0, 1, 1> in_val;
+    // axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(4), fixed_16(3), 1, 1);
+    // while(rx_stream.full());
+    // rx_stream.write(initialization_packet);
+    // std::cout << "Alpha wrote initialization packet" << std::endl;
+    // while(tx_stream.empty());
+    // in_val = tx_stream.read();
+    // std::cout << "Alpha read initialization packet" << std::endl;
+
+    // // store actual and predicted difference in vector, set other params
+    // char model = 'l'; // s = sigmoid, r = relu, l = leaky relu NOTE: SIGMOID CANNOT BE USED ON HARDWARE
+    // fixed_16 alpha = 0.1; // for leaky relu
+    // fixed_16 lr = 0.1; // learning rate
+
+    // //iterate through all of the epochs
+    // int i;
+    // for (i = 0; i < NUM_ITERATIONS; i++) {
+    //     // iterate through all the data points
+    //     int j;
+    //     for (j = 0; j < 4; j++) {
+    //         #pragma HLS PIPELINE
+    //         std::cout << "iteration " << i << std::endl;
+    //         std::cout << "data point " << j << std::endl;
+    //         // setup the initial data input
+    //         output_0[0] = x1[j];
+    //         output_0[1] = x2[j];
+
+    //         // initialize the error backpropagationcout
+    //         delta_1[0] = 0;
+    //         delta_1[1] = 0;
+
+    //         // run the forward propagation
+    //         // start with layer 1
+    //         Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
+    //         output_1[0] = array_out1.output_k[0];
+    //         output_1[1] = array_out1.output_k[1];
+
+    //         // send output_1 to beta
+    //         axis<fixed_16, 0, 1, 1> write_output_1_packet;
+    //         write_output_1_packet.id = 0;
+    //         write_output_1_packet.dest = 1;
+    //         // std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
+    //         write_output_1_packet.data[0] = output_1[0];
+    //         write_output_1_packet.data[1] = output_1[1];
+    //         std::cout << "Alpha Writing output Packet" << std::endl;
+    //         write_output_1_packet.display();
+    //         while(rx_stream.full());
+    //         rx_stream.write(write_output_1_packet);
+
+
+    //         // Receive delta_1 from beta
+    //         axis<fixed_16, 0, 1, 1> read_delta_1_packet;
+    //         while(tx_stream.empty());
+    //         read_delta_1_packet = tx_stream.read();
+    //         std::cout << "Alpha reading delta packet" << std::endl;
+    //         read_delta_1_packet.display();
             
-            // end with layer 1
-            Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
-            // update the weights and biases
-            for (int n = 0; n<ARRAY_SIZE; n++) {
-                bias_1_local[n] = array_back1.bias_change[n];
-                for (int m = 0; m<ARRAY_SIZE; m++) {
-                    w1_local[n][m] = array_back1.weight_changes[n][m];
-                }
-            }
-            if ((training == 0) && (j == 3)) {
-                break; // only run this for all 4 data points once if infering
-            }
-        }
-        if (training == 0) {
-            break; // only run this once if we are inferring
-        }
-    }
-    //alpha inference
+    //         // end with layer 1
+    //         Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
+    //         // update the weights and biases
+    //         for (int n = 0; n<ARRAY_SIZE; n++) {
+    //             bias_1_local[n] = array_back1.bias_change[n];
+    //             for (int m = 0; m<ARRAY_SIZE; m++) {
+    //                 w1_local[n][m] = array_back1.weight_changes[n][m];
+    //             }
+    //         }
+    //         if ((training == 0) && (j == 3)) {
+    //             break; // only run this for all 4 data points once if infering
+    //         }
+    //     }
+    //     if (training == 0) {
+    //         break; // only run this once if we are inferring
+    //     }
+    // }
+    // //alpha inference
 
-    std::cout << "Starting Inference from alpha" << std::endl;
-    i = 0;
-    training = 0;
-    for (i = 0; i < NUM_ITERATIONS; i++) {
-        // iterate through all the data points
-        int j;
-        for (j = 0; j < 4; j++) {
-            #pragma HLS PIPELINE
-            std::cout << "iteration " << i << std::endl;
-            std::cout << "data point " << j << std::endl;
-            // setup the initial data input
-            output_0[0] = x1[j];
-            output_0[1] = x2[j];
+    // while(rx_stream.full());
+    // rx_stream.write(initialization_packet);
+    // std::cout << "Alpha wrote initialization packet" << std::endl;
+    // while(tx_stream.empty());
+    // in_val = tx_stream.read();
+    // std::cout << "Alpha read initialization packet" << std::endl;
 
-            // initialize the error backpropagationcout
-            delta_1[0] = 0;
-            delta_1[1] = 0;
+    // std::cout << "Starting Inference from alpha" << std::endl;
+    // i = 0;
+    // training = 0;
+    // for (i = 0; i < NUM_ITERATIONS; i++) {
+    //     // iterate through all the data points
+    //     int j;
+    //     for (j = 0; j < 4; j++) {
+    //         #pragma HLS PIPELINE
+    //         std::cout << "iteration " << i << std::endl;
+    //         std::cout << "data point " << j << std::endl;
+    //         // setup the initial data input
+    //         output_0[0] = x1[j];
+    //         output_0[1] = x2[j];
 
-            // run the forward propagation
-            // start with layer 1
-            Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
-            output_1[0] = array_out1.output_k[0];
-            output_1[1] = array_out1.output_k[1];
+    //         // initialize the error backpropagationcout
+    //         delta_1[0] = 0;
+    //         delta_1[1] = 0;
 
-            // send output_1 to beta
-            axis<fixed_16, 0, 1, 1> write_output_1_packet;
-            write_output_1_packet.id = 0;
-            write_output_1_packet.dest = 1;
-            // std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
-            write_output_1_packet.data[0] = output_1[0];
-            write_output_1_packet.data[1] = output_1[1];
-            std::cout << "Alpha Writing output Packet" << std::endl;
-            write_output_1_packet.display();
-            while(rx_stream.full());
-            rx_stream.write(write_output_1_packet);
+    //         // run the forward propagation
+    //         // start with layer 1
+    //         Array array_out1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
+    //         output_1[0] = array_out1.output_k[0];
+    //         output_1[1] = array_out1.output_k[1];
+
+    //         // send output_1 to beta
+    //         axis<fixed_16, 0, 1, 1> write_output_1_packet;
+    //         write_output_1_packet.id = 0;
+    //         write_output_1_packet.dest = 1;
+    //         // std::copy(output_1, output_1 + ARRAY_SIZE, output_1_packet.data);
+    //         write_output_1_packet.data[0] = output_1[0];
+    //         write_output_1_packet.data[1] = output_1[1];
+    //         std::cout << "Alpha Writing output Packet" << std::endl;
+    //         write_output_1_packet.display();
+    //         while(rx_stream.full());
+    //         rx_stream.write(write_output_1_packet);
 
 
-            // Receive delta_1 from beta
-            axis<fixed_16, 0, 1, 1> read_delta_1_packet;
-            while(tx_stream.empty());
-            read_delta_1_packet = tx_stream.read();
-            std::cout << "Alpha reading delta packet" << std::endl;
-            read_delta_1_packet.display();
+    //         // Receive delta_1 from beta
+    //         // axis<fixed_16, 0, 1, 1> read_delta_1_packet;
+    //         // while(tx_stream.empty());
+    //         // read_delta_1_packet = tx_stream.read();
+    //         // std::cout << "Alpha reading delta packet" << std::endl;
+    //         // read_delta_1_packet.display();
             
-            // end with layer 1
-            Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
-            // update the weights and biases
-            for (int n = 0; n<ARRAY_SIZE; n++) {
-                bias_1_local[n] = array_back1.bias_change[n];
-                for (int m = 0; m<ARRAY_SIZE; m++) {
-                    w1_local[n][m] = array_back1.weight_changes[n][m];
-                }
-            }
-            if ((training == 0) && (j == 3)) {
-                break; // only run this for all 4 data points once if infering
-            }
-        }
-        if (training == 0) {
-            break; // only run this once if we are inferring
-        }
-    }
+    //         // end with layer 1
+    //         Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
+    //         // update the weights and biases
+    //         for (int n = 0; n<ARRAY_SIZE; n++) {
+    //             bias_1_local[n] = array_back1.bias_change[n];
+    //             for (int m = 0; m<ARRAY_SIZE; m++) {
+    //                 w1_local[n][m] = array_back1.weight_changes[n][m];
+    //             }
+    //         }
+    //         if ((training == 0) && (j == 3)) {
+    //             break; // only run this for all 4 data points once if infering
+    //         }
+    //     }
+    //     if (training == 0) {
+    //         break; // only run this once if we are inferring
+    //     }
+    // }
 
     // // send bias_1_local to beta
     // axis<fixed_16, 0, 1, 1> write_bias_1_local_packet;
@@ -248,7 +264,7 @@ int main() {
     // std::cout << "Alpha writing w1 local packet 2" << std::endl;
 
     //end alpha code
-    beta_thread.join();
+    //beta_thread.join();
 
 
 

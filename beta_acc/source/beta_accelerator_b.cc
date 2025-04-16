@@ -1,170 +1,230 @@
 
+#include <iomanip>
+#include "xaccelerator_peripheral.h"
+#include "xsend_data.h"
+#include "xreceive_data.h"
 #include <cmath>
 #include <iostream>
 #include "ap_fixed.h"
 #include <xiltimer.h>
 
-
-#include "xsend_data.h"
-#include "xreceive_data.h"
-#include "xexample_acc.h"
-
-
+XAccelerator_peripheral Accelerator;
 XSend_data Send_data;
 XReceive_data Receive_data;
-XExample_acc Example_acc;
 
-
+#include "xparameters.h"
+//#include "xtime_l.h"
+#include "xscugic.h"
 using namespace std;
 
-typedef ap_fixed<16, 7> fixed_16;
-template <typename T, size_t WUser, size_t WId, size_t WDest>
-struct axis {
-    T data[2];
-    int user;
-    int id;
-    int dest;
-    
-    // Default constructor
-    axis() : user(0), id(0), dest(0) {
-        data[0] = 0;
-        data[1] = 0;
-        id = 0;
-        dest = 0;
-    }
-
-    // Constructor
-    axis(T d1, T d2, int i, int dest_in) {
-        data[0] = d1;
-        data[1] = d2;
-        id = i;
-        dest = dest_in;
-    }
-    
-    // Function to display the values
-    void display() {
-        std::cout << "Data: " << data[0].to_float() << ", " << data[1].to_float() << std::endl;
-        std::cout << "ID: " << id << std::endl;
-        std::cout << "Destination: " << dest << std::endl;
-    }
-};
-
-
-int main()
-{
+typedef ap_fixed<16,4> fixed_16;
+//typedef ap_fixed<16, 4, AP_RND, AP_SAT> fixed_16;
+int get_int_reinterpret(fixed_16 x) {
+	return *(reinterpret_cast<short *>(&x));
+}
+fixed_16 get_fixed_reinterpret(int x) {
+	return *(reinterpret_cast<fixed_16 *>(&x));
+}
+word_type get_int_reinterpret_concat(fixed_16 x, fixed_16 y) {
+	unsigned int xt = get_int_reinterpret(x);
+	unsigned int yt = get_int_reinterpret(y);
+	yt = yt << 16;
+	return xt + yt;
+}
+fixed_16 get_fixed_reinterpret_upper(int x) {
+	unsigned int xtemp = x;
+	xtemp = xtemp >> 16;
+	return get_fixed_reinterpret(xtemp);
+}
+fixed_16 get_fixed_reinterpret_lower(int x) {
+	unsigned int xtemp = x;
+	xtemp &= 0x0000FFFF;
+	return get_fixed_reinterpret(xtemp);
+}
+int main() {
 	cout << "--- Start of the Program ---" << endl;
 
-	// values for simulation and testing using C++ format with integers
-    bool send_flag = false;
-    bool send_flag_vld = false;
-    bool send_data_1_vld = false;
-    int send_data_1 = 0;
-    bool send_data_2_vld = false;
-    int send_data_2 = 0;
-    bool receive_flag = false;
-    bool receive_flag_vld = false;
-    bool loop = true;
-    bool example_wrote_flag = false;
-    bool example_wrote_flag_vld = false;
-    bool example_receive_flag = false;
-    bool example_receive_flag_vld = false;
-    bool example_received_val_1_vld = false;
-    int example_received_val_1 = 0;
-    bool example_received_val_2_vld = false;
-    int example_received_val_2 = 0;
-    volatile bool dest = 1;
-    int test = 0; // 0 --> self test 1--> across boards
-    bool probe = false;
+	// Variables for timing and counts used for application cycle counts and timing
 
-	unsigned long long tt;
-	int tt_print;
-	double tt_seconds, pl_time, ps_time, speedup;
-	XTime start_time_co;
-	XTime stop_time_co;
-	
-	
-	// cout is c++ version of printf and needs the iostream.h and namespace std declared above
+	XTime training_start_time; //u64
+	XTime training_stop_time;
+	fixed_16 w2[2][2] = {{0.85397529, 0.49423684}, {0.0001, 0.001}};
+	fixed_16 b2[2] = {0.42812233, 0.001};
+	word_type w2_rein[2];
+	word_type b2_rein[1];
+    bool initialized;
+    int epoch;
+    bool complete;
+    bool epoch_vld;
+    bool initialized_vld;
+    bool complete_vld;
+    bool init_stop = false;
 
-	// Get the starting time in cycle counts
-	XTime_GetTime(&start_time_co);
-    XReceive_data_Initialize(&Receive_data, 0);
+
+	int n = 0;
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j += 2) {
+			w2_rein[n] = get_int_reinterpret_concat(w2[i][j], w2[i][j + 1]);
+			n++;
+		}
+	}
+	b2_rein[0] = get_int_reinterpret_concat(b2[0], b2[1]);
+
+
+	cout << "Hardware start " << endl;
+	XAccelerator_peripheral_Initialize(&Accelerator, 0);
     XSend_data_Initialize(&Send_data, 0);
-    XExample_acc_Initialize(&Example_acc, 0);
+    XReceive_data_Initialize(&Receive_data, 0);
+    XAccelerator_peripheral_Write_w2_Words(&Accelerator, 0, w2_rein, 2);
+    XAccelerator_peripheral_Write_bias_2_Words(&Accelerator, 0, b2_rein,1);
+    XAccelerator_peripheral_Set_training(&Accelerator, 0);
+    XAccelerator_peripheral_Set_test(&Accelerator, 1);
+    XAccelerator_peripheral_Set_self_test(&Accelerator, true);
 
-    //XExample_acc_Set_loop_r(&Example_acc, loop);
-    XSend_data_Set_loop_r(&Send_data, loop);
-    XReceive_data_Set_loop_r(&Receive_data, loop);
-    XExample_acc_Set_probe(&Example_acc, 0);
-    XExample_acc_Set_test(&Example_acc, test);
-    // XReceive_data_Set_data_1(&Receive_data, 0.38);
-    // XReceive_data_Set_data_2(&Receive_data, 2.79);
-    // XReceive_data_Set_destination(&Receive_data, dest);
+    XSend_data_Set_loop_r(&Send_data, true);
+    XReceive_data_Set_loop_r(&Receive_data, true);
 
-	// Trigger the accelerator to start
+// #################  Training Begins  #############################
+
+	XTime_GetTime(&training_start_time); //timer
+
     XSend_data_Start(&Send_data);
     XReceive_data_Start(&Receive_data);
-    XExample_acc_Start(&Example_acc);
+    cout << "Check" << endl;
+    XAccelerator_peripheral_Start(&Accelerator);
     do{
-        //if it wrote first
-        // example_wrote_flag_vld = XExample_acc_Get_wrote_flag_vld(&Example_acc);
-        // if(example_wrote_flag_vld){
-        //     example_wrote_flag = XExample_acc_Get_wrote_flag(&Example_acc);
-        //     if(example_wrote_flag){
-        //         cout << "Example_acc wrote data to send" << endl;
-        //     }
-        //     example_wrote_flag_vld = false;
-        // }
-
-        //ask if it reads
-
-
-        example_received_val_1_vld = XExample_acc_Get_received_val_1_o_vld(&Example_acc);
-        if(example_received_val_1_vld){
-            cout << "Example_acc received data from receive" << endl;
-            example_received_val_1 = XExample_acc_Get_received_val_1_o(&Example_acc);
-            cout << "Example acc received data 1: " << example_received_val_1 << endl;
-            }
-        example_received_val_2_vld = XExample_acc_Get_received_val_2_o_vld(&Example_acc);
-        if(example_received_val_2_vld){
-            example_received_val_2 = XExample_acc_Get_received_val_2_o(&Example_acc);
-            cout << "Example acc received data 2: " << example_received_val_2 << endl;
+        epoch_vld = XAccelerator_peripheral_Get_epoch_vld(&Accelerator);
+        if (epoch_vld){
+            epoch = XAccelerator_peripheral_Get_epoch(&Accelerator);
+            std::cout << "Epoch: " << epoch << std::endl;
         }
-
-
-        receive_flag_vld = XReceive_data_Get_flag_vld(&Receive_data);
-        if(receive_flag_vld){
-            receive_flag = XReceive_data_Get_flag(&Receive_data);
-            if(receive_flag){
-                cout << "Receive send data back to example_acc" << endl; 
-                dest = 0;            
-            }
-            receive_flag_vld = false; //switch this to true to make it run once
-        }
-        send_flag_vld = XSend_data_Get_send_sent_flag_vld(&Send_data);
-        if(send_flag_vld){
-            send_flag = XSend_data_Get_send_sent_flag(&Send_data);
-            if(send_flag){
-                cout << "Data received by send data" << endl;
-                send_data_1_vld = XSend_data_Get_received_val_1_vld(&Send_data);
-                if(send_data_1_vld){
-                    send_data_1 = XSend_data_Get_received_val_1(&Send_data);
-                    cout << "Send data val 1: " << send_data_1 << endl;
-
-                }
-                send_data_2_vld = XSend_data_Get_received_val_2_vld(&Send_data);
-                if(send_data_2_vld){
-                    send_data_2 = XSend_data_Get_received_val_2(&Send_data);
-
-                    cout << "Send data val 2: " << send_data_2 << endl;
-                    XExample_acc_Set_probe(&Example_acc, 1); //set probe to true
-                }
-                
-            }
-        }
-
         
-    } while (!XReceive_data_IsReady(&Receive_data) or !XSend_data_IsReady(&Send_data));
+        initialized_vld = XAccelerator_peripheral_Get_initialized_flag_vld(&Accelerator);
+        if (initialized_vld){
+            initialized = XAccelerator_peripheral_Get_initialized_flag(&Accelerator);
+            if (initialized && !init_stop){
+                std::cout << "Beta Initialized" << std::endl;
+                init_stop = true;
+            }
+        }
 
-    cout << "--- End of the Program ---" << endl;
+        complete_vld = XAccelerator_peripheral_Get_complete_vld(&Accelerator);
+        if(complete_vld){
+            complete = XAccelerator_peripheral_Get_complete(&Accelerator);
+            if (complete){
+                std::cout << "Beta has finished training" << std::endl;
+            }
+        }
+
+    } while(!XAccelerator_peripheral_IsDone(&Accelerator));
+
+    XAccelerator_peripheral_Return inference_result = XAccelerator_peripheral_Get_return(&Accelerator);
+    fixed_16 inference[4];
+	inference[0] = get_fixed_reinterpret_lower(inference_result.word_0);
+	inference[1] = get_fixed_reinterpret_upper(inference_result.word_0);
+	inference[2] = get_fixed_reinterpret_lower(inference_result.word_1);
+	inference[3] = get_fixed_reinterpret_upper(inference_result.word_1);
+
+    std::cout << "Inference Output: " << inference[0] << " , " << inference[1] << " , " <<
+    inference[2] << " , " << inference[3] << std::endl;
+
+	// XAccelerator_peripheral_Return result = XAccelerator_peripheral_Get_return(&Accelerator);
+	XTime_GetTime(&training_stop_time);
+
+
+	// fixed_16 out_w1[2][2];
+	// fixed_16 out_w2[2][2];
+	// fixed_16 out_b1[2];
+	// fixed_16 out_b2[2];
+// #################  Training Finishes ############################
+
+    // This is only for printing out the results. Doesn't need to convert back to fixed_16
+	// for (int i = 0; i < 2; i++) {
+	// 		out_w1[0][i]     = get_fixed_reinterpret_lower(result.word_2);
+	// 		out_w1[0][i + 1] = get_fixed_reinterpret_upper(result.word_2);
+	// }
+	// for (int i = 0; i < 2; i++) {
+	// 		out_w1[1][i]     = get_fixed_reinterpret_lower(result.word_3);
+	// 		out_w1[1][i + 1] = get_fixed_reinterpret_upper(result.word_3);
+	// }
+	// for (int i = 0; i < 2; i++) {
+	// 		out_w2[0][i]     = get_fixed_reinterpret_lower(result.word_4);
+	// 		out_w2[0][i + 1] = get_fixed_reinterpret_upper(result.word_4);
+	// }
+	// for (int i = 0; i < 2; i++) {
+	// 		out_w2[0][i]     = get_fixed_reinterpret_lower(result.word_5);
+	// 		out_w2[0][i + 1] = get_fixed_reinterpret_upper(result.word_5);
+	// }
+	// for (int i = 0; i < 2; i++) {
+	// 		out_b1[i]     = get_fixed_reinterpret_lower(result.word_6);
+	// 		out_b1[i + 1] = get_fixed_reinterpret_upper(result.word_6);
+	// }
+	// for (int i = 0; i < 2; i++) {
+	// 		out_b2[i]     = get_fixed_reinterpret_lower(result.word_7);
+	// 		out_b2[i + 1] = get_fixed_reinterpret_upper(result.word_7);
+	// }
+
+
+// 	//temporary arrays to pass in struct
+// 	XTime inference_start_time;
+// 	XTime inference_stop_time;
+// 	word_type w1_inference[2];
+// 	word_type w2_inference[2];
+// 	word_type b1_inference[1];
+// 	word_type b2_inference[1];
+// 	w1_inference[0] = result.word_2;
+// 	w1_inference[1] = result.word_3;
+// 	w2_inference[0] = result.word_4;
+// 	w2_inference[1] = result.word_5;
+// 	b1_inference[0] = result.word_6;
+// 	b2_inference[0] = result.word_7;
+
+// 	XAccelerator_Initialize(&Accelerator, 0);
+// 	XAccelerator_Write_w1_Words(&Accelerator, 0, w1_inference, 2);
+// 	XAccelerator_Write_w2_Words(&Accelerator, 0, w2_inference, 2);
+// 	XAccelerator_Write_bias_1_Words(&Accelerator, 0, b1_inference,1);
+// 	XAccelerator_Write_bias_2_Words(&Accelerator, 0, b2_inference,1);
+// 	XAccelerator_Set_training(&Accelerator, false);
+
+// // #################  Inference Begins  #############################
+
+// 	XTime_GetTime(&inference_start_time);
+// 	XAccelerator_Start(&Accelerator);
+
+// 		do {
+// 		} while (!XAccelerator_IsDone(&Accelerator));
+
+// 	XAccelerator_Return inference_result = XAccelerator_Get_return(&Accelerator);
+// 	XTime_GetTime(&inference_stop_time);
+
+// 	fixed_16 inference[4];
+// 	inference[0] = get_fixed_reinterpret_lower(inference_result.word_0);
+// 	inference[1] = get_fixed_reinterpret_upper(inference_result.word_0);
+// 	inference[2] = get_fixed_reinterpret_lower(inference_result.word_1);
+// 	inference[3] = get_fixed_reinterpret_upper(inference_result.word_1);
+
+
+// // #################  Inference finishes  #############################
+// 	unsigned long long training_ticks, inference_ticks;
+// 	double training_time, inference_time;
+// 	training_ticks = 300*(training_stop_time - training_start_time);
+// 	training_time = (double) training_ticks / COUNTS_PER_SECOND;
+// 	cout << "training ticks: " <<  std::fixed <<training_ticks << endl;
+// 	//cout << "training time(sec): " << std::fixed << training_time << endl;
+
+// 	inference_ticks = 2*(inference_stop_time - inference_start_time);
+// 	inference_time = (double) inference_ticks / COUNTS_PER_SECOND;
+// 	cout << "inference ticks:" <<  std::fixed <<inference_ticks << endl;
+// 	//cout << "inference time(sec):" << std::fixed <<inference_time << endl;
+
+
+// 	cout << "result = {" << endl;
+// 	for (int i = 0; i < 10; i++) {
+// 			cout << std::fixed << std::setw(10) << inferencer[i] << "\t\t";
+// 		cout << "\n";
+// 	}
+// 	cout << "}" << endl << endl;
+	cout << "--- End of the Program ---" << endl;
+
 	return 0;
 }

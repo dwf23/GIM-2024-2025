@@ -9,7 +9,7 @@
 #include <hls_stream.h>
 
 #define ARRAY_SIZE 2
-#define NUM_ITERATIONS 500
+#define NUM_ITERATIONS 2
 
 typedef ap_fixed<16,4> fixed_16;
 using namespace std;
@@ -40,7 +40,7 @@ struct axis {
     
     // Function to display the values
     void display() {
-        std::cout << "Data: " << data[0].to_float() << ", " << data[1].to_float() << std::endl;
+        //std::cout << "Data: " << data[0].to_float() << ", " << data[1].to_float() << std::endl;
         std::cout << "ID: " << id << std::endl;
         std::cout << "Destination: " << dest << std::endl;
     }
@@ -110,10 +110,16 @@ Array model_array(fixed_16 weights[ARRAY_SIZE][ARRAY_SIZE],
 			fixed_16 delta_k[ARRAY_SIZE], fixed_16 eta,
 			char model, fixed_16 alpha, fixed_16 training);
 
+
 Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
-				fixed_16 bias_2[ARRAY_SIZE], fixed_16 training,
-                packet_line &rx_stream, packet_line &tx_stream,
-                bool expecting_input, bool &initialized,
-			bool self_test, int &epoch, bool &complete);
+					fixed_16 bias_2[ARRAY_SIZE],
+					fixed_16 training,
+					packet_line &rx_stream, 
+					packet_line &tx_stream, 
+					bool &initialized_flag, 
+					bool self_test,
+					int &epoch,
+					bool &complete,
+					int test);
 
 #endif // GIM_MODEL_

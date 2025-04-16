@@ -9,83 +9,13 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
                                 fixed_16 training,
                                 packet_line &rx_stream, 
                                 packet_line &tx_stream, 
-                                bool expecting_input, 
-                                bool &initialized, 
+                                bool &initialized_flag, 
                                 bool self_test,
                                 int &epoch,
-                                bool &complete) {
+                                bool &complete,
+                                int test) {
 
-
-    //initialization packet
-    axis<fixed_16, 0, 1, 1> in_val;
-    axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(2), fixed_16(1), 1, 2);
-    axis<fixed_16, 0, 1, 1> alpha_packet(fixed_16(4), fixed_16(3), 1, 2);
-    axis<fixed_16, 0, 1, 1> goofy_ahh_packet(fixed_16(.420), fixed_16(4.20), 1, 2);
-
-    //set the complete flag
-    complete = false;
-
-    if (self_test){
-        while(tx_stream.full());
-        std::cout << "Self-Initializing" << std::endl;
-        tx_stream.write(alpha_packet);
-    }
-    //Initialization sequence
-    while(!initialized){
-        while(rx_stream.empty()); //wait to pull something off the fifo
-        std::cout << "Packet off the FIFO" << std::endl;
-        in_val = rx_stream.read();
-        if(in_val.dest == 1){ //delete this after test bench
-            in_val.display();
-        }
-        if(in_val.dest == 1 && in_val.data[0] == fixed_16(4) && in_val.data[1] == fixed_16(3)){
-            while(tx_stream.full());
-            tx_stream.write(initialization_packet);
-            std::cout << "Beta Received Initialization Packet" << std::endl;
-            std::cout << "Beta Sent Initialization Packet" << std::endl;
-            initialization_packet.display();
-            initialized = true;
-        }
-        if (in_val.dest == 1 && in_val.data[0] == fixed_16(2) && in_val.data[1] == fixed_16(1)){
-            while(tx_stream.full());
-            tx_stream.write(initialization_packet);
-            std::cout << "Beta Received Initialization Packet" << std::endl;
-            std::cout << "Beta Sent Initialization Packet" << std::endl;
-            initialization_packet.display();
-            initialized = true;  
-        }
-    }
-    
-    // array for the final output
-    Inference output_array;
-
-    // initializing the data for the XOR problem
-    fixed_16 x1[4] = {0, 0, 1, 1};
-    fixed_16 x2[4] = {0, 1, 0, 1};
-    fixed_16 y[4] = {0, 1, 1, 0};
-
-    // setting up initial values for signals between layers
-    fixed_16 output_1[ARRAY_SIZE] = {0, 0};
-    fixed_16 output_2[ARRAY_SIZE] = {0, 0};
-    fixed_16 delta_1[ARRAY_SIZE] = {0, 0};
-    fixed_16 delta_2[ARRAY_SIZE] = {0, 0};
-
-    // make local versions of the weights/biases
-    fixed_16 w1_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
-    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
-    fixed_16 bias_1_local[ARRAY_SIZE] = {0, 0};
-    fixed_16 bias_2_local[ARRAY_SIZE] = {0, 0};
-
-    for (int n = 0; n<ARRAY_SIZE; n++) {
-        bias_2_local[n] = bias_2[n];
-        for (int m = 0;m<ARRAY_SIZE; m++) {
-            w2_local[n][m] = w2[n][m];
-        }
-    }
-
-
-    #pragma HLS INTERFACE mode=s_axilite port=expecting_input
-    #pragma HLS INTERFACE mode=s_axilite port=initialized
+    #pragma HLS INTERFACE mode=s_axilite port=initialized_flag
     #pragma HLS INTERFACE axis port=tx_stream
     #pragma HLS INTERFACE axis port=rx_stream
     #pragma HLS INTERFACE mode=s_axilite port=w2
@@ -95,36 +25,161 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
     #pragma HLS INTERFACE mode=s_axilite port=self_test
     #pragma HLS INTERFACE mode=s_axilite port=epoch
     #pragma HLS INTERFACE mode=s_axilite port=complete
+    #pragma HLS INTERFACE mode=s_axilite port=test
 
-    #pragma HLS array_partition variable=w2
+
+    //initialization packet
+    // FIXXX CHANGE BACK TO DEST 2
+    axis<fixed_16, 0, 1, 1> in_val;
+    axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(2), fixed_16(1), 1, 1);
+    axis<fixed_16, 0, 1, 1> alpha_packet(fixed_16(4), fixed_16(3), 1, 1);
+    axis<fixed_16, 0, 1, 1> goofy_ahh_packet(fixed_16(.420), fixed_16(4.20), 1, 1);
+
+    //set the complete flag
+    complete = false;
+    bool initialized = false;
+    bool expecting_input = true;
+    initialized_flag = false;
+    epoch = 1000;
+
+    if (self_test){
+        while(tx_stream.full());
+        std::cout << "Self-Initializing" << std::endl;
+        tx_stream.write(alpha_packet);
+    }
+    //Initialization sequence
+    while(!initialized && test == 1){
+        while(rx_stream.empty()); //wait to pull something off the fifo
+        std::cout << "Packet off the FIFO" << std::endl;
+        in_val = rx_stream.read();
+        if(in_val.dest == 1 && in_val.data[0] == fixed_16(4) && in_val.data[1] == fixed_16(3)){
+            while(tx_stream.full());
+            tx_stream.write(initialization_packet);
+            std::cout << "Beta Received Initialization Packet" << std::endl;
+            std::cout << "Beta Sent Initialization Packet" << std::endl;
+            //initialization_packet.display();
+            initialized = true;
+            break;
+        }
+        if (in_val.dest == 1 && in_val.data[0] == fixed_16(2) && in_val.data[1] == fixed_16(1)){
+            while(tx_stream.full());
+            tx_stream.write(initialization_packet);
+            std::cout << "Beta Received Initialization Packet" << std::endl;
+            std::cout << "Beta Sent Initialization Packet" << std::endl;
+            //initialization_packet.display();
+            initialized = true;  
+            break;
+        }
+    }
+    initialized_flag = true;
+    epoch = 1001;
+
+    
+    // array for the final output
+    Inference output_array;
+    epoch = 1002;
+
+
+    // initializing the data for the XOR problem
+    fixed_16 x1[4] = {0, 0, 1, 1};
+    fixed_16 x2[4] = {0, 1, 0, 1};
+    fixed_16 y[4] = {0, 1, 1, 0};
+    epoch = 1003;
+    
+
+    // setting up initial values for signals between layers
+    fixed_16 output_1[ARRAY_SIZE] = {0, 0};
+    fixed_16 output_2[ARRAY_SIZE] = {0, 0};
+    fixed_16 delta_1[ARRAY_SIZE] = {0, 0};
+    fixed_16 delta_2[ARRAY_SIZE] = {0, 0};
+    epoch = 1004;
+
+    // make local versions of the weights/biases
+    fixed_16 w1_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
+    fixed_16 w2_local[ARRAY_SIZE][ARRAY_SIZE] = {{0, 0}, {0, 0}};
+    fixed_16 bias_1_local[ARRAY_SIZE] = {0, 0};
+    fixed_16 bias_2_local[ARRAY_SIZE] = {0, 0};
+    epoch = 1005;
+
+    if (test==2){
+        for (int n = 0; n<ARRAY_SIZE; n++) {
+            output_array.new_b2[n] = bias_2_local[n];
+        // output_array.new_b2[n] = bias_2_local[n];
+            for (int m = 0;m<ARRAY_SIZE; m++) {
+                output_array.new_w2[n][m] = w2_local[n][m];
+            // output_array.new_w2[n][m] = w2_local[n][m];
+            }
+        }
+        return output_array;
+    }
+
+    for (int n = 0; n<ARRAY_SIZE; n++) {
+        bias_2_local[n] = bias_2[n];
+        for (int m = 0;m<ARRAY_SIZE; m++) {
+            w2_local[n][m] = w2[n][m];
+        }
+    }
+    epoch = 1006;
+
+    if (test==3){
+        for (int n = 0; n<ARRAY_SIZE; n++) {
+            output_array.new_b2[n] = bias_2_local[n];
+        // output_array.new_b2[n] = bias_2_local[n];
+            for (int m = 0;m<ARRAY_SIZE; m++) {
+                output_array.new_w2[n][m] = w2_local[n][m];
+            // output_array.new_w2[n][m] = w2_local[n][m];
+            }
+        }
+        return output_array;
+    }
+
 
     // store actual and predicted difference in vector, set other params
     char model = 'l'; // s = sigmoid, r = relu, l = leaky relu NOTE: SIGMOID CANNOT BE USED ON HARDWARE
     fixed_16 alpha = 0.1; // for leaky relu
     fixed_16 lr = 0.1; // learning rate
+    epoch = 1007;
 
     // iterate through the alloted epochs
     int i;
-    if(self_test){
-        while(tx_stream.full());
-        tx_stream.write(goofy_ahh_packet);
-        std::cout << "Alpha writing some goofy ahh shit wtf" << std::endl;
-    }
+    epoch = 1008;
     for (i = 0; i < NUM_ITERATIONS; i++) {
         // iterate through all the data points
         int j;
         epoch = i;
         for (j = 0; j < 4; j++) {
-            #pragma HLS PIPELINE
+            #pragma HLS PIPELINE off
             // initialize the error backpropagationcout
             delta_1[0] = 0;
             delta_1[1] = 0; 
             delta_2[0] = 0; 
             delta_2[1] = 0;
 
+            if (test==4){
+                for (int n = 0; n<ARRAY_SIZE; n++) {
+                    output_array.new_b2[n] = bias_2_local[n];
+                    // output_array.new_b2[n] = bias_2_local[n];
+                    for (int m = 0;m<ARRAY_SIZE; m++) {
+                     output_array.new_w2[n][m] = w2_local[n][m];
+                    // output_array.new_w2[n][m] = w2_local[n][m];
+                    }
+                }
+                return output_array;
+            }
 
+            if(test==7 && j==1){
+                for (int n = 0; n<ARRAY_SIZE; n++) {
+                    output_array.new_b2[n] = bias_2_local[n];
+                    // output_array.new_b2[n] = bias_2_local[n];
+                    for (int m = 0;m<ARRAY_SIZE; m++) {
+                     output_array.new_w2[n][m] = w2_local[n][m];
+                    // output_array.new_w2[n][m] = w2_local[n][m];
+                    }
+                }
+                return output_array;
+            }
             // receive output_1 from alpha
-            axis<fixed_16, 0, 1, 1> read_output_1_packet;
+            axis<fixed_16, 0, 1, 1> read_output_1_packet(0,0,0,0);
             while(expecting_input){
                 while(rx_stream.empty());
                 std::cout << "Packet off the FIFO" << std::endl;
@@ -133,8 +188,9 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
                     output_1[0] = read_output_1_packet.data[0];
                     output_1[1] = read_output_1_packet.data[1];
                     std::cout << "Beta got output 1 packet" << std::endl;
-                    read_output_1_packet.display();
+                    //read_output_1_packet.display();
                     expecting_input = false;
+                    break;
                 }
             }
             //ready to read off the fifo
@@ -188,17 +244,48 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
                 }
             }
 
+            if (test==5){
+                for (int n = 0; n<ARRAY_SIZE; n++) {
+                    output_array.new_b2[n] = bias_2_local[n];
+                    // output_array.new_b2[n] = bias_2_local[n];
+                    for (int m = 0;m<ARRAY_SIZE; m++) {
+                     output_array.new_w2[n][m] = w2_local[n][m];
+                    // output_array.new_w2[n][m] = w2_local[n][m];
+                    }
+                }
+                return output_array;
+            }
+            
+            if (test==8 && j==1){
+                for (int n = 0; n<ARRAY_SIZE; n++) {
+                    output_array.new_b2[n] = bias_2_local[n];
+                    // output_array.new_b2[n] = bias_2_local[n];
+                    for (int m = 0;m<ARRAY_SIZE; m++) {
+                     output_array.new_w2[n][m] = w2_local[n][m];
+                    // output_array.new_w2[n][m] = w2_local[n][m];
+                    }
+                }
+                return output_array;
+            }
+
             // send updated delta_1 to alpha
-            axis<fixed_16, 0, 1, 1> write_delta_1_packet;
+            axis<fixed_16, 0, 1, 1> write_delta_1_packet(0,0,0,0);
             write_delta_1_packet.id = 4;
+            //FIX THIS -- CHANGE BACK TO 2 OR WILL BREAK
+            write_delta_1_packet.dest = 1;
             write_delta_1_packet.data[0] = delta_1[0];
             write_delta_1_packet.data[1] = delta_1[1];
+            if (self_test && training == 0 && j==3){
+                break;
+            }
             while(tx_stream.full());
             tx_stream.write(write_delta_1_packet);
             //std::cout << "Beta Wrote Delta 1 Packet: " << delta_1[0].to_float() <<
             //" , " << delta_1[1].to_float() << std::endl;
 
-            
+            if(test == 6){
+                break;
+            }
             // only run this for all 4 data points once if infering
             if ((training == 0) && (j == 3)) {
                 break; 
@@ -218,90 +305,14 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
 
     complete = true;
     
-
-    // epoch = int(501);
-    // // receive bias_1_local from alpha 
-    // axis<fixed_16, 0, 1, 1> read_bias_1_local_packet;
-    // //for self-test this should receive the last bias backprop
-    // while(expecting_input){
-    //     while(rx_stream.empty());
-    //     read_bias_1_local_packet = rx_stream.read();
-    //     if (read_bias_1_local_packet.dest == 1){
-    //         bias_1_local[0] = read_bias_1_local_packet.data[0];
-    //         bias_1_local[1] = read_bias_1_local_packet.data[1];
-    //         expecting_input = false;
-    //         std::cout << "Output Bias 1" << std::endl;
-    //         read_bias_1_local_packet.display();
-    //     }
-    // }
-    // expecting_input = true;
-    // epoch = int(502);
-
-    // //for self test purposes
-    // if(self_test){
-    //     while(tx_stream.full());
-    //     tx_stream.write(goofy_ahh_packet);
-    //     std::cout << "Alpha writing some goofy ahh shit wtf" << std::endl;
-    // }
-
-    // // receive w1_local_packet1 (w1_local[0][0], w1_local[0][1]) from alpha 
-    // axis<fixed_16, 0, 1, 1> read_w1_local_packet1;
-    // while(expecting_input){
-    //     while(rx_stream.empty());
-    //     read_w1_local_packet1 = rx_stream.read();
-    //     if (read_bias_1_local_packet.dest == 1){
-    //         w1_local[0][0] = read_w1_local_packet1.data[0];
-    //         w1_local[0][1] = read_w1_local_packet1.data[1];
-    //         expecting_input = false;
-    //         read_w1_local_packet1.display();
-    //     }
-    // }
-    // expecting_input = true;
-    // epoch = int(503);
-
-    // //for self test purposes
-    // if(self_test){
-    //     while(tx_stream.full());
-    //     tx_stream.write(goofy_ahh_packet);
-    //     std::cout << "Alpha writing some goofy ahh shit wtf" << std::endl;
-    // }
-
-    // // receive w1_local_packet2 (w1_local[1][0], w1_local[1][1]) from alpha 
-    // axis<fixed_16, 0, 1, 1> read_w1_local_packet2;
-    // while(expecting_input){
-    //     while(rx_stream.empty());
-    //     read_w1_local_packet2 = rx_stream.read();
-    //     if (read_bias_1_local_packet.dest == 1){
-    //         w1_local[1][0] = read_w1_local_packet2.data[0];
-    //         w1_local[1][1] = read_w1_local_packet2.data[1];
-    //         expecting_input = false;
-    //         read_w1_local_packet2.display();
-    //     }
-    // }
-    // expecting_input = true;
-    // epoch = int(504);
-    // // produce the final weights to be used in inference
-    // for (int n = 0; n<ARRAY_SIZE; n++) {
-    //     output_array.new_b1[n] = bias_1_local[n];
-    //     output_array.new_b2[n] = bias_2_local[n];
-    //     for (int m = 0;m<ARRAY_SIZE; m++) {
-    //         output_array.new_w1[n][m] = w1_local[n][m];
-    //         std::cout << "W1 output n:" << n << " m: " << m << " : " << w1_local[n][m].to_float() << std::endl;
-    //         output_array.new_w2[n][m] = w2_local[n][m];
-    //         std::cout << "W2 output n:" << n << " m: " << m << " : " << w2_local[n][m].to_float() << std::endl;
-    //     }
-    // }
-
-    // std::cout << "Output Bias 2" << std::endl;
-    // std::cout << bias_2_local[0].to_float() << std::endl;
-    // std::cout << bias_2_local[1].to_float() << std::endl;
-
-    // std::cout << "Output Bias 1" << std::endl;
-    // std::cout << bias_1_local[0].to_float() << std::endl;
-    // std::cout << bias_1_local[1].to_float() << std::endl;
-
-
-
-
+    for (int n = 0; n<ARRAY_SIZE; n++) {
+        output_array.new_b2[n] = bias_2_local[n];
+        // output_array.new_b2[n] = bias_2_local[n];
+        for (int m = 0;m<ARRAY_SIZE; m++) {
+            output_array.new_w2[n][m] = w2_local[n][m];
+        // output_array.new_w2[n][m] = w2_local[n][m];
+        }
+    }
     return output_array;
+
 }

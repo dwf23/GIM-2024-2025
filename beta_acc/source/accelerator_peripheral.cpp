@@ -31,9 +31,9 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
     //initialization packet
     // FIXXX CHANGE BACK TO DEST 2
     axis<fixed_16, 0, 1, 1> in_val;
-    axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(2), fixed_16(1), 1, 1);
-    axis<fixed_16, 0, 1, 1> alpha_packet(fixed_16(4), fixed_16(3), 1, 1);
-    axis<fixed_16, 0, 1, 1> goofy_ahh_packet(fixed_16(.420), fixed_16(4.20), 1, 1);
+    axis<fixed_16, 0, 1, 1> initialization_packet(fixed_16(2), fixed_16(1), 1, 2);
+    axis<fixed_16, 0, 1, 1> alpha_packet(fixed_16(4), fixed_16(3), 1, 2);
+    axis<fixed_16, 0, 1, 1> goofy_ahh_packet(fixed_16(.420), fixed_16(4.20), 1, 2);
 
     //set the complete flag
     complete = false;
@@ -272,7 +272,7 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
             axis<fixed_16, 0, 1, 1> write_delta_1_packet(0,0,0,0);
             write_delta_1_packet.id = 4;
             //FIX THIS -- CHANGE BACK TO 2 OR WILL BREAK
-            write_delta_1_packet.dest = 1;
+            write_delta_1_packet.dest = 2;
             write_delta_1_packet.data[0] = delta_1[0];
             write_delta_1_packet.data[1] = delta_1[1];
             if (self_test && training == 0 && j==3){
@@ -313,6 +313,7 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
         // output_array.new_w2[n][m] = w2_local[n][m];
         }
     }
+    
     return output_array;
 
 }

@@ -38,7 +38,11 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 38 \
+=======
     id 44 \
+>>>>>>> main
     name p_read10 \
     type other \
     dir I \
@@ -53,7 +57,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 39 \
+=======
     id 45 \
+>>>>>>> main
     name p_read29 \
     type other \
     dir I \
@@ -68,7 +76,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 40 \
+=======
     id 46 \
+>>>>>>> main
     name p_read30 \
     type other \
     dir I \
@@ -83,7 +95,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 41 \
+=======
     id 47 \
+>>>>>>> main
     name p_read31 \
     type other \
     dir I \
@@ -98,7 +114,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 42 \
+=======
     id 48 \
+>>>>>>> main
     name biases_0_0_val \
     type other \
     dir I \
@@ -113,7 +133,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 43 \
+=======
     id 49 \
+>>>>>>> main
     name biases_0_1_val \
     type other \
     dir I \
@@ -128,7 +152,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 44 \
+=======
     id 50 \
+>>>>>>> main
     name output_kmin1_0_0_val \
     type other \
     dir I \
@@ -143,7 +171,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 45 \
+=======
     id 51 \
+>>>>>>> main
     name output_kmin1_0_1_val \
     type other \
     dir I \
@@ -158,7 +190,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 46 \
+=======
     id 52 \
+>>>>>>> main
     name delta_k_0_0_val \
     type other \
     dir I \
@@ -173,7 +209,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 47 \
+=======
     id 53 \
+>>>>>>> main
     name delta_k_0_1_val \
     type other \
     dir I \
@@ -188,7 +228,11 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
+    id 48 \
+=======
     id 54 \
+>>>>>>> main
     name training \
     type other \
     dir I \

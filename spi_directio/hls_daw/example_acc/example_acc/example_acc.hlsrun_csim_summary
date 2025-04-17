@@ -1,0 +1,159 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\example_acc.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/19/25 21:52:18",
+ "timestampMillis": "561783457",
+ "buildStep": {
+  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\logs\\example_acc.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls-debug.cfg --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg --work_dir example_acc ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls-debug.cfg",
+   "--config",
+   "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\hls_config.cfg",
+   "--work_dir",
+   "example_acc"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 21:52:18",
+ "timestampMillis": "561783457",
+ "status": {
+  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/19/25 21:52:24",
+ "timestampMillis": "561789432",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "example_acc",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc.cpp",
+     "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\receive_data.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/19/25 21:52:24",
+ "timestampMillis": "561789434",
+ "buildStep": {
+  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
+  "name": "csim_design",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc\\example_acc\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\example_acc"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 21:52:24",
+ "timestampMillis": "561789434",
+ "status": {
+  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 21:52:34",
+ "timestampMillis": "561799240",
+ "status": {
+  "cmdId": "a2519556-5079-4d59-a2fa-6d8a13fafe97",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 21:52:34",
+ "timestampMillis": "561799412",
+ "status": {
+  "cmdId": "e60087a2-683c-4ffd-b52d-474794d3d9d4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 21:52:34",
+ "timestampMillis": "561799413",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 21:52:34",
+ "timestampMillis": "561799414",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

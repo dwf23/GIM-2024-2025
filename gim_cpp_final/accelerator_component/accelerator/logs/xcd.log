@@ -273,6 +273,8 @@
 10/19/24 11:01:59: SERVER: destructor for server bound to port 64662
 10/19/24 11:01:59: Server exiting with status 0.
 10/19/24 11:01:59: Closing log file.
+<<<<<<< HEAD
+=======
 10/27/24 17:05:01: Running xcd server. This server was NOT built by gradle, but presumably rdi.
 10/27/24 17:05:01: Server was asked to start on port: '53015'
 10/27/24 17:05:01: Server is using token UUID: 'a06e7edc-6e51-4443-8979-fd25d2e3cb90'
@@ -548,3 +550,4 @@
 10/29/24 09:35:18: SERVER: destructor for server bound to port 49356
 10/29/24 09:35:18: Server exiting with status 0.
 10/29/24 09:35:18: Closing log file.
+>>>>>>> main

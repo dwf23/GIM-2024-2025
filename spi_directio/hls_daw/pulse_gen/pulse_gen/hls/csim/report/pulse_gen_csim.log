@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../pulse_gen_tb.cpp in debug mode
+   Compiling ../../../../../pulse_gen.cpp in debug mode
+   Generating csim.exe
+Starting Testbench
+Sending Pulse
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

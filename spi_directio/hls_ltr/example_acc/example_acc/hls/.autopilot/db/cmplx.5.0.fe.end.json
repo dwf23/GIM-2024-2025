@@ -1,0 +1,50 @@
+{
+    "1": {
+        "name": "example_acc_Pipeline_VITIS_LOOP_11_1",
+        "file": "..\/example_acc.cpp",
+        "fileloc": "20",
+        "instructions": "25",
+        "total_instructions": "25",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "example_acc_Pipeline_VITIS_LOOP_31_1",
+        "file": "..\/example_acc.cpp",
+        "fileloc": "20",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "example_acc",
+        "file": "example_acc.cpp",
+        "fileloc": "11",
+        "instructions": "17",
+        "total_instructions": "62",
+        "calls": "1 2",
+        "basicblocks": "1",
+        "loads": {
+            "L": "1"
+        }
+    }
+}

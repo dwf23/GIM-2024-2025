@@ -1,0 +1,94 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'receive_data(hls::directio<ap_uint<1> >&)'
+    DebugLoc:        { File: ../receive_data.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'example_acc(hls::directio<ap_uint<1> >&, bool)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            data_in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '1'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../example_acc.cpp, Line: 22, Column: 19 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_22_1
+  - String:          ' '
+  - LoopLoc:         '../example_acc.cpp:22:19'
+  - String:          ' '
+  - Function:        'example_acc(hls::directio<ap_uint<1> >&, bool)'
+    DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../example_acc.cpp, Line: 22, Column: 19 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_22_1
+  - String:          '''('
+  - LoopLoc:         '../example_acc.cpp:22:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_22_1
+  - String:          '> at '
+  - LoopLoc:         '../example_acc.cpp:22:19'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../receive_data.cpp, Line: 17, Column: 22 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../example_acc.cpp, Line: 11, Column: 0 }
+Function:        _Z11example_accRN3hls8directioI7ap_uintILi1EEEEb
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          ''' ('
+  - LoopLoc:         '../receive_data.cpp:17:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          example_acc
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...

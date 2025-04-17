@@ -1,0 +1,34 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/6f8f/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/drivers/example_acc_v1_0/src" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/0127/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_bitselect_1ns_32ns_32ns_1_1_1.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_control_s_axi.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_example_acc_Pipeline_VITIS_LOOP_11_1.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_example_acc_Pipeline_VITIS_LOOP_31_1.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_flow_control_loop_pipe_sequential_init.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc_regslice_both.v" \
+"../../../../project_1.gen/sources_1/bd/design_1/ipshared/2ab5/hdl/verilog/example_acc.v" \
+"../../../bd/design_1/ip/design_1_example_acc_0_0/sim/design_1_example_acc_0_0.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
+
+sv xil_defaultlib --include "C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/6f8f/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/drivers/example_acc_v1_0/src" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/0127/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_s00mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_s00tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_s00sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_s00a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_sarn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_srn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_sawn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_swn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_m00e_0.sv" \
+
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/6f8f/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_example_acc_0_0/drivers/example_acc_v1_0/src" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/0127/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

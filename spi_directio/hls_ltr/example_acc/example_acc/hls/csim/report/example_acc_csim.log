@@ -1,0 +1,44 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../send_data.cpp in debug mode
+   Generating csim.exe
+Starting Testbench
+Beginning HLS Func
+Converted number: 1280
+Converted number: 1536
+Converted bitstream: 83887616
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit1
+Writing bit1
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+Writing bit0
+WARNING [HLS SIM]: hls::directio 'hls::directio<bool, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

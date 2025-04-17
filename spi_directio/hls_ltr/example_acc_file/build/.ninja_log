@@ -1,0 +1,5 @@
+# ninja log v5
+48	5185	7618547283593340	CMakeFiles/example_acc_file.elf.dir/accelerator.cc.obj	20874ae3ab7cc527
+5187	5598	7618547287166169	example_acc_file.elf	434fd9d93ee92f75
+21	2142	7618549530990614	CMakeFiles/example_acc_file.elf.dir/accelerator.cc.obj	20874ae3ab7cc527
+2143	2435	7618549533534006	example_acc_file.elf	434fd9d93ee92f75

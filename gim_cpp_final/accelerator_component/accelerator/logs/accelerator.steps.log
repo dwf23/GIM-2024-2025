@@ -431,6 +431,8 @@ timestamp: 19 Oct 2024 11:01:41
 working dir: C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component
 cmd: vitis_hls -nolog -run package -work_dir C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator -config C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg -cmdlineconfig C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/config.cmdline
 VITIS-RUN internal step status: success
+<<<<<<< HEAD
+=======
 
 ------------------------------------------
 VITIS-RUN command line :
@@ -673,3 +675,4 @@ timestamp: 29 Oct 2024 09:34:55
 working dir: C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component
 cmd: vitis_hls -nolog -run package -work_dir C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator -config C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/hls_config.cfg -cmdlineconfig C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/config.cmdline
 VITIS-RUN internal step status: success
+>>>>>>> main

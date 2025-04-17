@@ -46939,6 +46939,11 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
 
 
     Inference output_array;
+<<<<<<< HEAD
+
+
+    fixed_16 x1[4] = {0, 0, 1, 1};
+=======
 #pragma HLS INTERFACE mode=s_axilite port=w1
 #pragma HLS INTERFACE mode=s_axilite port=w2
 #pragma HLS INTERFACE mode=s_axilite port=bias_1
@@ -46950,6 +46955,7 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
 
 
  fixed_16 x1[4] = {0, 0, 1, 1};
+>>>>>>> main
     fixed_16 x2[4] = {0, 1, 0, 1};
     fixed_16 y[4] = {0, 1, 1, 0};
 
@@ -46981,10 +46987,17 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
     fixed_16 w2_local[2][2] = {{0, 0}, {0, 0}};
     fixed_16 bias_1_local[2] = {0, 0};
     fixed_16 bias_2_local[2] = {0, 0};
+<<<<<<< HEAD
+    VITIS_LOOP_47_1: for (int n = 0; n<2; n++) {
+        bias_1_local[n] = bias_1[n];
+        bias_2_local[n] = bias_2[n];
+        VITIS_LOOP_50_2: for (int m = 0;m<2; m++) {
+=======
     VITIS_LOOP_55_1: for (int n = 0; n<2; n++) {
         bias_1_local[n] = bias_1[n];
         bias_2_local[n] = bias_2[n];
         VITIS_LOOP_58_2: for (int m = 0;m<2; m++) {
+>>>>>>> main
             w1_local[n][m] = w1[n][m];
             w2_local[n][m] = w2[n][m];
         }
@@ -46999,12 +47012,21 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
 
 
     int i;
+<<<<<<< HEAD
+    VITIS_LOOP_65_3: for (i = 0; i < 500; i++) {
+#pragma HLS PIPELINE II=85
+
+
+ int j;
+        VITIS_LOOP_70_4: for (j = 0; j < 4; j++) {
+=======
     VITIS_LOOP_73_3: for (i = 0; i < 500; i++) {
 #pragma HLS UNROLL
 
 
  int j;
         VITIS_LOOP_78_4: for (j = 0; j < 4; j++) {
+>>>>>>> main
 
 
             output_0[0] = x1[j];
@@ -47062,18 +47084,30 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
             delta_1[0] = array_back2.delta_kmin1[0];
             delta_1[1] = array_back2.delta_kmin1[1];
 
+<<<<<<< HEAD
+            VITIS_LOOP_128_5: for (int n = 0; n<2; n++) {
+                bias_2_local[n] = array_back2.bias_change[n];
+                VITIS_LOOP_130_6: for (int m = 0;m<2; m++) {
+=======
             VITIS_LOOP_136_5: for (int n = 0; n<2; n++) {
                 bias_2_local[n] = array_back2.bias_change[n];
                 VITIS_LOOP_138_6: for (int m = 0;m<2; m++) {
+>>>>>>> main
                     w2_local[n][m] = array_back2.weight_changes[n][m];
                 }
             }
 
             Array array_back1 = model_array(w1_local, bias_1_local, output_0, delta_1, lr, model, alpha, training);
 
+<<<<<<< HEAD
+            VITIS_LOOP_137_7: for (int n = 0; n<2; n++) {
+                bias_1_local[n] = array_back1.bias_change[n];
+                VITIS_LOOP_139_8: for (int m = 0; m<2; m++) {
+=======
             VITIS_LOOP_145_7: for (int n = 0; n<2; n++) {
                 bias_1_local[n] = array_back1.bias_change[n];
                 VITIS_LOOP_147_8: for (int m = 0; m<2; m++) {
+>>>>>>> main
                     w1_local[n][m] = array_back1.weight_changes[n][m];
                 }
             }
@@ -47091,10 +47125,17 @@ __attribute__((sdx_kernel("accelerator", 0))) Inference accelerator(fixed_16 w1[
     }
 
 
+<<<<<<< HEAD
+    VITIS_LOOP_157_9: for (int n = 0; n<2; n++) {
+        output_array.new_b1[n] = bias_1_local[n];
+        output_array.new_b2[n] = bias_2_local[n];
+        VITIS_LOOP_160_10: for (int m = 0;m<2; m++) {
+=======
     VITIS_LOOP_165_9: for (int n = 0; n<2; n++) {
         output_array.new_b1[n] = bias_1_local[n];
         output_array.new_b2[n] = bias_2_local[n];
         VITIS_LOOP_168_10: for (int m = 0;m<2; m++) {
+>>>>>>> main
             output_array.new_w1[n][m] = w1_local[n][m];
             output_array.new_w2[n][m] = w2_local[n][m];
         }

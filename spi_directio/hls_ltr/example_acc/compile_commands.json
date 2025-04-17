@@ -1,0 +1,42 @@
+[
+  {
+    "directory": "C:\\GIM\\hls_ltr\\example_acc",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=example_acc",
+      "-c",
+      "C:/GIM/hls_ltr/send_data.cpp"
+    ],
+    "file": "C:/GIM/hls_ltr/send_data.cpp"
+  },
+  {
+    "directory": "C:\\GIM\\hls_ltr\\example_acc",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=example_acc",
+      "-c",
+      "C:/GIM/hls_ltr/example_acc.cpp"
+    ],
+    "file": "C:/GIM/hls_ltr/example_acc.cpp"
+  },
+  {
+    "directory": "C:\\GIM\\hls_ltr\\example_acc",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-D",
+      "HW_COSIM",
+      "-c",
+      "C:/GIM/hls_ltr/example_acc_tb.cpp"
+    ],
+    "file": "C:/GIM/hls_ltr/example_acc_tb.cpp"
+  }
+]

@@ -25,6 +25,13 @@
       <key>filename</key>
       <string>../accelerator.cpp</string>
       <key>line</key>
+<<<<<<< HEAD
+      <integer>66</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_XLX_SEP_ PragmaOptions=II=85_XLX_SEP_</string>
+=======
       <integer>13</integer>
       <key>column</key>
       <integer>9</integer>
@@ -158,6 +165,7 @@
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_XLX_SEP_ PragmaOptions=II=200_XLX_SEP_</string>
+>>>>>>> main
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

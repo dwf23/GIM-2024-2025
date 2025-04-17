@@ -1,0 +1,114 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc\example_acc.hlscompile_summary, at 02/19/25 21:56:05
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc -config C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg -cmdlineconfig C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Wed Feb 19 21:56:07 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'Dawso' on host 'laptop-dp0ojsk0' (Windows NT_amd64 version 10.0) on Wed Feb 19 21:56:08 -0600 2025
+INFO: [HLS 200-10] In directory 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc'
+INFO: [HLS 200-2005] Using work_dir C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/receive_data.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/receive_data.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file_cflags=C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc_tb.cpp,-D HW_COSIM' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'syn.top=example_acc' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu3eg-sfvc784-1-e' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=2ns' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(13)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.244 seconds; current allocated memory: 231.016 MB.
+INFO: [HLS 200-10] Analyzing design file '../receive_data.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../example_acc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 14.322 seconds; current allocated memory: 233.988 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 356 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 104 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/example_acc/example_acc/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_17_1' is marked as complete unroll implied by the pipeline pragma (../receive_data.cpp:17:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_17_1' (../receive_data.cpp:17:22) in function 'receive_data' completely with a factor of 16 (../receive_data.cpp:10:0)
+INFO: [HLS 214-178] Inlining function 'receive_data(hls::directio<ap_uint<1> >&)' into 'example_acc(hls::directio<ap_uint<1> >&, bool)' (../example_acc.cpp:11:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_in' with compact=bit mode in 1-bits (../example_acc.cpp:11:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.544 seconds; current allocated memory: 235.914 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 235.922 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 240.930 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 243.262 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 265.574 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 265.598 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example_acc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example_acc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+WARNING: [HLS 200-880] The II Violation in module 'example_acc' (loop 'VITIS_LOOP_22_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between wire read operation ('empty_15', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27) and wire read operation ('empty', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'example_acc' (loop 'VITIS_LOOP_22_1'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 1) between wire read operation ('empty_16', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27) and wire read operation ('empty', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'example_acc' (loop 'VITIS_LOOP_22_1'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between wire read operation ('empty_17', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27) and wire read operation ('empty', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'example_acc' (loop 'VITIS_LOOP_22_1'): Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1) between wire read operation ('empty_18', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27) and wire read operation ('empty', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'example_acc' (loop 'VITIS_LOOP_22_1'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between wire read operation ('empty_25', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27) and wire read operation ('empty', ../receive_data.cpp:18->../example_acc.cpp:27) on port 'data_in' (../receive_data.cpp:18->../example_acc.cpp:27).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 5, Final II = 16, Depth = 16, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.695 seconds; current allocated memory: 265.598 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 265.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example_acc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_acc/data_in' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_acc/start_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'example_acc' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'rx' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'start_r' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example_acc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 266.957 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.595 seconds; current allocated memory: 270.703 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.117 seconds; current allocated memory: 273.227 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for example_acc.
+INFO: [VLOG 209-307] Generating Verilog RTL for example_acc.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 365.36 MHz
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 3 seconds. Total elapsed time: 33.228 seconds; peak allocated memory: 273.664 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 38s

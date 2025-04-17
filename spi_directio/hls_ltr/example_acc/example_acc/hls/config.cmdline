@@ -1,0 +1,3 @@
+relativeroot=C:/GIM/hls_ltr/example_acc
+original_argv=--mode hls --package --config C:\GIM\hls_ltr\example_acc\hls_config.cfg --work_dir example_acc 
+

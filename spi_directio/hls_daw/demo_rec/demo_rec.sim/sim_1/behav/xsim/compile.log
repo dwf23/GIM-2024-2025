@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_zynq_ultra_ps_e_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/ipshared/c59b/hdl/verilog/example_acc_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/ipshared/c59b/hdl/verilog/example_acc_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/ipshared/c59b/hdl/verilog/example_acc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_acc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_example_acc_0_0/sim/design_1_example_acc_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_example_acc_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_ds_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/ipshared/ed73/hdl/verilog/pulse_gen_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/ipshared/ed73/hdl/verilog/pulse_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/ip/design_1_pulse_gen_0_1/sim/design_1_pulse_gen_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_pulse_gen_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_ps8_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_QJIMLI
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1D3SAH3
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1A7ZMW4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawso/GIM-2024-2025/spi_directio/hls_daw/demo_rec/demo_rec.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

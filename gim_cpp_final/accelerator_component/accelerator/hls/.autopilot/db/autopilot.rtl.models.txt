@@ -4,6 +4,15 @@ accelerator_mul_16s_16s_25_1_1
 accelerator_mul_16s_16s_32_1_1
 accelerator_mac_mulsub_16s_6ns_25s_25_4_1
 accelerator_mac_muladd_16s_16s_25ns_25_4_1
+<<<<<<< HEAD
+accelerator_dcmp_64ns_64ns_1_1_no_dsp_1
+accelerator_sparsemux_7_2_16_1_1
+accelerator_flow_control_loop_pipe_sequential_init
+accelerator_Pipeline_VITIS_LOOP_47_1
+model_array
+accelerator_Pipeline_VITIS_LOOP_65_3
+accelerator_Pipeline_VITIS_LOOP_157_9
+=======
 accelerator_dcmp_64ns_64ns_1_2_no_dsp_1
 accelerator_sparsemux_7_2_16_1_1
 accelerator_flow_control_loop_pipe_sequential_init
@@ -12,4 +21,5 @@ accelerator_Pipeline_VITIS_LOOP_55_1
 model_array
 accelerator_Pipeline_VITIS_LOOP_73_3
 accelerator_Pipeline_VITIS_LOOP_165_9
+>>>>>>> main
 accelerator

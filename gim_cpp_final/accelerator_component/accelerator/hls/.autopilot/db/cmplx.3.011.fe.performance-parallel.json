@@ -4,16 +4,27 @@
     "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
     "file": "accelerator.cpp",
     "fileloc": 7,
+<<<<<<< HEAD
+    "instructions": 926,
+    "loads": {
+      "L": 90,
+      "T": 6
+=======
     "instructions": 948,
     "loads": {
       "L": 90,
       "T": 10
+>>>>>>> main
     },
     "name": "accelerator",
     "stores": {
       "L": 60
     },
+<<<<<<< HEAD
+    "total_instructions": 3214
+=======
     "total_instructions": 3236
+>>>>>>> main
   },
   "1": {
     "basicblocks": 4,

@@ -4,7 +4,11 @@ set moduleIsExternC "1"
 set rawDecl ""
 set globalVariable ""
 set PortList ""
+<<<<<<< HEAD
+set PortName "w1"
+=======
 set PortName "w1_0"
+>>>>>>> main
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"
@@ -16,6 +20,9 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
+<<<<<<< HEAD
+set PortName "w2"
+=======
 set PortName "w1_1"
 set BitWidth "16"
 set ArrayOpt ""
@@ -41,6 +48,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "w2_1"
+>>>>>>> main
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"

@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-139,-464",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_alpha_transmit_line_ap_ack_0 -pg 1 -lvl 0 -x 0 -y -300 -defaultsOSRD
+preplace port port-id_alpha_transmit_line_ap_vld_0 -pg 1 -lvl 5 -x 1690 -y -310 -defaultsOSRD
+preplace portBus alpha_transmit_line_0 -pg 1 -lvl 5 -x 1690 -y -270 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 770 -y -60 -defaultsOSRD
+preplace inst example_acc_0 -pg 1 -lvl 1 -x 260 -y -290 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1540 -y -170 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 3 -x 1240 -y -40 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 20 -60 480 30 1070 -170 NJ
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 N -60
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 40 -150 NJ -150 NJ -150 1410
+preplace netloc alpha_transmit_line_ap_ack_0_1 1 0 1 N -300
+preplace netloc example_acc_0_alpha_transmit_line_ap_vld 1 1 4 NJ -310 NJ -310 NJ -310 NJ
+preplace netloc example_acc_0_alpha_transmit_line 1 1 4 NJ -270 NJ -270 NJ -270 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 2 2 1060 -190 NJ
+preplace netloc axi_smc_M00_AXI 1 0 5 30 -200 NJ -200 NJ -200 1410J -250 1670
+levelinfo -pg 1 0 260 770 1240 1540 1690
+pagesize -pg 1 -db -bbox -sgen -240 -380 1920 180
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

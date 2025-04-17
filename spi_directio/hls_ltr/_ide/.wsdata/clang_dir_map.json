@@ -1,0 +1,8 @@
+{
+  "workspaceRoot": "C:\\GIM\\hls_ltr",
+  "mapping": {
+    "example_acc_tb.cpp": "example_acc",
+    "send_data.cpp": "example_acc",
+    "example_acc.cpp": "example_acc"
+  }
+}

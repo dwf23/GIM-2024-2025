@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'example_acc'
+================================================================
+* Date:           Wed Feb 19 22:04:22 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        example_acc
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.067 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_22_1  |        ?|        ?|        16|         16|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     28|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|      37|     42|    0|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    117|    -|
+|Register         |        -|    -|      21|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      58|    187|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------+---------------+---------+----+----+----+-----+
+    |     Instance    |     Module    | BRAM_18K| DSP| FF | LUT| URAM|
+    +-----------------+---------------+---------+----+----+----+-----+
+    |control_s_axi_U  |control_s_axi  |        0|   0|  37|  42|    0|
+    +-----------------+---------------+---------+----+----+----+-----+
+    |Total            |               |        0|   0|  37|  42|    0|
+    +-----------------+---------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |rx_3_fu_88_p2                     |         +|   0|  0|  12|           4|           1|
+    |and_ln29_fu_100_p2                |       and|   0|  0|   2|           1|           1|
+    |icmp_ln29_fu_94_p2                |      icmp|   0|  0|  12|           4|           4|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  28|          10|           7|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                             |  81|         17|    1|         17|
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_phi_mux_start_assign_phi_fu_73_p4  |   9|          2|    1|          2|
+    |data_in_blk_n                         |   9|          2|    1|          2|
+    |rx_fu_54                              |   9|          2|    4|          8|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 117|         25|    8|         31|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |  16|   0|   16|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |rx_fu_54     |   4|   0|    4|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  21|   0|   21|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|   example_acc|  return value|
+|ap_return              |  out|   32|  ap_ctrl_hs|   example_acc|  return value|
+|data_in_ap_vld         |   in|    1|       ap_hs|       data_in|       pointer|
+|data_in                |   in|    1|       ap_hs|       data_in|       pointer|
+|data_in_ap_ack         |  out|    1|       ap_hs|       data_in|       pointer|
++-----------------------+-----+-----+------------+--------------+--------------+
+

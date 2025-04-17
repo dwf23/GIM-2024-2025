@@ -1,0 +1,102 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:219:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:332:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:340:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:360:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:400:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../send_data.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="send_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_hs port=alpha_transmit_line" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:219:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:332:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:340:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:360:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:400:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=example_acc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_hs port=alpha_transmit_line" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../example_acc.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example_acc" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../send_data.cpp:20:0" msg_body="Inlining function 'convert_to_bitstream(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)' into 'send_data(hls::directio&lt;bool, 0&gt;&amp;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="convert_to_bitstream(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)" Callee-DebugLoc="File ../send_data.cpp Line 7 Column 0" Caller="send_data(hls::directio&lt;bool, 0&gt;&amp;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)" Caller-DebugLoc="File ../send_data.cpp Line 20 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../example_acc.cpp:11:0" msg_body="Inlining function 'send_data(hls::directio&lt;bool, 0&gt;&amp;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)' into 'example_acc(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, hls::directio&lt;bool, 0&gt;&amp;)'">
+        <args Callee="send_data(hls::directio&lt;bool, 0&gt;&amp;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)" Callee-DebugLoc="File ../send_data.cpp Line 20 Column 0" Caller="example_acc(ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;16, 7, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, hls::directio&lt;bool, 0&gt;&amp;)" Caller-DebugLoc="File ../example_acc.cpp Line 11 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../example_acc.cpp:11:0" msg_body="Aggregating scalar variable 'alpha_transmit_line' with compact=bit mode in 1-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="1" HwTyName="scalar" Name="alpha_transmit_line"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../example_acc.cpp:18:11" msg_body="Automatically partitioning small array 'data_out' completely based on array size.">
+        <args Value="data_out"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../example_acc.cpp:18:11" msg_body="array_partition dim=1 type=complete  variable=data_out 1 example_acc ../example_acc.cpp:18:11 data_out">
+        <args PragmaFunction="example_acc" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=data_out" PragmaType="array_partition" VarName="data_out" varLoc="../example_acc.cpp:18:11"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../example_acc.cpp:18:11" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'data_out' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="data_out" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../example_acc.cpp:18:11" msg_body="Applying array_partition to 'data_out': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="data_out"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

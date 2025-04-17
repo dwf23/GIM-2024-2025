@@ -9,10 +9,17 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:36",
+ "timestampMillis": "2776363501",
+ "buildStep": {
+  "cmdId": "f2c40387-f4e6-4855-89d0-0eaf71989469",
+=======
  "dateTimestamp": "10/29/24 09:33:23",
  "timestampMillis": "3635550853",
  "buildStep": {
   "cmdId": "09bd2547-aba8-4a03-8360-b12833adace7",
+>>>>>>> main
   "name": "v++",
   "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\logs\\accelerator.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg --work_dir accelerator ",
@@ -28,7 +35,11 @@
   "iniFiles": [
    {
     "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\hls_config.cfg",
+<<<<<<< HEAD
+    "content": "part=xczu3eg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=accelerator\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp\ntb.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp\ntb.file_cflags=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp,-D HW_COSIM\nclock=33MHz\nclock_uncertainty=6ns\ncsim.code_analyzer=0"
+=======
     "content": "part=xczu3eg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=accelerator\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/act_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/array.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/bias_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/error_pe.cpp\nsyn.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/weight_pe.cpp\ntb.file=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp\ntb.file_cflags=C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/main.cpp,-D HW_COSIM\nclock=10ns\nclock_uncertainty=2ns\ncsim.code_analyzer=0"
+>>>>>>> main
    }
   ],
   "cwd": "C:\\ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component"
@@ -38,10 +49,17 @@
 <ENTRY>
 {
  "type": "ET_Status",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:36",
+ "timestampMillis": "2776363501",
+ "status": {
+  "cmdId": "f2c40387-f4e6-4855-89d0-0eaf71989469",
+=======
  "dateTimestamp": "10/29/24 09:33:23",
  "timestampMillis": "3635550853",
  "status": {
   "cmdId": "09bd2547-aba8-4a03-8360-b12833adace7",
+>>>>>>> main
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +67,13 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366980",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554257",
+>>>>>>> main
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -90,10 +113,17 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366983",
+ "buildStep": {
+  "cmdId": "d71762cc-0c56-47e3-9f90-7a9da9ddbf52",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554259",
  "buildStep": {
   "cmdId": "ac7e3df3-412e-42b5-83af-7e02e17727e0",
+>>>>>>> main
   "name": "csynth_design",
   "logFile": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\hls.log",
   "commandLine": "csynth_design",
@@ -106,10 +136,17 @@
 <ENTRY>
 {
  "type": "ET_Status",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366983",
+ "status": {
+  "cmdId": "d71762cc-0c56-47e3-9f90-7a9da9ddbf52",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554260",
  "status": {
   "cmdId": "ac7e3df3-412e-42b5-83af-7e02e17727e0",
+>>>>>>> main
   "state": "CS_RUNNING"
  }
 }
@@ -117,8 +154,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366984",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554261",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\hls_data.json",
   "name": "",
@@ -131,8 +173,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366984",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554262",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\syn\\report\\csynth.rpt",
   "name": "",
@@ -145,8 +192,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:53:39",
+ "timestampMillis": "2776366985",
+=======
  "dateTimestamp": "10/29/24 09:33:27",
  "timestampMillis": "3635554262",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls\\syn\\report\\csynth.xml",
   "name": "",
@@ -159,8 +211,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419110",
+=======
  "dateTimestamp": "10/29/24 09:34:19",
  "timestampMillis": "3635606912",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls",
   "name": "",
@@ -173,8 +230,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419110",
+=======
  "dateTimestamp": "10/29/24 09:34:19",
  "timestampMillis": "3635606913",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls",
   "name": "",
@@ -187,8 +249,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419111",
+=======
  "dateTimestamp": "10/29/24 09:34:19",
  "timestampMillis": "3635606914",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\hls",
   "name": "",
@@ -201,10 +268,17 @@
 <ENTRY>
 {
  "type": "ET_Status",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419111",
+ "status": {
+  "cmdId": "d71762cc-0c56-47e3-9f90-7a9da9ddbf52",
+=======
  "dateTimestamp": "10/29/24 09:34:19",
  "timestampMillis": "3635606915",
  "status": {
   "cmdId": "ac7e3df3-412e-42b5-83af-7e02e17727e0",
+>>>>>>> main
   "state": "CS_PASSED"
  }
 }
@@ -212,10 +286,17 @@
 <ENTRY>
 {
  "type": "ET_Status",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419211",
+ "status": {
+  "cmdId": "f2c40387-f4e6-4855-89d0-0eaf71989469",
+=======
  "dateTimestamp": "10/29/24 09:34:20",
  "timestampMillis": "3635607039",
  "status": {
   "cmdId": "09bd2547-aba8-4a03-8360-b12833adace7",
+>>>>>>> main
   "state": "CS_PASSED"
  }
 }
@@ -223,8 +304,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419232",
+=======
  "dateTimestamp": "10/29/24 09:34:20",
  "timestampMillis": "3635607063",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\reports\\v++_compile_accelerator_guidance.html",
   "name": "",
@@ -237,8 +323,13 @@
 <ENTRY>
 {
  "type": "ET_Report",
+<<<<<<< HEAD
+ "dateTimestamp": "10/19/24 10:54:32",
+ "timestampMillis": "2776419233",
+=======
  "dateTimestamp": "10/29/24 09:34:20",
  "timestampMillis": "3635607064",
+>>>>>>> main
  "report": {
   "path": "C:/ELEC522\\GIM\\GIM-2024-2025\\gim_cpp_final\\accelerator_component\\accelerator\\reports\\.db\\v++_compile_accelerator_guidance.pb3",
   "name": "",

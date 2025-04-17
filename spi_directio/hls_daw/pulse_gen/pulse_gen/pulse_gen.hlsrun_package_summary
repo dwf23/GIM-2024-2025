@@ -1,0 +1,159 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\pulse_gen.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "02/19/25 23:22:36",
+ "timestampMillis": "567201661",
+ "buildStep": {
+  "cmdId": "1181deb3-f288-490c-b129-dbc101e4366e",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\logs\\pulse_gen.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\hls_config.cfg --work_dir pulse_gen ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\hls_config.cfg",
+   "--work_dir",
+   "pulse_gen"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:22:36",
+ "timestampMillis": "567201662",
+ "status": {
+  "cmdId": "1181deb3-f288-490c-b129-dbc101e4366e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "02/19/25 23:22:54",
+ "timestampMillis": "567219849",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "pulse_gen",
+     "file": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\pulse_gen.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "02/19/25 23:22:54",
+ "timestampMillis": "567219853",
+ "buildStep": {
+  "cmdId": "67d3a7b6-5a3c-4c63-9ddc-02550be3c0a7",
+  "name": "export_design",
+  "logFile": "C:/Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen\\pulse_gen\\hls\\hls.log",
+  "commandLine": "export_design -flow none",
+  "args": [
+   "-flow",
+   "none"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\hls_daw\\pulse_gen"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:22:54",
+ "timestampMillis": "567219855",
+ "status": {
+  "cmdId": "67d3a7b6-5a3c-4c63-9ddc-02550be3c0a7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:23:43",
+ "timestampMillis": "567268415",
+ "status": {
+  "cmdId": "67d3a7b6-5a3c-4c63-9ddc-02550be3c0a7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "02/19/25 23:23:43",
+ "timestampMillis": "567268788",
+ "status": {
+  "cmdId": "1181deb3-f288-490c-b129-dbc101e4366e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:23:43",
+ "timestampMillis": "567268789",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "02/19/25 23:23:43",
+ "timestampMillis": "567268790",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

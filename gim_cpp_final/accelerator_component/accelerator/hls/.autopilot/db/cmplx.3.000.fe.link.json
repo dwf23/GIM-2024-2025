@@ -1,10 +1,17 @@
 {
   "0": {
     "basicblocks": 90,
+<<<<<<< HEAD
+    "calls": "6 3 3 3 3",
+    "file": "accelerator.cpp",
+    "fileloc": 7,
+    "instructions": 783,
+=======
     "calls": "4 6 6 6 6",
     "file": "accelerator.cpp",
     "fileloc": 7,
     "instructions": 791,
+>>>>>>> main
     "loads": {
       "L": 40,
       "T": 4
@@ -13,7 +20,11 @@
     "stores": {
       "L": 44
     },
+<<<<<<< HEAD
+    "total_instructions": 21901
+=======
     "total_instructions": 21909
+>>>>>>> main
   },
   "1": {
     "basicblocks": 1,
@@ -40,6 +51,10 @@
     "total_instructions": 575
   },
   "3": {
+<<<<<<< HEAD
+    "basicblocks": 19,
+    "calls": "1 9 7 4 2",
+=======
     "basicblocks": 1,
     "calls": "",
     "file": "gim_model.h",
@@ -75,6 +90,7 @@
   "6": {
     "basicblocks": 19,
     "calls": "1 7 5 8 2",
+>>>>>>> main
     "file": "array.cpp",
     "fileloc": 4,
     "instructions": 183,
@@ -87,6 +103,9 @@
     },
     "total_instructions": 3618
   },
+<<<<<<< HEAD
+  "4": {
+=======
   "7": {
     "basicblocks": 1,
     "calls": "3",
@@ -103,6 +122,7 @@
     "total_instructions": 1350
   },
   "8": {
+>>>>>>> main
     "basicblocks": 13,
     "calls": "",
     "file": "act_pe.cpp",
@@ -117,7 +137,11 @@
     },
     "total_instructions": 582
   },
+<<<<<<< HEAD
+  "5": {
+=======
   "9": {
+>>>>>>> main
     "basicblocks": 1,
     "calls": "",
     "file": "gim_model.h",
@@ -125,5 +149,56 @@
     "instructions": 3,
     "name": "Bias",
     "total_instructions": 3
+<<<<<<< HEAD
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 54,
+    "instructions": 6,
+    "name": "Inference",
+    "total_instructions": 6
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "bias_pe.cpp",
+    "fileloc": 5,
+    "instructions": 46,
+    "loads": {
+      "L": 2
+    },
+    "name": "bias_pe",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 634
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "gim_model.h",
+    "fileloc": 25,
+    "instructions": 4,
+    "name": "Weight",
+    "total_instructions": 4
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "8",
+    "file": "weight_pe.cpp",
+    "fileloc": 5,
+    "instructions": 84,
+    "loads": {
+      "L": 3
+    },
+    "name": "weights_pe",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 1350
+=======
+>>>>>>> main
   }
 }

@@ -3,7 +3,11 @@
 ================================================================
 == Vitis HLS Report for 'accelerator'
 ================================================================
+<<<<<<< HEAD
+* Date:           Sat Oct 19 10:54:31 2024
+=======
 * Date:           Tue Oct 29 09:34:18 2024
+>>>>>>> main
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        accelerator
@@ -17,11 +21,19 @@
 ================================================================
 + Timing: 
     * Summary: 
+<<<<<<< HEAD
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  30.30 ns|  20.707 ns|     6.00 ns|
+    +--------+----------+-----------+------------+
+=======
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
     |ap_clk  |  10.00 ns|  7.182 ns|     2.00 ns|
     +--------+----------+----------+------------+
+>>>>>>> main
 
 + Latency: 
     * Summary: 
@@ -29,11 +41,25 @@
     |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
     |   min   |   max   |    min   |    max   | min |  max  |   Type  |
     +---------+---------+----------+----------+-----+-------+---------+
+<<<<<<< HEAD
+    |       97|    41098|  2.939 us|  1.245 ms|   98|  41099|       no|
+=======
     |      162|    72663|  1.620 us|  0.727 ms|  163|  72664|       no|
+>>>>>>> main
     +---------+---------+----------+----------+-----+-------+---------+
 
     + Detail: 
         * Instance: 
+<<<<<<< HEAD
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-------+-----------------------------------------------+
+        |                                                  |                                       |  Latency (cycles) |  Latency (absolute) |   Interval  |                    Pipeline                   |
+        |                     Instance                     |                 Module                |   min   |   max   |    min   |    max   | min |  max  |                      Type                     |
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-------+-----------------------------------------------+
+        |grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_274   |accelerator_Pipeline_VITIS_LOOP_47_1   |        4|        4|  0.121 us|  0.121 us|    3|      3|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_accelerator_Pipeline_VITIS_LOOP_65_3_fu_298   |accelerator_Pipeline_VITIS_LOOP_65_3   |       83|    41084|  2.515 us|  1.245 ms|   83|  41084|                                             no|
+        |grp_accelerator_Pipeline_VITIS_LOOP_157_9_fu_349  |accelerator_Pipeline_VITIS_LOOP_157_9  |        4|        4|  0.121 us|  0.121 us|    3|      3|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-------+-----------------------------------------------+
+=======
         +--------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-------+-----------------------------------------------+
         |                                                  |                                       |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                   |
         |                     Instance                     |                 Module                |   min   |   max   |    min    |    max    | min |  max  |                      Type                     |
@@ -42,6 +68,7 @@
         |grp_accelerator_Pipeline_VITIS_LOOP_73_3_fu_434   |accelerator_Pipeline_VITIS_LOOP_73_3   |      146|    72647|   1.460 us|   0.726 ms|  146|  72647|                                             no|
         |grp_accelerator_Pipeline_VITIS_LOOP_165_9_fu_485  |accelerator_Pipeline_VITIS_LOOP_165_9  |        4|        4|  40.000 ns|  40.000 ns|    3|      3|  loop auto-rewind stp(delay=0 clock cycles(s))|
         +--------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-------+-----------------------------------------------+
+>>>>>>> main
 
         * Loop: 
         N/A
@@ -58,6 +85,18 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|    279|    -|
 |FIFO             |        -|    -|       -|      -|    -|
+<<<<<<< HEAD
+|Instance         |        -|   18|    2769|   6785|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     43|    -|
+|Register         |        -|    -|     716|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   18|    3485|   7107|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    5|       2|     10|    0|
+=======
 |Instance         |        0|   18|    4158|   8221|    0|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|    110|    -|
@@ -68,6 +107,7 @@
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Utilization (%)  |        0|    5|       3|     12|    0|
+>>>>>>> main
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -75,12 +115,20 @@
     +--------------------------------------------------+---------------------------------------+---------+----+------+------+-----+
     |                     Instance                     |                 Module                | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +--------------------------------------------------+---------------------------------------+---------+----+------+------+-----+
+<<<<<<< HEAD
+    |grp_accelerator_Pipeline_VITIS_LOOP_157_9_fu_349  |accelerator_Pipeline_VITIS_LOOP_157_9  |        0|   0|   196|   352|    0|
+    |grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_274   |accelerator_Pipeline_VITIS_LOOP_47_1   |        0|   0|   198|   366|    0|
+    |grp_accelerator_Pipeline_VITIS_LOOP_65_3_fu_298   |accelerator_Pipeline_VITIS_LOOP_65_3   |        0|  18|  2375|  6067|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+------+------+-----+
+    |Total                                             |                                       |        0|  18|  2769|  6785|    0|
+=======
     |grp_accelerator_Pipeline_VITIS_LOOP_165_9_fu_485  |accelerator_Pipeline_VITIS_LOOP_165_9  |        0|   0|   196|   352|    0|
     |grp_accelerator_Pipeline_VITIS_LOOP_55_1_fu_402   |accelerator_Pipeline_VITIS_LOOP_55_1   |        0|   0|   199|   439|    0|
     |grp_accelerator_Pipeline_VITIS_LOOP_73_3_fu_434   |accelerator_Pipeline_VITIS_LOOP_73_3   |        0|  18|  2969|  6420|    0|
     |control_s_axi_U                                   |control_s_axi                          |        0|   0|   794|  1010|    0|
     +--------------------------------------------------+---------------------------------------+---------+----+------+------+-----+
     |Total                                             |                                       |        0|  18|  4158|  8221|    0|
+>>>>>>> main
     +--------------------------------------------------+---------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -96,6 +144,25 @@
     +--------------------------+----------+----+---+----+------------+------------+
     |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------+----------+----+---+----+------------+------------+
+<<<<<<< HEAD
+    |cmp_i_i_fu_425_p2         |      icmp|   0|  0|  23|          16|           1|
+    |select_ln65_10_fu_576_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_11_fu_584_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_12_fu_592_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_13_fu_631_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_14_fu_638_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_15_fu_645_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln65_1_fu_512_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_2_fu_520_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_3_fu_528_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_4_fu_536_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_5_fu_544_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_6_fu_552_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_7_fu_560_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_8_fu_624_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_9_fu_568_p3   |    select|   0|  0|  16|           1|          16|
+    |select_ln65_fu_504_p3     |    select|   0|  0|  16|           1|          16|
+=======
     |cmp_i_i_fu_561_p2         |      icmp|   0|  0|  23|          16|           1|
     |select_ln73_10_fu_712_p3  |    select|   0|  0|  16|           1|          16|
     |select_ln73_11_fu_720_p3  |    select|   0|  0|  16|           1|          16|
@@ -113,11 +180,21 @@
     |select_ln73_8_fu_760_p3   |    select|   0|  0|  16|           1|          16|
     |select_ln73_9_fu_704_p3   |    select|   0|  0|  16|           1|          16|
     |select_ln73_fu_640_p3     |    select|   0|  0|  16|           1|          16|
+>>>>>>> main
     +--------------------------+----------+----+---+----+------------+------------+
     |Total                     |          |   0|  0| 279|          32|         257|
     +--------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
+<<<<<<< HEAD
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  43|          8|    1|          8|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  43|          8|    1|          8|
+    +-----------+----+-----------+-----+-----------+
+=======
     +---------------------+----+-----------+-----+-----------+
     |         Name        | LUT| Input Size| Bits| Total Bits|
     +---------------------+----+-----------+-----+-----------+
@@ -129,11 +206,66 @@
     +---------------------+----+-----------+-----+-----------+
     |Total                | 110|         22|    5|         22|
     +---------------------+----+-----------+-----+-----------+
+>>>>>>> main
 
     * Register: 
     +---------------------------------------------------------------+----+----+-----+-----------+
     |                              Name                             | FF | LUT| Bits| Const Bits|
     +---------------------------------------------------------------+----+----+-----+-----------+
+<<<<<<< HEAD
+    |ap_CS_fsm                                                      |   7|   0|    7|          0|
+    |array_back1_bias_change_8_loc_fu_96                            |  16|   0|   16|          0|
+    |array_back1_bias_change_9_loc_fu_92                            |  16|   0|   16|          0|
+    |array_back1_weight_changes_24_loc_fu_112                       |  16|   0|   16|          0|
+    |array_back1_weight_changes_25_loc_fu_108                       |  16|   0|   16|          0|
+    |array_back1_weight_changes_26_loc_fu_104                       |  16|   0|   16|          0|
+    |array_back1_weight_changes_27_loc_fu_100                       |  16|   0|   16|          0|
+    |array_back2_bias_change_8_loc_fu_120                           |  16|   0|   16|          0|
+    |array_back2_bias_change_9_loc_fu_116                           |  16|   0|   16|          0|
+    |array_back2_weight_changes_24_loc_fu_136                       |  16|   0|   16|          0|
+    |array_back2_weight_changes_25_loc_fu_132                       |  16|   0|   16|          0|
+    |array_back2_weight_changes_26_loc_fu_128                       |  16|   0|   16|          0|
+    |array_back2_weight_changes_27_loc_fu_124                       |  16|   0|   16|          0|
+    |bias_1_local_idx1_val108_loc_fu_176                            |  16|   0|   16|          0|
+    |bias_1_local_idx_val107_loc_fu_172                             |  16|   0|   16|          0|
+    |bias_2_local_idx4_val110_loc_fu_184                            |  16|   0|   16|          0|
+    |bias_2_local_idx_val109_loc_fu_180                             |  16|   0|   16|          0|
+    |cmp_i_i_reg_1101                                               |   1|   0|    1|          0|
+    |grp_accelerator_Pipeline_VITIS_LOOP_157_9_fu_349_ap_start_reg  |   1|   0|    1|          0|
+    |grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_274_ap_start_reg   |   1|   0|    1|          0|
+    |grp_accelerator_Pipeline_VITIS_LOOP_65_3_fu_298_ap_start_reg   |   1|   0|    1|          0|
+    |output_array_inference_1_loc_fu_160                            |  16|   0|   16|          0|
+    |output_array_inference_2_loc_fu_164                            |  16|   0|   16|          0|
+    |output_array_inference_3_loc_fu_168                            |  16|   0|   16|          0|
+    |output_array_inference_4_loc_fu_152                            |  16|   0|   16|          0|
+    |output_array_inference_5_loc_fu_148                            |  16|   0|   16|          0|
+    |output_array_inference_6_loc_fu_144                            |  16|   0|   16|          0|
+    |output_array_inference_7_loc_fu_140                            |  16|   0|   16|          0|
+    |output_array_inference_loc_fu_156                              |  16|   0|   16|          0|
+    |select_ln65_10_reg_1171                                        |  16|   0|   16|          0|
+    |select_ln65_11_reg_1176                                        |  16|   0|   16|          0|
+    |select_ln65_12_reg_1181                                        |  16|   0|   16|          0|
+    |select_ln65_1_reg_1131                                         |  16|   0|   16|          0|
+    |select_ln65_2_reg_1136                                         |  16|   0|   16|          0|
+    |select_ln65_3_reg_1141                                         |  16|   0|   16|          0|
+    |select_ln65_4_reg_1146                                         |  16|   0|   16|          0|
+    |select_ln65_5_reg_1151                                         |  16|   0|   16|          0|
+    |select_ln65_6_reg_1156                                         |  16|   0|   16|          0|
+    |select_ln65_7_reg_1161                                         |  16|   0|   16|          0|
+    |select_ln65_9_reg_1166                                         |  16|   0|   16|          0|
+    |select_ln65_reg_1126                                           |  16|   0|   16|          0|
+    |targetBlock_reg_1106                                           |   1|   0|    1|          0|
+    |w1_local_0_loc_fu_188                                          |  16|   0|   16|          0|
+    |w1_local_1_0_loc_fu_192                                        |  16|   0|   16|          0|
+    |w1_local_2_0_loc_fu_196                                        |  16|   0|   16|          0|
+    |w1_local_3_0_loc_fu_200                                        |  16|   0|   16|          0|
+    |w2_local_0_loc_fu_204                                          |  16|   0|   16|          0|
+    |w2_local_1_0_loc_fu_208                                        |  16|   0|   16|          0|
+    |w2_local_2_0_loc_fu_212                                        |  16|   0|   16|          0|
+    |w2_local_3_0_loc_fu_216                                        |  16|   0|   16|          0|
+    +---------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                          | 716|   0|  716|          0|
+=======
     |ap_CS_fsm                                                      |   9|   0|    9|          0|
     |array_back1_bias_change_8_loc_fu_132                           |  16|   0|   16|          0|
     |array_back1_bias_change_9_loc_fu_128                           |  16|   0|   16|          0|
@@ -195,6 +327,7 @@
     |w2_local_3_0_loc_fu_252                                        |  16|   0|   16|          0|
     +---------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                          | 862|   0|  862|          0|
+>>>>>>> main
     +---------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -203,6 +336,38 @@
 == Interface
 ================================================================
 * Summary: 
+<<<<<<< HEAD
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|   accelerator|  return value|
+|ap_return        |  out|  256|  ap_ctrl_hs|   accelerator|  return value|
+|w1_address0      |  out|    2|   ap_memory|            w1|         array|
+|w1_ce0           |  out|    1|   ap_memory|            w1|         array|
+|w1_q0            |   in|   16|   ap_memory|            w1|         array|
+|w1_address1      |  out|    2|   ap_memory|            w1|         array|
+|w1_ce1           |  out|    1|   ap_memory|            w1|         array|
+|w1_q1            |   in|   16|   ap_memory|            w1|         array|
+|w2_address0      |  out|    2|   ap_memory|            w2|         array|
+|w2_ce0           |  out|    1|   ap_memory|            w2|         array|
+|w2_q0            |   in|   16|   ap_memory|            w2|         array|
+|w2_address1      |  out|    2|   ap_memory|            w2|         array|
+|w2_ce1           |  out|    1|   ap_memory|            w2|         array|
+|w2_q1            |   in|   16|   ap_memory|            w2|         array|
+|bias_1_address0  |  out|    1|   ap_memory|        bias_1|         array|
+|bias_1_ce0       |  out|    1|   ap_memory|        bias_1|         array|
+|bias_1_q0        |   in|   16|   ap_memory|        bias_1|         array|
+|bias_2_address0  |  out|    1|   ap_memory|        bias_2|         array|
+|bias_2_ce0       |  out|    1|   ap_memory|        bias_2|         array|
+|bias_2_q0        |   in|   16|   ap_memory|        bias_2|         array|
+|training         |   in|   16|     ap_none|      training|        scalar|
++-----------------+-----+-----+------------+--------------+--------------+
+=======
 +-----------------------+-----+-----+------------+--------------+--------------+
 |       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
 +-----------------------+-----+-----+------------+--------------+--------------+
@@ -227,4 +392,5 @@
 |ap_rst_n               |   in|    1|  ap_ctrl_hs|   accelerator|  return value|
 |interrupt              |  out|    1|  ap_ctrl_hs|   accelerator|  return value|
 +-----------------------+-----+-----+------------+--------------+--------------+
+>>>>>>> main
 

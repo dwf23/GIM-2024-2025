@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
+<<<<<<< HEAD
+      <RtlPort>
+        <name>bias_1_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bias_1_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bias_1_q0</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bias_2_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bias_2_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bias_2_q0</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>training</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_address1</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_ce1</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_q0</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w1_q1</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_address1</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_ce1</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_q0</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>w2_q1</name>
+        <type>Signed</type>
+        <fractionWidth>9</fractionWidth>
+      </RtlPort>
+  </CTypeInfo>
+  <DesignConstraint>
+    <clk_period>30.303</clk_period>
+=======
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
+>>>>>>> main
   </DesignConstraint>
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
+<<<<<<< HEAD
+    <latency>97</latency>
+    <II>98 ~ 41099</II>
+=======
     <latency>162</latency>
     <II>163 ~ 72664</II>
+>>>>>>> main
   </modelParameters>
 </AdditionalInfo>

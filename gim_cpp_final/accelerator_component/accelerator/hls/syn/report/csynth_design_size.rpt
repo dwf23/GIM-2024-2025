@@ -6,6 +6,7 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+<<<<<<< HEAD
 | Compile/Link  |                             | 21,901       | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
@@ -30,13 +31,43 @@
 | HW Transforms |                             |              | After hardware transfomations                                                          |
 |               | (1) lowering                |  3,202       | initial conversion to HW specific instructions                                         |
 |               | (2) optimizations           |  2,923       | high level synthesis optimizations                                                     |
+=======
+| Compile/Link  |                             | 21,909       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 16,305       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  6,274       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  5,568       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  3,568       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  3,544       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  3,544       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  3,544       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  3,544       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  3,548       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  3,373       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  3,236       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  3,293       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  3,216       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  3,232       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  2,953       | high level synthesis optimizations                                                     |
+>>>>>>> main
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------------+-------------------+------------------+------------------+------------------+------------------+------------------+
 | Function       | Location          | Compile/Link     | Unroll/Inline    | Array/Struct     | Performance      | HW Transforms    |
 +----------------+-------------------+------------------+------------------+------------------+------------------+------------------+
+<<<<<<< HEAD
 | + accelerator  | accelerator.cpp:7 | 21,901           | 3,562            | 3,536            | 3,194            | 2,923            |
+=======
+| + accelerator  | accelerator.cpp:7 | 21,909           | 3,568            | 3,548            | 3,216            | 2,953            |
+>>>>>>> main
 |    Inference   | gim_model.h:54    |     6            |                  |                  |                  |                  |
 |  + model_array | array.cpp:4       | 14,472 (4 calls) | 2,560 (16 calls) | 2,528 (16 calls) | 2,064 (16 calls) | 2,064 (16 calls) |
 |     Array      | gim_model.h:43    |    20 (4 calls)  |                  |                  |                  |                  |

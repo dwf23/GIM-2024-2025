@@ -9,9 +9,15 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xczu3eg-sfvc784-1-e</Part>
 <TopModelName>model_array</TopModelName>
+<<<<<<< HEAD
 <TargetClockPeriod>30.30</TargetClockPeriod>
 <ClockUncertainty>6.00</ClockUncertainty>
 <TargetInitiationInterval>5</TargetInitiationInterval>
+=======
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+<TargetInitiationInterval>10</TargetInitiationInterval>
+>>>>>>> main
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -19,6 +25,7 @@
 <PipelineType>yes</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
+<<<<<<< HEAD
 <EstimatedClockPeriod>8.001</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
@@ -33,6 +40,22 @@
 <PipelineDepth>6</PipelineDepth>
 <Interval-min>5</Interval-min>
 <Interval-max>5</Interval-max>
+=======
+<EstimatedClockPeriod>5.091</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>8</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>9</PipelineInitiationInterval>
+<PipelineDepth>9</PipelineDepth>
+<Interval-min>9</Interval-min>
+<Interval-max>9</Interval-max>
+>>>>>>> main
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
@@ -44,8 +67,13 @@
 <AreaEstimates>
 <Resources>
 <DSP>18</DSP>
+<<<<<<< HEAD
 <FF>676</FF>
 <LUT>570</LUT>
+=======
+<FF>873</FF>
+<LUT>581</LUT>
+>>>>>>> main
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -126,6 +154,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>ap_ce</name>
 <Object>model_array</Object>
 <Type>return value</Type>
@@ -137,6 +166,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+=======
+>>>>>>> main
 <name>ap_return_0</name>
 <Object>model_array</Object>
 <Type>return value</Type>
@@ -247,6 +278,20 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
+=======
+<name>ap_ce</name>
+<Object>model_array</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+>>>>>>> main
 <name>p_read10</name>
 <Object>p_read10</Object>
 <Type>scalar</Type>

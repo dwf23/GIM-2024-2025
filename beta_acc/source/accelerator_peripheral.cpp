@@ -43,17 +43,14 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
     epoch = 1000;
 
     if (self_test){
-        while(tx_stream.full());
         std::cout << "Self-Initializing" << std::endl;
         tx_stream.write(alpha_packet);
     }
     //Initialization sequence
-    while(!initialized && test == 1){
-        while(rx_stream.empty()); //wait to pull something off the fifo
+    while(!initialized && test == 1){ //wait to pull something off the fifo
         std::cout << "Packet off the FIFO" << std::endl;
         in_val = rx_stream.read();
         if(in_val.dest == 1 && in_val.data[0] == fixed_16(4) && in_val.data[1] == fixed_16(3)){
-            while(tx_stream.full());
             tx_stream.write(initialization_packet);
             std::cout << "Beta Received Initialization Packet" << std::endl;
             std::cout << "Beta Sent Initialization Packet" << std::endl;
@@ -62,7 +59,6 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
             break;
         }
         if (in_val.dest == 1 && in_val.data[0] == fixed_16(2) && in_val.data[1] == fixed_16(1)){
-            while(tx_stream.full());
             tx_stream.write(initialization_packet);
             std::cout << "Beta Received Initialization Packet" << std::endl;
             std::cout << "Beta Sent Initialization Packet" << std::endl;
@@ -181,7 +177,6 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
             // receive output_1 from alpha
             axis<fixed_16, 0, 1, 1> read_output_1_packet(0,0,0,0);
             while(expecting_input){
-                while(rx_stream.empty());
                 std::cout << "Packet off the FIFO" << std::endl;
                 read_output_1_packet = rx_stream.read();
                 if (read_output_1_packet.dest == 1){
@@ -278,7 +273,6 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
             if (self_test && training == 0 && j==3){
                 break;
             }
-            while(tx_stream.full());
             tx_stream.write(write_delta_1_packet);
             //std::cout << "Beta Wrote Delta 1 Packet: " << delta_1[0].to_float() <<
             //" , " << delta_1[1].to_float() << std::endl;
@@ -313,7 +307,7 @@ Inference accelerator_peripheral(fixed_16 w2[ARRAY_SIZE][ARRAY_SIZE],
         // output_array.new_w2[n][m] = w2_local[n][m];
         }
     }
-    
+
     return output_array;
 
 }

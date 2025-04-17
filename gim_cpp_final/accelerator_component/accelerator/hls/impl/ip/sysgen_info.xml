@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
+<<<<<<< HEAD
       <RtlPort>
         <name>bias_1_address0</name>
         <type>Unsigned</type>
@@ -99,11 +100,21 @@
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>30.303</clk_period>
+=======
+  </CTypeInfo>
+  <DesignConstraint>
+    <clk_period>10</clk_period>
+>>>>>>> main
   </DesignConstraint>
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
+<<<<<<< HEAD
     <latency>97</latency>
     <II>98 ~ 41099</II>
+=======
+    <latency>162</latency>
+    <II>163 ~ 72664</II>
+>>>>>>> main
   </modelParameters>
 </AdditionalInfo>

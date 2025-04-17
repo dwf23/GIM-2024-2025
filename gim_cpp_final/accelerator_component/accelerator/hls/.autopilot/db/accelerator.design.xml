@@ -5,6 +5,7 @@
 <ModuleName>accelerator</ModuleName>
 <InstancesList>
 <Instance>
+<<<<<<< HEAD
 <InstName>grp_accelerator_Pipeline_VITIS_LOOP_47_1_fu_274</InstName>
 <ModuleName>accelerator_Pipeline_VITIS_LOOP_47_1</ModuleName>
 <IsCompInst>true</IsCompInst>
@@ -15,6 +16,18 @@
 <ModuleName>accelerator_Pipeline_VITIS_LOOP_65_3</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>298</ID>
+=======
+<InstName>grp_accelerator_Pipeline_VITIS_LOOP_55_1_fu_402</InstName>
+<ModuleName>accelerator_Pipeline_VITIS_LOOP_55_1</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>402</ID>
+</Instance>
+<Instance>
+<InstName>grp_accelerator_Pipeline_VITIS_LOOP_73_3_fu_434</InstName>
+<ModuleName>accelerator_Pipeline_VITIS_LOOP_73_3</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>434</ID>
+>>>>>>> main
 <InstancesList>
 <Instance>
 <InstName>grp_model_array_fu_596</InstName>
@@ -25,10 +38,17 @@
 </InstancesList>
 </Instance>
 <Instance>
+<<<<<<< HEAD
 <InstName>grp_accelerator_Pipeline_VITIS_LOOP_157_9_fu_349</InstName>
 <ModuleName>accelerator_Pipeline_VITIS_LOOP_157_9</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>349</ID>
+=======
+<InstName>grp_accelerator_Pipeline_VITIS_LOOP_165_9_fu_485</InstName>
+<ModuleName>accelerator_Pipeline_VITIS_LOOP_165_9</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>485</ID>
+>>>>>>> main
 </Instance>
 </InstancesList>
 </TopModule>
@@ -36,6 +56,7 @@
 
 <ModuleInformation>
 <Module>
+<<<<<<< HEAD
 <Name>accelerator_Pipeline_VITIS_LOOP_47_1</Name>
 <Loops>
 <VITIS_LOOP_47_1></VITIS_LOOP_47_1>
@@ -45,34 +66,65 @@
 <TargetClockPeriod>30.30</TargetClockPeriod>
 <ClockUncertainty>6.00</ClockUncertainty>
 <EstimatedClockPeriod>1.699</EstimatedClockPeriod>
+=======
+<Name>accelerator_Pipeline_VITIS_LOOP_55_1</Name>
+<Loops>
+<VITIS_LOOP_55_1></VITIS_LOOP_55_1>
+</Loops>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+<EstimatedClockPeriod>1.954</EstimatedClockPeriod>
+>>>>>>> main
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>4</Best-caseLatency>
 <Average-caseLatency>4</Average-caseLatency>
 <Worst-caseLatency>4</Worst-caseLatency>
+<<<<<<< HEAD
 <Best-caseRealTimeLatency>0.121 us</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.121 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.121 us</Worst-caseRealTimeLatency>
+=======
+<Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
+>>>>>>> main
 <PipelineInitiationInterval>3</PipelineInitiationInterval>
 <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
+<<<<<<< HEAD
 <VITIS_LOOP_47_1>
 <Name>VITIS_LOOP_47_1</Name>
 <Slack>24.30</Slack>
 <TripCount>2</TripCount>
 <Latency>2</Latency>
 <AbsoluteTimeLatency>60.606 ns</AbsoluteTimeLatency>
+=======
+<VITIS_LOOP_55_1>
+<Name>VITIS_LOOP_55_1</Name>
+<Slack>8.00</Slack>
+<TripCount>2</TripCount>
+<Latency>2</Latency>
+<AbsoluteTimeLatency>20.000 ns</AbsoluteTimeLatency>
+>>>>>>> main
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
+<<<<<<< HEAD
 </VITIS_LOOP_47_1>
+=======
+</VITIS_LOOP_55_1>
+>>>>>>> main
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
+<<<<<<< HEAD
 <SourceLocation>../accelerator.cpp:47</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_47_1>
@@ -81,15 +133,32 @@
 <ViolationType>-</ViolationType>
 <SourceLocation>../accelerator.cpp:51</SourceLocation>
 </VITIS_LOOP_47_1>
+=======
+<SourceLocation>../accelerator.cpp:55</SourceLocation>
+<SummaryOfLoopViolations>
+<VITIS_LOOP_55_1>
+<Name>VITIS_LOOP_55_1</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../accelerator.cpp:55</SourceLocation>
+</VITIS_LOOP_55_1>
+>>>>>>> main
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
+<<<<<<< HEAD
 <FF>198</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>366</LUT>
+=======
+<FF>199</FF>
+<AVAIL_FF>141120</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>439</LUT>
+>>>>>>> main
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -106,7 +175,11 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -117,7 +190,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -128,7 +205,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -139,7 +220,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -150,7 +235,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -161,7 +250,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_47_1</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_55_1</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -171,6 +264,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>w1_address0</name>
 <Object>w1</Object>
 <Type>array</Type>
@@ -303,6 +397,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+=======
+>>>>>>> main
 <name>bias_1_address0</name>
 <Object>bias_1</Object>
 <Type>array</Type>
@@ -369,6 +465,97 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
+=======
+<name>w1_1_load</name>
+<Object>w1_1_load</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w1_0_load</name>
+<Object>w1_0_load</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w1_1_load_1</name>
+<Object>w1_1_load_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w1_0_load_1</name>
+<Object>w1_0_load_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w2_1_load</name>
+<Object>w2_1_load</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w2_0_load</name>
+<Object>w2_0_load</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w2_1_load_1</name>
+<Object>w2_1_load_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>w2_0_load_1</name>
+<Object>w2_0_load_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+>>>>>>> main
 <name>w2_local_3_out</name>
 <Object>w2_local_3_out</Object>
 <Type>pointer</Type>
@@ -545,8 +732,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx4_promoted151_out</name>
 <Object>bias_2_local_idx4_promoted151_out</Object>
+=======
+<name>bias_2_local_idx90_promoted157_out</name>
+<Object>bias_2_local_idx90_promoted157_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -556,8 +748,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx4_promoted151_out_ap_vld</name>
 <Object>bias_2_local_idx4_promoted151_out</Object>
+=======
+<name>bias_2_local_idx90_promoted157_out_ap_vld</name>
+<Object>bias_2_local_idx90_promoted157_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -567,8 +764,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx_promoted149_out</name>
 <Object>bias_2_local_idx_promoted149_out</Object>
+=======
+<name>bias_2_local_idx89_promoted155_out</name>
+<Object>bias_2_local_idx89_promoted155_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -578,8 +780,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx_promoted149_out_ap_vld</name>
 <Object>bias_2_local_idx_promoted149_out</Object>
+=======
+<name>bias_2_local_idx89_promoted155_out_ap_vld</name>
+<Object>bias_2_local_idx89_promoted155_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -589,8 +796,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx1_promoted147_out</name>
 <Object>bias_1_local_idx1_promoted147_out</Object>
+=======
+<name>bias_1_local_idx97_promoted153_out</name>
+<Object>bias_1_local_idx97_promoted153_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -600,8 +812,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx1_promoted147_out_ap_vld</name>
 <Object>bias_1_local_idx1_promoted147_out</Object>
+=======
+<name>bias_1_local_idx97_promoted153_out_ap_vld</name>
+<Object>bias_1_local_idx97_promoted153_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -611,8 +828,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx_promoted145_out</name>
 <Object>bias_1_local_idx_promoted145_out</Object>
+=======
+<name>bias_1_local_idx96_promoted151_out</name>
+<Object>bias_1_local_idx96_promoted151_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -622,8 +844,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx_promoted145_out_ap_vld</name>
 <Object>bias_1_local_idx_promoted145_out</Object>
+=======
+<name>bias_1_local_idx96_promoted151_out_ap_vld</name>
+<Object>bias_1_local_idx96_promoted151_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -638,6 +865,7 @@
 <Name>model_array</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
+<<<<<<< HEAD
 <TargetClockPeriod>30.30</TargetClockPeriod>
 <ClockUncertainty>6.00</ClockUncertainty>
 <TargetInitiationInterval>5</TargetInitiationInterval>
@@ -652,6 +880,22 @@
 <Worst-caseRealTimeLatency>0.152 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>5</PipelineInitiationInterval>
 <PipelineDepth>6</PipelineDepth>
+=======
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+<TargetInitiationInterval>10</TargetInitiationInterval>
+<EstimatedClockPeriod>5.091</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>8</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>9</PipelineInitiationInterval>
+<PipelineDepth>9</PipelineDepth>
+>>>>>>> main
 <PipelineType>yes</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -665,10 +909,17 @@
 <DSP>18</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>5</UTIL_DSP>
+<<<<<<< HEAD
 <FF>676</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>570</LUT>
+=======
+<FF>873</FF>
+<AVAIL_FF>141120</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>581</LUT>
+>>>>>>> main
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -747,6 +998,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>ap_ce</name>
 <Object>model_array</Object>
 <Type>return value</Type>
@@ -758,6 +1010,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+=======
+>>>>>>> main
 <name>ap_return_0</name>
 <Object>model_array</Object>
 <Type>return value</Type>
@@ -868,6 +1122,20 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
+=======
+<name>ap_ce</name>
+<Object>model_array</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+>>>>>>> main
 <name>p_read10</name>
 <Object>p_read10</Object>
 <Type>scalar</Type>
@@ -991,6 +1259,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
+<<<<<<< HEAD
 <Name>accelerator_Pipeline_VITIS_LOOP_65_3</Name>
 <Loops>
 <VITIS_LOOP_65_3></VITIS_LOOP_65_3>
@@ -1015,25 +1284,63 @@
 <VITIS_LOOP_65_3>
 <Name>VITIS_LOOP_65_3</Name>
 <Slack>24.30</Slack>
+=======
+<Name>accelerator_Pipeline_VITIS_LOOP_73_3</Name>
+<Loops>
+<VITIS_LOOP_73_3></VITIS_LOOP_73_3>
+</Loops>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+<EstimatedClockPeriod>7.182</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>146</Best-caseLatency>
+<Average-caseLatency>36397</Average-caseLatency>
+<Worst-caseLatency>72647</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.460 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.364 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.726 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>146 ~ 72647</PipelineInitiationInterval>
+<PipelineType>no</PipelineType>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<VITIS_LOOP_73_3>
+<Name>VITIS_LOOP_73_3</Name>
+<Slack>8.00</Slack>
+>>>>>>> main
 <TripCount>
 <range>
 <min>0</min>
 <max>500</max>
 </range>
 </TripCount>
+<<<<<<< HEAD
 <Latency>81 ~ 41081</Latency>
 <AbsoluteTimeLatency>2.455 us ~ 1.245 ms</AbsoluteTimeLatency>
 <PipelineII>82</PipelineII>
 <PipelineDepth>82</PipelineDepth>
+=======
+<Latency>144 ~ 72644</Latency>
+<AbsoluteTimeLatency>1.440 us ~ 0.726 ms</AbsoluteTimeLatency>
+<PipelineII>145</PipelineII>
+<PipelineDepth>145</PipelineDepth>
+>>>>>>> main
 <PipelineType>yes</PipelineType>
 <InstanceList>
 <Instance>grp_model_array_fu_596</Instance>
 </InstanceList>
+<<<<<<< HEAD
 </VITIS_LOOP_65_3>
+=======
+</VITIS_LOOP_73_3>
+>>>>>>> main
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
+<<<<<<< HEAD
 <SourceLocation>../accelerator.cpp:64</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_65_3>
@@ -1042,6 +1349,16 @@
 <ViolationType>-</ViolationType>
 <SourceLocation>../accelerator.cpp:65</SourceLocation>
 </VITIS_LOOP_65_3>
+=======
+<SourceLocation>../accelerator.cpp:72</SourceLocation>
+<SummaryOfLoopViolations>
+<VITIS_LOOP_73_3>
+<Name>VITIS_LOOP_73_3</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../accelerator.cpp:73</SourceLocation>
+</VITIS_LOOP_73_3>
+>>>>>>> main
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -1050,12 +1367,21 @@
 <DSP>18</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>5</UTIL_DSP>
+<<<<<<< HEAD
 <FF>2375</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
 <LUT>6067</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>8</UTIL_LUT>
+=======
+<FF>2969</FF>
+<AVAIL_FF>141120</AVAIL_FF>
+<UTIL_FF>2</UTIL_FF>
+<LUT>6420</LUT>
+<AVAIL_LUT>70560</AVAIL_LUT>
+<UTIL_LUT>9</UTIL_LUT>
+>>>>>>> main
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
@@ -1067,7 +1393,11 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1078,7 +1408,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1089,7 +1423,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1100,7 +1438,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1111,7 +1453,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1122,7 +1468,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1133,7 +1483,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_return</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_65_3</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_73_3</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1231,8 +1585,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx4_promoted151_reload</name>
 <Object>bias_2_local_idx4_promoted151_reload</Object>
+=======
+<name>bias_2_local_idx90_promoted157_reload</name>
+<Object>bias_2_local_idx90_promoted157_reload</Object>
+>>>>>>> main
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1242,8 +1601,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx_promoted149_reload</name>
 <Object>bias_2_local_idx_promoted149_reload</Object>
+=======
+<name>bias_2_local_idx89_promoted155_reload</name>
+<Object>bias_2_local_idx89_promoted155_reload</Object>
+>>>>>>> main
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1253,8 +1617,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx1_promoted147_reload</name>
 <Object>bias_1_local_idx1_promoted147_reload</Object>
+=======
+<name>bias_1_local_idx97_promoted153_reload</name>
+<Object>bias_1_local_idx97_promoted153_reload</Object>
+>>>>>>> main
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1264,8 +1633,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx_promoted145_reload</name>
 <Object>bias_1_local_idx_promoted145_reload</Object>
+=======
+<name>bias_1_local_idx96_promoted151_reload</name>
+<Object>bias_1_local_idx96_promoted151_reload</Object>
+>>>>>>> main
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1473,8 +1847,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx4_val110_out</name>
 <Object>bias_2_local_idx4_val110_out</Object>
+=======
+<name>bias_2_local_idx90_val110_out</name>
+<Object>bias_2_local_idx90_val110_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1484,8 +1863,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx4_val110_out_ap_vld</name>
 <Object>bias_2_local_idx4_val110_out</Object>
+=======
+<name>bias_2_local_idx90_val110_out_ap_vld</name>
+<Object>bias_2_local_idx90_val110_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1495,8 +1879,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx_val109_out</name>
 <Object>bias_2_local_idx_val109_out</Object>
+=======
+<name>bias_2_local_idx89_val109_out</name>
+<Object>bias_2_local_idx89_val109_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1506,8 +1895,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_2_local_idx_val109_out_ap_vld</name>
 <Object>bias_2_local_idx_val109_out</Object>
+=======
+<name>bias_2_local_idx89_val109_out_ap_vld</name>
+<Object>bias_2_local_idx89_val109_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1517,8 +1911,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx1_val108_out</name>
 <Object>bias_1_local_idx1_val108_out</Object>
+=======
+<name>bias_1_local_idx97_val108_out</name>
+<Object>bias_1_local_idx97_val108_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1528,8 +1927,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx1_val108_out_ap_vld</name>
 <Object>bias_1_local_idx1_val108_out</Object>
+=======
+<name>bias_1_local_idx97_val108_out_ap_vld</name>
+<Object>bias_1_local_idx97_val108_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1539,8 +1943,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx_val107_out</name>
 <Object>bias_1_local_idx_val107_out</Object>
+=======
+<name>bias_1_local_idx96_val107_out</name>
+<Object>bias_1_local_idx96_val107_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -1550,8 +1959,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>bias_1_local_idx_val107_out_ap_vld</name>
 <Object>bias_1_local_idx_val107_out</Object>
+=======
+<name>bias_1_local_idx96_val107_out_ap_vld</name>
+<Object>bias_1_local_idx96_val107_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2003,6 +2417,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
+<<<<<<< HEAD
 <Name>accelerator_Pipeline_VITIS_LOOP_157_9</Name>
 <Loops>
 <VITIS_LOOP_157_9></VITIS_LOOP_157_9>
@@ -2011,35 +2426,65 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>30.30</TargetClockPeriod>
 <ClockUncertainty>6.00</ClockUncertainty>
+=======
+<Name>accelerator_Pipeline_VITIS_LOOP_165_9</Name>
+<Loops>
+<VITIS_LOOP_165_9></VITIS_LOOP_165_9>
+</Loops>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+>>>>>>> main
 <EstimatedClockPeriod>1.954</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>4</Best-caseLatency>
 <Average-caseLatency>4</Average-caseLatency>
 <Worst-caseLatency>4</Worst-caseLatency>
+<<<<<<< HEAD
 <Best-caseRealTimeLatency>0.121 us</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.121 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.121 us</Worst-caseRealTimeLatency>
+=======
+<Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
+>>>>>>> main
 <PipelineInitiationInterval>3</PipelineInitiationInterval>
 <PipelineType>loop auto-rewind (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
+<<<<<<< HEAD
 <VITIS_LOOP_157_9>
 <Name>VITIS_LOOP_157_9</Name>
 <Slack>24.30</Slack>
 <TripCount>2</TripCount>
 <Latency>2</Latency>
 <AbsoluteTimeLatency>60.606 ns</AbsoluteTimeLatency>
+=======
+<VITIS_LOOP_165_9>
+<Name>VITIS_LOOP_165_9</Name>
+<Slack>8.00</Slack>
+<TripCount>2</TripCount>
+<Latency>2</Latency>
+<AbsoluteTimeLatency>20.000 ns</AbsoluteTimeLatency>
+>>>>>>> main
 <PipelineII>1</PipelineII>
 <PipelineDepth>1</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
+<<<<<<< HEAD
 </VITIS_LOOP_157_9>
+=======
+</VITIS_LOOP_165_9>
+>>>>>>> main
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
+<<<<<<< HEAD
 <SourceLocation>../accelerator.cpp:157</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_157_9>
@@ -2048,6 +2493,16 @@
 <ViolationType>-</ViolationType>
 <SourceLocation>../accelerator.cpp:157</SourceLocation>
 </VITIS_LOOP_157_9>
+=======
+<SourceLocation>../accelerator.cpp:165</SourceLocation>
+<SummaryOfLoopViolations>
+<VITIS_LOOP_165_9>
+<Name>VITIS_LOOP_165_9</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../accelerator.cpp:165</SourceLocation>
+</VITIS_LOOP_165_9>
+>>>>>>> main
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -2073,7 +2528,11 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2084,7 +2543,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2095,7 +2558,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2106,7 +2573,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2117,7 +2588,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2128,7 +2603,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
+<<<<<<< HEAD
 <Object>accelerator_Pipeline_VITIS_LOOP_157_9</Object>
+=======
+<Object>accelerator_Pipeline_VITIS_LOOP_165_9</Object>
+>>>>>>> main
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2182,6 +2661,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>mux_case_1138</name>
 <Object>mux_case_1138</Object>
 <Type>scalar</Type>
@@ -2248,6 +2728,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+=======
+>>>>>>> main
 <name>mux_case_1144</name>
 <Object>mux_case_1144</Object>
 <Type>scalar</Type>
@@ -2270,8 +2752,79 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_4_1_0_0_0_load175_out</name>
 <Object>retval_4_1_0_0_0_load175_out</Object>
+=======
+<name>mux_case_1146</name>
+<Object>mux_case_1146</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mux_case_0145</name>
+<Object>mux_case_0145</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mux_case_1148</name>
+<Object>mux_case_1148</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mux_case_0147</name>
+<Object>mux_case_0147</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mux_case_1150</name>
+<Object>mux_case_1150</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mux_case_0149</name>
+<Object>mux_case_0149</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>retval_4_1_0_0_0_load181_out</name>
+<Object>retval_4_1_0_0_0_load181_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2281,8 +2834,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_4_1_0_0_0_load175_out_ap_vld</name>
 <Object>retval_4_1_0_0_0_load175_out</Object>
+=======
+<name>retval_4_1_0_0_0_load181_out_ap_vld</name>
+<Object>retval_4_1_0_0_0_load181_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2292,8 +2850,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_4_0_0_0_0_load173_out</name>
 <Object>retval_4_0_0_0_0_load173_out</Object>
+=======
+<name>retval_4_0_0_0_0_load179_out</name>
+<Object>retval_4_0_0_0_0_load179_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2303,8 +2866,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_4_0_0_0_0_load173_out_ap_vld</name>
 <Object>retval_4_0_0_0_0_load173_out</Object>
+=======
+<name>retval_4_0_0_0_0_load179_out_ap_vld</name>
+<Object>retval_4_0_0_0_0_load179_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2314,8 +2882,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_3_1_0_0_0_load171_out</name>
 <Object>retval_3_1_0_0_0_load171_out</Object>
+=======
+<name>retval_3_1_0_0_0_load177_out</name>
+<Object>retval_3_1_0_0_0_load177_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2325,8 +2898,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_3_1_0_0_0_load171_out_ap_vld</name>
 <Object>retval_3_1_0_0_0_load171_out</Object>
+=======
+<name>retval_3_1_0_0_0_load177_out_ap_vld</name>
+<Object>retval_3_1_0_0_0_load177_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2336,8 +2914,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_3_0_0_0_0_load169_out</name>
 <Object>retval_3_0_0_0_0_load169_out</Object>
+=======
+<name>retval_3_0_0_0_0_load175_out</name>
+<Object>retval_3_0_0_0_0_load175_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2347,8 +2930,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_3_0_0_0_0_load169_out_ap_vld</name>
 <Object>retval_3_0_0_0_0_load169_out</Object>
+=======
+<name>retval_3_0_0_0_0_load175_out_ap_vld</name>
+<Object>retval_3_0_0_0_0_load175_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2358,8 +2946,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_1_1_0_0_0_load167_out</name>
 <Object>retval_2_1_1_0_0_0_load167_out</Object>
+=======
+<name>retval_2_1_1_0_0_0_load173_out</name>
+<Object>retval_2_1_1_0_0_0_load173_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2369,8 +2962,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_1_1_0_0_0_load167_out_ap_vld</name>
 <Object>retval_2_1_1_0_0_0_load167_out</Object>
+=======
+<name>retval_2_1_1_0_0_0_load173_out_ap_vld</name>
+<Object>retval_2_1_1_0_0_0_load173_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2380,8 +2978,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_1_0_0_0_0_load165_out</name>
 <Object>retval_2_1_0_0_0_0_load165_out</Object>
+=======
+<name>retval_2_1_0_0_0_0_load171_out</name>
+<Object>retval_2_1_0_0_0_0_load171_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2391,8 +2994,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_1_0_0_0_0_load165_out_ap_vld</name>
 <Object>retval_2_1_0_0_0_0_load165_out</Object>
+=======
+<name>retval_2_1_0_0_0_0_load171_out_ap_vld</name>
+<Object>retval_2_1_0_0_0_0_load171_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2402,8 +3010,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_0_1_0_0_0_load163_out</name>
 <Object>retval_2_0_1_0_0_0_load163_out</Object>
+=======
+<name>retval_2_0_1_0_0_0_load169_out</name>
+<Object>retval_2_0_1_0_0_0_load169_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2413,8 +3026,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_0_1_0_0_0_load163_out_ap_vld</name>
 <Object>retval_2_0_1_0_0_0_load163_out</Object>
+=======
+<name>retval_2_0_1_0_0_0_load169_out_ap_vld</name>
+<Object>retval_2_0_1_0_0_0_load169_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2424,8 +3042,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_0_0_0_0_0_load161_out</name>
 <Object>retval_2_0_0_0_0_0_load161_out</Object>
+=======
+<name>retval_2_0_0_0_0_0_load167_out</name>
+<Object>retval_2_0_0_0_0_0_load167_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2435,8 +3058,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_2_0_0_0_0_0_load161_out_ap_vld</name>
 <Object>retval_2_0_0_0_0_0_load161_out</Object>
+=======
+<name>retval_2_0_0_0_0_0_load167_out_ap_vld</name>
+<Object>retval_2_0_0_0_0_0_load167_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2446,8 +3074,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_1_1_0_0_0_load159_out</name>
 <Object>retval_1_1_1_0_0_0_load159_out</Object>
+=======
+<name>retval_1_1_1_0_0_0_load165_out</name>
+<Object>retval_1_1_1_0_0_0_load165_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2457,8 +3090,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_1_1_0_0_0_load159_out_ap_vld</name>
 <Object>retval_1_1_1_0_0_0_load159_out</Object>
+=======
+<name>retval_1_1_1_0_0_0_load165_out_ap_vld</name>
+<Object>retval_1_1_1_0_0_0_load165_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2468,8 +3106,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_1_0_0_0_0_load157_out</name>
 <Object>retval_1_1_0_0_0_0_load157_out</Object>
+=======
+<name>retval_1_1_0_0_0_0_load163_out</name>
+<Object>retval_1_1_0_0_0_0_load163_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2479,8 +3122,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_1_0_0_0_0_load157_out_ap_vld</name>
 <Object>retval_1_1_0_0_0_0_load157_out</Object>
+=======
+<name>retval_1_1_0_0_0_0_load163_out_ap_vld</name>
+<Object>retval_1_1_0_0_0_0_load163_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2490,8 +3138,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_0_1_0_0_0_load155_out</name>
 <Object>retval_1_0_1_0_0_0_load155_out</Object>
+=======
+<name>retval_1_0_1_0_0_0_load161_out</name>
+<Object>retval_1_0_1_0_0_0_load161_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2501,8 +3154,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_0_1_0_0_0_load155_out_ap_vld</name>
 <Object>retval_1_0_1_0_0_0_load155_out</Object>
+=======
+<name>retval_1_0_1_0_0_0_load161_out_ap_vld</name>
+<Object>retval_1_0_1_0_0_0_load161_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2512,8 +3170,13 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_0_0_0_0_0_load153_out</name>
 <Object>retval_1_0_0_0_0_0_load153_out</Object>
+=======
+<name>retval_1_0_0_0_0_0_load159_out</name>
+<Object>retval_1_0_0_0_0_0_load159_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2523,8 +3186,13 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>retval_1_0_0_0_0_0_load153_out_ap_vld</name>
 <Object>retval_1_0_0_0_0_0_load153_out</Object>
+=======
+<name>retval_1_0_0_0_0_0_load159_out_ap_vld</name>
+<Object>retval_1_0_0_0_0_0_load159_out</Object>
+>>>>>>> main
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -2539,6 +3207,7 @@
 <Name>accelerator</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
+<<<<<<< HEAD
 <TargetClockPeriod>30.30</TargetClockPeriod>
 <ClockUncertainty>6.00</ClockUncertainty>
 <EstimatedClockPeriod>20.707</EstimatedClockPeriod>
@@ -2551,6 +3220,20 @@
 <Average-caseRealTimeLatency>0.624 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>1.245 ms</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>98 ~ 41099</PipelineInitiationInterval>
+=======
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.00</ClockUncertainty>
+<EstimatedClockPeriod>7.182</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>162</Best-caseLatency>
+<Average-caseLatency>36413</Average-caseLatency>
+<Worst-caseLatency>72663</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.620 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.364 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.727 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>163 ~ 72664</PipelineInitiationInterval>
+>>>>>>> main
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -2561,6 +3244,7 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
+<<<<<<< HEAD
 <DSP>18</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>5</UTIL_DSP>
@@ -2573,6 +3257,20 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
+=======
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>432</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<DSP>18</DSP>
+<AVAIL_DSP>360</AVAIL_DSP>
+<UTIL_DSP>5</UTIL_DSP>
+<FF>5020</FF>
+<AVAIL_FF>141120</AVAIL_FF>
+<UTIL_FF>3</UTIL_FF>
+<LUT>8610</LUT>
+<AVAIL_LUT>70560</AVAIL_LUT>
+<UTIL_LUT>12</UTIL_LUT>
+>>>>>>> main
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -2580,6 +3278,196 @@
 </AreaEstimates>
 <InterfaceSummary>
 <RtlPorts>
+<<<<<<< HEAD
+=======
+<name>s_axi_control_AWVALID</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_AWREADY</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_AWADDR</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>7</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_WVALID</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_WREADY</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_WDATA</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_WSTRB</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_ARVALID</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_ARREADY</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_ARADDR</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>7</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_RVALID</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_RREADY</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_RDATA</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_RRESP</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_BVALID</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_BREADY</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+<name>s_axi_control_BRESP</name>
+<Object>control</Object>
+<Type>scalar</Type>
+<IOProtocol>s_axi</IOProtocol>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+<HasCtrl>1</HasCtrl>
+</RtlPorts>
+<RtlPorts>
+>>>>>>> main
 <name>ap_clk</name>
 <Object>accelerator</Object>
 <Type>return value</Type>
@@ -2591,7 +3479,11 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>ap_rst</name>
+=======
+<name>ap_rst_n</name>
+>>>>>>> main
 <Object>accelerator</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2602,6 +3494,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>ap_start</name>
 <Object>accelerator</Object>
 <Type>return value</Type>
@@ -2614,6 +3507,9 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
+=======
+<name>interrupt</name>
+>>>>>>> main
 <Object>accelerator</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2621,6 +3517,7 @@
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
+<<<<<<< HEAD
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2883,6 +3780,9 @@
 <Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
+=======
+<Attribute>unknown</Attribute>
+>>>>>>> main
 </RtlPorts>
 </InterfaceSummary>
 </Module>

@@ -7,13 +7,13 @@ import numpy as np
 
 ###change the numbers below then run script
 #weight1 is 2by2 for weights from input to hidden
-weight_1 = np.array([[0.134521, 0.513428],[0.184326, 0.785156]])
+weight_1 = np.array([[10,10],[10,10]])
 #weight2 is 2by1 for weights from hidden to output
-weight_2 = np.array([0.293457, -0.288818])
+weight_2 = np.array([20, -20])
 #biases for inputs
-bias_1 = np.array([[0.505127], [0.0651855]])
+bias_1 = np.array([[-5], [-15]])
 #biases for the output
-bias_2 = np.array([0.367188])
+bias_2 = np.array([-10])
  
 class xor:
     def __init__(self, weight1, weight2, bias1, bias2):

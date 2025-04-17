@@ -1,7 +1,11 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'model_array'" level="0">
+<<<<<<< HEAD
 <item name = "Date">Sat Oct 19 10:54:27 2024
+=======
+<item name = "Date">Tue Oct 29 09:34:15 2024
+>>>>>>> main
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">accelerator</item>
@@ -15,7 +19,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<<<<<<< HEAD
 <column name="ap_clk">30.30 ns, 8.001 ns, 6.00 ns</column>
+=======
+<column name="ap_clk">10.00 ns, 5.091 ns, 2.00 ns</column>
+>>>>>>> main
 </table>
 </item>
 </section>
@@ -24,7 +32,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="">5, 5, 0.152 us, 0.152 us, 5, 5, yes</column>
+=======
+<column name="">8, 8, 80.000 ns, 80.000 ns, 9, 9, yes</column>
+>>>>>>> main
 </table>
 </item>
 <item name = "Detail">

@@ -7,7 +7,11 @@
 <Project Product="Vivado" Version="7" Minor="67" Path="C:/ELEC522/GIM/GIM-2024-2025/gim_cpp_final/accelerator_component/accelerator/hls/impl/ip/hdl/ip.tmp/subcore_proj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
+<<<<<<< HEAD
     <Option Name="Id" Val="284d18225b2b4a3bb14aacd3b5497e67"/>
+=======
+    <Option Name="Id" Val="6f877bf62e884c478f30633980aae869"/>
+>>>>>>> main
     <Option Name="Part" Val="xczu3eg-sfvc784-1-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -89,7 +93,11 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+<<<<<<< HEAD
       <File Path="$PSRCDIR/sources_1/ip/accelerator_dcmp_64ns_64ns_1_1_no_dsp_1_ip/accelerator_dcmp_64ns_64ns_1_1_no_dsp_1_ip.xci">
+=======
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip/accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip.xci">
+>>>>>>> main
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

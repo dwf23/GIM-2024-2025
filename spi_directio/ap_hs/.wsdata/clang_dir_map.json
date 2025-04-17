@@ -1,7 +1,0 @@
-{
-  "workspaceRoot": "C:\\Users\\Dawso\\GIM-2024-2025\\spi_directio\\ap_hs",
-  "mapping": {
-    "C:\\testing_comm\\spi_directio\\ap_hs\\dut.cpp": "spi_master",
-    "C:\\testing_comm\\spi_directio\\ap_hs\\tb.cpp": "spi_master"
-  }
-}
